@@ -21,12 +21,32 @@
 
 1. Construir por extensión el conjunto potencia del conjunto de los grupos sanguíneos. ¿Cuál es su cardinal?
 
+1. Dados dos conjuntos finitos $A$ y $B$, demostrar que $|A\times B|=|A|\times |B|$.
+
 1. ¿Cuáles de las siguientes relaciones son relaciones de equivalencia?
 
     a. $R_1=\{(x,y)\in \mathbb{R}^2: x = y\}$
     a. $R_2=\{(x,y)\in \mathbb{R}^2: x\leq y\}$
     a. $R_3=\{(x,y)\in \mathbb{R}^2: x^2 + y^2 = 1\}$
     c. $R_4=\{(x,y)\in \mathbb{R}^2: x^2 + y^2 \leq 1\}$
+
+1. Dar ejemplos de funciones $f:\mathbb{Z}\rightarrow \mathbb{Z}$ que cumplan lo siguiente:
+
+    a. $f$ es inyectiva pero no sobreyectiva.
+    b. $f$ es sobreyectiva pero no inyectiva.
+    c. $f$ no es inyectiva ni sobreyectiva.
+    d. $f$ es biyectiva y distinta de la función identidad.
+
+1. Dadas las siguientes funciones de $\mathbb{R}$ en $\mathbb{R}$, estudiar cuáles son inyectivas y cuáles sobreyectivas:
+
+    a. $f(x)=x^2$
+    b. $g(x)=x^3$
+    d. $h(x)=x^3-x^2-2x$
+    c. $h(x)=|x|$
+
+1. Dada una función $f:A\rightarrow B$, demostrar que si $f$ es inyectiva, entonces $|A|\leq |B|$, y si $f$ es sobreyectiva, entonces $|A|$\leq |B|$. ¿Cómo es $|A|$ en comparación con $|B|$ cuando $f$ es biyectiva?
+
+1. Dados dos conjuntos finitos $A$ y $B$ con $|A|=n$ y $|B|=m$. ¿Cuántas funciones distintas se pueden construir de $A$ a $B$. ¿Y cuántas funciones inyectivas suponiendo que $n<m$?
 
 1. Tomando el conjunto de los números naturales $\mathbb{N}$ como conjunto universo, dar un ejemplo de un subconjunto infinito cuyo complemento también sea infinito.
 
