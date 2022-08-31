@@ -1,0 +1,30 @@
+---
+lang: es
+---
+
+::: {.hidden}
+$$
+\newcommand{\NN}{\mathbb{N}}
+\newcommand{\ZZ}{\mathbb{Z}}
+\newcommand{\QQ}{\mathbb{Q}}
+\newcommand{\RR}{\mathbb{R}}
+\newcommand{\CC}{\mathbb{C}}
+$$
+:::
+
+# Números reales
+
+## Ejercicio 1
+
+Se dice que un conjunto $A$ es denso en $\RR$ si cada intervalo $(a,b)$ de $\RR$ contiene algún elemento de $A$. Demostrar que $\QQ$ es denso en $\RR$.
+
+:::{.callout-tip collapse="true"}
+## Solución
+La prueba es la misma que la de la propiedad arquimediana. 
+Basta con tomar $n\in \NN$ tal que $\frac{1}{n}< b-a$. Si ahora se toma el primer múltiplo de $1/n$ tal que $a<\frac{m}{n}$, también se cumplirá que $\frac{m}{n}<b$, ya que de lo contrario $\frac{m-1}{n}<a<b<\frac{m}{n}$ lo que lleva a la contradicción de que $\frac{1}{n}>b-a$. 
+:::
+
+## Ejercicio 2
+
+Demostrar que $\sqrt{2}$ es un número real.
+

@@ -1,0 +1,52 @@
+project:
+  type: book
+  output-dir: "docs"
+
+website:
+  favicon: "img/logos/favicon.ico"
+  reader-mode: true
+  comments: 
+    hypothesis:
+      theme: clean
+      openSidebar: true
+
+book:
+  title: "Problemas de Análisis Matemático"
+  author: "Alfredo Sánchez Alberca"
+  date: "1/6/2022"
+  output-file: "ejercicios-analisis"
+  image: cover.png
+  cover-image: cover.png
+  sharing: [twitter, linkedin]
+  downloads: [pdf, epub]
+  favicon: "img/logos/favicon.ico"
+  sidebar: 
+    logo: img/logos/aprendeconalf.png
+    tools:
+      - icon: house-fill
+        href: https://aprendeconalf.es
+  open-graph: true
+  twitter-card: 
+    site: "@aprendeconalf"
+  chapters:
+    - index.qmd
+    - teoria-conjuntos.qmd
+    - reales.qmd
+    - topologia.qmd
+    #- limites.qmd
+    
+#bibliography: references.bib
+
+
+format:
+  html:
+    theme: cosmo
+    dark: darkly
+    light: flatly
+  pdf:
+    documentclass: scrreport
+  epub:
+    cover-image: cover.png
+
+
+

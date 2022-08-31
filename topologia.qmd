@@ -1,0 +1,17 @@
+# Topología de los números reales
+
+1. Calcular el supremo y el ínfimo de los siguientes conjuntos. ¿Tienen máximo y mínimo?
+
+    a. $A=\{x\in \mathbb{R} : 2 < x^2-2 < 3\}$
+    b. $B=\{x\in \mathbb{R} : 1 < 4x^2 - 3 \leq 5\}$
+
+2. ¿Cuál es el interior del conjunto $A=\{a\}$?
+
+3. Demostrar que el conjunto de los números racionales no tiene puntos interiores. ¿Y el conjunto de los números irracionales?
+
+4. Demostrar que si $x$ es un punto interior de dos conjuntos $A$ y $B$, entonces también es un punto interior de su unión y su intersección.
+
+5. Demostrar que si $A,B\subseteq \mathbb{R}$, $\operatorname{Int}(A\cap B) = \operatorname{Int}(A)  \cap \operatorname{Int}(B)$.
+
+6. Demostrar que el anterior resultado no es cierto para la unión, es decir, dados $A,B\subseteq \mathbb{R}$, no se cumple siempre que $\operatorname{Int}(A\cup B) = \operatorname{Int}(A)  \cup  \operatorname{Int}(B)$.
+

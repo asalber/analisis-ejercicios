@@ -1,0 +1,44 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Problemas de Análisis Matemático",
+    "section": "",
+    "text": "Colección de problemas de Análisis Matemático aplicado."
+  },
+  {
+    "objectID": "topologia.html",
+    "href": "topologia.html",
+    "title": "3  Topología de los números reales",
+    "section": "",
+    "text": "Calcular el supremo y el ínfimo de los siguientes conjuntos. ¿Tienen máximo y mínimo?\n\n\\(A=\\{x\\in \\mathbb{R} : 2 < x^2-2 < 3\\}\\)\n\\(B=\\{x\\in \\mathbb{R} : 1 < 4x^2 - 3 \\leq 5\\}\\)\n\n¿Cuál es el interior del conjunto \\(A=\\{a\\}\\)?\nDemostrar que el conjunto de los números racionales no tiene puntos interiores. ¿Y el conjunto de los números irracionales?\nDemostrar que si \\(x\\) es un punto interior de dos conjuntos \\(A\\) y \\(B\\), entonces también es un punto interior de su unión y su intersección.\nDemostrar que si \\(A,B\\subseteq \\mathbb{R}\\), \\(\\operatorname{Int}(A\\cap B) = \\operatorname{Int}(A) \\cap \\operatorname{Int}(B)\\).\nDemostrar que el anterior resultado no es cierto para la unión, es decir, dados \\(A,B\\subseteq \\mathbb{R}\\), no se cumple siempre que \\(\\operatorname{Int}(A\\cup B) = \\operatorname{Int}(A) \\cup \\operatorname{Int}(B)\\)."
+  },
+  {
+    "objectID": "reales.html",
+    "href": "reales.html",
+    "title": "1  Números reales",
+    "section": "",
+    "text": "\\[\n\\newcommand{\\NN}{\\mathbb{N}}\n\\newcommand{\\ZZ}{\\mathbb{Z}}\n\\newcommand{\\QQ}{\\mathbb{Q}}\n\\newcommand{\\RR}{\\mathbb{R}}\n\\newcommand{\\CC}{\\mathbb{C}}\n\\]"
+  },
+  {
+    "objectID": "reales.html#ejercicio-1",
+    "href": "reales.html#ejercicio-1",
+    "title": "1  Números reales",
+    "section": "1.1 Ejercicio 1",
+    "text": "1.1 Ejercicio 1\nSe dice que un conjunto \\(A\\) es denso en \\(\\RR\\) si cada intervalo \\((a,b)\\) de \\(\\RR\\) contiene algún elemento de \\(A\\). Demostrar que \\(\\QQ\\) es denso en \\(\\RR\\).\n\n\n\n\n\n\nSolución\n\n\n\n\n\nLa prueba es la misma que la de la propiedad arquimediana. Basta con tomar \\(n\\in \\NN\\) tal que \\(\\frac{1}{n}< b-a\\). Si ahora se toma el primer múltiplo de \\(1/n\\) tal que \\(a<\\frac{m}{n}\\), también se cumplirá que \\(\\frac{m}{n}<b\\), ya que de lo contrario \\(\\frac{m-1}{n}<a<b<\\frac{m}{n}\\) lo que lleva a la contradicción de que \\(\\frac{1}{n}>b-a\\)."
+  },
+  {
+    "objectID": "reales.html#ejercicio-2",
+    "href": "reales.html#ejercicio-2",
+    "title": "1  Números reales",
+    "section": "1.2 Ejercicio 2",
+    "text": "1.2 Ejercicio 2\nDemostrar que \\(\\sqrt{2}\\) es un número real."
+  },
+  {
+    "objectID": "teoria-conjuntos.html",
+    "href": "teoria-conjuntos.html",
+    "title": "1  Teoría de conjuntos",
+    "section": "",
+    "text": "¿Qué conjuntos de números en el lanzamiento de un dado serían disjuntos con \\(A\\)? ¿Y con \\(A\\cup B\\)?\n\nDemostrar gráficamente las leyes de Morgan \\(\\overline{A\\cup B}=\\overline A \\cap \\overline B\\) y \\(\\overline{A\\cap B}=\\overline A \\cup \\overline B\\).\nConstruir por extensión el conjunto potencia del conjunto de los grupos sanguíneos. ¿Cuál es su cardinal?\n¿Cuáles de las siguientes relaciones son relaciones de equivalencia?\n\n\\(R_1=\\{(x,y)\\in \\mathbb{R}^2: x = y\\}\\)\n\\(R_2=\\{(x,y)\\in \\mathbb{R}^2: x\\leq y\\}\\)\n\\(R_3=\\{(x,y)\\in \\mathbb{R}^2: x^2 + y^2 = 1\\}\\)\n\\(R_4=\\{(x,y)\\in \\mathbb{R}^2: x^2 + y^2 \\leq 1\\}\\)\n\nTomando el conjunto de los números naturales \\(\\mathbb{N}\\) como conjunto universo, dar un ejemplo de un subconjunto infinito cuyo complemento también sea infinito.\nDemostrar que el conjunto de los números primos tiene el mismo cardinal que el conjunto de los números naturales.\nDemostrar que cada conjunto infinito \\(A\\) contiene un subconjunto propio \\(B\\subsetneq A\\) tal que \\(B\\) y \\(A\\) son equipotentes.\nDemostrar que el conjunto de los números racionales es numerable.\nDemostrar que el producto cartesiano de dos conjuntos numerables es numerable.\nDemostrar que el conjunto de todos los polinomios con coeficientes enteros \\(P=\\{a_0+a_1x+a_2x^2+\\cdots = \\sum_{i=1}^\\infty a_ix^i : a_i\\in \\mathbb{Z}\\}\\) es numerable.\n¿Cuáles de los siguientes conjuntos son numerables?\n\n\\(A=\\{3k: k\\in \\mathbb{Z}\\}\\)\n\\(B=\\{x\\in \\mathbb{Q}: -10 < x < 10\\}\\)\n\\(C = \\{x\\in \\mathbb{R}: 0\\leq x\\leq 1\\}\\)\n\\(D=\\{(x,y): x\\in \\mathbb{Z}, y\\in \\mathbb{Q}\\}\\)\n\\(E=\\{1/n : n\\in \\mathbb{N}\\}\\)\n\n¿Es el conjunto de todas las secuencias infinitas de ADN numerable?"
+  }
+]

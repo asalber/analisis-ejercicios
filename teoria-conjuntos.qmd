@@ -1,0 +1,52 @@
+# Teoría de conjuntos 
+
+1. Dado el conjunto universo de los números de un dado $\Omega=\{1, 2, 3, 4, 5, 6\}$ y los subconjuntos correspondientes a sacar par en el lanzamiento de un dado $A=\{2, 4, 6\}$ y sacar menos de 5 en el lanzamiento de un dado $B=\{1, 2, 3, 4\}$, calcular e interpretar los siguientes conjuntos:
+
+    a. $A\cup B$
+    a. $A\cap B$
+    a. $\overline A$ y $\overline B$
+    a. $A-B$ y $B-A$
+    a. $A\triangle B$
+    a. $\overline{(A\cup B)}$
+    a. $\overline{(A\cap B)}$
+    a. $A\cup \overline B$
+    a. $\overline{\overline A \cap B}$
+
+
+¿Qué conjuntos de números en el lanzamiento de un dado serían disjuntos con $A$? ¿Y con $A\cup B$?
+
+1. Demostrar gráficamente las leyes de Morgan $\overline{A\cup B}=\overline A \cap \overline B$ y  $\overline{A\cap B}=\overline A \cup \overline B$.
+
+1. Dados dos conjuntos finitos $A$ y $B$, demostrar que $|A\cup B| = |A|+|B|-|A\cap B|$.
+
+1. Construir por extensión el conjunto potencia del conjunto de los grupos sanguíneos. ¿Cuál es su cardinal?
+
+1. ¿Cuáles de las siguientes relaciones son relaciones de equivalencia?
+
+    a. $R_1=\{(x,y)\in \mathbb{R}^2: x = y\}$
+    a. $R_2=\{(x,y)\in \mathbb{R}^2: x\leq y\}$
+    a. $R_3=\{(x,y)\in \mathbb{R}^2: x^2 + y^2 = 1\}$
+    c. $R_4=\{(x,y)\in \mathbb{R}^2: x^2 + y^2 \leq 1\}$
+
+1. Tomando el conjunto de los números naturales $\mathbb{N}$ como conjunto universo, dar un ejemplo de un subconjunto infinito cuyo complemento también sea infinito.
+
+1. Demostrar que el conjunto de los números primos tiene el mismo cardinal que el conjunto de los números naturales.
+
+1. Demostrar que cada conjunto infinito $A$ contiene un subconjunto propio $B\subsetneq A$ tal que $B$ y $A$ son equipotentes.
+
+1. Demostrar que el conjunto de los números racionales es numerable.
+
+1. Demostrar que el producto cartesiano de dos conjuntos numerables es numerable.
+
+1. Demostrar que el conjunto de todos los polinomios con coeficientes enteros $P=\{a_0+a_1x+a_2x^2+\cdots = \sum_{i=1}^\infty a_ix^i : a_i\in \mathbb{Z}\}$ es numerable.
+
+1. ¿Cuáles de los siguientes conjuntos son numerables?
+
+    a. $A=\{3k: k\in \mathbb{Z}\}$
+    a. $B=\{x\in \mathbb{Q}: -10 < x < 10\}$
+    a. $C = \{x\in \mathbb{R}: 0\leq x\leq 1\}$
+    a. $D=\{(x,y): x\in \mathbb{Z}, y\in \mathbb{Q}\}$
+    a. $E=\{1/n : n\in \mathbb{N}\}$
+
+1. ¿Es el conjunto de todas las secuencias infinitas de ADN numerable? 
+
