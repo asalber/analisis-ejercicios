@@ -1,3 +1,8 @@
+---
+lang: es
+---
+<!-- LTeX: language = es-ES -->
+
 # Teoría de conjuntos 
 
 1. Dado el conjunto universo de los números de un dado $\Omega=\{1, 2, 3, 4, 5, 6\}$ y los subconjuntos correspondientes a sacar par en el lanzamiento de un dado $A=\{2, 4, 6\}$ y sacar menos de 5 en el lanzamiento de un dado $B=\{1, 2, 3, 4\}$, calcular e interpretar los siguientes conjuntos:
@@ -13,7 +18,7 @@
     a. $\overline{\overline A \cap B}$
 
 
-¿Qué conjuntos de números en el lanzamiento de un dado serían disjuntos con $A$? ¿Y con $A\cup B$?
+    ¿Qué conjuntos de números en el lanzamiento de un dado serían disjuntos con $A$? ¿Y con $A\cup B$?
 
 1. Demostrar gráficamente las leyes de Morgan $\overline{A\cup B}=\overline A \cap \overline B$ y  $\overline{A\cap B}=\overline A \cup \overline B$.
 
@@ -42,9 +47,9 @@
     a. $f(x)=x^2$
     b. $g(x)=x^3$
     d. $h(x)=x^3-x^2-2x$
-    c. $h(x)=|x|$
+    c. $i(x)=|x|$
 
-1. Dada una función $f:A\rightarrow B$, demostrar que si $f$ es inyectiva, entonces $|A|\leq |B|$, y si $f$ es sobreyectiva, entonces $|A|$\leq |B|$. ¿Cómo es $|A|$ en comparación con $|B|$ cuando $f$ es biyectiva?
+1. Dada una función $f:A\rightarrow B$, demostrar que si $f$ es inyectiva, entonces $|A|\leq |B|$, y si $f$ es sobreyectiva, entonces $|A|\geq |B|$. ¿Cómo es $|A|$ en comparación con $|B|$ cuando $f$ es biyectiva?
 
 1. Dados dos conjuntos finitos $A$ y $B$ con $|A|=n$ y $|B|=m$. ¿Cuántas funciones distintas se pueden construir de $A$ a $B$. ¿Y cuántas funciones inyectivas suponiendo que $n<m$?
 

@@ -16,7 +16,7 @@ book:
   date: "1/6/2022"
   output-file: "ejercicios-analisis"
   image: cover.png
-  cover-image: cover.png
+  cover-image: img/logos/pi.jpg
   sharing: [twitter, linkedin]
   downloads: [pdf, epub]
   favicon: "img/logos/favicon.ico"
@@ -46,7 +46,7 @@ format:
   pdf:
     documentclass: scrreport
   epub:
-    cover-image: cover.png
+    cover-image: img/logos/pi.jpg
 
 
 
