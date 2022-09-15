@@ -20,52 +20,192 @@ lang: es
 
     ¿Qué conjuntos de números en el lanzamiento de un dado serían disjuntos con $A$? ¿Y con $A\cup B$?
 
-1. Demostrar gráficamente las leyes de Morgan $\overline{A\cup B}=\overline A \cap \overline B$ y  $\overline{A\cap B}=\overline A \cup \overline B$.
+:::{.callout-tip collapse="true"}
+## Solución
+a. $A\cup B = \{1, 2, 3, 4, 6\}$
+a. $A\cap B = \{2, 4\}$
+a. $\overline A = \{1, 3, 5\}$ y $\overline B = \{5, 6\}$
+a. $A-B = \{6\}$ y $B-A = \{1,3\}$
+a. $A\triangle B = \{1, 3, 6\}$ 
+a. $\overline{(A\cup B)} = \{5\}$
+a. $\overline{(A\cap B)} = \{1,3, 5, 6\}$
+a. $A\cup \overline B = \{2, 4, 5, 6\}$
+a. $\overline{\overline A \cap B} = \{2, 4, 5, 6\}$
 
-1. Dados dos conjuntos finitos $A$ y $B$, demostrar que $|A\cup B| = |A|+|B|-|A\cap B|$.
+Serían disjuntos con $A$ todos los conjuntos que solo tuviesen alguno de los números $1$, $3$ o $5$, por ejemplo el conjunto $\{1, 5\}$. El único conjunto disjunto con $A\cup B$, además del vacío es $\{5\}$.
+:::
 
-1. Construir por extensión el conjunto potencia del conjunto de los grupos sanguíneos. ¿Cuál es su cardinal?
+2. Demostrar gráficamente las leyes de Morgan $\overline{A\cup B}=\overline A \cap \overline B$ y  $\overline{A\cap B}=\overline A \cup \overline B$.
 
-1. Dados dos conjuntos finitos $A$ y $B$, demostrar que $|A\times B|=|A|\times |B|$.
+3. Construir por extensión el conjunto potencia del conjunto de los grupos sanguíneos $S=\{0, A, B, AB\}$. ¿Cuál es su cardinal? 
 
-1. ¿Cuáles de las siguientes relaciones son relaciones de equivalencia?
+:::{.callout-tip collapse="true"}
+## Solución
+$$
+\begin{aligned}
+\mathcal{P}(S)&=\{\emptyset, \{A\}, \{B\}, \{AB\}, \newline 
+& \{\emptyset,A\},\{\emptyset,B\}, \{\emptyset,AB\}, \{A,B\}, \{A,AB\}, \{B,AB\}, \{\emptyset,A,B\},\newline
+& \{\emptyset,A,AB\}, \{\emptyset,B,AB\}, \{A,B,AB\}, \newline 
+& \{\emptyset,A,B,AB\} \}
+\end{aligned}
+$$
+:::
+
+4. Construir el producto cartesiano del conjunto d los grupos sanguíneos $S=\{0, A, B, AB\}$ y el conjunto de los factores Rh $R=\{\mbox{Rh}+, \mbox{Rh}-\}$. 
+
+:::{.callout-tip collapse="true"}
+## Solución
+$$
+\begin{aligned}
+S \times R &=\{(0,\mbox{Rh}+), (0,\mbox{Rh}-), (A,\mbox{Rh}+)), (A,\mbox{Rh}-),\newline
+& (B,\mbox{Rh}+), (B,\mbox{Rh}-), (AB,\mbox{Rh}+), (AB,\mbox{Rh}-) \}
+\end{aligned}
+$$
+:::
+
+5. Demostrar que la relación $R=\{(x,y)\in \mathbb{Z}^2: x-y \mbox{ es par}\}$.
+
+:::{.callout-tip collapse="true"}
+## Solución
+_Propiedad reflexiva_:  $\forall a\in\mathbb{Z}$ $a-a=0$ es par, de manera que $aRa$.  
+_Propiedad simétrica_: $\forall a,b\in\mathbb{Z}$ si $aRb$ entonces $a-b$ es par, es decir, existe $k\in \mathbb{Z}$ tal que $a-b=2k$. Por tanto, $b-a=2(-k)$ también es par y $bRa$.
+_Propiedad transitiva_: $\forall a,b,c\in\mathbb{Z}$, si $aRb$ y $bRc$ entonces $a-b$ y $b-c$ son pares, de manera que su suma $a-b+b-c = a-c$ también es par, y $aRc$.
+:::
+
+6. ¿Cuáles de las siguientes relaciones son relaciones de equivalencia? ¿Cuáles don de orden?
 
     a. $R_1=\{(x,y)\in \mathbb{R}^2: x = y\}$
     a. $R_2=\{(x,y)\in \mathbb{R}^2: x\leq y\}$
     a. $R_3=\{(x,y)\in \mathbb{R}^2: x^2 + y^2 = 1\}$
-    c. $R_4=\{(x,y)\in \mathbb{R}^2: x^2 + y^2 \leq 1\}$
+    a. $R_4=\{(x,y)\in \mathbb{R}^2: x^2 + y^2 \leq 1\}$
 
-1. Dar ejemplos de funciones $f:\mathbb{Z}\rightarrow \mathbb{Z}$ que cumplan lo siguiente:
+:::{.callout-tip collapse="true"}
+## Solución
+a. $R_1$ es relación de equivalencia.
+a. $R_2$ es relación de orden.
+a. $R_3$ no es relación de equivalencia ni de orden porque no cumple las propiedades reflexiva y transitiva.
+a. $R_4$ es no es relación de equivalencia ni de orden porque tampoco cumple las propiedades reflexiva y transitiva.
+:::
+
+7. Para cada uno de los conjuntos siguientes, calcular si existe el supremo, el ínfimo, el máximo y el mínimo.
+
+    a. $A=\{1, 2, 3, 4, 5\}$
+    b. $B=\{x\in\mathbb{N} : x \mbox{ es par}\}$
+    c. $C=\{x\in\mathbb{Q} : 0< x \leq 1\}$
+
+:::{.callout-tip collapse="true"}
+## Solución
+a. $\sup(A)=5$, $\inf(A) = 1$, $\max(A)=5$, $\min(A)=1$.
+a. $\inf(B) = 2$ y $\min(B)=2$. No existe el supremo ni el máximo porque $B$ no está acotado superiormente.
+a. $\sup(C)=1$, $\inf(C) = 0$ y $\max(C)=1$. No existe el mínimo.
+:::
+
+8. Dar ejemplos de funciones $f:\mathbb{Z}\rightarrow \mathbb{Z}$ que cumplan lo siguiente:
 
     a. $f$ es inyectiva pero no sobreyectiva.
     b. $f$ es sobreyectiva pero no inyectiva.
     c. $f$ no es inyectiva ni sobreyectiva.
     d. $f$ es biyectiva y distinta de la función identidad.
 
-1. Dadas las siguientes funciones de $\mathbb{R}$ en $\mathbb{R}$, estudiar cuáles son inyectivas y cuáles sobreyectivas:
+:::{.callout-tip collapse="true"}
+## Solución
+a. $f(x)=2x$
+b. $f(x)=x^3-x$.
+c. $f(x)=x^2$
+d. $f(x)=2x+1$
+:::
+
+9. Dadas las siguientes funciones de $\mathbb{R}$ en $\mathbb{R}$, estudiar cuáles son inyectivas y cuáles sobreyectivas:
 
     a. $f(x)=x^2$
     b. $g(x)=x^3$
     d. $h(x)=x^3-x^2-2x$
     c. $i(x)=|x|$
 
-1. Dada una función $f:A\rightarrow B$, demostrar que si $f$ es inyectiva, entonces $|A|\leq |B|$, y si $f$ es sobreyectiva, entonces $|A|\geq |B|$. ¿Cómo es $|A|$ en comparación con $|B|$ cuando $f$ es biyectiva?
+:::{.callout-tip collapse="true"}
+## Solución
+a. $f(x)=x^2$ es biyectiva.
+b. $g(x)=x^3$ es biyectiva.
+d. $h(x)=x^3-x^2-2x$ es sobreyectiva pero no inyectiva.
+c. $i(x)=|x|$ no es ni inyectiva ni sobreyectiva.
+:::
 
-1. Dados dos conjuntos finitos $A$ y $B$ con $|A|=n$ y $|B|=m$. ¿Cuántas funciones distintas se pueden construir de $A$ a $B$. ¿Y cuántas funciones inyectivas suponiendo que $n<m$?
+10. Demostrar que la composición de dos funciones inyectivas es también inyectiva.
 
-1. Tomando el conjunto de los números naturales $\mathbb{N}$ como conjunto universo, dar un ejemplo de un subconjunto infinito cuyo complemento también sea infinito.
+:::{.callout-tip collapse="true"}
+## Solución
+Sean $f$ y $g$ dos funciones inyectivas tales que $\Im(f)\subseteq\operatorname{Dom}(g)$. Veamos que $g\circ f$ es inyectiva. Supongamos ahora que existen $a, b\in \operatorname{Dom}(f)$ tales que $g\circ f(a)=g\circ f(b)$, es decir, $g(f(a))=g(f(b))$. Como $g$ es inyectiva, se tiene que $f(a)=f(b)$, y como $f$ es inyectiva se tiene que $a=b$, con lo que $g\circ f$ es inyectiva.
+:::
 
-1. Demostrar que el conjunto de los números primos tiene el mismo cardinal que el conjunto de los números naturales.
+11. Dados dos conjuntos finitos $A$ y $B$, demostrar que $|A\cup B| = |A|+|B|-|A\cap B|$ y que $|A\times B|=|A||B|$.
 
-1. Demostrar que cada conjunto infinito $A$ contiene un subconjunto propio $B\subsetneq A$ tal que $B$ y $A$ son equipotentes.
+:::{.callout-tip collapse="true"}
+## Solución
+a. $A\cup B = (A-B) \cup (B-A)\cup (A\cap B)$ con $(A-B)$, $A\cup B$ y $B-A$ disjuntos dos a dos, de manera que $|A\cup B| = |A-B| + |B-A| + |A\cap B|$.
 
-1. Demostrar que el conjunto de los números racionales es numerable.
+    Por otro lado, $A=(A-B)\cup (A\cap B)$, y $B=(B-A)\cup (A\cap B)$, de modo que 
 
-1. Demostrar que el producto cartesiano de dos conjuntos numerables es numerable.
+    $$
+    \begin{aligned}
+    |A| + |B| - |A\cap B| &= |A-B| + |A\cap B| + |B-A| + |A\cap B| - |A\cap B| \newline
+    &= |A-B| + |B-A| + |A\cap B|,
+    \end{aligned}
+    $$
+    que coincide con el resultado anterior.
 
-1. Demostrar que el conjunto de todos los polinomios con coeficientes enteros $P=\{a_0+a_1x+a_2x^2+\cdots = \sum_{i=1}^\infty a_ix^i : a_i\in \mathbb{Z}\}$ es numerable.
+b. Supongamos que $A=\{a_1,\ldots, a_n\}$ y $B=\{b_1,\ldots, b_m\}$, de manera que $|A|=n$ y $|B|=m$. Para cada elemento $a_i\in A$ se pueden formar $m$ pares $(a_i,b_1),\ldots (a_i,b_m)$. Como $A$ tiene $n$ elementos, en total se pueden formar $n\cdot m$ pares, así que $|A\times B| = n\cdot m = |A||B|$.
+:::
 
-1. ¿Cuáles de los siguientes conjuntos son numerables?
+12. Dada una función $f:A\rightarrow B$, demostrar que si $f$ es inyectiva, entonces $|A|\leq |B|$, y si $f$ es sobreyectiva, entonces $|A|\geq |B|$. ¿Cómo es $|A|$ en comparación con $|B|$ cuando $f$ es biyectiva?
+
+:::{.callout-tip collapse="true"}
+## Solución
+Sea $f:A\rightarrow B$ inyectiva. Entonces para cualesquiera $a_1,a_2\in A$ con $a_1\neq a_2$ se tiene que $f(a_1)\neq f(a_2)$, por lo que $|A|\leq |B|$.
+
+Sea $f:A\rightarrow B$ sobreyectiva. Entonces para todo $b\in B$ existe $a\in A$ tal que $f(a)=b$. Además dos elementos de $B$ no pueden tener la misma preimagen porque entonces $f$ no sería una función, por lo que $|A|\geq |B|$.
+
+De lo anterior se deduce que si $f$ es biyectiva, entonces $|A|=|B|$.
+:::
+
+13. Dados dos conjuntos finitos $A$ y $B$ con $|A|=n$ y $|B|=m$. ¿Cuántas funciones distintas se pueden construir de $A$ a $B$. ¿Y cuántas funciones inyectivas suponiendo que $n\leq m$?
+
+:::{.callout-tip collapse="true"}
+## Solución
+Se pueden construir $m^n$ funciones distintas, y $\frac{m!}{(m-n)!}$ funciones inyectivas.
+:::
+
+14. Tomando el conjunto de los números naturales $\mathbb{N}$ como conjunto universo, dar un ejemplo de un subconjunto infinito cuyo complemento también sea infinito.
+
+:::{.callout-tip collapse="true"}
+## Solución
+$A=\{x\in\mathbb{N}: x \mbox{ es par}\}$ es infinito y $\overline A=\{x\in\mathbb{N}: x \mbox{ es impar}\}$ también es infinito.
+:::
+
+<!-- 1. Demostrar que el conjunto de los números primos tiene el mismo cardinal que el conjunto de los números naturales. -->
+
+15. Demostrar que cada conjunto infinito $A$ contiene un subconjunto propio $B\subsetneq A$ tal que $B$ y $A$ son equipotentes.
+
+16. Demostrar que el producto cartesiano de dos conjuntos numerables es numerable.
+
+:::{.callout-tip collapse="true"}
+## Solución
+Sean $A$ y $B$ dos conjuntos numerables. Entonces existe una aplicación inyectiva $f:A\to\mathbb{N}$ y otra $g:B\to\mathbb{N}$. Si se toma ahora la función $h:A\times B\to \mathbb{N}$ definida como 
+
+$$ f(a,b) = 2^{f(a)}3^{g(b)}\, \forall a\in A, b\in B,$$
+
+se tiene que $f$ es inyectiva y por tanto $A\times B$ es numerable.
+:::
+
+17. Demostrar que el conjunto de los números racionales es numerable.
+
+:::{.callout-tip collapse="true"}
+## Solución
+Si se considera la aplicación $f:\mathbb{Q}\to \mathbb{Z}\times \mathbb{N}$ que a cada número racional $r$ le hace corresponder el par $(p,q)\in \mathbb{Z}\times \mathbb{N}$ donde $\frac{p}{q}$ es la fracción irreducible de $r$ con denominador positivo, se tiene que $f$ es inyectiva. Como el producto cartesiano de dos conjuntos numerables es numerable, existe otra aplicación inyectiva de $g:\mathbb{Z}\times \mathbb{N}\to \mathbb{N}$, con lo que $g\circ f:\mathbb{Q}\to\mathbb{N}$ es inyectiva y $\mathbb{Q}$ es numerable.
+:::
+
+18. Demostrar que el conjunto de todos los polinomios con coeficientes enteros $P=\{a_0+a_1x+a_2x^2+\cdots = \sum_{i=1}^\infty a_ix^i : a_i\in \mathbb{Z}\}$ no es numerable.
+
+19. ¿Cuáles de los siguientes conjuntos son numerables?
 
     a. $A=\{3k: k\in \mathbb{Z}\}$
     a. $B=\{x\in \mathbb{Q}: -10 < x < 10\}$
@@ -73,5 +213,5 @@ lang: es
     a. $D=\{(x,y): x\in \mathbb{Z}, y\in \mathbb{Q}\}$
     a. $E=\{1/n : n\in \mathbb{N}\}$
 
-1. ¿Es el conjunto de todas las secuencias infinitas de ADN numerable? 
+20. ¿Es el conjunto de todas las secuencias infinitas de ADN numerable? 
 

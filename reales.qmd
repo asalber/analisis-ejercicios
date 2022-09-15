@@ -15,7 +15,6 @@ Como $a>0$ se tiene que $\frac{1}{a}>0$, y por la propiedad arquimediana se cump
 Considérese ahora el conjunto $A=\{m\in \mathbb{N}: x<m\}$. Como $x<n$ se tiene que $x\in A$ y por tanto $A$ no está vacío. Aplicando ahora el principio de buena ordenación de los números naturales, como $A\subset \mathbb{N}$, existe un primer elemento $n_0\in A$, tal que $n_0-1\not\in A$, de manera que $n_0-1\leq a$ y con ello se tiene que $$n_0-1\leq a<n$. 
 :::
 
-
 2. Se dice que un conjunto $A$ es denso en $\mathbb{R}$ si cada intervalo $(a,b)$ de $\mathbb{R}$ contiene algún elemento de $A$. Demostrar que $\mathbb{Q}$ es denso en $\mathbb{R}$.
 
 :::{.callout-tip collapse="true"}
