@@ -5,34 +5,56 @@ lang: es
 
 # Topología de los números reales
 
-1. Dada la sucesión de intervalos encajados $I_n=[0,\frac{1}{n}]$, $n\in\mathbb{N}$, demostrar que $\cap_{n=1}^\infty = \{0\}$. Demostrar también que si se consideran intervalos abiertos en lugar de cerrados entonces la intersección es vacía.
+:::{#exr-sucesion-intervalos-anidados}
+Dada la sucesión de intervalos anidados $I_n=[0,\frac{1}{n}]$, $n\in\mathbb{N}$, demostrar que $\cap_{n=1}^\infty = \{0\}$. Demostrar también que si se consideran intervalos abiertos en lugar de cerrados entonces la intersección es vacía.
+:::
 
-1. Calcular el supremo y el ínfimo de los siguientes conjuntos. ¿Tienen máximo y mínimo?
+:::{#exr-supremo-infimo-maximo-minimo-2}
+Calcular el supremo y el ínfimo de los siguientes conjuntos. ¿Tienen máximo y mínimo?
 
-    a. $A=\{x\in \mathbb{R} : 2 < x^2-2 < 3\}$
-    b. $B=\{x\in \mathbb{R} : 1 < 4x^2 - 3 \leq 5\}$
+a. $A=\{x\in \mathbb{R} : 2 < x^2-2 < 3\}$
+b. $B=\{x\in \mathbb{R} : 1 < 4x^2 - 3 \leq 5\}$
+:::
 
-1. ¿Cuál es el interior del conjunto $A=\{a\}$?
+:::{#exr-interior-conjunto-unitario}
+¿Cuál es el interior del conjunto $A=\{a\}$?
+:::
 
-1. Sean $a,b,c\in\mathbb{R}$ tales que $a<b<c$ y sea $A=\{a\}\cup (b,c)$. Calcular $\operatorname{Int}(A)$, $\operatorname{Ext}(A)$ y $\operatorname{Fr}(A)$.
+:::{#exr-interior-exterior-frontera}
+Sean $a,b,c\in\mathbb{R}$ tales que $a<b<c$ y sea $A=\{a\}\cup (b,c)$. Calcular $\operatorname{Int}(A)$, $\operatorname{Ext}(A)$ y $\operatorname{Fr}(A)$.
+:::
 
-1. Demostrar que el conjunto de los números racionales no tiene puntos interiores. ¿Y el conjunto de los números irracionales?
+:::{#exr-interior-racionales-irracionales}
+Demostrar que el conjunto de los números racionales no tiene puntos interiores. ¿Y el conjunto de los números irracionales?
+:::
 
-1. Demostrar que si $x$ es un punto interior de $A$ y $A\subseteq B$, entonces $x$ también es un punto interior de $B$.
+:::{#exr-interior-subconjunto}
+Demostrar que si $x$ es un punto interior de $A$ y $A\subseteq B$, entonces $x$ también es un punto interior de $B$.
+:::
 
-1. Demostrar que si $x$ es un punto interior de dos conjuntos $A$ y $B$, entonces también es un punto interior de su unión y su intersección.
+:::{#exr-punto-interior-union-interseccion}
+Demostrar que si $x$ es un punto interior de dos conjuntos $A$ y $B$, entonces también es un punto interior de su unión y su intersección.
+:::
 
-1. Demostrar que si $A,B\subseteq \mathbb{R}$, $\operatorname{Int}(A\cap B) = \operatorname{Int}(A)  \cap \operatorname{Int}(B)$.
+:::{#exr-interior-union-interseccion}
+Demostrar que si $A,B\subseteq \mathbb{R}$, $\operatorname{Int}(A\cap B) = \operatorname{Int}(A)  \cap \operatorname{Int}(B)$.
 
-    Demostrar también que el anterior resultado no es cierto para la unión, es decir, dados $A,B\subseteq \mathbb{R}$, no se cumple siempre que $\operatorname{Int}(A\cup B) = \operatorname{Int}(A)  \cup  \operatorname{Int}(B)$.
+Demostrar también que el anterior resultado no es cierto para la unión, es decir, dados $A,B\subseteq \mathbb{R}$, no se cumple siempre que $\operatorname{Int}(A\cup B) = \operatorname{Int}(A)  \cup  \operatorname{Int}(B)$.
+:::
 
-1. Dado un conjunto $A\subset\mathbb{R}$, probar que los conjuntos $\operatorname{Int}(A)$, $\operatorname{Ext}(A)$ y $\operatorname{Fr}(A)$  forman una partición de $\mathbb{R}$.
+:::{#exr-particion-interior-exterior-frontera}
+Dado un conjunto $A\subset\mathbb{R}$, probar que los conjuntos $\operatorname{Int}(A)$, $\operatorname{Ext}(A)$ y $\operatorname{Fr}(A)$ forman una partición de $\mathbb{R}$.
+:::
 
-1. Dar un ejemplo de dos conjuntos no abiertos pero cuya intersección es abierta.
+:::{#exr-ejemplo-conjuntos-abiertos-interseccion-no-abierta}
+Dar un ejemplo de dos conjuntos no abiertos pero cuya intersección es abierta.
+:::
 
-1. Probar las siguientes propiedades:
+:::{#exr-union-interseccion-coleccion-abiertos-cerrados}
+Probar las siguientes propiedades:
 
-    a. La unión de una colección de conjuntos abiertos es un conjunto abierto.
-    a. La intersección de una colección finita de conjuntos abiertos es un conjunto abierto.
-    a. La intersección de una colección de conjuntos cerrados es cerrada.
-    a. La unión de una colección finita de conjuntos cerrados es un conjunto cerrado.
+a. La unión de una colección de conjuntos abiertos es un conjunto abierto.
+a. La intersección de una colección finita de conjuntos abiertos es un conjunto abierto.
+a. La intersección de una colección de conjuntos cerrados es cerrada.
+a. La unión de una colección finita de conjuntos cerrados es un conjunto cerrado.
+:::

@@ -44,7 +44,13 @@ format:
     dark: darkly
     light: flatly
   pdf:
-    documentclass: scrreport
+    documentclass: scrreprt
+    include-in-header: 
+      - paquetes.tex
+    # mainfont: TeX Gyre Pagella
+    # mainfontoptions:
+    #   - Numbers=Lowercase
+    #   - Numbers=Proportional    
   epub:
     cover-image: img/logos/pi.jpg
 
