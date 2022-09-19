@@ -5,20 +5,22 @@ lang: es
 
 # Teoría de conjuntos 
 
-1. Dado el conjunto universo de los números de un dado $\Omega=\{1, 2, 3, 4, 5, 6\}$ y los subconjuntos correspondientes a sacar par en el lanzamiento de un dado $A=\{2, 4, 6\}$ y sacar menos de 5 en el lanzamiento de un dado $B=\{1, 2, 3, 4\}$, calcular e interpretar los siguientes conjuntos:
+:::{#exr-1}
+Dado el conjunto universo de los números de un dado $\Omega=\{1, 2, 3, 4, 5, 6\}$ y los subconjuntos correspondientes a sacar par en el lanzamiento de un dado $A=\{2, 4, 6\}$ y sacar menos de 5 en el lanzamiento de un dado $B=\{1, 2, 3, 4\}$, calcular e interpretar los siguientes conjuntos:
 
-    a. $A\cup B$
-    a. $A\cap B$
-    a. $\overline A$ y $\overline B$
-    a. $A-B$ y $B-A$
-    a. $A\triangle B$
-    a. $\overline{(A\cup B)}$
-    a. $\overline{(A\cap B)}$
-    a. $A\cup \overline B$
-    a. $\overline{\overline A \cap B}$
+a. $A\cup B$
+a. $A\cap B$
+a. $\overline A$ y $\overline B$
+a. $A-B$ y $B-A$
+a. $A\triangle B$
+a. $\overline{(A\cup B)}$
+a. $\overline{(A\cap B)}$
+a. $A\cup \overline B$
+a. $\overline{\overline A \cap B}$
 
 
-    ¿Qué conjuntos de números en el lanzamiento de un dado serían disjuntos con $A$? ¿Y con $A\cup B$?
+¿Qué conjuntos de números en el lanzamiento de un dado serían disjuntos con $A$? ¿Y con $A\cup B$?
+:::
 
 :::{.callout-tip collapse="true"}
 ## Solución
@@ -35,31 +37,44 @@ a. $\overline{\overline A \cap B} = \{2, 4, 5, 6\}$
 Serían disjuntos con $A$ todos los conjuntos que solo tuviesen alguno de los números $1$, $3$ o $5$, por ejemplo el conjunto $\{1, 5\}$. El único conjunto disjunto con $A\cup B$, además del vacío es $\{5\}$.
 :::
 
-2. Expresar con operaciones entre los conjuntos $A$, $B$ y $C$, los conjuntos que se corresponden con las regiones sombreadas en los siguientes diagramas.
+:::{#exr-2}
+Expresar con operaciones entre los conjuntos $A$, $B$ y $C$, los conjuntos que se corresponden con las regiones sombreadas en los siguientes diagramas.
+:::
 
 ::: {.content-visible when-format="html"}
 :::{layout-ncol="3"}
-![a.](./img/teoria-conjuntos/conjunto1.png)
-
 ![b.](./img/teoria-conjuntos/conjunto2.png)
+
+![a.](./img/teoria-conjuntos/conjunto1.png)
 
 ![b.](./img/teoria-conjuntos/conjunto3.png)
 :::
 :::
 
-::: {.content-visible when-format="html"}
+::: {.content-visible unless-format="html"}
 :::{layout-ncol="3"}
-![a.](./img/teoria-conjuntos/conjunto1.tex)
+![a.](./img/teoria-conjuntos/conjunto2.tex)
 
-![b.](./img/teoria-conjuntos/conjunto2.tex)
+![b.](./img/teoria-conjuntos/conjunto1.tex)
 
 ![b.](./img/teoria-conjuntos/conjunto3.tex)
 :::
 :::
 
-2. Demostrar gráficamente las leyes de Morgan $\overline{A\cup B}=\overline A \cap \overline B$ y  $\overline{A\cap B}=\overline A \cup \overline B$.
+:::{.callout-tip collapse="true"}
+## Solución
+a. $(B-A)\cup (A\cap B\cap C)$
+b. $(A\cup B)\cap \overline{(A\cap C)}\cap \overline{(B\cap C)}\cup (A\cap B\cap C)$
+c. $(A\cup B\cup C) - ((A\cap B)\cup (A\cap C)\cup (B\cap C))$
+:::
 
-3. Construir por extensión el conjunto potencia del conjunto de los grupos sanguíneos $S=\{0, A, B, AB\}$. ¿Cuál es su cardinal? 
+:::{#exr-3}
+Demostrar gráficamente las leyes de Morgan $\overline{A\cup B}=\overline A \cap \overline B$ y  $\overline{A\cap B}=\overline A \cup \overline B$.
+:::
+
+:::{#exr-1}
+Construir por extensión el conjunto potencia del conjunto de los grupos sanguíneos $S=\{0, A, B, AB\}$. ¿Cuál es su cardinal? 
+:::
 
 :::{.callout-tip collapse="true"}
 ## Solución
@@ -73,7 +88,9 @@ $$
 $$
 :::
 
-4. Construir el producto cartesiano del conjunto d los grupos sanguíneos $S=\{0, A, B, AB\}$ y el conjunto de los factores Rh $R=\{\mbox{Rh}+, \mbox{Rh}-\}$. 
+:::{#exr-4}
+Construir el producto cartesiano del conjunto d los grupos sanguíneos $S=\{0, A, B, AB\}$ y el conjunto de los factores Rh $R=\{\mbox{Rh}+, \mbox{Rh}-\}$. 
+:::
 
 :::{.callout-tip collapse="true"}
 ## Solución
@@ -85,7 +102,8 @@ S \times R &=\{(0,\mbox{Rh}+), (0,\mbox{Rh}-), (A,\mbox{Rh}+)), (A,\mbox{Rh}-),\
 $$
 :::
 
-5. Demostrar que la relación $R=\{(x,y)\in \mathbb{Z}^2: x-y \mbox{ es par}\}$.
+:::{#exr-5}
+Demostrar que la relación $R=\{(x,y)\in \mathbb{Z}^2: x-y \mbox{ es par}\}$.
 
 :::{.callout-tip collapse="true"}
 ## Solución
@@ -94,12 +112,14 @@ _Propiedad simétrica_: $\forall a,b\in\mathbb{Z}$ si $aRb$ entonces $a-b$ es pa
 _Propiedad transitiva_: $\forall a,b,c\in\mathbb{Z}$, si $aRb$ y $bRc$ entonces $a-b$ y $b-c$ son pares, de manera que su suma $a-b+b-c = a-c$ también es par, y $aRc$.
 :::
 
-6. ¿Cuáles de las siguientes relaciones son relaciones de equivalencia? ¿Cuáles don de orden?
+:::{#exr-6}
+¿Cuáles de las siguientes relaciones son relaciones de equivalencia? ¿Cuáles don de orden?
 
-    a. $R_1=\{(x,y)\in \mathbb{R}^2: x = y\}$
-    a. $R_2=\{(x,y)\in \mathbb{R}^2: x\leq y\}$
-    a. $R_3=\{(x,y)\in \mathbb{R}^2: x^2 + y^2 = 1\}$
-    a. $R_4=\{(x,y)\in \mathbb{R}^2: x^2 + y^2 \leq 1\}$
+a. $R_1=\{(x,y)\in \mathbb{R}^2: x = y\}$
+a. $R_2=\{(x,y)\in \mathbb{R}^2: x\leq y\}$
+a. $R_3=\{(x,y)\in \mathbb{R}^2: x^2 + y^2 = 1\}$
+a. $R_4=\{(x,y)\in \mathbb{R}^2: x^2 + y^2 \leq 1\}$
+:::
 
 :::{.callout-tip collapse="true"}
 ## Solución
@@ -109,11 +129,13 @@ a. $R_3$ no es relación de equivalencia ni de orden porque no cumple las propie
 a. $R_4$ es no es relación de equivalencia ni de orden porque tampoco cumple las propiedades reflexiva y transitiva.
 :::
 
-7. Para cada uno de los conjuntos siguientes, calcular si existe el supremo, el ínfimo, el máximo y el mínimo.
+:::{#exr-7}
+Para cada uno de los conjuntos siguientes, calcular si existe el supremo, el ínfimo, el máximo y el mínimo.
 
-    a. $A=\{1, 2, 3, 4, 5\}$
-    b. $B=\{x\in\mathbb{N} : x \mbox{ es par}\}$
-    c. $C=\{x\in\mathbb{Q} : 0< x \leq 1\}$
+a. $A=\{1, 2, 3, 4, 5\}$
+b. $B=\{x\in\mathbb{N} : x \mbox{ es par}\}$
+c. $C=\{x\in\mathbb{Q} : 0< x \leq 1\}$
+:::
 
 :::{.callout-tip collapse="true"}
 ## Solución
@@ -122,12 +144,14 @@ a. $\inf(B) = 2$ y $\min(B)=2$. No existe el supremo ni el máximo porque $B$ no
 a. $\sup(C)=1$, $\inf(C) = 0$ y $\max(C)=1$. No existe el mínimo.
 :::
 
-8. Dar ejemplos de funciones $f:\mathbb{Z}\rightarrow \mathbb{Z}$ que cumplan lo siguiente:
+:::{#exr-8}
+Dar ejemplos de funciones $f:\mathbb{Z}\rightarrow \mathbb{Z}$ que cumplan lo siguiente:
 
-    a. $f$ es inyectiva pero no sobreyectiva.
-    b. $f$ es sobreyectiva pero no inyectiva.
-    c. $f$ no es inyectiva ni sobreyectiva.
-    d. $f$ es biyectiva y distinta de la función identidad.
+a. $f$ es inyectiva pero no sobreyectiva.
+b. $f$ es sobreyectiva pero no inyectiva.
+c. $f$ no es inyectiva ni sobreyectiva.
+d. $f$ es biyectiva y distinta de la función identidad.
+:::
 
 :::{.callout-tip collapse="true"}
 ## Solución
@@ -137,29 +161,35 @@ c. $f(x)=x^2$
 d. $f(x)=2x+1$
 :::
 
-9. Dadas las siguientes funciones de $\mathbb{R}$ en $\mathbb{R}$, estudiar cuáles son inyectivas y cuáles sobreyectivas:
+:::{#exr-9}
+Dadas las siguientes funciones de $\mathbb{R}$ en $\mathbb{R}$, estudiar cuáles son inyectivas y cuáles sobreyectivas:
 
-    a. $f(x)=x^2$
-    b. $g(x)=x^3$
-    d. $h(x)=x^3-x^2-2x$
-    c. $i(x)=|x|$
+a. $f(x)=x^2$
+b. $g(x)=x^3$
+d. $h(x)=x^3-x^2-2x$
+c. $i(x)=|x|$
+:::
 
 :::{.callout-tip collapse="true"}
 ## Solución
-a. $f(x)=x^2$ es biyectiva.
+a. $f(x)=x^2$ no es ni inyectiva ni sobreyectiva.
 b. $g(x)=x^3$ es biyectiva.
 d. $h(x)=x^3-x^2-2x$ es sobreyectiva pero no inyectiva.
 c. $i(x)=|x|$ no es ni inyectiva ni sobreyectiva.
 :::
 
-10. Demostrar que la composición de dos funciones inyectivas es también inyectiva.
+:::{#exr-10}
+Demostrar que la composición de dos funciones inyectivas es también inyectiva.
+:::
 
 :::{.callout-tip collapse="true"}
 ## Solución
-Sean $f$ y $g$ dos funciones inyectivas tales que $\Im(f)\subseteq\operatorname{Dom}(g)$. Veamos que $g\circ f$ es inyectiva. Supongamos ahora que existen $a, b\in \operatorname{Dom}(f)$ tales que $g\circ f(a)=g\circ f(b)$, es decir, $g(f(a))=g(f(b))$. Como $g$ es inyectiva, se tiene que $f(a)=f(b)$, y como $f$ es inyectiva se tiene que $a=b$, con lo que $g\circ f$ es inyectiva.
+Sean $f$ y $g$ dos funciones inyectivas tales que $\operatorname{Im}(f)\subseteq\operatorname{Dom}(g)$. Veamos que $g\circ f$ es inyectiva. Supongamos ahora que existen $a, b\in \operatorname{Dom}(f)$ tales que $g\circ f(a)=g\circ f(b)$, es decir, $g(f(a))=g(f(b))$. Como $g$ es inyectiva, se tiene que $f(a)=f(b)$, y como $f$ es inyectiva se tiene que $a=b$, con lo que $g\circ f$ es inyectiva.
 :::
 
-11. Dados dos conjuntos finitos $A$ y $B$, demostrar que $|A\cup B| = |A|+|B|-|A\cap B|$ y que $|A\times B|=|A||B|$.
+:::{#exr-11}
+Dados dos conjuntos finitos $A$ y $B$, demostrar que $|A\cup B| = |A|+|B|-|A\cap B|$ y que $|A\times B|=|A||B|$.
+:::
 
 :::{.callout-tip collapse="true"}
 ## Solución
@@ -178,7 +208,9 @@ a. $A\cup B = (A-B) \cup (B-A)\cup (A\cap B)$ con $(A-B)$, $A\cup B$ y $B-A$ dis
 b. Supongamos que $A=\{a_1,\ldots, a_n\}$ y $B=\{b_1,\ldots, b_m\}$, de manera que $|A|=n$ y $|B|=m$. Para cada elemento $a_i\in A$ se pueden formar $m$ pares $(a_i,b_1),\ldots (a_i,b_m)$. Como $A$ tiene $n$ elementos, en total se pueden formar $n\cdot m$ pares, así que $|A\times B| = n\cdot m = |A||B|$.
 :::
 
-12. Dada una función $f:A\rightarrow B$, demostrar que si $f$ es inyectiva, entonces $|A|\leq |B|$, y si $f$ es sobreyectiva, entonces $|A|\geq |B|$. ¿Cómo es $|A|$ en comparación con $|B|$ cuando $f$ es biyectiva?
+:::{#exr-12}
+Dada una función $f:A\rightarrow B$, demostrar que si $f$ es inyectiva, entonces $|A|\leq |B|$, y si $f$ es sobreyectiva, entonces $|A|\geq |B|$. ¿Cómo es $|A|$ en comparación con $|B|$ cuando $f$ es biyectiva?
+:::
 
 :::{.callout-tip collapse="true"}
 ## Solución
@@ -189,14 +221,18 @@ Sea $f:A\rightarrow B$ sobreyectiva. Entonces para todo $b\in B$ existe $a\in A$
 De lo anterior se deduce que si $f$ es biyectiva, entonces $|A|=|B|$.
 :::
 
-13. Dados dos conjuntos finitos $A$ y $B$ con $|A|=n$ y $|B|=m$. ¿Cuántas funciones distintas se pueden construir de $A$ a $B$. ¿Y cuántas funciones inyectivas suponiendo que $n\leq m$?
+:::{#exr-13}
+Dados dos conjuntos finitos $A$ y $B$ con $|A|=n$ y $|B|=m$. ¿Cuántas funciones distintas se pueden construir de $A$ a $B$. ¿Y cuántas funciones inyectivas suponiendo que $n\leq m$?
+:::
 
 :::{.callout-tip collapse="true"}
 ## Solución
 Se pueden construir $m^n$ funciones distintas, y $\frac{m!}{(m-n)!}$ funciones inyectivas.
 :::
 
-14. Tomando el conjunto de los números naturales $\mathbb{N}$ como conjunto universo, dar un ejemplo de un subconjunto infinito cuyo complemento también sea infinito.
+:::{#exr-14}
+Tomando el conjunto de los números naturales $\mathbb{N}$ como conjunto universo, dar un ejemplo de un subconjunto infinito cuyo complemento también sea infinito.
+:::
 
 :::{.callout-tip collapse="true"}
 ## Solución
@@ -205,9 +241,39 @@ $A=\{x\in\mathbb{N}: x \mbox{ es par}\}$ es infinito y $\overline A=\{x\in\mathb
 
 <!-- 1. Demostrar que el conjunto de los números primos tiene el mismo cardinal que el conjunto de los números naturales. -->
 
-15. Demostrar que cada conjunto infinito $A$ contiene un subconjunto propio $B\subsetneq A$ tal que $B$ y $A$ son equipotentes.
+:::{#exr-15}
+Demostrar que todo conjunto infinito tiene un subconjunto infinito numerable.
+:::
 
-16. Demostrar que el producto cartesiano de dos conjuntos numerables es numerable.
+:::{.callout-tip collapse="true"}
+## Solución
+Sean $A$ un conjunto infinito. Como $A$ no es vacío, existe un elemento $a_1\in A$. Considérese ahora el conjunto $A_1 = A\setminus \{a_1\}$. Es evidente que $A_1$ sigue siendo infinito y podemos elegir otro elemento $a_2\in A_1$ de manera que el conjunto $A_2=A_1-\{a_2\}$ sigue siendo infinito. Repitiendo este proceso indefinidamente obtenemos que el conjunto $\{a_1, a_2, \ldots\}$ es un subconjunto de $A$ que es numerable.
+:::
+
+:::{#exr-16}
+Demostrar que un conjunto es infinito si y solo si es equipotente a un subconjunto propio.
+:::
+
+:::{.callout-tip collapse="true"}
+## Solución
+Sea $A$ un conjunto. Si $A$ es finito, entonces cualquier subconjunto $B\subset A$ cumple que $|B| < |A|$ por lo que no se puede establecer una biyección entre $A$ y $B$. 
+
+Si $A$ es infinito, por el ejercicio anterior se tiene que existe un subconjunto numerable $B=\{a_1,a_2,\ldots\}\subseteq A$. Si tomamos la aplicación $f:B\to B\setminus\{a_1\}$ dada por $f(a_i)=a_{i+1}$, entonces $f$ es biyectiva, y su extensión $\hat f: A\to A\setminus\{a_1\}$ dada por 
+
+$$
+\hat f(x)=
+\begin{cases}
+x & \mbox{si } x\not\in B\\
+f(x) & \mbox{si } x\in B
+\end{cases}
+$$
+
+es también biyectiva, por lo que $A$ es equipotente a $A\setminus \{a_1\}$ que es un subconjunto propio suyo.
+:::
+
+:::{#exr-17}
+Demostrar que el producto cartesiano de dos conjuntos numerables es numerable.
+:::
 
 :::{.callout-tip collapse="true"}
 ## Solución
@@ -218,22 +284,67 @@ $$ f(a,b) = 2^{f(a)}3^{g(b)}\, \forall a\in A, b\in B,$$
 se tiene que $f$ es inyectiva y por tanto $A\times B$ es numerable.
 :::
 
-17. Demostrar que el conjunto de los números racionales es numerable.
+:::{#exr-racionales-numerables}
+Demostrar que el conjunto de los números racionales es numerable.
+:::
 
 :::{.callout-tip collapse="true"}
 ## Solución
 Si se considera la aplicación $f:\mathbb{Q}\to \mathbb{Z}\times \mathbb{N}$ que a cada número racional $r$ le hace corresponder el par $(p,q)\in \mathbb{Z}\times \mathbb{N}$ donde $\frac{p}{q}$ es la fracción irreducible de $r$ con denominador positivo, se tiene que $f$ es inyectiva. Como el producto cartesiano de dos conjuntos numerables es numerable, existe otra aplicación inyectiva de $g:\mathbb{Z}\times \mathbb{N}\to \mathbb{N}$, con lo que $g\circ f:\mathbb{Q}\to\mathbb{N}$ es inyectiva y $\mathbb{Q}$ es numerable.
 :::
 
-18. Demostrar que el conjunto de todos los polinomios con coeficientes enteros $P=\{a_0+a_1x+a_2x^2+\cdots = \sum_{i=1}^\infty a_ix^i : a_i\in \mathbb{Z}\}$ no es numerable.
+:::{#exr-union-numerables}
+Demostrar que la unión de dos conjuntos numerables es numerable.
+:::
 
-19. ¿Cuáles de los siguientes conjuntos son numerables?
+:::{.callout-tip collapse="true"}
+## Solución
+Sean $A$ y $B$ dos conjuntos numerables disjuntos. Entonces existen dos biyecciones $f:A\to \mathbb{N}$ y $g:B\to \mathbb{N}$. A partir de estas biyecciones se puede definir otra $h:A\cup B\to \mathbb{N}$ dada por
 
-    a. $A=\{3k: k\in \mathbb{Z}\}$
-    a. $B=\{x\in \mathbb{Q}: -10 < x < 10\}$
-    a. $C = \{x\in \mathbb{R}: 0\leq x\leq 1\}$
-    a. $D=\{(x,y): x\in \mathbb{Z}, y\in \mathbb{Q}\}$
-    a. $E=\{1/n : n\in \mathbb{N}\}$
+$$h(x)=
+\begin{cases}
+2f(x)-1 & \mbox{si } x\in A\\
+2g(x) & \mbox{si } x\in B
+\end{cases}
+$$
 
-20. ¿Es el conjunto de todas las secuencias infinitas de ADN numerable? 
+Así pues, $A\cup B$ es numerable.
 
+Si $A$ y $B$ no son disjuntos, entonces $A\cup B=A\cup (B\setminus A)$. Si $B\setminus A=\{b_1,\ldots, b_n\}$ es finito, se puede tomar la biyección $g=\{(b_1,1),\ldots,(b_n,n)\}$ y, a partir de ella, construir la biyección $h:A\cup B\to \mathbb{N}$ dada por
+
+$$h(x)=
+\begin{cases}
+f(x)+n & \mbox{si } x\in A\\
+g(x) & \mbox{si } x\in B\setminus A
+\end{cases}
+$$
+
+Mientras que si $B\setminus A$ es infinito, se puede razonar como al principio pues $A$ y $B\setminus A$ son disjuntos.
+:::
+
+:::{#exr-irracionales-no-numerables}
+Demostrar que el conjunto de los números irracionales no es numerable.
+:::
+
+:::{.callout-tip collapse="true"}
+## Solución
+Ya hemos visto en el ejercicio @exr-racionales-numerables que $\mathbb{Q}$ no es numerable, de manera que si $\mathbb{R}\setminus \mathbb{Q}$ fuese numerable, entonces por el @exr-union-numerables  $\mathbb{q}\cup \mathbb{R}\setminus \mathbb{Q}=\mathbb{R}$ sería numerable, lo cual no es cierto.
+:::
+
+:::{#exr-21}
+Demostrar que el conjunto de todos los polinomios con coeficientes enteros $P=\{a_0+a_1x+a_2x^2+\cdots = \sum_{i=1}^\infty a_ix^i : a_i\in \mathbb{Z}\}$ no es numerable.
+:::
+
+:::{#exr-22}
+¿Cuáles de los siguientes conjuntos son numerables?
+
+a. $A=\{3k: k\in \mathbb{Z}\}$
+a. $B=\{x\in \mathbb{Q}: -10 < x < 10\}$
+a. $C = \{x\in \mathbb{R}: 0\leq x\leq 1\}$
+a. $D=\{(x,y): x\in \mathbb{Z}, y\in \mathbb{Q}\}$
+a. $E=\{1/n : n\in \mathbb{N}\}$
+:::
+
+:::{#exr-23}
+¿Es el conjunto de todas las secuencias infinitas de ADN numerable? 
+:::
