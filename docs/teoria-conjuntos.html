@@ -624,7 +624,7 @@ f(x) &amp; \mbox{si } x\in B
 </div>
 </div>
 <div id="exr-producto-cartesiano-numerable" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 1.18 </strong></span>Demostrar que el producto cartesiano de dos conjuntos numerables es numerable.</p>
+<p><span class="theorem-title"><strong>Ejercicio 1.18 </strong></span>Demostrar que el producto cartesiano de dos conjuntos numerables es numerable. ¿Y el producto cartesiano de <span class="math inline">\(n\)</span> conjuntos numerables?</p>
 </div>
 <div class="callout-tip callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-17-contents" aria-controls="callout-17" aria-expanded="false" aria-label="Toggle callout">
@@ -641,6 +641,7 @@ Solución
 <p>Sean <span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span> dos conjuntos numerables. Entonces existe una aplicación inyectiva <span class="math inline">\(f:A\to\mathbb{N}\)</span> y otra <span class="math inline">\(g:B\to\mathbb{N}\)</span>. Si se toma ahora la función <span class="math inline">\(h:A\times B\to \mathbb{N}\)</span> definida como</p>
 <p><span class="math display">\[ f(a,b) = 2^{f(a)}3^{g(b)}\, \forall a\in A, b\in B,\]</span></p>
 <p>se tiene que <span class="math inline">\(f\)</span> es inyectiva y por tanto <span class="math inline">\(A\times B\)</span> es numerable.</p>
+<p>Por inducción, es fácil probar que el producto cartesiano de <span class="math inline">\(n\)</span> conjuntos numerables es también numerable.</p>
 </div>
 </div>
 </div>
@@ -716,11 +717,56 @@ Solución
 </div>
 </div>
 </div>
+<div id="exr-union-numerable-conjuntos-numerables" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 1.22 </strong></span>Demostrar la unión de un conjunto numerable de conjuntos numerables es numerable.</p>
+</div>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-21-contents" aria-controls="callout-21" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-21" class="callout-21-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Sea <span class="math inline">\(A\)</span> un conjunto numerable de conjuntos numerables. Por ser <span class="math inline">\(A\)</span> numerable existe una biyección <span class="math inline">\(f:\mathbb{N}\to A\)</span>, de manera que podemos enumerar los elementos de <span class="math inline">\(A\)</span> de tal forma que <span class="math inline">\(A_i=f(i)\)</span>. Del mismo modo, como cada conjunto <span class="math inline">\(A_i\)</span> es numerable se puede establecer una enumeración de sus elementos <span class="math inline">\(A_i=\{a_{i1},a_{i2},\ldots\}\)</span>. Así pues, podemos representar los elementos de <span class="math inline">\(\cup_{i=1}^\infty A_i\)</span> en una tabla como la siguiente</p>
+<span class="math display">\[\begin{matrix}
+a_{11} &amp; \rightarrow &amp; a_{12} &amp; &amp; a_{13} &amp; \ldots \newline
+&amp; \swarrow &amp; &amp; \nearrow &amp; \downarrow &amp; \newline
+a_{21} &amp; &amp; a_{22} &amp; &amp; a_{23} &amp; \ldots \newline
+\downarrow &amp; \nearrow &amp; &amp; \swarrow \newline
+a_{31} &amp; &amp; a_{32} &amp; &amp; a_{33} &amp; \ldots \newline
+\vdots &amp; &amp; \vdots &amp; &amp; \vdots &amp; \ddots
+\end{matrix}\]</span>
+<p>Siguiendo el orden de las flechas es posible enumerar todos los elementos de este conjunto, por lo que <span class="math inline">\(\cup_{i=1}^\infty A_i\)</span> es numerable.</p>
+</div>
+</div>
+</div>
 <div id="exr-conjunto-polinomios-no-numerable" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 1.22 </strong></span>Demostrar que el conjunto de todos los polinomios con coeficientes enteros <span class="math inline">\(P=\{a_0+a_1x+a_2x^2+\cdots = \sum_{i=1}^\infty a_ix^i : a_i\in \mathbb{Z}\}\)</span> no es numerable.</p>
+<p><span class="theorem-title"><strong>Ejercicio 1.23 </strong></span>Demostrar que el conjunto de todos los polinomios con coeficientes enteros <span class="math inline">\(P=\{a_0+a_1x+a_2x^2+\cdots+a_nx^n: n\in \mathbb{N}, a_i\in \mathbb{Z}\}\)</span> es numerable. ¿Y el de los polinomios con coeficientes racionales?</p>
+</div>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-22-contents" aria-controls="callout-22" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-22" class="callout-22-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Para cada <span class="math inline">\(n\in\mathbb{N}\)</span> sea <span class="math inline">\(P_n\)</span> el conjunto de los polinomios de grado <span class="math inline">\(n\)</span> con coeficientes enteros <span class="math inline">\(P_n=\{a_0+a_1x+a_2x^2+\cdots+a_nx^n: a_i\in \mathbb{Z}\}\)</span>. Para cada polinomio <span class="math inline">\(a_0+a_1x+a_2x^2+\cdots+a_nx^n\in P_n\)</span> podemos establecer una biyección entre sus coeficientes y la tupla <span class="math inline">\(p_n=(a_0,a_1,\ldots,a_n)\)</span>, con <span class="math inline">\(a_i\in\mathbb{Z}\)</span>. Por tanto, existe una biyección entre <span class="math inline">\(P_n\)</span> y <span class="math inline">\(\mathbb{Z}^n\)</span>, y como <span class="math inline">\(\mathbb{Z}^n\)</span> es numerable, el <span class="math inline">\(P_n\)</span> también lo es.</p>
+<p>Finalmente, <span class="math inline">\(P=\cup_{i=1}^\infty P_n\)</span> que es la unión numerable de conjuntos numerables, que, como ya se vió en el <a href="#exr-union-numerable-conjuntos-numerables">Ejercicio&nbsp;<span>1.22</span></a>, es numerable.</p>
+</div>
+</div>
 </div>
 <div id="exr-conjuntos-numerables" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 1.23 </strong></span>¿Cuáles de los siguientes conjuntos son numerables?</p>
+<p><span class="theorem-title"><strong>Ejercicio 1.24 </strong></span>¿Cuáles de los siguientes conjuntos son numerables?</p>
 <ol type="a">
 <li><span class="math inline">\(A=\{3k: k\in \mathbb{Z}\}\)</span></li>
 <li><span class="math inline">\(B=\{x\in \mathbb{Q}: -10 &lt; x &lt; 10\}\)</span></li>
@@ -730,7 +776,7 @@ Solución
 </ol>
 </div>
 <div id="exr-conjunto-secuencias-adn-numerable" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 1.24 </strong></span>¿Es el conjunto de todas las secuencias infinitas de ADN numerable?</p>
+<p><span class="theorem-title"><strong>Ejercicio 1.25 </strong></span>¿Es el conjunto de todas las secuencias infinitas de ADN numerable?</p>
 </div>
 
 

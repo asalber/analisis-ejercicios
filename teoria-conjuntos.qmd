@@ -273,7 +273,7 @@ es también biyectiva, por lo que $A$ es equipotente a $A\setminus \{a_1\}$ que 
 :::
 
 :::{#exr-producto-cartesiano-numerable}
-Demostrar que el producto cartesiano de dos conjuntos numerables es numerable.
+Demostrar que el producto cartesiano de dos conjuntos numerables es numerable. ¿Y el producto cartesiano de $n$ conjuntos numerables?
 :::
 
 :::{.callout-tip collapse="true"}
@@ -283,6 +283,8 @@ Sean $A$ y $B$ dos conjuntos numerables. Entonces existe una aplicación inyecti
 $$ f(a,b) = 2^{f(a)}3^{g(b)}\, \forall a\in A, b\in B,$$
 
 se tiene que $f$ es inyectiva y por tanto $A\times B$ es numerable.
+
+Por inducción, es fácil probar que el producto cartesiano de $n$ conjuntos numerables es también numerable.
 :::
 
 :::{#exr-racionales-numerables}
@@ -332,8 +334,35 @@ Demostrar que el conjunto de los números irracionales no es numerable.
 Ya hemos visto en el ejercicio @exr-racionales-numerables que $\mathbb{Q}$ es numerable, de manera que si $\mathbb{R}\setminus \mathbb{Q}$ fuese numerable, entonces por el @exr-union-numerables  $\mathbb{Q}\cup \mathbb{R}\setminus \mathbb{Q}=\mathbb{R}$ sería numerable, lo cual no es cierto.
 :::
 
+:::{#exr-union-numerable-conjuntos-numerables}
+Demostrar la unión de un conjunto numerable de conjuntos numerables es numerable.
+:::
+
+:::{.callout-tip collapse="true"}
+## Solución
+Sea $A$ un conjunto numerable de conjuntos numerables. Por ser $A$ numerable existe una biyección $f:\mathbb{N}\to A$, de manera que podemos enumerar los elementos de $A$ de tal forma que $A_i=f(i)$. Del mismo modo, como cada conjunto $A_i$ es numerable se puede establecer una enumeración de sus elementos $A_i=\{a_{i1},a_{i2},\ldots\}$. Así pues, podemos representar los elementos de $\cup_{i=1}^\infty A_i$ en una tabla como la siguiente
+
+\begin{matrix}
+a_{11} & \rightarrow & a_{12} & & a_{13} & \ldots \newline
+& \swarrow & & \nearrow & \downarrow & \newline
+a_{21} & & a_{22} & & a_{23} & \ldots \newline
+\downarrow & \nearrow & & \swarrow \newline
+a_{31} & & a_{32} & & a_{33} & \ldots \newline
+\vdots & & \vdots & & \vdots & \ddots
+\end{matrix}
+
+Siguiendo el orden de las flechas es posible enumerar todos los elementos de este conjunto, por lo que $\cup_{i=1}^\infty A_i$ es numerable.
+:::
+
 :::{#exr-conjunto-polinomios-no-numerable}
-Demostrar que el conjunto de todos los polinomios con coeficientes enteros $P=\{a_0+a_1x+a_2x^2+\cdots = \sum_{i=1}^\infty a_ix^i : a_i\in \mathbb{Z}\}$ no es numerable.
+Demostrar que el conjunto de todos los polinomios con coeficientes enteros $P=\{a_0+a_1x+a_2x^2+\cdots+a_nx^n: n\in \mathbb{N}, a_i\in \mathbb{Z}\}$ es numerable. ¿Y el de los polinomios con coeficientes racionales?
+:::
+
+:::{.callout-tip collapse="true"}
+## Solución
+Para cada $n\in\mathbb{N}$ sea $P_n$ el conjunto de los polinomios de grado $n$ con coeficientes enteros  $P_n=\{a_0+a_1x+a_2x^2+\cdots+a_nx^n: a_i\in \mathbb{Z}\}$. Para cada polinomio $a_0+a_1x+a_2x^2+\cdots+a_nx^n\in P_n$ podemos establecer una biyección entre sus coeficientes y la tupla $p_n=(a_0,a_1,\ldots,a_n)$, con $a_i\in\mathbb{Z}$. Por tanto, existe una biyección entre $P_n$ y $\mathbb{Z}^n$, y como $\mathbb{Z}^n$ es numerable, el $P_n$ también lo es.
+
+Finalmente, $P=\cup_{i=1}^\infty P_n$ que es la unión numerable de conjuntos numerables, que, como ya se vió en el @exr-union-numerable-conjuntos-numerables, es numerable.
 :::
 
 :::{#exr-conjuntos-numerables}
