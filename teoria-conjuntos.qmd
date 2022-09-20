@@ -342,14 +342,16 @@ Demostrar la unión de un conjunto numerable de conjuntos numerables es numerabl
 ## Solución
 Sea $A$ un conjunto numerable de conjuntos numerables. Por ser $A$ numerable existe una biyección $f:\mathbb{N}\to A$, de manera que podemos enumerar los elementos de $A$ de tal forma que $A_i=f(i)$. Del mismo modo, como cada conjunto $A_i$ es numerable se puede establecer una enumeración de sus elementos $A_i=\{a_{i1},a_{i2},\ldots\}$. Así pues, podemos representar los elementos de $\cup_{i=1}^\infty A_i$ en una tabla como la siguiente
 
-\begin{matrix}
-a_{11} & \rightarrow & a_{12} & & a_{13} & \ldots \newline
-& \swarrow & & \nearrow & \downarrow & \newline
-a_{21} & & a_{22} & & a_{23} & \ldots \newline
-\downarrow & \nearrow & & \swarrow \newline
-a_{31} & & a_{32} & & a_{33} & \ldots \newline
+$$
+\begin{array}{cccccc}
+a_{11} & \rightarrow & a_{12} & & a_{13} & \ldots \\
+& \swarrow & & \nearrow & \downarrow \\
+a_{21} & & a_{22} & & a_{23} & \ldots \\
+\downarrow & \nearrow & & \swarrow \\
+a_{31} & & a_{32} & & a_{33} & \ldots \\
 \vdots & & \vdots & & \vdots & \ddots
-\end{matrix}
+\end{array}
+$$
 
 Siguiendo el orden de las flechas es posible enumerar todos los elementos de este conjunto, por lo que $\cup_{i=1}^\infty A_i$ es numerable.
 :::
