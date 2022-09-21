@@ -5,6 +5,41 @@ lang: es
 
 # Números reales
 
+:::{#exr-supremos-infimos-reales}
+Para los siguientes subconjuntos de números reales, determinar si están acotados por arriba o por abajo, y en tal caso dar el supremo o el ínfimo.
+
+a. $A = \{-1,0,1\}$
+a. $B= [0,1)$
+a. $C= (0,\infty)$
+a. $D= \left\{1+\frac{1}{n}:n\in\mathbb{N}\right\}$
+a. $E= \left\{(-2)^n:n\in\mathbb{N}\right\}$
+a. $F= \{x\in\mathbb{R}:x^2-3x+2=0\}$
+a. $G= \{x\in\mathbb{R}:x^3-x<0\}$
+:::
+
+:::{.callout-tip collapse="true"}
+## Solución
+a. $A$ está acotado por arriba y por abajo. $\sup(A)=1$ y $\inf(A)=-1$.
+a. $B$ está acotado por arriba y por abajo. $sup(B)=1$ y $\inf(B)=0$.
+a. $C$ está acotado por abajo, pero no por arriba. $\inf(C)=0$.
+a. $D$ está acotado por arriba y por abajo. $\sup(D)=2$ y $\inf(D)=1$.
+a. $E$ no está acotado por arriba ni por abajo.
+a. $F$ está acotado por arriba y por abajo.$\sup(F)=2$ y $\inf(F)=1$.
+a. $G$ está acotado por arriba pero no por abajo. $\sup(G)=1$.
+:::
+
+:::{#exr-supremo-funciones}
+Dadas dos funciones $f$ y $g$ ambas con dominio $A\subseteq \mathbb{R}$, demostrar que si sus imágenes están acotadas y $f(x)\leq g(x)$ $\forall x\in A$, entonces $\sup(\operatorname{Im}(f))\leq \sup(\operatorname{Im}(g))$.
+:::
+
+:::{#exr-no-completitud-racionales}
+Demostrar que el conjunto de los números racionales no cumple el axioma de completitud.
+:::
+
+:::{#exr-propiedad-infimo}
+Demostrar que todo subconjunto de números reales acotado inferiormente tiene un ínfimo.
+:::
+
 :::{#exr-propiedad-arquimediana-1}
 Usando la propiedad arquimediana de los números reales, demostrar que para cualquier número real $a\in\mathbb{R}$ con $a>0$ existe un número natural $n$
 tal que $n-1\leq a< n$.
@@ -26,7 +61,4 @@ Se dice que un conjunto $A$ es denso en $\mathbb{R}$ si cada intervalo $(a,b)$ d
 La prueba es la misma que la de la propiedad arquimediana. Basta con tomar $n\in \mathbb{N}$ tal que $\frac{1}{n}< b-a$. Si ahora se toma el primer múltiplo de $1/n$ tal que $a<\frac{m}{n}$, también se cumplirá que $\frac{m}{n}<b$, ya que de lo contrario $\frac{m-1}{n}<a<b<\frac{m}{n}$ lo que lleva a la contradicción de que $\frac{1}{n}>b-a$. 
 :::
 
-:::{#exr-existencia-raiz-cuadrada}
-Dado un número real  con $a\in\mathbb{R}$, demostrar que existe un número real $x$ tal que $x>0$ y $x^2=a$.
-:::
 

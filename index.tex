@@ -1,0 +1,1091 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\PassOptionsToPackage{dvipsnames,svgnames,x11names}{xcolor}
+%
+\documentclass[
+  letterpaper,
+  DIV=11,
+  numbers=noendperiod]{scrreprt}
+
+\usepackage{amsmath,amssymb}
+\usepackage{lmodern}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+  \setmainfont[Numbers=Lowercase,Numbers=Proportional]{TeX Gyre Pagella}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\setcounter{secnumdepth}{5}
+% Make \paragraph and \subparagraph free-standing
+\ifx\paragraph\undefined\else
+  \let\oldparagraph\paragraph
+  \renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+  \let\oldsubparagraph\subparagraph
+  \renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+
+
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+
+\usepackage{venndiagram}
+\KOMAoption{captions}{tableheading}
+\makeatletter
+\@ifpackageloaded{tcolorbox}{}{\usepackage[many]{tcolorbox}}
+\@ifpackageloaded{fontawesome5}{}{\usepackage{fontawesome5}}
+\definecolor{quarto-callout-color}{HTML}{909090}
+\definecolor{quarto-callout-note-color}{HTML}{0758E5}
+\definecolor{quarto-callout-important-color}{HTML}{CC1914}
+\definecolor{quarto-callout-warning-color}{HTML}{EB9113}
+\definecolor{quarto-callout-tip-color}{HTML}{00A047}
+\definecolor{quarto-callout-caution-color}{HTML}{FC5300}
+\definecolor{quarto-callout-color-frame}{HTML}{acacac}
+\definecolor{quarto-callout-note-color-frame}{HTML}{4582ec}
+\definecolor{quarto-callout-important-color-frame}{HTML}{d9534f}
+\definecolor{quarto-callout-warning-color-frame}{HTML}{f0ad4e}
+\definecolor{quarto-callout-tip-color-frame}{HTML}{02b875}
+\definecolor{quarto-callout-caution-color-frame}{HTML}{fd7e14}
+\makeatother
+\makeatletter
+\@ifpackageloaded{tikz}{}{\usepackage{tikz}}
+\makeatother
+\makeatletter
+\@ifpackageloaded{bookmark}{}{\usepackage{bookmark}}
+\makeatother
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\AtBeginDocument{%
+\ifdefined\contentsname
+  \renewcommand*\contentsname{Indice de contenidos}
+\else
+  \newcommand\contentsname{Indice de contenidos}
+\fi
+\ifdefined\listfigurename
+  \renewcommand*\listfigurename{Listado de Figuras}
+\else
+  \newcommand\listfigurename{Listado de Figuras}
+\fi
+\ifdefined\listtablename
+  \renewcommand*\listtablename{Listado de Tablas}
+\else
+  \newcommand\listtablename{Listado de Tablas}
+\fi
+\ifdefined\figurename
+  \renewcommand*\figurename{Figura}
+\else
+  \newcommand\figurename{Figura}
+\fi
+\ifdefined\tablename
+  \renewcommand*\tablename{Tabla}
+\else
+  \newcommand\tablename{Tabla}
+\fi
+}
+\@ifpackageloaded{float}{}{\usepackage{float}}
+\floatstyle{ruled}
+\@ifundefined{c@chapter}{\newfloat{codelisting}{h}{lop}}{\newfloat{codelisting}{h}{lop}[chapter]}
+\floatname{codelisting}{Listado}
+\newcommand*\listoflistings{\listof{codelisting}{Listado de Listatdos}}
+\usepackage{amsthm}
+\theoremstyle{definition}
+\newtheorem{exercise}{Ejercicio}[chapter]
+\theoremstyle{remark}
+\renewcommand*{\proofname}{Prueba}
+\newtheorem*{remark}{Observación}
+\newtheorem*{solution}{Solución}
+\makeatother
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
+\makeatother
+\makeatletter
+\@ifpackageloaded{tcolorbox}{}{\usepackage[many]{tcolorbox}}
+\makeatother
+\makeatletter
+\@ifundefined{shadecolor}{\definecolor{shadecolor}{rgb}{.97, .97, .97}}
+\makeatother
+\makeatletter
+\makeatother
+\ifLuaTeX
+\usepackage[bidi=basic]{babel}
+\else
+\usepackage[bidi=default]{babel}
+\fi
+\babelprovide[main,import]{spanish}
+% get rid of language-specific shorthands (see #6817):
+\let\LanguageShortHands\languageshorthands
+\def\languageshorthands#1{}
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same} % disable monospaced font for URLs
+\hypersetup{
+  pdftitle={Problemas de Análisis Matemático},
+  pdfauthor={Alfredo Sánchez Alberca},
+  pdflang={es},
+  colorlinks=true,
+  linkcolor={blue},
+  filecolor={Maroon},
+  citecolor={Blue},
+  urlcolor={Blue},
+  pdfcreator={LaTeX via pandoc}}
+
+\title{Problemas de Análisis Matemático}
+\author{Alfredo Sánchez Alberca}
+\date{1/6/2022}
+
+\begin{document}
+\maketitle
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[borderline west={3pt}{0pt}{shadecolor}, interior hidden, boxrule=0pt, enhanced, sharp corners, breakable, frame hidden]}{\end{tcolorbox}}\fi
+
+\renewcommand*\contentsname{Indice de contenidos}
+{
+\hypersetup{linkcolor=}
+\setcounter{tocdepth}{2}
+\tableofcontents
+}
+\bookmarksetup{startatroot}
+
+\hypertarget{prefacio}{%
+\chapter*{Prefacio}\label{prefacio}}
+\addcontentsline{toc}{chapter}{Prefacio}
+
+Colección de problemas de Análisis Matemático aplicado.
+
+\bookmarksetup{startatroot}
+
+\hypertarget{teoruxeda-de-conjuntos}{%
+\chapter{Teoría de conjuntos}\label{teoruxeda-de-conjuntos}}
+
+\leavevmode\vadjust pre{\hypertarget{exr-operaciones-conjuntos}{}}%
+\begin{exercise}[]\label{exr-operaciones-conjuntos}
+
+Dado el conjunto universo de los números de un dado
+\(\Omega=\{1, 2, 3, 4, 5, 6\}\) y los subconjuntos correspondientes a
+sacar par en el lanzamiento de un dado \(A=\{2, 4, 6\}\) y sacar menos
+de 5 en el lanzamiento de un dado \(B=\{1, 2, 3, 4\}\), calcular e
+interpretar los siguientes conjuntos:
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  \(A\cup B\)
+\item
+  \(A\cap B\)
+\item
+  \(\overline A\) y \(\overline B\)
+\item
+  \(A-B\) y \(B-A\)
+\item
+  \(A\triangle B\)
+\item
+  \(\overline{(A\cup B)}\)
+\item
+  \(\overline{(A\cap B)}\)
+\item
+  \(A\cup \overline B\)
+\item
+  \(\overline{\overline A \cap B}\)
+\end{enumerate}
+
+¿Qué conjuntos de números en el lanzamiento de un dado serían disjuntos
+con \(A\)? ¿Y con \(A\cup B\)?
+
+\end{exercise}
+
+\begin{tcolorbox}[enhanced jigsaw, coltitle=black, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, arc=.35mm, toprule=.15mm, bottomrule=.15mm, opacitybacktitle=0.6, toptitle=1mm, leftrule=.75mm, colbacktitle=quarto-callout-tip-color!10!white, bottomtitle=1mm, titlerule=0mm, breakable, colframe=quarto-callout-tip-color-frame, colback=white, opacityback=0, rightrule=.15mm, left=2mm]
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  \(A\cup B = \{1, 2, 3, 4, 6\}\)
+\item
+  \(A\cap B = \{2, 4\}\)
+\item
+  \(\overline A = \{1, 3, 5\}\) y \(\overline B = \{5, 6\}\)
+\item
+  \(A-B = \{6\}\) y \(B-A = \{1,3\}\)
+\item
+  \(A\triangle B = \{1, 3, 6\}\)
+\item
+  \(\overline{(A\cup B)} = \{5\}\)
+\item
+  \(\overline{(A\cap B)} = \{1,3, 5, 6\}\)
+\item
+  \(A\cup \overline B = \{2, 4, 5, 6\}\)
+\item
+  \(\overline{\overline A \cap B} = \{2, 4, 5, 6\}\)
+\end{enumerate}
+
+Serían disjuntos con \(A\) todos los conjuntos que solo tuviesen alguno
+de los números \(1\), \(3\) o \(5\), por ejemplo el conjunto
+\(\{1, 5\}\). El único conjunto disjunto con \(A\cup B\), además del
+vacío es \(\{5\}\).
+
+\end{tcolorbox}
+
+\leavevmode\vadjust pre{\hypertarget{exr-expresion-conjuntos}{}}%
+\begin{exercise}[]\label{exr-expresion-conjuntos}
+
+Expresar con operaciones entre los conjuntos \(A\), \(B\) y \(C\), los
+conjuntos que se corresponden con las regiones sombreadas en los
+siguientes diagramas.
+
+\end{exercise}
+
+\begin{figure}
+
+\begin{minipage}[t]{0.33\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\input{././img/teoria-conjuntos/conjunto2.tex}
+
+}
+
+\caption{a.}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.33\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\input{././img/teoria-conjuntos/conjunto1.tex}
+
+}
+
+\caption{b.}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.33\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\input{././img/teoria-conjuntos/conjunto3.tex}
+
+}
+
+\caption{b.}
+
+}
+
+\end{minipage}%
+
+\end{figure}
+
+\begin{tcolorbox}[enhanced jigsaw, coltitle=black, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, arc=.35mm, toprule=.15mm, bottomrule=.15mm, opacitybacktitle=0.6, toptitle=1mm, leftrule=.75mm, colbacktitle=quarto-callout-tip-color!10!white, bottomtitle=1mm, titlerule=0mm, breakable, colframe=quarto-callout-tip-color-frame, colback=white, opacityback=0, rightrule=.15mm, left=2mm]
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  \((B-A)\cup (A\cap B\cap C)\)
+\item
+  \((A\cup B)\cap \overline{(A\cap C)}\cap \overline{(B\cap C)}\cup (A\cap B\cap C)\)
+\item
+  \((A\cup B\cup C) - ((A\cap B)\cup (A\cap C)\cup (B\cap C))\)
+\end{enumerate}
+
+\end{tcolorbox}
+
+\leavevmode\vadjust pre{\hypertarget{exr-leyes-morgan}{}}%
+\begin{exercise}[]\label{exr-leyes-morgan}
+
+Demostrar gráficamente las leyes de Morgan
+\(\overline{A\cup B}=\overline A \cap \overline B\) y
+\(\overline{A\cap B}=\overline A \cup \overline B\).
+
+\end{exercise}
+
+\leavevmode\vadjust pre{\hypertarget{exr-conjunto-potencia}{}}%
+\begin{exercise}[]\label{exr-conjunto-potencia}
+
+Construir por extensión el conjunto potencia del conjunto de los grupos
+sanguíneos \(S=\{0, A, B, AB\}\). ¿Cuál es su cardinal?
+
+\end{exercise}
+
+\begin{tcolorbox}[enhanced jigsaw, coltitle=black, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, arc=.35mm, toprule=.15mm, bottomrule=.15mm, opacitybacktitle=0.6, toptitle=1mm, leftrule=.75mm, colbacktitle=quarto-callout-tip-color!10!white, bottomtitle=1mm, titlerule=0mm, breakable, colframe=quarto-callout-tip-color-frame, colback=white, opacityback=0, rightrule=.15mm, left=2mm]
+\[
+\begin{aligned}
+\mathcal{P}(S)&=\{\emptyset, \{A\}, \{B\}, \{AB\}, \newline 
+& \{\emptyset,A\},\{\emptyset,B\}, \{\emptyset,AB\}, \{A,B\}, \{A,AB\}, \{B,AB\}, \{\emptyset,A,B\},\newline
+& \{\emptyset,A,AB\}, \{\emptyset,B,AB\}, \{A,B,AB\}, \newline 
+& \{\emptyset,A,B,AB\} \}
+\end{aligned}
+\]
+\end{tcolorbox}
+
+\leavevmode\vadjust pre{\hypertarget{exr-producto-cartesiano-grupos-sanguineos}{}}%
+\begin{exercise}[]\label{exr-producto-cartesiano-grupos-sanguineos}
+
+Construir el producto cartesiano del conjunto d los grupos sanguíneos
+\(S=\{0, A, B, AB\}\) y el conjunto de los factores Rh
+\(R=\{\mbox{Rh}+, \mbox{Rh}-\}\).
+
+\end{exercise}
+
+\begin{tcolorbox}[enhanced jigsaw, coltitle=black, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, arc=.35mm, toprule=.15mm, bottomrule=.15mm, opacitybacktitle=0.6, toptitle=1mm, leftrule=.75mm, colbacktitle=quarto-callout-tip-color!10!white, bottomtitle=1mm, titlerule=0mm, breakable, colframe=quarto-callout-tip-color-frame, colback=white, opacityback=0, rightrule=.15mm, left=2mm]
+\[
+\begin{aligned}
+S \times R &=\{(0,\mbox{Rh}+), (0,\mbox{Rh}-), (A,\mbox{Rh}+)), (A,\mbox{Rh}-),\newline
+& (B,\mbox{Rh}+), (B,\mbox{Rh}-), (AB,\mbox{Rh}+), (AB,\mbox{Rh}-) \}
+\end{aligned}
+\]
+\end{tcolorbox}
+
+\leavevmode\vadjust pre{\hypertarget{exr-relacion-equivalencia-1}{}}%
+\begin{exercise}[]\label{exr-relacion-equivalencia-1}
+
+Demostrar que la relación
+\(R=\{(x,y)\in \mathbb{Z}^2: x-y \mbox{ es par}\}\) es una relación de
+equivalencia.
+
+\end{exercise}
+
+\begin{tcolorbox}[enhanced jigsaw, coltitle=black, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, arc=.35mm, toprule=.15mm, bottomrule=.15mm, opacitybacktitle=0.6, toptitle=1mm, leftrule=.75mm, colbacktitle=quarto-callout-tip-color!10!white, bottomtitle=1mm, titlerule=0mm, breakable, colframe=quarto-callout-tip-color-frame, colback=white, opacityback=0, rightrule=.15mm, left=2mm]
+\emph{Propiedad reflexiva}: \(\forall a\in\mathbb{Z}\) \(a-a=0\) es par,
+de manera que \(aRa\).\\
+\emph{Propiedad simétrica}: \(\forall a,b\in\mathbb{Z}\) si \(aRb\)
+entonces \(a-b\) es par, es decir, existe \(k\in \mathbb{Z}\) tal que
+\(a-b=2k\). Por tanto, \(b-a=2(-k)\) también es par y \(bRa\).
+\emph{Propiedad transitiva}: \(\forall a,b,c\in\mathbb{Z}\), si \(aRb\)
+y \(bRc\) entonces \(a-b\) y \(b-c\) son pares, de manera que su suma
+\(a-b+b-c = a-c\) también es par, y \(aRc\).
+\end{tcolorbox}
+
+\leavevmode\vadjust pre{\hypertarget{exr-relaciones-equivalencia}{}}%
+\begin{exercise}[]\label{exr-relaciones-equivalencia}
+
+¿Cuáles de las siguientes relaciones son relaciones de equivalencia?
+¿Cuáles don de orden?
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  \(R_1=\{(x,y)\in \mathbb{R}^2: x = y\}\)
+\item
+  \(R_2=\{(x,y)\in \mathbb{R}^2: x\leq y\}\)
+\item
+  \(R_3=\{(x,y)\in \mathbb{R}^2: x^2 + y^2 = 1\}\)
+\item
+  \(R_4=\{(x,y)\in \mathbb{R}^2: x^2 + y^2 \leq 1\}\)
+\end{enumerate}
+
+\end{exercise}
+
+\begin{tcolorbox}[enhanced jigsaw, coltitle=black, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, arc=.35mm, toprule=.15mm, bottomrule=.15mm, opacitybacktitle=0.6, toptitle=1mm, leftrule=.75mm, colbacktitle=quarto-callout-tip-color!10!white, bottomtitle=1mm, titlerule=0mm, breakable, colframe=quarto-callout-tip-color-frame, colback=white, opacityback=0, rightrule=.15mm, left=2mm]
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  \(R_1\) es relación de equivalencia.
+\item
+  \(R_2\) es relación de orden.
+\item
+  \(R_3\) no es relación de equivalencia ni de orden porque no cumple
+  las propiedades reflexiva y transitiva.
+\item
+  \(R_4\) es no es relación de equivalencia ni de orden porque tampoco
+  cumple las propiedades reflexiva y transitiva.
+\end{enumerate}
+
+\end{tcolorbox}
+
+\leavevmode\vadjust pre{\hypertarget{exr-supremo-infimo-maximo-minimo}{}}%
+\begin{exercise}[]\label{exr-supremo-infimo-maximo-minimo}
+
+Para cada uno de los conjuntos siguientes, calcular si existe el
+supremo, el ínfimo, el máximo y el mínimo.
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  \(A=\{1, 2, 3, 4, 5\}\)
+\item
+  \(B=\{x\in\mathbb{N} : x \mbox{ es par}\}\)
+\item
+  \(C=\{x\in\mathbb{Q} : 0< x \leq 1\}\)
+\end{enumerate}
+
+\end{exercise}
+
+\begin{tcolorbox}[enhanced jigsaw, coltitle=black, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, arc=.35mm, toprule=.15mm, bottomrule=.15mm, opacitybacktitle=0.6, toptitle=1mm, leftrule=.75mm, colbacktitle=quarto-callout-tip-color!10!white, bottomtitle=1mm, titlerule=0mm, breakable, colframe=quarto-callout-tip-color-frame, colback=white, opacityback=0, rightrule=.15mm, left=2mm]
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  \(\sup(A)=5\), \(\inf(A) = 1\), \(\max(A)=5\), \(\min(A)=1\).
+\item
+  \(\inf(B) = 2\) y \(\min(B)=2\). No existe el supremo ni el máximo
+  porque \(B\) no está acotado superiormente.
+\item
+  \(\sup(C)=1\), \(\inf(C) = 0\) y \(\max(C)=1\). No existe el mínimo.
+\end{enumerate}
+
+\end{tcolorbox}
+
+\leavevmode\vadjust pre{\hypertarget{exr-ejemplos-funciones}{}}%
+\begin{exercise}[]\label{exr-ejemplos-funciones}
+
+Dar ejemplos de funciones \(f:\mathbb{Z}\rightarrow \mathbb{Z}\) que
+cumplan lo siguiente:
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  \(f\) es inyectiva pero no sobreyectiva.
+\item
+  \(f\) es sobreyectiva pero no inyectiva.
+\item
+  \(f\) no es inyectiva ni sobreyectiva.
+\item
+  \(f\) es biyectiva y distinta de la función identidad.
+\end{enumerate}
+
+\end{exercise}
+
+\begin{tcolorbox}[enhanced jigsaw, coltitle=black, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, arc=.35mm, toprule=.15mm, bottomrule=.15mm, opacitybacktitle=0.6, toptitle=1mm, leftrule=.75mm, colbacktitle=quarto-callout-tip-color!10!white, bottomtitle=1mm, titlerule=0mm, breakable, colframe=quarto-callout-tip-color-frame, colback=white, opacityback=0, rightrule=.15mm, left=2mm]
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  \(f(x)=2x\)
+\item
+  \(f(x)=x^3-x\).
+\item
+  \(f(x)=x^2\)
+\item
+  \(f(x)=2x+1\)
+\end{enumerate}
+
+\end{tcolorbox}
+
+\leavevmode\vadjust pre{\hypertarget{exr-tipos-funciones}{}}%
+\begin{exercise}[]\label{exr-tipos-funciones}
+
+Dadas las siguientes funciones de \(\mathbb{R}\) en \(\mathbb{R}\),
+estudiar cuáles son inyectivas y cuáles sobreyectivas:
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  \(f(x)=x^2\)
+\item
+  \(g(x)=x^3\)
+\item
+  \(h(x)=x^3-x^2-2x\)
+\item
+  \(i(x)=|x|\)
+\end{enumerate}
+
+\end{exercise}
+
+\begin{tcolorbox}[enhanced jigsaw, coltitle=black, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, arc=.35mm, toprule=.15mm, bottomrule=.15mm, opacitybacktitle=0.6, toptitle=1mm, leftrule=.75mm, colbacktitle=quarto-callout-tip-color!10!white, bottomtitle=1mm, titlerule=0mm, breakable, colframe=quarto-callout-tip-color-frame, colback=white, opacityback=0, rightrule=.15mm, left=2mm]
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  \(f(x)=x^2\) no es ni inyectiva ni sobreyectiva.
+\item
+  \(g(x)=x^3\) es biyectiva.
+\item
+  \(h(x)=x^3-x^2-2x\) es sobreyectiva pero no inyectiva.
+\item
+  \(i(x)=|x|\) no es ni inyectiva ni sobreyectiva.
+\end{enumerate}
+
+\end{tcolorbox}
+
+\leavevmode\vadjust pre{\hypertarget{exr-composicion-funciones-inyectivas}{}}%
+\begin{exercise}[]\label{exr-composicion-funciones-inyectivas}
+
+Demostrar que la composición de dos funciones inyectivas es también
+inyectiva.
+
+\end{exercise}
+
+\begin{tcolorbox}[enhanced jigsaw, coltitle=black, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, arc=.35mm, toprule=.15mm, bottomrule=.15mm, opacitybacktitle=0.6, toptitle=1mm, leftrule=.75mm, colbacktitle=quarto-callout-tip-color!10!white, bottomtitle=1mm, titlerule=0mm, breakable, colframe=quarto-callout-tip-color-frame, colback=white, opacityback=0, rightrule=.15mm, left=2mm]
+Sean \(f\) y \(g\) dos funciones inyectivas tales que
+\(\operatorname{Im}(f)\subseteq\operatorname{Dom}(g)\). Veamos que
+\(g\circ f\) es inyectiva. Supongamos ahora que existen
+\(a, b\in \operatorname{Dom}(f)\) tales que \(g\circ f(a)=g\circ f(b)\),
+es decir, \(g(f(a))=g(f(b))\). Como \(g\) es inyectiva, se tiene que
+\(f(a)=f(b)\), y como \(f\) es inyectiva se tiene que \(a=b\), con lo
+que \(g\circ f\) es inyectiva.
+\end{tcolorbox}
+
+\leavevmode\vadjust pre{\hypertarget{exr-cardinal-union-producto-cartesiano}{}}%
+\begin{exercise}[]\label{exr-cardinal-union-producto-cartesiano}
+
+Dados dos conjuntos finitos \(A\) y \(B\), demostrar que
+\(|A\cup B| = |A|+|B|-|A\cap B|\) y que \(|A\times B|=|A||B|\).
+
+\end{exercise}
+
+\begin{tcolorbox}[enhanced jigsaw, coltitle=black, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, arc=.35mm, toprule=.15mm, bottomrule=.15mm, opacitybacktitle=0.6, toptitle=1mm, leftrule=.75mm, colbacktitle=quarto-callout-tip-color!10!white, bottomtitle=1mm, titlerule=0mm, breakable, colframe=quarto-callout-tip-color-frame, colback=white, opacityback=0, rightrule=.15mm, left=2mm]
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  \(A\cup B = (A-B) \cup (B-A)\cup (A\cap B)\) con \((A-B)\),
+  \(A\cup B\) y \(B-A\) disjuntos dos a dos, de manera que
+  \(|A\cup B| = |A-B| + |B-A| + |A\cap B|\).
+
+  Por otro lado, \(A=(A-B)\cup (A\cap B)\), y \(B=(B-A)\cup (A\cap B)\),
+  de modo que
+
+  \[
+   \begin{aligned}
+   |A| + |B| - |A\cap B| &= |A-B| + |A\cap B| + |B-A| + |A\cap B| - |A\cap B| \newline
+   &= |A-B| + |B-A| + |A\cap B|,
+   \end{aligned}
+   \] que coincide con el resultado anterior.
+\item
+  Supongamos que \(A=\{a_1,\ldots, a_n\}\) y \(B=\{b_1,\ldots, b_m\}\),
+  de manera que \(|A|=n\) y \(|B|=m\). Para cada elemento \(a_i\in A\)
+  se pueden formar \(m\) pares \((a_i,b_1),\ldots (a_i,b_m)\). Como
+  \(A\) tiene \(n\) elementos, en total se pueden formar \(n\cdot m\)
+  pares, así que \(|A\times B| = n\cdot m = |A||B|\).
+\end{enumerate}
+
+\end{tcolorbox}
+
+\leavevmode\vadjust pre{\hypertarget{exr-cardinal-funcion-inyectiva-sobreyectiva}{}}%
+\begin{exercise}[]\label{exr-cardinal-funcion-inyectiva-sobreyectiva}
+
+Dada una función \(f:A\rightarrow B\), demostrar que si \(f\) es
+inyectiva, entonces \(|A|\leq |B|\), y si \(f\) es sobreyectiva,
+entonces \(|A|\geq |B|\). ¿Cómo es \(|A|\) en comparación con \(|B|\)
+cuando \(f\) es biyectiva?
+
+\end{exercise}
+
+\begin{tcolorbox}[enhanced jigsaw, coltitle=black, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, arc=.35mm, toprule=.15mm, bottomrule=.15mm, opacitybacktitle=0.6, toptitle=1mm, leftrule=.75mm, colbacktitle=quarto-callout-tip-color!10!white, bottomtitle=1mm, titlerule=0mm, breakable, colframe=quarto-callout-tip-color-frame, colback=white, opacityback=0, rightrule=.15mm, left=2mm]
+Sea \(f:A\rightarrow B\) inyectiva. Entonces para cualesquiera
+\(a_1,a_2\in A\) con \(a_1\neq a_2\) se tiene que \(f(a_1)\neq f(a_2)\),
+por lo que \(|A|\leq |B|\).
+
+Sea \(f:A\rightarrow B\) sobreyectiva. Entonces para todo \(b\in B\)
+existe \(a\in A\) tal que \(f(a)=b\). Además dos elementos de \(B\) no
+pueden tener la misma preimagen porque entonces \(f\) no sería una
+función, por lo que \(|A|\geq |B|\).
+
+De lo anterior se deduce que si \(f\) es biyectiva, entonces
+\(|A|=|B|\).
+\end{tcolorbox}
+
+\leavevmode\vadjust pre{\hypertarget{exr-numero-funciones-inyectivas}{}}%
+\begin{exercise}[]\label{exr-numero-funciones-inyectivas}
+
+Dados dos conjuntos finitos \(A\) y \(B\) con \(|A|=n\) y \(|B|=m\).
+¿Cuántas funciones distintas se pueden construir de \(A\) a \(B\). ¿Y
+cuántas funciones inyectivas suponiendo que \(n\leq m\)?
+
+\end{exercise}
+
+\begin{tcolorbox}[enhanced jigsaw, coltitle=black, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, arc=.35mm, toprule=.15mm, bottomrule=.15mm, opacitybacktitle=0.6, toptitle=1mm, leftrule=.75mm, colbacktitle=quarto-callout-tip-color!10!white, bottomtitle=1mm, titlerule=0mm, breakable, colframe=quarto-callout-tip-color-frame, colback=white, opacityback=0, rightrule=.15mm, left=2mm]
+Se pueden construir \(m^n\) funciones distintas, y \(\frac{m!}{(m-n)!}\)
+funciones inyectivas.
+\end{tcolorbox}
+
+\leavevmode\vadjust pre{\hypertarget{exr-ejemplo-conjunto-infinito-complemento}{}}%
+\begin{exercise}[]\label{exr-ejemplo-conjunto-infinito-complemento}
+
+Tomando el conjunto de los números naturales \(\mathbb{N}\) como
+conjunto universo, dar un ejemplo de un subconjunto infinito cuyo
+complemento también sea infinito.
+
+\end{exercise}
+
+\begin{tcolorbox}[enhanced jigsaw, coltitle=black, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, arc=.35mm, toprule=.15mm, bottomrule=.15mm, opacitybacktitle=0.6, toptitle=1mm, leftrule=.75mm, colbacktitle=quarto-callout-tip-color!10!white, bottomtitle=1mm, titlerule=0mm, breakable, colframe=quarto-callout-tip-color-frame, colback=white, opacityback=0, rightrule=.15mm, left=2mm]
+\(A=\{x\in\mathbb{N}: x \mbox{ es par}\}\) es infinito y
+\(\overline A=\{x\in\mathbb{N}: x \mbox{ es impar}\}\) también es
+infinito.
+\end{tcolorbox}
+
+\leavevmode\vadjust pre{\hypertarget{exr-subconjunto-infinito-numerable}{}}%
+\begin{exercise}[]\label{exr-subconjunto-infinito-numerable}
+
+Demostrar que todo conjunto infinito tiene un subconjunto infinito
+numerable.
+
+\end{exercise}
+
+\begin{tcolorbox}[enhanced jigsaw, coltitle=black, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, arc=.35mm, toprule=.15mm, bottomrule=.15mm, opacitybacktitle=0.6, toptitle=1mm, leftrule=.75mm, colbacktitle=quarto-callout-tip-color!10!white, bottomtitle=1mm, titlerule=0mm, breakable, colframe=quarto-callout-tip-color-frame, colback=white, opacityback=0, rightrule=.15mm, left=2mm]
+Sean \(A\) un conjunto infinito. Como \(A\) no es vacío, existe un
+elemento \(a_1\in A\). Considérese ahora el conjunto
+\(A_1 = A\setminus \{a_1\}\). Es evidente que \(A_1\) sigue siendo
+infinito y podemos elegir otro elemento \(a_2\in A_1\) de manera que el
+conjunto \(A_2=A_1-\{a_2\}\) sigue siendo infinito. Repitiendo este
+proceso indefinidamente obtenemos que el conjunto
+\(\{a_1, a_2, \ldots\}\) es un subconjunto de \(A\) que es numerable.
+\end{tcolorbox}
+
+\leavevmode\vadjust pre{\hypertarget{exr-conjunto-equipotente-subconjunto}{}}%
+\begin{exercise}[]\label{exr-conjunto-equipotente-subconjunto}
+
+Demostrar que un conjunto es infinito si y solo si es equipotente a un
+subconjunto propio.
+
+\end{exercise}
+
+\begin{tcolorbox}[enhanced jigsaw, coltitle=black, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, arc=.35mm, toprule=.15mm, bottomrule=.15mm, opacitybacktitle=0.6, toptitle=1mm, leftrule=.75mm, colbacktitle=quarto-callout-tip-color!10!white, bottomtitle=1mm, titlerule=0mm, breakable, colframe=quarto-callout-tip-color-frame, colback=white, opacityback=0, rightrule=.15mm, left=2mm]
+Sea \(A\) un conjunto. Si \(A\) es finito, entonces cualquier
+subconjunto \(B\subset A\) cumple que \(|B| < |A|\) por lo que no se
+puede establecer una biyección entre \(A\) y \(B\).
+
+Si \(A\) es infinito, por el ejercicio anterior se tiene que existe un
+subconjunto numerable \(B=\{a_1,a_2,\ldots\}\subseteq A\). Si tomamos la
+aplicación \(f:B\to B\setminus\{a_1\}\) dada por \(f(a_i)=a_{i+1}\),
+entonces \(f\) es biyectiva, y su extensión
+\(\hat f: A\to A\setminus\{a_1\}\) dada por
+
+\[
+\hat f(x)=
+\begin{cases}
+x & \mbox{si } x\not\in B\\
+f(x) & \mbox{si } x\in B
+\end{cases}
+\]
+
+es también biyectiva, por lo que \(A\) es equipotente a
+\(A\setminus \{a_1\}\) que es un subconjunto propio suyo.
+\end{tcolorbox}
+
+\leavevmode\vadjust pre{\hypertarget{exr-producto-cartesiano-numerable}{}}%
+\begin{exercise}[]\label{exr-producto-cartesiano-numerable}
+
+Demostrar que el producto cartesiano de dos conjuntos numerables es
+numerable. ¿Y el producto cartesiano de \(n\) conjuntos numerables?
+
+\end{exercise}
+
+\begin{tcolorbox}[enhanced jigsaw, coltitle=black, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, arc=.35mm, toprule=.15mm, bottomrule=.15mm, opacitybacktitle=0.6, toptitle=1mm, leftrule=.75mm, colbacktitle=quarto-callout-tip-color!10!white, bottomtitle=1mm, titlerule=0mm, breakable, colframe=quarto-callout-tip-color-frame, colback=white, opacityback=0, rightrule=.15mm, left=2mm]
+Sean \(A\) y \(B\) dos conjuntos numerables. Entonces existe una
+aplicación inyectiva \(f:A\to\mathbb{N}\) y otra \(g:B\to\mathbb{N}\).
+Si se toma ahora la función \(h:A\times B\to \mathbb{N}\) definida como
+
+\[ f(a,b) = 2^{f(a)}3^{g(b)}\, \forall a\in A, b\in B,\]
+
+se tiene que \(f\) es inyectiva y por tanto \(A\times B\) es numerable.
+
+Por inducción, es fácil probar que el producto cartesiano de \(n\)
+conjuntos numerables es también numerable.
+\end{tcolorbox}
+
+\leavevmode\vadjust pre{\hypertarget{exr-racionales-numerables}{}}%
+\begin{exercise}[]\label{exr-racionales-numerables}
+
+Demostrar que el conjunto de los números racionales es numerable.
+
+\end{exercise}
+
+\begin{tcolorbox}[enhanced jigsaw, coltitle=black, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, arc=.35mm, toprule=.15mm, bottomrule=.15mm, opacitybacktitle=0.6, toptitle=1mm, leftrule=.75mm, colbacktitle=quarto-callout-tip-color!10!white, bottomtitle=1mm, titlerule=0mm, breakable, colframe=quarto-callout-tip-color-frame, colback=white, opacityback=0, rightrule=.15mm, left=2mm]
+Si se considera la aplicación
+\(f:\mathbb{Q}\to \mathbb{Z}\times \mathbb{N}\) que a cada número
+racional \(r\) le hace corresponder el par
+\((p,q)\in \mathbb{Z}\times \mathbb{N}\) donde \(\frac{p}{q}\) es la
+fracción irreducible de \(r\) con denominador positivo, se tiene que
+\(f\) es inyectiva. Como el producto cartesiano de dos conjuntos
+numerables es numerable, existe otra aplicación inyectiva de
+\(g:\mathbb{Z}\times \mathbb{N}\to \mathbb{N}\), con lo que
+\(g\circ f:\mathbb{Q}\to\mathbb{N}\) es inyectiva y \(\mathbb{Q}\) es
+numerable.
+\end{tcolorbox}
+
+\leavevmode\vadjust pre{\hypertarget{exr-union-numerables}{}}%
+\begin{exercise}[]\label{exr-union-numerables}
+
+Demostrar que la unión de dos conjuntos numerables es numerable.
+
+\end{exercise}
+
+\begin{tcolorbox}[enhanced jigsaw, coltitle=black, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, arc=.35mm, toprule=.15mm, bottomrule=.15mm, opacitybacktitle=0.6, toptitle=1mm, leftrule=.75mm, colbacktitle=quarto-callout-tip-color!10!white, bottomtitle=1mm, titlerule=0mm, breakable, colframe=quarto-callout-tip-color-frame, colback=white, opacityback=0, rightrule=.15mm, left=2mm]
+Sean \(A\) y \(B\) dos conjuntos numerables disjuntos. Entonces existen
+dos biyecciones \(f:A\to \mathbb{N}\) y \(g:B\to \mathbb{N}\). A partir
+de estas biyecciones se puede definir otra \(h:A\cup B\to \mathbb{N}\)
+dada por
+
+\[h(x)=
+\begin{cases}
+2f(x)-1 & \mbox{si } x\in A\\
+2g(x) & \mbox{si } x\in B
+\end{cases}
+\]
+
+Así pues, \(A\cup B\) es numerable.
+
+Si \(A\) y \(B\) no son disjuntos, entonces
+\(A\cup B=A\cup (B\setminus A)\). Si
+\(B\setminus A=\{b_1,\ldots, b_n\}\) es finito, se puede tomar la
+biyección \(g=\{(b_1,1),\ldots,(b_n,n)\}\) y, a partir de ella,
+construir la biyección \(h:A\cup B\to \mathbb{N}\) dada por
+
+\[h(x)=
+\begin{cases}
+f(x)+n & \mbox{si } x\in A\\
+g(x) & \mbox{si } x\in B\setminus A
+\end{cases}
+\]
+
+Mientras que si \(B\setminus A\) es infinito, se puede razonar como al
+principio pues \(A\) y \(B\setminus A\) son disjuntos.
+\end{tcolorbox}
+
+\leavevmode\vadjust pre{\hypertarget{exr-irracionales-no-numerables}{}}%
+\begin{exercise}[]\label{exr-irracionales-no-numerables}
+
+Demostrar que el conjunto de los números irracionales no es numerable.
+
+\end{exercise}
+
+\begin{tcolorbox}[enhanced jigsaw, coltitle=black, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, arc=.35mm, toprule=.15mm, bottomrule=.15mm, opacitybacktitle=0.6, toptitle=1mm, leftrule=.75mm, colbacktitle=quarto-callout-tip-color!10!white, bottomtitle=1mm, titlerule=0mm, breakable, colframe=quarto-callout-tip-color-frame, colback=white, opacityback=0, rightrule=.15mm, left=2mm]
+Ya hemos visto en el ejercicio Ejercicio~\ref{exr-racionales-numerables}
+que \(\mathbb{Q}\) es numerable, de manera que si
+\(\mathbb{R}\setminus \mathbb{Q}\) fuese numerable, entonces por el
+Ejercicio~\ref{exr-union-numerables}
+\(\mathbb{Q}\cup \mathbb{R}\setminus \mathbb{Q}=\mathbb{R}\) sería
+numerable, lo cual no es cierto.
+\end{tcolorbox}
+
+\leavevmode\vadjust pre{\hypertarget{exr-union-numerable-conjuntos-numerables}{}}%
+\begin{exercise}[]\label{exr-union-numerable-conjuntos-numerables}
+
+Demostrar la unión de un conjunto numerable de conjuntos numerables es
+numerable.
+
+\end{exercise}
+
+\begin{tcolorbox}[enhanced jigsaw, coltitle=black, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, arc=.35mm, toprule=.15mm, bottomrule=.15mm, opacitybacktitle=0.6, toptitle=1mm, leftrule=.75mm, colbacktitle=quarto-callout-tip-color!10!white, bottomtitle=1mm, titlerule=0mm, breakable, colframe=quarto-callout-tip-color-frame, colback=white, opacityback=0, rightrule=.15mm, left=2mm]
+Sea \(A\) un conjunto numerable de conjuntos numerables. Por ser \(A\)
+numerable existe una biyección \(f:\mathbb{N}\to A\), de manera que
+podemos enumerar los elementos de \(A\) de tal forma que \(A_i=f(i)\).
+Del mismo modo, como cada conjunto \(A_i\) es numerable se puede
+establecer una enumeración de sus elementos
+\(A_i=\{a_{i1},a_{i2},\ldots\}\). Así pues, podemos representar los
+elementos de \(\cup_{i=1}^\infty A_i\) en una tabla como la siguiente
+
+\[
+\begin{array}{cccccc}
+a_{11} & \rightarrow & a_{12} & & a_{13} & \ldots \\
+& \swarrow & & \nearrow & \downarrow \\
+a_{21} & & a_{22} & & a_{23} & \ldots \\
+\downarrow & \nearrow & & \swarrow \\
+a_{31} & & a_{32} & & a_{33} & \ldots \\
+\vdots & & \vdots & & \vdots & \ddots
+\end{array}
+\]
+
+Siguiendo el orden de las flechas es posible enumerar todos los
+elementos de este conjunto, por lo que \(\cup_{i=1}^\infty A_i\) es
+numerable.
+\end{tcolorbox}
+
+\leavevmode\vadjust pre{\hypertarget{exr-conjunto-polinomios-no-numerable}{}}%
+\begin{exercise}[]\label{exr-conjunto-polinomios-no-numerable}
+
+Demostrar que el conjunto de todos los polinomios con coeficientes
+enteros
+\(P=\{a_0+a_1x+a_2x^2+\cdots+a_nx^n: n\in \mathbb{N}, a_i\in \mathbb{Z}\}\)
+es numerable. ¿Y el de los polinomios con coeficientes racionales?
+
+\end{exercise}
+
+\begin{tcolorbox}[enhanced jigsaw, coltitle=black, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, arc=.35mm, toprule=.15mm, bottomrule=.15mm, opacitybacktitle=0.6, toptitle=1mm, leftrule=.75mm, colbacktitle=quarto-callout-tip-color!10!white, bottomtitle=1mm, titlerule=0mm, breakable, colframe=quarto-callout-tip-color-frame, colback=white, opacityback=0, rightrule=.15mm, left=2mm]
+Para cada \(n\in\mathbb{N}\) sea \(P_n\) el conjunto de los polinomios
+de grado \(n\) con coeficientes enteros
+\(P_n=\{a_0+a_1x+a_2x^2+\cdots+a_nx^n: a_i\in \mathbb{Z}\}\). Para cada
+polinomio \(a_0+a_1x+a_2x^2+\cdots+a_nx^n\in P_n\) podemos establecer
+una biyección entre sus coeficientes y la tupla
+\(p_n=(a_0,a_1,\ldots,a_n)\), con \(a_i\in\mathbb{Z}\). Por tanto,
+existe una biyección entre \(P_n\) y \(\mathbb{Z}^n\), y como
+\(\mathbb{Z}^n\) es numerable, el \(P_n\) también lo es.
+
+Finalmente, \(P=\cup_{i=1}^\infty P_n\) que es la unión numerable de
+conjuntos numerables, que, como ya se vió en el
+Ejercicio~\ref{exr-union-numerable-conjuntos-numerables}, es numerable.
+\end{tcolorbox}
+
+\leavevmode\vadjust pre{\hypertarget{exr-conjuntos-numerables}{}}%
+\begin{exercise}[]\label{exr-conjuntos-numerables}
+
+¿Cuáles de los siguientes conjuntos son numerables?
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  \(A=\{3k: k\in \mathbb{Z}\}\)
+\item
+  \(B=\{x\in \mathbb{Q}: -10 < x < 10\}\)
+\item
+  \(C = \{x\in \mathbb{R}: 0\leq x\leq 1\}\)
+\item
+  \(D=\{(x,y): x\in \mathbb{Z}, y\in \mathbb{Q}\}\)
+\item
+  \(E=\{1/n : n\in \mathbb{N}\}\)
+\end{enumerate}
+
+\end{exercise}
+
+\leavevmode\vadjust pre{\hypertarget{exr-conjunto-secuencias-adn-numerable}{}}%
+\begin{exercise}[]\label{exr-conjunto-secuencias-adn-numerable}
+
+¿Es el conjunto de todas las secuencias infinitas de ADN numerable?
+
+\end{exercise}
+
+\bookmarksetup{startatroot}
+
+\hypertarget{nuxfameros-reales}{%
+\chapter{Números reales}\label{nuxfameros-reales}}
+
+\leavevmode\vadjust pre{\hypertarget{exr-propiedad-arquimediana-1}{}}%
+\begin{exercise}[]\label{exr-propiedad-arquimediana-1}
+
+Usando la propiedad arquimediana de los números reales, demostrar que
+para cualquier número real \(a\in\mathbb{R}\) con \(a>0\) existe un
+número natural \(n\) tal que \(n-1\leq a< n\).
+
+\end{exercise}
+
+\begin{tcolorbox}[enhanced jigsaw, coltitle=black, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, arc=.35mm, toprule=.15mm, bottomrule=.15mm, opacitybacktitle=0.6, toptitle=1mm, leftrule=.75mm, colbacktitle=quarto-callout-tip-color!10!white, bottomtitle=1mm, titlerule=0mm, breakable, colframe=quarto-callout-tip-color-frame, colback=white, opacityback=0, rightrule=.15mm, left=2mm]
+Como \(a>0\) se tiene que \(\frac{1}{a}>0\), y por la propiedad
+arquimediana se cumple que existe \(n\in \mathbb{N}\) tal que \(x<n\).
+
+Considérese ahora el conjunto \(A=\{m\in \mathbb{N}: x<m\}\). Como
+\(x<n\) se tiene que \(x\in A\) y por tanto \(A\) no está vacío.
+Aplicando ahora el principio de buena ordenación de los números
+naturales, como \(A\subset \mathbb{N}\), existe un primer elemento
+\(n_0\in A\), tal que \(n_0-1\not\in A\), de manera que \(n_0-1\leq a\)
+y con ello se tiene que \$\(n_0-1\leq a<n\).
+\end{tcolorbox}
+
+\leavevmode\vadjust pre{\hypertarget{exr-densidad-racionales}{}}%
+\begin{exercise}[]\label{exr-densidad-racionales}
+
+Se dice que un conjunto \(A\) es denso en \(\mathbb{R}\) si cada
+intervalo \((a,b)\) de \(\mathbb{R}\) contiene algún elemento de \(A\).
+Demostrar que \(\mathbb{Q}\) es denso en \(\mathbb{R}\).
+
+\end{exercise}
+
+\begin{tcolorbox}[enhanced jigsaw, coltitle=black, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, arc=.35mm, toprule=.15mm, bottomrule=.15mm, opacitybacktitle=0.6, toptitle=1mm, leftrule=.75mm, colbacktitle=quarto-callout-tip-color!10!white, bottomtitle=1mm, titlerule=0mm, breakable, colframe=quarto-callout-tip-color-frame, colback=white, opacityback=0, rightrule=.15mm, left=2mm]
+La prueba es la misma que la de la propiedad arquimediana. Basta con
+tomar \(n\in \mathbb{N}\) tal que \(\frac{1}{n}< b-a\). Si ahora se toma
+el primer múltiplo de \(1/n\) tal que \(a<\frac{m}{n}\), también se
+cumplirá que \(\frac{m}{n}<b\), ya que de lo contrario
+\(\frac{m-1}{n}<a<b<\frac{m}{n}\) lo que lleva a la contradicción de que
+\(\frac{1}{n}>b-a\).
+\end{tcolorbox}
+
+\leavevmode\vadjust pre{\hypertarget{exr-existencia-raiz-cuadrada}{}}%
+\begin{exercise}[]\label{exr-existencia-raiz-cuadrada}
+
+Dado un número real con \(a\in\mathbb{R}\), demostrar que existe un
+número real \(x\) tal que \(x>0\) y \(x^2=a\).
+
+\end{exercise}
+
+\bookmarksetup{startatroot}
+
+\hypertarget{topologuxeda-de-los-nuxfameros-reales}{%
+\chapter{Topología de los números
+reales}\label{topologuxeda-de-los-nuxfameros-reales}}
+
+\leavevmode\vadjust pre{\hypertarget{exr-sucesion-intervalos-anidados}{}}%
+\begin{exercise}[]\label{exr-sucesion-intervalos-anidados}
+
+Dada la sucesión de intervalos anidados \(I_n=[0,\frac{1}{n}]\),
+\(n\in\mathbb{N}\), demostrar que \(\cap_{n=1}^\infty = \{0\}\).
+Demostrar también que si se consideran intervalos abiertos en lugar de
+cerrados entonces la intersección es vacía.
+
+\end{exercise}
+
+\leavevmode\vadjust pre{\hypertarget{exr-supremo-infimo-maximo-minimo-2}{}}%
+\begin{exercise}[]\label{exr-supremo-infimo-maximo-minimo-2}
+
+Calcular el supremo y el ínfimo de los siguientes conjuntos. ¿Tienen
+máximo y mínimo?
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  \(A=\{x\in \mathbb{R} : 2 < x^2-2 < 3\}\)
+\item
+  \(B=\{x\in \mathbb{R} : 1 < 4x^2 - 3 \leq 5\}\)
+\end{enumerate}
+
+\end{exercise}
+
+\leavevmode\vadjust pre{\hypertarget{exr-interior-conjunto-unitario}{}}%
+\begin{exercise}[]\label{exr-interior-conjunto-unitario}
+
+¿Cuál es el interior del conjunto \(A=\{a\}\)?
+
+\end{exercise}
+
+\leavevmode\vadjust pre{\hypertarget{exr-interior-exterior-frontera}{}}%
+\begin{exercise}[]\label{exr-interior-exterior-frontera}
+
+Sean \(a,b,c\in\mathbb{R}\) tales que \(a<b<c\) y sea
+\(A=\{a\}\cup (b,c)\). Calcular \(\operatorname{Int}(A)\),
+\(\operatorname{Ext}(A)\) y \(\operatorname{Fr}(A)\).
+
+\end{exercise}
+
+\leavevmode\vadjust pre{\hypertarget{exr-interior-racionales-irracionales}{}}%
+\begin{exercise}[]\label{exr-interior-racionales-irracionales}
+
+Demostrar que el conjunto de los números racionales no tiene puntos
+interiores. ¿Y el conjunto de los números irracionales?
+
+\end{exercise}
+
+\leavevmode\vadjust pre{\hypertarget{exr-interior-subconjunto}{}}%
+\begin{exercise}[]\label{exr-interior-subconjunto}
+
+Demostrar que si \(x\) es un punto interior de \(A\) y \(A\subseteq B\),
+entonces \(x\) también es un punto interior de \(B\).
+
+\end{exercise}
+
+\leavevmode\vadjust pre{\hypertarget{exr-punto-interior-union-interseccion}{}}%
+\begin{exercise}[]\label{exr-punto-interior-union-interseccion}
+
+Demostrar que si \(x\) es un punto interior de dos conjuntos \(A\) y
+\(B\), entonces también es un punto interior de su unión y su
+intersección.
+
+\end{exercise}
+
+\leavevmode\vadjust pre{\hypertarget{exr-interior-union-interseccion}{}}%
+\begin{exercise}[]\label{exr-interior-union-interseccion}
+
+Demostrar que si \(A,B\subseteq \mathbb{R}\),
+\(\operatorname{Int}(A\cap B) = \operatorname{Int}(A) \cap \operatorname{Int}(B)\).
+
+Demostrar también que el anterior resultado no es cierto para la unión,
+es decir, dados \(A,B\subseteq \mathbb{R}\), no se cumple siempre que
+\(\operatorname{Int}(A\cup B) = \operatorname{Int}(A) \cup \operatorname{Int}(B)\).
+
+\end{exercise}
+
+\leavevmode\vadjust pre{\hypertarget{exr-particion-interior-exterior-frontera}{}}%
+\begin{exercise}[]\label{exr-particion-interior-exterior-frontera}
+
+Dado un conjunto \(A\subset\mathbb{R}\), probar que los conjuntos
+\(\operatorname{Int}(A)\), \(\operatorname{Ext}(A)\) y
+\(\operatorname{Fr}(A)\) forman una partición de \(\mathbb{R}\).
+
+\end{exercise}
+
+\leavevmode\vadjust pre{\hypertarget{exr-ejemplo-conjuntos-abiertos-interseccion-no-abierta}{}}%
+\begin{exercise}[]\label{exr-ejemplo-conjuntos-abiertos-interseccion-no-abierta}
+
+Dar un ejemplo de dos conjuntos no abiertos pero cuya intersección es
+abierta.
+
+\end{exercise}
+
+\leavevmode\vadjust pre{\hypertarget{exr-union-interseccion-coleccion-abiertos-cerrados}{}}%
+\begin{exercise}[]\label{exr-union-interseccion-coleccion-abiertos-cerrados}
+
+Probar las siguientes propiedades:
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  La unión de una colección de conjuntos abiertos es un conjunto
+  abierto.
+\item
+  La intersección de una colección finita de conjuntos abiertos es un
+  conjunto abierto.
+\item
+  La intersección de una colección de conjuntos cerrados es cerrada.
+\item
+  La unión de una colección finita de conjuntos cerrados es un conjunto
+  cerrado.
+\end{enumerate}
+
+\end{exercise}
+
+
+
+\end{document}

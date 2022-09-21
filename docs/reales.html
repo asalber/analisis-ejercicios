@@ -182,8 +182,17 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 <!-- LTeX: language = es-ES -->
-<div id="exr-propiedad-arquimediana-1" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 2.1 </strong></span>Usando la propiedad arquimediana de los números reales, demostrar que para cualquier número real <span class="math inline">\(a\in\mathbb{R}\)</span> con <span class="math inline">\(a&gt;0\)</span> existe un número natural <span class="math inline">\(n\)</span> tal que <span class="math inline">\(n-1\leq a&lt; n\)</span>.</p>
+<div id="exr-supremos-infimos-reales" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 2.1 </strong></span>Para los siguientes subconjuntos de números reales, determinar si están acotados por arriba o por abajo, y en tal caso dar el supremo o el ínfimo.</p>
+<ol type="a">
+<li><span class="math inline">\(A = \{-1,0,1\}\)</span></li>
+<li><span class="math inline">\(B= [0,1)\)</span></li>
+<li><span class="math inline">\(C= (0,\infty)\)</span></li>
+<li><span class="math inline">\(D= \left\{1+\frac{1}{n}:n\in\mathbb{N}\right\}\)</span></li>
+<li><span class="math inline">\(E= \left\{(-2)^n:n\in\mathbb{N}\right\}\)</span></li>
+<li><span class="math inline">\(F= \{x\in\mathbb{R}:x^2-3x+2=0\}\)</span></li>
+<li><span class="math inline">\(G= \{x\in\mathbb{R}:x^3-x&lt;0\}\)</span></li>
+</ol>
 </div>
 <div class="callout-tip callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
@@ -197,13 +206,26 @@ Solución
 </div>
 <div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Como <span class="math inline">\(a&gt;0\)</span> se tiene que <span class="math inline">\(\frac{1}{a}&gt;0\)</span>, y por la propiedad arquimediana se cumple que existe <span class="math inline">\(n\in \mathbb{N}\)</span> tal que <span class="math inline">\(x&lt;n\)</span>.</p>
-<p>Considérese ahora el conjunto <span class="math inline">\(A=\{m\in \mathbb{N}: x&lt;m\}\)</span>. Como <span class="math inline">\(x&lt;n\)</span> se tiene que <span class="math inline">\(x\in A\)</span> y por tanto <span class="math inline">\(A\)</span> no está vacío. Aplicando ahora el principio de buena ordenación de los números naturales, como <span class="math inline">\(A\subset \mathbb{N}\)</span>, existe un primer elemento <span class="math inline">\(n_0\in A\)</span>, tal que <span class="math inline">\(n_0-1\not\in A\)</span>, de manera que <span class="math inline">\(n_0-1\leq a\)</span> y con ello se tiene que $<span class="math inline">\(n_0-1\leq a&lt;n\)</span>.</p>
+<ol type="a">
+<li><span class="math inline">\(A\)</span> está acotado por arriba y por abajo. <span class="math inline">\(\sup(A)=1\)</span> y <span class="math inline">\(\inf(A)=-1\)</span>.</li>
+<li><span class="math inline">\(B\)</span> está acotado por arriba y por abajo. <span class="math inline">\(sup(B)=1\)</span> y <span class="math inline">\(\inf(B)=0\)</span>.</li>
+<li><span class="math inline">\(C\)</span> está acotado por abajo, pero no por arriba. <span class="math inline">\(\inf(C)=0\)</span>.</li>
+<li><span class="math inline">\(D\)</span> está acotado por arriba y por abajo. <span class="math inline">\(\sup(D)=2\)</span> y <span class="math inline">\(\inf(D)=1\)</span>.</li>
+<li><span class="math inline">\(E\)</span> no está acotado por arriba ni por abajo.</li>
+<li><span class="math inline">\(F\)</span> está acotado por arriba y por abajo.<span class="math inline">\(\sup(F)=2\)</span> y <span class="math inline">\(\inf(F)=1\)</span>.</li>
+<li><span class="math inline">\(G\)</span> está acotado por arriba pero no por abajo. <span class="math inline">\(\sup(G)=1\)</span>.</li>
+</ol>
 </div>
 </div>
 </div>
-<div id="exr-densidad-racionales" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 2.2 </strong></span>Se dice que un conjunto <span class="math inline">\(A\)</span> es denso en <span class="math inline">\(\mathbb{R}\)</span> si cada intervalo <span class="math inline">\((a,b)\)</span> de <span class="math inline">\(\mathbb{R}\)</span> contiene algún elemento de <span class="math inline">\(A\)</span>. Demostrar que <span class="math inline">\(\mathbb{Q}\)</span> es denso en <span class="math inline">\(\mathbb{R}\)</span>.</p>
+<div id="exr-supremo-funciones" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 2.2 </strong></span>Dadas dos funciones <span class="math inline">\(f\)</span> y <span class="math inline">\(g\)</span> ambas con dominio <span class="math inline">\(A\subseteq \mathbb{R}\)</span>, demostrar que si sus imágenes están acotadas y <span class="math inline">\(f(x)\leq g(x)\)</span> <span class="math inline">\(\forall x\in A\)</span>, entonces <span class="math inline">\(\sup(\operatorname{Im}(f))\leq \sup(\operatorname{Im}(g))\)</span>.</p>
+</div>
+<div id="exr-no-completitud-racionales" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 2.3 </strong></span>Demostrar que el conjunto de los números racionales no cumple el axioma de completitud.</p>
+</div>
+<div id="exr-propiedad-arquimediana-1" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 2.4 </strong></span>Usando la propiedad arquimediana de los números reales, demostrar que para cualquier número real <span class="math inline">\(a\in\mathbb{R}\)</span> con <span class="math inline">\(a&gt;0\)</span> existe un número natural <span class="math inline">\(n\)</span> tal que <span class="math inline">\(n-1\leq a&lt; n\)</span>.</p>
 </div>
 <div class="callout-tip callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
@@ -217,12 +239,32 @@ Solución
 </div>
 <div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
+<p>Como <span class="math inline">\(a&gt;0\)</span> se tiene que <span class="math inline">\(\frac{1}{a}&gt;0\)</span>, y por la propiedad arquimediana se cumple que existe <span class="math inline">\(n\in \mathbb{N}\)</span> tal que <span class="math inline">\(x&lt;n\)</span>.</p>
+<p>Considérese ahora el conjunto <span class="math inline">\(A=\{m\in \mathbb{N}: x&lt;m\}\)</span>. Como <span class="math inline">\(x&lt;n\)</span> se tiene que <span class="math inline">\(x\in A\)</span> y por tanto <span class="math inline">\(A\)</span> no está vacío. Aplicando ahora el principio de buena ordenación de los números naturales, como <span class="math inline">\(A\subset \mathbb{N}\)</span>, existe un primer elemento <span class="math inline">\(n_0\in A\)</span>, tal que <span class="math inline">\(n_0-1\not\in A\)</span>, de manera que <span class="math inline">\(n_0-1\leq a\)</span> y con ello se tiene que $<span class="math inline">\(n_0-1\leq a&lt;n\)</span>.</p>
+</div>
+</div>
+</div>
+<div id="exr-densidad-racionales" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 2.5 </strong></span>Se dice que un conjunto <span class="math inline">\(A\)</span> es denso en <span class="math inline">\(\mathbb{R}\)</span> si cada intervalo <span class="math inline">\((a,b)\)</span> de <span class="math inline">\(\mathbb{R}\)</span> contiene algún elemento de <span class="math inline">\(A\)</span>. Demostrar que <span class="math inline">\(\mathbb{Q}\)</span> es denso en <span class="math inline">\(\mathbb{R}\)</span>.</p>
+</div>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
 <p>La prueba es la misma que la de la propiedad arquimediana. Basta con tomar <span class="math inline">\(n\in \mathbb{N}\)</span> tal que <span class="math inline">\(\frac{1}{n}&lt; b-a\)</span>. Si ahora se toma el primer múltiplo de <span class="math inline">\(1/n\)</span> tal que <span class="math inline">\(a&lt;\frac{m}{n}\)</span>, también se cumplirá que <span class="math inline">\(\frac{m}{n}&lt;b\)</span>, ya que de lo contrario <span class="math inline">\(\frac{m-1}{n}&lt;a&lt;b&lt;\frac{m}{n}\)</span> lo que lleva a la contradicción de que <span class="math inline">\(\frac{1}{n}&gt;b-a\)</span>.</p>
 </div>
 </div>
 </div>
 <div id="exr-existencia-raiz-cuadrada" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 2.3 </strong></span>Dado un número real con <span class="math inline">\(a\in\mathbb{R}\)</span>, demostrar que existe un número real <span class="math inline">\(x\)</span> tal que <span class="math inline">\(x&gt;0\)</span> y <span class="math inline">\(x^2=a\)</span>.</p>
+<p><span class="theorem-title"><strong>Ejercicio 2.6 </strong></span>Dado un número real con <span class="math inline">\(a\in\mathbb{R}\)</span>, demostrar que existe un número real <span class="math inline">\(x\)</span> tal que <span class="math inline">\(x&gt;0\)</span> y <span class="math inline">\(x^2=a\)</span>.</p>
 </div>
 
 
