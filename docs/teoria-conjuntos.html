@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.1.189">
+<meta name="generator" content="quarto-1.1.251">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -295,14 +295,12 @@ Solución
 </div>
 <div id="callout-3" class="callout-3-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p><span class="math display">\[
-\begin{aligned}
-\mathcal{P}(S)&amp;=\{\emptyset, \{A\}, \{B\}, \{AB\}, \newline
-&amp; \{\emptyset,A\},\{\emptyset,B\}, \{\emptyset,AB\}, \{A,B\}, \{A,AB\}, \{B,AB\}, \{\emptyset,A,B\},\newline
-&amp; \{\emptyset,A,AB\}, \{\emptyset,B,AB\}, \{A,B,AB\}, \newline
+<p><span class="math display">\[\begin{align*}
+\mathcal{P}(S)&amp;=\{\emptyset, \{A\}, \{B\}, \{AB\}, \\
+&amp; \{\emptyset,A\},\{\emptyset,B\}, \{\emptyset,AB\}, \{A,B\}, \{A,AB\}, \{B,AB\}, \{\emptyset,A,B\},\\
+&amp; \{\emptyset,A,AB\}, \{\emptyset,B,AB\}, \{A,B,AB\}, \\
 &amp; \{\emptyset,A,B,AB\} \}
-\end{aligned}
-\]</span></p>
+\end{align*}\]</span></p>
 </div>
 </div>
 </div>
@@ -321,12 +319,10 @@ Solución
 </div>
 <div id="callout-4" class="callout-4-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p><span class="math display">\[
-\begin{aligned}
-S \times R &amp;=\{(0,\mbox{Rh}+), (0,\mbox{Rh}-), (A,\mbox{Rh}+)), (A,\mbox{Rh}-),\newline
+<p><span class="math display">\[\begin{align*}
+S \times R &amp;=\{(0,\mbox{Rh}+), (0,\mbox{Rh}-), (A,\mbox{Rh}+)), (A,\mbox{Rh}-),\\
 &amp; (B,\mbox{Rh}+), (B,\mbox{Rh}-), (AB,\mbox{Rh}+), (AB,\mbox{Rh}-) \}
-\end{aligned}
-\]</span></p>
+\end{align*}\]</span></p>
 </div>
 </div>
 </div>
@@ -505,12 +501,11 @@ Solución
 <ol type="a">
 <li><p><span class="math inline">\(A\cup B = (A-B) \cup (B-A)\cup (A\cap B)\)</span> con <span class="math inline">\((A-B)\)</span>, <span class="math inline">\(A\cup B\)</span> y <span class="math inline">\(B-A\)</span> disjuntos dos a dos, de manera que <span class="math inline">\(|A\cup B| = |A-B| + |B-A| + |A\cap B|\)</span>.</p>
 <p>Por otro lado, <span class="math inline">\(A=(A-B)\cup (A\cap B)\)</span>, y <span class="math inline">\(B=(B-A)\cup (A\cap B)\)</span>, de modo que</p>
-<p><span class="math display">\[
-\begin{aligned}
-|A| + |B| - |A\cap B| &amp;= |A-B| + |A\cap B| + |B-A| + |A\cap B| - |A\cap B| \newline
+<p><span class="math display">\[\begin{align*}
+|A| + |B| - |A\cap B| &amp;= |A-B| + |A\cap B| + |B-A| + |A\cap B| - |A\cap B| \\
 &amp;= |A-B| + |B-A| + |A\cap B|,
-\end{aligned}
-\]</span> que coincide con el resultado anterior.</p></li>
+\end{align*}\]</span></p>
+<p>que coincide con el resultado anterior.</p></li>
 <li><p>Supongamos que <span class="math inline">\(A=\{a_1,\ldots, a_n\}\)</span> y <span class="math inline">\(B=\{b_1,\ldots, b_m\}\)</span>, de manera que <span class="math inline">\(|A|=n\)</span> y <span class="math inline">\(|B|=m\)</span>. Para cada elemento <span class="math inline">\(a_i\in A\)</span> se pueden formar <span class="math inline">\(m\)</span> pares <span class="math inline">\((a_i,b_1),\ldots (a_i,b_m)\)</span>. Como <span class="math inline">\(A\)</span> tiene <span class="math inline">\(n\)</span> elementos, en total se pueden formar <span class="math inline">\(n\cdot m\)</span> pares, así que <span class="math inline">\(|A\times B| = n\cdot m = |A||B|\)</span>.</p></li>
 </ol>
 </div>
@@ -713,7 +708,7 @@ Solución
 </div>
 <div id="callout-20" class="callout-20-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Ya hemos visto en el ejercicio <a href="#exr-racionales-numerables">Ejercicio&nbsp;<span class="quarto-unresolved-ref">exr-racionales-numerables</span></a> que <span class="math inline">\(\mathbb{Q}\)</span> es numerable, de manera que si <span class="math inline">\(\mathbb{R}\setminus \mathbb{Q}\)</span> fuese numerable, entonces por el <a href="#exr-union-numerables">Ejercicio&nbsp;<span class="quarto-unresolved-ref">exr-union-numerables</span></a> <span class="math inline">\(\mathbb{Q}\cup \mathbb{R}\setminus \mathbb{Q}=\mathbb{R}\)</span> sería numerable, lo cual no es cierto.</p>
+<p>Ya hemos visto en el ejercicio <a href="#exr-racionales-numerables">Ejercicio&nbsp;<span>1.19</span></a> que <span class="math inline">\(\mathbb{Q}\)</span> es numerable, de manera que si <span class="math inline">\(\mathbb{R}\setminus \mathbb{Q}\)</span> fuese numerable, entonces por el <a href="#exr-union-numerables">Ejercicio&nbsp;<span>1.20</span></a> <span class="math inline">\(\mathbb{Q}\cup \mathbb{R}\setminus \mathbb{Q}=\mathbb{R}\)</span> sería numerable, lo cual no es cierto.</p>
 </div>
 </div>
 </div>
@@ -763,7 +758,7 @@ Solución
 <div id="callout-22" class="callout-22-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Para cada <span class="math inline">\(n\in\mathbb{N}\)</span> sea <span class="math inline">\(P_n\)</span> el conjunto de los polinomios de grado <span class="math inline">\(n\)</span> con coeficientes enteros <span class="math inline">\(P_n=\{a_0+a_1x+a_2x^2+\cdots+a_nx^n: a_i\in \mathbb{Z}\}\)</span>. Para cada polinomio <span class="math inline">\(a_0+a_1x+a_2x^2+\cdots+a_nx^n\in P_n\)</span> podemos establecer una biyección entre sus coeficientes y la tupla <span class="math inline">\(p_n=(a_0,a_1,\ldots,a_n)\)</span>, con <span class="math inline">\(a_i\in\mathbb{Z}\)</span>. Por tanto, existe una biyección entre <span class="math inline">\(P_n\)</span> y <span class="math inline">\(\mathbb{Z}^n\)</span>, y como <span class="math inline">\(\mathbb{Z}^n\)</span> es numerable, el <span class="math inline">\(P_n\)</span> también lo es.</p>
-<p>Finalmente, <span class="math inline">\(P=\cup_{i=1}^\infty P_n\)</span> que es la unión numerable de conjuntos numerables, que, como ya se vió en el <a href="#exr-union-numerable-conjuntos-numerables">Ejercicio&nbsp;<span class="quarto-unresolved-ref">exr-union-numerable-conjuntos-numerables</span></a>, es numerable.</p>
+<p>Finalmente, <span class="math inline">\(P=\cup_{i=1}^\infty P_n\)</span> que es la unión numerable de conjuntos numerables, que, como ya se vió en el <a href="#exr-union-numerable-conjuntos-numerables">Ejercicio&nbsp;<span>1.22</span></a>, es numerable.</p>
 </div>
 </div>
 </div>

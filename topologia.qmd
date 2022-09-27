@@ -9,13 +9,6 @@ lang: es
 Dada la sucesión de intervalos anidados $I_n=[0,\frac{1}{n}]$, $n\in\mathbb{N}$, demostrar que $\cap_{n=1}^\infty = \{0\}$. Demostrar también que si se consideran intervalos abiertos en lugar de cerrados entonces la intersección es vacía.
 :::
 
-:::{#exr-supremo-infimo-maximo-minimo-2}
-Calcular el supremo y el ínfimo de los siguientes conjuntos. ¿Tienen máximo y mínimo?
-
-a. $A=\{x\in \mathbb{R} : 2 < x^2-2 < 3\}$
-b. $B=\{x\in \mathbb{R} : 1 < 4x^2 - 3 \leq 5\}$
-:::
-
 :::{#exr-interior-conjunto-unitario}
 ¿Cuál es el interior del conjunto $A=\{a\}$?
 :::

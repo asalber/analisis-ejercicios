@@ -4,9 +4,8 @@
 \PassOptionsToPackage{dvipsnames,svgnames,x11names}{xcolor}
 %
 \documentclass[
-  letterpaper,
-  DIV=11,
-  numbers=noendperiod]{scrreprt}
+  a4paper,
+]{scrreport}
 
 \usepackage{amsmath,amssymb}
 \usepackage{lmodern}
@@ -19,7 +18,6 @@
   \usepackage{unicode-math}
   \defaultfontfeatures{Scale=MatchLowercase}
   \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
-  \setmainfont[Numbers=Lowercase,Numbers=Proportional]{TeX Gyre Pagella}
 \fi
 % Use upquote if available, for straight quotes in verbatim environments
 \IfFileExists{upquote.sty}{\usepackage{upquote}}{}
@@ -77,7 +75,17 @@
 \makeatother
 
 \usepackage{venndiagram}
-\KOMAoption{captions}{tableheading}
+\newcommand{\NN}{\mathbb{N}}
+\newcommand{\ZZ}{\mathbb{Z}}
+\newcommand{\QQ}{\mathbb{Q}}
+\newcommand{\RR}{\mathbb{R}}
+\newcommand{\CC}{\mathbb{C}}
+\DeclareMathOperator{\operatorname{Int}}{Int}
+\DeclareMathOperator{\operatorname{Ext}}{Ext}
+\DeclareMathOperator{\operatorname{Fr}}{Fr}
+\DeclareMathOperator{\Adh}{Adh}
+\DeclareMathOperator{\Ac}{Ac}
+\DeclareMathOperator{\sen}{sen}
 \makeatletter
 \@ifpackageloaded{tcolorbox}{}{\usepackage[many]{tcolorbox}}
 \@ifpackageloaded{fontawesome5}{}{\usepackage{fontawesome5}}
@@ -185,8 +193,34 @@
 \date{1/6/2022}
 
 \begin{document}
-\maketitle
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[borderline west={3pt}{0pt}{shadecolor}, interior hidden, boxrule=0pt, enhanced, sharp corners, breakable, frame hidden]}{\end{tcolorbox}}\fi
+\begin{titlepage}
+
+%\AddToShipoutPicture*{\put(0,0){\includegraphics[scale=0.8]{img/background2}}} % Imagen de fondo, requiere el paquete eso-pic.
+\begin{center}
+\vspace*{5cm}
+
+\Huge
+{\textbf{\textsf{Problemas de Análisis Matemático}}}
+
+\vspace{0.5cm}
+\LARGE
+{\textbf{\textsf{}}}
+
+\vspace{1.5cm}
+
+\includegraphics[width=0.4\textwidth]{img/logos/infinito.png}
+\end{center}
+
+\vfill
+
+\begin{flushleft}
+\begin{tabular}{ll}
+\includegraphics[width=0.1\textwidth]{img/logos/aprendeconalf.png} & \parbox[b]{5cm}{\Large\textsf{Alfredo
+Sánchez
+Alberca}\\ \textsf{asalber@ceu.es} \\ \textsf{https://aprendeconalf.es}}
+\end{tabular}
+\end{flushleft}
+\end{titlepage}\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[frame hidden, interior hidden, borderline west={3pt}{0pt}{shadecolor}, boxrule=0pt, breakable, sharp corners, enhanced]}{\end{tcolorbox}}\fi
 
 \renewcommand*\contentsname{Indice de contenidos}
 {
@@ -244,7 +278,7 @@ con \(A\)? ¿Y con \(A\cup B\)?
 
 \end{exercise}
 
-\begin{tcolorbox}[enhanced jigsaw, coltitle=black, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, arc=.35mm, toprule=.15mm, bottomrule=.15mm, opacitybacktitle=0.6, toptitle=1mm, leftrule=.75mm, colbacktitle=quarto-callout-tip-color!10!white, bottomtitle=1mm, titlerule=0mm, breakable, colframe=quarto-callout-tip-color-frame, colback=white, opacityback=0, rightrule=.15mm, left=2mm]
+\begin{tcolorbox}[enhanced jigsaw, breakable, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, left=2mm, leftrule=.75mm, colback=white, bottomtitle=1mm, coltitle=black, bottomrule=.15mm, colframe=quarto-callout-tip-color-frame, colbacktitle=quarto-callout-tip-color!10!white, rightrule=.15mm, opacitybacktitle=0.6, arc=.35mm, toprule=.15mm, opacityback=0, toptitle=1mm, titlerule=0mm]
 
 \begin{enumerate}
 \def\labelenumi{\alph{enumi}.}
@@ -337,7 +371,7 @@ siguientes diagramas.
 
 \end{figure}
 
-\begin{tcolorbox}[enhanced jigsaw, coltitle=black, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, arc=.35mm, toprule=.15mm, bottomrule=.15mm, opacitybacktitle=0.6, toptitle=1mm, leftrule=.75mm, colbacktitle=quarto-callout-tip-color!10!white, bottomtitle=1mm, titlerule=0mm, breakable, colframe=quarto-callout-tip-color-frame, colback=white, opacityback=0, rightrule=.15mm, left=2mm]
+\begin{tcolorbox}[enhanced jigsaw, breakable, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, left=2mm, leftrule=.75mm, colback=white, bottomtitle=1mm, coltitle=black, bottomrule=.15mm, colframe=quarto-callout-tip-color-frame, colbacktitle=quarto-callout-tip-color!10!white, rightrule=.15mm, opacitybacktitle=0.6, arc=.35mm, toprule=.15mm, opacityback=0, toptitle=1mm, titlerule=0mm]
 
 \begin{enumerate}
 \def\labelenumi{\alph{enumi}.}
@@ -369,15 +403,13 @@ sanguíneos \(S=\{0, A, B, AB\}\). ¿Cuál es su cardinal?
 
 \end{exercise}
 
-\begin{tcolorbox}[enhanced jigsaw, coltitle=black, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, arc=.35mm, toprule=.15mm, bottomrule=.15mm, opacitybacktitle=0.6, toptitle=1mm, leftrule=.75mm, colbacktitle=quarto-callout-tip-color!10!white, bottomtitle=1mm, titlerule=0mm, breakable, colframe=quarto-callout-tip-color-frame, colback=white, opacityback=0, rightrule=.15mm, left=2mm]
-\[
-\begin{aligned}
-\mathcal{P}(S)&=\{\emptyset, \{A\}, \{B\}, \{AB\}, \newline 
-& \{\emptyset,A\},\{\emptyset,B\}, \{\emptyset,AB\}, \{A,B\}, \{A,AB\}, \{B,AB\}, \{\emptyset,A,B\},\newline
-& \{\emptyset,A,AB\}, \{\emptyset,B,AB\}, \{A,B,AB\}, \newline 
+\begin{tcolorbox}[enhanced jigsaw, breakable, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, left=2mm, leftrule=.75mm, colback=white, bottomtitle=1mm, coltitle=black, bottomrule=.15mm, colframe=quarto-callout-tip-color-frame, colbacktitle=quarto-callout-tip-color!10!white, rightrule=.15mm, opacitybacktitle=0.6, arc=.35mm, toprule=.15mm, opacityback=0, toptitle=1mm, titlerule=0mm]
+\begin{align*}
+\mathcal{P}(S)&=\{\emptyset, \{A\}, \{B\}, \{AB\}, \\
+& \{\emptyset,A\},\{\emptyset,B\}, \{\emptyset,AB\}, \{A,B\}, \{A,AB\}, \{B,AB\}, \{\emptyset,A,B\},\\ 
+& \{\emptyset,A,AB\}, \{\emptyset,B,AB\}, \{A,B,AB\}, \\ 
 & \{\emptyset,A,B,AB\} \}
-\end{aligned}
-\]
+\end{align*}
 \end{tcolorbox}
 
 \leavevmode\vadjust pre{\hypertarget{exr-producto-cartesiano-grupos-sanguineos}{}}%
@@ -389,13 +421,11 @@ Construir el producto cartesiano del conjunto d los grupos sanguíneos
 
 \end{exercise}
 
-\begin{tcolorbox}[enhanced jigsaw, coltitle=black, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, arc=.35mm, toprule=.15mm, bottomrule=.15mm, opacitybacktitle=0.6, toptitle=1mm, leftrule=.75mm, colbacktitle=quarto-callout-tip-color!10!white, bottomtitle=1mm, titlerule=0mm, breakable, colframe=quarto-callout-tip-color-frame, colback=white, opacityback=0, rightrule=.15mm, left=2mm]
-\[
-\begin{aligned}
-S \times R &=\{(0,\mbox{Rh}+), (0,\mbox{Rh}-), (A,\mbox{Rh}+)), (A,\mbox{Rh}-),\newline
+\begin{tcolorbox}[enhanced jigsaw, breakable, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, left=2mm, leftrule=.75mm, colback=white, bottomtitle=1mm, coltitle=black, bottomrule=.15mm, colframe=quarto-callout-tip-color-frame, colbacktitle=quarto-callout-tip-color!10!white, rightrule=.15mm, opacitybacktitle=0.6, arc=.35mm, toprule=.15mm, opacityback=0, toptitle=1mm, titlerule=0mm]
+\begin{align*}
+S \times R &=\{(0,\mbox{Rh}+), (0,\mbox{Rh}-), (A,\mbox{Rh}+)), (A,\mbox{Rh}-),\\
 & (B,\mbox{Rh}+), (B,\mbox{Rh}-), (AB,\mbox{Rh}+), (AB,\mbox{Rh}-) \}
-\end{aligned}
-\]
+\end{align*}
 \end{tcolorbox}
 
 \leavevmode\vadjust pre{\hypertarget{exr-relacion-equivalencia-1}{}}%
@@ -407,7 +437,7 @@ equivalencia.
 
 \end{exercise}
 
-\begin{tcolorbox}[enhanced jigsaw, coltitle=black, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, arc=.35mm, toprule=.15mm, bottomrule=.15mm, opacitybacktitle=0.6, toptitle=1mm, leftrule=.75mm, colbacktitle=quarto-callout-tip-color!10!white, bottomtitle=1mm, titlerule=0mm, breakable, colframe=quarto-callout-tip-color-frame, colback=white, opacityback=0, rightrule=.15mm, left=2mm]
+\begin{tcolorbox}[enhanced jigsaw, breakable, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, left=2mm, leftrule=.75mm, colback=white, bottomtitle=1mm, coltitle=black, bottomrule=.15mm, colframe=quarto-callout-tip-color-frame, colbacktitle=quarto-callout-tip-color!10!white, rightrule=.15mm, opacitybacktitle=0.6, arc=.35mm, toprule=.15mm, opacityback=0, toptitle=1mm, titlerule=0mm]
 \emph{Propiedad reflexiva}: \(\forall a\in\mathbb{Z}\) \(a-a=0\) es par,
 de manera que \(aRa\).\\
 \emph{Propiedad simétrica}: \(\forall a,b\in\mathbb{Z}\) si \(aRb\)
@@ -439,7 +469,7 @@ y \(bRc\) entonces \(a-b\) y \(b-c\) son pares, de manera que su suma
 
 \end{exercise}
 
-\begin{tcolorbox}[enhanced jigsaw, coltitle=black, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, arc=.35mm, toprule=.15mm, bottomrule=.15mm, opacitybacktitle=0.6, toptitle=1mm, leftrule=.75mm, colbacktitle=quarto-callout-tip-color!10!white, bottomtitle=1mm, titlerule=0mm, breakable, colframe=quarto-callout-tip-color-frame, colback=white, opacityback=0, rightrule=.15mm, left=2mm]
+\begin{tcolorbox}[enhanced jigsaw, breakable, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, left=2mm, leftrule=.75mm, colback=white, bottomtitle=1mm, coltitle=black, bottomrule=.15mm, colframe=quarto-callout-tip-color-frame, colbacktitle=quarto-callout-tip-color!10!white, rightrule=.15mm, opacitybacktitle=0.6, arc=.35mm, toprule=.15mm, opacityback=0, toptitle=1mm, titlerule=0mm]
 
 \begin{enumerate}
 \def\labelenumi{\alph{enumi}.}
@@ -477,7 +507,7 @@ supremo, el ínfimo, el máximo y el mínimo.
 
 \end{exercise}
 
-\begin{tcolorbox}[enhanced jigsaw, coltitle=black, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, arc=.35mm, toprule=.15mm, bottomrule=.15mm, opacitybacktitle=0.6, toptitle=1mm, leftrule=.75mm, colbacktitle=quarto-callout-tip-color!10!white, bottomtitle=1mm, titlerule=0mm, breakable, colframe=quarto-callout-tip-color-frame, colback=white, opacityback=0, rightrule=.15mm, left=2mm]
+\begin{tcolorbox}[enhanced jigsaw, breakable, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, left=2mm, leftrule=.75mm, colback=white, bottomtitle=1mm, coltitle=black, bottomrule=.15mm, colframe=quarto-callout-tip-color-frame, colbacktitle=quarto-callout-tip-color!10!white, rightrule=.15mm, opacitybacktitle=0.6, arc=.35mm, toprule=.15mm, opacityback=0, toptitle=1mm, titlerule=0mm]
 
 \begin{enumerate}
 \def\labelenumi{\alph{enumi}.}
@@ -514,7 +544,7 @@ cumplan lo siguiente:
 
 \end{exercise}
 
-\begin{tcolorbox}[enhanced jigsaw, coltitle=black, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, arc=.35mm, toprule=.15mm, bottomrule=.15mm, opacitybacktitle=0.6, toptitle=1mm, leftrule=.75mm, colbacktitle=quarto-callout-tip-color!10!white, bottomtitle=1mm, titlerule=0mm, breakable, colframe=quarto-callout-tip-color-frame, colback=white, opacityback=0, rightrule=.15mm, left=2mm]
+\begin{tcolorbox}[enhanced jigsaw, breakable, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, left=2mm, leftrule=.75mm, colback=white, bottomtitle=1mm, coltitle=black, bottomrule=.15mm, colframe=quarto-callout-tip-color-frame, colbacktitle=quarto-callout-tip-color!10!white, rightrule=.15mm, opacitybacktitle=0.6, arc=.35mm, toprule=.15mm, opacityback=0, toptitle=1mm, titlerule=0mm]
 
 \begin{enumerate}
 \def\labelenumi{\alph{enumi}.}
@@ -552,7 +582,7 @@ estudiar cuáles son inyectivas y cuáles sobreyectivas:
 
 \end{exercise}
 
-\begin{tcolorbox}[enhanced jigsaw, coltitle=black, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, arc=.35mm, toprule=.15mm, bottomrule=.15mm, opacitybacktitle=0.6, toptitle=1mm, leftrule=.75mm, colbacktitle=quarto-callout-tip-color!10!white, bottomtitle=1mm, titlerule=0mm, breakable, colframe=quarto-callout-tip-color-frame, colback=white, opacityback=0, rightrule=.15mm, left=2mm]
+\begin{tcolorbox}[enhanced jigsaw, breakable, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, left=2mm, leftrule=.75mm, colback=white, bottomtitle=1mm, coltitle=black, bottomrule=.15mm, colframe=quarto-callout-tip-color-frame, colbacktitle=quarto-callout-tip-color!10!white, rightrule=.15mm, opacitybacktitle=0.6, arc=.35mm, toprule=.15mm, opacityback=0, toptitle=1mm, titlerule=0mm]
 
 \begin{enumerate}
 \def\labelenumi{\alph{enumi}.}
@@ -577,7 +607,7 @@ inyectiva.
 
 \end{exercise}
 
-\begin{tcolorbox}[enhanced jigsaw, coltitle=black, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, arc=.35mm, toprule=.15mm, bottomrule=.15mm, opacitybacktitle=0.6, toptitle=1mm, leftrule=.75mm, colbacktitle=quarto-callout-tip-color!10!white, bottomtitle=1mm, titlerule=0mm, breakable, colframe=quarto-callout-tip-color-frame, colback=white, opacityback=0, rightrule=.15mm, left=2mm]
+\begin{tcolorbox}[enhanced jigsaw, breakable, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, left=2mm, leftrule=.75mm, colback=white, bottomtitle=1mm, coltitle=black, bottomrule=.15mm, colframe=quarto-callout-tip-color-frame, colbacktitle=quarto-callout-tip-color!10!white, rightrule=.15mm, opacitybacktitle=0.6, arc=.35mm, toprule=.15mm, opacityback=0, toptitle=1mm, titlerule=0mm]
 Sean \(f\) y \(g\) dos funciones inyectivas tales que
 \(\operatorname{Im}(f)\subseteq\operatorname{Dom}(g)\). Veamos que
 \(g\circ f\) es inyectiva. Supongamos ahora que existen
@@ -595,7 +625,7 @@ Dados dos conjuntos finitos \(A\) y \(B\), demostrar que
 
 \end{exercise}
 
-\begin{tcolorbox}[enhanced jigsaw, coltitle=black, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, arc=.35mm, toprule=.15mm, bottomrule=.15mm, opacitybacktitle=0.6, toptitle=1mm, leftrule=.75mm, colbacktitle=quarto-callout-tip-color!10!white, bottomtitle=1mm, titlerule=0mm, breakable, colframe=quarto-callout-tip-color-frame, colback=white, opacityback=0, rightrule=.15mm, left=2mm]
+\begin{tcolorbox}[enhanced jigsaw, breakable, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, left=2mm, leftrule=.75mm, colback=white, bottomtitle=1mm, coltitle=black, bottomrule=.15mm, colframe=quarto-callout-tip-color-frame, colbacktitle=quarto-callout-tip-color!10!white, rightrule=.15mm, opacitybacktitle=0.6, arc=.35mm, toprule=.15mm, opacityback=0, toptitle=1mm, titlerule=0mm]
 
 \begin{enumerate}
 \def\labelenumi{\alph{enumi}.}
@@ -607,12 +637,12 @@ Dados dos conjuntos finitos \(A\) y \(B\), demostrar que
   Por otro lado, \(A=(A-B)\cup (A\cap B)\), y \(B=(B-A)\cup (A\cap B)\),
   de modo que
 
-  \[
-   \begin{aligned}
-   |A| + |B| - |A\cap B| &= |A-B| + |A\cap B| + |B-A| + |A\cap B| - |A\cap B| \newline
+  \begin{align*}
+   |A| + |B| - |A\cap B| &= |A-B| + |A\cap B| + |B-A| + |A\cap B| - |A\cap B| \\
    &= |A-B| + |B-A| + |A\cap B|,
-   \end{aligned}
-   \] que coincide con el resultado anterior.
+   \end{align*}
+
+  que coincide con el resultado anterior.
 \item
   Supongamos que \(A=\{a_1,\ldots, a_n\}\) y \(B=\{b_1,\ldots, b_m\}\),
   de manera que \(|A|=n\) y \(|B|=m\). Para cada elemento \(a_i\in A\)
@@ -633,7 +663,7 @@ cuando \(f\) es biyectiva?
 
 \end{exercise}
 
-\begin{tcolorbox}[enhanced jigsaw, coltitle=black, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, arc=.35mm, toprule=.15mm, bottomrule=.15mm, opacitybacktitle=0.6, toptitle=1mm, leftrule=.75mm, colbacktitle=quarto-callout-tip-color!10!white, bottomtitle=1mm, titlerule=0mm, breakable, colframe=quarto-callout-tip-color-frame, colback=white, opacityback=0, rightrule=.15mm, left=2mm]
+\begin{tcolorbox}[enhanced jigsaw, breakable, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, left=2mm, leftrule=.75mm, colback=white, bottomtitle=1mm, coltitle=black, bottomrule=.15mm, colframe=quarto-callout-tip-color-frame, colbacktitle=quarto-callout-tip-color!10!white, rightrule=.15mm, opacitybacktitle=0.6, arc=.35mm, toprule=.15mm, opacityback=0, toptitle=1mm, titlerule=0mm]
 Sea \(f:A\rightarrow B\) inyectiva. Entonces para cualesquiera
 \(a_1,a_2\in A\) con \(a_1\neq a_2\) se tiene que \(f(a_1)\neq f(a_2)\),
 por lo que \(|A|\leq |B|\).
@@ -656,7 +686,7 @@ cuántas funciones inyectivas suponiendo que \(n\leq m\)?
 
 \end{exercise}
 
-\begin{tcolorbox}[enhanced jigsaw, coltitle=black, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, arc=.35mm, toprule=.15mm, bottomrule=.15mm, opacitybacktitle=0.6, toptitle=1mm, leftrule=.75mm, colbacktitle=quarto-callout-tip-color!10!white, bottomtitle=1mm, titlerule=0mm, breakable, colframe=quarto-callout-tip-color-frame, colback=white, opacityback=0, rightrule=.15mm, left=2mm]
+\begin{tcolorbox}[enhanced jigsaw, breakable, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, left=2mm, leftrule=.75mm, colback=white, bottomtitle=1mm, coltitle=black, bottomrule=.15mm, colframe=quarto-callout-tip-color-frame, colbacktitle=quarto-callout-tip-color!10!white, rightrule=.15mm, opacitybacktitle=0.6, arc=.35mm, toprule=.15mm, opacityback=0, toptitle=1mm, titlerule=0mm]
 Se pueden construir \(m^n\) funciones distintas, y \(\frac{m!}{(m-n)!}\)
 funciones inyectivas.
 \end{tcolorbox}
@@ -670,7 +700,7 @@ complemento también sea infinito.
 
 \end{exercise}
 
-\begin{tcolorbox}[enhanced jigsaw, coltitle=black, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, arc=.35mm, toprule=.15mm, bottomrule=.15mm, opacitybacktitle=0.6, toptitle=1mm, leftrule=.75mm, colbacktitle=quarto-callout-tip-color!10!white, bottomtitle=1mm, titlerule=0mm, breakable, colframe=quarto-callout-tip-color-frame, colback=white, opacityback=0, rightrule=.15mm, left=2mm]
+\begin{tcolorbox}[enhanced jigsaw, breakable, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, left=2mm, leftrule=.75mm, colback=white, bottomtitle=1mm, coltitle=black, bottomrule=.15mm, colframe=quarto-callout-tip-color-frame, colbacktitle=quarto-callout-tip-color!10!white, rightrule=.15mm, opacitybacktitle=0.6, arc=.35mm, toprule=.15mm, opacityback=0, toptitle=1mm, titlerule=0mm]
 \(A=\{x\in\mathbb{N}: x \mbox{ es par}\}\) es infinito y
 \(\overline A=\{x\in\mathbb{N}: x \mbox{ es impar}\}\) también es
 infinito.
@@ -684,7 +714,7 @@ numerable.
 
 \end{exercise}
 
-\begin{tcolorbox}[enhanced jigsaw, coltitle=black, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, arc=.35mm, toprule=.15mm, bottomrule=.15mm, opacitybacktitle=0.6, toptitle=1mm, leftrule=.75mm, colbacktitle=quarto-callout-tip-color!10!white, bottomtitle=1mm, titlerule=0mm, breakable, colframe=quarto-callout-tip-color-frame, colback=white, opacityback=0, rightrule=.15mm, left=2mm]
+\begin{tcolorbox}[enhanced jigsaw, breakable, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, left=2mm, leftrule=.75mm, colback=white, bottomtitle=1mm, coltitle=black, bottomrule=.15mm, colframe=quarto-callout-tip-color-frame, colbacktitle=quarto-callout-tip-color!10!white, rightrule=.15mm, opacitybacktitle=0.6, arc=.35mm, toprule=.15mm, opacityback=0, toptitle=1mm, titlerule=0mm]
 Sean \(A\) un conjunto infinito. Como \(A\) no es vacío, existe un
 elemento \(a_1\in A\). Considérese ahora el conjunto
 \(A_1 = A\setminus \{a_1\}\). Es evidente que \(A_1\) sigue siendo
@@ -702,7 +732,7 @@ subconjunto propio.
 
 \end{exercise}
 
-\begin{tcolorbox}[enhanced jigsaw, coltitle=black, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, arc=.35mm, toprule=.15mm, bottomrule=.15mm, opacitybacktitle=0.6, toptitle=1mm, leftrule=.75mm, colbacktitle=quarto-callout-tip-color!10!white, bottomtitle=1mm, titlerule=0mm, breakable, colframe=quarto-callout-tip-color-frame, colback=white, opacityback=0, rightrule=.15mm, left=2mm]
+\begin{tcolorbox}[enhanced jigsaw, breakable, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, left=2mm, leftrule=.75mm, colback=white, bottomtitle=1mm, coltitle=black, bottomrule=.15mm, colframe=quarto-callout-tip-color-frame, colbacktitle=quarto-callout-tip-color!10!white, rightrule=.15mm, opacitybacktitle=0.6, arc=.35mm, toprule=.15mm, opacityback=0, toptitle=1mm, titlerule=0mm]
 Sea \(A\) un conjunto. Si \(A\) es finito, entonces cualquier
 subconjunto \(B\subset A\) cumple que \(|B| < |A|\) por lo que no se
 puede establecer una biyección entre \(A\) y \(B\).
@@ -733,7 +763,7 @@ numerable. ¿Y el producto cartesiano de \(n\) conjuntos numerables?
 
 \end{exercise}
 
-\begin{tcolorbox}[enhanced jigsaw, coltitle=black, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, arc=.35mm, toprule=.15mm, bottomrule=.15mm, opacitybacktitle=0.6, toptitle=1mm, leftrule=.75mm, colbacktitle=quarto-callout-tip-color!10!white, bottomtitle=1mm, titlerule=0mm, breakable, colframe=quarto-callout-tip-color-frame, colback=white, opacityback=0, rightrule=.15mm, left=2mm]
+\begin{tcolorbox}[enhanced jigsaw, breakable, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, left=2mm, leftrule=.75mm, colback=white, bottomtitle=1mm, coltitle=black, bottomrule=.15mm, colframe=quarto-callout-tip-color-frame, colbacktitle=quarto-callout-tip-color!10!white, rightrule=.15mm, opacitybacktitle=0.6, arc=.35mm, toprule=.15mm, opacityback=0, toptitle=1mm, titlerule=0mm]
 Sean \(A\) y \(B\) dos conjuntos numerables. Entonces existe una
 aplicación inyectiva \(f:A\to\mathbb{N}\) y otra \(g:B\to\mathbb{N}\).
 Si se toma ahora la función \(h:A\times B\to \mathbb{N}\) definida como
@@ -753,7 +783,7 @@ Demostrar que el conjunto de los números racionales es numerable.
 
 \end{exercise}
 
-\begin{tcolorbox}[enhanced jigsaw, coltitle=black, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, arc=.35mm, toprule=.15mm, bottomrule=.15mm, opacitybacktitle=0.6, toptitle=1mm, leftrule=.75mm, colbacktitle=quarto-callout-tip-color!10!white, bottomtitle=1mm, titlerule=0mm, breakable, colframe=quarto-callout-tip-color-frame, colback=white, opacityback=0, rightrule=.15mm, left=2mm]
+\begin{tcolorbox}[enhanced jigsaw, breakable, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, left=2mm, leftrule=.75mm, colback=white, bottomtitle=1mm, coltitle=black, bottomrule=.15mm, colframe=quarto-callout-tip-color-frame, colbacktitle=quarto-callout-tip-color!10!white, rightrule=.15mm, opacitybacktitle=0.6, arc=.35mm, toprule=.15mm, opacityback=0, toptitle=1mm, titlerule=0mm]
 Si se considera la aplicación
 \(f:\mathbb{Q}\to \mathbb{Z}\times \mathbb{N}\) que a cada número
 racional \(r\) le hace corresponder el par
@@ -773,7 +803,7 @@ Demostrar que la unión de dos conjuntos numerables es numerable.
 
 \end{exercise}
 
-\begin{tcolorbox}[enhanced jigsaw, coltitle=black, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, arc=.35mm, toprule=.15mm, bottomrule=.15mm, opacitybacktitle=0.6, toptitle=1mm, leftrule=.75mm, colbacktitle=quarto-callout-tip-color!10!white, bottomtitle=1mm, titlerule=0mm, breakable, colframe=quarto-callout-tip-color-frame, colback=white, opacityback=0, rightrule=.15mm, left=2mm]
+\begin{tcolorbox}[enhanced jigsaw, breakable, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, left=2mm, leftrule=.75mm, colback=white, bottomtitle=1mm, coltitle=black, bottomrule=.15mm, colframe=quarto-callout-tip-color-frame, colbacktitle=quarto-callout-tip-color!10!white, rightrule=.15mm, opacitybacktitle=0.6, arc=.35mm, toprule=.15mm, opacityback=0, toptitle=1mm, titlerule=0mm]
 Sean \(A\) y \(B\) dos conjuntos numerables disjuntos. Entonces existen
 dos biyecciones \(f:A\to \mathbb{N}\) y \(g:B\to \mathbb{N}\). A partir
 de estas biyecciones se puede definir otra \(h:A\cup B\to \mathbb{N}\)
@@ -812,7 +842,7 @@ Demostrar que el conjunto de los números irracionales no es numerable.
 
 \end{exercise}
 
-\begin{tcolorbox}[enhanced jigsaw, coltitle=black, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, arc=.35mm, toprule=.15mm, bottomrule=.15mm, opacitybacktitle=0.6, toptitle=1mm, leftrule=.75mm, colbacktitle=quarto-callout-tip-color!10!white, bottomtitle=1mm, titlerule=0mm, breakable, colframe=quarto-callout-tip-color-frame, colback=white, opacityback=0, rightrule=.15mm, left=2mm]
+\begin{tcolorbox}[enhanced jigsaw, breakable, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, left=2mm, leftrule=.75mm, colback=white, bottomtitle=1mm, coltitle=black, bottomrule=.15mm, colframe=quarto-callout-tip-color-frame, colbacktitle=quarto-callout-tip-color!10!white, rightrule=.15mm, opacitybacktitle=0.6, arc=.35mm, toprule=.15mm, opacityback=0, toptitle=1mm, titlerule=0mm]
 Ya hemos visto en el ejercicio Ejercicio~\ref{exr-racionales-numerables}
 que \(\mathbb{Q}\) es numerable, de manera que si
 \(\mathbb{R}\setminus \mathbb{Q}\) fuese numerable, entonces por el
@@ -829,7 +859,7 @@ numerable.
 
 \end{exercise}
 
-\begin{tcolorbox}[enhanced jigsaw, coltitle=black, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, arc=.35mm, toprule=.15mm, bottomrule=.15mm, opacitybacktitle=0.6, toptitle=1mm, leftrule=.75mm, colbacktitle=quarto-callout-tip-color!10!white, bottomtitle=1mm, titlerule=0mm, breakable, colframe=quarto-callout-tip-color-frame, colback=white, opacityback=0, rightrule=.15mm, left=2mm]
+\begin{tcolorbox}[enhanced jigsaw, breakable, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, left=2mm, leftrule=.75mm, colback=white, bottomtitle=1mm, coltitle=black, bottomrule=.15mm, colframe=quarto-callout-tip-color-frame, colbacktitle=quarto-callout-tip-color!10!white, rightrule=.15mm, opacitybacktitle=0.6, arc=.35mm, toprule=.15mm, opacityback=0, toptitle=1mm, titlerule=0mm]
 Sea \(A\) un conjunto numerable de conjuntos numerables. Por ser \(A\)
 numerable existe una biyección \(f:\mathbb{N}\to A\), de manera que
 podemos enumerar los elementos de \(A\) de tal forma que \(A_i=f(i)\).
@@ -864,7 +894,7 @@ es numerable. ¿Y el de los polinomios con coeficientes racionales?
 
 \end{exercise}
 
-\begin{tcolorbox}[enhanced jigsaw, coltitle=black, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, arc=.35mm, toprule=.15mm, bottomrule=.15mm, opacitybacktitle=0.6, toptitle=1mm, leftrule=.75mm, colbacktitle=quarto-callout-tip-color!10!white, bottomtitle=1mm, titlerule=0mm, breakable, colframe=quarto-callout-tip-color-frame, colback=white, opacityback=0, rightrule=.15mm, left=2mm]
+\begin{tcolorbox}[enhanced jigsaw, breakable, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, left=2mm, leftrule=.75mm, colback=white, bottomtitle=1mm, coltitle=black, bottomrule=.15mm, colframe=quarto-callout-tip-color-frame, colbacktitle=quarto-callout-tip-color!10!white, rightrule=.15mm, opacitybacktitle=0.6, arc=.35mm, toprule=.15mm, opacityback=0, toptitle=1mm, titlerule=0mm]
 Para cada \(n\in\mathbb{N}\) sea \(P_n\) el conjunto de los polinomios
 de grado \(n\) con coeficientes enteros
 \(P_n=\{a_0+a_1x+a_2x^2+\cdots+a_nx^n: a_i\in \mathbb{Z}\}\). Para cada
@@ -913,6 +943,212 @@ Ejercicio~\ref{exr-union-numerable-conjuntos-numerables}, es numerable.
 \hypertarget{nuxfameros-reales}{%
 \chapter{Números reales}\label{nuxfameros-reales}}
 
+\leavevmode\vadjust pre{\hypertarget{exr-supremos-infimos-reales}{}}%
+\begin{exercise}[]\label{exr-supremos-infimos-reales}
+
+Para los siguientes subconjuntos de números reales, determinar si están
+acotados por arriba o por abajo, y en tal caso dar el supremo o el
+ínfimo.
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  \(A = \{-1,0,1\}\)
+\item
+  \(B= [0,1)\)
+\item
+  \(C= (0,\infty)\)
+\item
+  \(D= \left\{1+\frac{1}{n}:n\in\mathbb{N}\right\}\)
+\item
+  \(E= \left\{(-2)^n:n\in\mathbb{N}\right\}\)
+\item
+  \(F= \{x\in\mathbb{R}:x^2-3x+2=0\}\)
+\item
+  \(G= \{x\in\mathbb{R}:x^3-x<0\}\)
+\end{enumerate}
+
+\end{exercise}
+
+\begin{tcolorbox}[enhanced jigsaw, breakable, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, left=2mm, leftrule=.75mm, colback=white, bottomtitle=1mm, coltitle=black, bottomrule=.15mm, colframe=quarto-callout-tip-color-frame, colbacktitle=quarto-callout-tip-color!10!white, rightrule=.15mm, opacitybacktitle=0.6, arc=.35mm, toprule=.15mm, opacityback=0, toptitle=1mm, titlerule=0mm]
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  \(A\) está acotado por arriba y por abajo. \(\sup(A)=1\) y
+  \(\inf(A)=-1\).
+\item
+  \(B\) está acotado por arriba y por abajo. \(\sup(B)=1\) y
+  \(\inf(B)=0\).
+\item
+  \(C\) está acotado por abajo, pero no por arriba. \(\inf(C)=0\).
+\item
+  \(D\) está acotado por arriba y por abajo. \(\sup(D)=2\) y
+  \(\inf(D)=1\).
+\item
+  \(E\) no está acotado por arriba ni por abajo.
+\item
+  \(F\) está acotado por arriba y por abajo.\(\sup(F)=2\) y
+  \(\inf(F)=1\).
+\item
+  \(G\) está acotado por arriba pero no por abajo. \(\sup(G)=1\).
+\end{enumerate}
+
+\end{tcolorbox}
+
+\leavevmode\vadjust pre{\hypertarget{exr-supremo-infimo-maximo-minimo-2}{}}%
+\begin{exercise}[]\label{exr-supremo-infimo-maximo-minimo-2}
+
+Calcular el supremo y el ínfimo de los siguientes conjuntos. ¿Tienen
+máximo y mínimo?
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  \(A=\{x\in \mathbb{R} : 2 < x^2-2 < 7\}\)
+\item
+  \(B=\{x\in \mathbb{R} : 1 < 4x^2 - 3 \leq 5\}\)
+\end{enumerate}
+
+\end{exercise}
+
+\begin{tcolorbox}[enhanced jigsaw, breakable, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, left=2mm, leftrule=.75mm, colback=white, bottomtitle=1mm, coltitle=black, bottomrule=.15mm, colframe=quarto-callout-tip-color-frame, colbacktitle=quarto-callout-tip-color!10!white, rightrule=.15mm, opacitybacktitle=0.6, arc=.35mm, toprule=.15mm, opacityback=0, toptitle=1mm, titlerule=0mm]
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  \(A=(-3,-2)\cup(2,3)\), que como está acotado tiene supremo
+  \(\sup(A)=3\) e ínfimo \(\inf(A)=-3\). Sin embargo, \(3\not \in A\) y
+  \(-3\not\in A\), por lo que no tiene ni máximo ni mínimo.
+\item
+  \(B=[-\sqrt{2},-1)\cup(1,\sqrt{2}]\), que como está acotado tiene
+  supremo \(\sup(B)=\sqrt{2}\) e ínfimo \(\inf(B)=-\sqrt{2}\). Como
+  además, \(-\sqrt{2} \in B\) y \(\sqrt{2}\in B\), se tiene que
+  \(\max(B)=\sqrt{2}\) y \(\min(B)=-\sqrt{2}\).
+\end{enumerate}
+
+\end{tcolorbox}
+
+\leavevmode\vadjust pre{\hypertarget{exr-supremo-funciones}{}}%
+\begin{exercise}[]\label{exr-supremo-funciones}
+
+Dadas dos funciones \(f\) y \(g\) ambas con dominio
+\(A\subseteq \mathbb{R}\), demostrar que si sus imágenes están acotadas
+y \(f(a)\leq g(a)\) \(\forall a\in A\), entonces
+\(\sup(\operatorname{Im}(f))\leq \sup(\operatorname{Im}(g))\).
+
+\end{exercise}
+
+\begin{tcolorbox}[enhanced jigsaw, breakable, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, left=2mm, leftrule=.75mm, colback=white, bottomtitle=1mm, coltitle=black, bottomrule=.15mm, colframe=quarto-callout-tip-color-frame, colbacktitle=quarto-callout-tip-color!10!white, rightrule=.15mm, opacitybacktitle=0.6, arc=.35mm, toprule=.15mm, opacityback=0, toptitle=1mm, titlerule=0mm]
+Como las imágenes de \(f\) y \(g\) están acotadas, y suponiendo que no
+fuesen vacías, por el axioma del supremo, se tiene que existe
+\(c,d\in\mathbb{R}\) tales que \(c=\sup(\operatorname{Im}(f))\) y
+\(d= \sup(\operatorname{Im}(g))\). Como \(d\) es el supremo de la imagen
+de \(g\), se tiene que es una cota superior de la imagen de \(f\), ya
+que, para cualquier \(a\in A\), se tiene \(f(a)\leq g(a)\leq d\). Por
+consiguiente, tiene que ser \(c\leq d\), ya que de lo contrario \(c\) no
+sería el supremo por ser \(d\) una cota superior de la imagen de \(f\)
+menor que \(c\).
+\end{tcolorbox}
+
+\leavevmode\vadjust pre{\hypertarget{exr-cotas-conjunto-opuestos}{}}%
+\begin{exercise}[]\label{exr-cotas-conjunto-opuestos}
+
+Demostrar que si \(c\in\mathbb{R}\) es una cota superior de un conjunto
+\(A\), entonces \(-c\) es una cota inferior del conjunto de los opuestos
+\(A'=\{-a\in\mathbb{R}: a\in A\}\), y si \(c\) es una cota inferior de
+\(A\) entonces \(-c\) es una cota superior de \(A'\).
+
+\end{exercise}
+
+\begin{tcolorbox}[enhanced jigsaw, breakable, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, left=2mm, leftrule=.75mm, colback=white, bottomtitle=1mm, coltitle=black, bottomrule=.15mm, colframe=quarto-callout-tip-color-frame, colbacktitle=quarto-callout-tip-color!10!white, rightrule=.15mm, opacitybacktitle=0.6, arc=.35mm, toprule=.15mm, opacityback=0, toptitle=1mm, titlerule=0mm]
+Sea \(c\in\mathbb{R}\) una cota superior del conjunto \(A\). Entonces,
+\(a\leq c\) \(\forall a\in A\). De ello se deduce que para cualquier
+\(a\in A\),
+
+\[
+a<c \Rightarrow (-1)a\geq (-1)c \Rightarrow -a\geq -c, 
+\]
+
+lo que demuestra que \(-c\) es una cota inferior de \(A'\).
+
+Del mismo modo, si \(c\) una cota inferior del conjunto \(A\). Entonces,
+\(c\leq a\) \(\forall a\in A\), y de ello se deduce que para cualquier
+\(a\in A\),
+
+\[
+c<a \Rightarrow (-1)c\geq (-1)a \Rightarrow -c\geq -a, 
+\]
+
+de manera que \(-c\) es cota superior de \(A'\).
+\end{tcolorbox}
+
+\leavevmode\vadjust pre{\hypertarget{exr-propiedad-infimo}{}}%
+\begin{exercise}[]\label{exr-propiedad-infimo}
+
+Demostrar que todo subconjunto no vacío de números reales acotado
+inferiormente tiene un ínfimo.
+
+\end{exercise}
+
+\begin{tcolorbox}[enhanced jigsaw, breakable, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, left=2mm, leftrule=.75mm, colback=white, bottomtitle=1mm, coltitle=black, bottomrule=.15mm, colframe=quarto-callout-tip-color-frame, colbacktitle=quarto-callout-tip-color!10!white, rightrule=.15mm, opacitybacktitle=0.6, arc=.35mm, toprule=.15mm, opacityback=0, toptitle=1mm, titlerule=0mm]
+Sea \(A\subset\mathbb{R}\) no vacío y acotado inferiormente. Entonces
+existe un \(c\in\mathbb{R}\) que es cota inferior de \(A\). Si tomamos
+ahora el conjunto \(A'=\{-a\in\mathbb{R}: a\in A\}\), por el ejercicio
+Ejercicio~\ref{exr-cotas-conjunto-opuestos}, se cumple que \(-c\) es una
+cota superior de \(A'\). Así pues, \(A'\) es un conjunto no vacío y
+acotado superiormente, y por el axioma del supremo, existe
+\(-s\in\mathbb{R}\) tal que \(-s=\sup(A')\).
+
+Veamos ahora que \(s\) es el ínfimo de \(A\). Como \(-s\) es el supremo
+de \(A'\), es una cota superior de \(A'\), y por el ejercicio
+Ejercicio~\ref{exr-cotas-conjunto-opuestos}, se cumple que \(-(-s)=s\)
+es cota inferior de \(A\). Supongamos ahora que existe otra cota
+inferior \(x\) de \(A\) tal que \(x>s\). Entonces, aplicando una vez más
+el Ejercicio~\ref{exr-cotas-conjunto-opuestos}, se tiene que \(-x\) es
+cota superior de \(A'\), pero
+\(x>s\Rightarrow (-1)x<(-1)s \Rightarrow -x<-s\), lo que contradice que
+\(-s\) sea el supremo de \(A'\), ya que \(-x\) sería una cota superior
+menor que \(-s\). Luego \(s\) es el ínfimo de \(A\).
+\end{tcolorbox}
+
+\leavevmode\vadjust pre{\hypertarget{exr-propiedad-valor-absoluto}{}}%
+\begin{exercise}[]\label{exr-propiedad-valor-absoluto}
+
+Demostrar que \(|a|-|b|\leq |a-b|\) \(\forall a,b\in\mathbb{R}\).
+
+\end{exercise}
+
+\begin{tcolorbox}[enhanced jigsaw, breakable, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, left=2mm, leftrule=.75mm, colback=white, bottomtitle=1mm, coltitle=black, bottomrule=.15mm, colframe=quarto-callout-tip-color-frame, colbacktitle=quarto-callout-tip-color!10!white, rightrule=.15mm, opacitybacktitle=0.6, arc=.35mm, toprule=.15mm, opacityback=0, toptitle=1mm, titlerule=0mm]
+
+Veamos todas las posibilidades que pueden darse:
+
+\begin{itemize}
+\tightlist
+\item
+  Si \(a=0\), entonces \(|a|-|b|= -|b|\leq |-b| = |a-b|\).
+\item
+  Si \(b=0\), entonces \(|a|-|b|=|a|= |a-b|\).
+\item
+  Si \(a\geq b>0\), entonces \(|a|-|b|=a-b=|a-b|\).
+\item
+  Si \(b\geq a>0\), entonces \(|a|-|b|=a-b\leq 0\leq |a-b|\).
+\item
+  Si \(a>0>b\), entonces \(|a|-|b| = a-(-b) =a+b < a-b =|a-b|\).
+\item
+  Si \(b>0>a\), entonces \(|a|-|b| = -a-b < -a+b = -(a-b) = |a-b|\).
+\item
+  Si \(a\leq b<0\), entonces
+  \(|a|-|b| = -a-(-b) = -a+b = -(a-b) = |a-b|\).
+\item
+  Si \(b\leq a<0\), entonces
+  \(|a|-|b| = -a-(-b) = -a+b \leq 0 \leq |a-b|\).
+\end{itemize}
+
+\end{tcolorbox}
+
 \leavevmode\vadjust pre{\hypertarget{exr-propiedad-arquimediana-1}{}}%
 \begin{exercise}[]\label{exr-propiedad-arquimediana-1}
 
@@ -922,12 +1158,12 @@ número natural \(n\) tal que \(n-1\leq a< n\).
 
 \end{exercise}
 
-\begin{tcolorbox}[enhanced jigsaw, coltitle=black, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, arc=.35mm, toprule=.15mm, bottomrule=.15mm, opacitybacktitle=0.6, toptitle=1mm, leftrule=.75mm, colbacktitle=quarto-callout-tip-color!10!white, bottomtitle=1mm, titlerule=0mm, breakable, colframe=quarto-callout-tip-color-frame, colback=white, opacityback=0, rightrule=.15mm, left=2mm]
+\begin{tcolorbox}[enhanced jigsaw, breakable, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, left=2mm, leftrule=.75mm, colback=white, bottomtitle=1mm, coltitle=black, bottomrule=.15mm, colframe=quarto-callout-tip-color-frame, colbacktitle=quarto-callout-tip-color!10!white, rightrule=.15mm, opacitybacktitle=0.6, arc=.35mm, toprule=.15mm, opacityback=0, toptitle=1mm, titlerule=0mm]
 Como \(a>0\) se tiene que \(\frac{1}{a}>0\), y por la propiedad
-arquimediana se cumple que existe \(n\in \mathbb{N}\) tal que \(x<n\).
+arquimediana se cumple que existe \(n\in \mathbb{N}\) tal que \(a<n\).
 
-Considérese ahora el conjunto \(A=\{m\in \mathbb{N}: x<m\}\). Como
-\(x<n\) se tiene que \(x\in A\) y por tanto \(A\) no está vacío.
+Considérese ahora el conjunto \(A=\{m\in \mathbb{N}: a<m\}\). Como
+\(a<n\) se tiene que \(n\in A\) y por tanto \(A\) no está vacío.
 Aplicando ahora el principio de buena ordenación de los números
 naturales, como \(A\subset \mathbb{N}\), existe un primer elemento
 \(n_0\in A\), tal que \(n_0-1\not\in A\), de manera que \(n_0-1\leq a\)
@@ -943,7 +1179,7 @@ Demostrar que \(\mathbb{Q}\) es denso en \(\mathbb{R}\).
 
 \end{exercise}
 
-\begin{tcolorbox}[enhanced jigsaw, coltitle=black, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, arc=.35mm, toprule=.15mm, bottomrule=.15mm, opacitybacktitle=0.6, toptitle=1mm, leftrule=.75mm, colbacktitle=quarto-callout-tip-color!10!white, bottomtitle=1mm, titlerule=0mm, breakable, colframe=quarto-callout-tip-color-frame, colback=white, opacityback=0, rightrule=.15mm, left=2mm]
+\begin{tcolorbox}[enhanced jigsaw, breakable, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, left=2mm, leftrule=.75mm, colback=white, bottomtitle=1mm, coltitle=black, bottomrule=.15mm, colframe=quarto-callout-tip-color-frame, colbacktitle=quarto-callout-tip-color!10!white, rightrule=.15mm, opacitybacktitle=0.6, arc=.35mm, toprule=.15mm, opacityback=0, toptitle=1mm, titlerule=0mm]
 La prueba es la misma que la de la propiedad arquimediana. Basta con
 tomar \(n\in \mathbb{N}\) tal que \(\frac{1}{n}< b-a\). Si ahora se toma
 el primer múltiplo de \(1/n\) tal que \(a<\frac{m}{n}\), también se
@@ -951,14 +1187,6 @@ cumplirá que \(\frac{m}{n}<b\), ya que de lo contrario
 \(\frac{m-1}{n}<a<b<\frac{m}{n}\) lo que lleva a la contradicción de que
 \(\frac{1}{n}>b-a\).
 \end{tcolorbox}
-
-\leavevmode\vadjust pre{\hypertarget{exr-existencia-raiz-cuadrada}{}}%
-\begin{exercise}[]\label{exr-existencia-raiz-cuadrada}
-
-Dado un número real con \(a\in\mathbb{R}\), demostrar que existe un
-número real \(x\) tal que \(x>0\) y \(x^2=a\).
-
-\end{exercise}
 
 \bookmarksetup{startatroot}
 
@@ -973,23 +1201,6 @@ Dada la sucesión de intervalos anidados \(I_n=[0,\frac{1}{n}]\),
 \(n\in\mathbb{N}\), demostrar que \(\cap_{n=1}^\infty = \{0\}\).
 Demostrar también que si se consideran intervalos abiertos en lugar de
 cerrados entonces la intersección es vacía.
-
-\end{exercise}
-
-\leavevmode\vadjust pre{\hypertarget{exr-supremo-infimo-maximo-minimo-2}{}}%
-\begin{exercise}[]\label{exr-supremo-infimo-maximo-minimo-2}
-
-Calcular el supremo y el ínfimo de los siguientes conjuntos. ¿Tienen
-máximo y mínimo?
-
-\begin{enumerate}
-\def\labelenumi{\alph{enumi}.}
-\tightlist
-\item
-  \(A=\{x\in \mathbb{R} : 2 < x^2-2 < 3\}\)
-\item
-  \(B=\{x\in \mathbb{R} : 1 < 4x^2 - 3 \leq 5\}\)
-\end{enumerate}
 
 \end{exercise}
 

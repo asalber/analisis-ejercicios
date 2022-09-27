@@ -14,7 +14,7 @@ url("./bootstrap-icons.woff?524846017b983fc8ded9325d94ed40f3") format("woff");
   font-variant: normal;
   text-transform: none;
   line-height: 1;
-  vertical-align: -.125em;
+  vertical-align*: -.125em;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -22,12 +22,12 @@ url("./bootstrap-icons.woff?524846017b983fc8ded9325d94ed40f3") format("woff");
 .bi-123::before { content: "\f67f"; }
 .bi-alarm-fill::before { content: "\f101"; }
 .bi-alarm::before { content: "\f102"; }
-.bi-align-bottom::before { content: "\f103"; }
-.bi-align-center::before { content: "\f104"; }
-.bi-align-end::before { content: "\f105"; }
-.bi-align-middle::before { content: "\f106"; }
-.bi-align-start::before { content: "\f107"; }
-.bi-align-top::before { content: "\f108"; }
+.bi-align*-bottom::before { content: "\f103"; }
+.bi-align*-center::before { content: "\f104"; }
+.bi-align*-end::before { content: "\f105"; }
+.bi-align*-middle::before { content: "\f106"; }
+.bi-align*-start::before { content: "\f107"; }
+.bi-align*-top::before { content: "\f108"; }
 .bi-alt::before { content: "\f109"; }
 .bi-app-indicator::before { content: "\f10a"; }
 .bi-app::before { content: "\f10b"; }

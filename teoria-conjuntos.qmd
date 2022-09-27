@@ -78,14 +78,13 @@ Construir por extensión el conjunto potencia del conjunto de los grupos sanguí
 
 :::{.callout-tip collapse="true"}
 ## Solución
-$$
-\begin{aligned}
-\mathcal{P}(S)&=\{\emptyset, \{A\}, \{B\}, \{AB\}, \newline 
-& \{\emptyset,A\},\{\emptyset,B\}, \{\emptyset,AB\}, \{A,B\}, \{A,AB\}, \{B,AB\}, \{\emptyset,A,B\},\newline
-& \{\emptyset,A,AB\}, \{\emptyset,B,AB\}, \{A,B,AB\}, \newline 
+\begin{align*}
+\mathcal{P}(S)&=\{\emptyset, \{A\}, \{B\}, \{AB\}, \\
+& \{\emptyset,A\},\{\emptyset,B\}, \{\emptyset,AB\}, \{A,B\}, \{A,AB\}, \{B,AB\}, \{\emptyset,A,B\},\\ 
+& \{\emptyset,A,AB\}, \{\emptyset,B,AB\}, \{A,B,AB\}, \\ 
 & \{\emptyset,A,B,AB\} \}
-\end{aligned}
-$$
+\end{align*}
+
 :::
 
 :::{#exr-producto-cartesiano-grupos-sanguineos}
@@ -94,12 +93,10 @@ Construir el producto cartesiano del conjunto d los grupos sanguíneos $S=\{0, A
 
 :::{.callout-tip collapse="true"}
 ## Solución
-$$
-\begin{aligned}
-S \times R &=\{(0,\mbox{Rh}+), (0,\mbox{Rh}-), (A,\mbox{Rh}+)), (A,\mbox{Rh}-),\newline
+\begin{align*}
+S \times R &=\{(0,\mbox{Rh}+), (0,\mbox{Rh}-), (A,\mbox{Rh}+)), (A,\mbox{Rh}-),\\
 & (B,\mbox{Rh}+), (B,\mbox{Rh}-), (AB,\mbox{Rh}+), (AB,\mbox{Rh}-) \}
-\end{aligned}
-$$
+\end{align*}
 :::
 
 :::{#exr-relacion-equivalencia-1}
@@ -198,12 +195,11 @@ a. $A\cup B = (A-B) \cup (B-A)\cup (A\cap B)$ con $(A-B)$, $A\cup B$ y $B-A$ dis
 
     Por otro lado, $A=(A-B)\cup (A\cap B)$, y $B=(B-A)\cup (A\cap B)$, de modo que 
 
-    $$
-    \begin{aligned}
-    |A| + |B| - |A\cap B| &= |A-B| + |A\cap B| + |B-A| + |A\cap B| - |A\cap B| \newline
+    \begin{align*}
+    |A| + |B| - |A\cap B| &= |A-B| + |A\cap B| + |B-A| + |A\cap B| - |A\cap B| \\
     &= |A-B| + |B-A| + |A\cap B|,
-    \end{aligned}
-    $$
+    \end{align*}
+    
     que coincide con el resultado anterior.
 
 b. Supongamos que $A=\{a_1,\ldots, a_n\}$ y $B=\{b_1,\ldots, b_m\}$, de manera que $|A|=n$ y $|B|=m$. Para cada elemento $a_i\in A$ se pueden formar $m$ pares $(a_i,b_1),\ldots (a_i,b_m)$. Como $A$ tiene $n$ elementos, en total se pueden formar $n\cdot m$ pares, así que $|A\times B| = n\cdot m = |A||B|$.

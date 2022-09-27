@@ -43,14 +43,26 @@ format:
     theme: cosmo
     dark: darkly
     light: flatly
+    html-math-method: mathjax
   pdf:
-    documentclass: scrreprt
-    include-in-header: 
-      - paquetes.tex
-    # mainfont: TeX Gyre Pagella
-    # mainfontoptions:
-    #   - Numbers=Lowercase
-    #   - Numbers=Proportional    
+    documentclass: scrreport
+    papersize: a4
+    template-partials:
+      - before-body.tex
+    titlegraphic: img/logos/infinito.png
+    institution: CEU San Pablo
+    email: asalber@ceu.es
+    web: https://aprendeconalf.es
+    logo: img/logos/aprendeconalf.png
+    include-in-header:
+      - preamble.tex
+      - macros.tex
+    keep-tex: true
+    #mainfont: TeX Gyre Termes
+    #mainfontoptions:
+    #  - Numbers=Lowercase
+    #  - Numbers=Proportional    
+    
   epub:
     cover-image: img/logos/pi.jpg
 
