@@ -17,6 +17,10 @@ Dada la sucesión de intervalos anidados $I_n=[0,\frac{1}{n}]$, $n\in\mathbb{N}$
 Sean $a,b,c\in\mathbb{R}$ tales que $a<b<c$ y sea $A=\{a\}\cup (b,c)$. Calcular $\operatorname{Int}(A)$, $\operatorname{Ext}(A)$ y $\operatorname{Fr}(A)$.
 :::
 
+:::{#exr-frontera-enteros}
+Demostrar que todos los números de $\mathbb{Z}$ son puntos frontera.
+:::
+
 :::{#exr-interior-racionales-irracionales}
 Demostrar que el conjunto de los números racionales no tiene puntos interiores. ¿Y el conjunto de los números irracionales?
 :::

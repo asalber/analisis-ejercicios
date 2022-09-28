@@ -9,3 +9,31 @@ lang: es
 Demostrar que la sucesion $((-1)^n)_{n=1}^\infty$ es divergente.
 :::
 
+:::{#exr-limites-sucesiones}
+Demostrar, aplicando la definición de límite de una sucesión, que las siguientes sucesiones convergen a los valores dados.
+
+a. $\lim_{n\to\infty}\frac{2n}{n^2}=0$
+a. $\lim_{n\to\infty}\frac{n^2-1}{3n^2+n-2}=\frac{1}{3}$
+a. $\lim_{n\to\infty}\frac{3n^2+2}{n^2-n}=3$
+:::
+
+:::{#exr-sucesion-valor-absoluto}
+Demostrar que si una sucesión de números reales converge a $x$, entonces la sucesión de sus valores absolutos converge a $|x|$. ¿Es cierto lo contrario?
+:::
+
+:::{#exr-sucesion-raiz-cuadrada}
+Demostrar que si una sucesión de números reales positivos converge a $x$, entonces la sucesión de sus valores raíces cuadradas positivas converge a $\sqrt{x}$.
+:::
+
+:::{#exr-producto-sucesion-convergente-0}
+Demostrar que si $(x_n)_{n=1}^\infty$ es una sucesión de números reales acotada e $(y_n)_{n=1}^\infty$ es otra sucesión que converge a $0$, entonces la sucesión $(x_ny_n)_{n=1}^\infty$ también converge a $0$.
+:::
+
+:::{#exr-compresion-sucesiones}
+Demostrar las siguientes sucesiones convergen a $0$ usando el teorema de compresión de sucesiones.
+
+a. $\left(\frac{n+\cos(n)}{n^2+1}\right)_{n=1}^\infty$
+a. $\left(\frac{2^n}{n!}\right)_{n=1}^\infty$
+a. $\left(\frac{n^2}{2^n}\right)_{n=1}^\infty$
+:::
+
