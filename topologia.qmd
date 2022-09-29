@@ -6,45 +6,118 @@ lang: es
 # Topología de los números reales
 
 :::{#exr-sucesion-intervalos-anidados}
-Dada la sucesión de intervalos anidados $I_n=[0,\frac{1}{n}]$, $n\in\mathbb{N}$, demostrar que $\cap_{n=1}^\infty = \{0\}$. Demostrar también que si se consideran intervalos abiertos en lugar de cerrados entonces la intersección es vacía.
+Dada la sucesión de intervalos anidados $I_n=[0,\frac{1}{n}]$, $n\in\mathbb{N}$, demostrar que $\cap_{n=1}^\infty I_n= \{0\}$. Demostrar también que si se consideran intervalos abiertos en lugar de cerrados entonces la intersección es vacía.
+:::
+
+:::{.callout-tip collapse="true"}
+## Solución
+En primer lugar, es fácil ver que $0\in\cap_{n=1}^\infty I_n$ ya que $0\in I_n$ $\forall n\in\mathbb{N}$. Veamos ahora que $0$ es el único elemento de la intersección. Para cualquier $x>0$, aplicando la propiedad arquimediana se tiene que existe $n\in\mathbb{N}$ tal que $\frac{1}{n}<x$, de manera que $x\not\in [0,\frac{1}{n}]=I_n$, por lo que $x\not\in\cap_{n=1}^\infty I_n$. Por tanto, $\cap_{n=1}^\infty I_n=\{0\}$.
+
+Si se consideran intervalos abiertos en lugar de cerrados, entonces $0$ tampoco pertenecería a la intersección y $\cap_{n=1}^\infty I_n=\emptyset$.
 :::
 
 :::{#exr-interior-conjunto-unitario}
 ¿Cuál es el interior del conjunto $A=\{a\}$?
 :::
 
+:::{.callout-tip collapse="true"}
+## Solución
+$a$ no es un punto interior de $A$, ya que para cualquier $\varepsilon>0$, el entorno $(a-\varepsilon, a+\varepsilon)\not\subseteq A$. Por tanto, $\operatorname{Int}(A)=\emptyset$.  
+
+En general, cualquier conjunto con un solo punto no tiene puntos interiores.
+:::
+
 :::{#exr-interior-exterior-frontera}
 Sean $a,b,c\in\mathbb{R}$ tales que $a<b<c$ y sea $A=\{a\}\cup (b,c)$. Calcular $\operatorname{Int}(A)$, $\operatorname{Ext}(A)$ y $\operatorname{Fr}(A)$.
 :::
 
+:::{.callout-tip collapse="true"}
+## Solución
+Como el interior de un conjunto con un solo punto es vacío y el interior de un intervalo abierto es el propio intervalo abierto (ver [proposición](https://aprendeconalf.es/analisis-manual/topologia-reales.html#prp-interior-intervalo-abierto)), se tiene que $\operatorname{Int}(A)=(a,b)$. Por otro lado, $\overline{A}=(-\infty,a)\cup (a,b)\cup (c,\infty)$, que al ser la unión de intervalos abiertos se tiene que $\operatorname{Ext}(A)=\operatorname{Int}(\overline{A})=(-\infty,a)\cup (a,b)\cup (c,\infty)$.  Finalmente, $\operatorname{Fr}(A)=\{a,b,c\}$, ya que cualquier entorno de estos puntos contiene puntos de $A$ y de $\overline{A}$.
+:::
+
 :::{#exr-frontera-enteros}
-Demostrar que todos los números de $\mathbb{Z}$ son puntos frontera.
+Demostrar que todos los puntos de $\mathbb{Z}$ son puntos frontera.
+:::
+
+:::{.callout-tip collapse="true"}
+## Solución
+Sea $x\in\mathbb{Z}$, entonces, para cualquier $\varepsilon>0$, el entorno $(x-\varepsilon, x+\varepsilon)$ siempre contiene números enteros (por ejemplo el propio $x$), y números no enteros, por los que $x$ es un punto frontera.
 :::
 
 :::{#exr-interior-racionales-irracionales}
 Demostrar que el conjunto de los números racionales no tiene puntos interiores. ¿Y el conjunto de los números irracionales?
 :::
 
+:::{.callout-tip collapse="true"}
+## Solución
+Sea $x\in\mathbb{Q}$, entonces, para cualquier $\varepsilon>0$, por la [densidad de los números racionales](https://aprendeconalf.es/analisis-manual/cuerpo-reales.html#thm-densidad-racionales), el entorno $(x-\varepsilon, x+\varepsilon)$ siempre contiene números racionales, y por la  [densidad de los números irracionales](https://aprendeconalf.es/analisis-manual/cuerpo-reales.html#thm-densidad-irracionales) también contiene números irracionales, de manera que todos los puntos de $\mathbb{Q}$ son frontera y no tiene puntos interiores.
+
+Por el mismo motivo, $\mathbb{R}\setminus\mathbb{Q}$ tampoco tiene puntos interiores y todos sus puntos son puntos frontera.
+:::
+
 :::{#exr-interior-subconjunto}
 Demostrar que si $x$ es un punto interior de $A$ y $A\subseteq B$, entonces $x$ también es un punto interior de $B$.
+:::
+
+:::{.callout-tip collapse="true"}
+## Solución
+Sea $x$ un punto interior de $A$. Entonces existe un $\varepsilon>0$ tal que el entorno $(x-\varepsilon, x+\varepsilon)\subseteq A\subseteq B$, de manera que $x$ también es un punto interior de $B$.
 :::
 
 :::{#exr-punto-interior-union-interseccion}
 Demostrar que si $x$ es un punto interior de dos conjuntos $A$ y $B$, entonces también es un punto interior de su unión y su intersección.
 :::
 
+:::{.callout-tip collapse="true"}
+## Solución
+Sea $x$ un punto interior de $A$ y $B$. Entonces, existe un $\varepsilon_1>0$ tal que el entorno $(x-\varepsilon_1, x+\varepsilon_1)\subseteq A\subseteq A\cup B$, de manera que $x$ es también un punto interior de $A\cup B$.
+
+Por otro lado, como $x$ es también un punto interior de $B$, existe otro $\varepsilon_2>0$ tal que el entorno $(x-\varepsilon_2, x+\varepsilon_2)\subseteq B$. Tomando $\varepsilon=\min\{\varepsilon_1,\varepsilon_2\}$, se tiene que el entorno $(x-\varepsilon, x+\varepsilon)\subseteq A$ y $(x-\varepsilon, x+\varepsilon)\subseteq B$, por lo que $(x-\varepsilon, x+\varepsilon)\subseteq A\cap B$, y $x$ es también un punto interior de $A\cap B$.
+:::
+
 :::{#exr-interior-union-interseccion}
-Demostrar que si $A,B\subseteq \mathbb{R}$, $\operatorname{Int}(A\cap B) = \operatorname{Int}(A)  \cap \operatorname{Int}(B)$.
+Demostrar que para cualesquiera dos conjuntos de números reales $A$ y $B$, se cumple que $\operatorname{Int}(A\cap B) = \operatorname{Int}(A)  \cap \operatorname{Int}(B)$.
+
 
 Demostrar también que el anterior resultado no es cierto para la unión, es decir, dados $A,B\subseteq \mathbb{R}$, no se cumple siempre que $\operatorname{Int}(A\cup B) = \operatorname{Int}(A)  \cup  \operatorname{Int}(B)$.
+:::
+
+:::{.callout-tip collapse="true"}
+## Solución
+En el @exr-punto-interior-union-interseccion hemos visto que si $x$ es un punto interior de $A$ y $B$, entonces también lo es de su intersección. Veamos ahora el otro sentido de la implicación.
+
+Supongamos que $x$ es un punto interior de $A\cap B$. Entonces, existe un $\varepsilon>0$ tal que el entorno $(x-\varepsilon, x+\varepsilon)\subseteq A\cap B$. Pero como $A\cap B\subseteq A$ y $A\cap B\subseteq B$, se tiene que $x$ es también un punto interior de $A$ y de $B$.
+
+Para ver que este resultado no es cierto para la unión, basta con tomar $A=(-1,0)$ y $B=[0,1)$. Entonces $A\cup B=(-1,1)$, y al ser un intervalo abierto, $\operatorname{Int}(A\cup B)=(-1,1)$. Sin embargo, $\operatorname{Int}(A)=(-1,0)$ y $\operatorname{Int}(B)=(0,1)$, por lo que $\operatorname{Int}(A)\cup \operatorname{Int}(B)=(-1,1)\setminus\{0\}\neq (-1,1)= \operatorname{Int}(A\cup B)$.
 :::
 
 :::{#exr-particion-interior-exterior-frontera}
 Dado un conjunto $A\subset\mathbb{R}$, probar que los conjuntos $\operatorname{Int}(A)$, $\operatorname{Ext}(A)$ y $\operatorname{Fr}(A)$ forman una partición de $\mathbb{R}$.
 :::
 
+:::{.callout-tip collapse="true"}
+## Solución
+Veamos primero, que $\operatorname{Int}(A)$, $\operatorname{Ext}(A)$ y $\operatorname{Fr}(A)$ son disjuntos dos a dos. 
+
+- Si $x\in \operatorname{Int}(A)$, entonces existe $\varepsilon>0$ tal que el entorno $(x-\varepsilon, x+\varepsilon)\subseteq A$. De aquí se deduce que $a\in A$, y por tanto $x\not\in \overline{A}$ por lo que $(x-\varepsilon, x+\varepsilon)\not\subseteq \overline{A}$ $\forall \varepsilon>0$ y $x$ no es un punto exterior de $A$. Por otro lado, $(x-\varepsilon, x+\varepsilon)\subseteq A$, por lo que este entorno de $x$ no contiene puntos de $\overline{A}$ y $x\not\in \operatorname{Fr}(A)$.
+- Si $x\in \operatorname{Ext}(A)$, entonces existe $\varepsilon>0$ tal que el entorno $(x-\varepsilon, x+\varepsilon)\subseteq \overline{A}$. De aquí se deduce que $x\not\in A$, y por tanto $x$ no es un punto interior de $A$. Por otro lado, como $(x-\varepsilon, x+\varepsilon)\subseteq \overline{A}$, existe un entorno de $x$ que no contiene puntos de $A$ y $x\not\in \operatorname{Fr}(A)$.
+- Si $x\in \operatorname{Fr}(A)$, entonces para cualquier $\varepsilon>0$, el entorno $(x-\varepsilon, x+\varepsilon)$ contiene puntos de $A$ y de $\overline{A}$, de manera que, no existe $\varepsilon>0$ tal que $(x-\varepsilon, x+\varepsilon)\subseteq A$ o $(x-\varepsilon, x+\varepsilon)\subseteq \overline{A}$, así que, $x$ no es un punto interior ni exterior de $A$.
+
+Veamos ahora que $\operatorname{Int}(A)\cup\operatorname{Ext}(A)\cup\operatorname{Fr}(A)=\mathbb{R}$, o dicho de otro modo, cualquier $x\in\mathbb{R}$ debe pertenecer a alguno de estos conjuntos. 
+
+- Si existe $\varepsilon>0$ tal que $(x-\varepsilon, x+\varepsilon)\subseteq A$, entonces $x$ es un punto interior de $A$. 
+- En caso contrario, si existe $\varepsilon>0$ tal que $(x-\varepsilon, x+\varepsilon)\subseteq \overline{A}$, entonces $x$ es un punto exterior de $A$. 
+- Finalmente, si para cualquier $\varepsilon>0$ $(x-\varepsilon, x+\varepsilon)\not\subseteq A$ y $(x-\varepsilon, x+\varepsilon)\not\subseteq \overline{A}$, se tiene que $(x-\varepsilon, x+\varepsilon)$ contiene tanto puntos de $A$ como de $\overline{A}$, por lo que $x$ es un punto frontera de $A$.
+:::
+
 :::{#exr-ejemplo-conjuntos-abiertos-interseccion-no-abierta}
 Dar un ejemplo de dos conjuntos no abiertos pero cuya intersección es abierta.
+:::
+
+:::{.callout-tip collapse="true"}
+## Solución
+Si se toma $A=[0,2)$ y $B=(1,3]$, tanto $A$ como $B$ no son abiertos, pero $A\cap B=(1,2)$ que es un conjunto abierto.
 :::
 
 :::{#exr-union-interseccion-coleccion-abiertos-cerrados}
@@ -54,4 +127,17 @@ a. La unión de una colección de conjuntos abiertos es un conjunto abierto.
 a. La intersección de una colección finita de conjuntos abiertos es un conjunto abierto.
 a. La intersección de una colección de conjuntos cerrados es cerrada.
 a. La unión de una colección finita de conjuntos cerrados es un conjunto cerrado.
+:::
+
+:::{.callout-tip collapse="true"}
+## Solución
+a. Sea $A_n$ $n\in\mathbb{N}$ una colección arbitraria de conjuntos abiertos y sea $x\in \cup_{n=1}^\infty A_n$. Entonces existe un $n\in\mathbb{N}$ tal que $x\in A_n$, y como $A_n$ es abierto, existe un $\varepsilon>0$ tal que el entorno $(x-\varepsilon, x+\varepsilon)\subseteq A_n\subseteq\cup_{n=1}^\infty A_n$, por lo que $x$ es un punto interior de $\cup_{n=1}^\infty A_n$.
+
+b. Vamos a probarlo por inducción. Sean $A_1$ y $A_2$ dos conjuntos abiertos. Si $A_1\cap A_2=\emptyset$ ya estaría probado. En caso contrario, sea $x\in A_1\cap A_2$. Entonces, como $x\in A_1$ existe un $\varepsilon_1>0$ tal que el entorno $(x-\varepsilon_1, x+\varepsilon_1)\subseteq A_1$, y como $x\in A_2$ existe un $\varepsilon_2>0$ tal que el entorno $(x-\varepsilon_2, x+\varepsilon_2)\subseteq A_2$. Tomando $\varepsilon=\min\{\varepsilon_1,\varepsilon_2\}$, se tiene que $(x-\varepsilon, x+\varepsilon)\subseteq A_1$ y $(x-\varepsilon, x+\varepsilon)\subseteq A_2$, por lo que $(x-\varepsilon, x+\varepsilon)\subseteq A_1\cap A_2$, y $A_1\cap A_2$ es un conjunto abierto.
+
+    Sea ahora una colección $A_1,\ldots,A_m,A_{m+1}$ una colección de conjuntos abiertos y supongamos que $A=\cap_{n=1}^m A_n$ es un conjunto abierto. Si $A\cap A_{m+1}=\emptyset$ ya estaría probado. En caso contrario, sea $x\in A\cap A_{m+1}$. Entonces, como $x\in A$ existe un $\varepsilon_1>0$ tal que el entorno $(x-\varepsilon_1, x+\varepsilon_1)\subseteq A$, y como $x\in A_{m+1}$ existe un $\varepsilon_2>0$ tal que el entorno $(x-\varepsilon_2, x+\varepsilon_2)\subseteq A_{m+1}$. Tomando $\varepsilon=\min\{\varepsilon_1,\varepsilon_2\}$, se tiene que $(x-\varepsilon, x+\varepsilon)\subseteq A$ y $(x-\varepsilon, x+\varepsilon)\subseteq A_{m+1}$, por lo que $(x-\varepsilon, x+\varepsilon)\subseteq A\cap A_{m+1}$, y $\cap_{n=1}^{m+1} A_n$ es un conjunto abierto.
+
+c. Sea $A_n$, $n\in\mathbb{N}$, una colección arbitraria de conjuntos cerrados. Entonces, aplicando la ley de Morgan, se tiene que $\overline{\cap_{n=1}^\infty A_n}= \cup_{n=1}^\infty \overline{A_n}$. Como $A_n$ es cerrado, $\overline{A_n}$ es abierto $\forall n\in\mathbb{N}$, y por el apartado (a), se tiene que $\cup_{n=1}^\infty \overline{A_n}$ es un conjunto abierto, por lo que $\overline{\cap_{n=1}^\infty A_n}$ es abierto y $\cap_{n=1}^\infty A_n$ es cerrado.
+
+d. Sea ahora una colección $A_1,\ldots,A_n$ una colección de conjuntos cerrados. De nuevo, aplicando la ley de Morgan, se tiene que $\overline{\cup_{n=1}^\infty A_n}= \cap_{n=1}^\infty \overline{A_n}$. Como $A_i$ es cerrado, $\overline{A_i}$ es abierto $\forall i=1, \ldots, n$, y por el apartado (b), se tiene que $\cap_{n=1}^\infty \overline{A_n}$ es un conjunto abierto, por lo que $\overline{\cup_{n=1}^\infty A_n}$ es abierto y $\cup_{n=1}^\infty A_n$ es cerrado.
 :::
