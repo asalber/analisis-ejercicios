@@ -22,7 +22,7 @@ Demostrar que si una sucesión de números reales converge a $x$, entonces la su
 :::
 
 :::{#exr-sucesion-raiz-cuadrada}
-Demostrar que si una sucesión de números reales positivos converge a $x$, entonces la sucesión de sus valores raíces cuadradas positivas converge a $\sqrt{x}$.
+Demostrar que si una sucesión de números reales positivos converge a $x$, entonces la sucesión de sus raíces cuadradas positivas converge a $\sqrt{x}$.
 :::
 
 :::{#exr-producto-sucesion-convergente-0}
@@ -36,4 +36,5 @@ a. $\left(\frac{n+\cos(n)}{n^2+1}\right)_{n=1}^\infty$
 a. $\left(\frac{2^n}{n!}\right)_{n=1}^\infty$
 a. $\left(\frac{n^2}{2^n}\right)_{n=1}^\infty$
 :::
+
 

@@ -30,6 +30,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
+<link href="./sucesiones.html" rel="next">
 <link href="./reales.html" rel="prev">
 <link href="./img/logos/favicon.ico" rel="icon">
 <script src="site_libs/quarto-html/quarto.js"></script>
@@ -152,6 +153,11 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./topologia.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Topología de los números reales</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./sucesiones.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Sucesiones de números reales</span></a>
   </div>
 </li>
     </ul>
@@ -370,8 +376,8 @@ Solución
 </div>
 </div>
 </div>
-<div id="exr-ejemplo-conjuntos-abiertos-interseccion-no-abierta" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 3.10 </strong></span>Dar un ejemplo de dos conjuntos no abiertos pero cuya intersección es abierta.</p>
+<div id="exr-particion-interior-exterior-frontera" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 3.10 </strong></span>Calcular los puntos de adherencia y de acumulación del conjunto <span class="math inline">\(A=\{\frac{n+1}{n}:n\in\mathbb{N}\}\)</span>.</p>
 </div>
 <div class="callout-tip callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="false" aria-label="Toggle callout">
@@ -385,18 +391,14 @@ Solución
 </div>
 <div id="callout-10" class="callout-10-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Si se toma <span class="math inline">\(A=[0,2)\)</span> y <span class="math inline">\(B=(1,3]\)</span>, tanto <span class="math inline">\(A\)</span> como <span class="math inline">\(B\)</span> no son abiertos, pero <span class="math inline">\(A\cap B=(1,2)\)</span> que es un conjunto abierto.</p>
+<p>Como <span class="math inline">\(\frac{n+1}{n}=1+\frac{1}{n}\)</span>, <span class="math inline">\(1\)</span> es un punto de acumulación de <span class="math inline">\(A\)</span>, ya que para cualquier <span class="math inline">\(\varepsilon&gt;0\)</span>, <span class="math inline">\((1-\varepsilon, 1+\varepsilon)\setminus \{1\}\)</span> contiene puntos de <span class="math inline">\(A\)</span>. Para verlo, basta aplicar la propiedad arquimediana, de manera que existe <span class="math inline">\(n\in\mathbb{N}\)</span> tal que <span class="math inline">\(\frac{1}{n}&lt;\varepsilon\)</span>, de manera que <span class="math inline">\(1+\frac{1}{n}&lt;1+\varepsilon\)</span>, y por tanto <span class="math inline">\((1-\varepsilon, 1+\varepsilon)\setminus \{1\}\cap A\neq \emptyset\)</span>.</p>
+<p>Para calcular los puntos de adherencia de <span class="math inline">\(A\)</span> basta tener en cuenta que <span class="math inline">\(A\subseteq \operatorname{Adh}(A)\)</span>, y que <span class="math inline">\(\operatorname{Ac}(A)\subseteq \operatorname{Adh}(A)\)</span>, por lo que <span class="math inline">\(1\)</span> también es un punto de adherencia de <span class="math inline">\(A\)</span>. Veamos ahora que cualquier otro punto, no es punto de adherencia de <span class="math inline">\(A\)</span>. Si <span class="math inline">\(x&lt;1\)</span>, tomando <span class="math inline">\(\varepsilon=|x-1|\)</span> el entorno <span class="math inline">\((x-\varepsilon, x+\varepsilon)\)</span> no contiene puntos de <span class="math inline">\(A\)</span>. Del mismo modo, si <span class="math inline">\(x&gt;2\)</span>, tomando <span class="math inline">\(\varepsilon=|x-2|\)</span> el entorno <span class="math inline">\((x-\varepsilon, x+\varepsilon)\)</span> tampoco contiene puntos de <span class="math inline">\(A\)</span>. Finalmente, si <span class="math inline">\(1&lt;x\leq 2\)</span>, por la propiedad arquimediana, existe <span class="math inline">\(n\in\mathbb{N}\)</span> tal que <span class="math inline">\(\frac{1}{n+1}\leq x&lt;\frac{1}{n}\)</span>. Tomando <span class="math inline">\(\varepsilon=\min(\{|x-\frac{1}{n+1}|,|x-\frac{1}{n}|\})\)</span> también se tiene que el entorno <span class="math inline">\((x-\varepsilon, x+\varepsilon)\)</span> no contiene puntos de <span class="math inline">\(A\)</span>. Por tanto, <span class="math inline">\(\operatorname{Adh}(A)=A\cup \{1\}\)</span>.</p>
+<p>Para calcular los puntos de acumulación de <span class="math inline">\(A\)</span>, ya sabemos que <span class="math inline">\(1\)</span> es un punto de acumulación y faltaría por ver si algún otro punto de <span class="math inline">\(A\)</span> es un punto de acumulación de <span class="math inline">\(A\)</span>, ya que el resto de puntos no pertenecen a la adherencia y por tanto no pueden ser puntos de acumulación al ser <span class="math inline">\(\operatorname{Ac}(A)\subseteq\operatorname{Adh}(A)\)</span>. Ahora bien, si <span class="math inline">\(x\in A\)</span>, entonces existe <span class="math inline">\(n\in\mathbb{N}\)</span> tal que <span class="math inline">\(x=1+\frac{1}{n}\)</span>, de manera que tomando <span class="math inline">\(\varepsilon=\frac{1}{n}-\frac{1}{n+1}\)</span> se tiene que el entorno reducido <span class="math inline">\((x-\varepsilon,x+\varepsilon)\setminus\{x\}\)</span> no contiene puntos de <span class="math inline">\(A\)</span>, por lo que <span class="math inline">\(x\)</span> no es punto de acumulación de <span class="math inline">\(A\)</span>. Así pues, <span class="math inline">\(\operatorname{Ac}(A)=\{1\}\)</span>.</p>
 </div>
 </div>
 </div>
-<div id="exr-union-interseccion-coleccion-abiertos-cerrados" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 3.11 </strong></span>Probar las siguientes propiedades:</p>
-<ol type="a">
-<li>La unión de una colección de conjuntos abiertos es un conjunto abierto.</li>
-<li>La intersección de una colección finita de conjuntos abiertos es un conjunto abierto.</li>
-<li>La intersección de una colección de conjuntos cerrados es cerrada.</li>
-<li>La unión de una colección finita de conjuntos cerrados es un conjunto cerrado.</li>
-</ol>
+<div id="exr-particion-interior-exterior-frontera" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 3.11 </strong></span>Calcular los puntos de adherencia y de acumulación de <span class="math inline">\(\mathbb{Z}\)</span> y también de <span class="math inline">\(\mathbb{Q}\)</span>.</p>
 </div>
 <div class="callout-tip callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="false" aria-label="Toggle callout">
@@ -410,6 +412,70 @@ Solución
 </div>
 <div id="callout-11" class="callout-11-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
+<p><span class="math inline">\(\operatorname{Adh}(\mathbb{Z})=\mathbb{Z}\)</span> y <span class="math inline">\(\operatorname{Ac}(\mathbb{Z})=\emptyset\)</span>.<br>
+<span class="math inline">\(\operatorname{Adh}(\mathbb{Q})=\operatorname{Ac}(\mathbb{Q})=\mathbb{R}\)</span>.</p>
+</div>
+</div>
+</div>
+<div id="exr-ejemplo-conjuntos-abiertos-interseccion-no-abierta" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 3.12 </strong></span>Dar un ejemplo de dos conjuntos no abiertos pero cuya intersección es abierta.</p>
+</div>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-12-contents" aria-controls="callout-12" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-12" class="callout-12-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Si se toma <span class="math inline">\(A=[0,2)\)</span> y <span class="math inline">\(B=(1,3]\)</span>, tanto <span class="math inline">\(A\)</span> como <span class="math inline">\(B\)</span> no son abiertos, pero <span class="math inline">\(A\cap B=(1,2)\)</span> que es un conjunto abierto.</p>
+</div>
+</div>
+</div>
+<div id="exr-racionales-no-abierto-cerrado" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 3.13 </strong></span>Estudiar si el conjunto de los números racionales <span class="math inline">\(\mathbb{Q}\)</span> es abierto o cerrado.</p>
+</div>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-13-contents" aria-controls="callout-13" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-13" class="callout-13-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><span class="math inline">\(\mathbb{Q}\)</span> no es abierto ya que como se vio en el <a href="#exr-interior-racionales-irracionales">Ejercicio&nbsp;<span>3.5</span></a> <span class="math inline">\(\operatorname{Int}(\mathbb{Q})=\emptyset\)</span>. En el mismo ejercicio se vio también que <span class="math inline">\(\operatorname{Int}(\overline{\mathbb{Q}})=\operatorname{Int}(\mathbb{R}\setminus \mathbb{Q})=\emptyset\)</span>, por lo que <span class="math inline">\(\mathbb{Q}\)</span> tampoco es cerrado.</p>
+</div>
+</div>
+</div>
+<div id="exr-union-interseccion-coleccion-abiertos-cerrados" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 3.14 </strong></span>Probar las siguientes propiedades:</p>
+<ol type="a">
+<li>La unión de una colección de conjuntos abiertos es un conjunto abierto.</li>
+<li>La intersección de una colección finita de conjuntos abiertos es un conjunto abierto.</li>
+<li>La intersección de una colección de conjuntos cerrados es cerrada.</li>
+<li>La unión de una colección finita de conjuntos cerrados es un conjunto cerrado.</li>
+</ol>
+</div>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-14-contents" aria-controls="callout-14" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-14" class="callout-14-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
 <ol type="a">
 <li><p>Sea <span class="math inline">\(A_n\)</span> <span class="math inline">\(n\in\mathbb{N}\)</span> una colección arbitraria de conjuntos abiertos y sea <span class="math inline">\(x\in \cup_{n=1}^\infty A_n\)</span>. Entonces existe un <span class="math inline">\(n\in\mathbb{N}\)</span> tal que <span class="math inline">\(x\in A_n\)</span>, y como <span class="math inline">\(A_n\)</span> es abierto, existe un <span class="math inline">\(\varepsilon&gt;0\)</span> tal que el entorno <span class="math inline">\((x-\varepsilon, x+\varepsilon)\subseteq A_n\subseteq\cup_{n=1}^\infty A_n\)</span>, por lo que <span class="math inline">\(x\)</span> es un punto interior de <span class="math inline">\(\cup_{n=1}^\infty A_n\)</span>.</p></li>
 <li><p>Vamos a probarlo por inducción. Sean <span class="math inline">\(A_1\)</span> y <span class="math inline">\(A_2\)</span> dos conjuntos abiertos. Si <span class="math inline">\(A_1\cap A_2=\emptyset\)</span> ya estaría probado. En caso contrario, sea <span class="math inline">\(x\in A_1\cap A_2\)</span>. Entonces, como <span class="math inline">\(x\in A_1\)</span> existe un <span class="math inline">\(\varepsilon_1&gt;0\)</span> tal que el entorno <span class="math inline">\((x-\varepsilon_1, x+\varepsilon_1)\subseteq A_1\)</span>, y como <span class="math inline">\(x\in A_2\)</span> existe un <span class="math inline">\(\varepsilon_2&gt;0\)</span> tal que el entorno <span class="math inline">\((x-\varepsilon_2, x+\varepsilon_2)\subseteq A_2\)</span>. Tomando <span class="math inline">\(\varepsilon=\min\{\varepsilon_1,\varepsilon_2\}\)</span>, se tiene que <span class="math inline">\((x-\varepsilon, x+\varepsilon)\subseteq A_1\)</span> y <span class="math inline">\((x-\varepsilon, x+\varepsilon)\subseteq A_2\)</span>, por lo que <span class="math inline">\((x-\varepsilon, x+\varepsilon)\subseteq A_1\cap A_2\)</span>, y <span class="math inline">\(A_1\cap A_2\)</span> es un conjunto abierto.</p>
@@ -417,6 +483,45 @@ Solución
 <li><p>Sea <span class="math inline">\(A_n\)</span>, <span class="math inline">\(n\in\mathbb{N}\)</span>, una colección arbitraria de conjuntos cerrados. Entonces, aplicando la ley de Morgan, se tiene que <span class="math inline">\(\overline{\cap_{n=1}^\infty A_n}= \cup_{n=1}^\infty \overline{A_n}\)</span>. Como <span class="math inline">\(A_n\)</span> es cerrado, <span class="math inline">\(\overline{A_n}\)</span> es abierto <span class="math inline">\(\forall n\in\mathbb{N}\)</span>, y por el apartado (a), se tiene que <span class="math inline">\(\cup_{n=1}^\infty \overline{A_n}\)</span> es un conjunto abierto, por lo que <span class="math inline">\(\overline{\cap_{n=1}^\infty A_n}\)</span> es abierto y <span class="math inline">\(\cap_{n=1}^\infty A_n\)</span> es cerrado.</p></li>
 <li><p>Sea ahora una colección <span class="math inline">\(A_1,\ldots,A_n\)</span> una colección de conjuntos cerrados. De nuevo, aplicando la ley de Morgan, se tiene que <span class="math inline">\(\overline{\cup_{n=1}^\infty A_n}= \cap_{n=1}^\infty \overline{A_n}\)</span>. Como <span class="math inline">\(A_i\)</span> es cerrado, <span class="math inline">\(\overline{A_i}\)</span> es abierto <span class="math inline">\(\forall i=1, \ldots, n\)</span>, y por el apartado (b), se tiene que <span class="math inline">\(\cap_{n=1}^\infty \overline{A_n}\)</span> es un conjunto abierto, por lo que <span class="math inline">\(\overline{\cup_{n=1}^\infty A_n}\)</span> es abierto y <span class="math inline">\(\cup_{n=1}^\infty A_n\)</span> es cerrado.</p></li>
 </ol>
+</div>
+</div>
+</div>
+<div id="exr-adherencia-cerrada" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 3.15 </strong></span>Demostrar que la adherencia de cualquier conjunto es siempre cerrada.</p>
+</div>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-15-contents" aria-controls="callout-15" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-15" class="callout-15-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Sea <span class="math inline">\(A\subset \mathbb{R}\)</span>. Para probar que <span class="math inline">\(\operatorname{Adh}(A)\)</span> es un conjunto cerrado, veremos que <span class="math inline">\(\overline{\operatorname{Adh}(A)}\)</span> es abierto. Si <span class="math inline">\(x\in\overline{\operatorname{Adh}(A)}\)</span>, entonces <span class="math inline">\(x\not\in\operatorname{Adh}(A)\)</span>, y existe un <span class="math inline">\(\varepsilon&gt;0\)</span> tal que <span class="math inline">\((x-\varepsilon,x+\varepsilon)\cap A = \emptyset\)</span>. Para cualquier <span class="math inline">\(y\in (x-\varepsilon,x+\varepsilon)\)</span>, se tiene, tomando <span class="math inline">\(\varepsilon'=\min(\{x-\varepsilon-y,x+\varepsilon-y\})\)</span>, que <span class="math inline">\((y-\varepsilon',y+\varepsilon')\subseteq (x-\varepsilon,x+\varepsilon)\)</span> y por tanto <span class="math inline">\((y-\varepsilon',y+\varepsilon')\cap A = \emptyset\)</span>, por lo que <span class="math inline">\(y\not\in\operatorname{Adh}(A)\)</span>. Así pues, <span class="math inline">\((x-\varepsilon,x+\varepsilon)\subseteq \overline{\operatorname{Adh}(A)}\)</span>, y por consiguiente <span class="math inline">\(\overline{\operatorname{Adh}(A)}\)</span> es abierto y <span class="math inline">\(\operatorname{Adh}(A)\)</span> es cerrado.</p>
+</div>
+</div>
+</div>
+<div id="exr-adherencia-cerrada" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 3.16 </strong></span>Demostrar que cualquier conjunto es cerrado si y solo si coincide con su adherencia.</p>
+</div>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-16-contents" aria-controls="callout-16" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-16" class="callout-16-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Sea <span class="math inline">\(A\)</span> un conjunto cerrado. Ya sabemos que <span class="math inline">\(A\subseteq \operatorname{Adh}(A)\)</span>. Supongamos ahora que existe un punto <span class="math inline">\(x\in \operatorname{Adh}(A)\setminus A\)</span>. Entonces, como <span class="math inline">\(x\)</span> es un punto de adherencia de <span class="math inline">\(A\)</span>, para cualquier <span class="math inline">\(\varepsilon&gt;0\)</span>, <span class="math inline">\((x-\varepsilon,x+\varepsilon)\cap A\neq \emptyset\)</span>, pero como <span class="math inline">\(x\not\in A\)</span>, también se cumple que <span class="math inline">\((x-\varepsilon,x+\varepsilon)\setminus \{x\}\cap A\neq \emptyset\)</span>, por lo que <span class="math inline">\(x\)</span> es un punto de acumulación de <span class="math inline">\(A\)</span>, pero eso contradice que <span class="math inline">\(A\)</span> sea un conjunto cerrado, pues no contiene a todos sus puntos de acumulación (ver <a href="https://aprendeconalf.es/analisis-manual/topologia-reales.html#thm-conjunto-cerrado-puntos-acumulacion">teorema</a>). Así pues, <span class="math inline">\(\operatorname{Adh}(A)=A\)</span>.</p>
+<p>Para probar el otro sentido de la implicación, supongamos que <span class="math inline">\(\operatorname{Adh}(A)=A\)</span>. Entonces, para cualquier <span class="math inline">\(x\in \overline{A}\)</span> existe un <span class="math inline">\(\varepsilon&gt;0\)</span> tal que <span class="math inline">\((x-\varepsilon,x+\varepsilon)\cap A=\emptyset\)</span>, por lo que <span class="math inline">\((x-\varepsilon,x+\varepsilon)\subseteq \overline{A}\)</span> y <span class="math inline">\(\overline{A}\)</span> es abierto, de manera que <span class="math inline">\(A\)</span> es cerrado.</p>
 </div>
 </div>
 </div>
@@ -529,6 +634,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
+      <a href="./sucesiones.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Sucesiones de números reales</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
   </div>
 </nav>
 </div> <!-- /content -->

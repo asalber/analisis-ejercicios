@@ -111,6 +111,30 @@ Veamos ahora que $\operatorname{Int}(A)\cup\operatorname{Ext}(A)\cup\operatornam
 - Finalmente, si para cualquier $\varepsilon>0$ $(x-\varepsilon, x+\varepsilon)\not\subseteq A$ y $(x-\varepsilon, x+\varepsilon)\not\subseteq \overline{A}$, se tiene que $(x-\varepsilon, x+\varepsilon)$ contiene tanto puntos de $A$ como de $\overline{A}$, por lo que $x$ es un punto frontera de $A$.
 :::
 
+:::{#exr-particion-interior-exterior-frontera}
+Calcular los puntos de adherencia y de acumulación del conjunto $A=\{\frac{n+1}{n}:n\in\mathbb{N}\}$. 
+:::
+
+:::{.callout-tip collapse="true"}
+## Solución
+Como $\frac{n+1}{n}=1+\frac{1}{n}$, $1$ es un punto de acumulación de $A$, ya que para cualquier $\varepsilon>0$, $(1-\varepsilon, 1+\varepsilon)\setminus  \{1\}$ contiene puntos de $A$. Para verlo, basta aplicar la propiedad arquimediana, de manera que existe $n\in\mathbb{N}$ tal que $\frac{1}{n}<\varepsilon$, de manera que $1+\frac{1}{n}<1+\varepsilon$, y por tanto $(1-\varepsilon, 1+\varepsilon)\setminus  \{1\}\cap A\neq \emptyset$.
+
+Para calcular los puntos de adherencia de $A$ basta tener en cuenta que $A\subseteq \operatorname{Adh}(A)$, y que $\operatorname{Ac}(A)\subseteq \operatorname{Adh}(A)$, por lo que $1$ también es un punto de adherencia de $A$.
+Veamos ahora que cualquier otro punto, no es punto de adherencia de $A$. Si $x<1$, tomando $\varepsilon=|x-1|$ el entorno $(x-\varepsilon, x+\varepsilon)$ no contiene puntos de $A$. Del mismo modo, si $x>2$, tomando $\varepsilon=|x-2|$ el entorno $(x-\varepsilon, x+\varepsilon)$ tampoco contiene puntos de $A$. Finalmente, si $1<x\leq 2$, por la propiedad arquimediana, existe $n\in\mathbb{N}$ tal que $\frac{1}{n+1}\leq x<\frac{1}{n}$. Tomando $\varepsilon=\min(\{|x-\frac{1}{n+1}|,|x-\frac{1}{n}|\})$ también se tiene que el entorno $(x-\varepsilon, x+\varepsilon)$ no contiene puntos de $A$. Por tanto, $\operatorname{Adh}(A)=A\cup \{1\}$.
+
+Para calcular los puntos de acumulación de $A$, ya sabemos que $1$ es un punto de acumulación y faltaría por ver si algún otro punto de $A$ es un punto de acumulación de $A$, ya que el resto de puntos no pertenecen a la adherencia y por tanto no pueden ser puntos de acumulación al ser $\operatorname{Ac}(A)\subseteq\operatorname{Adh}(A)$. Ahora bien, si $x\in A$, entonces existe $n\in\mathbb{N}$ tal que $x=1+\frac{1}{n}$, de manera que tomando $\varepsilon=\frac{1}{n}-\frac{1}{n+1}$ se tiene que el entorno reducido $(x-\varepsilon,x+\varepsilon)\setminus\{x\}$ no contiene puntos de $A$, por lo que $x$ no es punto de acumulación de $A$. Así pues, $\operatorname{Ac}(A)=\{1\}$.
+:::
+
+:::{#exr-particion-interior-exterior-frontera}
+Calcular los puntos de adherencia y de acumulación de $\mathbb{Z}$ y también de $\mathbb{Q}$. 
+:::
+
+:::{.callout-tip collapse="true"}
+## Solución
+$\operatorname{Adh}(\mathbb{Z})=\mathbb{Z}$ y $\operatorname{Ac}(\mathbb{Z})=\emptyset$.  
+$\operatorname{Adh}(\mathbb{Q})=\operatorname{Ac}(\mathbb{Q})=\mathbb{R}$.
+:::
+
 :::{#exr-ejemplo-conjuntos-abiertos-interseccion-no-abierta}
 Dar un ejemplo de dos conjuntos no abiertos pero cuya intersección es abierta.
 :::
@@ -118,6 +142,15 @@ Dar un ejemplo de dos conjuntos no abiertos pero cuya intersección es abierta.
 :::{.callout-tip collapse="true"}
 ## Solución
 Si se toma $A=[0,2)$ y $B=(1,3]$, tanto $A$ como $B$ no son abiertos, pero $A\cap B=(1,2)$ que es un conjunto abierto.
+:::
+
+:::{#exr-racionales-no-abierto-cerrado}
+Estudiar si el conjunto de los números racionales $\mathbb{Q}$ es abierto o cerrado.
+:::
+
+:::{.callout-tip collapse="true"}
+## Solución
+$\mathbb{Q}$ no es abierto ya que como se vio en el @exr-interior-racionales-irracionales $\operatorname{Int}(\mathbb{Q})=\emptyset$. En el mismo ejercicio se vio también que $\operatorname{Int}(\overline{\mathbb{Q}})=\operatorname{Int}(\mathbb{R}\setminus \mathbb{Q})=\emptyset$, por lo que $\mathbb{Q}$ tampoco es cerrado.
 :::
 
 :::{#exr-union-interseccion-coleccion-abiertos-cerrados}
@@ -140,4 +173,24 @@ b. Vamos a probarlo por inducción. Sean $A_1$ y $A_2$ dos conjuntos abiertos. S
 c. Sea $A_n$, $n\in\mathbb{N}$, una colección arbitraria de conjuntos cerrados. Entonces, aplicando la ley de Morgan, se tiene que $\overline{\cap_{n=1}^\infty A_n}= \cup_{n=1}^\infty \overline{A_n}$. Como $A_n$ es cerrado, $\overline{A_n}$ es abierto $\forall n\in\mathbb{N}$, y por el apartado (a), se tiene que $\cup_{n=1}^\infty \overline{A_n}$ es un conjunto abierto, por lo que $\overline{\cap_{n=1}^\infty A_n}$ es abierto y $\cap_{n=1}^\infty A_n$ es cerrado.
 
 d. Sea ahora una colección $A_1,\ldots,A_n$ una colección de conjuntos cerrados. De nuevo, aplicando la ley de Morgan, se tiene que $\overline{\cup_{n=1}^\infty A_n}= \cap_{n=1}^\infty \overline{A_n}$. Como $A_i$ es cerrado, $\overline{A_i}$ es abierto $\forall i=1, \ldots, n$, y por el apartado (b), se tiene que $\cap_{n=1}^\infty \overline{A_n}$ es un conjunto abierto, por lo que $\overline{\cup_{n=1}^\infty A_n}$ es abierto y $\cup_{n=1}^\infty A_n$ es cerrado.
+:::
+
+:::{#exr-adherencia-cerrada}
+Demostrar que la adherencia de cualquier conjunto es siempre cerrada.
+:::
+
+:::{.callout-tip collapse="true"}
+## Solución
+Sea $A\subset \mathbb{R}$. Para probar que $\operatorname{Adh}(A)$ es un conjunto cerrado, veremos que $\overline{\operatorname{Adh}(A)}$ es abierto. Si $x\in\overline{\operatorname{Adh}(A)}$, entonces $x\not\in\operatorname{Adh}(A)$, y existe un $\varepsilon>0$ tal que $(x-\varepsilon,x+\varepsilon)\cap A = \emptyset$. Para cualquier $y\in (x-\varepsilon,x+\varepsilon)$, se tiene, tomando $\varepsilon'=\min(\{x-\varepsilon-y,x+\varepsilon-y\})$, que $(y-\varepsilon',y+\varepsilon')\subseteq (x-\varepsilon,x+\varepsilon)$ y por tanto $(y-\varepsilon',y+\varepsilon')\cap A = \emptyset$, por lo que $y\not\in\operatorname{Adh}(A)$. Así pues, $(x-\varepsilon,x+\varepsilon)\subseteq \overline{\operatorname{Adh}(A)}$, y por consiguiente $\overline{\operatorname{Adh}(A)}$ es abierto y $\operatorname{Adh}(A)$ es cerrado.
+:::
+
+:::{#exr-adherencia-cerrada}
+Demostrar que cualquier conjunto es cerrado si y solo si coincide con su adherencia.
+::: 
+
+:::{.callout-tip collapse="true"}
+## Solución
+Sea $A$ un conjunto cerrado. Ya sabemos que $A\subseteq \operatorname{Adh}(A)$. Supongamos ahora que existe un punto $x\in \operatorname{Adh}(A)\setminus A$. Entonces, como $x$ es un punto de adherencia de $A$, para cualquier $\varepsilon>0$, $(x-\varepsilon,x+\varepsilon)\cap A\neq \emptyset$, pero como $x\not\in A$, también se cumple que $(x-\varepsilon,x+\varepsilon)\setminus \{x\}\cap A\neq \emptyset$, por lo que $x$ es un punto de acumulación de $A$, pero eso contradice que $A$ sea un conjunto cerrado, pues no contiene a todos sus puntos de acumulación (ver [teorema](https://aprendeconalf.es/analisis-manual/topologia-reales.html#thm-conjunto-cerrado-puntos-acumulacion)). Así pues, $\operatorname{Adh}(A)=A$.
+
+Para probar el otro sentido de la implicación, supongamos que $\operatorname{Adh}(A)=A$. Entonces, para cualquier $x\in \overline{A}$ existe un $\varepsilon>0$ tal que $(x-\varepsilon,x+\varepsilon)\cap A=\emptyset$, por lo que $(x-\varepsilon,x+\varepsilon)\subseteq \overline{A}$ y $\overline{A}$ es abierto, de manera que $A$ es cerrado.
 :::
