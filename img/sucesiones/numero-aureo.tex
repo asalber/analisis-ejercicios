@@ -1,0 +1,53 @@
+\begin{tikzpicture}[x=5cm,y=5cm]
+
+    \Huge
+    \newcommand\mydistance{0.1cm}
+    \definecolor{myblue}{rgb}{0.067,0.529,0.871}
+    \definecolor{mypurple}{rgb}{0.859,0.071,0.525}
+    \definecolor{myred}{rgb}{1.0, 0.13, 0.32}
+    \definecolor{mygreen}{rgb}{0.01, 0.75, 0.24}
+    
+    \node (left) {};
+    \node (mid) at (left.center) [xshift=5*0.61803cm] {};
+    \node (right) at (left.center) [xshift=5cm] {};
+    
+    \node (lleft) at (left.center) [xshift=-\mydistance] {};
+    \node (aleft) at (left.center) [yshift=\mydistance] {};
+    \node (rleft) at (left.center) [xshift=\mydistance] {};
+    \node (bleft) at (left.center) [yshift=-\mydistance] {};
+    
+    \node (lmid) at (mid.center) [xshift=-\mydistance] {};
+    \node (amid) at (mid.center) [yshift=\mydistance] {};
+    \node (rmid) at (mid.center) [xshift=\mydistance] {};
+    \node (bmid) at (mid.center) [yshift=-\mydistance] {};
+    
+    \node (lright) at (right.center) [xshift=-\mydistance] {};
+    \node (aright) at (right.center) [yshift=\mydistance] {};
+    \node (rright) at (right.center) [xshift=\mydistance] {};
+    \node (bright) at (right.center) [yshift=-\mydistance] {};
+    
+    \draw [ultra thick,myblue] (rleft.center) -- (aleft.center)
+        -- (lleft.center) -- (bleft.center) -- cycle;
+    \draw [ultra thick,myblue] (rleft.center) -- (lmid.center)
+        node [above,midway] {\(a\)};
+    \begin{scope}
+        \clip (amid.north) rectangle (bleft.south);
+        \draw [ultra thick,myblue] (lmid.center) -- (amid.center)
+            -- (rmid.center) -- (bmid.center) -- cycle;
+    \end{scope}
+    \begin{scope}
+        \clip (amid.north) rectangle (bright.south);
+        \draw [ultra thick,myred] (lmid.center) -- (amid.center)
+            -- (rmid.center) -- (bmid.center) -- cycle;
+    \end{scope}
+    \draw [ultra thick,myred] (rmid.center) -- (lright.center)
+        node [above,midway] {\(b\)};
+    \draw [ultra thick,myred] (rright.center) -- (aright.center)
+        -- (lright.center) -- (bright.center) -- cycle;
+    
+    \path (left.center) -- (right.center)
+        node [midway,below,mygreen]
+            {\resizebox{5cm}{!}{\(\underbrace{\hspace{3cm}}\)}}
+        node [midway,below=0.5cm,mygreen]
+            {\(a+b\)};
+    \end{tikzpicture}
