@@ -420,7 +420,8 @@ Solución
 <li><p>No es posible (ver <a href="https://aprendeconalf.es/analisis-manual/sucesiones.html#prp-algebra-limites-sucesiones">proposición</a>).</p></li>
 <li><p>No es posible.</p></li>
 <li><p><span class="math inline">\(\left(\frac{1}{n}\right)_{n=1}^\infty\)</span> converge y <span class="math inline">\(((-1)^n)_{n=1}^\infty\)</span> diverge, pero <span class="math inline">\(\left(\frac{(-1)^n}{n}\right)_{n=1}^\infty\)</span> converge.</p></li>
-<li><p><span class="math inline">\(((-1)^{n+1})_{n=1}^\infty\)</span> y <span class="math inline">\(((-1)^n)_{n=1}^\infty\)</span> divergen, pero <span class="math inline">\((\frac{(-1)^{n+1}}{(-1)^n})_{n=1}^\infty = (\frac{(-1)^n(-1)}{(-1)^n})_{n=1}^\infty = (-1)_{n=1}^\infty\)</span> converge al ser constante.</p></li>
+<li><p><span class="math inline">\((n)_{n=1}^\infty\)</span> es divergente, pero <span class="math inline">\(\left(\frac{n}{n}\right)_{n=1}^\infty = (1)_{n=1}^\infty\)</span> converge por ser constante.</p>
+<p>Otro ejemplo son <span class="math inline">\(((-1)^{n+1})_{n=1}^\infty\)</span> y <span class="math inline">\(((-1)^n)_{n=1}^\infty\)</span> que divergen, pero <span class="math inline">\((\frac{(-1)^{n+1}}{(-1)^n})_{n=1}^\infty = (\frac{(-1)^n(-1)}{(-1)^n})_{n=1}^\infty = (-1)_{n=1}^\infty\)</span> converge al ser constante.</p></li>
 </ol>
 </div>
 </div>
@@ -485,7 +486,7 @@ Solución
 </div>
 <div id="callout-11" class="callout-11-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Supongamos que <span class="math inline">\(\lim_{n\to\infty}x_n=x\)</span>. Entonces, para cualquier <span class="math inline">\(\varepsilon&gt;0\)</span> existe <span class="math inline">\(k\in\mathbb{N}\)</span> tal que <span class="math inline">\(|x_n-x|&lt;\varepsilon\)</span> <span class="math inline">\(\forall n\geq k\)</span>, pero entonces, aplicando la desigualdad triangular, también se tiene que <span class="math inline">\(||x_n|-|x||\leq |x_n-x| \varepsilon\)</span> <span class="math inline">\(\forall n\geq k\)</span>, por lo que <span class="math inline">\(\lim_{n\to\infty}|x_n| = |x|\)</span>.</p>
+<p>Supongamos que <span class="math inline">\(\lim_{n\to\infty}x_n=x\)</span>. Entonces, para cualquier <span class="math inline">\(\varepsilon&gt;0\)</span> existe <span class="math inline">\(k\in\mathbb{N}\)</span> tal que <span class="math inline">\(|x_n-x|&lt;\varepsilon\)</span> <span class="math inline">\(\forall n\geq k\)</span>, pero entonces, aplicando la desigualdad triangular, también se tiene que <span class="math inline">\(||x_n|-|x||\leq |x_n-x| &lt; \varepsilon\)</span> <span class="math inline">\(\forall n\geq k\)</span>, por lo que <span class="math inline">\(\lim_{n\to\infty}|x_n| = |x|\)</span>.</p>
 </div>
 </div>
 </div>
@@ -542,12 +543,12 @@ Solución
 </div>
 </div>
 </div>
-<div id="exr-condiciones-heredadas-limite" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 4.14 </strong></span>Dada una sucesión de números reales tal que <span class="math inline">\(\lim_{n\to\infty}x_n=x\)</span>, probar o refutar las siguientes proposiciones:</p>
+<div id="exr-compresion-sucesiones" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 4.14 </strong></span>Demostrar las siguientes sucesiones convergen a <span class="math inline">\(0\)</span>.</p>
 <ol type="a">
-<li>Si cada <span class="math inline">\(x_n\)</span> es una cota superior de un conjunto <span class="math inline">\(A\)</span>, entonces <span class="math inline">\(x\)</span> es también una cota superior de <span class="math inline">\(A\)</span>.</li>
-<li>Si <span class="math inline">\(x_n\in\overline{(a,b)}\)</span> <span class="math inline">\(\forall n\in\mathbb{N}\)</span>, entonces <span class="math inline">\(x\in\overline{(a,b)}\)</span>.</li>
-<li>Si <span class="math inline">\(x_n\in\mathbb{Q}\)</span> <span class="math inline">\(\forall n\in\mathbb{N}\)</span>, entonces <span class="math inline">\(x\in\mathbb{Q}\)</span>.</li>
+<li><p><span class="math inline">\(\left(\frac{n+\cos(n)}{n^2+1}\right)_{n=1}^\infty\)</span></p></li>
+<li><p><span class="math inline">\(\left(\frac{2^n}{n!}\right)_{n=1}^\infty\)</span></p></li>
+<li><p><span class="math inline">\(\left(\frac{n^2}{2^n}\right)_{n=1}^\infty\)</span></p></li>
 </ol>
 </div>
 <div class="callout-tip callout callout-style-default callout-captioned">
@@ -561,36 +562,6 @@ Solución
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
 <div id="callout-14" class="callout-14-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<ol type="a">
-<li><p>Si <span class="math inline">\(x_n\)</span> es cota superior de <span class="math inline">\(A\)</span> <span class="math inline">\(\forall n\in\mathbb{N}\)</span>, se tiene que para cualquier <span class="math inline">\(a\in A\)</span>, <span class="math inline">\(a\leq x_n\)</span>. Veamos que entonces que <span class="math inline">\(a\leq x\)</span> por reducción al absurdo. Supongamos que existe <span class="math inline">\(a\in A\)</span> tal que <span class="math inline">\(a\leq x_n\)</span> <span class="math inline">\(\forall n\in\mathbb{N}\)</span> pero <span class="math inline">\(a&gt;x\)</span>. Como <span class="math inline">\(\lim_{n\to\infty}x_n = x\)</span>, se tiene que para <span class="math inline">\(\varepsilon=a-x&gt;0\)</span> existe <span class="math inline">\(k\in\mathbb{N}\)</span> tal que <span class="math inline">\(|x_n-x|\leq a-x\)</span> <span class="math inline">\(\forall n\geq k\)</span>, pero entonces también se cumple <span class="math display">\[
-|x_n-x| = x_n-x &lt; a-x \Rightarrow x_n &lt; a,
-\]</span> por lo que <span class="math inline">\(x_n\)</span> no sería cota superior de <span class="math inline">\(A\)</span>, así que, necesariamente <span class="math inline">\(x\)</span> tiene que ser cota superior de <span class="math inline">\(A\)</span>.</p></li>
-<li><p>Como <span class="math inline">\(\overline{(a,b)}\)</span> es un conjunto cerrado, para demostrar la proposición basta aplicar este <a href="https://aprendeconalf.es/analisis-manual/sucesiones.html#thm-sucesiones-conjuntos-cerrados">teorema</a>.</p></li>
-<li><p>Veamos que la proposición es falsa con un contraejemplo. La sucesión <span class="math inline">\(x_1=1\)</span> y <span class="math inline">\(x_{n+1}=\frac{1}{1+x_n}\)</span> <span class="math inline">\(\forall n=2,3,\ldots\)</span> está formada por números racionales, sin embargo, su límite es el número irracional <span class="math inline">\(\varphi=\frac{1+\sqrt{5}}{2}=1.618033988749\ldots\)</span> (ver <a href="#exr-numero-aureo">Ejercicio&nbsp;<span>4.17</span></a>).</p></li>
-</ol>
-</div>
-</div>
-</div>
-<div id="exr-compresion-sucesiones" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 4.15 </strong></span>Demostrar las siguientes sucesiones convergen a <span class="math inline">\(0\)</span>.</p>
-<ol type="a">
-<li><p><span class="math inline">\(\left(\frac{n+\cos(n)}{n^2+1}\right)_{n=1}^\infty\)</span></p></li>
-<li><p><span class="math inline">\(\left(\frac{2^n}{n!}\right)_{n=1}^\infty\)</span></p></li>
-<li><p><span class="math inline">\(\left(\frac{n^2}{2^n}\right)_{n=1}^\infty\)</span></p></li>
-</ol>
-</div>
-<div class="callout-tip callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-15-contents" aria-controls="callout-15" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-caption-container flex-fill">
-Solución
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-15" class="callout-15-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ol type="a">
 <li><p>Como <span class="math inline">\(-1\leq \cos(n)\leq 1\)</span> se tiene que <span class="math inline">\(\frac{n-1}{n^2+1}\leq \frac{n+\cos(n)}{n^2+1}\leq \frac{n+1}{n^2+1}\)</span> <span class="math inline">\(\forall n\in\mathbb{N}\)</span>. Como <span class="math display">\[\begin{align*}
@@ -613,7 +584,7 @@ Solución
 </div>
 </div>
 <div id="exr-sucesiones-monotonas" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 4.16 </strong></span>Demostrar que las siguientes sucesiones de números reales son monótonas y calcular su límite cuando exista.</p>
+<p><span class="theorem-title"><strong>Ejercicio 4.15 </strong></span>Demostrar que las siguientes sucesiones de números reales son monótonas y calcular su límite cuando exista.</p>
 <ol type="a">
 <li><p><span class="math inline">\(\left(\frac{3n}{2n^2}\right)_{n=1}^\infty\)</span></p></li>
 <li><p><span class="math inline">\(x_1=1\)</span> y <span class="math inline">\(x_{n+1}=\frac{a_n+3}{2}\)</span> <span class="math inline">\(\forall n=2,3,\ldots\)</span></p></li>
@@ -623,7 +594,7 @@ Solución
 </ol>
 </div>
 <div id="exr-numero-aureo" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 4.17 </strong></span>Dado un segmento como el de la figura de más abajo,</p>
+<p><span class="theorem-title"><strong>Ejercicio 4.16 </strong></span>Dado un segmento como el de la figura de más abajo,</p>
 <!-- ::: {.content-visible when-format="html"} -->
 <div style="text-align:center;">
 <p><img src="./img/sucesiones/numero-aureo.png" class="img-fluid"></p>
@@ -639,6 +610,36 @@ Solución
 <li><span class="math inline">\(x_1=1\)</span> y <span class="math inline">\(x_{n+1}=1+\frac{1}{x_n}\)</span> <span class="math inline">\(\forall n=1,2,\ldots\)</span></li>
 <li><span class="math inline">\(x_1=1\)</span> y <span class="math inline">\(x_{n+1}=\sqrt{1+x_n}\)</span> <span class="math inline">\(\forall n=1,2,\ldots\)</span></li>
 </ol>
+</div>
+<div id="exr-condiciones-heredadas-limite" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 4.17 </strong></span>Dada una sucesión de números reales tal que <span class="math inline">\(\lim_{n\to\infty}x_n=x\)</span>, probar o refutar las siguientes proposiciones:</p>
+<ol type="a">
+<li>Si cada <span class="math inline">\(x_n\)</span> es una cota superior de un conjunto <span class="math inline">\(A\)</span>, entonces <span class="math inline">\(x\)</span> es también una cota superior de <span class="math inline">\(A\)</span>.</li>
+<li>Si <span class="math inline">\(x_n\in\overline{(a,b)}\)</span> <span class="math inline">\(\forall n\in\mathbb{N}\)</span>, entonces <span class="math inline">\(x\in\overline{(a,b)}\)</span>.</li>
+<li>Si <span class="math inline">\(x_n\in\mathbb{Q}\)</span> <span class="math inline">\(\forall n\in\mathbb{N}\)</span>, entonces <span class="math inline">\(x\in\mathbb{Q}\)</span>.</li>
+</ol>
+</div>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-15-contents" aria-controls="callout-15" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-15" class="callout-15-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="a">
+<li><p>Si <span class="math inline">\(x_n\)</span> es cota superior de <span class="math inline">\(A\)</span> <span class="math inline">\(\forall n\in\mathbb{N}\)</span>, se tiene que para cualquier <span class="math inline">\(a\in A\)</span>, <span class="math inline">\(a\leq x_n\)</span>. Veamos que entonces que <span class="math inline">\(a\leq x\)</span> por reducción al absurdo. Supongamos que existe <span class="math inline">\(a\in A\)</span> tal que <span class="math inline">\(a\leq x_n\)</span> <span class="math inline">\(\forall n\in\mathbb{N}\)</span> pero <span class="math inline">\(a&gt;x\)</span>. Como <span class="math inline">\(\lim_{n\to\infty}x_n = x\)</span>, se tiene que para <span class="math inline">\(\varepsilon=a-x&gt;0\)</span> existe <span class="math inline">\(k\in\mathbb{N}\)</span> tal que <span class="math inline">\(|x_n-x|\leq a-x\)</span> <span class="math inline">\(\forall n\geq k\)</span>, pero entonces también se cumple <span class="math display">\[
+|x_n-x| = x_n-x &lt; a-x \Rightarrow x_n &lt; a,
+\]</span> por lo que <span class="math inline">\(x_n\)</span> no sería cota superior de <span class="math inline">\(A\)</span>, así que, necesariamente <span class="math inline">\(x\)</span> tiene que ser cota superior de <span class="math inline">\(A\)</span>.</p></li>
+<li><p>Como <span class="math inline">\(\overline{(a,b)}\)</span> es un conjunto cerrado, para demostrar la proposición basta aplicar este <a href="https://aprendeconalf.es/analisis-manual/sucesiones.html#thm-sucesiones-conjuntos-cerrados">teorema</a>.</p></li>
+<li><p>Veamos que la proposición es falsa con un contraejemplo. La sucesión <span class="math inline">\(x_1=1\)</span> y <span class="math inline">\(x_{n+1}=\frac{1}{1+x_n}\)</span> <span class="math inline">\(\forall n=2,3,\ldots\)</span> está formada por números racionales, sin embargo, su límite es el número irracional <span class="math inline">\(\varphi=\frac{1+\sqrt{5}}{2}=1.618033988749\ldots\)</span> (ver <a href="#exr-numero-aureo">Ejercicio&nbsp;<span>4.16</span></a>).</p></li>
+</ol>
+</div>
+</div>
 </div>
 <div id="exr-sucesion-intereses" class="theorem exercise">
 <p><span class="theorem-title"><strong>Ejercicio 4.18 </strong></span>Una cuenta de ahorro ofrece el primer año un tipo de interés <span class="math inline">\(x_1=0.5\%\)</span> y los años sucesivos un interés <span class="math inline">\(x_{n+1}=\frac{3}{2+x_n}\)</span>. Si se mantiene la cuenta abierta por un periodo indefinido, ¿hacia donde tienden los tipos de interés?</p>

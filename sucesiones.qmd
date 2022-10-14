@@ -176,7 +176,9 @@ c. No es posible.
 
 d. $\left(\frac{1}{n}\right)_{n=1}^\infty$ converge y $((-1)^n)_{n=1}^\infty$ diverge, pero $\left(\frac{(-1)^n}{n}\right)_{n=1}^\infty$ converge.
 
-e. $((-1)^{n+1})_{n=1}^\infty$ y $((-1)^n)_{n=1}^\infty$ divergen, pero $(\frac{(-1)^{n+1}}{(-1)^n})_{n=1}^\infty = (\frac{(-1)^n(-1)}{(-1)^n})_{n=1}^\infty = (-1)_{n=1}^\infty$ converge al ser constante.
+e. $(n)_{n=1}^\infty$ es divergente, pero $\left(\frac{n}{n}\right)_{n=1}^\infty = (1)_{n=1}^\infty$ converge por ser constante.
+
+    Otro ejemplo son $((-1)^{n+1})_{n=1}^\infty$ y $((-1)^n)_{n=1}^\infty$ que divergen, pero $(\frac{(-1)^{n+1}}{(-1)^n})_{n=1}^\infty = (\frac{(-1)^n(-1)}{(-1)^n})_{n=1}^\infty = (-1)_{n=1}^\infty$ converge al ser constante.
 :::
 
 :::{#exr-convergencia-diferencia-limite}
@@ -211,7 +213,7 @@ Demostrar que si una sucesión de números reales converge a $x$, entonces la su
 
 :::{.callout-tip collapse="true"}
 ## Solución
-Supongamos que $\lim_{n\to\infty}x_n=x$. Entonces, para cualquier $\varepsilon>0$ existe $k\in\mathbb{N}$ tal que $|x_n-x|<\varepsilon$ $\forall n\geq k$, pero entonces, aplicando la desigualdad triangular, también se tiene que $||x_n|-|x||\leq |x_n-x| \varepsilon$ $\forall n\geq k$, por lo que $\lim_{n\to\infty}|x_n| = |x|$.
+Supongamos que $\lim_{n\to\infty}x_n=x$. Entonces, para cualquier $\varepsilon>0$ existe $k\in\mathbb{N}$ tal que $|x_n-x|<\varepsilon$ $\forall n\geq k$, pero entonces, aplicando la desigualdad triangular, también se tiene que $||x_n|-|x||\leq |x_n-x| < \varepsilon$ $\forall n\geq k$, por lo que $\lim_{n\to\infty}|x_n| = |x|$.
 :::
 
 :::{#exr-sucesion-raiz-cuadrada}
@@ -252,27 +254,6 @@ $$
 $$
 
 Luego $\lim_{n\to\infty}x_ny_n = 0$.
-:::
-
-:::{#exr-condiciones-heredadas-limite}
-Dada una sucesión de números reales tal que $\lim_{n\to\infty}x_n=x$, probar o refutar las siguientes proposiciones:
-
-a. Si cada $x_n$ es una cota superior de un conjunto $A$, entonces $x$ es también una cota superior de $A$.
-b. Si $x_n\in\overline{(a,b)}$ $\forall n\in\mathbb{N}$, entonces $x\in\overline{(a,b)}$.
-c. Si $x_n\in\mathbb{Q}$ $\forall n\in\mathbb{N}$, entonces $x\in\mathbb{Q}$.
-:::
-
-:::{.callout-tip collapse="true"}
-## Solución
-a. Si $x_n$ es cota superior de $A$ $\forall n\in\mathbb{N}$, se tiene que para cualquier $a\in A$, $a\leq x_n$. Veamos que entonces que $a\leq x$ por reducción al absurdo. Supongamos que existe $a\in A$ tal que $a\leq x_n$ $\forall n\in\mathbb{N}$ pero $a>x$. Como $\lim_{n\to\infty}x_n = x$, se tiene que para $\varepsilon=a-x>0$ existe $k\in\mathbb{N}$ tal que $|x_n-x|\leq a-x$ $\forall n\geq k$, pero entonces también se cumple
-$$
-|x_n-x| = x_n-x < a-x \Rightarrow x_n < a,
-$$
-por lo que $x_n$ no sería cota superior de $A$, así que, necesariamente $x$ tiene que ser cota superior de $A$.
-
-b. Como $\overline{(a,b)}$ es un conjunto cerrado, para demostrar la proposición basta aplicar este [teorema](https://aprendeconalf.es/analisis-manual/sucesiones.html#thm-sucesiones-conjuntos-cerrados).
-
-c. Veamos que la proposición es falsa con un contraejemplo. La sucesión $x_1=1$ y $x_{n+1}=\frac{1}{1+x_n}$ $\forall n=2,3,\ldots$ está formada por números racionales, sin embargo, su límite es el número irracional $\varphi=\frac{1+\sqrt{5}}{2}=1.618033988749\ldots$ (ver @exr-numero-aureo).
 :::
 
 :::{#exr-compresion-sucesiones}
@@ -345,6 +326,27 @@ Demostrar que este número es el límite de las siguientes sucesiones de número
 
 a. $x_1=1$ y $x_{n+1}=1+\frac{1}{x_n}$ $\forall n=1,2,\ldots$
 b. $x_1=1$ y $x_{n+1}=\sqrt{1+x_n}$ $\forall n=1,2,\ldots$
+:::
+
+:::{#exr-condiciones-heredadas-limite}
+Dada una sucesión de números reales tal que $\lim_{n\to\infty}x_n=x$, probar o refutar las siguientes proposiciones:
+
+a. Si cada $x_n$ es una cota superior de un conjunto $A$, entonces $x$ es también una cota superior de $A$.
+b. Si $x_n\in\overline{(a,b)}$ $\forall n\in\mathbb{N}$, entonces $x\in\overline{(a,b)}$.
+c. Si $x_n\in\mathbb{Q}$ $\forall n\in\mathbb{N}$, entonces $x\in\mathbb{Q}$.
+:::
+
+:::{.callout-tip collapse="true"}
+## Solución
+a. Si $x_n$ es cota superior de $A$ $\forall n\in\mathbb{N}$, se tiene que para cualquier $a\in A$, $a\leq x_n$. Veamos que entonces que $a\leq x$ por reducción al absurdo. Supongamos que existe $a\in A$ tal que $a\leq x_n$ $\forall n\in\mathbb{N}$ pero $a>x$. Como $\lim_{n\to\infty}x_n = x$, se tiene que para $\varepsilon=a-x>0$ existe $k\in\mathbb{N}$ tal que $|x_n-x|\leq a-x$ $\forall n\geq k$, pero entonces también se cumple
+$$
+|x_n-x| = x_n-x < a-x \Rightarrow x_n < a,
+$$
+por lo que $x_n$ no sería cota superior de $A$, así que, necesariamente $x$ tiene que ser cota superior de $A$.
+
+b. Como $\overline{(a,b)}$ es un conjunto cerrado, para demostrar la proposición basta aplicar este [teorema](https://aprendeconalf.es/analisis-manual/sucesiones.html#thm-sucesiones-conjuntos-cerrados).
+
+c. Veamos que la proposición es falsa con un contraejemplo. La sucesión $x_1=1$ y $x_{n+1}=\frac{1}{1+x_n}$ $\forall n=2,3,\ldots$ está formada por números racionales, sin embargo, su límite es el número irracional $\varphi=\frac{1+\sqrt{5}}{2}=1.618033988749\ldots$ (ver @exr-numero-aureo).
 :::
 
 :::{#exr-sucesion-intereses}
