@@ -9,16 +9,79 @@ lang: es
 Una _sucesión constante_ es una sucesión de números reales en la que cada término es igual que el anterior. Demostrar que una sucesión constante siempre converge.
 :::
 
+:::{.callout-tip collapse="true"}
+## Solución
+Sea $(c)_{n=1}^\infty$ una sucesión constante. Veamos que converge a $c$. Para cualquier $\varepsilon>0$ basta tomar $k=1$, de manera que $\forall n\geq k$ se tiene que $|x_n-c|=|c-c| = 0 <\varepsilon$. Por tanto, $\lim_{n\to\infty}x_n =c$.
+:::
+
 :::{#exr-sucesion-aritmética}
-Una _sucesión aritmética_ es una sucesión de números reales en la que cada término se obtienen sumando un número constante al anterior, es decir, $x_{n+1} = c+x_n$. Estudiar la convergencia de las sucesiones aritméticas.
+Una _sucesión aritmética_ es una sucesión de números reales en la que cada término se obtienen sumando un número constante $c\in\mathbb{R}$ al anterior, es decir, $x_1=c$ y $x_{n+1} = c+x_n$ $\forall n=2,3,\ldots$. Estudiar la convergencia de las sucesiones aritméticas.
+:::
+
+:::{.callout-tip collapse="true"}
+## Solución
+Si $c=0$ entonces la sucesión es constante y por el @exr-sucesion-constante, la sucesión converge.
+
+Supongamos que $c>0$ y veamos que la sucesión aritmética $(nc)_{n=1}^\infty$ no converge a ningún número $x\in\mathbb{R}$. Para ello, basta tomar $\varepsilon=1$, de manera que por la propiedad arquimediana se tiene que existe $m\in\mathbb{N}$ tal que $\frac{x+1}{c}<m$, así que para cualquier $k\in\mathbb{N}$, tomando $n=\max(\{k,m\})$, se cumple que existe $n\geq k$ tal que 
+
+\begin{align*}
+\frac{x+1}{c}<m\leq n &\Rightarrow x+1 < nc = x_n\\  
+&\Rightarrow x_n-x > 1\\ 
+&\Rightarrow |x_n-x|>1=\varepsilon.
+\end{align*}
+
+Por consiguiente, la sucesión diverge. 
+De forma similar se puede prueba que si $c<0$ la sucesión también diverge.
+
+Otra forma de demostrarlo es probar que la sucesión es monótona y no acotada y aplicar el [teorema de la convergencia de sucesiones monóntonas](https://aprendeconalf.es/analisis-manual/sucesiones.html#thm-convergencia-monotona) para concluir que la sucesión no converge.
 :::
 
 :::{#exr-sucesion-geométrica}
-Una _sucesión geométrica_ es una sucesión de números reales en la que cada término se obtienen multiplicando un número constante al anterior, es decir, $x_{n+1} = cx_n$. Estudiar la convergencia de las sucesiones geométricas.
+Una _sucesión geométrica_ es una sucesión de números reales en la que cada término se obtienen multiplicando un número constante $c\in\mathbb{R}$ por el anterior, es decir, $x_1=c$ y $x_{n+1} = cx_n$. Estudiar la convergencia de las sucesiones geométricas.
+:::
+
+:::{.callout-tip collapse="true"}
+## Solución
+Si $c=0$ o $c=1$ entonces la sucesión es constante y por el @exr-sucesion-constante, la sucesión converge.
+
+Supongamos que $c>1$ y veamos que la sucesión geométrica $(c^n)_{n=1}^\infty$ no converge a ningún número $x\in\mathbb{R}$. Para ello, basta probar que la sucesión es creciente y no acotada. Probaremos que por inducción que la sucesión es creciente. $x_1=c<cc=c^2=x_2$ por ser $c>1$. Supongamos ahora que $x_{n-1}<x_n$, entonces $x_n=c^n<cc^n=c^{n+1}=x_{n+1}$. Por tanto, la sucesión es creciente. 
+
+Veamos ahora que no está acotada por reducción al absurdo. Supongamos que existe $x\in\mathbb{R}$ tal que $x>x_n$ $\forall n\in\mathbb{N}$. Como $c>1$, podemos escribir $x_n=c^n = (1+a)^n$ con $a>0$. Aplicando ahora el teorema del binomio, se tiene 
+
+\begin{align*}
+(1+a)^n &= \binom{n}{0}1^na^0 + \binom{n}{1}1^{n-1}a^1 + \binom{n}{2}1^{n-2}a^2 + \cdots + \binom{n}{n}1^0a^n \\ 
+& = 1 + na + \frac{n(n-1)}{2}a^2 + \cdots + a^n \\ 
+& \geq 1 + na.
+\end{align*}
+
+Aplicando ahora la propiedad arquimediana, se tiene que existe $n\in\mathbb{N}$ tal que $\frac{x-1}{a}<n$, de modo que 
+
+$$
+\frac{x-1}{a}<n \Rightarrow x-1 < na \Rightarrow x < 1+na < (1+a)^n = x_n,
+$$
+
+por lo que $x$ no puede ser cota de la sucesión. Por consiguiente, la sucesión es monótona y no acotada, y por el [teorema de la convergencia de sucesiones monónotas](https://aprendeconalf.es/analisis-manual/sucesiones.html#thm-convergencia-monotona) la sucesión diverge. 
+
+De forma similar se puede prueba que si $c<0$ la sucesión también diverge.
+
+Veamos finalmente que si $0<c<1$ entonces la sucesión converge a $0$. 
 :::
 
 :::{#exr-sucesion-alternada}
 Una _sucesión alternada_ es una sucesión de números reales en la que cada término tiene signo distinto del anterior. Demostrar que la sucesión alternada $((-1)^n)_{n=1}^\infty$ es divergente. ¿Puede una sucesión alternada ser convergente?
+:::
+
+:::{.callout-tip collapse="true"}
+## Solución
+Veamos que no existe $x\in\mathbb{R}$ tal que $\lim_{n\to\infty}(-1)^n=x$. Para $x\in\mathbb{R}\setminus\{-1,1\}$ es sencillo, ya que tomando $\varepsilon=|1-|x||$ para cualquier $k\in\mathbb{N}$, si $n\geq k$ se tiene que $|x_n-x| = |(-1)^n-x| \geq ||(-1)^n|-|x|| = |1 - |x|| =\varepsilon$, por tanto, la sucesión no converge a $x$.
+
+Veamos ahora que la sucesión no converge a $1$. Para ello basta tomar $\varepsilon=1$, de manera que para cualquier $k\in\mathbb{N}$ existe $n=2k+1\geq k$ tal que $|x_n-1|=|(-1)^{2k+1}-1| = |-1-1| = |-2|=2>1=\varepsilon$.
+
+Del mismo modo se puede probar que tampoco converge a $-1$. Para ello basta tomar de nuevo $\varepsilon=1$, de manera que para cualquier $k\in\mathbb{N}$ existe $n=2k\geq k$ tal que $|x_n-(-1)|=|(-1)^{2k}-(-1)| = |1-(-1)| = |2|=2>1=\varepsilon$.
+
+Otra forma de demostrar la no convergencia de la sucesión es tomar las subsucesiones suyas $\left((-1)^{2n}\right)_{n=1}^\infty$ y $\left((-1)^{2n+1}\right)_{n=1}^\infty$ que convergen a $1$ y $-1$ respectivamente, al ser constantes, de manera que aplicando el [teorema de la convergencia de las subsucesiones](https://aprendeconalf.es/analisis-manual/sucesiones.html#thm-convergencia-subsucesiones), se tiene que las sucesión original no converge.
+
+Por otro lado, no toda sucesión alternada es divergente. Por ejemplo, las sucesiones $\left(\frac{(-1)^n}{n}\right)_{n=1}^\infty$ y $\left(\frac{(-1)^n}{n^2}\right)_{n=1}^\infty$ son alternadas y convergen a $0$.
 :::
 
 :::{#exr-refutacion}
@@ -29,6 +92,12 @@ b. Existe un banco en una ciudad donde cada cliente tiene una pensión o una hip
 c. Para todos los bancos de una ciudad existe un cliente que cada mes usa una tarjeta de crédito o de débito.
 :::
 
+:::{.callout-tip collapse="true"}
+## Solución
+a. Para refutar la afirmación habría que encontrar un banco en el no hubiese al menos un cliente moroso, es decir, que todos sus clientes no fuesen morosos.
+b. Para refutar la afirmación habría que mostrar que todos los bancos de la ciudad tienen algún cliente que no tiene pensión ni hipoteca.
+c. Para refutar la afirmación habría que encontrar un banco en el que ningún cliente usase cada mes la tarjeta de crédito o de débito, es decir, en el que para todos los clientes hay algún mes que no usan ni la tarjeta de crédito ni la de débito.
+:::
 
 :::{#exr-ejemplo-sucesiones-1}
 Dar un ejemplo de sucesión que cumpla las siguientes condiciones, o, en caso de no existir ninguna, explicar porqué.
@@ -38,12 +107,53 @@ b. Una sucesión con un número infinito de unos que converge a un número disti
 c. Una sucesión divergente tal que para cada $n\in\mathbb{N}$ se pueden encontrar $n$ ceros consecutivos en la sucesión.
 :::
 
+:::{.callout-tip collapse="true"}
+## Solución
+a. La sucesión $(x_n)_{n=1}^\infty$ tal que 
+$$x_n=\begin{cases}
+0 & \mbox{si } n=2k\\ 
+1 & \mbox{si } n=2k+1
+\end{cases}
+\quad k\in\mathbb{N}
+$$
+b. No existe.
+c. La sucesión $0, 1, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, \ldots$.
+:::
+
 :::{#exr-limites-sucesiones}
 Demostrar, aplicando la definición de límite de una sucesión, que las siguientes sucesiones de números reales convergen a los valores dados.
 
 a. $\lim_{n\to\infty}\frac{2n}{n^2}=0$
+
 a. $\lim_{n\to\infty}\frac{n^2-1}{3n^2+n-2}=\frac{1}{3}$
+
 a. $\lim_{n\to\infty}\frac{3n^2+2}{n^2-n}=3$
+:::
+
+:::{.callout-tip collapse="true"}
+## Solución
+a. 
+$$
+\lim_{n\to\infty}\frac{2n}{n^2} = \lim_{n\to\infty}\frac{2}{n}= 0.
+$$
+
+b. 
+
+\begin{align*}
+\lim_{n\to\infty}\frac{n^2-1}{3n^2+n-2} &= \lim_{n\to\infty}\frac{1-\frac{1}{n^2}}{3+\frac{1}{n}-\frac{2}{n^2}} \\ 
+&= \frac{\lim_{n\to\infty}1-\frac{1}{n^2}}{\lim_{n\to\infty}3+\frac{1}{n}-\frac{2}{n^2}}\\ 
+&= \frac{\lim_{n\to\infty}1-\lim_{n\to\infty}\frac{1}{n^2}}{\lim_{n\to\infty}3+\lim_{n\to\infty}\frac{1}{n}-\lim_{n\to\infty}\frac{2}{n^2}}\\ 
+&= \frac{1-0}{3+0-0} = \frac{1}{3}.
+\end{align*}
+
+c. 
+
+\begin{align*}
+\lim_{n\to\infty}\frac{3n^2+2}{n^2-n} &= \lim_{n\to\infty}\frac{3+\frac{2}{n^2}}{1-\frac{1}{n}} \\ 
+&= \frac{\lim_{n\to\infty}3+\frac{2}{n^2}}{\lim_{n\to\infty}1-\frac{1}{n}}\\ 
+&= \frac{\lim_{n\to\infty}3+\lim_{n\to\infty}\frac{2}{n^2}}{\lim_{n\to\infty}1-\lim_{n\to\infty}\frac{1}{n}} \\ 
+&= \frac{3+0}{1-0} = 3
+\end{align*}
 :::
 
 :::{#exr-ejemplo-sucesiones-2}
@@ -56,24 +166,92 @@ d. Una sucesión $(x_n)_{n=1}^\infty$ que converge y otra $(y_n)_{n=1}^\infty$ q
 e. Dos sucesiones divergentes $(x_n)_{n=1}^\infty$ e $(y_n)_{n=1}^\infty$ con $y_n\neq 0$ $\forall n\in\mathbb{N}$ tales que $\left(\frac{x_n}{y_n}\right)_{n=1}^\infty$ converge.
 :::
 
+:::{.callout-tip collapse="true"}
+## Solución
+a. $(n)_{n=1}^\infty$ y $(-n)_{n=1}^\infty$ divergen, pero $(n+(-n))_{n=1}^\infty = (0)_{n=1}^\infty$ converge por ser constante.
+
+b. No es posible (ver [proposición](https://aprendeconalf.es/analisis-manual/sucesiones.html#prp-algebra-limites-sucesiones)).
+
+c. No es posible.
+
+d. $\left(\frac{1}{n}\right)_{n=1}^\infty$ converge y $((-1)^n)_{n=1}^\infty$ diverge, pero $\left(\frac{(-1)^n}{n}\right)_{n=1}^\infty$ converge.
+
+e. $((-1)^{n+1})_{n=1}^\infty$ y $((-1)^n)_{n=1}^\infty$ divergen, pero $(\frac{(-1)^{n+1}}{(-1)^n})_{n=1}^\infty = (\frac{(-1)^n(-1)}{(-1)^n})_{n=1}^\infty = (-1)_{n=1}^\infty$ converge al ser constante.
+:::
+
 :::{#exr-convergencia-diferencia-limite}
-Demostrar que si una sucesión de números reales $(x_n)_{n=1}^\infty$ converge un número $l$, entonces la sucesión $(x_n-l)_{n=1}^\infty$ converge a $0$.
+Demostrar que si una sucesión de números reales $(x_n)_{n=1}^\infty$ converge un número $x$, entonces la sucesión $(x_n-x)_{n=1}^\infty$ converge a $0$.
+:::
+
+:::{.callout-tip collapse="true"}
+## Solución
+Supongamos que $\lim_{n\to\infty}x_n=x$. Entonces, para cualquier $\varepsilon>0$ existe $k\in\mathbb{N}$ tal que $|x_n-x|<\varepsilon$ $\forall n\geq k$, pero entonces es obvio que $|(x_n-x)-0|<\varepsilon$ $\forall n\geq k$, por lo que $\lim_{n\to\infty}x_n-x=0$.
 :::
 
 :::{#exr-convergencia-polinomios}
 Dado un polinomio $p(x)$, demostrar que si $\lim_{n\to\infty}x_n=x$ entonces $\lim_{n\to\infty}p(x_n)=p(x)$.
 :::
 
+:::{.callout-tip collapse="true"}
+## Solución
+Sea $p(x)=a_0+a_1x+\cdots +a_mx^m$ un polinomio cualquiera y supongamos que $\lim_{n\to\infty}x_n=x$. Entonces, 
+
+\begin{align*}
+\lim_{n\to\infty}p(x_n) &= \lim_{n\to\infty}a_0+a_1x_n+\cdots +a_mx_n^m \\ 
+&= \lim_{n\to\infty}a_0+\lim_{n\to\infty}a_1x_n+\cdots + \lim_{n\to\infty}a_mx_n^m \\ 
+&= \lim_{n\to\infty}a_0+\lim_{n\to\infty}a_1\lim_{n\to\infty}x_n+\cdots + \lim_{n\to\infty}a_m\lim_{n\to\infty}x_n^m \\ 
+&= \lim_{n\to\infty}a_0+\lim_{n\to\infty}a_1\lim_{n\to\infty}x_n+\cdots + \lim_{n\to\infty}a_m(\lim_{n\to\infty}x_n)^m \\ 
+&= a_0 + a_1x + \cdots + a_m x^m = p(x).
+\end{align*}
+:::
+
 :::{#exr-sucesion-valor-absoluto}
 Demostrar que si una sucesión de números reales converge a $x$, entonces la sucesión de sus valores absolutos converge a $|x|$. ¿Es cierto lo contrario?
 :::
 
+:::{.callout-tip collapse="true"}
+## Solución
+Supongamos que $\lim_{n\to\infty}x_n=x$. Entonces, para cualquier $\varepsilon>0$ existe $k\in\mathbb{N}$ tal que $|x_n-x|<\varepsilon$ $\forall n\geq k$, pero entonces, aplicando la desigualdad triangular, también se tiene que $||x_n|-|x||\leq |x_n-x| \varepsilon$ $\forall n\geq k$, por lo que $\lim_{n\to\infty}|x_n| = |x|$.
+:::
+
 :::{#exr-sucesion-raiz-cuadrada}
-Demostrar que si una sucesión de números reales positivos converge a $x$, entonces la sucesión de sus raíces cuadradas positivas converge a $\sqrt{x}$.
+Demostrar que si una sucesión de números reales no negativos converge a $x$, entonces la sucesión de sus raíces cuadradas positivas converge a $\sqrt{x}$.
+:::
+
+:::{.callout-tip collapse="true"}
+## Solución
+Veamos primero el caso en que $x=0$. Supongamos que $\lim_{n\to\infty}x_n=0$. Dado $\varepsilon>0$ sea $\varepsilon_1=\varepsilon^2>0$, entonces existe $k\in\mathbb{N}$ tal que $|x_n-0|=|x|<\varepsilon_1$ $\forall n\geq k$, pero entonces, también se cumple que 
+
+$$
+|\sqrt{x_n}-\sqrt{0}| = |\sqrt{x_n}| = \sqrt{x_n} < \sqrt{\varepsilon_1}=\sqrt{\varepsilon^2}=\varepsilon.
+$$ 
+
+Luego $\lim_{n\to\infty}\sqrt{x_n}=\sqrt{0}$.
+
+Supongamos ahora que $x>0$ y $\lim_{n\to\infty}x_n=x$. Dado $\varepsilon>0$ sea $\varepsilon_2=\varepsilon\sqrt{x}>0$, entonces existe $k\in\mathbb{N}$ tal que $|x_n-x|<\varepsilon_2$ $\forall n\geq k$, pero entonces, también se cumple que 
+
+\begin{align*}
+|\sqrt{x_n}-\sqrt{x}| &= \frac{|(\sqrt{x_n}-\sqrt{x})(\sqrt{x_n}+\sqrt{x})}{\sqrt{x_n}+\sqrt{x}} \\ 
+&= \frac{|(\sqrt{x_n})^2-(\sqrt{x})^2|}{\sqrt{x_n}+\sqrt{x}} = \frac{|x_n-x|}{\sqrt{x_n}+\sqrt{x}} \\ 
+&\leq \frac{|x_n-x|}{\sqrt{x}} <\frac{\varepsilon_2}{\sqrt{x}} = \frac{\varepsilon\sqrt{x}}{\sqrt{x}} = \varepsilon. 
+\end{align*}
+
+Luego $\lim_{n\to\infty}\sqrt{x_n} = \sqrt{x}$.
 :::
 
 :::{#exr-producto-sucesion-convergente-0}
 Demostrar que si $(x_n)_{n=1}^\infty$ es una sucesión de números reales acotada e $(y_n)_{n=1}^\infty$ es otra sucesión que converge a $0$, entonces la sucesión $(x_ny_n)_{n=1}^\infty$ también converge a $0$.
+:::
+
+:::{.callout-tip collapse="true"}
+## Solución
+Sea $c$ una cota de la sucesión $(x_n)_{n=1}^\infty$, es decir, $|x_n|\leq c$ $\forall n\in\mathbb{N}$, y supongamos que $\lim_{n\to\infty}y_n=0$. Dado $\varepsilon>0$, sea $\varepsilon'=\frac{\varepsilon}{c}>0$, entonces existe $k\in\mathbb{N}$ tal que $|y_n-0|=|y_n|<\varepsilon'$ $\forall n\geq k$, pero entonces, también se cumple que 
+
+$$
+|x_ny_n-0| = |x_ny_n| = |x_n||y_n| \leq c\varepsilon' = c\frac{\varepsilon}{c} = \varepsilon.
+$$
+
+Luego $\lim_{n\to\infty}x_ny_n = 0$.
 :::
 
 :::{#exr-condiciones-heredadas-limite}
@@ -84,22 +262,68 @@ b. Si $x_n\in\overline{(a,b)}$ $\forall n\in\mathbb{N}$, entonces $x\in\overline
 c. Si $x_n\in\mathbb{Q}$ $\forall n\in\mathbb{N}$, entonces $x\in\mathbb{Q}$.
 :::
 
+:::{.callout-tip collapse="true"}
+## Solución
+a. Si $x_n$ es cota superior de $A$ $\forall n\in\mathbb{N}$, se tiene que para cualquier $a\in A$, $a\leq x_n$. Veamos que entonces que $a\leq x$ por reducción al absurdo. Supongamos que existe $a\in A$ tal que $a\leq x_n$ $\forall n\in\mathbb{N}$ pero $a>x$. Como $\lim_{n\to\infty}x_n = x$, se tiene que para $\varepsilon=a-x>0$ existe $k\in\mathbb{N}$ tal que $|x_n-x|\leq a-x$ $\forall n\geq k$, pero entonces también se cumple
+$$
+|x_n-x| = x_n-x < a-x \Rightarrow x_n < a,
+$$
+por lo que $x_n$ no sería cota superior de $A$, así que, necesariamente $x$ tiene que ser cota superior de $A$.
+
+b. Como $\overline{(a,b)}$ es un conjunto cerrado, para demostrar la proposición basta aplicar este [teorema](https://aprendeconalf.es/analisis-manual/sucesiones.html#thm-sucesiones-conjuntos-cerrados).
+
+c. Veamos que la proposición es falsa con un contraejemplo. La sucesión $x_1=1$ y $x_{n+1}=\frac{1}{1+x_n}$ $\forall n=2,3,\ldots$ está formada por números racionales, sin embargo, su límite es el número irracional $\varphi=\frac{1+\sqrt{5}}{2}=1.618033988749\ldots$ (ver @exr-numero-aureo).
+:::
+
 :::{#exr-compresion-sucesiones}
-Demostrar las siguientes sucesiones convergen a $0$ usando el teorema de compresión de sucesiones.
+Demostrar las siguientes sucesiones convergen a $0$.
 
 a. $\left(\frac{n+\cos(n)}{n^2+1}\right)_{n=1}^\infty$
+
 a. $\left(\frac{2^n}{n!}\right)_{n=1}^\infty$
+
 a. $\left(\frac{n^2}{2^n}\right)_{n=1}^\infty$
+:::
+
+:::{.callout-tip collapse="true"}
+## Solución
+a. Como $-1\leq \cos(n)\leq 1$ se tiene que $\frac{n-1}{n^2+1}\leq \frac{n+\cos(n)}{n^2+1}\leq \frac{n+1}{n^2+1}$ $\forall n\in\mathbb{N}$. Como 
+\begin{align*}
+\lim_{n\to\infty}\frac{n-1}{n^2+1} &= \lim_{n\to\infty}\frac{\frac{1}{n}-\frac{1}{n^2}}{1+\frac{1}{n^2}}\\  
+&= \frac{\lim_{n\to\infty}\frac{1}{n}-\lim_{n\to\infty}\frac{1}{n^2}}{\lim_{n\to\infty}1 + \lim_{n\to\infty}\frac{1}{n^2}}\\ 
+&= \frac{0-0}{1+0} = 0.
+\end{align*}
+y del mismo modo, se puede probar que $\lim_{n\to\infty}\frac{n+1}{n^2+1}=0$, por lo que aplicando el [teorema de compresión de sucesiones convergentes](https://aprendeconalf.es/analisis-manual/sucesiones.html#thm-compresion-sucesiones-convergentes) se concluye que $\lim_{n\to\infty}\frac{n+\cos(n)}{n^2+1}=0$.
+
+b. Como 
+\begin{align*}
+\lim_{n\to\infty}\frac{x_{n+1}}{x_n} &= \lim_{n\to\infty}\frac{\frac{2^{n+1}}{(n+1)!}}{\frac{2^n}{n!}} = \lim_{n\to\infty}\frac{2^{n+1}n!}{2^n(n+1)!}\\ 
+&= \lim_{n\to\infty}\frac{2^n2n!}{2^n(n+1)n!} = \lim_{n\to\infty}\frac{2}{n+1} = 0 <1,
+\end{align*}
+por el [criterio del cociente](https://aprendeconalf.es/analisis-manual/sucesiones.html#prp-criterio-cociente-sucesiones) se tiene que $\lim_{n\to\infty}\frac{2^n}{n!}=0$.
+
+c. Como 
+\begin{align*}
+\lim_{n\to\infty}\frac{x_{n+1}}{x_n} &= \lim_{n\to\infty}\frac{\frac{(n+1)^2}{2^{n+1}}}{\frac{n^2}{2^2}} = \lim_{n\to\infty}\frac{2^n(n+1)^2}{2^{n+1}n^2}\\ 
+&= \lim_{n\to\infty}\frac{(n+1)^2}{2n^2} = \lim_{n\to\infty}\frac{n^2+2n+1}{2n^2} \\ 
+&= \lim_{n\to\infty}\frac{1}{2}+\frac{1}{n}+\frac{1}{2n^2}\\  
+& = \lim_{n\to\infty}\frac{1}{2}+\lim_{n\to\infty}\frac{1}{n}+\lim_{n\to\infty}\frac{1}{2n^2} = \frac{1}{2}<1,
+\end{align*}
+por el [criterio del cociente](https://aprendeconalf.es/analisis-manual/sucesiones.html#prp-criterio-cociente-sucesiones) se tiene que $\lim_{n\to\infty}\frac{n^2}{2^n}=0$.
 :::
 
 :::{#exr-sucesiones-monotonas}
 Demostrar que las siguientes sucesiones de números reales son monótonas y calcular su límite cuando exista.
 
-a. $(\frac{3n}{2n^2})_{n=1}\infty$
-a. $x_1=1$ y $x_{n+1}=\frac{a_n+3}{2}$ $\forall n\in\mathbb{N}$
-a. $(\frac{n^2}{2n+1})_{n=1}^\infty$
-a. $x_1=2$ y $x_{n+1}=\sqrt{x_n+2}$ $\forall n\in\mathbb{N}$
-a. $x_1=1$ y $x_{n+1}=\sqrt{2x_n}$ $\forall n\in\mathbb{N}$
+a. $\left(\frac{3n}{2n^2}\right)_{n=1}^\infty$
+
+a. $x_1=1$ y $x_{n+1}=\frac{a_n+3}{2}$ $\forall n=2,3,\ldots$
+
+a. $\left(\frac{n^2}{2n+1}\right)_{n=1}^\infty$
+
+a. $x_1=2$ y $x_{n+1}=\sqrt{x_n+2}$ $\forall n=2,3,\ldots$
+
+a. $x_1=1$ y $x_{n+1}=\sqrt{2x_n}$ $\forall n=2,3,\ldots$
 :::
 
 :::{#exr-numero-aureo}
@@ -119,11 +343,20 @@ tal que $\frac{a+b}{a}=\frac{a}{b}=\varphi$. A este número se le conoce como [n
 
 Demostrar que este número es el límite de las siguientes sucesiones de números reales.
 
-a. $x_1=2$ y $x_{n+1}=1+\frac{1}{x_n}$ $\forall n\in\mathbb{N}$
-b. $x_1=1$ y $x_{n+1}=\sqrt{1+x_n}$ $\forall n\in\mathbb{N}$
+a. $x_1=1$ y $x_{n+1}=1+\frac{1}{x_n}$ $\forall n=1,2,\ldots$
+b. $x_1=1$ y $x_{n+1}=\sqrt{1+x_n}$ $\forall n=1,2,\ldots$
 :::
 
 :::{#exr-sucesion-intereses}
 Una cuenta de ahorro ofrece el primer año un tipo de interés $x_1=0.5\%$ y los años sucesivos un interés $x_{n+1}=\frac{3}{2+x_n}$. Si se mantiene la cuenta abierta por un periodo indefinido, ¿hacia donde tienden los tipos de interés?
 :::
 
+:::{#exr-sucesiones-cauchy}
+Determinar cuáles de las siguientes sucesiones de números reales son de Cauchy.
+
+a. $\left(\frac{(-1)^n}{n}\right)_{n=1}^\infty$
+
+b. $\left(\frac{n}{n+1}\right)_{n=1}^\infty$
+
+c. $\left(\frac{\operatorname{sen}(n)}{n}\right)_{n=1}^\infty$
+:::

@@ -189,14 +189,104 @@ ul.task-list li input[type="checkbox"] {
 <div id="exr-sucesion-constante" class="theorem exercise">
 <p><span class="theorem-title"><strong>Ejercicio 4.1 </strong></span>Una <em>sucesión constante</em> es una sucesión de números reales en la que cada término es igual que el anterior. Demostrar que una sucesión constante siempre converge.</p>
 </div>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Sea <span class="math inline">\((c)_{n=1}^\infty\)</span> una sucesión constante. Veamos que converge a <span class="math inline">\(c\)</span>. Para cualquier <span class="math inline">\(\varepsilon&gt;0\)</span> basta tomar <span class="math inline">\(k=1\)</span>, de manera que <span class="math inline">\(\forall n\geq k\)</span> se tiene que <span class="math inline">\(|x_n-c|=|c-c| = 0 &lt;\varepsilon\)</span>. Por tanto, <span class="math inline">\(\lim_{n\to\infty}x_n =c\)</span>.</p>
+</div>
+</div>
+</div>
 <div id="exr-sucesion-aritmética" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 4.2 </strong></span>Una <em>sucesión aritmética</em> es una sucesión de números reales en la que cada término se obtienen sumando un número constante al anterior, es decir, <span class="math inline">\(x_{n+1} = c+x_n\)</span>. Estudiar la convergencia de las sucesiones aritméticas.</p>
+<p><span class="theorem-title"><strong>Ejercicio 4.2 </strong></span>Una <em>sucesión aritmética</em> es una sucesión de números reales en la que cada término se obtienen sumando un número constante <span class="math inline">\(c\in\mathbb{R}\)</span> al anterior, es decir, <span class="math inline">\(x_1=c\)</span> y <span class="math inline">\(x_{n+1} = c+x_n\)</span> <span class="math inline">\(\forall n=2,3,\ldots\)</span>. Estudiar la convergencia de las sucesiones aritméticas.</p>
+</div>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Si <span class="math inline">\(c=0\)</span> entonces la sucesión es constante y por el <a href="#exr-sucesion-constante">Ejercicio&nbsp;<span>4.1</span></a>, la sucesión converge.</p>
+<p>Supongamos que <span class="math inline">\(c&gt;0\)</span> y veamos que la sucesión aritmética <span class="math inline">\((nc)_{n=1}^\infty\)</span> no converge a ningún número <span class="math inline">\(x\in\mathbb{R}\)</span>. Para ello, basta tomar <span class="math inline">\(\varepsilon=1\)</span>, de manera que por la propiedad arquimediana se tiene que existe <span class="math inline">\(m\in\mathbb{N}\)</span> tal que <span class="math inline">\(\frac{x+1}{c}&lt;m\)</span>, así que para cualquier <span class="math inline">\(k\in\mathbb{N}\)</span>, tomando <span class="math inline">\(n=\max(\{k,m\})\)</span>, se cumple que existe <span class="math inline">\(n\geq k\)</span> tal que</p>
+<p><span class="math display">\[\begin{align*}
+\frac{x+1}{c}&lt;m\leq n &amp;\Rightarrow x+1 &lt; nc = x_n\\  
+&amp;\Rightarrow x_n-x &gt; 1\\
+&amp;\Rightarrow |x_n-x|&gt;1=\varepsilon.
+\end{align*}\]</span></p>
+<p>Por consiguiente, la sucesión diverge. De forma similar se puede prueba que si <span class="math inline">\(c&lt;0\)</span> la sucesión también diverge.</p>
+<p>Otra forma de demostrarlo es probar que la sucesión es monótona y no acotada y aplicar el <a href="https://aprendeconalf.es/analisis-manual/sucesiones.html#thm-convergencia-monotona">teorema de la convergencia de sucesiones monóntonas</a> para concluir que la sucesión no converge.</p>
+</div>
+</div>
 </div>
 <div id="exr-sucesion-geométrica" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 4.3 </strong></span>Una <em>sucesión geométrica</em> es una sucesión de números reales en la que cada término se obtienen multiplicando un número constante al anterior, es decir, <span class="math inline">\(x_{n+1} = cx_n\)</span>. Estudiar la convergencia de las sucesiones geométricas.</p>
+<p><span class="theorem-title"><strong>Ejercicio 4.3 </strong></span>Una <em>sucesión geométrica</em> es una sucesión de números reales en la que cada término se obtienen multiplicando un número constante <span class="math inline">\(c\in\mathbb{R}\)</span> por el anterior, es decir, <span class="math inline">\(x_1=c\)</span> y <span class="math inline">\(x_{n+1} = cx_n\)</span>. Estudiar la convergencia de las sucesiones geométricas.</p>
+</div>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Si <span class="math inline">\(c=0\)</span> o <span class="math inline">\(c=1\)</span> entonces la sucesión es constante y por el <a href="#exr-sucesion-constante">Ejercicio&nbsp;<span>4.1</span></a>, la sucesión converge.</p>
+<p>Supongamos que <span class="math inline">\(c&gt;1\)</span> y veamos que la sucesión geométrica <span class="math inline">\((c^n)_{n=1}^\infty\)</span> no converge a ningún número <span class="math inline">\(x\in\mathbb{R}\)</span>. Para ello, basta probar que la sucesión es creciente y no acotada. Probaremos que por inducción que la sucesión es creciente. <span class="math inline">\(x_1=c&lt;cc=c^2=x_2\)</span> por ser <span class="math inline">\(c&gt;1\)</span>. Supongamos ahora que <span class="math inline">\(x_{n-1}&lt;x_n\)</span>, entonces <span class="math inline">\(x_n=c^n&lt;cc^n=c^{n+1}=x_{n+1}\)</span>. Por tanto, la sucesión es creciente.</p>
+<p>Veamos ahora que no está acotada por reducción al absurdo. Supongamos que existe <span class="math inline">\(x\in\mathbb{R}\)</span> tal que <span class="math inline">\(x&gt;x_n\)</span> <span class="math inline">\(\forall n\in\mathbb{N}\)</span>. Como <span class="math inline">\(c&gt;1\)</span>, podemos escribir <span class="math inline">\(x_n=c^n = (1+a)^n\)</span> con <span class="math inline">\(a&gt;0\)</span>. Aplicando ahora el teorema del binomio, se tiene</p>
+<p><span class="math display">\[\begin{align*}
+(1+a)^n &amp;= \binom{n}{0}1^na^0 + \binom{n}{1}1^{n-1}a^1 + \binom{n}{2}1^{n-2}a^2 + \cdots + \binom{n}{n}1^0a^n \\
+&amp; = 1 + na + \frac{n(n-1)}{2}a^2 + \cdots + a^n \\
+&amp; \geq 1 + na.
+\end{align*}\]</span></p>
+<p>Aplicando ahora la propiedad arquimediana, se tiene que existe <span class="math inline">\(n\in\mathbb{N}\)</span> tal que <span class="math inline">\(\frac{x-1}{a}&lt;n\)</span>, de modo que</p>
+<p><span class="math display">\[
+\frac{x-1}{a}&lt;n \Rightarrow x-1 &lt; na \Rightarrow x &lt; 1+na &lt; (1+a)^n = x_n,
+\]</span></p>
+<p>por lo que <span class="math inline">\(x\)</span> no puede ser cota de la sucesión. Por consiguiente, la sucesión es monótona y no acotada, y por el <a href="https://aprendeconalf.es/analisis-manual/sucesiones.html#thm-convergencia-monotona">teorema de la convergencia de sucesiones monónotas</a> la sucesión diverge.</p>
+<p>De forma similar se puede prueba que si <span class="math inline">\(c&lt;0\)</span> la sucesión también diverge.</p>
+<p>Veamos finalmente que si <span class="math inline">\(0&lt;c&lt;1\)</span> entonces la sucesión converge a <span class="math inline">\(0\)</span>.</p>
+</div>
+</div>
 </div>
 <div id="exr-sucesion-alternada" class="theorem exercise">
 <p><span class="theorem-title"><strong>Ejercicio 4.4 </strong></span>Una <em>sucesión alternada</em> es una sucesión de números reales en la que cada término tiene signo distinto del anterior. Demostrar que la sucesión alternada <span class="math inline">\(((-1)^n)_{n=1}^\infty\)</span> es divergente. ¿Puede una sucesión alternada ser convergente?</p>
+</div>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Veamos que no existe <span class="math inline">\(x\in\mathbb{R}\)</span> tal que <span class="math inline">\(\lim_{n\to\infty}(-1)^n=x\)</span>. Para <span class="math inline">\(x\in\mathbb{R}\setminus\{-1,1\}\)</span> es sencillo, ya que tomando <span class="math inline">\(\varepsilon=|1-|x||\)</span> para cualquier <span class="math inline">\(k\in\mathbb{N}\)</span>, si <span class="math inline">\(n\geq k\)</span> se tiene que <span class="math inline">\(|x_n-x| = |(-1)^n-x| \geq ||(-1)^n|-|x|| = |1 - |x|| =\varepsilon\)</span>, por tanto, la sucesión no converge a <span class="math inline">\(x\)</span>.</p>
+<p>Veamos ahora que la sucesión no converge a <span class="math inline">\(1\)</span>. Para ello basta tomar <span class="math inline">\(\varepsilon=1\)</span>, de manera que para cualquier <span class="math inline">\(k\in\mathbb{N}\)</span> existe <span class="math inline">\(n=2k+1\geq k\)</span> tal que <span class="math inline">\(|x_n-1|=|(-1)^{2k+1}-1| = |-1-1| = |-2|=2&gt;1=\varepsilon\)</span>.</p>
+<p>Del mismo modo se puede probar que tampoco converge a <span class="math inline">\(-1\)</span>. Para ello basta tomar de nuevo <span class="math inline">\(\varepsilon=1\)</span>, de manera que para cualquier <span class="math inline">\(k\in\mathbb{N}\)</span> existe <span class="math inline">\(n=2k\geq k\)</span> tal que <span class="math inline">\(|x_n-(-1)|=|(-1)^{2k}-(-1)| = |1-(-1)| = |2|=2&gt;1=\varepsilon\)</span>.</p>
+<p>Otra forma de demostrar la no convergencia de la sucesión es tomar las subsucesiones suyas <span class="math inline">\(\left((-1)^{2n}\right)_{n=1}^\infty\)</span> y <span class="math inline">\(\left((-1)^{2n+1}\right)_{n=1}^\infty\)</span> que convergen a <span class="math inline">\(1\)</span> y <span class="math inline">\(-1\)</span> respectivamente, al ser constantes, de manera que aplicando el <a href="https://aprendeconalf.es/analisis-manual/sucesiones.html#thm-convergencia-subsucesiones">teorema de la convergencia de las subsucesiones</a>, se tiene que las sucesión original no converge.</p>
+<p>Por otro lado, no toda sucesión alternada es divergente. Por ejemplo, las sucesiones <span class="math inline">\(\left(\frac{(-1)^n}{n}\right)_{n=1}^\infty\)</span> y <span class="math inline">\(\left(\frac{(-1)^n}{n^2}\right)_{n=1}^\infty\)</span> son alternadas y convergen a <span class="math inline">\(0\)</span>.</p>
+</div>
+</div>
 </div>
 <div id="exr-refutacion" class="theorem exercise">
 <p><span class="theorem-title"><strong>Ejercicio 4.5 </strong></span>¿Cómo podríamos demostrar que las siguientes afirmaciones son falsas?</p>
@@ -206,6 +296,26 @@ ul.task-list li input[type="checkbox"] {
 <li>Para todos los bancos de una ciudad existe un cliente que cada mes usa una tarjeta de crédito o de débito.</li>
 </ol>
 </div>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="a">
+<li>Para refutar la afirmación habría que encontrar un banco en el no hubiese al menos un cliente moroso, es decir, que todos sus clientes no fuesen morosos.</li>
+<li>Para refutar la afirmación habría que mostrar que todos los bancos de la ciudad tienen algún cliente que no tiene pensión ni hipoteca.</li>
+<li>Para refutar la afirmación habría que encontrar un banco en el que ningún cliente usase cada mes la tarjeta de crédito o de débito, es decir, en el que para todos los clientes hay algún mes que no usan ni la tarjeta de crédito ni la de débito.</li>
+</ol>
+</div>
+</div>
+</div>
 <div id="exr-ejemplo-sucesiones-1" class="theorem exercise">
 <p><span class="theorem-title"><strong>Ejercicio 4.6 </strong></span>Dar un ejemplo de sucesión que cumpla las siguientes condiciones, o, en caso de no existir ninguna, explicar porqué.</p>
 <ol type="a">
@@ -214,13 +324,74 @@ ul.task-list li input[type="checkbox"] {
 <li>Una sucesión divergente tal que para cada <span class="math inline">\(n\in\mathbb{N}\)</span> se pueden encontrar <span class="math inline">\(n\)</span> ceros consecutivos en la sucesión.</li>
 </ol>
 </div>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-6" class="callout-6-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="a">
+<li>La sucesión <span class="math inline">\((x_n)_{n=1}^\infty\)</span> tal que <span class="math display">\[x_n=\begin{cases}
+0 &amp; \mbox{si } n=2k\\
+1 &amp; \mbox{si } n=2k+1
+\end{cases}
+\quad k\in\mathbb{N}
+\]</span></li>
+<li>No existe.</li>
+<li>La sucesión <span class="math inline">\(0, 1, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, \ldots\)</span>.</li>
+</ol>
+</div>
+</div>
+</div>
 <div id="exr-limites-sucesiones" class="theorem exercise">
 <p><span class="theorem-title"><strong>Ejercicio 4.7 </strong></span>Demostrar, aplicando la definición de límite de una sucesión, que las siguientes sucesiones de números reales convergen a los valores dados.</p>
 <ol type="a">
-<li><span class="math inline">\(\lim_{n\to\infty}\frac{2n}{n^2}=0\)</span></li>
-<li><span class="math inline">\(\lim_{n\to\infty}\frac{n^2-1}{3n^2+n-2}=\frac{1}{3}\)</span></li>
-<li><span class="math inline">\(\lim_{n\to\infty}\frac{3n^2+2}{n^2-n}=3\)</span></li>
+<li><p><span class="math inline">\(\lim_{n\to\infty}\frac{2n}{n^2}=0\)</span></p></li>
+<li><p><span class="math inline">\(\lim_{n\to\infty}\frac{n^2-1}{3n^2+n-2}=\frac{1}{3}\)</span></p></li>
+<li><p><span class="math inline">\(\lim_{n\to\infty}\frac{3n^2+2}{n^2-n}=3\)</span></p></li>
 </ol>
+</div>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-7" class="callout-7-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="a">
+<li><p><span class="math display">\[
+\lim_{n\to\infty}\frac{2n}{n^2} = \lim_{n\to\infty}\frac{2}{n}= 0.
+\]</span></p></li>
+<li></li>
+</ol>
+<p><span class="math display">\[\begin{align*}
+\lim_{n\to\infty}\frac{n^2-1}{3n^2+n-2} &amp;= \lim_{n\to\infty}\frac{1-\frac{1}{n^2}}{3+\frac{1}{n}-\frac{2}{n^2}} \\
+&amp;= \frac{\lim_{n\to\infty}1-\frac{1}{n^2}}{\lim_{n\to\infty}3+\frac{1}{n}-\frac{2}{n^2}}\\
+&amp;= \frac{\lim_{n\to\infty}1-\lim_{n\to\infty}\frac{1}{n^2}}{\lim_{n\to\infty}3+\lim_{n\to\infty}\frac{1}{n}-\lim_{n\to\infty}\frac{2}{n^2}}\\
+&amp;= \frac{1-0}{3+0-0} = \frac{1}{3}.
+\end{align*}\]</span></p>
+<ol start="3" type="a">
+<li></li>
+</ol>
+<p><span class="math display">\[\begin{align*}
+\lim_{n\to\infty}\frac{3n^2+2}{n^2-n} &amp;= \lim_{n\to\infty}\frac{3+\frac{2}{n^2}}{1-\frac{1}{n}} \\
+&amp;= \frac{\lim_{n\to\infty}3+\frac{2}{n^2}}{\lim_{n\to\infty}1-\frac{1}{n}}\\
+&amp;= \frac{\lim_{n\to\infty}3+\lim_{n\to\infty}\frac{2}{n^2}}{\lim_{n\to\infty}1-\lim_{n\to\infty}\frac{1}{n}} \\
+&amp;= \frac{3+0}{1-0} = 3
+\end{align*}\]</span></p>
+</div>
+</div>
 </div>
 <div id="exr-ejemplo-sucesiones-2" class="theorem exercise">
 <p><span class="theorem-title"><strong>Ejercicio 4.8 </strong></span>Dar un ejemplo de sucesiones que cumplan las siguientes condiciones, o, en caso de no existir ninguna, explicar porqué.</p>
@@ -232,20 +403,144 @@ ul.task-list li input[type="checkbox"] {
 <li>Dos sucesiones divergentes <span class="math inline">\((x_n)_{n=1}^\infty\)</span> e <span class="math inline">\((y_n)_{n=1}^\infty\)</span> con <span class="math inline">\(y_n\neq 0\)</span> <span class="math inline">\(\forall n\in\mathbb{N}\)</span> tales que <span class="math inline">\(\left(\frac{x_n}{y_n}\right)_{n=1}^\infty\)</span> converge.</li>
 </ol>
 </div>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-8" class="callout-8-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="a">
+<li><p><span class="math inline">\((n)_{n=1}^\infty\)</span> y <span class="math inline">\((-n)_{n=1}^\infty\)</span> divergen, pero <span class="math inline">\((n+(-n))_{n=1}^\infty = (0)_{n=1}^\infty\)</span> converge por ser constante.</p></li>
+<li><p>No es posible (ver <a href="https://aprendeconalf.es/analisis-manual/sucesiones.html#prp-algebra-limites-sucesiones">proposición</a>).</p></li>
+<li><p>No es posible.</p></li>
+<li><p><span class="math inline">\(\left(\frac{1}{n}\right)_{n=1}^\infty\)</span> converge y <span class="math inline">\(((-1)^n)_{n=1}^\infty\)</span> diverge, pero <span class="math inline">\(\left(\frac{(-1)^n}{n}\right)_{n=1}^\infty\)</span> converge.</p></li>
+<li><p><span class="math inline">\(((-1)^{n+1})_{n=1}^\infty\)</span> y <span class="math inline">\(((-1)^n)_{n=1}^\infty\)</span> divergen, pero <span class="math inline">\((\frac{(-1)^{n+1}}{(-1)^n})_{n=1}^\infty = (\frac{(-1)^n(-1)}{(-1)^n})_{n=1}^\infty = (-1)_{n=1}^\infty\)</span> converge al ser constante.</p></li>
+</ol>
+</div>
+</div>
+</div>
 <div id="exr-convergencia-diferencia-limite" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 4.9 </strong></span>Demostrar que si una sucesión de números reales <span class="math inline">\((x_n)_{n=1}^\infty\)</span> converge un número <span class="math inline">\(l\)</span>, entonces la sucesión <span class="math inline">\((x_n-l)_{n=1}^\infty\)</span> converge a <span class="math inline">\(0\)</span>.</p>
+<p><span class="theorem-title"><strong>Ejercicio 4.9 </strong></span>Demostrar que si una sucesión de números reales <span class="math inline">\((x_n)_{n=1}^\infty\)</span> converge un número <span class="math inline">\(x\)</span>, entonces la sucesión <span class="math inline">\((x_n-x)_{n=1}^\infty\)</span> converge a <span class="math inline">\(0\)</span>.</p>
+</div>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-9" class="callout-9-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Supongamos que <span class="math inline">\(\lim_{n\to\infty}x_n=x\)</span>. Entonces, para cualquier <span class="math inline">\(\varepsilon&gt;0\)</span> existe <span class="math inline">\(k\in\mathbb{N}\)</span> tal que <span class="math inline">\(|x_n-x|&lt;\varepsilon\)</span> <span class="math inline">\(\forall n\geq k\)</span>, pero entonces es obvio que <span class="math inline">\(|(x_n-x)-0|&lt;\varepsilon\)</span> <span class="math inline">\(\forall n\geq k\)</span>, por lo que <span class="math inline">\(\lim_{n\to\infty}x_n-x=0\)</span>.</p>
+</div>
+</div>
 </div>
 <div id="exr-convergencia-polinomios" class="theorem exercise">
 <p><span class="theorem-title"><strong>Ejercicio 4.10 </strong></span>Dado un polinomio <span class="math inline">\(p(x)\)</span>, demostrar que si <span class="math inline">\(\lim_{n\to\infty}x_n=x\)</span> entonces <span class="math inline">\(\lim_{n\to\infty}p(x_n)=p(x)\)</span>.</p>
 </div>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-10" class="callout-10-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Sea <span class="math inline">\(p(x)=a_0+a_1x+\cdots +a_mx^m\)</span> un polinomio cualquiera y supongamos que <span class="math inline">\(\lim_{n\to\infty}x_n=x\)</span>. Entonces,</p>
+<p><span class="math display">\[\begin{align*}
+\lim_{n\to\infty}p(x_n) &amp;= \lim_{n\to\infty}a_0+a_1x_n+\cdots +a_mx_n^m \\
+&amp;= \lim_{n\to\infty}a_0+\lim_{n\to\infty}a_1x_n+\cdots + \lim_{n\to\infty}a_mx_n^m \\
+&amp;= \lim_{n\to\infty}a_0+\lim_{n\to\infty}a_1\lim_{n\to\infty}x_n+\cdots + \lim_{n\to\infty}a_m\lim_{n\to\infty}x_n^m \\
+&amp;= \lim_{n\to\infty}a_0+\lim_{n\to\infty}a_1\lim_{n\to\infty}x_n+\cdots + \lim_{n\to\infty}a_m(\lim_{n\to\infty}x_n)^m \\
+&amp;= a_0 + a_1x + \cdots + a_m x^m = p(x).
+\end{align*}\]</span></p>
+</div>
+</div>
+</div>
 <div id="exr-sucesion-valor-absoluto" class="theorem exercise">
 <p><span class="theorem-title"><strong>Ejercicio 4.11 </strong></span>Demostrar que si una sucesión de números reales converge a <span class="math inline">\(x\)</span>, entonces la sucesión de sus valores absolutos converge a <span class="math inline">\(|x|\)</span>. ¿Es cierto lo contrario?</p>
 </div>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-11" class="callout-11-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Supongamos que <span class="math inline">\(\lim_{n\to\infty}x_n=x\)</span>. Entonces, para cualquier <span class="math inline">\(\varepsilon&gt;0\)</span> existe <span class="math inline">\(k\in\mathbb{N}\)</span> tal que <span class="math inline">\(|x_n-x|&lt;\varepsilon\)</span> <span class="math inline">\(\forall n\geq k\)</span>, pero entonces, aplicando la desigualdad triangular, también se tiene que <span class="math inline">\(||x_n|-|x||\leq |x_n-x| \varepsilon\)</span> <span class="math inline">\(\forall n\geq k\)</span>, por lo que <span class="math inline">\(\lim_{n\to\infty}|x_n| = |x|\)</span>.</p>
+</div>
+</div>
+</div>
 <div id="exr-sucesion-raiz-cuadrada" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 4.12 </strong></span>Demostrar que si una sucesión de números reales positivos converge a <span class="math inline">\(x\)</span>, entonces la sucesión de sus raíces cuadradas positivas converge a <span class="math inline">\(\sqrt{x}\)</span>.</p>
+<p><span class="theorem-title"><strong>Ejercicio 4.12 </strong></span>Demostrar que si una sucesión de números reales no negativos converge a <span class="math inline">\(x\)</span>, entonces la sucesión de sus raíces cuadradas positivas converge a <span class="math inline">\(\sqrt{x}\)</span>.</p>
+</div>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-12-contents" aria-controls="callout-12" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-12" class="callout-12-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Veamos primero el caso en que <span class="math inline">\(x=0\)</span>. Supongamos que <span class="math inline">\(\lim_{n\to\infty}x_n=0\)</span>. Dado <span class="math inline">\(\varepsilon&gt;0\)</span> sea <span class="math inline">\(\varepsilon_1=\varepsilon^2&gt;0\)</span>, entonces existe <span class="math inline">\(k\in\mathbb{N}\)</span> tal que <span class="math inline">\(|x_n-0|=|x|&lt;\varepsilon_1\)</span> <span class="math inline">\(\forall n\geq k\)</span>, pero entonces, también se cumple que</p>
+<p><span class="math display">\[
+|\sqrt{x_n}-\sqrt{0}| = |\sqrt{x_n}| = \sqrt{x_n} &lt; \sqrt{\varepsilon_1}=\sqrt{\varepsilon^2}=\varepsilon.
+\]</span></p>
+<p>Luego <span class="math inline">\(\lim_{n\to\infty}\sqrt{x_n}=\sqrt{0}\)</span>.</p>
+<p>Supongamos ahora que <span class="math inline">\(x&gt;0\)</span> y <span class="math inline">\(\lim_{n\to\infty}x_n=x\)</span>. Dado <span class="math inline">\(\varepsilon&gt;0\)</span> sea <span class="math inline">\(\varepsilon_2=\varepsilon\sqrt{x}&gt;0\)</span>, entonces existe <span class="math inline">\(k\in\mathbb{N}\)</span> tal que <span class="math inline">\(|x_n-x|&lt;\varepsilon_2\)</span> <span class="math inline">\(\forall n\geq k\)</span>, pero entonces, también se cumple que</p>
+<p><span class="math display">\[\begin{align*}
+|\sqrt{x_n}-\sqrt{x}| &amp;= \frac{|(\sqrt{x_n}-\sqrt{x})(\sqrt{x_n}+\sqrt{x})}{\sqrt{x_n}+\sqrt{x}} \\
+&amp;= \frac{|(\sqrt{x_n})^2-(\sqrt{x})^2|}{\sqrt{x_n}+\sqrt{x}} = \frac{|x_n-x|}{\sqrt{x_n}+\sqrt{x}} \\
+&amp;\leq \frac{|x_n-x|}{\sqrt{x}} &lt;\frac{\varepsilon_2}{\sqrt{x}} = \frac{\varepsilon\sqrt{x}}{\sqrt{x}} = \varepsilon.
+\end{align*}\]</span></p>
+<p>Luego <span class="math inline">\(\lim_{n\to\infty}\sqrt{x_n} = \sqrt{x}\)</span>.</p>
+</div>
+</div>
 </div>
 <div id="exr-producto-sucesion-convergente-0" class="theorem exercise">
 <p><span class="theorem-title"><strong>Ejercicio 4.13 </strong></span>Demostrar que si <span class="math inline">\((x_n)_{n=1}^\infty\)</span> es una sucesión de números reales acotada e <span class="math inline">\((y_n)_{n=1}^\infty\)</span> es otra sucesión que converge a <span class="math inline">\(0\)</span>, entonces la sucesión <span class="math inline">\((x_ny_n)_{n=1}^\infty\)</span> también converge a <span class="math inline">\(0\)</span>.</p>
+</div>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-13-contents" aria-controls="callout-13" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-13" class="callout-13-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Sea <span class="math inline">\(c\)</span> una cota de la sucesión <span class="math inline">\((x_n)_{n=1}^\infty\)</span>, es decir, <span class="math inline">\(|x_n|\leq c\)</span> <span class="math inline">\(\forall n\in\mathbb{N}\)</span>, y supongamos que <span class="math inline">\(\lim_{n\to\infty}y_n=0\)</span>. Dado <span class="math inline">\(\varepsilon&gt;0\)</span>, sea <span class="math inline">\(\varepsilon'=\frac{\varepsilon}{c}&gt;0\)</span>, entonces existe <span class="math inline">\(k\in\mathbb{N}\)</span> tal que <span class="math inline">\(|y_n-0|=|y_n|&lt;\varepsilon'\)</span> <span class="math inline">\(\forall n\geq k\)</span>, pero entonces, también se cumple que</p>
+<p><span class="math display">\[
+|x_ny_n-0| = |x_ny_n| = |x_n||y_n| \leq c\varepsilon' = c\frac{\varepsilon}{c} = \varepsilon.
+\]</span></p>
+<p>Luego <span class="math inline">\(\lim_{n\to\infty}x_ny_n = 0\)</span>.</p>
+</div>
+</div>
 </div>
 <div id="exr-condiciones-heredadas-limite" class="theorem exercise">
 <p><span class="theorem-title"><strong>Ejercicio 4.14 </strong></span>Dada una sucesión de números reales tal que <span class="math inline">\(\lim_{n\to\infty}x_n=x\)</span>, probar o refutar las siguientes proposiciones:</p>
@@ -255,22 +550,76 @@ ul.task-list li input[type="checkbox"] {
 <li>Si <span class="math inline">\(x_n\in\mathbb{Q}\)</span> <span class="math inline">\(\forall n\in\mathbb{N}\)</span>, entonces <span class="math inline">\(x\in\mathbb{Q}\)</span>.</li>
 </ol>
 </div>
-<div id="exr-compresion-sucesiones" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 4.15 </strong></span>Demostrar las siguientes sucesiones convergen a <span class="math inline">\(0\)</span> usando el teorema de compresión de sucesiones.</p>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-14-contents" aria-controls="callout-14" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-14" class="callout-14-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
 <ol type="a">
-<li><span class="math inline">\(\left(\frac{n+\cos(n)}{n^2+1}\right)_{n=1}^\infty\)</span></li>
-<li><span class="math inline">\(\left(\frac{2^n}{n!}\right)_{n=1}^\infty\)</span></li>
-<li><span class="math inline">\(\left(\frac{n^2}{2^n}\right)_{n=1}^\infty\)</span></li>
+<li><p>Si <span class="math inline">\(x_n\)</span> es cota superior de <span class="math inline">\(A\)</span> <span class="math inline">\(\forall n\in\mathbb{N}\)</span>, se tiene que para cualquier <span class="math inline">\(a\in A\)</span>, <span class="math inline">\(a\leq x_n\)</span>. Veamos que entonces que <span class="math inline">\(a\leq x\)</span> por reducción al absurdo. Supongamos que existe <span class="math inline">\(a\in A\)</span> tal que <span class="math inline">\(a\leq x_n\)</span> <span class="math inline">\(\forall n\in\mathbb{N}\)</span> pero <span class="math inline">\(a&gt;x\)</span>. Como <span class="math inline">\(\lim_{n\to\infty}x_n = x\)</span>, se tiene que para <span class="math inline">\(\varepsilon=a-x&gt;0\)</span> existe <span class="math inline">\(k\in\mathbb{N}\)</span> tal que <span class="math inline">\(|x_n-x|\leq a-x\)</span> <span class="math inline">\(\forall n\geq k\)</span>, pero entonces también se cumple <span class="math display">\[
+|x_n-x| = x_n-x &lt; a-x \Rightarrow x_n &lt; a,
+\]</span> por lo que <span class="math inline">\(x_n\)</span> no sería cota superior de <span class="math inline">\(A\)</span>, así que, necesariamente <span class="math inline">\(x\)</span> tiene que ser cota superior de <span class="math inline">\(A\)</span>.</p></li>
+<li><p>Como <span class="math inline">\(\overline{(a,b)}\)</span> es un conjunto cerrado, para demostrar la proposición basta aplicar este <a href="https://aprendeconalf.es/analisis-manual/sucesiones.html#thm-sucesiones-conjuntos-cerrados">teorema</a>.</p></li>
+<li><p>Veamos que la proposición es falsa con un contraejemplo. La sucesión <span class="math inline">\(x_1=1\)</span> y <span class="math inline">\(x_{n+1}=\frac{1}{1+x_n}\)</span> <span class="math inline">\(\forall n=2,3,\ldots\)</span> está formada por números racionales, sin embargo, su límite es el número irracional <span class="math inline">\(\varphi=\frac{1+\sqrt{5}}{2}=1.618033988749\ldots\)</span> (ver <a href="#exr-numero-aureo">Ejercicio&nbsp;<span>4.17</span></a>).</p></li>
 </ol>
+</div>
+</div>
+</div>
+<div id="exr-compresion-sucesiones" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 4.15 </strong></span>Demostrar las siguientes sucesiones convergen a <span class="math inline">\(0\)</span>.</p>
+<ol type="a">
+<li><p><span class="math inline">\(\left(\frac{n+\cos(n)}{n^2+1}\right)_{n=1}^\infty\)</span></p></li>
+<li><p><span class="math inline">\(\left(\frac{2^n}{n!}\right)_{n=1}^\infty\)</span></p></li>
+<li><p><span class="math inline">\(\left(\frac{n^2}{2^n}\right)_{n=1}^\infty\)</span></p></li>
+</ol>
+</div>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-15-contents" aria-controls="callout-15" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-15" class="callout-15-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="a">
+<li><p>Como <span class="math inline">\(-1\leq \cos(n)\leq 1\)</span> se tiene que <span class="math inline">\(\frac{n-1}{n^2+1}\leq \frac{n+\cos(n)}{n^2+1}\leq \frac{n+1}{n^2+1}\)</span> <span class="math inline">\(\forall n\in\mathbb{N}\)</span>. Como <span class="math display">\[\begin{align*}
+\lim_{n\to\infty}\frac{n-1}{n^2+1} &amp;= \lim_{n\to\infty}\frac{\frac{1}{n}-\frac{1}{n^2}}{1+\frac{1}{n^2}}\\  
+&amp;= \frac{\lim_{n\to\infty}\frac{1}{n}-\lim_{n\to\infty}\frac{1}{n^2}}{\lim_{n\to\infty}1 + \lim_{n\to\infty}\frac{1}{n^2}}\\
+&amp;= \frac{0-0}{1+0} = 0.
+\end{align*}\]</span> y del mismo modo, se puede probar que <span class="math inline">\(\lim_{n\to\infty}\frac{n+1}{n^2+1}=0\)</span>, por lo que aplicando el <a href="https://aprendeconalf.es/analisis-manual/sucesiones.html#thm-compresion-sucesiones-convergentes">teorema de compresión de sucesiones convergentes</a> se concluye que <span class="math inline">\(\lim_{n\to\infty}\frac{n+\cos(n)}{n^2+1}=0\)</span>.</p></li>
+<li><p>Como <span class="math display">\[\begin{align*}
+\lim_{n\to\infty}\frac{x_{n+1}}{x_n} &amp;= \lim_{n\to\infty}\frac{\frac{2^{n+1}}{(n+1)!}}{\frac{2^n}{n!}} = \lim_{n\to\infty}\frac{2^{n+1}n!}{2^n(n+1)!}\\
+&amp;= \lim_{n\to\infty}\frac{2^n2n!}{2^n(n+1)n!} = \lim_{n\to\infty}\frac{2}{n+1} = 0 &lt;1,
+\end{align*}\]</span> por el <a href="https://aprendeconalf.es/analisis-manual/sucesiones.html#prp-criterio-cociente-sucesiones">criterio del cociente</a> se tiene que <span class="math inline">\(\lim_{n\to\infty}\frac{2^n}{n!}=0\)</span>.</p></li>
+<li><p>Como <span class="math display">\[\begin{align*}
+\lim_{n\to\infty}\frac{x_{n+1}}{x_n} &amp;= \lim_{n\to\infty}\frac{\frac{(n+1)^2}{2^{n+1}}}{\frac{n^2}{2^2}} = \lim_{n\to\infty}\frac{2^n(n+1)^2}{2^{n+1}n^2}\\
+&amp;= \lim_{n\to\infty}\frac{(n+1)^2}{2n^2} = \lim_{n\to\infty}\frac{n^2+2n+1}{2n^2} \\
+&amp;= \lim_{n\to\infty}\frac{1}{2}+\frac{1}{n}+\frac{1}{2n^2}\\  
+&amp; = \lim_{n\to\infty}\frac{1}{2}+\lim_{n\to\infty}\frac{1}{n}+\lim_{n\to\infty}\frac{1}{2n^2} = \frac{1}{2}&lt;1,
+\end{align*}\]</span> por el <a href="https://aprendeconalf.es/analisis-manual/sucesiones.html#prp-criterio-cociente-sucesiones">criterio del cociente</a> se tiene que <span class="math inline">\(\lim_{n\to\infty}\frac{n^2}{2^n}=0\)</span>.</p></li>
+</ol>
+</div>
+</div>
 </div>
 <div id="exr-sucesiones-monotonas" class="theorem exercise">
 <p><span class="theorem-title"><strong>Ejercicio 4.16 </strong></span>Demostrar que las siguientes sucesiones de números reales son monótonas y calcular su límite cuando exista.</p>
 <ol type="a">
-<li><span class="math inline">\((\frac{3n}{2n^2})_{n=1}\infty\)</span></li>
-<li><span class="math inline">\(x_1=1\)</span> y <span class="math inline">\(x_{n+1}=\frac{a_n+3}{2}\)</span> <span class="math inline">\(\forall n\in\mathbb{N}\)</span></li>
-<li><span class="math inline">\((\frac{n^2}{2n+1})_{n=1}^\infty\)</span></li>
-<li><span class="math inline">\(x_1=2\)</span> y <span class="math inline">\(x_{n+1}=\sqrt{x_n+2}\)</span> <span class="math inline">\(\forall n\in\mathbb{N}\)</span></li>
-<li><span class="math inline">\(x_1=1\)</span> y <span class="math inline">\(x_{n+1}=\sqrt{2x_n}\)</span> <span class="math inline">\(\forall n\in\mathbb{N}\)</span></li>
+<li><p><span class="math inline">\(\left(\frac{3n}{2n^2}\right)_{n=1}^\infty\)</span></p></li>
+<li><p><span class="math inline">\(x_1=1\)</span> y <span class="math inline">\(x_{n+1}=\frac{a_n+3}{2}\)</span> <span class="math inline">\(\forall n=2,3,\ldots\)</span></p></li>
+<li><p><span class="math inline">\(\left(\frac{n^2}{2n+1}\right)_{n=1}^\infty\)</span></p></li>
+<li><p><span class="math inline">\(x_1=2\)</span> y <span class="math inline">\(x_{n+1}=\sqrt{x_n+2}\)</span> <span class="math inline">\(\forall n=2,3,\ldots\)</span></p></li>
+<li><p><span class="math inline">\(x_1=1\)</span> y <span class="math inline">\(x_{n+1}=\sqrt{2x_n}\)</span> <span class="math inline">\(\forall n=2,3,\ldots\)</span></p></li>
 </ol>
 </div>
 <div id="exr-numero-aureo" class="theorem exercise">
@@ -287,12 +636,20 @@ ul.task-list li input[type="checkbox"] {
 <p>tal que <span class="math inline">\(\frac{a+b}{a}=\frac{a}{b}=\varphi\)</span>. A este número se le conoce como <a href="https://es.wikipedia.org/wiki/N%C3%BAmero_%C3%A1ureo">número áureo</a> y es el número irracional <span class="math inline">\(\varphi=\frac{1+\sqrt{5}}{2}=1.618033988749\ldots\)</span></p>
 <p>Demostrar que este número es el límite de las siguientes sucesiones de números reales.</p>
 <ol type="a">
-<li><span class="math inline">\(x_1=2\)</span> y <span class="math inline">\(x_{n+1}=1+\frac{1}{x_n}\)</span> <span class="math inline">\(\forall n\in\mathbb{N}\)</span></li>
-<li><span class="math inline">\(x_1=1\)</span> y <span class="math inline">\(x_{n+1}=\sqrt{1+x_n}\)</span> <span class="math inline">\(\forall n\in\mathbb{N}\)</span></li>
+<li><span class="math inline">\(x_1=1\)</span> y <span class="math inline">\(x_{n+1}=1+\frac{1}{x_n}\)</span> <span class="math inline">\(\forall n=1,2,\ldots\)</span></li>
+<li><span class="math inline">\(x_1=1\)</span> y <span class="math inline">\(x_{n+1}=\sqrt{1+x_n}\)</span> <span class="math inline">\(\forall n=1,2,\ldots\)</span></li>
 </ol>
 </div>
 <div id="exr-sucesion-intereses" class="theorem exercise">
 <p><span class="theorem-title"><strong>Ejercicio 4.18 </strong></span>Una cuenta de ahorro ofrece el primer año un tipo de interés <span class="math inline">\(x_1=0.5\%\)</span> y los años sucesivos un interés <span class="math inline">\(x_{n+1}=\frac{3}{2+x_n}\)</span>. Si se mantiene la cuenta abierta por un periodo indefinido, ¿hacia donde tienden los tipos de interés?</p>
+</div>
+<div id="exr-sucesiones-cauchy" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 4.19 </strong></span>Determinar cuáles de las siguientes sucesiones de números reales son de Cauchy.</p>
+<ol type="a">
+<li><p><span class="math inline">\(\left(\frac{(-1)^n}{n}\right)_{n=1}^\infty\)</span></p></li>
+<li><p><span class="math inline">\(\left(\frac{n}{n+1}\right)_{n=1}^\infty\)</span></p></li>
+<li><p><span class="math inline">\(\left(\frac{\operatorname{sen}(n)}{n}\right)_{n=1}^\infty\)</span></p></li>
+</ol>
 </div>
 
 
