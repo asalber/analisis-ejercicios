@@ -172,7 +172,7 @@ a. $(n)_{n=1}^\infty$ y $(-n)_{n=1}^\infty$ divergen, pero $(n+(-n))_{n=1}^\inft
 
 b. No es posible (ver [proposición](https://aprendeconalf.es/analisis-manual/sucesiones.html#prp-algebra-limites-sucesiones)).
 
-c. No es posible.
+c. Para ver que no es posible, daremos una demostración por reducción al absurdo. Supongamos que $(x_n+y_n)_{n=1}^\infty$ converge. Entonces, como $(x_n)_{n=1}^\infty$ converge, se tiene que $((x_n+y_n)-x_n)_{n=1}^\infty = (y_n)_{n=1}^\infty$ también converge (ver [proposición](https://aprendeconalf.es/analisis-manual/sucesiones.html#prp-algebra-limites-sucesiones), con lo que se llega a una contradicción pues partíamos de que $(y_n)_{n=1}^\infty$ es divergente.
 
 d. $\left(\frac{1}{n}\right)_{n=1}^\infty$ converge y $((-1)^n)_{n=1}^\infty$ diverge, pero $\left(\frac{(-1)^n}{n}\right)_{n=1}^\infty$ converge.
 
@@ -298,13 +298,78 @@ Demostrar que las siguientes sucesiones de números reales son monótonas y calc
 
 a. $\left(\frac{3n}{2n^2}\right)_{n=1}^\infty$
 
-a. $x_1=1$ y $x_{n+1}=\frac{a_n+3}{2}$ $\forall n=2,3,\ldots$
+a. $x_1=1$ y $x_{n+1}=\frac{x_n+3}{2}$ $\forall n \in \mathbb{N}$
 
 a. $\left(\frac{n^2}{2n+1}\right)_{n=1}^\infty$
 
-a. $x_1=2$ y $x_{n+1}=\sqrt{x_n+2}$ $\forall n=2,3,\ldots$
+a. $x_1=1$ y $x_{n+1}=\sqrt{x_n+6}$ $\forall n\in \mathbb{N}$
 
-a. $x_1=1$ y $x_{n+1}=\sqrt{2x_n}$ $\forall n=2,3,\ldots$
+a. $x_1=1$ y $x_{n+1}=\sqrt{4x_n}$ $\forall n\in\mathbb{N}$
+:::
+
+:::{.callout-tip collapse="true"}
+## Solución
+a. $\left(\frac{3n}{2n^2}\right)_{n=1}^\infty = \left(\frac{3}{2}\frac{1}{n}\right)_{n=1}^\infty$, que es decreciente al ser $\left(\frac{1}{n}\right)_{n=1}^\infty$ decreciente. Como además está acotada, por el [teorema de la convergencia de sucesiones monótonas](https://aprendeconalf.es/analisis-manual/sucesiones.html#thm-convergencia-monotona), se tiene que $\lim_{n\to\infty}x_n = \inf\left\{\frac{3}{2n}:n\in\mathbb{N}\right\}=0$.
+
+b. Veamos que la sucesión es creciente por inducción. $x_1=1<2=x_2$. Supongamos ahora que $x_{n-1}<x_n$. Entonces, $x_{n+1} = \frac{x_n+3}{2} > \frac{x_{n-1}+3}{2} = x_n$.
+
+    Veamos ahora que $3$ es una cota superior de la sucesión también por inducción. $x_1 = 1 < 3$. Supongamos que $x_n<3$. Entonces, $x_{n+1}=\frac{x_n+3}{2} < \frac{3+3}{2} = 3$.
+
+    Así pues, según el [teorema de la convergencia de sucesiones monótonas](https://aprendeconalf.es/analisis-manual/sucesiones.html#thm-convergencia-monotona) la sucesión converge. Para calcular el límite, aprovechando la definición recursiva de la sucesión se tiene
+
+    $$
+    x = \lim_{n\to\infty}x_n = \lim_{n\to\infty}x_{n+1} = \lim_{n\to\infty}\frac{x_n+3}{2} = \frac{x+3}{2}
+    $$
+
+    Resolviendo la ecuación se tiene
+
+    $$
+    x=\frac{x+3}{2} \Rightarrow 2x=x+3 \Rightarrow x=3.
+    $$
+
+c. Para ver que la sucesión es creciente, probaremos que la sucesión de sus inversos es decreciente. 
+
+    $$
+    \left(\frac{n^2}{2n+1}\right)^{-1}= \frac{2n+1}{n^2} =\frac{2}{n}+\frac{1}{n^2} > \frac{2}{n+1}+\frac{1}{(n+1)^2}\ \forall n\in\mathbb{N}.
+    $$
+
+    Sin embargo, la sucesión no está acotada, ya que para cualquier $c\in\mathbb{R}$, por la propiedad arquimediana existe $n\in\mathbb{N}$ tal que $c<n<\frac{n^2}{2n+1}=x_n$ si $n>2$. Por tanto, según el el [teorema de la convergencia de sucesiones monótonas](https://aprendeconalf.es/analisis-manual/sucesiones.html#thm-convergencia-monotona) la sucesión diverge.
+
+d. Veamos que la sucesión es creciente por inducción. $x_1=1<\sqrt{7}=x_2$. Supongamos ahora que $x_{n-1}<x_n$. Entonces, $x_{n+1} = \sqrt{x_n+6} > \sqrt{x_{n-1}+6} = x_n$.
+
+    Veamos ahora que $3$ es una cota superior de la sucesión también por inducción. $x_1 = 1 < 3$. Supongamos que $x_n<3$. Entonces, $x_{n+1}=\sqrt{x_n+6} < \sqrt{3+6} = 3$.
+
+    Así pues, según el [teorema de la convergencia de sucesiones monótonas](https://aprendeconalf.es/analisis-manual/sucesiones.html#thm-convergencia-monotona) la sucesión converge. Para calcular el límite, aprovechando la definición recursiva de la sucesión se tiene
+
+    $$
+    x = \lim_{n\to\infty}x_n = \lim_{n\to\infty}x_{n+1} = \lim_{n\to\infty}\sqrt{x_n+6} = \sqrt{x+6}
+    $$
+
+    Resolviendo la ecuación se tiene
+
+    $$
+    x=\sqrt{x+6} \Rightarrow x^2=x+6 \Rightarrow x^2-x-6=0 \Rightarrow x=-2 \mbox{ o } x=3.
+    $$
+
+    Como $x=-2$ no puede ser al ser todos los términos de la sucesión positivos, se concluye que $x=3$.
+
+e. Veamos que la sucesión es creciente por inducción. $x_1=1<2=x_2$. Supongamos ahora que $x_{n-1}<x_n$. Entonces, $x_{n+1} = \sqrt{4x_n} > \sqrt{4x_{n-1}} = x_n$.
+
+    Veamos ahora que $4$ es una cota superior de la sucesión también por inducción. $x_1 = 1 < 4$. Supongamos que $x_n<4$. Entonces, $x_{n+1}=\sqrt{4x_n} < \sqrt{4\cdot 4} = 4$.
+
+    Así pues, según el [teorema de la convergencia de sucesiones monótonas](https://aprendeconalf.es/analisis-manual/sucesiones.html#thm-convergencia-monotona) la sucesión converge. Para calcular el límite, aprovechando la definición recursiva de la sucesión se tiene
+
+    $$
+    x = \lim_{n\to\infty}x_n = \lim_{n\to\infty}x_{n+1} = \lim_{n\to\infty}\sqrt{4x_n} = \sqrt{4x}
+    $$
+
+    Resolviendo la ecuación se tiene
+
+    $$
+    x=\sqrt{4x} \Rightarrow x^2=4x \Rightarrow x^2-4x=0 \Rightarrow x(x-4)=0 \Rightarrow x=0 \mbox{ o } x=4.
+    $$
+
+    Como $x=0$ no puede ser al ser $x_n\geq 1$ $\forall n\in\mathbb{N}$, se concluye que $x=4$.
 :::
 
 :::{#exr-numero-aureo}
@@ -324,8 +389,62 @@ tal que $\frac{a+b}{a}=\frac{a}{b}=\varphi$. A este número se le conoce como [n
 
 Demostrar que este número es el límite de las siguientes sucesiones de números reales.
 
-a. $x_1=1$ y $x_{n+1}=1+\frac{1}{x_n}$ $\forall n=1,2,\ldots$
-b. $x_1=1$ y $x_{n+1}=\sqrt{1+x_n}$ $\forall n=1,2,\ldots$
+a. $x_1=1$ y $x_{n+1}=1+\frac{1}{x_n}$ $\forall n\in \mathbb{N}$
+b. $x_1=1$ y $x_{n+1}=\sqrt{1+x_n}$ $\forall n\in\mathbb{N}$
+:::
+
+:::{.callout-tip collapse="true"}
+## Solución
+a. Veamos en primer lugar que la sucesión está acotada. De la definición resulta obvio que $x_n\geq 1$ $\forall n\in\mathbb{N}$. De esto se deduce que, $\frac{1}{x_n}\leq 1 \Leftrightarrow 1+\frac{1}{x_n} \leq 2$ $\forall n\in\mathbb{N}$. Así pues, $1\leq x_n\leq 2$ $\forall n\in\mathbb{N}$.
+
+    Veamos ahora que la subsucesión de los términos impares $(y_n)_{n=1}^\infty = (x_{2n-1})_{n=1}^\infty$ converge. Para ello veremos que es creciente por inducción. $y_1=1<y_2=1.5$. Supongamos que $y_{n-1}<y_n$. Entonces,
+
+    \begin{align*}
+    y_{n+1} &= x_{2(n+1)-1} = x_{2n+1} = 1+\frac{1}{x_{2n}} \\ 
+    &= 1+\frac{1}{1+\frac{1}{x_{2n-1}}} = 1+\frac{1}{1+\frac{1}{y_n}} \\ 
+    &> 1+\frac{1}{1+\frac{1}{y_{n-1}}} = 1+\frac{1}{1+\frac{1}{x_{2n-3}}} \\
+    &= 1+\frac{1}{x_{2n-2}} = x_{2n-1} = y_n.
+    \end{align*}
+
+    Como la subsucesión también está acotada, por el [teorema de la convergencia de sucesiones monótonas](https://aprendeconalf.es/analisis-manual/sucesiones.html#thm-convergencia-monotona) converge. Para calcular el límite, aprovechando la definición recursiva de la sucesión se tiene
+
+    $$
+    y = \lim_{n\to\infty}y_n = \lim_{n\to\infty}y_{n+1} = \lim_{n\to\infty}1+\frac{1}{1+\frac{1}{y_n}} = 1+\frac{1}{1+\frac{1}{y}}
+    $$
+
+    Resolviendo la ecuación se tiene
+
+    \begin{align*}
+    y=1+\frac{1}{1+\frac{1}{y}} &\Rightarrow y-1= \frac{1}{\frac{y+1}{y}} = \frac{y}{y+1} \\ 
+    &\Rightarrow (y-1)(y+1) = y \\ 
+    & \Rightarrow y^2-1 = y \Rightarrow y^2-y-1=0 \\ 
+    &\Rightarrow y=\frac{1-\sqrt{5}}{2} \mbox{ o } y=\frac{1+\sqrt{5}}{2}.
+    \end{align*}
+
+    Como $y=\frac{1-\sqrt{5}}{2}<0$ no puede ser al ser todos los términos de la sucesión positivos, se tiene que $y=\frac{1+\sqrt{5}}{2}$. 
+
+    Del mismo modo se puede probar que la subsucesión de los términos pares $(z_n)_{n=1}^\infty = (x_{2n})_{n=1}^\infty$ también converge a $\frac{1+\sqrt{5}}{2}$. 
+
+    Finalmente, se deja como ejercicio probar que si las subsucesiones de los términos pares e impares de una sucesión convergen al mismo límite, entonces la sucesión converge al mismo límite.
+
+b. Veamos que la sucesión es creciente por inducción. $x_1=1<\sqrt{2}=x_2$. Supongamos ahora que $x_{n-1}<x_n$. Entonces, $x_{n+1} = \sqrt{1+x_n} > \sqrt{1+x_{n-1}} = x_n$.
+
+    Veamos ahora que $2$ es una cota superior de la sucesión también por inducción. $x_1 = 1 < 2$. Supongamos que $x_n<2$. Entonces, $x_{n+1}=\sqrt{1+x_n} < \sqrt{1+2} = \sqrt{3} < 2$.
+
+    Así pues, según el [teorema de la convergencia de sucesiones monótonas](https://aprendeconalf.es/analisis-manual/sucesiones.html#thm-convergencia-monotona) la sucesión converge. Para calcular el límite, aprovechando la definición recursiva de la sucesión se tiene
+
+    $$
+    x = \lim_{n\to\infty}x_n = \lim_{n\to\infty}x_{n+1} = \lim_{n\to\infty}\sqrt{1+x_n} = \sqrt{1+x}
+    $$
+
+    Resolviendo la ecuación se tiene
+
+    \begin{align*}
+    x=\sqrt{1+x} &\Rightarrow x^2=1+x \Rightarrow x^2-x-1=0 \\ 
+    &\Rightarrow x=\frac{1-\sqrt{5}}{2} \mbox{ o } x=\frac{1+\sqrt{5}}{2}.
+    \end{align*}
+
+    Como $x=\frac{1-\sqrt{5}}{2}<0$ no puede ser al ser todos los términos de la sucesión positivos, se concluye que $x=\frac{1+\sqrt{5}}{2}$.
 :::
 
 :::{#exr-condiciones-heredadas-limite}
@@ -350,8 +469,44 @@ c. Veamos que la proposición es falsa con un contraejemplo. La sucesión $x_1=1
 :::
 
 :::{#exr-sucesion-intereses}
-Una cuenta de ahorro ofrece el primer año un tipo de interés $x_1=0.5\%$ y los años sucesivos un interés $x_{n+1}=\frac{3}{2+x_n}$. Si se mantiene la cuenta abierta por un periodo indefinido, ¿hacia donde tienden los tipos de interés?
+Una cuenta de ahorro ofrece el primer año un tipo de interés $x_1=0.5\%$ y los años sucesivos un interés $x_{n+1}=\frac{3}{2+x_n}\%$. Si se mantiene la cuenta abierta por un periodo indefinido, ¿hacia donde tienden los tipos de interés?
 :::
+
+:::{.callout-tip collapse="true"}
+## Solución
+a. Veamos en primer lugar que la sucesión está acotada. De la definición resulta obvio que $x_n\geq 0$ $\forall n\in\mathbb{N}$ pues todos los términos son positivos. De esto se deduce que, $\frac{3}{x+x_n}\leq \frac{3}{2}$ $\forall n\in\mathbb{N}$. Así pues, $0\leq x_n\leq \frac{3}{2}$ $\forall n\in\mathbb{N}$.
+
+    Veamos ahora que la subsucesión de los términos impares $(y_n)_{n=1}^\infty = (x_{2n-1})_{n=1}^\infty$ converge. Para ello veremos que es creciente por inducción. $y_1=0.5<y_2=0.9375$. Supongamos que $y_{n-1}<y_n$. Entonces,
+
+    \begin{align*}
+    y_{n+1} &= x_{2(n+1)-1} = x_{2n+1} = \frac{3}{2+x_{2n}} \\ 
+    &= \frac{3}{2+\frac{3}{2+x_{2n-1}}} = \frac{3}{2+\frac{3}{2+y_n}} \\ 
+    &> \frac{3}{2+\frac{3}{2+y_{n-1}}} = \frac{3}{2+\frac{3}{2+x_{2n-3}}} \\
+    &= \frac{3}{2+x_{2n-2}} = x_{2n-1} = y_n.
+    \end{align*}
+
+    Como la subsucesión también está acotada, por el [teorema de la convergencia de sucesiones monótonas](https://aprendeconalf.es/analisis-manual/sucesiones.html#thm-convergencia-monotona) converge. Para calcular el límite, aprovechando la definición recursiva de la sucesión se tiene
+
+    $$
+    y = \lim_{n\to\infty}y_n = \lim_{n\to\infty}y_{n+1} = \lim_{n\to\infty}\frac{3}{2+\frac{3}{2+y_n}} = \frac{3}{2+\frac{3}{2+y}}
+    $$
+
+    Resolviendo la ecuación se tiene
+
+    \begin{align*}
+    y=\frac{3}{2+\frac{3}{2+y}} &\Rightarrow y= \frac{3}{\frac{(4+2y)+3}{2+y}} = \frac{3(2+y)}{2y+7} \\ 
+    &\Rightarrow y(2y+7) = 3y+6 \\ 
+    & \Rightarrow 2y^2+4y-6 = 0\\ 
+    &\Rightarrow y=-3 \mbox{ o } y=1.
+    \end{align*}
+
+    Como $y=-3$ no puede ser al ser todos los términos de la sucesión positivos, se tiene que $y=1$. 
+
+    Del mismo modo se puede probar que la subsucesión de los términos pares $(z_n)_{n=1}^\infty = (x_{2n})_{n=1}^\infty$ también converge a $1$. 
+
+    Finalmente, como las subsucesiones de los términos pares e impares de una sucesión convergen al mismo límite, entonces la sucesión converge al mismo límite.
+:::
+
 
 :::{#exr-sucesiones-cauchy}
 Determinar cuáles de las siguientes sucesiones de números reales son de Cauchy.

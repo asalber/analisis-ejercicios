@@ -37,10 +37,12 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -124,6 +126,7 @@ ul.task-list li input[type="checkbox"] {
           </a>
         </li>
     </ul>
+  <a href="" class="quarto-color-scheme-toggle sidebar-tool" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
 </div>
     </div>
       </div>
@@ -418,7 +421,7 @@ Solución
 <ol type="a">
 <li><p><span class="math inline">\((n)_{n=1}^\infty\)</span> y <span class="math inline">\((-n)_{n=1}^\infty\)</span> divergen, pero <span class="math inline">\((n+(-n))_{n=1}^\infty = (0)_{n=1}^\infty\)</span> converge por ser constante.</p></li>
 <li><p>No es posible (ver <a href="https://aprendeconalf.es/analisis-manual/sucesiones.html#prp-algebra-limites-sucesiones">proposición</a>).</p></li>
-<li><p>No es posible.</p></li>
+<li><p>Para ver que no es posible, daremos una demostración por reducción al absurdo. Supongamos que <span class="math inline">\((x_n+y_n)_{n=1}^\infty\)</span> converge. Entonces, como <span class="math inline">\((x_n)_{n=1}^\infty\)</span> converge, se tiene que <span class="math inline">\(((x_n+y_n)-x_n)_{n=1}^\infty = (y_n)_{n=1}^\infty\)</span> también converge (ver <a href="https://aprendeconalf.es/analisis-manual/sucesiones.html#prp-algebra-limites-sucesiones">proposición</a>, con lo que se llega a una contradicción pues partíamos de que <span class="math inline">\((y_n)_{n=1}^\infty\)</span> es divergente.</p></li>
 <li><p><span class="math inline">\(\left(\frac{1}{n}\right)_{n=1}^\infty\)</span> converge y <span class="math inline">\(((-1)^n)_{n=1}^\infty\)</span> diverge, pero <span class="math inline">\(\left(\frac{(-1)^n}{n}\right)_{n=1}^\infty\)</span> converge.</p></li>
 <li><p><span class="math inline">\((n)_{n=1}^\infty\)</span> es divergente, pero <span class="math inline">\(\left(\frac{n}{n}\right)_{n=1}^\infty = (1)_{n=1}^\infty\)</span> converge por ser constante.</p>
 <p>Otro ejemplo son <span class="math inline">\(((-1)^{n+1})_{n=1}^\infty\)</span> y <span class="math inline">\(((-1)^n)_{n=1}^\infty\)</span> que divergen, pero <span class="math inline">\((\frac{(-1)^{n+1}}{(-1)^n})_{n=1}^\infty = (\frac{(-1)^n(-1)}{(-1)^n})_{n=1}^\infty = (-1)_{n=1}^\infty\)</span> converge al ser constante.</p></li>
@@ -587,36 +590,10 @@ Solución
 <p><span class="theorem-title"><strong>Ejercicio 4.15 </strong></span>Demostrar que las siguientes sucesiones de números reales son monótonas y calcular su límite cuando exista.</p>
 <ol type="a">
 <li><p><span class="math inline">\(\left(\frac{3n}{2n^2}\right)_{n=1}^\infty\)</span></p></li>
-<li><p><span class="math inline">\(x_1=1\)</span> y <span class="math inline">\(x_{n+1}=\frac{a_n+3}{2}\)</span> <span class="math inline">\(\forall n=2,3,\ldots\)</span></p></li>
+<li><p><span class="math inline">\(x_1=1\)</span> y <span class="math inline">\(x_{n+1}=\frac{x_n+3}{2}\)</span> <span class="math inline">\(\forall n \in \mathbb{N}\)</span></p></li>
 <li><p><span class="math inline">\(\left(\frac{n^2}{2n+1}\right)_{n=1}^\infty\)</span></p></li>
-<li><p><span class="math inline">\(x_1=2\)</span> y <span class="math inline">\(x_{n+1}=\sqrt{x_n+2}\)</span> <span class="math inline">\(\forall n=2,3,\ldots\)</span></p></li>
-<li><p><span class="math inline">\(x_1=1\)</span> y <span class="math inline">\(x_{n+1}=\sqrt{2x_n}\)</span> <span class="math inline">\(\forall n=2,3,\ldots\)</span></p></li>
-</ol>
-</div>
-<div id="exr-numero-aureo" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 4.16 </strong></span>Dado un segmento como el de la figura de más abajo,</p>
-<!-- ::: {.content-visible when-format="html"} -->
-<div style="text-align:center;">
-<p><img src="./img/sucesiones/numero-aureo.png" class="img-fluid"></p>
-</div>
-<!-- ::: -->
-<!-- 
-::: {.content-visible unless-format="html"}
-![](./img/sucesiones/numero-aureo.tex)
-::: -->
-<p>tal que <span class="math inline">\(\frac{a+b}{a}=\frac{a}{b}=\varphi\)</span>. A este número se le conoce como <a href="https://es.wikipedia.org/wiki/N%C3%BAmero_%C3%A1ureo">número áureo</a> y es el número irracional <span class="math inline">\(\varphi=\frac{1+\sqrt{5}}{2}=1.618033988749\ldots\)</span></p>
-<p>Demostrar que este número es el límite de las siguientes sucesiones de números reales.</p>
-<ol type="a">
-<li><span class="math inline">\(x_1=1\)</span> y <span class="math inline">\(x_{n+1}=1+\frac{1}{x_n}\)</span> <span class="math inline">\(\forall n=1,2,\ldots\)</span></li>
-<li><span class="math inline">\(x_1=1\)</span> y <span class="math inline">\(x_{n+1}=\sqrt{1+x_n}\)</span> <span class="math inline">\(\forall n=1,2,\ldots\)</span></li>
-</ol>
-</div>
-<div id="exr-condiciones-heredadas-limite" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 4.17 </strong></span>Dada una sucesión de números reales tal que <span class="math inline">\(\lim_{n\to\infty}x_n=x\)</span>, probar o refutar las siguientes proposiciones:</p>
-<ol type="a">
-<li>Si cada <span class="math inline">\(x_n\)</span> es una cota superior de un conjunto <span class="math inline">\(A\)</span>, entonces <span class="math inline">\(x\)</span> es también una cota superior de <span class="math inline">\(A\)</span>.</li>
-<li>Si <span class="math inline">\(x_n\in\overline{(a,b)}\)</span> <span class="math inline">\(\forall n\in\mathbb{N}\)</span>, entonces <span class="math inline">\(x\in\overline{(a,b)}\)</span>.</li>
-<li>Si <span class="math inline">\(x_n\in\mathbb{Q}\)</span> <span class="math inline">\(\forall n\in\mathbb{N}\)</span>, entonces <span class="math inline">\(x\in\mathbb{Q}\)</span>.</li>
+<li><p><span class="math inline">\(x_1=1\)</span> y <span class="math inline">\(x_{n+1}=\sqrt{x_n+6}\)</span> <span class="math inline">\(\forall n\in \mathbb{N}\)</span></p></li>
+<li><p><span class="math inline">\(x_1=1\)</span> y <span class="math inline">\(x_{n+1}=\sqrt{4x_n}\)</span> <span class="math inline">\(\forall n\in\mathbb{N}\)</span></p></li>
 </ol>
 </div>
 <div class="callout-tip callout callout-style-default callout-captioned">
@@ -632,6 +609,138 @@ Solución
 <div id="callout-15" class="callout-15-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ol type="a">
+<li><p><span class="math inline">\(\left(\frac{3n}{2n^2}\right)_{n=1}^\infty = \left(\frac{3}{2}\frac{1}{n}\right)_{n=1}^\infty\)</span>, que es decreciente al ser <span class="math inline">\(\left(\frac{1}{n}\right)_{n=1}^\infty\)</span> decreciente. Como además está acotada, por el <a href="https://aprendeconalf.es/analisis-manual/sucesiones.html#thm-convergencia-monotona">teorema de la convergencia de sucesiones monótonas</a>, se tiene que <span class="math inline">\(\lim_{n\to\infty}x_n = \inf\left\{\frac{3}{2n}:n\in\mathbb{N}\right\}=0\)</span>.</p></li>
+<li><p>Veamos que la sucesión es creciente por inducción. <span class="math inline">\(x_1=1&lt;2=x_2\)</span>. Supongamos ahora que <span class="math inline">\(x_{n-1}&lt;x_n\)</span>. Entonces, <span class="math inline">\(x_{n+1} = \frac{x_n+3}{2} &gt; \frac{x_{n-1}+3}{2} = x_n\)</span>.</p>
+<p>Veamos ahora que <span class="math inline">\(3\)</span> es una cota superior de la sucesión también por inducción. <span class="math inline">\(x_1 = 1 &lt; 3\)</span>. Supongamos que <span class="math inline">\(x_n&lt;3\)</span>. Entonces, <span class="math inline">\(x_{n+1}=\frac{x_n+3}{2} &lt; \frac{3+3}{2} = 3\)</span>.</p>
+<p>Así pues, según el <a href="https://aprendeconalf.es/analisis-manual/sucesiones.html#thm-convergencia-monotona">teorema de la convergencia de sucesiones monótonas</a> la sucesión converge. Para calcular el límite, aprovechando la definición recursiva de la sucesión se tiene</p>
+<p><span class="math display">\[
+x = \lim_{n\to\infty}x_n = \lim_{n\to\infty}x_{n+1} = \lim_{n\to\infty}\frac{x_n+3}{2} = \frac{x+3}{2}
+\]</span></p>
+<p>Resolviendo la ecuación se tiene</p>
+<p><span class="math display">\[
+x=\frac{x+3}{2} \Rightarrow 2x=x+3 \Rightarrow x=3.
+\]</span></p></li>
+<li><p>Para ver que la sucesión es creciente, probaremos que la sucesión de sus inversos es decreciente.</p>
+<p><span class="math display">\[
+\left(\frac{n^2}{2n+1}\right)^{-1}= \frac{2n+1}{n^2} =\frac{2}{n}+\frac{1}{n^2} &gt; \frac{2}{n+1}+\frac{1}{(n+1)^2}\ \forall n\in\mathbb{N}.
+\]</span></p>
+<p>Sin embargo, la sucesión no está acotada, ya que para cualquier <span class="math inline">\(c\in\mathbb{R}\)</span>, por la propiedad arquimediana existe <span class="math inline">\(n\in\mathbb{N}\)</span> tal que <span class="math inline">\(c&lt;n&lt;\frac{n^2}{2n+1}=x_n\)</span> si <span class="math inline">\(n&gt;2\)</span>. Por tanto, según el el <a href="https://aprendeconalf.es/analisis-manual/sucesiones.html#thm-convergencia-monotona">teorema de la convergencia de sucesiones monótonas</a> la sucesión diverge.</p></li>
+<li><p>Veamos que la sucesión es creciente por inducción. <span class="math inline">\(x_1=1&lt;\sqrt{7}=x_2\)</span>. Supongamos ahora que <span class="math inline">\(x_{n-1}&lt;x_n\)</span>. Entonces, <span class="math inline">\(x_{n+1} = \sqrt{x_n+6} &gt; \sqrt{x_{n-1}+6} = x_n\)</span>.</p>
+<p>Veamos ahora que <span class="math inline">\(3\)</span> es una cota superior de la sucesión también por inducción. <span class="math inline">\(x_1 = 1 &lt; 3\)</span>. Supongamos que <span class="math inline">\(x_n&lt;3\)</span>. Entonces, <span class="math inline">\(x_{n+1}=\sqrt{x_n+6} &lt; \sqrt{3+6} = 3\)</span>.</p>
+<p>Así pues, según el <a href="https://aprendeconalf.es/analisis-manual/sucesiones.html#thm-convergencia-monotona">teorema de la convergencia de sucesiones monótonas</a> la sucesión converge. Para calcular el límite, aprovechando la definición recursiva de la sucesión se tiene</p>
+<p><span class="math display">\[
+x = \lim_{n\to\infty}x_n = \lim_{n\to\infty}x_{n+1} = \lim_{n\to\infty}\sqrt{x_n+6} = \sqrt{x+6}
+\]</span></p>
+<p>Resolviendo la ecuación se tiene</p>
+<p><span class="math display">\[
+x=\sqrt{x+6} \Rightarrow x^2=x+6 \Rightarrow x^2-x-6=0 \Rightarrow x=-2 \mbox{ o } x=3.
+\]</span></p>
+<p>Como <span class="math inline">\(x=-2\)</span> no puede ser al ser todos los términos de la sucesión positivos, se concluye que <span class="math inline">\(x=3\)</span>.</p></li>
+<li><p>Veamos que la sucesión es creciente por inducción. <span class="math inline">\(x_1=1&lt;2=x_2\)</span>. Supongamos ahora que <span class="math inline">\(x_{n-1}&lt;x_n\)</span>. Entonces, <span class="math inline">\(x_{n+1} = \sqrt{4x_n} &gt; \sqrt{4x_{n-1}} = x_n\)</span>.</p>
+<p>Veamos ahora que <span class="math inline">\(4\)</span> es una cota superior de la sucesión también por inducción. <span class="math inline">\(x_1 = 1 &lt; 4\)</span>. Supongamos que <span class="math inline">\(x_n&lt;4\)</span>. Entonces, <span class="math inline">\(x_{n+1}=\sqrt{4x_n} &lt; \sqrt{4\cdot 4} = 4\)</span>.</p>
+<p>Así pues, según el <a href="https://aprendeconalf.es/analisis-manual/sucesiones.html#thm-convergencia-monotona">teorema de la convergencia de sucesiones monótonas</a> la sucesión converge. Para calcular el límite, aprovechando la definición recursiva de la sucesión se tiene</p>
+<p><span class="math display">\[
+x = \lim_{n\to\infty}x_n = \lim_{n\to\infty}x_{n+1} = \lim_{n\to\infty}\sqrt{4x_n} = \sqrt{4x}
+\]</span></p>
+<p>Resolviendo la ecuación se tiene</p>
+<p><span class="math display">\[
+x=\sqrt{4x} \Rightarrow x^2=4x \Rightarrow x^2-4x=0 \Rightarrow x(x-4)=0 \Rightarrow x=0 \mbox{ o } x=4.
+\]</span></p>
+<p>Como <span class="math inline">\(x=0\)</span> no puede ser al ser <span class="math inline">\(x_n\geq 1\)</span> <span class="math inline">\(\forall n\in\mathbb{N}\)</span>, se concluye que <span class="math inline">\(x=4\)</span>.</p></li>
+</ol>
+</div>
+</div>
+</div>
+<div id="exr-numero-aureo" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 4.16 </strong></span>Dado un segmento como el de la figura de más abajo,</p>
+<!-- ::: {.content-visible when-format="html"} -->
+<div style="text-align:center;">
+<p><img src="./img/sucesiones/numero-aureo.png" class="img-fluid"></p>
+</div>
+<!-- ::: -->
+<!-- 
+::: {.content-visible unless-format="html"}
+![](./img/sucesiones/numero-aureo.tex)
+::: -->
+<p>tal que <span class="math inline">\(\frac{a+b}{a}=\frac{a}{b}=\varphi\)</span>. A este número se le conoce como <a href="https://es.wikipedia.org/wiki/N%C3%BAmero_%C3%A1ureo">número áureo</a> y es el número irracional <span class="math inline">\(\varphi=\frac{1+\sqrt{5}}{2}=1.618033988749\ldots\)</span></p>
+<p>Demostrar que este número es el límite de las siguientes sucesiones de números reales.</p>
+<ol type="a">
+<li><span class="math inline">\(x_1=1\)</span> y <span class="math inline">\(x_{n+1}=1+\frac{1}{x_n}\)</span> <span class="math inline">\(\forall n\in \mathbb{N}\)</span></li>
+<li><span class="math inline">\(x_1=1\)</span> y <span class="math inline">\(x_{n+1}=\sqrt{1+x_n}\)</span> <span class="math inline">\(\forall n\in\mathbb{N}\)</span></li>
+</ol>
+</div>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-16-contents" aria-controls="callout-16" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-16" class="callout-16-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="a">
+<li><p>Veamos en primer lugar que la sucesión está acotada. De la definición resulta obvio que <span class="math inline">\(x_n\geq 1\)</span> <span class="math inline">\(\forall n\in\mathbb{N}\)</span>. De esto se deduce que, <span class="math inline">\(\frac{1}{x_n}\leq 1 \Leftrightarrow 1+\frac{1}{x_n} \leq 2\)</span> <span class="math inline">\(\forall n\in\mathbb{N}\)</span>. Así pues, <span class="math inline">\(1\leq x_n\leq 2\)</span> <span class="math inline">\(\forall n\in\mathbb{N}\)</span>.</p>
+<p>Veamos ahora que la subsucesión de los términos impares <span class="math inline">\((y_n)_{n=1}^\infty = (x_{2n-1})_{n=1}^\infty\)</span> converge. Para ello veremos que es creciente por inducción. <span class="math inline">\(y_1=1&lt;y_2=1.5\)</span>. Supongamos que <span class="math inline">\(y_{n-1}&lt;y_n\)</span>. Entonces,</p>
+<p><span class="math display">\[\begin{align*}
+y_{n+1} &amp;= x_{2(n+1)-1} = x_{2n+1} = 1+\frac{1}{x_{2n}} \\
+&amp;= 1+\frac{1}{1+\frac{1}{x_{2n-1}}} = 1+\frac{1}{1+\frac{1}{y_n}} \\
+&amp;&gt; 1+\frac{1}{1+\frac{1}{y_{n-1}}} = 1+\frac{1}{1+\frac{1}{x_{2n-3}}} \\
+&amp;= 1+\frac{1}{x_{2n-2}} = x_{2n-1} = y_n.
+\end{align*}\]</span></p>
+<p>Como la subsucesión también está acotada, por el <a href="https://aprendeconalf.es/analisis-manual/sucesiones.html#thm-convergencia-monotona">teorema de la convergencia de sucesiones monótonas</a> converge. Para calcular el límite, aprovechando la definición recursiva de la sucesión se tiene</p>
+<p><span class="math display">\[
+y = \lim_{n\to\infty}y_n = \lim_{n\to\infty}y_{n+1} = \lim_{n\to\infty}1+\frac{1}{1+\frac{1}{y_n}} = 1+\frac{1}{1+\frac{1}{y}}
+\]</span></p>
+<p>Resolviendo la ecuación se tiene</p>
+<p><span class="math display">\[\begin{align*}
+y=1+\frac{1}{1+\frac{1}{y}} &amp;\Rightarrow y-1= \frac{1}{\frac{y+1}{y}} = \frac{y}{y+1} \\
+&amp;\Rightarrow (y-1)(y+1) = y \\
+&amp; \Rightarrow y^2-1 = y \Rightarrow y^2-y-1=0 \\
+&amp;\Rightarrow y=\frac{1-\sqrt{5}}{2} \mbox{ o } y=\frac{1+\sqrt{5}}{2}.
+\end{align*}\]</span></p>
+<p>Como <span class="math inline">\(y=\frac{1-\sqrt{5}}{2}&lt;0\)</span> no puede ser al ser todos los términos de la sucesión positivos, se tiene que <span class="math inline">\(y=\frac{1+\sqrt{5}}{2}\)</span>.</p>
+<p>Del mismo modo se puede probar que la subsucesión de los términos pares <span class="math inline">\((z_n)_{n=1}^\infty = (x_{2n})_{n=1}^\infty\)</span> también converge a <span class="math inline">\(\frac{1+\sqrt{5}}{2}\)</span>.</p>
+<p>Finalmente, se deja como ejercicio probar que si las subsucesiones de los términos pares e impares de una sucesión convergen al mismo límite, entonces la sucesión converge al mismo límite.</p></li>
+<li><p>Veamos que la sucesión es creciente por inducción. <span class="math inline">\(x_1=1&lt;\sqrt{2}=x_2\)</span>. Supongamos ahora que <span class="math inline">\(x_{n-1}&lt;x_n\)</span>. Entonces, <span class="math inline">\(x_{n+1} = \sqrt{1+x_n} &gt; \sqrt{1+x_{n-1}} = x_n\)</span>.</p>
+<p>Veamos ahora que <span class="math inline">\(2\)</span> es una cota superior de la sucesión también por inducción. <span class="math inline">\(x_1 = 1 &lt; 2\)</span>. Supongamos que <span class="math inline">\(x_n&lt;2\)</span>. Entonces, <span class="math inline">\(x_{n+1}=\sqrt{1+x_n} &lt; \sqrt{1+2} = \sqrt{3} &lt; 2\)</span>.</p>
+<p>Así pues, según el <a href="https://aprendeconalf.es/analisis-manual/sucesiones.html#thm-convergencia-monotona">teorema de la convergencia de sucesiones monótonas</a> la sucesión converge. Para calcular el límite, aprovechando la definición recursiva de la sucesión se tiene</p>
+<p><span class="math display">\[
+x = \lim_{n\to\infty}x_n = \lim_{n\to\infty}x_{n+1} = \lim_{n\to\infty}\sqrt{1+x_n} = \sqrt{1+x}
+\]</span></p>
+<p>Resolviendo la ecuación se tiene</p>
+<p><span class="math display">\[\begin{align*}
+x=\sqrt{1+x} &amp;\Rightarrow x^2=1+x \Rightarrow x^2-x-1=0 \\
+&amp;\Rightarrow x=\frac{1-\sqrt{5}}{2} \mbox{ o } x=\frac{1+\sqrt{5}}{2}.
+\end{align*}\]</span></p>
+<p>Como <span class="math inline">\(x=\frac{1-\sqrt{5}}{2}&lt;0\)</span> no puede ser al ser todos los términos de la sucesión positivos, se concluye que <span class="math inline">\(x=\frac{1+\sqrt{5}}{2}\)</span>.</p></li>
+</ol>
+</div>
+</div>
+</div>
+<div id="exr-condiciones-heredadas-limite" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 4.17 </strong></span>Dada una sucesión de números reales tal que <span class="math inline">\(\lim_{n\to\infty}x_n=x\)</span>, probar o refutar las siguientes proposiciones:</p>
+<ol type="a">
+<li>Si cada <span class="math inline">\(x_n\)</span> es una cota superior de un conjunto <span class="math inline">\(A\)</span>, entonces <span class="math inline">\(x\)</span> es también una cota superior de <span class="math inline">\(A\)</span>.</li>
+<li>Si <span class="math inline">\(x_n\in\overline{(a,b)}\)</span> <span class="math inline">\(\forall n\in\mathbb{N}\)</span>, entonces <span class="math inline">\(x\in\overline{(a,b)}\)</span>.</li>
+<li>Si <span class="math inline">\(x_n\in\mathbb{Q}\)</span> <span class="math inline">\(\forall n\in\mathbb{N}\)</span>, entonces <span class="math inline">\(x\in\mathbb{Q}\)</span>.</li>
+</ol>
+</div>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-17-contents" aria-controls="callout-17" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-17" class="callout-17-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="a">
 <li><p>Si <span class="math inline">\(x_n\)</span> es cota superior de <span class="math inline">\(A\)</span> <span class="math inline">\(\forall n\in\mathbb{N}\)</span>, se tiene que para cualquier <span class="math inline">\(a\in A\)</span>, <span class="math inline">\(a\leq x_n\)</span>. Veamos que entonces que <span class="math inline">\(a\leq x\)</span> por reducción al absurdo. Supongamos que existe <span class="math inline">\(a\in A\)</span> tal que <span class="math inline">\(a\leq x_n\)</span> <span class="math inline">\(\forall n\in\mathbb{N}\)</span> pero <span class="math inline">\(a&gt;x\)</span>. Como <span class="math inline">\(\lim_{n\to\infty}x_n = x\)</span>, se tiene que para <span class="math inline">\(\varepsilon=a-x&gt;0\)</span> existe <span class="math inline">\(k\in\mathbb{N}\)</span> tal que <span class="math inline">\(|x_n-x|\leq a-x\)</span> <span class="math inline">\(\forall n\geq k\)</span>, pero entonces también se cumple <span class="math display">\[
 |x_n-x| = x_n-x &lt; a-x \Rightarrow x_n &lt; a,
 \]</span> por lo que <span class="math inline">\(x_n\)</span> no sería cota superior de <span class="math inline">\(A\)</span>, así que, necesariamente <span class="math inline">\(x\)</span> tiene que ser cota superior de <span class="math inline">\(A\)</span>.</p></li>
@@ -642,7 +751,46 @@ Solución
 </div>
 </div>
 <div id="exr-sucesion-intereses" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 4.18 </strong></span>Una cuenta de ahorro ofrece el primer año un tipo de interés <span class="math inline">\(x_1=0.5\%\)</span> y los años sucesivos un interés <span class="math inline">\(x_{n+1}=\frac{3}{2+x_n}\)</span>. Si se mantiene la cuenta abierta por un periodo indefinido, ¿hacia donde tienden los tipos de interés?</p>
+<p><span class="theorem-title"><strong>Ejercicio 4.18 </strong></span>Una cuenta de ahorro ofrece el primer año un tipo de interés <span class="math inline">\(x_1=0.5\%\)</span> y los años sucesivos un interés <span class="math inline">\(x_{n+1}=\frac{3}{2+x_n}\%\)</span>. Si se mantiene la cuenta abierta por un periodo indefinido, ¿hacia donde tienden los tipos de interés?</p>
+</div>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-18-contents" aria-controls="callout-18" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-18" class="callout-18-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="a">
+<li><p>Veamos en primer lugar que la sucesión está acotada. De la definición resulta obvio que <span class="math inline">\(x_n\geq 0\)</span> <span class="math inline">\(\forall n\in\mathbb{N}\)</span> pues todos los términos son positivos. De esto se deduce que, <span class="math inline">\(\frac{3}{x+x_n}\leq \frac{3}{2}\)</span> <span class="math inline">\(\forall n\in\mathbb{N}\)</span>. Así pues, <span class="math inline">\(0\leq x_n\leq \frac{3}{2}\)</span> <span class="math inline">\(\forall n\in\mathbb{N}\)</span>.</p>
+<p>Veamos ahora que la subsucesión de los términos impares <span class="math inline">\((y_n)_{n=1}^\infty = (x_{2n-1})_{n=1}^\infty\)</span> converge. Para ello veremos que es creciente por inducción. <span class="math inline">\(y_1=0.5&lt;y_2=0.9375\)</span>. Supongamos que <span class="math inline">\(y_{n-1}&lt;y_n\)</span>. Entonces,</p>
+<p><span class="math display">\[\begin{align*}
+y_{n+1} &amp;= x_{2(n+1)-1} = x_{2n+1} = \frac{3}{2+x_{2n}} \\
+&amp;= \frac{3}{2+\frac{3}{2+x_{2n-1}}} = \frac{3}{2+\frac{3}{2+y_n}} \\
+&amp;&gt; \frac{3}{2+\frac{3}{2+y_{n-1}}} = \frac{3}{2+\frac{3}{2+x_{2n-3}}} \\
+&amp;= \frac{3}{2+x_{2n-2}} = x_{2n-1} = y_n.
+\end{align*}\]</span></p>
+<p>Como la subsucesión también está acotada, por el <a href="https://aprendeconalf.es/analisis-manual/sucesiones.html#thm-convergencia-monotona">teorema de la convergencia de sucesiones monótonas</a> converge. Para calcular el límite, aprovechando la definición recursiva de la sucesión se tiene</p>
+<p><span class="math display">\[
+y = \lim_{n\to\infty}y_n = \lim_{n\to\infty}y_{n+1} = \lim_{n\to\infty}\frac{3}{2+\frac{3}{2+y_n}} = \frac{3}{2+\frac{3}{2+y}}
+\]</span></p>
+<p>Resolviendo la ecuación se tiene</p>
+<p><span class="math display">\[\begin{align*}
+y=\frac{3}{2+\frac{3}{2+y}} &amp;\Rightarrow y= \frac{3}{\frac{(4+2y)+3}{2+y}} = \frac{3(2+y)}{2y+7} \\
+&amp;\Rightarrow y(2y+7) = 3y+6 \\
+&amp; \Rightarrow 2y^2+4y-6 = 0\\
+&amp;\Rightarrow y=-3 \mbox{ o } y=1.
+\end{align*}\]</span></p>
+<p>Como <span class="math inline">\(y=-3\)</span> no puede ser al ser todos los términos de la sucesión positivos, se tiene que <span class="math inline">\(y=1\)</span>.</p>
+<p>Del mismo modo se puede probar que la subsucesión de los términos pares <span class="math inline">\((z_n)_{n=1}^\infty = (x_{2n})_{n=1}^\infty\)</span> también converge a <span class="math inline">\(1\)</span>.</p>
+<p>Finalmente, como las subsucesiones de los términos pares e impares de una sucesión convergen al mismo límite, entonces la sucesión converge al mismo límite.</p></li>
+</ol>
+</div>
+</div>
 </div>
 <div id="exr-sucesiones-cauchy" class="theorem exercise">
 <p><span class="theorem-title"><strong>Ejercicio 4.19 </strong></span>Determinar cuáles de las siguientes sucesiones de números reales son de Cauchy.</p>
@@ -676,6 +824,119 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
   toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  let localAlternateSentinel = 'alternate';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } 
   const icon = "";
   const anchorJS = new window.AnchorJS();
   anchorJS.options = {
