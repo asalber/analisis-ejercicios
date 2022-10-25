@@ -526,3 +526,31 @@ x_n=
 \end{cases}
 $$
 :::
+
+:::{.callout-tip collapse="true"}
+## Solución
+a. Es una sucesión de Cauchy ya que converge a 0, pues las subsucesiones de los términos pares e impares, convergen a 0 al ser monótonas y acotadas.
+
+b. Es una sucesión de Cauchy ya que converge a 1, pues
+
+\begin{align*}
+\lim_{n\to\infty} x_n &= \lim_{n\to\infty}\frac{n}{n+1} = \lim_{n\to\infty} \frac{1}{1+\frac{1}{n}}\\  
+&= \frac{\lim_{n\to\infty} 1}{\lim_{n\to\infty} 1 + \lim_{n\to\infty}\frac{1}{n}} = \frac{1}{1} = 1.
+\end{align*}
+
+c. Es una sucesión de Cauchy ya que converge a 0. Para probarlo, dado $\varepsilon>0$, por la propiedad arquimediana, existe $k\in\mathbb{N}$ tal que $\frac{2}{k}<\varepsilon$. Por tanto, para cualquier $n,m\geq k$ se tiene
+
+\begin{align*}
+|x_n-x_m| &= \left|\frac{\operatorname{sen}(n)}{n}-\frac{\operatorname{sen}(m)}{m}\right| \leq \left|\frac{\operatorname{sen}(n)}{n}\right|+\left|\frac{\operatorname{sen}(m)}{m}\right|\\  
+& \leq \frac{1}{n}+\frac{1}{m}\leq \frac{1}{k}+\frac{1}{k} = \frac{2}{k} < \varepsilon.
+\end{align*}
+
+d. No es una sucesión de Cauchy, pues tomando $\varepsilon=1/2$, para cualquier $k\in\mathbb{N}$, si $n\geq k$, entonces $n$ o $n+1$ debe ser impar, y suponiendo que es $n+1$ (la otra suposición lleva a un razonamiento similar) se tiene
+
+\begin{align*}
+|x_n-x_{n+1}| &\geq ||x_{n+1}|-|x_n|| =\left|\left(1+\frac{1}{n+1}\right)-\frac{1}{n}\right|\\ 
+&=1-\frac{1}{n(n+1)}\geq 1 -\frac{1}{2} = \frac{1}{2}=\varepsilon.
+\end{align*}
+
+Por tanto, la sucesión no converge.
+:::
