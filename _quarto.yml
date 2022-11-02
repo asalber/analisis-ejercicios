@@ -34,7 +34,7 @@ book:
     - reales.qmd
     - topologia.qmd
     - sucesiones.qmd
-    #- limites.qmd
+    - limites.qmd
     
 #bibliography: references.bib
 

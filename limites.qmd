@@ -1,0 +1,76 @@
+---
+lang: es
+---
+<!-- LTeX: language = es-ES -->
+
+# Límites de funciones
+
+:::{#exr-funcion-constante}
+Sea $f(x)=c$ una función constante. Demostrar que $\lim_{x\to a}f(x)=c$ $\forall a\in\mathbb{R}$.  
+:::
+
+<!-- :::{.callout-tip collapse="true"}
+## Solución
+::: -->
+
+:::{#exr-definicion-limite}
+Dada la función $f(x)=4x-10$, demostrar usando la definición de límite que $\lim_{x\to 3}f(x)=2$.  
+:::
+
+:::{#exr-limite-criterio-sucesiones}
+Dada la función $f(x)=\frac{|x|}{x}$, usar el criterio de las sucesiones para demostrar que no existe el límite de $f$ en $0$. 
+:::
+
+:::{#exr-limite-funcion-Dirichlet}
+La función $f:\mathbb{R}\to \mathbb{R}$ dada por
+
+$$
+f(x)=\begin{cases}
+1, & \mbox{si } x\in\mathbb{Q},\\ 
+0, & \mbox{si } x\not\in \mathbb{Q}
+\end{cases}
+$$
+se conoce como la _función de Dirichlet_. Demostrar que no existe el límite de $f$ en cualquier número real.
+:::
+
+:::{#exr-limite-coseno}
+Demostrar que no existe $\lim_{x\to 0}\cos\left(\frac{1}{x}\right)$.
+:::
+
+:::{#exr-limite-polinomios}
+Dado un polinomio $p(x)$, demostrar que $\lim_{x\to a}p(x)=p(a)$ $\forall a\in\mathbb{R}$.
+:::
+
+:::{#exr-limite-funciones-racionales}
+Dada una función racional $f(x)=\frac{p(x)}{q(x)}$ $\forall x\in\mathbb{R}$ tal que $q(x)\neq 0$, demostrar que $\lim_{x\to a}f(x)=f(a)$ $\forall a\in\mathbb{R}$ tal que $q(a)\neq 0$.
+:::
+
+:::{#exr-limite-funcion-exponencial}
+Calcular $\lim_{x\to 2} \dfrac{x^2+x-6}{x-2}$.
+:::
+
+:::{#exr-limite-laterales}
+Sea $g(x)=e^{1/x}$ $\forall x\neq 0$. Demostrar que no existe el límite de $g$ en $0$.
+:::
+
+:::{#exr-limites-laterales}
+Dada la función 
+
+$$
+f(x)=\begin{cases}
+x^2, \mbox{si } x\leq 1,\\ 
+ax-1, \mbox{si } x>1
+\end{cases}
+$$
+
+con $a\in\mathbb{R}$. ¿Para que valor de $a$ existe el límite de $f$ en $1$?
+:::
+
+:::{#exr-limites-funciones-acotadas}
+Sea $f:(a,b)\to \mathbb{R}$ una función creciente. Demostrar lo siguiente:
+
+a. Si $f$ está acotada superiormente, entonces existe $\lim_{x\to b^-}f(x)$.
+b. Si $f$ no está acotada superiormente, entonces $\lim_{x\to b^-}f(x)=\infty$.
+:::
+
+ 
