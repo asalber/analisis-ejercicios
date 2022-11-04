@@ -45,8 +45,58 @@ Dado un polinomio $p(x)$, demostrar que $\lim_{x\to a}p(x)=p(a)$ $\forall a\in\m
 Dada una función racional $f(x)=\frac{p(x)}{q(x)}$ $\forall x\in\mathbb{R}$ tal que $q(x)\neq 0$, demostrar que $\lim_{x\to a}f(x)=f(a)$ $\forall a\in\mathbb{R}$ tal que $q(a)\neq 0$.
 :::
 
-:::{#exr-limite-funcion-exponencial}
-Calcular $\lim_{x\to 2} \dfrac{x^2+x-6}{x-2}$.
+:::{#exr-limit-emparedado}
+Demostrar, haciendo uso del [teorema de compresión de funciones](https://aprendeconalf.es/analisis-manual/limites.html#thm-compresión-funciones) que $\lim_{x\to 0}\frac{1-\cos(x)}{x} = 1$.
+:::
+
+:::{#exr-limites-1}
+Calcular los siguientes límites si existen:
+
+a. $\displaystyle \lim_{x\to 2} \dfrac{x^2+x-6}{x-2}$
+
+a. $\displaystyle \lim_{x\to 1}\dfrac{x^3-3x+2}{x^4-4x+3}$
+
+a. $\displaystyle \lim_{x\to a}\dfrac{\operatorname{sen}(x)-\operatorname{sen}(a)}{x-a}$
+
+a. $\displaystyle \lim_{x\to\infty}\dfrac{x^2-3x+2}{e^{2x}}$
+
+a. $\displaystyle \lim_{x\to\infty}\dfrac{\log(x^2-1)}{x+2}$
+
+a. $\displaystyle \lim_{x\to 1}\dfrac{\log(1/x)}{\operatorname{tg}(x+\dfrac{\pi}{2})}$
+
+a. $\displaystyle \lim_{x\to a}\dfrac{x^n-a^n}{x-a}\quad n\in \mathbb{N}$
+
+a. $\displaystyle \lim_{x\to 1}\dfrac{\sqrt[n]{x}-1}{\sqrt[m]{x}-1} \quad n,m \in \mathbb{Z}$
+
+a. $\displaystyle \lim_{x\to 0}\dfrac{\operatorname{tg}(x)-\operatorname{sen}(x)}{x^3}$
+
+a. $\displaystyle \lim_{x\to \pi/4}\dfrac{\operatorname{sen}(x)-\cos x}{1-\operatorname{tg}(x)}$
+
+a. $\displaystyle \lim_{x\to 0}x^2e^{1/x^2}$
+
+a. $\displaystyle \lim_{x\to \infty}\left(1+\dfrac{a}{x}\right)^x$
+
+a. $\displaystyle \lim_{x\to \infty} \sqrt[x]{x^2}$
+
+a. $\displaystyle \lim_{x\to 0}\left(\dfrac{1}{x}\right)^{\operatorname{tg}(x)}$
+
+a. $\displaystyle \lim_{x\to 0}(\cos x)^{1/\operatorname{sen}(x)}$
+
+a. $\displaystyle \lim_{x\to 0}\dfrac{6}{4+e^{-1/x}}$
+
+a. $\displaystyle \lim_{x\to \infty}\left(\sqrt{x^2+x+1}-\sqrt{x^2-2x-1}\right)$.
+
+a. $\displaystyle \lim_{x\to \pi/2}\sec x-\operatorname{tg}(x)$
+:::
+
+:::{#exr-ejemplos-limites-laterales}
+Dar ejemplo de funciones que cumplan las siguientes condiciones:
+
+a. $\lim_{x\to 0}f(x)=+\infty$ y $\lim_{x\to \infty}f(x)=0$.
+
+b. $\lim_{x\to 3^+}f(x)=+\infty$, $\lim_{x\to 3^-}f(x)=-\infty$ y $\lim_{x\to \infty}f(x)=1$.
+
+c. $\lim_{x\to 0^+}f(x)=+\infty$ y $\lim_{x\to \infty}f(x)=-\infty$
 :::
 
 :::{#exr-limite-laterales}

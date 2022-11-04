@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.9.20)  28 SEP 2022 09:44
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.9.20)  4 NOV 2022 09:33
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -829,7 +829,17 @@ Package babel Info: Hyphen rules for 'spanish' set to \l@spanish
 Package: xurl 2022/01/09 v 0.10 modify URL breaks
 )
 Package hyperref Info: Option `colorlinks' set `true' on input line 189.
- (./ejercicios-analisis.aux)
+ (./ejercicios-analisis.aux
+
+LaTeX Warning: Label `exr-particion-interior-exterior-frontera' multiply defined.
+
+
+LaTeX Warning: Label `exr-particion-interior-exterior-frontera' multiply defined.
+
+
+LaTeX Warning: Label `exr-adherencia-cerrada' multiply defined.
+
+)
 \openout1 = `ejercicios-analisis.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 195.
@@ -977,46 +987,4 @@ LaTeX Font Info:    Trying to load font information for U+fontawesomefree2 on in
 (/usr/local/texlive/2022/texmf-dist/tex/latex/fontawesome5/ufontawesomefree2.fd) [4
 
 ] (././img/teoria-conjuntos/conjunto2.tex)
-Overfull \hbox (20.26094pt too wide) in paragraph at lines 328--333
- [][] 
- []
-
-(././img/teoria-conjuntos/conjunto1.tex)
-Overfull \hbox (20.26094pt too wide) in paragraph at lines 344--349
- [][] 
- []
-
-(././img/teoria-conjuntos/conjunto3.tex)
-Overfull \hbox (20.26094pt too wide) in paragraph at lines 360--365
- [][] 
- []
-
-[5] [6] [7] [8] [9] [10] [11] [12] [13]
-chapter 2.
-[14
-
-] [15]
-LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 1131.
- (/usr/local/texlive/2022/texmf-dist/tex/latex/lm/ts1lmr.fd
-File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-) [16] [17]
-chapter 3.
-[18
-
-] [19] (./ejercicios-analisis.aux) ) 
-Here is how much of TeX's memory you used:
- 37946 strings out of 476932
- 775646 string characters out of 5824858
- 1302014 words of memory out of 5000000
- 58150 multiletter control sequences out of 15000+600000
- 531917 words of font info for 144 fonts, out of 8000000 for 9000
- 62 hyphenation exceptions out of 8191
- 122i,12n,120p,10690b,1051s stack positions out of 10000i,1000n,20000p,200000b,200000s
-{/home/alf/texmf/fonts/enc/dvips/lm/lm-ts1.enc}{/home/alf/texmf/fonts/enc/dvips/lm/lm-mathex.enc}{/home/alf/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/home/alf/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/home/alf/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/home/alf/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/home/alf/texmf/fonts/enc/dvips/fontawesome5/fa5free2.enc}</home/alf/texmf/fonts/type1/public/fontawesome5/FontAwesome5Free-Solid.pfb></home/alf/texmf/fonts/type1/public/lm/lmbx10.pfb></home/alf/texmf/fonts/type1/public/lm/lmex10.pfb></home/alf/texmf/fonts/type1/public/lm/lmmi10.pfb></home/alf/texmf/fonts/type1/public/lm/lmmi8.pfb></home/alf/texmf/fonts/type1/public/lm/lmr10.pfb></home/alf/texmf/fonts/type1/public/lm/lmr8.pfb></home/alf/texmf/fonts/type1/public/lm/lmri10.pfb></home/alf/texmf/fonts/type1/public/lm/lmss12.pfb></home/alf/texmf/fonts/type1/public/lm/lmssbx10.pfb></home/alf/texmf/fonts/type1/public/lm/lmsy10.pfb></home/alf/texmf/fonts/type1/public/lm/lmsy8.pfb></home/alf/texmf/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on ejercicios-analisis.pdf (19 pages, 268448 bytes).
-PDF statistics:
- 418 PDF objects out of 1000 (max. 8388607)
- 361 compressed objects within 4 object streams
- 198 named destinations out of 1000 (max. 500000)
- 36919 words of extra memory for PDF output out of 42996 (max. 10000000)
-
+Overfull \hbox (20.26094pt too wide) in paragraph at l
