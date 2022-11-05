@@ -45,8 +45,8 @@ Dado un polinomio $p(x)$, demostrar que $\lim_{x\to a}p(x)=p(a)$ $\forall a\in\m
 Dada una función racional $f(x)=\frac{p(x)}{q(x)}$ $\forall x\in\mathbb{R}$ tal que $q(x)\neq 0$, demostrar que $\lim_{x\to a}f(x)=f(a)$ $\forall a\in\mathbb{R}$ tal que $q(a)\neq 0$.
 :::
 
-:::{#exr-limit-emparedado}
-Demostrar, haciendo uso del [teorema de compresión de funciones](https://aprendeconalf.es/analisis-manual/limites.html#thm-compresión-funciones) que $\lim_{x\to 0}\frac{1-\cos(x)}{x} = 1$.
+:::{#exr-limite-emparedado}
+Demostrar, haciendo uso del [teorema de compresión de funciones](https://aprendeconalf.es/analisis-manual/limites.html#thm-compresión-funciones) que $\lim_{x\to 0}\frac{1-\cos(x)}{x} = 0$.
 :::
 
 :::{#exr-limites-1}

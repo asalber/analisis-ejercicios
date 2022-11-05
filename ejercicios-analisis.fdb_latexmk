@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1667550514 "/run/media/alf/datos/misrepositorios/docencia/analisis-ejercicios/ejercicios-analisis.tex" "ejercicios-analisis.pdf" "ejercicios-analisis" 1667550520
+["pdflatex"] 1667664347 "/run/media/alf/datos/misrepositorios/docencia/analisis-ejercicios/ejercicios-analisis.tex" "ejercicios-analisis.pdf" "ejercicios-analisis" 1667664352
   "./img/sucesiones/numero-aureo.png" 1664912632 2637 e96ec46173320b125d9d52e5e44186a2 ""
   "./img/teoria-conjuntos/conjunto1.tex" 1663624383 112 e65ba041b70ec608b96ab5d3d154617b ""
   "./img/teoria-conjuntos/conjunto2.tex" 1663624376 101 82fd6c3c5e933459267c3bb1f7881fd7 ""
@@ -54,7 +54,7 @@
   "/home/alf/texmf/fonts/type1/public/lm/lmsy10.pfb" 1254269338 27863 09ce3735688ffde955e72da27c95b61a ""
   "/home/alf/texmf/fonts/type1/public/lm/lmsy6.pfb" 1254269338 28109 6d61305ed3d0eb794ebe36f15cf44aa0 ""
   "/home/alf/texmf/fonts/type1/public/lm/lmsy8.pfb" 1254269338 27802 5c876bb2c4040caaf035d60bd74a86bd ""
-  "/run/media/alf/datos/misrepositorios/docencia/analisis-ejercicios/ejercicios-analisis.tex" 1667550487 123197 697601429aba31314f418d5a26a3b508 ""
+  "/run/media/alf/datos/misrepositorios/docencia/analisis-ejercicios/ejercicios-analisis.tex" 1667664325 123526 6357ba1aa069052dba5129cd6a9794c6 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2022/texmf-dist/tex/context/base/mkii/supp-pdf.mkii" 1461363279 71627 94eb9990bed73c364d7f53f960cc8c5b ""
   "/usr/local/texlive/2022/texmf-dist/tex/generic/atbegshi/atbegshi.sty" 1575674566 24708 5584a51a7101caf7e6bbf1fc27d8f7b1 ""
@@ -252,9 +252,9 @@
   "/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1663634009 4518511 f3c4febc08d3846a9eca54deee3e4df8 ""
   "/usr/local/texlive/2022/texmf-var/web2c/pdftex/pdflatex.fmt" 1663634035 1709389 8cf9685d8c62d9a0f8847594506fe3d9 ""
   "/usr/local/texlive/2022/texmf.cnf" 1663634003 455 5b996dcaa0eb4ef14a83b026bc0a008c ""
-  "ejercicios-analisis.aux" 1667550520 10325 2a378a9e3a26be488c0dbcbccf503dcf "pdflatex"
-  "ejercicios-analisis.tex" 1667550487 123197 697601429aba31314f418d5a26a3b508 ""
-  "ejercicios-analisis.toc" 1667550520 547 f5be63ca481ac641f93e461a4612721d "pdflatex"
+  "ejercicios-analisis.aux" 1667664352 10389 3f50441449e741cc8428d17b450cb6a1 "pdflatex"
+  "ejercicios-analisis.tex" 1667664325 123526 6357ba1aa069052dba5129cd6a9794c6 ""
+  "ejercicios-analisis.toc" 1667664352 547 f5be63ca481ac641f93e461a4612721d "pdflatex"
   "img/logos/aprendeconalf.png" 1660651154 4959 ed9bc5377949cccb6bf9a9834387f02c ""
   "img/logos/infinito.png" 1664265791 15614 f1065129939fd9f99f0da9eb72e2eda5 ""
   (generated)
