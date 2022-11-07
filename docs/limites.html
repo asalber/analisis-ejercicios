@@ -227,21 +227,46 @@ f(x)=\begin{cases}
 <div id="exr-limite-emparedado" class="theorem exercise">
 <p><span class="theorem-title"><strong>Ejercicio 5.8 </strong></span>Demostrar, haciendo uso del <a href="https://aprendeconalf.es/analisis-manual/limites.html#thm-compresión-funciones">teorema de compresión de funciones</a> que <span class="math inline">\(\lim_{x\to 0}\frac{1-\cos(x)}{x} = 0\)</span>.</p>
 </div>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><span class="math display">\[\begin{align*}
+\lim_{x\to 0}\frac{1-\cos(x)}{x} &amp;= \lim_{x\to 0}\frac{(1-\cos(x))(1+\cos(x))}{x(1+\cos(x))} =  \lim_{x\to 0}\frac{1-\cos(x)^2}{x(1+\cos(x))}\\
+&amp;= \lim_{x\to 0}\frac{\operatorname{sen}(x)^2}{x(1+\cos(x))} = \lim_{x\to 0}\frac{\operatorname{sen}(x)}{x}\frac{\operatorname{sen}(x)}{1+\cos(x)} =\\
+&amp;= \lim_{x\to 0}\frac{\operatorname{sen}(x)}{x}\lim_{x\to 0}\frac{\operatorname{sen}(x)}{1+\cos(x)} =1\cdot 0 = 0.
+\end{align*}\]</span></p>
+</div>
+</div>
+</div>
 <div id="exr-limites-1" class="theorem exercise">
 <p><span class="theorem-title"><strong>Ejercicio 5.9 </strong></span>Calcular los siguientes límites si existen:</p>
+<div class="columns">
+<div class="column">
 <ol type="a">
 <li><p><span class="math inline">\(\displaystyle \lim_{x\to 2} \dfrac{x^2+x-6}{x-2}\)</span></p></li>
 <li><p><span class="math inline">\(\displaystyle \lim_{x\to 1}\dfrac{x^3-3x+2}{x^4-4x+3}\)</span></p></li>
-<li><p><span class="math inline">\(\displaystyle \lim_{x\to a}\dfrac{\operatorname{sen}(x)-\operatorname{sen}(a)}{x-a}\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle \lim_{x\to 0}\dfrac{\operatorname{sen}(x+a)-\operatorname{sen}(a)}{x}\)</span></p></li>
 <li><p><span class="math inline">\(\displaystyle \lim_{x\to\infty}\dfrac{x^2-3x+2}{e^{2x}}\)</span></p></li>
 <li><p><span class="math inline">\(\displaystyle \lim_{x\to\infty}\dfrac{\log(x^2-1)}{x+2}\)</span></p></li>
 <li><p><span class="math inline">\(\displaystyle \lim_{x\to 1}\dfrac{\log(1/x)}{\operatorname{tg}(x+\dfrac{\pi}{2})}\)</span></p></li>
 <li><p><span class="math inline">\(\displaystyle \lim_{x\to a}\dfrac{x^n-a^n}{x-a}\quad n\in \mathbb{N}\)</span></p></li>
 <li><p><span class="math inline">\(\displaystyle \lim_{x\to 1}\dfrac{\sqrt[n]{x}-1}{\sqrt[m]{x}-1} \quad n,m \in \mathbb{Z}\)</span></p></li>
 <li><p><span class="math inline">\(\displaystyle \lim_{x\to 0}\dfrac{\operatorname{tg}(x)-\operatorname{sen}(x)}{x^3}\)</span></p></li>
-<li><p><span class="math inline">\(\displaystyle \lim_{x\to \pi/4}\dfrac{\operatorname{sen}(x)-\cos x}{1-\operatorname{tg}(x)}\)</span></p></li>
+</ol>
+</div><div class="column">
+<ol start="10" type="a">
+<li><p><span class="math inline">\(\displaystyle \lim_{x\to \pi/4}\dfrac{\operatorname{sen}(x)-\cos(x)}{1-\operatorname{tg}(x)}\)</span></p></li>
 <li><p><span class="math inline">\(\displaystyle \lim_{x\to 0}x^2e^{1/x^2}\)</span></p></li>
-<li><p><span class="math inline">\(\displaystyle \lim_{x\to \infty}\left(1+\dfrac{a}{x}\right)^x\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle \lim_{x\to 0}\left(1+x\right)^{1/x}\)</span></p></li>
 <li><p><span class="math inline">\(\displaystyle \lim_{x\to \infty} \sqrt[x]{x^2}\)</span></p></li>
 <li><p><span class="math inline">\(\displaystyle \lim_{x\to 0}\left(\dfrac{1}{x}\right)^{\operatorname{tg}(x)}\)</span></p></li>
 <li><p><span class="math inline">\(\displaystyle \lim_{x\to 0}(\cos x)^{1/\operatorname{sen}(x)}\)</span></p></li>
@@ -249,6 +274,90 @@ f(x)=\begin{cases}
 <li><p><span class="math inline">\(\displaystyle \lim_{x\to \infty}\left(\sqrt{x^2+x+1}-\sqrt{x^2-2x-1}\right)\)</span>.</p></li>
 <li><p><span class="math inline">\(\displaystyle \lim_{x\to \pi/2}\sec x-\operatorname{tg}(x)\)</span></p></li>
 </ol>
+</div>
+</div>
+</div>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="a">
+<li><p><span class="math inline">\(\displaystyle \lim_{x\to 2} \dfrac{x^2+x-6}{x-2} = \lim_{x\to 2} \dfrac{(x+3)(x-2)}{x-2} = \lim_{x\to 2} \frac{x+3}{1}=5\)</span>.</p></li>
+<li><p><span class="math display">\[\begin{align*}
+\lim_{x\to 1}\dfrac{x^3-3x+2}{x^4-4x+3} &amp;= \lim_{x\to 1}\dfrac{(x-1)^2(x+2)}{(x-1)^2(x^2+2x+3)}\\  
+&amp;= \lim_{x\to 1}\dfrac{(x+2)}{(x^2+2x+3)}= \frac{3}{6}=\frac{1}{2}.
+\end{align*}\]</span></p></li>
+<li><p>Aplicando la propiedad trigonométrica <span class="math inline">\(\operatorname{sen}(x+a)=\operatorname{sen}(x)\cos(a)+\cos(x)\operatorname{sen}(a)\)</span>, se tiene</p>
+<p><span class="math display">\[\begin{align*}
+\lim_{x\to 0}\frac{\operatorname{sen}(x+a)-\operatorname{sen}(a)}{x} &amp;= \lim_{x\to 0}\frac{\operatorname{sen}(x)\cos(a)+\cos(x)\operatorname{sen}(a)-\operatorname{sen}(a)}{x} \\
+&amp;= \lim_{x\to 0}\frac{\operatorname{sen}(x)\cos(a)-\operatorname{sen}(a)(1-\cos(x))}{x} \\
+&amp;= \cos(a)\lim_{x\to 0}\frac{\operatorname{sen}(x)}{x}-\operatorname{sen}(a)\lim_{x\to 0}\frac{1-\cos(x)}{x}\\
+&amp; = \cos(a)\cdot 1-\operatorname{sen}(a)\cdot 0= \cos(a).
+\end{align*}\]</span></p></li>
+<li><p>Como <span class="math inline">\(x&lt;e^x\)</span> <span class="math inline">\(\forall x&gt;0\)</span>, se tiene que</p>
+<p><span class="math display">\[
+0&lt;\frac{x}{2}&lt;e^{x/2} \Rightarrow 0&lt; x &lt; 2e^{x/2} \Rightarrow  0&lt; \frac{x}{e^{2x}} &lt; \frac{2e^{x/2}}{e^{2x}} = \frac{2}{e^{3x/2}},\]</span></p>
+<p>de modo que, como <span class="math inline">\(\lim_{x\to\infty}\frac{2}{e^{3x/2}}=0\)</span>, aplicando el teorema de compresión de funciones se tiene que <span class="math inline">\(\lim_{x\to\infty} \frac{x}{e^{2x}}=0\)</span>.</p>
+<p>Usando este resultado se tiene,</p>
+<p><span class="math display">\[\lim_{x\to\infty}\dfrac{x^2-3x+2}{e^{2x}} = \lim_{x\to\infty}\dfrac{x^2}{e^{2x}}-3\lim_{x\to\infty} \frac{x}{e^{2x}} + \lim_{x\to\infty} \frac{2}{e^{2x}} = 0.
+\]</span></p></li>
+<li><p>Cuando <span class="math inline">\(x\to\infty\)</span>, <span class="math inline">\(\frac{\log(x^2-1)}{x+2}\to \frac{\infty}{\infty}\)</span> que es indeterminado. Aplicando la regla de L’Hôpital se tiene,</p>
+<p><span class="math display">\[
+\lim_{x\to\infty}\dfrac{\log(x^2-1)}{x+2} =\lim_{x\to\infty}\frac{1/x}{1} =0.
+\]</span></p></li>
+<li><p><span class="math inline">\(\displaystyle \lim_{x\to 1}\frac{\log(1/x)}{\operatorname{tg}(x+\frac{\pi}{2})} = \frac{\lim_{x\to 1}\log(1/x)}{\lim_{x\to 1}\operatorname{tg}(x+\frac{\pi}{2})} = \frac{\log(1)}{\operatorname{tg}(1+\frac{\pi}{2})}=0\)</span></p></li>
+<li><p><span class="math inline">\(x^n-a^n = (x-a)(x^{n-1}+ax^{n-2}+a^2x^{n-3}+\cdots + a^{n-2}x+a^{n-1}\)</span> <span class="math inline">\(\forall n\in\mathbb{N}\)</span>, <span class="math inline">\(n\geq 2\)</span>. Así pues,</p>
+<p><span class="math display">\[\begin{align*}
+\lim_{x\to a}\dfrac{x^n-a^n}{x-a} &amp;= \lim_{x\to a}\frac{(x-a)(x^{n-1}+ax^{n-2}+\cdots + a^{n-2}x+a^{n-1}}{x-a} \\
+&amp;= \lim_{x\to a} x^{n-1}+ax^{n-2}+\cdots + a^{n-2}x+a^{n-1}\\  
+&amp;= a^{n-1}+\stackrel{n}{\dots}+a^{n-1} = na^{n-1}
+\end{align*}\]</span></p></li>
+<li><p>Cuando <span class="math inline">\(x\to 1\)</span> <span class="math inline">\(\frac{\sqrt[n]{x}-1}{\sqrt[m]{x}-1}\to \frac{0}{0}\)</span> que es indeterminado. Aplicando la regla de L’Hôpital se tiene</p>
+<p><span class="math display">\[\begin{align*}
+\lim_{x\to 1}\frac{\sqrt[n]{x}-1}{\sqrt[m]{x}-1} &amp;= \lim_{x\to 1}\frac{x^{1/n}-1}{x^{1/m}-1} = \lim_{x\to 1}\frac{\frac{1}{n}x^{1/n-1}}{\frac{1}{m}x^{1/m-1}}\\  
+&amp;= \lim_{x\to 1}\frac{mx^{1/n-1}}{nx^{1/m-1}} = \frac{m}{n}.
+\end{align*}\]</span></p></li>
+<li><p>Como <span class="math inline">\(\operatorname{sen}(x)\approx\operatorname{tg}(x)\approx x\)</span> cuando <span class="math inline">\(x\to 0\)</span>, se tiene</p>
+<p><span class="math display">\[
+\lim_{x\to 0}\frac{\operatorname{tg}(x)-\operatorname{sen}(x)}{x^3} = \lim_{x\to 0}\frac{x-x}{x^3} = \lim_{x\to 0}\frac{0}{x^3} = 0.
+\]</span></p></li>
+<li><p>Aplicando propiedades trigonométricas se tiene</p>
+<p><span class="math display">\[\begin{align*}
+\lim_{x\to \pi/4}\frac{\operatorname{sen}(x)-\cos(x)}{1-\operatorname{tg}(x)} &amp;= \lim_{x\to \pi/4}\frac{\operatorname{sen}(x)-\cos x}{1-\frac{\operatorname{sen}(x)}{\cos(x)}}\\
+&amp; = \lim_{x\to \pi/4}\frac{\operatorname{sen}(x)-\cos x}{\frac{\cos(x)-\operatorname{sen}(x)}{\cos(x)}}\\
+&amp; = \lim_{x\to \pi/4} -\cos(x) = \frac{-\sqrt{2}}{2}.
+\end{align*}\]</span></p></li>
+<li><p>Cuando <span class="math inline">\(x\to 0\)</span>, <span class="math inline">\(x^2e^{1/x^2}\to 0\cdot \infty\)</span>, que es indeterminado. Transformando la indeterminación en una de tipo cociente y aplicando la regla de L’Hôpital se tiene</p>
+<p><span class="math display">\[\begin{align*}
+\lim_{x\to 0}x^2e^{1/x^2} &amp;= \lim_{x\to 0}\frac{e^{1/x^2}}{1/x^2} = \lim_{x\to 0}\frac{e^{1/x^2}\frac{-2}{x^3}}{-2/x^3} = \lim_{x\to 0} e^{1/x^2} =\infty.
+\end{align*}\]</span></p></li>
+<li><p>Cuando <span class="math inline">\(x\to 0\)</span>, <span class="math inline">\(\ln(1+x)\approx x\)</span>, de manera que</p>
+<p><span class="math display">\[\begin{align*}
+\lim_{x\to 0}\left(1+x\right)^{1/x} &amp;= \lim_{x\to 0}e^{\ln(\left(1+x\right)^{1/x})} = e^{\lim_{x\to 0}\frac{\ln(1+x)}{x}}\\  
+&amp;= e^{\lim_{x\to 0}\frac{x}{x}} = e^{\lim_{x\to 0}1} = e^1 = e.
+\end{align*}\]</span></p></li>
+<li><p>Cuando <span class="math inline">\(x\to\infty\)</span> <span class="math inline">\(\sqrt[x]{x^2}=x^{2/x}\to \infty^0\)</span>, que es intedeterminado. Transformando la indeterminación en una de tipo cociente y aplicando la regla de L’Hôpital, se tiene</p>
+<p><span class="math display">\[\begin{align*}
+\lim_{x\to \infty} \sqrt[x]{x^2}
+&amp;= \lim_{x\to \infty} x^{2/x} = \lim_{x\to \infty} e^{\ln(x^{2/x})}\\
+&amp; = e^{\lim_{x\to \infty} \frac{2\ln(x)}{x}} = e^{\lim_{x\to \infty} \frac{\frac{2}{x}}{1}} = 1.
+\end{align*}\]</span></p></li>
+<li><p><span class="math inline">\(\displaystyle \lim_{x\to 0}\left(\dfrac{1}{x}\right)^{\operatorname{tg}(x)}\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle \lim_{x\to 0}(\cos x)^{1/\operatorname{sen}(x)}\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle \lim_{x\to 0}\dfrac{6}{4+e^{-1/x}}\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle \lim_{x\to \infty}\left(\sqrt{x^2+x+1}-\sqrt{x^2-2x-1}\right)\)</span>.</p></li>
+<li><p><span class="math inline">\(\displaystyle \lim_{x\to \pi/2}\sec x-\operatorname{tg}(x)\)</span></p></li>
+</ol>
+</div>
+</div>
 </div>
 <div id="exr-ejemplos-limites-laterales" class="theorem exercise">
 <p><span class="theorem-title"><strong>Ejercicio 5.10 </strong></span>Dar ejemplo de funciones que cumplan las siguientes condiciones:</p>
@@ -271,13 +380,52 @@ ax-1, \mbox{si } x&gt;1
 \]</span></p>
 <p>con <span class="math inline">\(a\in\mathbb{R}\)</span>. ¿Para que valor de <span class="math inline">\(a\)</span> existe el límite de <span class="math inline">\(f\)</span> en <span class="math inline">\(1\)</span>?</p>
 </div>
+<div id="exr-limites-laterales-2" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 5.13 </strong></span>Calcular los límites laterales de la función <span class="math inline">\(f(x)=\dfrac{1}{1+e^{\frac{1}{1-x}}}\)</span> en el punto <span class="math inline">\(x=1\)</span>.</p>
+</div>
+<div id="exr-asintotas" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 5.14 </strong></span>Calcular las asíntotas de las siguientes funciones:</p>
+<div class="columns">
+<div class="column">
+<ol type="a">
+<li><p><span class="math inline">\(f(x)=(1-x)e^x\)</span></p></li>
+<li><p><span class="math inline">\(g(x)=xe^{1/x}\)</span></p></li>
+<li><p><span class="math inline">\(h(x)=2x^2-\ln(x)\)</span></p></li>
+</ol>
+</div><div class="column">
+<ol start="4" type="a">
+<li><p><span class="math inline">\(i(x)=\log(x^2+3x+2)\)</span></p></li>
+<li><p><span class="math inline">\(j(x)=\dfrac{x^3}{(x+1)^2}\)</span></p></li>
+<li><p><span class="math inline">\(k(x)=\cos x-\log(\cos x)\)</span></p></li>
+</ol>
+</div>
+</div>
+</div>
+<div id="exr-acuifero" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 5.15 </strong></span>Mediante simulación por ordenador se ha podido cuantificar la cantidad de agua almacenada en un acuífero en función del tiempo, <span class="math inline">\(m(t)\)</span>, en millones de metros cúbicos, y el tiempo <span class="math inline">\(t\)</span> en años transcurridos desde el instante en el que se ha hecho la simulación, teniendo en cuenta que la ecuación sólo tiene sentido para <span class="math inline">\(t&gt;0\)</span>:</p>
+<p><span class="math display">\[
+m(t) = 10 + \frac{\sqrt{t}}{e^t}
+\]</span></p>
+<p>¿Qué cantidad de agua almacenada habrá en el acuífero asintóticamente?</p>
+</div>
+<div id="exr-cosecha" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 5.16 </strong></span>La cosecha de trigo de una plantación (en toneladas) depende de la cantidad de abono <span class="math inline">\(x\)</span> según la función <span class="math inline">\(f(x)=T(1-\frac{1}{2}e^{-kx})\)</span>, donde <span class="math inline">\(T\)</span> es la extensión del terreno (en hectáreas) y <span class="math inline">\(k\)</span> es la proporción de humedad. ¿Para qué cantidad de abono se conseguiría una cosecha superior a <span class="math inline">\(T\)</span> toneladas de trigo?</p>
+</div>
 <div id="exr-limites-funciones-acotadas" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 5.13 </strong></span>Sea <span class="math inline">\(f:(a,b)\to \mathbb{R}\)</span> una función creciente. Demostrar lo siguiente:</p>
+<p><span class="theorem-title"><strong>Ejercicio 5.17 </strong></span>Sea <span class="math inline">\(f:(a,b)\to \mathbb{R}\)</span> una función creciente. Demostrar lo siguiente:</p>
 <ol type="a">
 <li>Si <span class="math inline">\(f\)</span> está acotada superiormente, entonces existe <span class="math inline">\(\lim_{x\to b^-}f(x)\)</span>.</li>
 <li>Si <span class="math inline">\(f\)</span> no está acotada superiormente, entonces <span class="math inline">\(\lim_{x\to b^-}f(x)=\infty\)</span>.</li>
 </ol>
 </div>
+<!-- 
+:::{#exr-limite-e1}
+Demostrar que $\lim_{x\to \infty} \left(1+\dfrac{1}{x}\rifht)^x = e$ usando el [teorema de compresión de funciones](https://aprendeconalf.es/analisis-manual/limites.html#thm-compresión-funciones). 
+:::
+
+:::{#exr-limite-e2}
+Demostrar que $\lim_{x\to 0} (1+x)^{1/x} = e$.
+::: -->
 
 
 
