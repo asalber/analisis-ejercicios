@@ -223,13 +223,31 @@ b. $\lim_{x\to 3^+}f(x)=+\infty$, $\lim_{x\to 3^-}f(x)=-\infty$ y $\lim_{x\to \i
 c. $\lim_{x\to 0^+}f(x)=+\infty$ y $\lim_{x\to \infty}f(x)=-\infty$
 :::
 
+:::{.callout-tip collapse="true"}
+## Solución
+a. $f(x)=\frac{1}{x^2}$.
+
+a. $g(x)=\frac{x}{x-3}$.
+
+a. $h(x)=-\ln(x)$.
+:::
+
 :::{#exr-limite-laterales}
 $\star$
 Sea $g(x)=e^{1/x}$ $\forall x\neq 0$. Demostrar que no existe el límite de $g$ en $0$.
 :::
 
+:::{.callout-tip collapse="true"}
+## Solución
+Basta con probar que el límite lateral por la derecha no existe. Para ello, tomando la sucesión de términos positivos $\left(\frac{1}{n}\right)_1^\infty$ que converge a $0$, se tiene que
+
+$$
+\lim_{n\to\infty}g\left(\frac{1}{n}\right) = \lim_{n\to\infty}e^{\frac{1}{1/n}} =  \lim_{n\to\infty}e^n = \infty.
+$$
+Así pues, según el criterio de las sucesiones convergentes, no existe el límite por la derecha de $g$ en $0$, y por tanto tampoco existe el límite.
+:::
+
 :::{#exr-limites-laterales}
-$\star$
 Dada la función 
 
 $$
@@ -242,10 +260,35 @@ $$
 con $a\in\mathbb{R}$. ¿Para que valor de $a$ existe el límite de $f$ en $1$?
 :::
 
+:::{.callout-tip collapse="true"}
+## Solución
+Los límtes laterales en 1 valen 
+
+$\lim_{x\to 1^-} f(x) = \lim_{x\to 1^-} x^2 = 1^2 = 1.$
+$\lim_{x\to 1^+} f(x) = \lim_{x\to 1^+} ax-1 = a-1.$
+
+Para que exista el límite de $f$ en $1$ debe ser $\lim_{x\to 1^-}f(x)=\lim_{x\to 1^+}f(x)$, es decir, $1=a-1$, luego debe ser $a=2$.
+:::
+
 :::{#exr-limites-laterales-2}
 $\star$
 Calcular los límites laterales de la función
-$f(x)=\dfrac{1}{1+e^{\frac{1}{1-x}}}$ en el punto $x=1$.
+$f(x)=\dfrac{1}{1+e^{\frac{1}{1-x}}}$ en el punto $x=1$. ¿Existe el límite en ese punto?
+:::
+
+:::{.callout-tip collapse="true"}
+## Solución
+\begin{align*}
+\lim_{x\to 1^-}f(x) &= \lim_{x\to 1^-} \frac{1}{1+e^{\frac{1}{1-x}}} = \frac{1}{1+\lim_{x\to 1^-}e^\frac{1}{1-x}}\\ 
+&= \frac{1}{1+e^{\lim_{x\to 1^-}\frac{1}{1-x}}} =  \frac{1}{1+e^\infty} = \frac{1}{1+\infty} = 0.
+\end{align*}
+
+\begin{align*}
+\lim_{x\to 1^+}f(x) &= \lim_{x\to 1^+} \frac{1}{1+e^{\frac{1}{1-x}}} = \frac{1}{1+\lim_{x\to 1^+}e^\frac{1}{1-x}}\\ 
+&= \frac{1}{1+e^{\lim_{x\to 1^+}\frac{1}{1-x}}} =  \frac{1}{1+e^{-\infty}} = \frac{1}{1+0} = 1.
+\end{align*}
+
+Como los límites laterales son distintos, no existe el límite de $f$ en $1$.
 :::
 
 :::{#exr-asintotas}
@@ -270,6 +313,36 @@ a. $k(x)=\cos x-\log(\cos x)$
 :::
 :::
 :::
+
+:::{.callout-tip collapse="true"}
+## Solución
+a. $f$ está definida en $\mathbb{R}$, así que no tiene asíntotas verticales. 
+
+    Para ver si $f$ tiene asíntotas horizontales estudiamos los límites en el infinito. Cuando $x\to -\infty$ $(1-x)e^x\to -\infty\cdot 0$ que es indeterminado. Transformando la indeterminación en una de tipo cociente
+
+    \begin{align*}
+    \lim_{x\to -\infty}(1-x)e^x &= \lim_{x\to -\infty}\frac{1-x}{e^-x} = \lim_{x\to -\infty}\frac{1}{e^{-x}}- \lim_{x\to -\infty} \frac{-x}{e^{-x}}\\ 
+    &= 0 -\lim_{x\to -\infty}\frac{-x}{e^{-x}}.
+    \end{align*}
+
+    Por otro lado $\forall x<0$ se cumple que $e^{-x}\geq x^2$ $0\leq \frac{-x}{e^{-x}}\leq \frac{-x}{x^2}=\frac{1}{x}$, y como $\lim_{x\to -\infty}\frac{-1}{x}=0$, por el teorema de compresión de funciones se tiene que $\lim_{x\to -\infty}\frac{-x}{e^{-x}} = 0$.
+
+    Así pues, $y=0$ es una asíntota horizontal en $-\infty$.
+
+    Por otro lado, $\lim_{x\to \infty}(1-x)e^x = -\infty*\infty = -\infty$, de modo que no hay asíntota horizontal en $\infty$.
+
+    Finalmente para ver si $f$ tiene asíntotas oblicuas, estudiamos estudiamos el límite de $f(x)/x$ en $\infty$ (en $-\infty$ no puede haber asíntota oblicua porque existe una horizontal).
+
+    $$
+    \lim_{x\to \infty}\frac{(1-x)e^x}{x} = \lim_{x\to \infty} \frac{1-x}{x}\lim_{x\to \infty}e^x = -1\cdot \infty = -\infty.
+    $$
+
+    Por tanto, tampoco existe asíntota oblicua en $\infty$.
+
+a. 
+:::
+
+
 
 :::{#exr-acuifero}
 $\star$

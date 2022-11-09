@@ -367,11 +367,50 @@ Solución
 <li><p><span class="math inline">\(\lim_{x\to 0^+}f(x)=+\infty\)</span> y <span class="math inline">\(\lim_{x\to \infty}f(x)=-\infty\)</span></p></li>
 </ol>
 </div>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="a">
+<li><p><span class="math inline">\(f(x)=\frac{1}{x^2}\)</span>.</p></li>
+<li><p><span class="math inline">\(g(x)=\frac{x}{x-3}\)</span>.</p></li>
+<li><p><span class="math inline">\(h(x)=-\ln(x)\)</span>.</p></li>
+</ol>
+</div>
+</div>
+</div>
 <div id="exr-limite-laterales" class="theorem exercise">
 <p><span class="theorem-title"><strong>Ejercicio 5.11 </strong></span><span class="math inline">\(\star\)</span> Sea <span class="math inline">\(g(x)=e^{1/x}\)</span> <span class="math inline">\(\forall x\neq 0\)</span>. Demostrar que no existe el límite de <span class="math inline">\(g\)</span> en <span class="math inline">\(0\)</span>.</p>
 </div>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Basta con probar que el límite lateral por la derecha no existe. Para ello, tomando la sucesión de términos positivos <span class="math inline">\(\left(\frac{1}{n}\right)_1^\infty\)</span> que converge a <span class="math inline">\(0\)</span>, se tiene que</p>
+<p><span class="math display">\[
+\lim_{n\to\infty}g\left(\frac{1}{n}\right) = \lim_{n\to\infty}e^{\frac{1}{1/n}} =  \lim_{n\to\infty}e^n = \infty.
+\]</span> Así pues, según el criterio de las sucesiones convergentes, no existe el límite por la derecha de <span class="math inline">\(g\)</span> en <span class="math inline">\(0\)</span>, y por tanto tampoco existe el límite.</p>
+</div>
+</div>
+</div>
 <div id="exr-limites-laterales" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 5.12 </strong></span><span class="math inline">\(\star\)</span> Dada la función</p>
+<p><span class="theorem-title"><strong>Ejercicio 5.12 </strong></span>Dada la función</p>
 <p><span class="math display">\[
 f(x)=\begin{cases}
 x^2, \mbox{si } x\leq 1,\\
@@ -380,8 +419,50 @@ ax-1, \mbox{si } x&gt;1
 \]</span></p>
 <p>con <span class="math inline">\(a\in\mathbb{R}\)</span>. ¿Para que valor de <span class="math inline">\(a\)</span> existe el límite de <span class="math inline">\(f\)</span> en <span class="math inline">\(1\)</span>?</p>
 </div>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Los límtes laterales en 1 valen</p>
+<p><span class="math inline">\(\lim_{x\to 1^-} f(x) = \lim_{x\to 1^-} x^2 = 1^2 = 1.\)</span> <span class="math inline">\(\lim_{x\to 1^+} f(x) = \lim_{x\to 1^+} ax-1 = a-1.\)</span></p>
+<p>Para que exista el límite de <span class="math inline">\(f\)</span> en <span class="math inline">\(1\)</span> debe ser <span class="math inline">\(\lim_{x\to 1^-}f(x)=\lim_{x\to 1^+}f(x)\)</span>, es decir, <span class="math inline">\(1=a-1\)</span>, luego debe ser <span class="math inline">\(a=2\)</span>.</p>
+</div>
+</div>
+</div>
 <div id="exr-limites-laterales-2" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 5.13 </strong></span><span class="math inline">\(\star\)</span> Calcular los límites laterales de la función <span class="math inline">\(f(x)=\dfrac{1}{1+e^{\frac{1}{1-x}}}\)</span> en el punto <span class="math inline">\(x=1\)</span>.</p>
+<p><span class="theorem-title"><strong>Ejercicio 5.13 </strong></span><span class="math inline">\(\star\)</span> Calcular los límites laterales de la función <span class="math inline">\(f(x)=\dfrac{1}{1+e^{\frac{1}{1-x}}}\)</span> en el punto <span class="math inline">\(x=1\)</span>. ¿Existe el límite en ese punto?</p>
+</div>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-6" class="callout-6-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><span class="math display">\[\begin{align*}
+\lim_{x\to 1^-}f(x) &amp;= \lim_{x\to 1^-} \frac{1}{1+e^{\frac{1}{1-x}}} = \frac{1}{1+\lim_{x\to 1^-}e^\frac{1}{1-x}}\\
+&amp;= \frac{1}{1+e^{\lim_{x\to 1^-}\frac{1}{1-x}}} =  \frac{1}{1+e^\infty} = \frac{1}{1+\infty} = 0.
+\end{align*}\]</span></p>
+<p><span class="math display">\[\begin{align*}
+\lim_{x\to 1^+}f(x) &amp;= \lim_{x\to 1^+} \frac{1}{1+e^{\frac{1}{1-x}}} = \frac{1}{1+\lim_{x\to 1^+}e^\frac{1}{1-x}}\\
+&amp;= \frac{1}{1+e^{\lim_{x\to 1^+}\frac{1}{1-x}}} =  \frac{1}{1+e^{-\infty}} = \frac{1}{1+0} = 1.
+\end{align*}\]</span></p>
+<p>Como los límites laterales son distintos, no existe el límite de <span class="math inline">\(f\)</span> en <span class="math inline">\(1\)</span>.</p>
+</div>
+</div>
 </div>
 <div id="exr-asintotas" class="theorem exercise">
 <p><span class="theorem-title"><strong>Ejercicio 5.14 </strong></span><span class="math inline">\(\star\)</span> Calcular las asíntotas de las siguientes funciones:</p>
@@ -397,6 +478,38 @@ ax-1, \mbox{si } x&gt;1
 <li><p><span class="math inline">\(i(x)=\log(x^2+3x+2)\)</span></p></li>
 <li><p><span class="math inline">\(j(x)=\dfrac{x^3}{(x+1)^2}\)</span></p></li>
 <li><p><span class="math inline">\(k(x)=\cos x-\log(\cos x)\)</span></p></li>
+</ol>
+</div>
+</div>
+</div>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-7" class="callout-7-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="a">
+<li><p><span class="math inline">\(f\)</span> está definida en <span class="math inline">\(\mathbb{R}\)</span>, así que no tiene asíntotas verticales.</p>
+<p>Para ver si <span class="math inline">\(f\)</span> tiene asíntotas horizontales estudiamos los límites en el infinito. Cuando <span class="math inline">\(x\to -\infty\)</span> <span class="math inline">\((1-x)e^x\to -\infty\cdot 0\)</span> que es indeterminado. Transformando la indeterminación en una de tipo cociente</p>
+<p><span class="math display">\[\begin{align*}
+\lim_{x\to -\infty}(1-x)e^x &amp;= \lim_{x\to -\infty}\frac{1-x}{e^-x} = \lim_{x\to -\infty}\frac{1}{e^{-x}}- \lim_{x\to -\infty} \frac{-x}{e^{-x}}\\
+&amp;= 0 -\lim_{x\to -\infty}\frac{-x}{e^{-x}}.
+\end{align*}\]</span></p>
+<p>Por otro lado <span class="math inline">\(\forall x&lt;0\)</span> se cumple que <span class="math inline">\(e^{-x}\geq x^2\)</span> <span class="math inline">\(0\leq \frac{-x}{e^{-x}}\leq \frac{-x}{x^2}=\frac{1}{x}\)</span>, y como <span class="math inline">\(\lim_{x\to -\infty}\frac{-1}{x}=0\)</span>, por el teorema de compresión de funciones se tiene que <span class="math inline">\(\lim_{x\to -\infty}\frac{-x}{e^{-x}} = 0\)</span>.</p>
+<p>Así pues, <span class="math inline">\(y=0\)</span> es una asíntota horizontal en <span class="math inline">\(-\infty\)</span>.</p>
+<p>Por otro lado, <span class="math inline">\(\lim_{x\to \infty}(1-x)e^x = -\infty*\infty = -\infty\)</span>, de modo que no hay asíntota horizontal en <span class="math inline">\(\infty\)</span>.</p>
+<p>Finalmente para ver si <span class="math inline">\(f\)</span> tiene asíntotas oblicuas, estudiamos estudiamos el límite de <span class="math inline">\(f(x)/x\)</span> en <span class="math inline">\(\infty\)</span> (en <span class="math inline">\(-\infty\)</span> no puede haber asíntota oblicua porque existe una horizontal).</p>
+<p><span class="math display">\[
+\lim_{x\to \infty}\frac{(1-x)e^x}{x} = \lim_{x\to \infty} \frac{1-x}{x}\lim_{x\to \infty}e^x = -1\cdot \infty = -\infty.
+\]</span></p>
+<p>Por tanto, tampoco existe asíntota oblicua en <span class="math inline">\(\infty\)</span>.</p></li>
+<li></li>
 </ol>
 </div>
 </div>
