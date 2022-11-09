@@ -6,6 +6,7 @@ lang: es
 # Números reales
 
 :::{#exr-supremos-infimos-reales}
+$\star$
 Para los siguientes subconjuntos de números reales, determinar si están acotados por arriba o por abajo, y en tal caso dar el supremo o el ínfimo.
 
 a. $A = \{-1,0,1\}$
@@ -85,6 +86,7 @@ de manera que $-c$ es cota superior de $A'$.
 :::
 
 :::{#exr-propiedad-infimo}
+$\star$
 Demostrar que todo subconjunto no vacío de números reales acotado inferiormente tiene un ínfimo.
 :::
 
@@ -117,6 +119,7 @@ Veamos todas las posibilidades que pueden darse:
 :::
 
 :::{#exr-propiedad-arquimediana-1}
+$\star$
 Usando la propiedad arquimediana de los números reales, demostrar que para cualquier número real $a\in\mathbb{R}$ con $a>0$ existe un número natural $n$
 tal que $n-1\leq a< n$. 
 :::

@@ -68,6 +68,7 @@ Veamos finalmente que si $0<c<1$ entonces la sucesión converge a $0$.
 :::
 
 :::{#exr-sucesion-alternada}
+$\star$
 Una _sucesión alternada_ es una sucesión de números reales en la que cada término tiene signo distinto del anterior. Demostrar que la sucesión alternada $((-1)^n)_{n=1}^\infty$ es divergente. ¿Puede una sucesión alternada ser convergente?
 :::
 
@@ -100,6 +101,7 @@ c. Para refutar la afirmación habría que encontrar un banco en el que ningún 
 :::
 
 :::{#exr-ejemplo-sucesiones-1}
+$\star$
 Dar un ejemplo de sucesión que cumpla las siguientes condiciones, o, en caso de no existir ninguna, explicar porqué.
 
 a. Una sucesión con un número infinito de ceros que no converge a 0.
@@ -121,6 +123,7 @@ c. La sucesión $0, 1, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, \ldots$.
 :::
 
 :::{#exr-limites-sucesiones}
+$\star$
 Demostrar, aplicando la definición de límite de una sucesión, que las siguientes sucesiones de números reales convergen a los valores dados.
 
 a. $\lim_{n\to\infty}\frac{2n}{n^2}=0$
@@ -157,6 +160,7 @@ c.
 :::
 
 :::{#exr-ejemplo-sucesiones-2}
+$\star$
 Dar un ejemplo de sucesiones que cumplan las siguientes condiciones, o, en caso de no existir ninguna, explicar porqué.
 
 a. Dos sucesiones $(x_n)_{n=1}^\infty$ e $(y_n)_{n=1}^\infty$ que divergen pero $(x_n+y_n)_{n=1}^\infty$ converge.
@@ -257,6 +261,7 @@ Luego $\lim_{n\to\infty}x_ny_n = 0$.
 :::
 
 :::{#exr-compresion-sucesiones}
+$\star$
 Demostrar las siguientes sucesiones convergen a $0$.
 
 a. $\left(\frac{n+\cos(n)}{n^2+1}\right)_{n=1}^\infty$
@@ -294,6 +299,7 @@ por el [criterio del cociente](https://aprendeconalf.es/analisis-manual/sucesion
 :::
 
 :::{#exr-sucesiones-monotonas}
+$\star$
 Demostrar que las siguientes sucesiones de números reales son monótonas y calcular su límite cuando exista.
 
 a. $\left(\frac{3n}{2n^2}\right)_{n=1}^\infty$
@@ -373,6 +379,7 @@ e. Veamos que la sucesión es creciente por inducción. $x_1=1<2=x_2$. Supongamo
 :::
 
 :::{#exr-numero-aureo}
+$\star$
 Dado un segmento como el de la figura de más abajo,
 
 <!-- ::: {.content-visible when-format="html"} -->
@@ -469,6 +476,7 @@ c. Veamos que la proposición es falsa con un contraejemplo. La sucesión $x_1=1
 :::
 
 :::{#exr-sucesion-intereses}
+$\star$
 Una cuenta de ahorro ofrece el primer año un tipo de interés $x_1=0.5\%$ y los años sucesivos un interés $x_{n+1}=\frac{3}{2+x_n}\%$. Si se mantiene la cuenta abierta por un periodo indefinido, ¿hacia donde tienden los tipos de interés?
 :::
 

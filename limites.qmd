@@ -14,10 +14,12 @@ Sea $f(x)=c$ una función constante. Demostrar que $\lim_{x\to a}f(x)=c$ $\foral
 ::: -->
 
 :::{#exr-definicion-limite}
+$\star$
 Dada la función $f(x)=4x-10$, demostrar usando la definición de límite que $\lim_{x\to 3}f(x)=2$.  
 :::
 
 :::{#exr-limite-criterio-sucesiones}
+$\star$
 Dada la función $f(x)=\frac{|x|}{x}$, usar el criterio de las sucesiones para demostrar que no existe el límite de $f$ en $0$. 
 :::
 
@@ -34,6 +36,7 @@ se conoce como la _función de Dirichlet_. Demostrar que no existe el límite de
 :::
 
 :::{#exr-limite-coseno}
+$\star$
 Demostrar que no existe $\lim_{x\to 0}\cos\left(\frac{1}{x}\right)$.
 :::
 
@@ -46,6 +49,7 @@ Dada una función racional $f(x)=\frac{p(x)}{q(x)}$ $\forall x\in\mathbb{R}$ tal
 :::
 
 :::{#exr-limite-emparedado}
+$\star$
 Demostrar, haciendo uso del [teorema de compresión de funciones](https://aprendeconalf.es/analisis-manual/limites.html#thm-compresión-funciones) que $\lim_{x\to 0}\frac{1-\cos(x)}{x} = 0$.
 :::
 
@@ -59,6 +63,7 @@ Demostrar, haciendo uso del [teorema de compresión de funciones](https://aprend
 :::
 
 :::{#exr-limites-1}
+$\star$
 Calcular los siguientes límites si existen:
 
 :::: {.columns}
@@ -208,6 +213,7 @@ a. $\displaystyle \lim_{x\to \pi/2}\sec x-\operatorname{tg}(x)$
 :::
 
 :::{#exr-ejemplos-limites-laterales}
+$\star$
 Dar ejemplo de funciones que cumplan las siguientes condiciones:
 
 a. $\lim_{x\to 0}f(x)=+\infty$ y $\lim_{x\to \infty}f(x)=0$.
@@ -218,10 +224,12 @@ c. $\lim_{x\to 0^+}f(x)=+\infty$ y $\lim_{x\to \infty}f(x)=-\infty$
 :::
 
 :::{#exr-limite-laterales}
+$\star$
 Sea $g(x)=e^{1/x}$ $\forall x\neq 0$. Demostrar que no existe el límite de $g$ en $0$.
 :::
 
 :::{#exr-limites-laterales}
+$\star$
 Dada la función 
 
 $$
@@ -235,11 +243,13 @@ con $a\in\mathbb{R}$. ¿Para que valor de $a$ existe el límite de $f$ en $1$?
 :::
 
 :::{#exr-limites-laterales-2}
+$\star$
 Calcular los límites laterales de la función
 $f(x)=\dfrac{1}{1+e^{\frac{1}{1-x}}}$ en el punto $x=1$.
 :::
 
 :::{#exr-asintotas}
+$\star$
 Calcular las asíntotas de las siguientes funciones:
 
 :::: {.columns}
@@ -262,6 +272,7 @@ a. $k(x)=\cos x-\log(\cos x)$
 :::
 
 :::{#exr-acuifero}
+$\star$
 Mediante simulación por ordenador se ha podido cuantificar la cantidad de agua almacenada en un
 acuífero en función del tiempo, $m(t)$, en millones de metros cúbicos, y el tiempo $t$ en años transcurridos
 desde el instante en el que se ha hecho la simulación, teniendo en cuenta que la ecuación sólo tiene
@@ -275,6 +286,7 @@ $$
 :::
 
 :::{#exr-cosecha}
+$\star$
 La cosecha de trigo de una plantación (en toneladas) depende de la cantidad de abono $x$ según la función $f(x)=T(1-\frac{1}{2}e^{-kx})$, donde $T$ es la extensión del terreno (en hectáreas) y $k$ es la proporción de humedad. ¿Para qué cantidad de abono se conseguiría una cosecha superior a $T$ toneladas de trigo? 
 :::
 
