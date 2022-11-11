@@ -9,18 +9,45 @@ lang: es
 Sea $f(x)=c$ una función constante. Demostrar que $\lim_{x\to a}f(x)=c$ $\forall a\in\mathbb{R}$.  
 :::
 
-<!-- :::{.callout-tip collapse="true"}
+:::{.callout-tip collapse="true"}
 ## Solución
-::: -->
+Para cualquier $\varepsilon>0$ se puede tomar $\delta = 1$ tal que si $|x-a|<\delta=1$, entonces $|f(x)-c| = |c-c|=0<\varepsilon$.
+:::
 
 :::{#exr-definicion-limite}
 $\star$
 Dada la función $f(x)=4x-10$, demostrar usando la definición de límite que $\lim_{x\to 3}f(x)=2$.  
 :::
 
+:::{.callout-tip collapse="true"}
+## Solución
+Para cualquier $\varepsilon>0$ se puede tomar $\delta = \frac{\varepsilon}{4}$ tal que si $|x-3|<\delta=\frac{\varepsilon}{4}$, entonces 
+
+$$
+|f(x)-2| = |4x-10-2|= |4x-12| = 4|x-3|<4\frac{\varepsilon}{4} =\varepsilon.
+$$
+:::
+
 :::{#exr-limite-criterio-sucesiones}
 $\star$
 Dada la función $f(x)=\frac{|x|}{x}$, usar el criterio de las sucesiones para demostrar que no existe el límite de $f$ en $0$. 
+:::
+
+:::{.callout-tip collapse="true"}
+## Solución
+Tomando las sucesión $\left(\frac{-1}{n}\right)_{n=1}^\infty$ que converge a $0$, se tiene 
+
+$$
+\lim_{n\to\infty}f\left(\frac{-1}{n}\right)=\lim_{n\to\infty}\frac{|-1/n|}{-1/n} = -1.
+$$
+
+Y tomando la sucesión $\left(\frac{1}{n}\right)_{n=1}^\infty$ que también converge a $0$, se tiene
+
+$$
+\lim_{n\to\infty}f\left(\frac{1}{n}\right)=\lim_{n\to\infty}\frac{|1/n|}{1/n} = 1.
+$$
+
+Por tanto, por el criterio de las sucesiones convergentes, no existe el límite de $f$ en $0$.
 :::
 
 :::{#exr-limite-funcion-Dirichlet}
@@ -339,7 +366,40 @@ a. $f$ está definida en $\mathbb{R}$, así que no tiene asíntotas verticales.
 
     Por tanto, tampoco existe asíntota oblicua en $\infty$.
 
-a. 
+a. $g$ está definida en $\mathbb{R}\setminus \{0\}$, así que, el único punto donde pueden existir asíntotas verticales es $x=0$. Calculando los límites laterales se tiene
+
+    \begin{align*}
+    \lim_{x\to 0^-} xe^{1/x} &= \lim_{x\to 0^-}x \lim_{x\to 0^-}e^{1/x} = 0\cdot e^-\infty = 0\cdot 0 = 0.\\ 
+    \lim_{x\to 0^+} xe^{1/x} &= \lim_{x\to 0^+}\frac{e^{1/x}}{1/x} = \lim_{x\to 0^+}\frac{(e^{1/x})'}{(1/x)'} \tag{\small L'Hôpital}\\ 
+    &= \lim_{x\to 0^+}\frac{e^{1/x}(1/x)'}{(1/x)'} = \lim_{x\to 0^+}e^{1/x} = \infty. 
+    \end{align*}
+    
+    Por tanto, $g$ tiene asíntota vertical $x=0$ por la derecha, pero no por la izquierda.
+
+    Para ver si $g$ tiene asíntotas horizontales estudiamos los límites en el infinito. 
+
+    \begin{align*}
+    \lim_{x\to -\infty}xe^{1/x} &= \lim_{x\to -\infty}x \lim_{x\to -\infty}e^{1/x} = \infty * 1 = \infty.\\ 
+    \lim_{x\to \infty}xe^{1/x} &= \lim_{x\to \infty}x \lim_{x\to \infty}e^{1/x} = \infty * 1 = \infty.
+    \end{align*}
+
+    Así pues, ambos límites no existen y, por tanto, $g$ no tiene asíntotas horizontales.
+
+    Finalmente para ver si $f$ tiene asíntotas oblicuas, estudiamos estudiamos el límite de $f(x)/x$ en $\pm\infty$.
+
+    $$
+    \lim_{x\to -\infty}\frac{xe^{1/x}}{x} = \lim_{x\to -\infty} e^{1/x} = e^0 =1.
+    $$
+
+    Luego, existe una asíntota oblicua en $-\infty$ con pendiente $1$. Para ver el término independiente de la asíntota calculamos el límite de $f(x)-1\cdot x$ en $-\infty$.
+
+    \begin{align*}
+    \lim_{x\to -\infty}xe^{1/x}-x &= \lim_{x\to -\infty} x(e^{1/x}-1) = \lim_{x\to -\infty} \frac{e^{1/x}-1}{1/x} \\ 
+    &= \lim_{x\to -\infty} \frac{(e^{1/x}-1)'}{(1/x)'} \tag{\small L'Hôpital}\\ 
+    &= \lim_{x\to -\infty} \frac{e^{1/x} (1/x)'}{(1/x)'} = \lim_{x\to -\infty} e^{1/x} = 1.
+    \end{align*}
+  
+    Así pues, $g$ tiene una asíntota oblicua $y=x+1$ en $-\infty$. Del mismo modo se puede probar que esta misma recta es asíntota oblicua en $\infty$.
 :::
 
 
@@ -358,9 +418,30 @@ $$
 ¿Qué cantidad de agua almacenada habrá en el acuífero asintóticamente?
 :::
 
+:::{.callout-tip collapse="true"}
+## Solución
+Cuando $t\to\infty $\frac{\sqrt{t}}{e^t}\to \frac{\infty}{\infty}$ que es indeterminado. Aplicando la regla de L'Hôpital se tiene
+
+$$
+\lim_{t\to \infty} 10 + \frac{\sqrt{t}}{e^t} = 10 + \lim_{t\to \infty} \frac{\sqrt{t}}{e^t} = \\lim_{t\to \infty}\frac{1}{2\sqrt(t)e^t} = 10.
+$$
+
+Por tanto el volumen del lato tiende asintóticamente a 10 millones de metros cúbicos.
+:::
+
 :::{#exr-cosecha}
 $\star$
-La cosecha de trigo de una plantación (en toneladas) depende de la cantidad de abono $x$ según la función $f(x)=T(1-\frac{1}{2}e^{-kx})$, donde $T$ es la extensión del terreno (en hectáreas) y $k$ es la proporción de humedad. ¿Para qué cantidad de abono se conseguiría una cosecha superior a $T$ toneladas de trigo? 
+La cosecha de trigo de una plantación (en toneladas) depende de la cantidad de abono $x$ según la función $f(x)=T(1-\frac{1}{2}e^{-kx})$, donde $T$ es la extensión del terreno (en hectáreas) y $k$ es la proporción de humedad. ¿Para qué cantidad de abono se conseguiría una cosecha de $T$ toneladas de trigo? 
+:::
+
+:::{.callout-tip collapse="true"}
+## Solución
+Como $k>0$ se tiene $\frac{1}{2}e^{-kx} = \frac{1}{2e^{kx}} < 1$ $\forall x>0$, de manera que $f(x)<T$ $\forall x>0$. Si calculamos ahora el límite en infinito se tiene
+
+$$\lim_{x\to \infty} T(1-\frac{1}{2}e^{-kx}) = T(1-\lim_{x\to \infty}\frac{1}{2e^{kx}}) = T(1-0) = T.
+$$ 
+
+De modo la cantidad de trigo cosechada tiene asintóticamente a $T$, pero al ser menor que $T$, nunca llegará a valer $T$.
 :::
 
 :::{#exr-limites-funciones-acotadas}

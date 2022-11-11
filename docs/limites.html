@@ -197,14 +197,70 @@ ul.task-list li input[type="checkbox"] {
 <div id="exr-funcion-constante" class="theorem exercise">
 <p><span class="theorem-title"><strong>Ejercicio 5.1 </strong></span>Sea <span class="math inline">\(f(x)=c\)</span> una función constante. Demostrar que <span class="math inline">\(\lim_{x\to a}f(x)=c\)</span> <span class="math inline">\(\forall a\in\mathbb{R}\)</span>.</p>
 </div>
-<!-- :::{.callout-tip collapse="true"}
-## Solución
-::: -->
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Para cualquier <span class="math inline">\(\varepsilon&gt;0\)</span> se puede tomar <span class="math inline">\(\delta = 1\)</span> tal que si <span class="math inline">\(|x-a|&lt;\delta=1\)</span>, entonces <span class="math inline">\(|f(x)-c| = |c-c|=0&lt;\varepsilon\)</span>.</p>
+</div>
+</div>
+</div>
 <div id="exr-definicion-limite" class="theorem exercise">
 <p><span class="theorem-title"><strong>Ejercicio 5.2 </strong></span><span class="math inline">\(\star\)</span> Dada la función <span class="math inline">\(f(x)=4x-10\)</span>, demostrar usando la definición de límite que <span class="math inline">\(\lim_{x\to 3}f(x)=2\)</span>.</p>
 </div>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Para cualquier <span class="math inline">\(\varepsilon&gt;0\)</span> se puede tomar <span class="math inline">\(\delta = \frac{\varepsilon}{4}\)</span> tal que si <span class="math inline">\(|x-3|&lt;\delta=\frac{\varepsilon}{4}\)</span>, entonces</p>
+<p><span class="math display">\[
+|f(x)-2| = |4x-10-2|= |4x-12| = 4|x-3|&lt;4\frac{\varepsilon}{4} =\varepsilon.
+\]</span></p>
+</div>
+</div>
+</div>
 <div id="exr-limite-criterio-sucesiones" class="theorem exercise">
 <p><span class="theorem-title"><strong>Ejercicio 5.3 </strong></span><span class="math inline">\(\star\)</span> Dada la función <span class="math inline">\(f(x)=\frac{|x|}{x}\)</span>, usar el criterio de las sucesiones para demostrar que no existe el límite de <span class="math inline">\(f\)</span> en <span class="math inline">\(0\)</span>.</p>
+</div>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Tomando las sucesión <span class="math inline">\(\left(\frac{-1}{n}\right)_{n=1}^\infty\)</span> que converge a <span class="math inline">\(0\)</span>, se tiene</p>
+<p><span class="math display">\[
+\lim_{n\to\infty}f\left(\frac{-1}{n}\right)=\lim_{n\to\infty}\frac{|-1/n|}{-1/n} = -1.
+\]</span></p>
+<p>Y tomando la sucesión <span class="math inline">\(\left(\frac{1}{n}\right)_{n=1}^\infty\)</span> que también converge a <span class="math inline">\(0\)</span>, se tiene</p>
+<p><span class="math display">\[
+\lim_{n\to\infty}f\left(\frac{1}{n}\right)=\lim_{n\to\infty}\frac{|1/n|}{1/n} = 1.
+\]</span></p>
+<p>Por tanto, por el criterio de las sucesiones convergentes, no existe el límite de <span class="math inline">\(f\)</span> en <span class="math inline">\(0\)</span>.</p>
+</div>
+</div>
 </div>
 <div id="exr-limite-funcion-Dirichlet" class="theorem exercise">
 <p><span class="theorem-title"><strong>Ejercicio 5.4 </strong></span>La función <span class="math inline">\(f:\mathbb{R}\to \mathbb{R}\)</span> dada por</p>
@@ -228,7 +284,7 @@ f(x)=\begin{cases}
 <p><span class="theorem-title"><strong>Ejercicio 5.8 </strong></span><span class="math inline">\(\star\)</span> Demostrar, haciendo uso del <a href="https://aprendeconalf.es/analisis-manual/limites.html#thm-compresión-funciones">teorema de compresión de funciones</a> que <span class="math inline">\(\lim_{x\to 0}\frac{1-\cos(x)}{x} = 0\)</span>.</p>
 </div>
 <div class="callout-tip callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -237,7 +293,7 @@ Solución
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p><span class="math display">\[\begin{align*}
 \lim_{x\to 0}\frac{1-\cos(x)}{x} &amp;= \lim_{x\to 0}\frac{(1-\cos(x))(1+\cos(x))}{x(1+\cos(x))} =  \lim_{x\to 0}\frac{1-\cos(x)^2}{x(1+\cos(x))}\\
@@ -278,7 +334,7 @@ Solución
 </div>
 </div>
 <div class="callout-tip callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -287,7 +343,7 @@ Solución
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ol type="a">
 <li><p><span class="math inline">\(\displaystyle \lim_{x\to 2} \dfrac{x^2+x-6}{x-2} = \lim_{x\to 2} \dfrac{(x+3)(x-2)}{x-2} = \lim_{x\to 2} \frac{x+3}{1}=5\)</span>.</p></li>
@@ -368,7 +424,7 @@ Solución
 </ol>
 </div>
 <div class="callout-tip callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -377,7 +433,7 @@ Solución
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div id="callout-6" class="callout-6-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ol type="a">
 <li><p><span class="math inline">\(f(x)=\frac{1}{x^2}\)</span>.</p></li>
@@ -391,7 +447,7 @@ Solución
 <p><span class="theorem-title"><strong>Ejercicio 5.11 </strong></span><span class="math inline">\(\star\)</span> Sea <span class="math inline">\(g(x)=e^{1/x}\)</span> <span class="math inline">\(\forall x\neq 0\)</span>. Demostrar que no existe el límite de <span class="math inline">\(g\)</span> en <span class="math inline">\(0\)</span>.</p>
 </div>
 <div class="callout-tip callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -400,7 +456,7 @@ Solución
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div id="callout-7" class="callout-7-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Basta con probar que el límite lateral por la derecha no existe. Para ello, tomando la sucesión de términos positivos <span class="math inline">\(\left(\frac{1}{n}\right)_1^\infty\)</span> que converge a <span class="math inline">\(0\)</span>, se tiene que</p>
 <p><span class="math display">\[
@@ -420,7 +476,7 @@ ax-1, \mbox{si } x&gt;1
 <p>con <span class="math inline">\(a\in\mathbb{R}\)</span>. ¿Para que valor de <span class="math inline">\(a\)</span> existe el límite de <span class="math inline">\(f\)</span> en <span class="math inline">\(1\)</span>?</p>
 </div>
 <div class="callout-tip callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -429,7 +485,7 @@ Solución
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div id="callout-8" class="callout-8-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Los límtes laterales en 1 valen</p>
 <p><span class="math inline">\(\lim_{x\to 1^-} f(x) = \lim_{x\to 1^-} x^2 = 1^2 = 1.\)</span> <span class="math inline">\(\lim_{x\to 1^+} f(x) = \lim_{x\to 1^+} ax-1 = a-1.\)</span></p>
@@ -441,7 +497,7 @@ Solución
 <p><span class="theorem-title"><strong>Ejercicio 5.13 </strong></span><span class="math inline">\(\star\)</span> Calcular los límites laterales de la función <span class="math inline">\(f(x)=\dfrac{1}{1+e^{\frac{1}{1-x}}}\)</span> en el punto <span class="math inline">\(x=1\)</span>. ¿Existe el límite en ese punto?</p>
 </div>
 <div class="callout-tip callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -450,7 +506,7 @@ Solución
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-6" class="callout-6-contents callout-collapse collapse">
+<div id="callout-9" class="callout-9-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p><span class="math display">\[\begin{align*}
 \lim_{x\to 1^-}f(x) &amp;= \lim_{x\to 1^-} \frac{1}{1+e^{\frac{1}{1-x}}} = \frac{1}{1+\lim_{x\to 1^-}e^\frac{1}{1-x}}\\
@@ -483,7 +539,7 @@ Solución
 </div>
 </div>
 <div class="callout-tip callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -492,7 +548,7 @@ Solución
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-7" class="callout-7-contents callout-collapse collapse">
+<div id="callout-10" class="callout-10-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ol type="a">
 <li><p><span class="math inline">\(f\)</span> está definida en <span class="math inline">\(\mathbb{R}\)</span>, así que no tiene asíntotas verticales.</p>
@@ -509,7 +565,30 @@ Solución
 \lim_{x\to \infty}\frac{(1-x)e^x}{x} = \lim_{x\to \infty} \frac{1-x}{x}\lim_{x\to \infty}e^x = -1\cdot \infty = -\infty.
 \]</span></p>
 <p>Por tanto, tampoco existe asíntota oblicua en <span class="math inline">\(\infty\)</span>.</p></li>
-<li></li>
+<li><p><span class="math inline">\(g\)</span> está definida en <span class="math inline">\(\mathbb{R}\setminus \{0\}\)</span>, así que, el único punto donde pueden existir asíntotas verticales es <span class="math inline">\(x=0\)</span>. Calculando los límites laterales se tiene</p>
+<p><span class="math display">\[\begin{align*}
+\lim_{x\to 0^-} xe^{1/x} &amp;= \lim_{x\to 0^-}x \lim_{x\to 0^-}e^{1/x} = 0\cdot e^-\infty = 0\cdot 0 = 0.\\
+\lim_{x\to 0^+} xe^{1/x} &amp;= \lim_{x\to 0^+}\frac{e^{1/x}}{1/x} = \lim_{x\to 0^+}\frac{(e^{1/x})'}{(1/x)'} \tag{\small L'Hôpital}\\
+&amp;= \lim_{x\to 0^+}\frac{e^{1/x}(1/x)'}{(1/x)'} = \lim_{x\to 0^+}e^{1/x} = \infty.
+\end{align*}\]</span></p>
+<p>Por tanto, <span class="math inline">\(g\)</span> tiene asíntota vertical <span class="math inline">\(x=0\)</span> por la derecha, pero no por la izquierda.</p>
+<p>Para ver si <span class="math inline">\(g\)</span> tiene asíntotas horizontales estudiamos los límites en el infinito.</p>
+<p><span class="math display">\[\begin{align*}
+\lim_{x\to -\infty}xe^{1/x} &amp;= \lim_{x\to -\infty}x \lim_{x\to -\infty}e^{1/x} = \infty * 1 = \infty.\\
+\lim_{x\to \infty}xe^{1/x} &amp;= \lim_{x\to \infty}x \lim_{x\to \infty}e^{1/x} = \infty * 1 = \infty.
+\end{align*}\]</span></p>
+<p>Así pues, ambos límites no existen y, por tanto, <span class="math inline">\(g\)</span> no tiene asíntotas horizontales.</p>
+<p>Finalmente para ver si <span class="math inline">\(f\)</span> tiene asíntotas oblicuas, estudiamos estudiamos el límite de <span class="math inline">\(f(x)/x\)</span> en <span class="math inline">\(\pm\infty\)</span>.</p>
+<p><span class="math display">\[
+\lim_{x\to -\infty}\frac{xe^{1/x}}{x} = \lim_{x\to -\infty} e^{1/x} = e^0 =1.
+\]</span></p>
+<p>Luego, existe una asíntota oblicua en <span class="math inline">\(-\infty\)</span> con pendiente <span class="math inline">\(1\)</span>. Para ver el término independiente de la asíntota calculamos el límite de <span class="math inline">\(f(x)-1\cdot x\)</span> en <span class="math inline">\(-\infty\)</span>.</p>
+<p><span class="math display">\[\begin{align*}
+\lim_{x\to -\infty}xe^{1/x}-x &amp;= \lim_{x\to -\infty} x(e^{1/x}-1) = \lim_{x\to -\infty} \frac{e^{1/x}-1}{1/x} \\
+&amp;= \lim_{x\to -\infty} \frac{(e^{1/x}-1)'}{(1/x)'} \tag{\small L'Hôpital}\\
+&amp;= \lim_{x\to -\infty} \frac{e^{1/x} (1/x)'}{(1/x)'} = \lim_{x\to -\infty} e^{1/x} = 1.
+\end{align*}\]</span></p>
+<p>Así pues, <span class="math inline">\(g\)</span> tiene una asíntota oblicua <span class="math inline">\(y=x+1\)</span> en <span class="math inline">\(-\infty\)</span>. Del mismo modo se puede probar que esta misma recta es asíntota oblicua en <span class="math inline">\(\infty\)</span>.</p></li>
 </ol>
 </div>
 </div>
@@ -521,8 +600,47 @@ m(t) = 10 + \frac{\sqrt{t}}{e^t}
 \]</span></p>
 <p>¿Qué cantidad de agua almacenada habrá en el acuífero asintóticamente?</p>
 </div>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-11" class="callout-11-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Cuando $t<span class="math inline">\(\frac{\sqrt{t}}{e^t}\to \frac{\infty}{\infty}\)</span> que es indeterminado. Aplicando la regla de L’Hôpital se tiene</p>
+<p><span class="math display">\[
+\lim_{t\to \infty} 10 + \frac{\sqrt{t}}{e^t} = 10 + \lim_{t\to \infty} \frac{\sqrt{t}}{e^t} = \\lim_{t\to \infty}\frac{1}{2\sqrt(t)e^t} = 10.
+\]</span></p>
+<p>Por tanto el volumen del lato tiende asintóticamente a 10 millones de metros cúbicos.</p>
+</div>
+</div>
+</div>
 <div id="exr-cosecha" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 5.16 </strong></span><span class="math inline">\(\star\)</span> La cosecha de trigo de una plantación (en toneladas) depende de la cantidad de abono <span class="math inline">\(x\)</span> según la función <span class="math inline">\(f(x)=T(1-\frac{1}{2}e^{-kx})\)</span>, donde <span class="math inline">\(T\)</span> es la extensión del terreno (en hectáreas) y <span class="math inline">\(k\)</span> es la proporción de humedad. ¿Para qué cantidad de abono se conseguiría una cosecha superior a <span class="math inline">\(T\)</span> toneladas de trigo?</p>
+<p><span class="theorem-title"><strong>Ejercicio 5.16 </strong></span><span class="math inline">\(\star\)</span> La cosecha de trigo de una plantación (en toneladas) depende de la cantidad de abono <span class="math inline">\(x\)</span> según la función <span class="math inline">\(f(x)=T(1-\frac{1}{2}e^{-kx})\)</span>, donde <span class="math inline">\(T\)</span> es la extensión del terreno (en hectáreas) y <span class="math inline">\(k\)</span> es la proporción de humedad. ¿Para qué cantidad de abono se conseguiría una cosecha de <span class="math inline">\(T\)</span> toneladas de trigo?</p>
+</div>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-12-contents" aria-controls="callout-12" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-12" class="callout-12-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Como <span class="math inline">\(k&gt;0\)</span> se tiene <span class="math inline">\(\frac{1}{2}e^{-kx} = \frac{1}{2e^{kx}} &lt; 1\)</span> <span class="math inline">\(\forall x&gt;0\)</span>, de manera que <span class="math inline">\(f(x)&lt;T\)</span> <span class="math inline">\(\forall x&gt;0\)</span>. Si calculamos ahora el límite en infinito se tiene</p>
+<p><span class="math display">\[\lim_{x\to \infty} T(1-\frac{1}{2}e^{-kx}) = T(1-\lim_{x\to \infty}\frac{1}{2e^{kx}}) = T(1-0) = T.
+\]</span></p>
+<p>De modo la cantidad de trigo cosechada tiene asintóticamente a <span class="math inline">\(T\)</span>, pero al ser menor que <span class="math inline">\(T\)</span>, nunca llegará a valer <span class="math inline">\(T\)</span>.</p>
+</div>
+</div>
 </div>
 <div id="exr-limites-funciones-acotadas" class="theorem exercise">
 <p><span class="theorem-title"><strong>Ejercicio 5.17 </strong></span>Sea <span class="math inline">\(f:(a,b)\to \mathbb{R}\)</span> una función creciente. Demostrar lo siguiente:</p>
