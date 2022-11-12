@@ -62,17 +62,62 @@ $$
 se conoce como la _función de Dirichlet_. Demostrar que no existe el límite de $f$ en cualquier número real.
 :::
 
+:::{.callout-tip collapse="true"}
+## Solución
+Tomemos cualquier $a\in\mathbb{R}$ y sea $(x_n)_{n=1}^\infty$ una sucesión de números racionales que converja a $a$. Entonces la sucesión $(f(x_n))_{n=1}^\infty = (1)_{n=1}^\infty$ que converge a $1$. Por otro lado, sea $(y_n)_{n=1}^\infty$ una sucesión de números irracionales que converja a $a$. Entonces la sucesión $(f(y_n))_{n=1}^\infty = (0)_{n=1}^\infty$ que converge a $0$. Por tanto, por el criterio de la sucesiones convergentes no existe el límite de $f$ en $a$. 
+:::
+
 :::{#exr-limite-coseno}
 $\star$
 Demostrar que no existe $\lim_{x\to 0}\cos\left(\frac{1}{x}\right)$.
+:::
+
+:::{.callout-tip collapse="true"}
+## Solución
+Tomando la sucesión $\left(\frac{1}{(2n-1)\pi/2}\right)_{n=1}^\infty$ que converge a $0$, se tiene que 
+
+$$
+\lim_{n\to\infty}\cos\left(\frac{1}{\frac{1}{(2n+1)\pi/2}}\right) = \lim_{n\to\infty
+}\cos((2n-1)\pi/2) = 0.
+$$
+
+Y tomando la sucesión $\left(\frac{1}{2n\pi}\right)_{n=1}^\infty$, que también converge a $0$, se tiene que 
+
+$$
+\lim_{n\to\infty}\cos\left(\frac{1}{\frac{1}{2n\pi}}\right) = \lim_{n\to\infty
+}\cos(2n\pi) = 1.
+$$
+
+Por tanto, por el criterio de las sucesiones convergentes, no existe el límite de $\cos\left(\frac{1}{x}\right)$ en $0$.
 :::
 
 :::{#exr-limite-polinomios}
 Dado un polinomio $p(x)$, demostrar que $\lim_{x\to a}p(x)=p(a)$ $\forall a\in\mathbb{R}$.
 :::
 
+:::{.callout-tip collapse="true"}
+## Solución
+Sea $p(x)=a_0+a_1x+a_2x^2+\cdots+a_nx^n$, entonces, por el álgebra de límites se tiene,
+
+\begin{align*}
+\lim_{x\to a}p(x) &= \lim_{x\to a} a_0+a_1x+a_2x^2+\cdots+a_nx^n\\ 
+& = \lim_{x\to a} a_0 + \lim_{x\to a} a_1x +\lim_{x\to a} a_2x^2 + \cdots + \lim_{x\to a}a_nx^2 \\ 
+&= a_0 + a_1 \lim_{x\to a} x + a_2\lim_{x\to a}x^2 + \cdots + a_n\lim_{x\to a}x^n\\ 
+& = a_0+a_1a+a_2a^2+\cdots+a_na^n = p(a)
+\end{align*}
+:::
+
 :::{#exr-limite-funciones-racionales}
 Dada una función racional $f(x)=\frac{p(x)}{q(x)}$ $\forall x\in\mathbb{R}$ tal que $q(x)\neq 0$, demostrar que $\lim_{x\to a}f(x)=f(a)$ $\forall a\in\mathbb{R}$ tal que $q(a)\neq 0$.
+:::
+
+:::{.callout-tip collapse="true"}
+## Solución
+Sea $f(x)=\frac{p(x)}{q(x)}$ con $p(x)$ y $q(x)$ dos polinomios. Entonces, por el ejercicio anterior y el álgebra de límites se tiene que 
+
+\begin{align*}
+\lim_{x\to a}f(x) &= \lim_{x\to a} \frac{p(x)}{q(x)} = \frac{\lim_{x\to a} p(x)}{\lim_{x\to a}q(x)} = \frac{p(a)}{q(a)}=f(a).
+\end{align*}
 :::
 
 :::{#exr-limite-emparedado}
@@ -400,6 +445,34 @@ a. $g$ está definida en $\mathbb{R}\setminus \{0\}$, así que, el único punto 
     \end{align*}
   
     Así pues, $g$ tiene una asíntota oblicua $y=x+1$ en $-\infty$. Del mismo modo se puede probar que esta misma recta es asíntota oblicua en $\infty$.
+
+a. $h(x)$ está definida en $\mathbb{R}^+$, así que, el único punto donde pueden existir asíntotas verticales $x=0$. Como $h$ no está definida para $x<0$, estudiaremos el límite por la derecha en $0$.
+
+    $$
+    \lim_{x\to 0^+} 2x^2-\ln(x) = 0-\ln(0) = \infty
+    $$
+    Por tanto, $h$ tiene una asíntota vertical $x=0$ por la derecha, pero no por la izquierda.
+
+    Para ver si $g$ tiene asíntotas horizontales estudiamos el límite en el infinito (en $-\infty$ no puede haber asíntota horizontal al no estar definida la función para $x<0$).
+
+    \begin{align*}
+    \lim_{x\to\infty} 2x^2-\ln(x) &= \lim_{x\to\infty}\ln(e^{2x^2-\ln(x)}) = \lim_{x\to \infty} \ln\left(\frac{e^{2x^2}}{e^{\ln(x)}}\right)\\ 
+    &= \ln\left(\lim_{x\to \infty} \frac{e^{2x^2}}{x}\right) = \ln\left(\lim_{x\to \infty} \frac{(e^{2x^2})'}{x'}\right) \tag{L'Hôpital} \\ 
+    &= \ln\left(\lim_{x\to \infty} \frac{e^{2x^2}4x}{1}\right) = \ln(\infty) = \infty.
+    \end{align*}
+
+    Por tanto, $h$ no tiene asíntotas horizontales. 
+
+    Finalmente, veamos si existe asíntota oblicua en $\infty$.
+
+    \begin{align*}
+    \lim_{x\to\infty} \frac{2x^2-\ln(x)}{x} &= \lim_{x\to \infty} 2x - \frac{\ln(x)}{x}\\ 
+    & = \lim_{x\to \infty} 2x -\lim_{x\to \infty}\frac{\ln(x)}{x}\\ 
+    &= \lim_{x\to \infty} 2x -\lim_{x\to \infty}\frac{(\ln(x))'}{x'} \tag{L'Hôpital}\\ 
+    & = \lim_{x\to \infty} 2x -\lim_{x\to \infty}\frac{1}{x}= \infty-0=\infty.  
+    \end{align*}
+
+    Luego, $h$ tampoco tiene asíntota oblicua en $\infty$.
 :::
 
 
