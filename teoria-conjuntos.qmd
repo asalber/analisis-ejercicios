@@ -162,6 +162,7 @@ d. $f(x)=2x+1$
 :::
 
 :::{#exr-tipos-funciones}
+$\star$
 Dadas las siguientes funciones de $\mathbb{R}$ en $\mathbb{R}$, estudiar cuáles son inyectivas y cuáles sobreyectivas:
 
 a. $f(x)=x^2$
