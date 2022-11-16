@@ -524,11 +524,79 @@ a. Si $f$ está acotada superiormente, entonces existe $\lim_{x\to b^-}f(x)$.
 b. Si $f$ no está acotada superiormente, entonces $\lim_{x\to b^-}f(x)=\infty$.
 :::
 
-<!-- 
-:::{#exr-limite-e1}
-Demostrar que $\lim_{x\to \infty} \left(1+\dfrac{1}{x}\rifht)^x = e$ usando el [teorema de compresión de funciones](https://aprendeconalf.es/analisis-manual/limites.html#thm-compresión-funciones). 
+:::{#exr-continuidad-coseno}
+Demostrar que la función $f(x)=\cos(x)$ es continua en todo $\mathbb{R}$.
 :::
 
-:::{#exr-limite-e2}
-Demostrar que $\lim_{x\to 0} (1+x)^{1/x} = e$.
-::: -->
+:::{#exr-discontinuidad-evitable}
+¿Qué tipo de discontinuidad presenta la función $f(x)=x\cos\left(\frac{1}{x}\right)$ en $x=0$? Redefinir la función para que sea continua en dicho punto.
+:::
+
+:::{#exr-clasificacion-dicontinuidades}
+Estudiar la continuidad de las siguientes funciones en los puntos que se indican:
+
+a. $f(x)=\dfrac{e^x-1}{e^x+1}$, en el punto $x=0$.
+
+a. 
+$$
+g(x)=
+\begin{cases}
+\frac{1+e^{1/x}}{1-e^{1/x}} & \mbox{si $x\neq 0$,} \\
+1 &  \mbox{si $x=0$,}
+\end{cases}
+$$
+en el punto $x=0$.
+
+a. 
+$$
+h(x)=
+\begin{cases}
+x\operatorname{sen}\frac{\pi}{x} & \mbox{si $x\neq 0$,} \\
+0 & \mbox{si $x=0$,}
+\end{cases}
+$$
+en el punto $x=0$.
+
+a. 
+$$
+i(x)=
+\begin{cases}
+\dfrac{1}{2^{1/x}} &  \mbox{si $x\neq 0$,} \\
+0 & \mbox{si $x=0$,}
+\end{cases}
+$$
+en el punto $x=0$.
+:::
+
+:::{#exr-clasificacion-dicontinuidades-2}
+Clasificar las discontinuidades de las siguientes funciones
+
+a. 
+$$
+f(x)=\frac{\frac{1}{x}-\frac{1}{x+1}}{\frac{3}{x-1}-\frac{1}{x}}.
+$$
+
+b.
+$$
+g(x)=
+\begin{cases}
+\dfrac{\operatorname{sen}(x)}{x} & \text{si $x<0$,} \\ 
+e^{\frac{1}{x-1}} & \text{si $x\geq 0$.}
+\end{cases}
+$$
+:::
+
+:::{#exr-bolzano}
+Calcular una raíz de la función $f(x)=x^5-x+1$ con una aproximación de 2 decimales. 
+:::
+
+:::{#exr-valor-intermedio}
+Dadas dos funciones $f,g:[a,b]\to\mathbb{R}$ continuas en $[a,b]$ con $f(a)<g(a)$ y $f(b)>g(b)$, demostrar que existe $c\in(a,b)$ tal que $f(c)=g(c)$.
+:::
+
+:::{#exr-valor-intermedio-2}
+Demostrar que las siguientes ecuaciones tienen al menos una solución real.
+
+a. $\cos(x)=x$.
+b. $e^x = -x$.
+:::
