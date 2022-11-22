@@ -1375,9 +1375,6 @@ INPUT /usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map
 INPUT /home/alf/texmf/fonts/tfm/public/lm/ec-lmss10.tfm
 INPUT /home/alf/texmf/fonts/tfm/public/lm/ec-lmssbx10.tfm
 INPUT /home/alf/texmf/fonts/tfm/public/lm/ec-lmssbx10.tfm
-INPUT ./ejercicios-analisis.toc
-INPUT ejercicios-analisis.toc
-INPUT ejercicios-analisis.toc
 OUTPUT ejercicios-analisis.toc
 INPUT /home/alf/texmf/fonts/tfm/public/lm/ec-lmbx10.tfm
 INPUT /usr/local/texlive/2022/texmf-dist/tex/latex/fontawesome5/ufontawesomefree2.fd
@@ -1408,6 +1405,14 @@ INPUT ././img/sucesiones/numero-aureo.png
 INPUT ././img/sucesiones/numero-aureo.png
 INPUT ././img/sucesiones/numero-aureo.png
 INPUT ././img/sucesiones/numero-aureo.png
+INPUT /home/alf/texmf/fonts/tfm/public/lm/ec-lmr10.tfm
+INPUT /home/alf/texmf/fonts/tfm/public/lm/ec-lmr8.tfm
+INPUT /home/alf/texmf/fonts/tfm/public/lm/rm-lmr5.tfm
+INPUT /home/alf/texmf/fonts/tfm/public/lm/lmmi5.tfm
+INPUT /home/alf/texmf/fonts/tfm/public/lm/lmsy5.tfm
+INPUT /home/alf/texmf/fonts/tfm/public/amsfonts/symbols/msam5.tfm
+INPUT /home/alf/texmf/fonts/tfm/public/amsfonts/symbols/msbm5.tfm
+INPUT /home/alf/texmf/fonts/tfm/public/lm/ec-lmr6.tfm
 INPUT ejercicios-analisis.aux
 INPUT /home/alf/texmf/fonts/enc/dvips/lm/lm-mathsy.enc
 INPUT /home/alf/texmf/fonts/enc/dvips/lm/lm-rm.enc

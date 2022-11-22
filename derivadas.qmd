@@ -1,0 +1,145 @@
+---
+lang: es
+---
+
+# Derivadas de funciones
+
+:::{#exr-derivada-potencia}
+Usando la definición de derivada, demostrar que la derivada de la función $f(x)=x^n$ es $f'(x)=nx^{n-1}$ donde $n\in\mathbb{N}$. 
+:::
+
+:::{#exr-estudio-derivabilidad-1}
+Demostrar que la función $f(x)=|x-1|$ es continua en $x=1$ pero no es derivable en dicho punto.
+:::
+
+:::{#exr-estudio-derivabilidad-2}
+Estudiar si es derivable la función $f(x)=\sqrt[3]{x-1}$ en el punto $x=1$.
+:::
+
+:::{#exr-derivabilidad-funcion-trozos-1}
+Estudiar la derivabilidad de $f$ en los puntos $x=-1$, $x=2$ y $x=3$ siendo
+
+$$
+f(x)=
+\begin{cases}
+\log(-x) & \mbox{si $x<-1$,} \\
+\operatorname{sen}(\pi x) & \mbox{si $x\in [-1,2]$,} \\
+x/2 & \mbox{si $x\in (2,3)$,} \\
+3/2 & \mbox{si $x\geq 3$.}
+\end{cases}
+$$
+:::
+
+:::{#exr-derivabilidad-funcion-trozos-2}
+Estudiar la derivabilidad de las siguientes funciones y hallar la función derivada correspondiente en los puntos donde exista.
+
+a. $$f(x)=
+\begin{cases}
+1-x & \mbox{si $x\leq 0$,} \\
+e^{-x} & \mbox{si $x>0$.}
+\end{cases}
+$$
+
+b. $g(x)=2x+|x^2-2|$.
+:::
+
+:::{#exr-derivabilidad-funcion-trozos-3}
+Dada la función
+
+$$
+f(x)=
+\begin{cases}
+\operatorname{sen}(x)^2 & \mbox{si $x\leq 0$},  \\
+ax^2+b &  \mbox{si $0<x\leq c$},  \\
+\ln x &  \mbox{si $c<x$},
+\end{cases}
+$$
+
+con $a,b,c\in\mathbb{R}$, ¿existe algún valor de las constantes de manera que la función sea continua y derivable en todo su dominio?
+:::
+
+:::{#exr-tangente-normal-1}
+Para cada una de las siguientes curvas, hallar las ecuaciones de las rectas tangente y normal en el punto $a$ indicado.
+
+a. $y=x^{\operatorname{sen}(x)},\quad a=\pi/2$.
+b. $y=\ln\sqrt{\frac{1+x}{1-x}}, \quad a=0$.
+:::
+
+:::{#exr-tangente-normal-2}
+Dadas las funciones $f(x)=\log \left(\frac{x^2}{2}\right)$ y $g(x)=x^3+2$, ¿existe algún valor de $x$ en el que la recta normal a $f$ y
+la recta tangente a $g$ en dicho punto sean paralelas?
+:::
+
+:::{#exr-derivadas-orden-n}
+Hallar la expresión de la derivada $n$-ésima de las  siguientes funciones:
+
+a. $f(x)=a^x\ln(a)$.
+b. $g(x)=\dfrac{\operatorname{sen}(x)+\cos(x)}{2}$.
+c. $h(x)=\dfrac{9x^2-2x-25}{x^3-2x^2-5x+6}$.
+d. $j(x)=\dfrac{1}{\sqrt{1+x}}$.
+:::
+
+:::{#exr-regla-cadena-1}
+Un balón relleno de aire tiene radio 10 cm cuando se empieza a introducir más aire, de manera que el radio se incrementa con una velocidad de 2 cm/s.
+¿Con qué velocidad varía el volumen en ese instante?
+:::
+
+:::{#exr-regla-cadena-2}
+Una pipeta cilíndrica de radio 5 mm almacena una solución.
+Si la pipeta empieza a vaciarse a razón de $0.5$ ml por segundo, ¿a qué velocidad disminuye el nivel de la pipeta?
+:::
+
+:::{#exr-regla-cadena-3}
+Un cilindro de 4 cm de radio ($r$) y 3 cm de altura ($h$) se somete a un proceso de calentamiento con el que varían sus dimensiones de tal
+forma que $\frac{dr}{dt}=\frac{dh}{dt}= 1$ cm/s. Hallar de forma aproximada la variación de su volumen a los 5 segundos y a los 10 segundos.
+:::
+
+:::{#exr-extremos-1}
+En muchos vertebrados existe una relación entre la longitud del cráneo y la longitud de la espina dorsal que puede expresarse mediante la ecuación
+$$
+C(x) = a E(x)^b
+$$
+donde $a$ es una constante de proporcionalidad y $b$ es otra constante que suele estar entre 0 y 1.
+Esta ecuación se conoce como _ecuación alométrica_.
+¿Cómo se relaciona la tasa de crecimiento de la espina dorsal con la del cráneo?
+¿Para qué valores de $b$ es la función $C$ creciente, pero de forma que la relación $C/E$ disminuye al aumentar $E$?
+¿En qué estado de desarrollo tienen los vertebrados cráneos mayores en relación con la longitud de sus cuerpos?
+:::
+
+:::{#exr-cinematica-1}
+La posición que ocupa un coche que se mueve en línea recta, puede expresarse en función del tiempo según la ecuación
+$$
+e(t) = 4t^3 -2t +1.
+$$
+Calcular su velocidad y aceleración en cualquier instante.  
+Nota: La aceleración es la tasa de variación instantánea de la velocidad.
+:::
+
+:::{#exr-cinematica-2}
+El espacio recorrido por un objeto que se lanza verticalmente hacia arriba, sin tener en cuenta la resistencia del aire, viene dado por la ecuación
+$$
+e(t) =v_0t-\frac{1}{2}gt^2
+$$
+donde $v_0$ es la velocidad inicial con que se lanza el objeto, $g=9.81$ m/s$^2$ es la constante gravitatoria de la Tierra y $t$ es el tiempo transcurrido desde que el objeto se lanza.
+
+a. Calcular la velocidad y la aceleración en cualquier instante.
+b. Si el objeto se lanza inicialmente a 50 km/h, ¿cuál será la altura máxima que alcanzará el objeto? ¿Cuál será su velocidad en ese
+momento?
+c. ¿En qué instante volverá a tocar la tierra el objeto? ¿Con qué velocidad?
+:::
+
+:::{#exr-transmision-errores-1}
+Se desea medir la superficie de una célula esférica y para ello se ha medido el radio de una célula de 5 $\mu$ con un error de 0.2 $\mu$.
+¿Cuál será el error aproximado cometido en el cálculo de la superficie de la célula?
+En general, si al medir el radio se comete siempre un error relativo del 2\%? ¿Cómo afecta esto al error de la medida de la superficie
+de la célula?  
+:::
+
+:::{#exr-transmision-errores-2}
+La velocidad de la sangre que fluye por una arteria está dada por la ley de Poiseuille
+$$
+v(r) = cr^2,
+$$
+donde $v$ es la velocidad de la sangre, $r$ es el radio de la arteria y $c$ es una constante.
+Si se puede medir el radio de la arteria con una precisión del 5\%, ¿qué precisión tendrá el cálculo de la velocidad?
+:::

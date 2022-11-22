@@ -6,9 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Alfredo Sánchez Alberca">
 
-<title>Problemas de Análisis Matemático</title>
+<title>Problemas de Análisis Matemático - 6&nbsp; Derivadas de funciones</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -31,7 +30,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./teoria-conjuntos.html" rel="next">
+<link href="./limites.html" rel="prev">
 <link href="./img/logos/favicon.ico" rel="icon">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -64,12 +63,11 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<meta property="og:title" content="Problemas de Análisis Matemático">
-<meta property="og:description" content="Colección de problemas de Análisis Matemático aplicado.">
+<meta property="og:title" content="Problemas de Análisis Matemático - 6&nbsp; Derivadas de funciones">
 <meta property="og:site-name" content="Problemas de Análisis Matemático">
-<meta name="twitter:title" content="Problemas de Análisis Matemático">
-<meta name="twitter:description" content="Colección de problemas de Análisis Matemático aplicado.">
+<meta name="twitter:title" content="Problemas de Análisis Matemático - 6&nbsp; Derivadas de funciones">
 <meta name="twitter:site" content="@aprendeconalf">
 <meta name="twitter:card" content="summary">
 </head>
@@ -80,7 +78,7 @@ ul.task-list li input[type="checkbox"] {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">Problemas de Análisis Matemático</h1>
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Derivadas de funciones</span></h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -142,7 +140,7 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">Prefacio</a>
+  <a href="./index.html" class="sidebar-item-text sidebar-link">Prefacio</a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -172,7 +170,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./derivadas.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Derivadas de funciones</span></a>
+  <a href="./derivadas.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Derivadas de funciones</span></a>
   </div>
 </li>
     </ul>
@@ -180,39 +178,21 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Tabla de contenidos</h2>
-   
-  <ul>
-  <li><a href="#prefacio" id="toc-prefacio" class="nav-link active" data-scroll-target="#prefacio">Prefacio</a></li>
-  </ul>
-</nav>
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">Problemas de Análisis Matemático</h1>
+<h1 class="title d-none d-lg-block"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Derivadas de funciones</span></h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Autor/a</div>
-    <div class="quarto-title-meta-contents">
-             <p>Alfredo Sánchez Alberca </p>
-          </div>
-  </div>
     
-    <div>
-    <div class="quarto-title-meta-heading">Fecha de publicación</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">6 de enero de 2022</p>
-    </div>
-  </div>
   
     
   </div>
@@ -220,13 +200,110 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
+<div id="exr-derivada-potencia" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 6.1 </strong></span>Usando la definición de derivada, demostrar que la derivada de la función <span class="math inline">\(f(x)=x^n\)</span> es <span class="math inline">\(f'(x)=nx^{n-1}\)</span> donde <span class="math inline">\(n\in\mathbb{N}\)</span>.</p>
+</div>
+<div id="exr-estudio-derivabilidad-1" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 6.2 </strong></span>Demostrar que la función <span class="math inline">\(f(x)=|x-1|\)</span> es continua en <span class="math inline">\(x=1\)</span> pero no es derivable en dicho punto.</p>
+</div>
+<div id="exr-estudio-derivabilidad-2" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 6.3 </strong></span>Estudiar si es derivable la función <span class="math inline">\(f(x)=\sqrt[3]{x-1}\)</span> en el punto <span class="math inline">\(x=1\)</span>.</p>
+</div>
+<div id="exr-derivabilidad-funcion-trozos-1" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 6.4 </strong></span>Estudiar la derivabilidad de <span class="math inline">\(f\)</span> en los puntos <span class="math inline">\(x=-1\)</span>, <span class="math inline">\(x=2\)</span> y <span class="math inline">\(x=3\)</span> siendo</p>
+<p><span class="math display">\[
+f(x)=
+\begin{cases}
+\log(-x) &amp; \mbox{si $x&lt;-1$,} \\
+\operatorname{sen}(\pi x) &amp; \mbox{si $x\in [-1,2]$,} \\
+x/2 &amp; \mbox{si $x\in (2,3)$,} \\
+3/2 &amp; \mbox{si $x\geq 3$.}
+\end{cases}
+\]</span></p>
+</div>
+<div id="exr-derivabilidad-funcion-trozos-2" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 6.5 </strong></span>Estudiar la derivabilidad de las siguientes funciones y hallar la función derivada correspondiente en los puntos donde exista.</p>
+<ol type="a">
+<li><p><span class="math display">\[f(x)=
+\begin{cases}
+1-x &amp; \mbox{si $x\leq 0$,} \\
+e^{-x} &amp; \mbox{si $x&gt;0$.}
+\end{cases}
+\]</span></p></li>
+<li><p><span class="math inline">\(g(x)=2x+|x^2-2|\)</span>.</p></li>
+</ol>
+</div>
+<div id="exr-derivabilidad-funcion-trozos-3" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 6.6 </strong></span>Dada la función</p>
+<p><span class="math display">\[
+f(x)=
+\begin{cases}
+\operatorname{sen}(x)^2 &amp; \mbox{si $x\leq 0$},  \\
+ax^2+b &amp;  \mbox{si $0&lt;x\leq c$},  \\
+\ln x &amp;  \mbox{si $c&lt;x$},
+\end{cases}
+\]</span></p>
+<p>con <span class="math inline">\(a,b,c\in\mathbb{R}\)</span>, ¿existe algún valor de las constantes de manera que la función sea continua y derivable en todo su dominio?</p>
+</div>
+<div id="exr-tangente-normal-1" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 6.7 </strong></span>Para cada una de las siguientes curvas, hallar las ecuaciones de las rectas tangente y normal en el punto <span class="math inline">\(a\)</span> indicado.</p>
+<ol type="a">
+<li><span class="math inline">\(y=x^{\operatorname{sen}(x)},\quad a=\pi/2\)</span>.</li>
+<li><span class="math inline">\(y=\ln\sqrt{\frac{1+x}{1-x}}, \quad a=0\)</span>.</li>
+</ol>
+</div>
+<div id="exr-tangente-normal-2" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 6.8 </strong></span>Dadas las funciones <span class="math inline">\(f(x)=\log \left(\frac{x^2}{2}\right)\)</span> y <span class="math inline">\(g(x)=x^3+2\)</span>, ¿existe algún valor de <span class="math inline">\(x\)</span> en el que la recta normal a <span class="math inline">\(f\)</span> y la recta tangente a <span class="math inline">\(g\)</span> en dicho punto sean paralelas?</p>
+</div>
+<div id="exr-derivadas-orden-n" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 6.9 </strong></span>Hallar la expresión de la derivada <span class="math inline">\(n\)</span>-ésima de las siguientes funciones:</p>
+<ol type="a">
+<li><span class="math inline">\(f(x)=a^x\ln(a)\)</span>.</li>
+<li><span class="math inline">\(g(x)=\dfrac{\operatorname{sen}(x)+\cos(x)}{2}\)</span>.</li>
+<li><span class="math inline">\(h(x)=\dfrac{9x^2-2x-25}{x^3-2x^2-5x+6}\)</span>.</li>
+<li><span class="math inline">\(j(x)=\dfrac{1}{\sqrt{1+x}}\)</span>.</li>
+</ol>
+</div>
+<div id="exr-regla-cadena-1" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 6.10 </strong></span>Un balón relleno de aire tiene radio 10 cm cuando se empieza a introducir más aire, de manera que el radio se incrementa con una velocidad de 2 cm/s. ¿Con qué velocidad varía el volumen en ese instante?</p>
+</div>
+<div id="exr-regla-cadena-2" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 6.11 </strong></span>Una pipeta cilíndrica de radio 5 mm almacena una solución. Si la pipeta empieza a vaciarse a razón de <span class="math inline">\(0.5\)</span> ml por segundo, ¿a qué velocidad disminuye el nivel de la pipeta?</p>
+</div>
+<div id="exr-regla-cadena-3" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 6.12 </strong></span>Un cilindro de 4 cm de radio (<span class="math inline">\(r\)</span>) y 3 cm de altura (<span class="math inline">\(h\)</span>) se somete a un proceso de calentamiento con el que varían sus dimensiones de tal forma que <span class="math inline">\(\frac{dr}{dt}=\frac{dh}{dt}= 1\)</span> cm/s. Hallar de forma aproximada la variación de su volumen a los 5 segundos y a los 10 segundos.</p>
+</div>
+<div id="exr-extremos-1" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 6.13 </strong></span>En muchos vertebrados existe una relación entre la longitud del cráneo y la longitud de la espina dorsal que puede expresarse mediante la ecuación <span class="math display">\[
+C(x) = a E(x)^b
+\]</span> donde <span class="math inline">\(a\)</span> es una constante de proporcionalidad y <span class="math inline">\(b\)</span> es otra constante que suele estar entre 0 y 1. Esta ecuación se conoce como <em>ecuación alométrica</em>. ¿Cómo se relaciona la tasa de crecimiento de la espina dorsal con la del cráneo? ¿Para qué valores de <span class="math inline">\(b\)</span> es la función <span class="math inline">\(C\)</span> creciente, pero de forma que la relación <span class="math inline">\(C/E\)</span> disminuye al aumentar <span class="math inline">\(E\)</span>? ¿En qué estado de desarrollo tienen los vertebrados cráneos mayores en relación con la longitud de sus cuerpos?</p>
+</div>
+<div id="exr-cinematica-1" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 6.14 </strong></span>La posición que ocupa un coche que se mueve en línea recta, puede expresarse en función del tiempo según la ecuación <span class="math display">\[
+e(t) = 4t^3 -2t +1.
+\]</span> Calcular su velocidad y aceleración en cualquier instante.<br>
+Nota: La aceleración es la tasa de variación instantánea de la velocidad.</p>
+</div>
+<div id="exr-cinematica-2" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 6.15 </strong></span>El espacio recorrido por un objeto que se lanza verticalmente hacia arriba, sin tener en cuenta la resistencia del aire, viene dado por la ecuación <span class="math display">\[
+e(t) =v_0t-\frac{1}{2}gt^2
+\]</span> donde <span class="math inline">\(v_0\)</span> es la velocidad inicial con que se lanza el objeto, <span class="math inline">\(g=9.81\)</span> m/s<span class="math inline">\(^2\)</span> es la constante gravitatoria de la Tierra y <span class="math inline">\(t\)</span> es el tiempo transcurrido desde que el objeto se lanza.</p>
+<ol type="a">
+<li>Calcular la velocidad y la aceleración en cualquier instante.</li>
+<li>Si el objeto se lanza inicialmente a 50 km/h, ¿cuál será la altura máxima que alcanzará el objeto? ¿Cuál será su velocidad en ese momento?</li>
+<li>¿En qué instante volverá a tocar la tierra el objeto? ¿Con qué velocidad?</li>
+</ol>
+</div>
+<div id="exr-transmision-errores-1" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 6.16 </strong></span>Se desea medir la superficie de una célula esférica y para ello se ha medido el radio de una célula de 5 <span class="math inline">\(\mu\)</span> con un error de 0.2 <span class="math inline">\(\mu\)</span>. ¿Cuál será el error aproximado cometido en el cálculo de la superficie de la célula? En general, si al medir el radio se comete siempre un error relativo del 2%? ¿Cómo afecta esto al error de la medida de la superficie de la célula?</p>
+</div>
+<div id="exr-transmision-errores-2" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 6.17 </strong></span>La velocidad de la sangre que fluye por una arteria está dada por la ley de Poiseuille <span class="math display">\[
+v(r) = cr^2,
+\]</span> donde <span class="math inline">\(v\)</span> es la velocidad de la sangre, <span class="math inline">\(r\)</span> es el radio de la arteria y <span class="math inline">\(c\)</span> es una constante. Si se puede medir el radio de la arteria con una precisión del 5%, ¿qué precisión tendrá el cálculo de la velocidad?</p>
+</div>
 
-<section id="prefacio" class="level1 unnumbered">
-<p><img src="img/logos/pi.jpg" title="Problemas de Análisis Matemático" class="quarto-cover-image img-fluid"></p><h1 class="unnumbered">Prefacio</h1>
-<p>Colección de problemas de Análisis Matemático aplicado.</p>
 
-
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -479,11 +556,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
+      <a href="./limites.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Límites de funciones</span></span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./teoria-conjuntos.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Teoría de conjuntos</span></span> <i class="bi bi-arrow-right-short"></i>
-      </a>
   </div>
 </nav>
 </div> <!-- /content -->

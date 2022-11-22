@@ -35,6 +35,7 @@ book:
     - topologia.qmd
     - sucesiones.qmd
     - limites.qmd
+    - derivadas.qmd
     
 #bibliography: references.bib
 

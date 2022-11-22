@@ -112,9 +112,9 @@
 \@ifpackageloaded{caption}{}{\usepackage{caption}}
 \AtBeginDocument{%
 \ifdefined\contentsname
-  \renewcommand*\contentsname{Indice de contenidos}
+  \renewcommand*\contentsname{Tabla de contenidos}
 \else
-  \newcommand\contentsname{Indice de contenidos}
+  \newcommand\contentsname{Tabla de contenidos}
 \fi
 \ifdefined\listfigurename
   \renewcommand*\listfigurename{Listado de Figuras}
@@ -141,7 +141,7 @@
 \floatstyle{ruled}
 \@ifundefined{c@chapter}{\newfloat{codelisting}{h}{lop}}{\newfloat{codelisting}{h}{lop}[chapter]}
 \floatname{codelisting}{Listado}
-\newcommand*\listoflistings{\listof{codelisting}{Listado de Listatdos}}
+\newcommand*\listoflistings{\listof{codelisting}{Listado de Listados}}
 \usepackage{amsthm}
 \theoremstyle{definition}
 \newtheorem{exercise}{Ejercicio}[chapter]
@@ -190,7 +190,7 @@
 
 \title{Problemas de Análisis Matemático}
 \author{Alfredo Sánchez Alberca}
-\date{1/6/2022}
+\date{6/1/22}
 
 \begin{document}
 \begin{titlepage}
@@ -220,9 +220,9 @@ Sánchez
 Alberca}\\ \textsf{asalber@ceu.es} \\ \textsf{https://aprendeconalf.es}}
 \end{tabular}
 \end{flushleft}
-\end{titlepage}\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[boxrule=0pt, breakable, interior hidden, borderline west={3pt}{0pt}{shadecolor}, sharp corners, enhanced, frame hidden]}{\end{tcolorbox}}\fi
+\end{titlepage}\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[interior hidden, frame hidden, boxrule=0pt, enhanced, sharp corners, borderline west={3pt}{0pt}{shadecolor}, breakable]}{\end{tcolorbox}}\fi
 
-\renewcommand*\contentsname{Indice de contenidos}
+\renewcommand*\contentsname{Tabla de contenidos}
 {
 \hypersetup{linkcolor=}
 \setcounter{tocdepth}{2}
@@ -233,6 +233,8 @@ Alberca}\\ \textsf{asalber@ceu.es} \\ \textsf{https://aprendeconalf.es}}
 \hypertarget{prefacio}{%
 \chapter*{Prefacio}\label{prefacio}}
 \addcontentsline{toc}{chapter}{Prefacio}
+
+\markboth{Prefacio}{Prefacio}
 
 Colección de problemas de Análisis Matemático aplicado.
 
@@ -278,7 +280,7 @@ con \(A\)? ¿Y con \(A\cup B\)?
 
 \end{exercise}
 
-\begin{tcolorbox}[enhanced jigsaw, left=2mm, toptitle=1mm, colback=white, leftrule=.75mm, rightrule=.15mm, colframe=quarto-callout-tip-color-frame, titlerule=0mm, arc=.35mm, opacityback=0, toprule=.15mm, opacitybacktitle=0.6, breakable, coltitle=black, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, bottomrule=.15mm, bottomtitle=1mm, colbacktitle=quarto-callout-tip-color!10!white]
+\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, opacitybacktitle=0.6, left=2mm, coltitle=black, breakable, titlerule=0mm, leftrule=.75mm, colback=white, toprule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, toptitle=1mm, bottomtitle=1mm, arc=.35mm, rightrule=.15mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-tip-color!10!white]
 
 \begin{enumerate}
 \def\labelenumi{\alph{enumi}.}
@@ -371,7 +373,7 @@ siguientes diagramas.
 
 \end{figure}
 
-\begin{tcolorbox}[enhanced jigsaw, left=2mm, toptitle=1mm, colback=white, leftrule=.75mm, rightrule=.15mm, colframe=quarto-callout-tip-color-frame, titlerule=0mm, arc=.35mm, opacityback=0, toprule=.15mm, opacitybacktitle=0.6, breakable, coltitle=black, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, bottomrule=.15mm, bottomtitle=1mm, colbacktitle=quarto-callout-tip-color!10!white]
+\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, opacitybacktitle=0.6, left=2mm, coltitle=black, breakable, titlerule=0mm, leftrule=.75mm, colback=white, toprule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, toptitle=1mm, bottomtitle=1mm, arc=.35mm, rightrule=.15mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-tip-color!10!white]
 
 \begin{enumerate}
 \def\labelenumi{\alph{enumi}.}
@@ -403,13 +405,15 @@ sanguíneos \(S=\{0, A, B, AB\}\). ¿Cuál es su cardinal?
 
 \end{exercise}
 
-\begin{tcolorbox}[enhanced jigsaw, left=2mm, toptitle=1mm, colback=white, leftrule=.75mm, rightrule=.15mm, colframe=quarto-callout-tip-color-frame, titlerule=0mm, arc=.35mm, opacityback=0, toprule=.15mm, opacitybacktitle=0.6, breakable, coltitle=black, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, bottomrule=.15mm, bottomtitle=1mm, colbacktitle=quarto-callout-tip-color!10!white]
+\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, opacitybacktitle=0.6, left=2mm, coltitle=black, breakable, titlerule=0mm, leftrule=.75mm, colback=white, toprule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, toptitle=1mm, bottomtitle=1mm, arc=.35mm, rightrule=.15mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-tip-color!10!white]
+
 \begin{align*}
 \mathcal{P}(S)&=\{\emptyset, \{A\}, \{B\}, \{AB\}, \\
 & \{\emptyset,A\},\{\emptyset,B\}, \{\emptyset,AB\}, \{A,B\}, \{A,AB\}, \{B,AB\}, \{\emptyset,A,B\},\\ 
 & \{\emptyset,A,AB\}, \{\emptyset,B,AB\}, \{A,B,AB\}, \\ 
 & \{\emptyset,A,B,AB\} \}
 \end{align*}
+
 \end{tcolorbox}
 
 \leavevmode\vadjust pre{\hypertarget{exr-producto-cartesiano-grupos-sanguineos}{}}%
@@ -421,11 +425,13 @@ Construir el producto cartesiano del conjunto d los grupos sanguíneos
 
 \end{exercise}
 
-\begin{tcolorbox}[enhanced jigsaw, left=2mm, toptitle=1mm, colback=white, leftrule=.75mm, rightrule=.15mm, colframe=quarto-callout-tip-color-frame, titlerule=0mm, arc=.35mm, opacityback=0, toprule=.15mm, opacitybacktitle=0.6, breakable, coltitle=black, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, bottomrule=.15mm, bottomtitle=1mm, colbacktitle=quarto-callout-tip-color!10!white]
+\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, opacitybacktitle=0.6, left=2mm, coltitle=black, breakable, titlerule=0mm, leftrule=.75mm, colback=white, toprule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, toptitle=1mm, bottomtitle=1mm, arc=.35mm, rightrule=.15mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-tip-color!10!white]
+
 \begin{align*}
 S \times R &=\{(0,\mbox{Rh}+), (0,\mbox{Rh}-), (A,\mbox{Rh}+)), (A,\mbox{Rh}-),\\
 & (B,\mbox{Rh}+), (B,\mbox{Rh}-), (AB,\mbox{Rh}+), (AB,\mbox{Rh}-) \}
 \end{align*}
+
 \end{tcolorbox}
 
 \leavevmode\vadjust pre{\hypertarget{exr-relacion-equivalencia-1}{}}%
@@ -437,7 +443,8 @@ equivalencia.
 
 \end{exercise}
 
-\begin{tcolorbox}[enhanced jigsaw, left=2mm, toptitle=1mm, colback=white, leftrule=.75mm, rightrule=.15mm, colframe=quarto-callout-tip-color-frame, titlerule=0mm, arc=.35mm, opacityback=0, toprule=.15mm, opacitybacktitle=0.6, breakable, coltitle=black, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, bottomrule=.15mm, bottomtitle=1mm, colbacktitle=quarto-callout-tip-color!10!white]
+\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, opacitybacktitle=0.6, left=2mm, coltitle=black, breakable, titlerule=0mm, leftrule=.75mm, colback=white, toprule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, toptitle=1mm, bottomtitle=1mm, arc=.35mm, rightrule=.15mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-tip-color!10!white]
+
 \emph{Propiedad reflexiva}: \(\forall a\in\mathbb{Z}\) \(a-a=0\) es par,
 de manera que \(aRa\).\\
 \emph{Propiedad simétrica}: \(\forall a,b\in\mathbb{Z}\) si \(aRb\)
@@ -446,6 +453,7 @@ entonces \(a-b\) es par, es decir, existe \(k\in \mathbb{Z}\) tal que
 \emph{Propiedad transitiva}: \(\forall a,b,c\in\mathbb{Z}\), si \(aRb\)
 y \(bRc\) entonces \(a-b\) y \(b-c\) son pares, de manera que su suma
 \(a-b+b-c = a-c\) también es par, y \(aRc\).
+
 \end{tcolorbox}
 
 \leavevmode\vadjust pre{\hypertarget{exr-relaciones-equivalencia}{}}%
@@ -469,7 +477,7 @@ y \(bRc\) entonces \(a-b\) y \(b-c\) son pares, de manera que su suma
 
 \end{exercise}
 
-\begin{tcolorbox}[enhanced jigsaw, left=2mm, toptitle=1mm, colback=white, leftrule=.75mm, rightrule=.15mm, colframe=quarto-callout-tip-color-frame, titlerule=0mm, arc=.35mm, opacityback=0, toprule=.15mm, opacitybacktitle=0.6, breakable, coltitle=black, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, bottomrule=.15mm, bottomtitle=1mm, colbacktitle=quarto-callout-tip-color!10!white]
+\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, opacitybacktitle=0.6, left=2mm, coltitle=black, breakable, titlerule=0mm, leftrule=.75mm, colback=white, toprule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, toptitle=1mm, bottomtitle=1mm, arc=.35mm, rightrule=.15mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-tip-color!10!white]
 
 \begin{enumerate}
 \def\labelenumi{\alph{enumi}.}
@@ -507,7 +515,7 @@ el supremo, el ínfimo, el máximo y el mínimo.
 
 \end{exercise}
 
-\begin{tcolorbox}[enhanced jigsaw, left=2mm, toptitle=1mm, colback=white, leftrule=.75mm, rightrule=.15mm, colframe=quarto-callout-tip-color-frame, titlerule=0mm, arc=.35mm, opacityback=0, toprule=.15mm, opacitybacktitle=0.6, breakable, coltitle=black, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, bottomrule=.15mm, bottomtitle=1mm, colbacktitle=quarto-callout-tip-color!10!white]
+\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, opacitybacktitle=0.6, left=2mm, coltitle=black, breakable, titlerule=0mm, leftrule=.75mm, colback=white, toprule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, toptitle=1mm, bottomtitle=1mm, arc=.35mm, rightrule=.15mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-tip-color!10!white]
 
 \begin{enumerate}
 \def\labelenumi{\alph{enumi}.}
@@ -544,7 +552,7 @@ el supremo, el ínfimo, el máximo y el mínimo.
 
 \end{exercise}
 
-\begin{tcolorbox}[enhanced jigsaw, left=2mm, toptitle=1mm, colback=white, leftrule=.75mm, rightrule=.15mm, colframe=quarto-callout-tip-color-frame, titlerule=0mm, arc=.35mm, opacityback=0, toprule=.15mm, opacitybacktitle=0.6, breakable, coltitle=black, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, bottomrule=.15mm, bottomtitle=1mm, colbacktitle=quarto-callout-tip-color!10!white]
+\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, opacitybacktitle=0.6, left=2mm, coltitle=black, breakable, titlerule=0mm, leftrule=.75mm, colback=white, toprule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, toptitle=1mm, bottomtitle=1mm, arc=.35mm, rightrule=.15mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-tip-color!10!white]
 
 \begin{enumerate}
 \def\labelenumi{\alph{enumi}.}
@@ -582,7 +590,7 @@ el supremo, el ínfimo, el máximo y el mínimo.
 
 \end{exercise}
 
-\begin{tcolorbox}[enhanced jigsaw, left=2mm, toptitle=1mm, colback=white, leftrule=.75mm, rightrule=.15mm, colframe=quarto-callout-tip-color-frame, titlerule=0mm, arc=.35mm, opacityback=0, toprule=.15mm, opacitybacktitle=0.6, breakable, coltitle=black, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, bottomrule=.15mm, bottomtitle=1mm, colbacktitle=quarto-callout-tip-color!10!white]
+\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, opacitybacktitle=0.6, left=2mm, coltitle=black, breakable, titlerule=0mm, leftrule=.75mm, colback=white, toprule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, toptitle=1mm, bottomtitle=1mm, arc=.35mm, rightrule=.15mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-tip-color!10!white]
 
 \begin{enumerate}
 \def\labelenumi{\alph{enumi}.}
@@ -607,7 +615,8 @@ inyectiva.
 
 \end{exercise}
 
-\begin{tcolorbox}[enhanced jigsaw, left=2mm, toptitle=1mm, colback=white, leftrule=.75mm, rightrule=.15mm, colframe=quarto-callout-tip-color-frame, titlerule=0mm, arc=.35mm, opacityback=0, toprule=.15mm, opacitybacktitle=0.6, breakable, coltitle=black, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, bottomrule=.15mm, bottomtitle=1mm, colbacktitle=quarto-callout-tip-color!10!white]
+\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, opacitybacktitle=0.6, left=2mm, coltitle=black, breakable, titlerule=0mm, leftrule=.75mm, colback=white, toprule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, toptitle=1mm, bottomtitle=1mm, arc=.35mm, rightrule=.15mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-tip-color!10!white]
+
 Sean \(f\) y \(g\) dos funciones inyectivas tales que
 \(\operatorname{Im}(f)\subseteq\operatorname{Dom}(g)\). Veamos que
 \(g\circ f\) es inyectiva. Supongamos ahora que existen
@@ -615,6 +624,7 @@ Sean \(f\) y \(g\) dos funciones inyectivas tales que
 es decir, \(g(f(a))=g(f(b))\). Como \(g\) es inyectiva, se tiene que
 \(f(a)=f(b)\), y como \(f\) es inyectiva se tiene que \(a=b\), con lo
 que \(g\circ f\) es inyectiva.
+
 \end{tcolorbox}
 
 \leavevmode\vadjust pre{\hypertarget{exr-cardinal-union-producto-cartesiano}{}}%
@@ -625,7 +635,7 @@ Dados dos conjuntos finitos \(A\) y \(B\), demostrar que
 
 \end{exercise}
 
-\begin{tcolorbox}[enhanced jigsaw, left=2mm, toptitle=1mm, colback=white, leftrule=.75mm, rightrule=.15mm, colframe=quarto-callout-tip-color-frame, titlerule=0mm, arc=.35mm, opacityback=0, toprule=.15mm, opacitybacktitle=0.6, breakable, coltitle=black, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, bottomrule=.15mm, bottomtitle=1mm, colbacktitle=quarto-callout-tip-color!10!white]
+\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, opacitybacktitle=0.6, left=2mm, coltitle=black, breakable, titlerule=0mm, leftrule=.75mm, colback=white, toprule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, toptitle=1mm, bottomtitle=1mm, arc=.35mm, rightrule=.15mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-tip-color!10!white]
 
 \begin{enumerate}
 \def\labelenumi{\alph{enumi}.}
@@ -663,7 +673,8 @@ cuando \(f\) es biyectiva?
 
 \end{exercise}
 
-\begin{tcolorbox}[enhanced jigsaw, left=2mm, toptitle=1mm, colback=white, leftrule=.75mm, rightrule=.15mm, colframe=quarto-callout-tip-color-frame, titlerule=0mm, arc=.35mm, opacityback=0, toprule=.15mm, opacitybacktitle=0.6, breakable, coltitle=black, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, bottomrule=.15mm, bottomtitle=1mm, colbacktitle=quarto-callout-tip-color!10!white]
+\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, opacitybacktitle=0.6, left=2mm, coltitle=black, breakable, titlerule=0mm, leftrule=.75mm, colback=white, toprule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, toptitle=1mm, bottomtitle=1mm, arc=.35mm, rightrule=.15mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-tip-color!10!white]
+
 Sea \(f:A\rightarrow B\) inyectiva. Entonces para cualesquiera
 \(a_1,a_2\in A\) con \(a_1\neq a_2\) se tiene que \(f(a_1)\neq f(a_2)\),
 por lo que \(|A|\leq |B|\).
@@ -675,6 +686,7 @@ función, por lo que \(|A|\geq |B|\).
 
 De lo anterior se deduce que si \(f\) es biyectiva, entonces
 \(|A|=|B|\).
+
 \end{tcolorbox}
 
 \leavevmode\vadjust pre{\hypertarget{exr-numero-funciones-inyectivas}{}}%
@@ -686,9 +698,11 @@ cuántas funciones inyectivas suponiendo que \(n\leq m\)?
 
 \end{exercise}
 
-\begin{tcolorbox}[enhanced jigsaw, left=2mm, toptitle=1mm, colback=white, leftrule=.75mm, rightrule=.15mm, colframe=quarto-callout-tip-color-frame, titlerule=0mm, arc=.35mm, opacityback=0, toprule=.15mm, opacitybacktitle=0.6, breakable, coltitle=black, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, bottomrule=.15mm, bottomtitle=1mm, colbacktitle=quarto-callout-tip-color!10!white]
+\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, opacitybacktitle=0.6, left=2mm, coltitle=black, breakable, titlerule=0mm, leftrule=.75mm, colback=white, toprule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, toptitle=1mm, bottomtitle=1mm, arc=.35mm, rightrule=.15mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-tip-color!10!white]
+
 Se pueden construir \(m^n\) funciones distintas, y \(\frac{m!}{(m-n)!}\)
 funciones inyectivas.
+
 \end{tcolorbox}
 
 \leavevmode\vadjust pre{\hypertarget{exr-ejemplo-conjunto-infinito-complemento}{}}%
@@ -700,10 +714,12 @@ complemento también sea infinito.
 
 \end{exercise}
 
-\begin{tcolorbox}[enhanced jigsaw, left=2mm, toptitle=1mm, colback=white, leftrule=.75mm, rightrule=.15mm, colframe=quarto-callout-tip-color-frame, titlerule=0mm, arc=.35mm, opacityback=0, toprule=.15mm, opacitybacktitle=0.6, breakable, coltitle=black, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, bottomrule=.15mm, bottomtitle=1mm, colbacktitle=quarto-callout-tip-color!10!white]
+\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, opacitybacktitle=0.6, left=2mm, coltitle=black, breakable, titlerule=0mm, leftrule=.75mm, colback=white, toprule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, toptitle=1mm, bottomtitle=1mm, arc=.35mm, rightrule=.15mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-tip-color!10!white]
+
 \(A=\{x\in\mathbb{N}: x \mbox{ es par}\}\) es infinito y
 \(\overline A=\{x\in\mathbb{N}: x \mbox{ es impar}\}\) también es
 infinito.
+
 \end{tcolorbox}
 
 \leavevmode\vadjust pre{\hypertarget{exr-subconjunto-infinito-numerable}{}}%
@@ -714,7 +730,8 @@ numerable.
 
 \end{exercise}
 
-\begin{tcolorbox}[enhanced jigsaw, left=2mm, toptitle=1mm, colback=white, leftrule=.75mm, rightrule=.15mm, colframe=quarto-callout-tip-color-frame, titlerule=0mm, arc=.35mm, opacityback=0, toprule=.15mm, opacitybacktitle=0.6, breakable, coltitle=black, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, bottomrule=.15mm, bottomtitle=1mm, colbacktitle=quarto-callout-tip-color!10!white]
+\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, opacitybacktitle=0.6, left=2mm, coltitle=black, breakable, titlerule=0mm, leftrule=.75mm, colback=white, toprule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, toptitle=1mm, bottomtitle=1mm, arc=.35mm, rightrule=.15mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-tip-color!10!white]
+
 Sean \(A\) un conjunto infinito. Como \(A\) no es vacío, existe un
 elemento \(a_1\in A\). Considérese ahora el conjunto
 \(A_1 = A\setminus \{a_1\}\). Es evidente que \(A_1\) sigue siendo
@@ -722,6 +739,7 @@ infinito y podemos elegir otro elemento \(a_2\in A_1\) de manera que el
 conjunto \(A_2=A_1-\{a_2\}\) sigue siendo infinito. Repitiendo este
 proceso indefinidamente obtenemos que el conjunto
 \(\{a_1, a_2, \ldots\}\) es un subconjunto de \(A\) que es numerable.
+
 \end{tcolorbox}
 
 \leavevmode\vadjust pre{\hypertarget{exr-conjunto-equipotente-subconjunto}{}}%
@@ -732,7 +750,8 @@ subconjunto propio.
 
 \end{exercise}
 
-\begin{tcolorbox}[enhanced jigsaw, left=2mm, toptitle=1mm, colback=white, leftrule=.75mm, rightrule=.15mm, colframe=quarto-callout-tip-color-frame, titlerule=0mm, arc=.35mm, opacityback=0, toprule=.15mm, opacitybacktitle=0.6, breakable, coltitle=black, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, bottomrule=.15mm, bottomtitle=1mm, colbacktitle=quarto-callout-tip-color!10!white]
+\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, opacitybacktitle=0.6, left=2mm, coltitle=black, breakable, titlerule=0mm, leftrule=.75mm, colback=white, toprule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, toptitle=1mm, bottomtitle=1mm, arc=.35mm, rightrule=.15mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-tip-color!10!white]
+
 Sea \(A\) un conjunto. Si \(A\) es finito, entonces cualquier
 subconjunto \(B\subset A\) cumple que \(|B| < |A|\) por lo que no se
 puede establecer una biyección entre \(A\) y \(B\).
@@ -753,6 +772,7 @@ f(x) & \mbox{si } x\in B
 
 es también biyectiva, por lo que \(A\) es equipotente a
 \(A\setminus \{a_1\}\) que es un subconjunto propio suyo.
+
 \end{tcolorbox}
 
 \leavevmode\vadjust pre{\hypertarget{exr-producto-cartesiano-numerable}{}}%
@@ -764,7 +784,8 @@ numerables?
 
 \end{exercise}
 
-\begin{tcolorbox}[enhanced jigsaw, left=2mm, toptitle=1mm, colback=white, leftrule=.75mm, rightrule=.15mm, colframe=quarto-callout-tip-color-frame, titlerule=0mm, arc=.35mm, opacityback=0, toprule=.15mm, opacitybacktitle=0.6, breakable, coltitle=black, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, bottomrule=.15mm, bottomtitle=1mm, colbacktitle=quarto-callout-tip-color!10!white]
+\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, opacitybacktitle=0.6, left=2mm, coltitle=black, breakable, titlerule=0mm, leftrule=.75mm, colback=white, toprule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, toptitle=1mm, bottomtitle=1mm, arc=.35mm, rightrule=.15mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-tip-color!10!white]
+
 Sean \(A\) y \(B\) dos conjuntos numerables. Entonces existe una
 aplicación inyectiva \(f:A\to\mathbb{N}\) y otra \(g:B\to\mathbb{N}\).
 Si se toma ahora la función \(h:A\times B\to \mathbb{N}\) definida como
@@ -775,6 +796,7 @@ se tiene que \(f\) es inyectiva y por tanto \(A\times B\) es numerable.
 
 Por inducción, es fácil probar que el producto cartesiano de \(n\)
 conjuntos numerables es también numerable.
+
 \end{tcolorbox}
 
 \leavevmode\vadjust pre{\hypertarget{exr-racionales-numerables}{}}%
@@ -785,7 +807,8 @@ numerable.
 
 \end{exercise}
 
-\begin{tcolorbox}[enhanced jigsaw, left=2mm, toptitle=1mm, colback=white, leftrule=.75mm, rightrule=.15mm, colframe=quarto-callout-tip-color-frame, titlerule=0mm, arc=.35mm, opacityback=0, toprule=.15mm, opacitybacktitle=0.6, breakable, coltitle=black, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, bottomrule=.15mm, bottomtitle=1mm, colbacktitle=quarto-callout-tip-color!10!white]
+\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, opacitybacktitle=0.6, left=2mm, coltitle=black, breakable, titlerule=0mm, leftrule=.75mm, colback=white, toprule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, toptitle=1mm, bottomtitle=1mm, arc=.35mm, rightrule=.15mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-tip-color!10!white]
+
 Si se considera la aplicación
 \(f:\mathbb{Q}\to \mathbb{Z}\times \mathbb{N}\) que a cada número
 racional \(r\) le hace corresponder el par
@@ -796,6 +819,7 @@ numerables es numerable, existe otra aplicación inyectiva de
 \(g:\mathbb{Z}\times \mathbb{N}\to \mathbb{N}\), con lo que
 \(g\circ f:\mathbb{Q}\to\mathbb{N}\) es inyectiva y \(\mathbb{Q}\) es
 numerable.
+
 \end{tcolorbox}
 
 \leavevmode\vadjust pre{\hypertarget{exr-union-numerables}{}}%
@@ -805,7 +829,8 @@ Demostrar que la unión de dos conjuntos numerables es numerable.
 
 \end{exercise}
 
-\begin{tcolorbox}[enhanced jigsaw, left=2mm, toptitle=1mm, colback=white, leftrule=.75mm, rightrule=.15mm, colframe=quarto-callout-tip-color-frame, titlerule=0mm, arc=.35mm, opacityback=0, toprule=.15mm, opacitybacktitle=0.6, breakable, coltitle=black, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, bottomrule=.15mm, bottomtitle=1mm, colbacktitle=quarto-callout-tip-color!10!white]
+\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, opacitybacktitle=0.6, left=2mm, coltitle=black, breakable, titlerule=0mm, leftrule=.75mm, colback=white, toprule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, toptitle=1mm, bottomtitle=1mm, arc=.35mm, rightrule=.15mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-tip-color!10!white]
+
 Sean \(A\) y \(B\) dos conjuntos numerables disjuntos. Entonces existen
 dos biyecciones \(f:A\to \mathbb{N}\) y \(g:B\to \mathbb{N}\). A partir
 de estas biyecciones se puede definir otra \(h:A\cup B\to \mathbb{N}\)
@@ -835,6 +860,7 @@ g(x) & \mbox{si } x\in B\setminus A
 
 Mientras que si \(B\setminus A\) es infinito, se puede razonar como al
 principio pues \(A\) y \(B\setminus A\) son disjuntos.
+
 \end{tcolorbox}
 
 \leavevmode\vadjust pre{\hypertarget{exr-irracionales-no-numerables}{}}%
@@ -845,13 +871,15 @@ numerable.
 
 \end{exercise}
 
-\begin{tcolorbox}[enhanced jigsaw, left=2mm, toptitle=1mm, colback=white, leftrule=.75mm, rightrule=.15mm, colframe=quarto-callout-tip-color-frame, titlerule=0mm, arc=.35mm, opacityback=0, toprule=.15mm, opacitybacktitle=0.6, breakable, coltitle=black, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, bottomrule=.15mm, bottomtitle=1mm, colbacktitle=quarto-callout-tip-color!10!white]
+\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, opacitybacktitle=0.6, left=2mm, coltitle=black, breakable, titlerule=0mm, leftrule=.75mm, colback=white, toprule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, toptitle=1mm, bottomtitle=1mm, arc=.35mm, rightrule=.15mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-tip-color!10!white]
+
 Ya hemos visto en el ejercicio Ejercicio~\ref{exr-racionales-numerables}
 que \(\mathbb{Q}\) es numerable, de manera que si
 \(\mathbb{R}\setminus \mathbb{Q}\) fuese numerable, entonces por el
 Ejercicio~\ref{exr-union-numerables}
 \(\mathbb{Q}\cup \mathbb{R}\setminus \mathbb{Q}=\mathbb{R}\) sería
 numerable, lo cual no es cierto.
+
 \end{tcolorbox}
 
 \leavevmode\vadjust pre{\hypertarget{exr-union-numerable-conjuntos-numerables}{}}%
@@ -862,7 +890,8 @@ numerable.
 
 \end{exercise}
 
-\begin{tcolorbox}[enhanced jigsaw, left=2mm, toptitle=1mm, colback=white, leftrule=.75mm, rightrule=.15mm, colframe=quarto-callout-tip-color-frame, titlerule=0mm, arc=.35mm, opacityback=0, toprule=.15mm, opacitybacktitle=0.6, breakable, coltitle=black, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, bottomrule=.15mm, bottomtitle=1mm, colbacktitle=quarto-callout-tip-color!10!white]
+\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, opacitybacktitle=0.6, left=2mm, coltitle=black, breakable, titlerule=0mm, leftrule=.75mm, colback=white, toprule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, toptitle=1mm, bottomtitle=1mm, arc=.35mm, rightrule=.15mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-tip-color!10!white]
+
 Sea \(A\) un conjunto numerable de conjuntos numerables. Por ser \(A\)
 numerable existe una biyección \(f:\mathbb{N}\to A\), de manera que
 podemos enumerar los elementos de \(A\) de tal forma que \(A_i=f(i)\).
@@ -885,6 +914,7 @@ a_{31} & & a_{32} & & a_{33} & \ldots \\
 Siguiendo el orden de las flechas es posible enumerar todos los
 elementos de este conjunto, por lo que \(\cup_{i=1}^\infty A_i\) es
 numerable.
+
 \end{tcolorbox}
 
 \leavevmode\vadjust pre{\hypertarget{exr-conjunto-polinomios-no-numerable}{}}%
@@ -897,7 +927,8 @@ es numerable. ¿Y el de los polinomios con coeficientes racionales?
 
 \end{exercise}
 
-\begin{tcolorbox}[enhanced jigsaw, left=2mm, toptitle=1mm, colback=white, leftrule=.75mm, rightrule=.15mm, colframe=quarto-callout-tip-color-frame, titlerule=0mm, arc=.35mm, opacityback=0, toprule=.15mm, opacitybacktitle=0.6, breakable, coltitle=black, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, bottomrule=.15mm, bottomtitle=1mm, colbacktitle=quarto-callout-tip-color!10!white]
+\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, opacitybacktitle=0.6, left=2mm, coltitle=black, breakable, titlerule=0mm, leftrule=.75mm, colback=white, toprule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, toptitle=1mm, bottomtitle=1mm, arc=.35mm, rightrule=.15mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-tip-color!10!white]
+
 Para cada \(n\in\mathbb{N}\) sea \(P_n\) el conjunto de los polinomios
 de grado \(n\) con coeficientes enteros
 \(P_n=\{a_0+a_1x+a_2x^2+\cdots+a_nx^n: a_i\in \mathbb{Z}\}\). Para cada
@@ -910,6 +941,7 @@ existe una biyección entre \(P_n\) y \(\mathbb{Z}^n\), y como
 Finalmente, \(P=\cup_{i=1}^\infty P_n\) que es la unión numerable de
 conjuntos numerables, que, como ya se vió en el
 Ejercicio~\ref{exr-union-numerable-conjuntos-numerables}, es numerable.
+
 \end{tcolorbox}
 
 \leavevmode\vadjust pre{\hypertarget{exr-conjuntos-numerables}{}}%
@@ -974,7 +1006,7 @@ el ínfimo.
 
 \end{exercise}
 
-\begin{tcolorbox}[enhanced jigsaw, left=2mm, toptitle=1mm, colback=white, leftrule=.75mm, rightrule=.15mm, colframe=quarto-callout-tip-color-frame, titlerule=0mm, arc=.35mm, opacityback=0, toprule=.15mm, opacitybacktitle=0.6, breakable, coltitle=black, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, bottomrule=.15mm, bottomtitle=1mm, colbacktitle=quarto-callout-tip-color!10!white]
+\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, opacitybacktitle=0.6, left=2mm, coltitle=black, breakable, titlerule=0mm, leftrule=.75mm, colback=white, toprule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, toptitle=1mm, bottomtitle=1mm, arc=.35mm, rightrule=.15mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-tip-color!10!white]
 
 \begin{enumerate}
 \def\labelenumi{\alph{enumi}.}
@@ -1017,7 +1049,7 @@ máximo y mínimo?
 
 \end{exercise}
 
-\begin{tcolorbox}[enhanced jigsaw, left=2mm, toptitle=1mm, colback=white, leftrule=.75mm, rightrule=.15mm, colframe=quarto-callout-tip-color-frame, titlerule=0mm, arc=.35mm, opacityback=0, toprule=.15mm, opacitybacktitle=0.6, breakable, coltitle=black, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, bottomrule=.15mm, bottomtitle=1mm, colbacktitle=quarto-callout-tip-color!10!white]
+\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, opacitybacktitle=0.6, left=2mm, coltitle=black, breakable, titlerule=0mm, leftrule=.75mm, colback=white, toprule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, toptitle=1mm, bottomtitle=1mm, arc=.35mm, rightrule=.15mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-tip-color!10!white]
 
 \begin{enumerate}
 \def\labelenumi{\alph{enumi}.}
@@ -1044,7 +1076,8 @@ y \(f(a)\leq g(a)\) \(\forall a\in A\), entonces
 
 \end{exercise}
 
-\begin{tcolorbox}[enhanced jigsaw, left=2mm, toptitle=1mm, colback=white, leftrule=.75mm, rightrule=.15mm, colframe=quarto-callout-tip-color-frame, titlerule=0mm, arc=.35mm, opacityback=0, toprule=.15mm, opacitybacktitle=0.6, breakable, coltitle=black, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, bottomrule=.15mm, bottomtitle=1mm, colbacktitle=quarto-callout-tip-color!10!white]
+\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, opacitybacktitle=0.6, left=2mm, coltitle=black, breakable, titlerule=0mm, leftrule=.75mm, colback=white, toprule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, toptitle=1mm, bottomtitle=1mm, arc=.35mm, rightrule=.15mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-tip-color!10!white]
+
 Como las imágenes de \(f\) y \(g\) están acotadas, y suponiendo que no
 fuesen vacías, por el axioma del supremo, se tiene que existe
 \(c,d\in\mathbb{R}\) tales que \(c=\sup(\operatorname{Im}(f))\) y
@@ -1054,6 +1087,7 @@ que, para cualquier \(a\in A\), se tiene \(f(a)\leq g(a)\leq d\). Por
 consiguiente, tiene que ser \(c\leq d\), ya que de lo contrario \(c\) no
 sería el supremo por ser \(d\) una cota superior de la imagen de \(f\)
 menor que \(c\).
+
 \end{tcolorbox}
 
 \leavevmode\vadjust pre{\hypertarget{exr-cotas-conjunto-opuestos}{}}%
@@ -1066,7 +1100,8 @@ Demostrar que si \(c\in\mathbb{R}\) es una cota superior de un conjunto
 
 \end{exercise}
 
-\begin{tcolorbox}[enhanced jigsaw, left=2mm, toptitle=1mm, colback=white, leftrule=.75mm, rightrule=.15mm, colframe=quarto-callout-tip-color-frame, titlerule=0mm, arc=.35mm, opacityback=0, toprule=.15mm, opacitybacktitle=0.6, breakable, coltitle=black, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, bottomrule=.15mm, bottomtitle=1mm, colbacktitle=quarto-callout-tip-color!10!white]
+\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, opacitybacktitle=0.6, left=2mm, coltitle=black, breakable, titlerule=0mm, leftrule=.75mm, colback=white, toprule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, toptitle=1mm, bottomtitle=1mm, arc=.35mm, rightrule=.15mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-tip-color!10!white]
+
 Sea \(c\in\mathbb{R}\) una cota superior del conjunto \(A\). Entonces,
 \(a\leq c\) \(\forall a\in A\). De ello se deduce que para cualquier
 \(a\in A\),
@@ -1086,6 +1121,7 @@ c<a \Rightarrow (-1)c\geq (-1)a \Rightarrow -c\geq -a,
 \]
 
 de manera que \(-c\) es cota superior de \(A'\).
+
 \end{tcolorbox}
 
 \leavevmode\vadjust pre{\hypertarget{exr-propiedad-infimo}{}}%
@@ -1096,7 +1132,8 @@ acotado inferiormente tiene un ínfimo.
 
 \end{exercise}
 
-\begin{tcolorbox}[enhanced jigsaw, left=2mm, toptitle=1mm, colback=white, leftrule=.75mm, rightrule=.15mm, colframe=quarto-callout-tip-color-frame, titlerule=0mm, arc=.35mm, opacityback=0, toprule=.15mm, opacitybacktitle=0.6, breakable, coltitle=black, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, bottomrule=.15mm, bottomtitle=1mm, colbacktitle=quarto-callout-tip-color!10!white]
+\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, opacitybacktitle=0.6, left=2mm, coltitle=black, breakable, titlerule=0mm, leftrule=.75mm, colback=white, toprule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, toptitle=1mm, bottomtitle=1mm, arc=.35mm, rightrule=.15mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-tip-color!10!white]
+
 Sea \(A\subset\mathbb{R}\) no vacío y acotado inferiormente. Entonces
 existe un \(c\in\mathbb{R}\) que es cota inferior de \(A\). Si tomamos
 ahora el conjunto \(A'=\{-a\in\mathbb{R}: a\in A\}\), por el ejercicio
@@ -1115,6 +1152,7 @@ cota superior de \(A'\), pero
 \(x>s\Rightarrow (-1)x<(-1)s \Rightarrow -x<-s\), lo que contradice que
 \(-s\) sea el supremo de \(A'\), ya que \(-x\) sería una cota superior
 menor que \(-s\). Luego \(s\) es el ínfimo de \(A\).
+
 \end{tcolorbox}
 
 \leavevmode\vadjust pre{\hypertarget{exr-propiedad-valor-absoluto}{}}%
@@ -1124,7 +1162,7 @@ Demostrar que \(|a|-|b|\leq |a-b|\) \(\forall a,b\in\mathbb{R}\).
 
 \end{exercise}
 
-\begin{tcolorbox}[enhanced jigsaw, left=2mm, toptitle=1mm, colback=white, leftrule=.75mm, rightrule=.15mm, colframe=quarto-callout-tip-color-frame, titlerule=0mm, arc=.35mm, opacityback=0, toprule=.15mm, opacitybacktitle=0.6, breakable, coltitle=black, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, bottomrule=.15mm, bottomtitle=1mm, colbacktitle=quarto-callout-tip-color!10!white]
+\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, opacitybacktitle=0.6, left=2mm, coltitle=black, breakable, titlerule=0mm, leftrule=.75mm, colback=white, toprule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, toptitle=1mm, bottomtitle=1mm, arc=.35mm, rightrule=.15mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-tip-color!10!white]
 
 Veamos todas las posibilidades que pueden darse:
 
@@ -1161,7 +1199,8 @@ existe un número natural \(n\) tal que \(n-1\leq a< n\).
 
 \end{exercise}
 
-\begin{tcolorbox}[enhanced jigsaw, left=2mm, toptitle=1mm, colback=white, leftrule=.75mm, rightrule=.15mm, colframe=quarto-callout-tip-color-frame, titlerule=0mm, arc=.35mm, opacityback=0, toprule=.15mm, opacitybacktitle=0.6, breakable, coltitle=black, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, bottomrule=.15mm, bottomtitle=1mm, colbacktitle=quarto-callout-tip-color!10!white]
+\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, opacitybacktitle=0.6, left=2mm, coltitle=black, breakable, titlerule=0mm, leftrule=.75mm, colback=white, toprule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, toptitle=1mm, bottomtitle=1mm, arc=.35mm, rightrule=.15mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-tip-color!10!white]
+
 Como \(a>0\) se tiene que \(\frac{1}{a}>0\), y por la propiedad
 arquimediana se cumple que existe \(n\in \mathbb{N}\) tal que \(a<n\).
 
@@ -1171,6 +1210,7 @@ Aplicando ahora el principio de buena ordenación de los números
 naturales, como \(A\subset \mathbb{N}\), existe un primer elemento
 \(n_0\in A\), tal que \(n_0-1\not\in A\), de manera que \(n_0-1\leq a\)
 y con ello se tiene que \$\(n_0-1\leq a<n\).
+
 \end{tcolorbox}
 
 \leavevmode\vadjust pre{\hypertarget{exr-densidad-racionales}{}}%
@@ -1182,13 +1222,15 @@ Demostrar que \(\mathbb{Q}\) es denso en \(\mathbb{R}\).
 
 \end{exercise}
 
-\begin{tcolorbox}[enhanced jigsaw, left=2mm, toptitle=1mm, colback=white, leftrule=.75mm, rightrule=.15mm, colframe=quarto-callout-tip-color-frame, titlerule=0mm, arc=.35mm, opacityback=0, toprule=.15mm, opacitybacktitle=0.6, breakable, coltitle=black, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, bottomrule=.15mm, bottomtitle=1mm, colbacktitle=quarto-callout-tip-color!10!white]
+\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, opacitybacktitle=0.6, left=2mm, coltitle=black, breakable, titlerule=0mm, leftrule=.75mm, colback=white, toprule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, toptitle=1mm, bottomtitle=1mm, arc=.35mm, rightrule=.15mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-tip-color!10!white]
+
 La prueba es la misma que la de la propiedad arquimediana. Basta con
 tomar \(n\in \mathbb{N}\) tal que \(\frac{1}{n}< b-a\). Si ahora se toma
 el primer múltiplo de \(1/n\) tal que \(a<\frac{m}{n}\), también se
 cumplirá que \(\frac{m}{n}<b\), ya que de lo contrario
 \(\frac{m-1}{n}<a<b<\frac{m}{n}\) lo que lleva a la contradicción de que
 \(\frac{1}{n}>b-a\).
+
 \end{tcolorbox}
 
 \bookmarksetup{startatroot}
@@ -1207,7 +1249,8 @@ cerrados entonces la intersección es vacía.
 
 \end{exercise}
 
-\begin{tcolorbox}[enhanced jigsaw, left=2mm, toptitle=1mm, colback=white, leftrule=.75mm, rightrule=.15mm, colframe=quarto-callout-tip-color-frame, titlerule=0mm, arc=.35mm, opacityback=0, toprule=.15mm, opacitybacktitle=0.6, breakable, coltitle=black, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, bottomrule=.15mm, bottomtitle=1mm, colbacktitle=quarto-callout-tip-color!10!white]
+\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, opacitybacktitle=0.6, left=2mm, coltitle=black, breakable, titlerule=0mm, leftrule=.75mm, colback=white, toprule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, toptitle=1mm, bottomtitle=1mm, arc=.35mm, rightrule=.15mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-tip-color!10!white]
+
 En primer lugar, es fácil ver que \(0\in\cap_{n=1}^\infty I_n\) ya que
 \(0\in I_n\) \(\forall n\in\mathbb{N}\). Veamos ahora que \(0\) es el
 único elemento de la intersección. Para cualquier \(x>0\), aplicando la
@@ -1219,6 +1262,7 @@ lo que \(x\not\in\cap_{n=1}^\infty I_n\). Por tanto,
 Si se consideran intervalos abiertos en lugar de cerrados, entonces
 \(0\) tampoco pertenecería a la intersección y
 \(\cap_{n=1}^\infty I_n=\emptyset\).
+
 \end{tcolorbox}
 
 \leavevmode\vadjust pre{\hypertarget{exr-interior-conjunto-unitario}{}}%
@@ -1228,7 +1272,8 @@ Si se consideran intervalos abiertos en lugar de cerrados, entonces
 
 \end{exercise}
 
-\begin{tcolorbox}[enhanced jigsaw, left=2mm, toptitle=1mm, colback=white, leftrule=.75mm, rightrule=.15mm, colframe=quarto-callout-tip-color-frame, titlerule=0mm, arc=.35mm, opacityback=0, toprule=.15mm, opacitybacktitle=0.6, breakable, coltitle=black, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, bottomrule=.15mm, bottomtitle=1mm, colbacktitle=quarto-callout-tip-color!10!white]
+\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, opacitybacktitle=0.6, left=2mm, coltitle=black, breakable, titlerule=0mm, leftrule=.75mm, colback=white, toprule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, toptitle=1mm, bottomtitle=1mm, arc=.35mm, rightrule=.15mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-tip-color!10!white]
+
 \(a\) no es un punto interior de \(A\), ya que para cualquier
 \(\varepsilon>0\), el entorno
 \((a-\varepsilon, a+\varepsilon)\not\subseteq A\). Por tanto,
@@ -1236,6 +1281,7 @@ Si se consideran intervalos abiertos en lugar de cerrados, entonces
 
 En general, cualquier conjunto con un solo punto no tiene puntos
 interiores.
+
 \end{tcolorbox}
 
 \leavevmode\vadjust pre{\hypertarget{exr-interior-exterior-frontera}{}}%
@@ -1247,7 +1293,8 @@ Sean \(a,b,c\in\mathbb{R}\) tales que \(a<b<c\) y sea
 
 \end{exercise}
 
-\begin{tcolorbox}[enhanced jigsaw, left=2mm, toptitle=1mm, colback=white, leftrule=.75mm, rightrule=.15mm, colframe=quarto-callout-tip-color-frame, titlerule=0mm, arc=.35mm, opacityback=0, toprule=.15mm, opacitybacktitle=0.6, breakable, coltitle=black, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, bottomrule=.15mm, bottomtitle=1mm, colbacktitle=quarto-callout-tip-color!10!white]
+\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, opacitybacktitle=0.6, left=2mm, coltitle=black, breakable, titlerule=0mm, leftrule=.75mm, colback=white, toprule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, toptitle=1mm, bottomtitle=1mm, arc=.35mm, rightrule=.15mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-tip-color!10!white]
+
 Como el interior de un conjunto con un solo punto es vacío y el interior
 de un intervalo abierto es el propio intervalo abierto (ver
 \href{https://aprendeconalf.es/analisis-manual/topologia-reales.html\#prp-interior-intervalo-abierto}{proposición}),
@@ -1257,6 +1304,7 @@ unión de intervalos abiertos se tiene que
 \(\operatorname{Ext}(A)=\operatorname{Int}(\overline{A})=(-\infty,a)\cup (a,b)\cup (c,\infty)\).
 Finalmente, \(\operatorname{Fr}(A)=\{a,b,c\}\), ya que cualquier entorno
 de estos puntos contiene puntos de \(A\) y de \(\overline{A}\).
+
 \end{tcolorbox}
 
 \leavevmode\vadjust pre{\hypertarget{exr-frontera-enteros}{}}%
@@ -1267,11 +1315,13 @@ frontera.
 
 \end{exercise}
 
-\begin{tcolorbox}[enhanced jigsaw, left=2mm, toptitle=1mm, colback=white, leftrule=.75mm, rightrule=.15mm, colframe=quarto-callout-tip-color-frame, titlerule=0mm, arc=.35mm, opacityback=0, toprule=.15mm, opacitybacktitle=0.6, breakable, coltitle=black, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, bottomrule=.15mm, bottomtitle=1mm, colbacktitle=quarto-callout-tip-color!10!white]
+\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, opacitybacktitle=0.6, left=2mm, coltitle=black, breakable, titlerule=0mm, leftrule=.75mm, colback=white, toprule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, toptitle=1mm, bottomtitle=1mm, arc=.35mm, rightrule=.15mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-tip-color!10!white]
+
 Sea \(x\in\mathbb{Z}\), entonces, para cualquier \(\varepsilon>0\), el
 entorno \((x-\varepsilon, x+\varepsilon)\) siempre contiene números
 enteros (por ejemplo el propio \(x\)), y números no enteros, por los que
 \(x\) es un punto frontera.
+
 \end{tcolorbox}
 
 \leavevmode\vadjust pre{\hypertarget{exr-interior-racionales-irracionales}{}}%
@@ -1282,7 +1332,8 @@ puntos interiores. ¿Y el conjunto de los números irracionales?
 
 \end{exercise}
 
-\begin{tcolorbox}[enhanced jigsaw, left=2mm, toptitle=1mm, colback=white, leftrule=.75mm, rightrule=.15mm, colframe=quarto-callout-tip-color-frame, titlerule=0mm, arc=.35mm, opacityback=0, toprule=.15mm, opacitybacktitle=0.6, breakable, coltitle=black, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, bottomrule=.15mm, bottomtitle=1mm, colbacktitle=quarto-callout-tip-color!10!white]
+\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, opacitybacktitle=0.6, left=2mm, coltitle=black, breakable, titlerule=0mm, leftrule=.75mm, colback=white, toprule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, toptitle=1mm, bottomtitle=1mm, arc=.35mm, rightrule=.15mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-tip-color!10!white]
+
 Sea \(x\in\mathbb{Q}\), entonces, para cualquier \(\varepsilon>0\), por
 la
 \href{https://aprendeconalf.es/analisis-manual/cuerpo-reales.html\#thm-densidad-racionales}{densidad
@@ -1296,6 +1347,7 @@ puntos interiores.
 
 Por el mismo motivo, \(\mathbb{R}\setminus\mathbb{Q}\) tampoco tiene
 puntos interiores y todos sus puntos son puntos frontera.
+
 \end{tcolorbox}
 
 \leavevmode\vadjust pre{\hypertarget{exr-interior-subconjunto}{}}%
@@ -1306,11 +1358,13 @@ entonces \(x\) también es un punto interior de \(B\).
 
 \end{exercise}
 
-\begin{tcolorbox}[enhanced jigsaw, left=2mm, toptitle=1mm, colback=white, leftrule=.75mm, rightrule=.15mm, colframe=quarto-callout-tip-color-frame, titlerule=0mm, arc=.35mm, opacityback=0, toprule=.15mm, opacitybacktitle=0.6, breakable, coltitle=black, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, bottomrule=.15mm, bottomtitle=1mm, colbacktitle=quarto-callout-tip-color!10!white]
+\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, opacitybacktitle=0.6, left=2mm, coltitle=black, breakable, titlerule=0mm, leftrule=.75mm, colback=white, toprule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, toptitle=1mm, bottomtitle=1mm, arc=.35mm, rightrule=.15mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-tip-color!10!white]
+
 Sea \(x\) un punto interior de \(A\). Entonces existe un
 \(\varepsilon>0\) tal que el entorno
 \((x-\varepsilon, x+\varepsilon)\subseteq A\subseteq B\), de manera que
 \(x\) también es un punto interior de \(B\).
+
 \end{tcolorbox}
 
 \leavevmode\vadjust pre{\hypertarget{exr-punto-interior-union-interseccion}{}}%
@@ -1322,7 +1376,8 @@ intersección.
 
 \end{exercise}
 
-\begin{tcolorbox}[enhanced jigsaw, left=2mm, toptitle=1mm, colback=white, leftrule=.75mm, rightrule=.15mm, colframe=quarto-callout-tip-color-frame, titlerule=0mm, arc=.35mm, opacityback=0, toprule=.15mm, opacitybacktitle=0.6, breakable, coltitle=black, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, bottomrule=.15mm, bottomtitle=1mm, colbacktitle=quarto-callout-tip-color!10!white]
+\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, opacitybacktitle=0.6, left=2mm, coltitle=black, breakable, titlerule=0mm, leftrule=.75mm, colback=white, toprule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, toptitle=1mm, bottomtitle=1mm, arc=.35mm, rightrule=.15mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-tip-color!10!white]
+
 Sea \(x\) un punto interior de \(A\) y \(B\). Entonces, existe un
 \(\varepsilon_1>0\) tal que el entorno
 \((x-\varepsilon_1, x+\varepsilon_1)\subseteq A\subseteq A\cup B\), de
@@ -1336,6 +1391,7 @@ entorno \((x-\varepsilon, x+\varepsilon)\subseteq A\) y
 \((x-\varepsilon, x+\varepsilon)\subseteq B\), por lo que
 \((x-\varepsilon, x+\varepsilon)\subseteq A\cap B\), y \(x\) es también
 un punto interior de \(A\cap B\).
+
 \end{tcolorbox}
 
 \leavevmode\vadjust pre{\hypertarget{exr-interior-union-interseccion}{}}%
@@ -1351,7 +1407,8 @@ es decir, dados \(A,B\subseteq \mathbb{R}\), no se cumple siempre que
 
 \end{exercise}
 
-\begin{tcolorbox}[enhanced jigsaw, left=2mm, toptitle=1mm, colback=white, leftrule=.75mm, rightrule=.15mm, colframe=quarto-callout-tip-color-frame, titlerule=0mm, arc=.35mm, opacityback=0, toprule=.15mm, opacitybacktitle=0.6, breakable, coltitle=black, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, bottomrule=.15mm, bottomtitle=1mm, colbacktitle=quarto-callout-tip-color!10!white]
+\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, opacitybacktitle=0.6, left=2mm, coltitle=black, breakable, titlerule=0mm, leftrule=.75mm, colback=white, toprule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, toptitle=1mm, bottomtitle=1mm, arc=.35mm, rightrule=.15mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-tip-color!10!white]
+
 En el Ejercicio~\ref{exr-punto-interior-union-interseccion} hemos visto
 que si \(x\) es un punto interior de \(A\) y \(B\), entonces también lo
 es de su intersección. Veamos ahora el otro sentido de la implicación.
@@ -1368,6 +1425,7 @@ intervalo abierto, \(\operatorname{Int}(A\cup B)=(-1,1)\). Sin embargo,
 \(\operatorname{Int}(A)=(-1,0)\) y \(\operatorname{Int}(B)=(0,1)\), por
 lo que
 \(\operatorname{Int}(A)\cup \operatorname{Int}(B)=(-1,1)\setminus\{0\}\neq (-1,1)= \operatorname{Int}(A\cup B)\).
+
 \end{tcolorbox}
 
 \leavevmode\vadjust pre{\hypertarget{exr-particion-interior-exterior-frontera}{}}%
@@ -1379,7 +1437,7 @@ Dado un conjunto \(A\subset\mathbb{R}\), probar que los conjuntos
 
 \end{exercise}
 
-\begin{tcolorbox}[enhanced jigsaw, left=2mm, toptitle=1mm, colback=white, leftrule=.75mm, rightrule=.15mm, colframe=quarto-callout-tip-color-frame, titlerule=0mm, arc=.35mm, opacityback=0, toprule=.15mm, opacitybacktitle=0.6, breakable, coltitle=black, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, bottomrule=.15mm, bottomtitle=1mm, colbacktitle=quarto-callout-tip-color!10!white]
+\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, opacitybacktitle=0.6, left=2mm, coltitle=black, breakable, titlerule=0mm, leftrule=.75mm, colback=white, toprule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, toptitle=1mm, bottomtitle=1mm, arc=.35mm, rightrule=.15mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-tip-color!10!white]
 
 Veamos primero, que \(\operatorname{Int}(A)\), \(\operatorname{Ext}(A)\)
 y \(\operatorname{Fr}(A)\) son disjuntos dos a dos.
@@ -1449,7 +1507,8 @@ conjunto \(A=\{\frac{n+1}{n}:n\in\mathbb{N}\}\).
 
 \end{exercise}
 
-\begin{tcolorbox}[enhanced jigsaw, left=2mm, toptitle=1mm, colback=white, leftrule=.75mm, rightrule=.15mm, colframe=quarto-callout-tip-color-frame, titlerule=0mm, arc=.35mm, opacityback=0, toprule=.15mm, opacitybacktitle=0.6, breakable, coltitle=black, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, bottomrule=.15mm, bottomtitle=1mm, colbacktitle=quarto-callout-tip-color!10!white]
+\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, opacitybacktitle=0.6, left=2mm, coltitle=black, breakable, titlerule=0mm, leftrule=.75mm, colback=white, toprule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, toptitle=1mm, bottomtitle=1mm, arc=.35mm, rightrule=.15mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-tip-color!10!white]
+
 Como \(\frac{n+1}{n}=1+\frac{1}{n}\), \(1\) es un punto de acumulación
 de \(A\), ya que para cualquier \(\varepsilon>0\),
 \((1-\varepsilon, 1+\varepsilon)\setminus \{1\}\) contiene puntos de
@@ -1485,6 +1544,7 @@ acumulación al ser
 reducido \((x-\varepsilon,x+\varepsilon)\setminus\{x\}\) no contiene
 puntos de \(A\), por lo que \(x\) no es punto de acumulación de \(A\).
 Así pues, \(\operatorname{Ac}(A)=\{1\}\).
+
 \end{tcolorbox}
 
 \leavevmode\vadjust pre{\hypertarget{exr-particion-interior-exterior-frontera}{}}%
@@ -1495,10 +1555,12 @@ también de \(\mathbb{Q}\).
 
 \end{exercise}
 
-\begin{tcolorbox}[enhanced jigsaw, left=2mm, toptitle=1mm, colback=white, leftrule=.75mm, rightrule=.15mm, colframe=quarto-callout-tip-color-frame, titlerule=0mm, arc=.35mm, opacityback=0, toprule=.15mm, opacitybacktitle=0.6, breakable, coltitle=black, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, bottomrule=.15mm, bottomtitle=1mm, colbacktitle=quarto-callout-tip-color!10!white]
+\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, opacitybacktitle=0.6, left=2mm, coltitle=black, breakable, titlerule=0mm, leftrule=.75mm, colback=white, toprule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, toptitle=1mm, bottomtitle=1mm, arc=.35mm, rightrule=.15mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-tip-color!10!white]
+
 \(\operatorname{Adh}(\mathbb{Z})=\mathbb{Z}\) y
 \(\operatorname{Ac}(\mathbb{Z})=\emptyset\).\\
 \(\operatorname{Adh}(\mathbb{Q})=\operatorname{Ac}(\mathbb{Q})=\mathbb{R}\).
+
 \end{tcolorbox}
 
 \leavevmode\vadjust pre{\hypertarget{exr-ejemplo-conjuntos-abiertos-interseccion-no-abierta}{}}%
@@ -1509,9 +1571,11 @@ abierta.
 
 \end{exercise}
 
-\begin{tcolorbox}[enhanced jigsaw, left=2mm, toptitle=1mm, colback=white, leftrule=.75mm, rightrule=.15mm, colframe=quarto-callout-tip-color-frame, titlerule=0mm, arc=.35mm, opacityback=0, toprule=.15mm, opacitybacktitle=0.6, breakable, coltitle=black, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, bottomrule=.15mm, bottomtitle=1mm, colbacktitle=quarto-callout-tip-color!10!white]
+\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, opacitybacktitle=0.6, left=2mm, coltitle=black, breakable, titlerule=0mm, leftrule=.75mm, colback=white, toprule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, toptitle=1mm, bottomtitle=1mm, arc=.35mm, rightrule=.15mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-tip-color!10!white]
+
 Si se toma \(A=[0,2)\) y \(B=(1,3]\), tanto \(A\) como \(B\) no son
 abiertos, pero \(A\cap B=(1,2)\) que es un conjunto abierto.
+
 \end{tcolorbox}
 
 \leavevmode\vadjust pre{\hypertarget{exr-racionales-no-abierto-cerrado}{}}%
@@ -1522,13 +1586,15 @@ abiertos, pero \(A\cap B=(1,2)\) que es un conjunto abierto.
 
 \end{exercise}
 
-\begin{tcolorbox}[enhanced jigsaw, left=2mm, toptitle=1mm, colback=white, leftrule=.75mm, rightrule=.15mm, colframe=quarto-callout-tip-color-frame, titlerule=0mm, arc=.35mm, opacityback=0, toprule=.15mm, opacitybacktitle=0.6, breakable, coltitle=black, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, bottomrule=.15mm, bottomtitle=1mm, colbacktitle=quarto-callout-tip-color!10!white]
+\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, opacitybacktitle=0.6, left=2mm, coltitle=black, breakable, titlerule=0mm, leftrule=.75mm, colback=white, toprule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, toptitle=1mm, bottomtitle=1mm, arc=.35mm, rightrule=.15mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-tip-color!10!white]
+
 \(\mathbb{Q}\) no es abierto ya que como se vio en el
 Ejercicio~\ref{exr-interior-racionales-irracionales}
 \(\operatorname{Int}(\mathbb{Q})=\emptyset\). En el mismo ejercicio se
 vio también que
 \(\operatorname{Int}(\overline{\mathbb{Q}})=\operatorname{Int}(\mathbb{R}\setminus \mathbb{Q})=\emptyset\),
 por lo que \(\mathbb{Q}\) tampoco es cerrado.
+
 \end{tcolorbox}
 
 \leavevmode\vadjust pre{\hypertarget{exr-union-interseccion-coleccion-abiertos-cerrados}{}}%
@@ -1554,7 +1620,7 @@ Probar las siguientes propiedades:
 
 \end{exercise}
 
-\begin{tcolorbox}[enhanced jigsaw, left=2mm, toptitle=1mm, colback=white, leftrule=.75mm, rightrule=.15mm, colframe=quarto-callout-tip-color-frame, titlerule=0mm, arc=.35mm, opacityback=0, toprule=.15mm, opacitybacktitle=0.6, breakable, coltitle=black, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, bottomrule=.15mm, bottomtitle=1mm, colbacktitle=quarto-callout-tip-color!10!white]
+\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, opacitybacktitle=0.6, left=2mm, coltitle=black, breakable, titlerule=0mm, leftrule=.75mm, colback=white, toprule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, toptitle=1mm, bottomtitle=1mm, arc=.35mm, rightrule=.15mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-tip-color!10!white]
 
 \begin{enumerate}
 \def\labelenumi{\alph{enumi}.}
@@ -1621,7 +1687,8 @@ Demostrar que la adherencia de cualquier conjunto es siempre cerrada.
 
 \end{exercise}
 
-\begin{tcolorbox}[enhanced jigsaw, left=2mm, toptitle=1mm, colback=white, leftrule=.75mm, rightrule=.15mm, colframe=quarto-callout-tip-color-frame, titlerule=0mm, arc=.35mm, opacityback=0, toprule=.15mm, opacitybacktitle=0.6, breakable, coltitle=black, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, bottomrule=.15mm, bottomtitle=1mm, colbacktitle=quarto-callout-tip-color!10!white]
+\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, opacitybacktitle=0.6, left=2mm, coltitle=black, breakable, titlerule=0mm, leftrule=.75mm, colback=white, toprule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, toptitle=1mm, bottomtitle=1mm, arc=.35mm, rightrule=.15mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-tip-color!10!white]
+
 Sea \(A\subset \mathbb{R}\). Para probar que \(\operatorname{Adh}(A)\)
 es un conjunto cerrado, veremos que \(\overline{\operatorname{Adh}(A)}\)
 es abierto. Si \(x\in\overline{\operatorname{Adh}(A)}\), entonces
@@ -1635,6 +1702,7 @@ lo que \(y\not\in\operatorname{Adh}(A)\). Así pues,
 \((x-\varepsilon,x+\varepsilon)\subseteq \overline{\operatorname{Adh}(A)}\),
 y por consiguiente \(\overline{\operatorname{Adh}(A)}\) es abierto y
 \(\operatorname{Adh}(A)\) es cerrado.
+
 \end{tcolorbox}
 
 \leavevmode\vadjust pre{\hypertarget{exr-adherencia-cerrada}{}}%
@@ -1645,7 +1713,8 @@ adherencia.
 
 \end{exercise}
 
-\begin{tcolorbox}[enhanced jigsaw, left=2mm, toptitle=1mm, colback=white, leftrule=.75mm, rightrule=.15mm, colframe=quarto-callout-tip-color-frame, titlerule=0mm, arc=.35mm, opacityback=0, toprule=.15mm, opacitybacktitle=0.6, breakable, coltitle=black, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, bottomrule=.15mm, bottomtitle=1mm, colbacktitle=quarto-callout-tip-color!10!white]
+\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, opacitybacktitle=0.6, left=2mm, coltitle=black, breakable, titlerule=0mm, leftrule=.75mm, colback=white, toprule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, toptitle=1mm, bottomtitle=1mm, arc=.35mm, rightrule=.15mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-tip-color!10!white]
+
 Sea \(A\) un conjunto cerrado. Ya sabemos que
 \(A\subseteq \operatorname{Adh}(A)\). Supongamos ahora que existe un
 punto \(x\in \operatorname{Adh}(A)\setminus A\). Entonces, como \(x\) es
@@ -1665,6 +1734,7 @@ Para probar el otro sentido de la implicación, supongamos que
 \((x-\varepsilon,x+\varepsilon)\cap A=\emptyset\), por lo que
 \((x-\varepsilon,x+\varepsilon)\subseteq \overline{A}\) y
 \(\overline{A}\) es abierto, de manera que \(A\) es cerrado.
+
 \end{tcolorbox}
 
 \bookmarksetup{startatroot}
@@ -1682,11 +1752,13 @@ constante siempre converge.
 
 \end{exercise}
 
-\begin{tcolorbox}[enhanced jigsaw, left=2mm, toptitle=1mm, colback=white, leftrule=.75mm, rightrule=.15mm, colframe=quarto-callout-tip-color-frame, titlerule=0mm, arc=.35mm, opacityback=0, toprule=.15mm, opacitybacktitle=0.6, breakable, coltitle=black, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, bottomrule=.15mm, bottomtitle=1mm, colbacktitle=quarto-callout-tip-color!10!white]
+\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, opacitybacktitle=0.6, left=2mm, coltitle=black, breakable, titlerule=0mm, leftrule=.75mm, colback=white, toprule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, toptitle=1mm, bottomtitle=1mm, arc=.35mm, rightrule=.15mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-tip-color!10!white]
+
 Sea \((c)_{n=1}^\infty\) una sucesión constante. Veamos que converge a
 \(c\). Para cualquier \(\varepsilon>0\) basta tomar \(k=1\), de manera
 que \(\forall n\geq k\) se tiene que \(|x_n-c|=|c-c| = 0 <\varepsilon\).
 Por tanto, \(\lim_{n\to\infty}x_n =c\).
+
 \end{tcolorbox}
 
 \leavevmode\vadjust pre{\hypertarget{exr-sucesion-aritmuxe9tica}{}}%
@@ -1700,7 +1772,8 @@ de las sucesiones aritméticas.
 
 \end{exercise}
 
-\begin{tcolorbox}[enhanced jigsaw, left=2mm, toptitle=1mm, colback=white, leftrule=.75mm, rightrule=.15mm, colframe=quarto-callout-tip-color-frame, titlerule=0mm, arc=.35mm, opacityback=0, toprule=.15mm, opacitybacktitle=0.6, breakable, coltitle=black, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, bottomrule=.15mm, bottomtitle=1mm, colbacktitle=quarto-callout-tip-color!10!white]
+\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, opacitybacktitle=0.6, left=2mm, coltitle=black, breakable, titlerule=0mm, leftrule=.75mm, colback=white, toprule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, toptitle=1mm, bottomtitle=1mm, arc=.35mm, rightrule=.15mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-tip-color!10!white]
+
 Si \(c=0\) entonces la sucesión es constante y por el
 Ejercicio~\ref{exr-sucesion-constante}, la sucesión converge.
 
@@ -1725,6 +1798,7 @@ acotada y aplicar el
 \href{https://aprendeconalf.es/analisis-manual/sucesiones.html\#thm-convergencia-monotona}{teorema
 de la convergencia de sucesiones monóntonas} para concluir que la
 sucesión no converge.
+
 \end{tcolorbox}
 
 \leavevmode\vadjust pre{\hypertarget{exr-sucesion-geomuxe9trica}{}}%
@@ -1738,7 +1812,8 @@ geométricas.
 
 \end{exercise}
 
-\begin{tcolorbox}[enhanced jigsaw, left=2mm, toptitle=1mm, colback=white, leftrule=.75mm, rightrule=.15mm, colframe=quarto-callout-tip-color-frame, titlerule=0mm, arc=.35mm, opacityback=0, toprule=.15mm, opacitybacktitle=0.6, breakable, coltitle=black, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, bottomrule=.15mm, bottomtitle=1mm, colbacktitle=quarto-callout-tip-color!10!white]
+\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, opacitybacktitle=0.6, left=2mm, coltitle=black, breakable, titlerule=0mm, leftrule=.75mm, colback=white, toprule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, toptitle=1mm, bottomtitle=1mm, arc=.35mm, rightrule=.15mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-tip-color!10!white]
+
 Si \(c=0\) o \(c=1\) entonces la sucesión es constante y por el
 Ejercicio~\ref{exr-sucesion-constante}, la sucesión converge.
 
@@ -1779,6 +1854,7 @@ diverge.
 
 Veamos finalmente que si \(0<c<1\) entonces la sucesión converge a
 \(0\).
+
 \end{tcolorbox}
 
 \leavevmode\vadjust pre{\hypertarget{exr-sucesion-alternada}{}}%
@@ -1791,7 +1867,8 @@ divergente. ¿Puede una sucesión alternada ser convergente?
 
 \end{exercise}
 
-\begin{tcolorbox}[enhanced jigsaw, left=2mm, toptitle=1mm, colback=white, leftrule=.75mm, rightrule=.15mm, colframe=quarto-callout-tip-color-frame, titlerule=0mm, arc=.35mm, opacityback=0, toprule=.15mm, opacitybacktitle=0.6, breakable, coltitle=black, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, bottomrule=.15mm, bottomtitle=1mm, colbacktitle=quarto-callout-tip-color!10!white]
+\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, opacitybacktitle=0.6, left=2mm, coltitle=black, breakable, titlerule=0mm, leftrule=.75mm, colback=white, toprule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, toptitle=1mm, bottomtitle=1mm, arc=.35mm, rightrule=.15mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-tip-color!10!white]
+
 Veamos que no existe \(x\in\mathbb{R}\) tal que
 \(\lim_{n\to\infty}(-1)^n=x\). Para \(x\in\mathbb{R}\setminus\{-1,1\}\)
 es sencillo, ya que tomando \(\varepsilon=|1-|x||\) para cualquier
@@ -1821,6 +1898,7 @@ Por otro lado, no toda sucesión alternada es divergente. Por ejemplo,
 las sucesiones \(\left(\frac{(-1)^n}{n}\right)_{n=1}^\infty\) y
 \(\left(\frac{(-1)^n}{n^2}\right)_{n=1}^\infty\) son alternadas y
 convergen a \(0\).
+
 \end{tcolorbox}
 
 \leavevmode\vadjust pre{\hypertarget{exr-refutacion}{}}%
@@ -1843,7 +1921,7 @@ convergen a \(0\).
 
 \end{exercise}
 
-\begin{tcolorbox}[enhanced jigsaw, left=2mm, toptitle=1mm, colback=white, leftrule=.75mm, rightrule=.15mm, colframe=quarto-callout-tip-color-frame, titlerule=0mm, arc=.35mm, opacityback=0, toprule=.15mm, opacitybacktitle=0.6, breakable, coltitle=black, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, bottomrule=.15mm, bottomtitle=1mm, colbacktitle=quarto-callout-tip-color!10!white]
+\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, opacitybacktitle=0.6, left=2mm, coltitle=black, breakable, titlerule=0mm, leftrule=.75mm, colback=white, toprule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, toptitle=1mm, bottomtitle=1mm, arc=.35mm, rightrule=.15mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-tip-color!10!white]
 
 \begin{enumerate}
 \def\labelenumi{\alph{enumi}.}
@@ -1885,7 +1963,7 @@ condiciones, o, en caso de no existir ninguna, explicar porqué.
 
 \end{exercise}
 
-\begin{tcolorbox}[enhanced jigsaw, left=2mm, toptitle=1mm, colback=white, leftrule=.75mm, rightrule=.15mm, colframe=quarto-callout-tip-color-frame, titlerule=0mm, arc=.35mm, opacityback=0, toprule=.15mm, opacitybacktitle=0.6, breakable, coltitle=black, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, bottomrule=.15mm, bottomtitle=1mm, colbacktitle=quarto-callout-tip-color!10!white]
+\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, opacitybacktitle=0.6, left=2mm, coltitle=black, breakable, titlerule=0mm, leftrule=.75mm, colback=white, toprule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, toptitle=1mm, bottomtitle=1mm, arc=.35mm, rightrule=.15mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-tip-color!10!white]
 
 \begin{enumerate}
 \def\labelenumi{\alph{enumi}.}
@@ -1924,7 +2002,7 @@ dados.
 
 \end{exercise}
 
-\begin{tcolorbox}[enhanced jigsaw, left=2mm, toptitle=1mm, colback=white, leftrule=.75mm, rightrule=.15mm, colframe=quarto-callout-tip-color-frame, titlerule=0mm, arc=.35mm, opacityback=0, toprule=.15mm, opacitybacktitle=0.6, breakable, coltitle=black, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, bottomrule=.15mm, bottomtitle=1mm, colbacktitle=quarto-callout-tip-color!10!white]
+\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, opacitybacktitle=0.6, left=2mm, coltitle=black, breakable, titlerule=0mm, leftrule=.75mm, colback=white, toprule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, toptitle=1mm, bottomtitle=1mm, arc=.35mm, rightrule=.15mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-tip-color!10!white]
 
 \begin{enumerate}
 \def\labelenumi{\alph{enumi}.}
@@ -1989,7 +2067,7 @@ condiciones, o, en caso de no existir ninguna, explicar porqué.
 
 \end{exercise}
 
-\begin{tcolorbox}[enhanced jigsaw, left=2mm, toptitle=1mm, colback=white, leftrule=.75mm, rightrule=.15mm, colframe=quarto-callout-tip-color-frame, titlerule=0mm, arc=.35mm, opacityback=0, toprule=.15mm, opacitybacktitle=0.6, breakable, coltitle=black, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, bottomrule=.15mm, bottomtitle=1mm, colbacktitle=quarto-callout-tip-color!10!white]
+\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, opacitybacktitle=0.6, left=2mm, coltitle=black, breakable, titlerule=0mm, leftrule=.75mm, colback=white, toprule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, toptitle=1mm, bottomtitle=1mm, arc=.35mm, rightrule=.15mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-tip-color!10!white]
 
 \begin{enumerate}
 \def\labelenumi{\alph{enumi}.}
@@ -2035,12 +2113,14 @@ converge a \(0\).
 
 \end{exercise}
 
-\begin{tcolorbox}[enhanced jigsaw, left=2mm, toptitle=1mm, colback=white, leftrule=.75mm, rightrule=.15mm, colframe=quarto-callout-tip-color-frame, titlerule=0mm, arc=.35mm, opacityback=0, toprule=.15mm, opacitybacktitle=0.6, breakable, coltitle=black, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, bottomrule=.15mm, bottomtitle=1mm, colbacktitle=quarto-callout-tip-color!10!white]
+\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, opacitybacktitle=0.6, left=2mm, coltitle=black, breakable, titlerule=0mm, leftrule=.75mm, colback=white, toprule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, toptitle=1mm, bottomtitle=1mm, arc=.35mm, rightrule=.15mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-tip-color!10!white]
+
 Supongamos que \(\lim_{n\to\infty}x_n=x\). Entonces, para cualquier
 \(\varepsilon>0\) existe \(k\in\mathbb{N}\) tal que
 \(|x_n-x|<\varepsilon\) \(\forall n\geq k\), pero entonces es obvio que
 \(|(x_n-x)-0|<\varepsilon\) \(\forall n\geq k\), por lo que
 \(\lim_{n\to\infty}x_n-x=0\).
+
 \end{tcolorbox}
 
 \leavevmode\vadjust pre{\hypertarget{exr-convergencia-polinomios}{}}%
@@ -2051,7 +2131,8 @@ entonces \(\lim_{n\to\infty}p(x_n)=p(x)\).
 
 \end{exercise}
 
-\begin{tcolorbox}[enhanced jigsaw, left=2mm, toptitle=1mm, colback=white, leftrule=.75mm, rightrule=.15mm, colframe=quarto-callout-tip-color-frame, titlerule=0mm, arc=.35mm, opacityback=0, toprule=.15mm, opacitybacktitle=0.6, breakable, coltitle=black, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, bottomrule=.15mm, bottomtitle=1mm, colbacktitle=quarto-callout-tip-color!10!white]
+\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, opacitybacktitle=0.6, left=2mm, coltitle=black, breakable, titlerule=0mm, leftrule=.75mm, colback=white, toprule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, toptitle=1mm, bottomtitle=1mm, arc=.35mm, rightrule=.15mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-tip-color!10!white]
+
 Sea \(p(x)=a_0+a_1x+\cdots +a_mx^m\) un polinomio cualquiera y
 supongamos que \(\lim_{n\to\infty}x_n=x\). Entonces,
 
@@ -2062,6 +2143,7 @@ supongamos que \(\lim_{n\to\infty}x_n=x\). Entonces,
 &= \lim_{n\to\infty}a_0+\lim_{n\to\infty}a_1\lim_{n\to\infty}x_n+\cdots + \lim_{n\to\infty}a_m(\lim_{n\to\infty}x_n)^m \\ 
 &= a_0 + a_1x + \cdots + a_m x^m = p(x).
 \end{align*}
+
 \end{tcolorbox}
 
 \leavevmode\vadjust pre{\hypertarget{exr-sucesion-valor-absoluto}{}}%
@@ -2073,13 +2155,15 @@ cierto lo contrario?
 
 \end{exercise}
 
-\begin{tcolorbox}[enhanced jigsaw, left=2mm, toptitle=1mm, colback=white, leftrule=.75mm, rightrule=.15mm, colframe=quarto-callout-tip-color-frame, titlerule=0mm, arc=.35mm, opacityback=0, toprule=.15mm, opacitybacktitle=0.6, breakable, coltitle=black, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, bottomrule=.15mm, bottomtitle=1mm, colbacktitle=quarto-callout-tip-color!10!white]
+\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, opacitybacktitle=0.6, left=2mm, coltitle=black, breakable, titlerule=0mm, leftrule=.75mm, colback=white, toprule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, toptitle=1mm, bottomtitle=1mm, arc=.35mm, rightrule=.15mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-tip-color!10!white]
+
 Supongamos que \(\lim_{n\to\infty}x_n=x\). Entonces, para cualquier
 \(\varepsilon>0\) existe \(k\in\mathbb{N}\) tal que
 \(|x_n-x|<\varepsilon\) \(\forall n\geq k\), pero entonces, aplicando la
 desigualdad triangular, también se tiene que
 \(||x_n|-|x||\leq |x_n-x| < \varepsilon\) \(\forall n\geq k\), por lo
 que \(\lim_{n\to\infty}|x_n| = |x|\).
+
 \end{tcolorbox}
 
 \leavevmode\vadjust pre{\hypertarget{exr-sucesion-raiz-cuadrada}{}}%
@@ -2091,7 +2175,8 @@ Demostrar que si una sucesión de números reales no negativos converge a
 
 \end{exercise}
 
-\begin{tcolorbox}[enhanced jigsaw, left=2mm, toptitle=1mm, colback=white, leftrule=.75mm, rightrule=.15mm, colframe=quarto-callout-tip-color-frame, titlerule=0mm, arc=.35mm, opacityback=0, toprule=.15mm, opacitybacktitle=0.6, breakable, coltitle=black, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, bottomrule=.15mm, bottomtitle=1mm, colbacktitle=quarto-callout-tip-color!10!white]
+\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, opacitybacktitle=0.6, left=2mm, coltitle=black, breakable, titlerule=0mm, leftrule=.75mm, colback=white, toprule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, toptitle=1mm, bottomtitle=1mm, arc=.35mm, rightrule=.15mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-tip-color!10!white]
+
 Veamos primero el caso en que \(x=0\). Supongamos que
 \(\lim_{n\to\infty}x_n=0\). Dado \(\varepsilon>0\) sea
 \(\varepsilon_1=\varepsilon^2>0\), entonces existe \(k\in\mathbb{N}\)
@@ -2116,6 +2201,7 @@ existe \(k\in\mathbb{N}\) tal que \(|x_n-x|<\varepsilon_2\)
 \end{align*}
 
 Luego \(\lim_{n\to\infty}\sqrt{x_n} = \sqrt{x}\).
+
 \end{tcolorbox}
 
 \leavevmode\vadjust pre{\hypertarget{exr-producto-sucesion-convergente-0}{}}%
@@ -2128,7 +2214,8 @@ reales acotada e \((y_n)_{n=1}^\infty\) es otra sucesión que converge a
 
 \end{exercise}
 
-\begin{tcolorbox}[enhanced jigsaw, left=2mm, toptitle=1mm, colback=white, leftrule=.75mm, rightrule=.15mm, colframe=quarto-callout-tip-color-frame, titlerule=0mm, arc=.35mm, opacityback=0, toprule=.15mm, opacitybacktitle=0.6, breakable, coltitle=black, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, bottomrule=.15mm, bottomtitle=1mm, colbacktitle=quarto-callout-tip-color!10!white]
+\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, opacitybacktitle=0.6, left=2mm, coltitle=black, breakable, titlerule=0mm, leftrule=.75mm, colback=white, toprule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, toptitle=1mm, bottomtitle=1mm, arc=.35mm, rightrule=.15mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-tip-color!10!white]
+
 Sea \(c\) una cota de la sucesión \((x_n)_{n=1}^\infty\), es decir,
 \(|x_n|\leq c\) \(\forall n\in\mathbb{N}\), y supongamos que
 \(\lim_{n\to\infty}y_n=0\). Dado \(\varepsilon>0\), sea
@@ -2141,6 +2228,7 @@ Sea \(c\) una cota de la sucesión \((x_n)_{n=1}^\infty\), es decir,
 \]
 
 Luego \(\lim_{n\to\infty}x_ny_n = 0\).
+
 \end{tcolorbox}
 
 \leavevmode\vadjust pre{\hypertarget{exr-compresion-sucesiones}{}}%
@@ -2160,7 +2248,7 @@ Luego \(\lim_{n\to\infty}x_ny_n = 0\).
 
 \end{exercise}
 
-\begin{tcolorbox}[enhanced jigsaw, left=2mm, toptitle=1mm, colback=white, leftrule=.75mm, rightrule=.15mm, colframe=quarto-callout-tip-color-frame, titlerule=0mm, arc=.35mm, opacityback=0, toprule=.15mm, opacitybacktitle=0.6, breakable, coltitle=black, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, bottomrule=.15mm, bottomtitle=1mm, colbacktitle=quarto-callout-tip-color!10!white]
+\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, opacitybacktitle=0.6, left=2mm, coltitle=black, breakable, titlerule=0mm, leftrule=.75mm, colback=white, toprule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, toptitle=1mm, bottomtitle=1mm, arc=.35mm, rightrule=.15mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-tip-color!10!white]
 
 \begin{enumerate}
 \def\labelenumi{\alph{enumi}.}
@@ -2218,7 +2306,7 @@ monótonas y calcular su límite cuando exista.
 
 \end{exercise}
 
-\begin{tcolorbox}[enhanced jigsaw, left=2mm, toptitle=1mm, colback=white, leftrule=.75mm, rightrule=.15mm, colframe=quarto-callout-tip-color-frame, titlerule=0mm, arc=.35mm, opacityback=0, toprule=.15mm, opacitybacktitle=0.6, breakable, coltitle=black, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, bottomrule=.15mm, bottomtitle=1mm, colbacktitle=quarto-callout-tip-color!10!white]
+\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, opacitybacktitle=0.6, left=2mm, coltitle=black, breakable, titlerule=0mm, leftrule=.75mm, colback=white, toprule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, toptitle=1mm, bottomtitle=1mm, arc=.35mm, rightrule=.15mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-tip-color!10!white]
 
 \begin{enumerate}
 \def\labelenumi{\alph{enumi}.}
@@ -2352,7 +2440,7 @@ números reales.
 
 \end{exercise}
 
-\begin{tcolorbox}[enhanced jigsaw, left=2mm, toptitle=1mm, colback=white, leftrule=.75mm, rightrule=.15mm, colframe=quarto-callout-tip-color-frame, titlerule=0mm, arc=.35mm, opacityback=0, toprule=.15mm, opacitybacktitle=0.6, breakable, coltitle=black, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, bottomrule=.15mm, bottomtitle=1mm, colbacktitle=quarto-callout-tip-color!10!white]
+\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, opacitybacktitle=0.6, left=2mm, coltitle=black, breakable, titlerule=0mm, leftrule=.75mm, colback=white, toprule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, toptitle=1mm, bottomtitle=1mm, arc=.35mm, rightrule=.15mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-tip-color!10!white]
 
 \begin{enumerate}
 \def\labelenumi{\alph{enumi}.}
@@ -2460,7 +2548,7 @@ probar o refutar las siguientes proposiciones:
 
 \end{exercise}
 
-\begin{tcolorbox}[enhanced jigsaw, left=2mm, toptitle=1mm, colback=white, leftrule=.75mm, rightrule=.15mm, colframe=quarto-callout-tip-color-frame, titlerule=0mm, arc=.35mm, opacityback=0, toprule=.15mm, opacitybacktitle=0.6, breakable, coltitle=black, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, bottomrule=.15mm, bottomtitle=1mm, colbacktitle=quarto-callout-tip-color!10!white]
+\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, opacitybacktitle=0.6, left=2mm, coltitle=black, breakable, titlerule=0mm, leftrule=.75mm, colback=white, toprule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, toptitle=1mm, bottomtitle=1mm, arc=.35mm, rightrule=.15mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-tip-color!10!white]
 
 \begin{enumerate}
 \def\labelenumi{\alph{enumi}.}
@@ -2500,7 +2588,7 @@ periodo indefinido, ¿hacia donde tienden los tipos de interés?
 
 \end{exercise}
 
-\begin{tcolorbox}[enhanced jigsaw, left=2mm, toptitle=1mm, colback=white, leftrule=.75mm, rightrule=.15mm, colframe=quarto-callout-tip-color-frame, titlerule=0mm, arc=.35mm, opacityback=0, toprule=.15mm, opacitybacktitle=0.6, breakable, coltitle=black, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, bottomrule=.15mm, bottomtitle=1mm, colbacktitle=quarto-callout-tip-color!10!white]
+\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, opacitybacktitle=0.6, left=2mm, coltitle=black, breakable, titlerule=0mm, leftrule=.75mm, colback=white, toprule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, toptitle=1mm, bottomtitle=1mm, arc=.35mm, rightrule=.15mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-tip-color!10!white]
 
 \begin{enumerate}
 \def\labelenumi{\alph{enumi}.}
@@ -2581,7 +2669,7 @@ Cauchy.
 
 \end{exercise}
 
-\begin{tcolorbox}[enhanced jigsaw, left=2mm, toptitle=1mm, colback=white, leftrule=.75mm, rightrule=.15mm, colframe=quarto-callout-tip-color-frame, titlerule=0mm, arc=.35mm, opacityback=0, toprule=.15mm, opacitybacktitle=0.6, breakable, coltitle=black, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, bottomrule=.15mm, bottomtitle=1mm, colbacktitle=quarto-callout-tip-color!10!white]
+\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, opacitybacktitle=0.6, left=2mm, coltitle=black, breakable, titlerule=0mm, leftrule=.75mm, colback=white, toprule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, toptitle=1mm, bottomtitle=1mm, arc=.35mm, rightrule=.15mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-tip-color!10!white]
 
 \begin{enumerate}
 \def\labelenumi{\alph{enumi}.}
@@ -2647,9 +2735,11 @@ Sea \(f(x)=c\) una función constante. Demostrar que
 
 \end{exercise}
 
-\begin{tcolorbox}[enhanced jigsaw, left=2mm, toptitle=1mm, colback=white, leftrule=.75mm, rightrule=.15mm, colframe=quarto-callout-tip-color-frame, titlerule=0mm, arc=.35mm, opacityback=0, toprule=.15mm, opacitybacktitle=0.6, breakable, coltitle=black, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, bottomrule=.15mm, bottomtitle=1mm, colbacktitle=quarto-callout-tip-color!10!white]
+\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, opacitybacktitle=0.6, left=2mm, coltitle=black, breakable, titlerule=0mm, leftrule=.75mm, colback=white, toprule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, toptitle=1mm, bottomtitle=1mm, arc=.35mm, rightrule=.15mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-tip-color!10!white]
+
 Para cualquier \(\varepsilon>0\) se puede tomar \(\delta = 1\) tal que
 si \(|x-a|<\delta=1\), entonces \(|f(x)-c| = |c-c|=0<\varepsilon\).
+
 \end{tcolorbox}
 
 \leavevmode\vadjust pre{\hypertarget{exr-definicion-limite}{}}%
@@ -2660,7 +2750,8 @@ de límite que \(\lim_{x\to 3}f(x)=2\).
 
 \end{exercise}
 
-\begin{tcolorbox}[enhanced jigsaw, left=2mm, toptitle=1mm, colback=white, leftrule=.75mm, rightrule=.15mm, colframe=quarto-callout-tip-color-frame, titlerule=0mm, arc=.35mm, opacityback=0, toprule=.15mm, opacitybacktitle=0.6, breakable, coltitle=black, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, bottomrule=.15mm, bottomtitle=1mm, colbacktitle=quarto-callout-tip-color!10!white]
+\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, opacitybacktitle=0.6, left=2mm, coltitle=black, breakable, titlerule=0mm, leftrule=.75mm, colback=white, toprule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, toptitle=1mm, bottomtitle=1mm, arc=.35mm, rightrule=.15mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-tip-color!10!white]
+
 Para cualquier \(\varepsilon>0\) se puede tomar
 \(\delta = \frac{\varepsilon}{4}\) tal que si
 \(|x-3|<\delta=\frac{\varepsilon}{4}\), entonces
@@ -2668,6 +2759,7 @@ Para cualquier \(\varepsilon>0\) se puede tomar
 \[
 |f(x)-2| = |4x-10-2|= |4x-12| = 4|x-3|<4\frac{\varepsilon}{4} =\varepsilon.
 \]
+
 \end{tcolorbox}
 
 \leavevmode\vadjust pre{\hypertarget{exr-limite-criterio-sucesiones}{}}%
@@ -2678,7 +2770,8 @@ las sucesiones para demostrar que no existe el límite de \(f\) en \(0\).
 
 \end{exercise}
 
-\begin{tcolorbox}[enhanced jigsaw, left=2mm, toptitle=1mm, colback=white, leftrule=.75mm, rightrule=.15mm, colframe=quarto-callout-tip-color-frame, titlerule=0mm, arc=.35mm, opacityback=0, toprule=.15mm, opacitybacktitle=0.6, breakable, coltitle=black, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, bottomrule=.15mm, bottomtitle=1mm, colbacktitle=quarto-callout-tip-color!10!white]
+\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, opacitybacktitle=0.6, left=2mm, coltitle=black, breakable, titlerule=0mm, leftrule=.75mm, colback=white, toprule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, toptitle=1mm, bottomtitle=1mm, arc=.35mm, rightrule=.15mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-tip-color!10!white]
+
 Tomando las sucesión \(\left(\frac{-1}{n}\right)_{n=1}^\infty\) que
 converge a \(0\), se tiene
 
@@ -2695,6 +2788,7 @@ también converge a \(0\), se tiene
 
 Por tanto, por el criterio de las sucesiones convergentes, no existe el
 límite de \(f\) en \(0\).
+
 \end{tcolorbox}
 
 \leavevmode\vadjust pre{\hypertarget{exr-limite-funcion-Dirichlet}{}}%
@@ -2712,7 +2806,8 @@ existe el límite de \(f\) en cualquier número real.
 
 \end{exercise}
 
-\begin{tcolorbox}[enhanced jigsaw, left=2mm, toptitle=1mm, colback=white, leftrule=.75mm, rightrule=.15mm, colframe=quarto-callout-tip-color-frame, titlerule=0mm, arc=.35mm, opacityback=0, toprule=.15mm, opacitybacktitle=0.6, breakable, coltitle=black, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, bottomrule=.15mm, bottomtitle=1mm, colbacktitle=quarto-callout-tip-color!10!white]
+\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, opacitybacktitle=0.6, left=2mm, coltitle=black, breakable, titlerule=0mm, leftrule=.75mm, colback=white, toprule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, toptitle=1mm, bottomtitle=1mm, arc=.35mm, rightrule=.15mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-tip-color!10!white]
+
 Tomemos cualquier \(a\in\mathbb{R}\) y sea \((x_n)_{n=1}^\infty\) una
 sucesión de números racionales que converja a \(a\). Entonces la
 sucesión \((f(x_n))_{n=1}^\infty = (1)_{n=1}^\infty\) que converge a
@@ -2721,6 +2816,7 @@ irracionales que converja a \(a\). Entonces la sucesión
 \((f(y_n))_{n=1}^\infty = (0)_{n=1}^\infty\) que converge a \(0\). Por
 tanto, por el criterio de la sucesiones convergentes no existe el límite
 de \(f\) en \(a\).
+
 \end{tcolorbox}
 
 \leavevmode\vadjust pre{\hypertarget{exr-limite-coseno}{}}%
@@ -2731,7 +2827,8 @@ de \(f\) en \(a\).
 
 \end{exercise}
 
-\begin{tcolorbox}[enhanced jigsaw, left=2mm, toptitle=1mm, colback=white, leftrule=.75mm, rightrule=.15mm, colframe=quarto-callout-tip-color-frame, titlerule=0mm, arc=.35mm, opacityback=0, toprule=.15mm, opacitybacktitle=0.6, breakable, coltitle=black, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, bottomrule=.15mm, bottomtitle=1mm, colbacktitle=quarto-callout-tip-color!10!white]
+\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, opacitybacktitle=0.6, left=2mm, coltitle=black, breakable, titlerule=0mm, leftrule=.75mm, colback=white, toprule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, toptitle=1mm, bottomtitle=1mm, arc=.35mm, rightrule=.15mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-tip-color!10!white]
+
 Tomando la sucesión \(\left(\frac{1}{(2n-1)\pi/2}\right)_{n=1}^\infty\)
 que converge a \(0\), se tiene que
 
@@ -2750,6 +2847,7 @@ también converge a \(0\), se tiene que
 
 Por tanto, por el criterio de las sucesiones convergentes, no existe el
 límite de \(\cos\left(\frac{1}{x}\right)\) en \(0\).
+
 \end{tcolorbox}
 
 \leavevmode\vadjust pre{\hypertarget{exr-limite-polinomios}{}}%
@@ -2760,7 +2858,8 @@ Dado un polinomio \(p(x)\), demostrar que \(\lim_{x\to a}p(x)=p(a)\)
 
 \end{exercise}
 
-\begin{tcolorbox}[enhanced jigsaw, left=2mm, toptitle=1mm, colback=white, leftrule=.75mm, rightrule=.15mm, colframe=quarto-callout-tip-color-frame, titlerule=0mm, arc=.35mm, opacityback=0, toprule=.15mm, opacitybacktitle=0.6, breakable, coltitle=black, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, bottomrule=.15mm, bottomtitle=1mm, colbacktitle=quarto-callout-tip-color!10!white]
+\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, opacitybacktitle=0.6, left=2mm, coltitle=black, breakable, titlerule=0mm, leftrule=.75mm, colback=white, toprule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, toptitle=1mm, bottomtitle=1mm, arc=.35mm, rightrule=.15mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-tip-color!10!white]
+
 Sea \(p(x)=a_0+a_1x+a_2x^2+\cdots+a_nx^n\), entonces, por el álgebra de
 límites se tiene,
 
@@ -2770,6 +2869,7 @@ límites se tiene,
 &= a_0 + a_1 \lim_{x\to a} x + a_2\lim_{x\to a}x^2 + \cdots + a_n\lim_{x\to a}x^n\\ 
 & = a_0+a_1a+a_2a^2+\cdots+a_na^n = p(a)
 \end{align*}
+
 \end{tcolorbox}
 
 \leavevmode\vadjust pre{\hypertarget{exr-limite-funciones-racionales}{}}%
@@ -2782,13 +2882,15 @@ Dada una función racional \(f(x)=\frac{p(x)}{q(x)}\)
 
 \end{exercise}
 
-\begin{tcolorbox}[enhanced jigsaw, left=2mm, toptitle=1mm, colback=white, leftrule=.75mm, rightrule=.15mm, colframe=quarto-callout-tip-color-frame, titlerule=0mm, arc=.35mm, opacityback=0, toprule=.15mm, opacitybacktitle=0.6, breakable, coltitle=black, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, bottomrule=.15mm, bottomtitle=1mm, colbacktitle=quarto-callout-tip-color!10!white]
+\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, opacitybacktitle=0.6, left=2mm, coltitle=black, breakable, titlerule=0mm, leftrule=.75mm, colback=white, toprule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, toptitle=1mm, bottomtitle=1mm, arc=.35mm, rightrule=.15mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-tip-color!10!white]
+
 Sea \(f(x)=\frac{p(x)}{q(x)}\) con \(p(x)\) y \(q(x)\) dos polinomios.
 Entonces, por el ejercicio anterior y el álgebra de límites se tiene que
 
 \begin{align*}
 \lim_{x\to a}f(x) &= \lim_{x\to a} \frac{p(x)}{q(x)} = \frac{\lim_{x\to a} p(x)}{\lim_{x\to a}q(x)} = \frac{p(a)}{q(a)}=f(a).
 \end{align*}
+
 \end{tcolorbox}
 
 \leavevmode\vadjust pre{\hypertarget{exr-limite-emparedado}{}}%
@@ -2801,12 +2903,14 @@ de compresión de funciones} que
 
 \end{exercise}
 
-\begin{tcolorbox}[enhanced jigsaw, left=2mm, toptitle=1mm, colback=white, leftrule=.75mm, rightrule=.15mm, colframe=quarto-callout-tip-color-frame, titlerule=0mm, arc=.35mm, opacityback=0, toprule=.15mm, opacitybacktitle=0.6, breakable, coltitle=black, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, bottomrule=.15mm, bottomtitle=1mm, colbacktitle=quarto-callout-tip-color!10!white]
+\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, opacitybacktitle=0.6, left=2mm, coltitle=black, breakable, titlerule=0mm, leftrule=.75mm, colback=white, toprule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, toptitle=1mm, bottomtitle=1mm, arc=.35mm, rightrule=.15mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-tip-color!10!white]
+
 \begin{align*}
 \lim_{x\to 0}\frac{1-\cos(x)}{x} &= \lim_{x\to 0}\frac{(1-\cos(x))(1+\cos(x))}{x(1+\cos(x))} =  \lim_{x\to 0}\frac{1-\cos(x)^2}{x(1+\cos(x))}\\ 
 &= \lim_{x\to 0}\frac{\operatorname{sen}(x)^2}{x(1+\cos(x))} = \lim_{x\to 0}\frac{\operatorname{sen}(x)}{x}\frac{\operatorname{sen}(x)}{1+\cos(x)} =\\ 
 &= \lim_{x\to 0}\frac{\operatorname{sen}(x)}{x}\lim_{x\to 0}\frac{\operatorname{sen}(x)}{1+\cos(x)} =1\cdot 0 = 0.
 \end{align*}
+
 \end{tcolorbox}
 
 \leavevmode\vadjust pre{\hypertarget{exr-limites-1}{}}%
@@ -2861,7 +2965,7 @@ de compresión de funciones} que
 
 \end{exercise}
 
-\begin{tcolorbox}[enhanced jigsaw, left=2mm, toptitle=1mm, colback=white, leftrule=.75mm, rightrule=.15mm, colframe=quarto-callout-tip-color-frame, titlerule=0mm, arc=.35mm, opacityback=0, toprule=.15mm, opacitybacktitle=0.6, breakable, coltitle=black, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, bottomrule=.15mm, bottomtitle=1mm, colbacktitle=quarto-callout-tip-color!10!white]
+\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, opacitybacktitle=0.6, left=2mm, coltitle=black, breakable, titlerule=0mm, leftrule=.75mm, colback=white, toprule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, toptitle=1mm, bottomtitle=1mm, arc=.35mm, rightrule=.15mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-tip-color!10!white]
 
 \begin{enumerate}
 \def\labelenumi{\alph{enumi}.}
@@ -2998,7 +3102,7 @@ condiciones:
 
 \end{exercise}
 
-\begin{tcolorbox}[enhanced jigsaw, left=2mm, toptitle=1mm, colback=white, leftrule=.75mm, rightrule=.15mm, colframe=quarto-callout-tip-color-frame, titlerule=0mm, arc=.35mm, opacityback=0, toprule=.15mm, opacitybacktitle=0.6, breakable, coltitle=black, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, bottomrule=.15mm, bottomtitle=1mm, colbacktitle=quarto-callout-tip-color!10!white]
+\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, opacitybacktitle=0.6, left=2mm, coltitle=black, breakable, titlerule=0mm, leftrule=.75mm, colback=white, toprule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, toptitle=1mm, bottomtitle=1mm, arc=.35mm, rightrule=.15mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-tip-color!10!white]
 
 \begin{enumerate}
 \def\labelenumi{\alph{enumi}.}
@@ -3020,7 +3124,8 @@ existe el límite de \(g\) en \(0\).
 
 \end{exercise}
 
-\begin{tcolorbox}[enhanced jigsaw, left=2mm, toptitle=1mm, colback=white, leftrule=.75mm, rightrule=.15mm, colframe=quarto-callout-tip-color-frame, titlerule=0mm, arc=.35mm, opacityback=0, toprule=.15mm, opacitybacktitle=0.6, breakable, coltitle=black, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, bottomrule=.15mm, bottomtitle=1mm, colbacktitle=quarto-callout-tip-color!10!white]
+\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, opacitybacktitle=0.6, left=2mm, coltitle=black, breakable, titlerule=0mm, leftrule=.75mm, colback=white, toprule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, toptitle=1mm, bottomtitle=1mm, arc=.35mm, rightrule=.15mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-tip-color!10!white]
+
 Basta con probar que el límite lateral por la derecha no existe. Para
 ello, tomando la sucesión de términos positivos
 \(\left(\frac{1}{n}\right)_1^\infty\) que converge a \(0\), se tiene que
@@ -3030,6 +3135,7 @@ ello, tomando la sucesión de términos positivos
 \] Así pues, según el criterio de las sucesiones convergentes, no existe
 el límite por la derecha de \(g\) en \(0\), y por tanto tampoco existe
 el límite.
+
 \end{tcolorbox}
 
 \leavevmode\vadjust pre{\hypertarget{exr-limites-laterales}{}}%
@@ -3049,7 +3155,8 @@ con \(a\in\mathbb{R}\). ¿Para que valor de \(a\) existe el límite de
 
 \end{exercise}
 
-\begin{tcolorbox}[enhanced jigsaw, left=2mm, toptitle=1mm, colback=white, leftrule=.75mm, rightrule=.15mm, colframe=quarto-callout-tip-color-frame, titlerule=0mm, arc=.35mm, opacityback=0, toprule=.15mm, opacitybacktitle=0.6, breakable, coltitle=black, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, bottomrule=.15mm, bottomtitle=1mm, colbacktitle=quarto-callout-tip-color!10!white]
+\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, opacitybacktitle=0.6, left=2mm, coltitle=black, breakable, titlerule=0mm, leftrule=.75mm, colback=white, toprule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, toptitle=1mm, bottomtitle=1mm, arc=.35mm, rightrule=.15mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-tip-color!10!white]
+
 Los límtes laterales en 1 valen
 
 \(\lim_{x\to 1^-} f(x) = \lim_{x\to 1^-} x^2 = 1^2 = 1.\)
@@ -3058,6 +3165,7 @@ Los límtes laterales en 1 valen
 Para que exista el límite de \(f\) en \(1\) debe ser
 \(\lim_{x\to 1^-}f(x)=\lim_{x\to 1^+}f(x)\), es decir, \(1=a-1\), luego
 debe ser \(a=2\).
+
 \end{tcolorbox}
 
 \leavevmode\vadjust pre{\hypertarget{exr-limites-laterales-2}{}}%
@@ -3069,7 +3177,8 @@ límite en ese punto?
 
 \end{exercise}
 
-\begin{tcolorbox}[enhanced jigsaw, left=2mm, toptitle=1mm, colback=white, leftrule=.75mm, rightrule=.15mm, colframe=quarto-callout-tip-color-frame, titlerule=0mm, arc=.35mm, opacityback=0, toprule=.15mm, opacitybacktitle=0.6, breakable, coltitle=black, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, bottomrule=.15mm, bottomtitle=1mm, colbacktitle=quarto-callout-tip-color!10!white]
+\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, opacitybacktitle=0.6, left=2mm, coltitle=black, breakable, titlerule=0mm, leftrule=.75mm, colback=white, toprule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, toptitle=1mm, bottomtitle=1mm, arc=.35mm, rightrule=.15mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-tip-color!10!white]
+
 \begin{align*}
 \lim_{x\to 1^-}f(x) &= \lim_{x\to 1^-} \frac{1}{1+e^{\frac{1}{1-x}}} = \frac{1}{1+\lim_{x\to 1^-}e^\frac{1}{1-x}}\\ 
 &= \frac{1}{1+e^{\lim_{x\to 1^-}\frac{1}{1-x}}} =  \frac{1}{1+e^\infty} = \frac{1}{1+\infty} = 0.
@@ -3082,6 +3191,7 @@ límite en ese punto?
 
 Como los límites laterales son distintos, no existe el límite de \(f\)
 en \(1\).
+
 \end{tcolorbox}
 
 \leavevmode\vadjust pre{\hypertarget{exr-asintotas}{}}%
@@ -3112,7 +3222,7 @@ en \(1\).
 
 \end{exercise}
 
-\begin{tcolorbox}[enhanced jigsaw, left=2mm, toptitle=1mm, colback=white, leftrule=.75mm, rightrule=.15mm, colframe=quarto-callout-tip-color-frame, titlerule=0mm, arc=.35mm, opacityback=0, toprule=.15mm, opacitybacktitle=0.6, breakable, coltitle=black, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, bottomrule=.15mm, bottomtitle=1mm, colbacktitle=quarto-callout-tip-color!10!white]
+\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, opacitybacktitle=0.6, left=2mm, coltitle=black, breakable, titlerule=0mm, leftrule=.75mm, colback=white, toprule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, toptitle=1mm, bottomtitle=1mm, arc=.35mm, rightrule=.15mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-tip-color!10!white]
 
 \begin{enumerate}
 \def\labelenumi{\alph{enumi}.}
@@ -3248,7 +3358,8 @@ m(t) = 10 + \frac{\sqrt{t}}{e^t}
 
 \end{exercise}
 
-\begin{tcolorbox}[enhanced jigsaw, left=2mm, toptitle=1mm, colback=white, leftrule=.75mm, rightrule=.15mm, colframe=quarto-callout-tip-color-frame, titlerule=0mm, arc=.35mm, opacityback=0, toprule=.15mm, opacitybacktitle=0.6, breakable, coltitle=black, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, bottomrule=.15mm, bottomtitle=1mm, colbacktitle=quarto-callout-tip-color!10!white]
+\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, opacitybacktitle=0.6, left=2mm, coltitle=black, breakable, titlerule=0mm, leftrule=.75mm, colback=white, toprule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, toptitle=1mm, bottomtitle=1mm, arc=.35mm, rightrule=.15mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-tip-color!10!white]
+
 Cuando \$t\to\infty \(\frac{\sqrt{t}}{e^t}\to \frac{\infty}{\infty}\)
 que es indeterminado. Aplicando la regla de L'Hôpital se tiene
 
@@ -3258,6 +3369,7 @@ que es indeterminado. Aplicando la regla de L'Hôpital se tiene
 
 Por tanto el volumen del lato tiende asintóticamente a 10 millones de
 metros cúbicos.
+
 \end{tcolorbox}
 
 \leavevmode\vadjust pre{\hypertarget{exr-cosecha}{}}%
@@ -3272,7 +3384,8 @@ trigo?
 
 \end{exercise}
 
-\begin{tcolorbox}[enhanced jigsaw, left=2mm, toptitle=1mm, colback=white, leftrule=.75mm, rightrule=.15mm, colframe=quarto-callout-tip-color-frame, titlerule=0mm, arc=.35mm, opacityback=0, toprule=.15mm, opacitybacktitle=0.6, breakable, coltitle=black, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, bottomrule=.15mm, bottomtitle=1mm, colbacktitle=quarto-callout-tip-color!10!white]
+\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-tip-color-frame, opacitybacktitle=0.6, left=2mm, coltitle=black, breakable, titlerule=0mm, leftrule=.75mm, colback=white, toprule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, toptitle=1mm, bottomtitle=1mm, arc=.35mm, rightrule=.15mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-tip-color!10!white]
+
 Como \(k>0\) se tiene \(\frac{1}{2}e^{-kx} = \frac{1}{2e^{kx}} < 1\)
 \(\forall x>0\), de manera que \(f(x)<T\) \(\forall x>0\). Si calculamos
 ahora el límite en infinito se tiene
@@ -3282,6 +3395,7 @@ ahora el límite en infinito se tiene
 
 De modo la cantidad de trigo cosechada tiene asintóticamente a \(T\),
 pero al ser menor que \(T\), nunca llegará a valer \(T\).
+
 \end{tcolorbox}
 
 \leavevmode\vadjust pre{\hypertarget{exr-limites-funciones-acotadas}{}}%
@@ -3412,6 +3526,251 @@ real.
 \item
   \(e^x = -x\).
 \end{enumerate}
+
+\end{exercise}
+
+\bookmarksetup{startatroot}
+
+\hypertarget{derivadas-de-funciones}{%
+\chapter{Derivadas de funciones}\label{derivadas-de-funciones}}
+
+\leavevmode\vadjust pre{\hypertarget{exr-derivada-potencia}{}}%
+\begin{exercise}[]\label{exr-derivada-potencia}
+
+Usando la definición de derivada, demostrar que la derivada de la
+función \(f(x)=x^n\) es \(f'(x)=nx^{n-1}\) donde \(n\in\mathbb{N}\).
+
+\end{exercise}
+
+\leavevmode\vadjust pre{\hypertarget{exr-estudio-derivabilidad-1}{}}%
+\begin{exercise}[]\label{exr-estudio-derivabilidad-1}
+
+Demostrar que la función \(f(x)=|x-1|\) es continua en \(x=1\) pero no
+es derivable en dicho punto.
+
+\end{exercise}
+
+\leavevmode\vadjust pre{\hypertarget{exr-estudio-derivabilidad-2}{}}%
+\begin{exercise}[]\label{exr-estudio-derivabilidad-2}
+
+Estudiar si es derivable la función \(f(x)=\sqrt[3]{x-1}\) en el punto
+\(x=1\).
+
+\end{exercise}
+
+\leavevmode\vadjust pre{\hypertarget{exr-derivabilidad-funcion-trozos-1}{}}%
+\begin{exercise}[]\label{exr-derivabilidad-funcion-trozos-1}
+
+Estudiar la derivabilidad de \(f\) en los puntos \(x=-1\), \(x=2\) y
+\(x=3\) siendo
+
+\[
+f(x)=
+\begin{cases}
+\log(-x) & \mbox{si $x<-1$,} \\
+\operatorname{sen}(\pi x) & \mbox{si $x\in [-1,2]$,} \\
+x/2 & \mbox{si $x\in (2,3)$,} \\
+3/2 & \mbox{si $x\geq 3$.}
+\end{cases}
+\]
+
+\end{exercise}
+
+\leavevmode\vadjust pre{\hypertarget{exr-derivabilidad-funcion-trozos-2}{}}%
+\begin{exercise}[]\label{exr-derivabilidad-funcion-trozos-2}
+
+Estudiar la derivabilidad de las siguientes funciones y hallar la
+función derivada correspondiente en los puntos donde exista.
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  \[f(x)=
+  \begin{cases}
+  1-x & \mbox{si $x\leq 0$,} \\
+  e^{-x} & \mbox{si $x>0$.}
+  \end{cases}
+  \]
+\item
+  \(g(x)=2x+|x^2-2|\).
+\end{enumerate}
+
+\end{exercise}
+
+\leavevmode\vadjust pre{\hypertarget{exr-derivabilidad-funcion-trozos-3}{}}%
+\begin{exercise}[]\label{exr-derivabilidad-funcion-trozos-3}
+
+Dada la función
+
+\[
+f(x)=
+\begin{cases}
+\operatorname{sen}(x)^2 & \mbox{si $x\leq 0$},  \\
+ax^2+b &  \mbox{si $0<x\leq c$},  \\
+\ln x &  \mbox{si $c<x$},
+\end{cases}
+\]
+
+con \(a,b,c\in\mathbb{R}\), ¿existe algún valor de las constantes de
+manera que la función sea continua y derivable en todo su dominio?
+
+\end{exercise}
+
+\leavevmode\vadjust pre{\hypertarget{exr-tangente-normal-1}{}}%
+\begin{exercise}[]\label{exr-tangente-normal-1}
+
+Para cada una de las siguientes curvas, hallar las ecuaciones de las
+rectas tangente y normal en el punto \(a\) indicado.
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  \(y=x^{\operatorname{sen}(x)},\quad a=\pi/2\).
+\item
+  \(y=\ln\sqrt{\frac{1+x}{1-x}}, \quad a=0\).
+\end{enumerate}
+
+\end{exercise}
+
+\leavevmode\vadjust pre{\hypertarget{exr-tangente-normal-2}{}}%
+\begin{exercise}[]\label{exr-tangente-normal-2}
+
+Dadas las funciones \(f(x)=\log \left(\frac{x^2}{2}\right)\) y
+\(g(x)=x^3+2\), ¿existe algún valor de \(x\) en el que la recta normal a
+\(f\) y la recta tangente a \(g\) en dicho punto sean paralelas?
+
+\end{exercise}
+
+\leavevmode\vadjust pre{\hypertarget{exr-derivadas-orden-n}{}}%
+\begin{exercise}[]\label{exr-derivadas-orden-n}
+
+Hallar la expresión de la derivada \(n\)-ésima de las siguientes
+funciones:
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  \(f(x)=a^x\ln(a)\).
+\item
+  \(g(x)=\dfrac{\operatorname{sen}(x)+\cos(x)}{2}\).
+\item
+  \(h(x)=\dfrac{9x^2-2x-25}{x^3-2x^2-5x+6}\).
+\item
+  \(j(x)=\dfrac{1}{\sqrt{1+x}}\).
+\end{enumerate}
+
+\end{exercise}
+
+\leavevmode\vadjust pre{\hypertarget{exr-regla-cadena-1}{}}%
+\begin{exercise}[]\label{exr-regla-cadena-1}
+
+Un balón relleno de aire tiene radio 10 cm cuando se empieza a
+introducir más aire, de manera que el radio se incrementa con una
+velocidad de 2 cm/s. ¿Con qué velocidad varía el volumen en ese
+instante?
+
+\end{exercise}
+
+\leavevmode\vadjust pre{\hypertarget{exr-regla-cadena-2}{}}%
+\begin{exercise}[]\label{exr-regla-cadena-2}
+
+Una pipeta cilíndrica de radio 5 mm almacena una solución. Si la pipeta
+empieza a vaciarse a razón de \(0.5\) ml por segundo, ¿a qué velocidad
+disminuye el nivel de la pipeta?
+
+\end{exercise}
+
+\leavevmode\vadjust pre{\hypertarget{exr-regla-cadena-3}{}}%
+\begin{exercise}[]\label{exr-regla-cadena-3}
+
+Un cilindro de 4 cm de radio (\(r\)) y 3 cm de altura (\(h\)) se somete
+a un proceso de calentamiento con el que varían sus dimensiones de tal
+forma que \(\frac{dr}{dt}=\frac{dh}{dt}= 1\) cm/s. Hallar de forma
+aproximada la variación de su volumen a los 5 segundos y a los 10
+segundos.
+
+\end{exercise}
+
+\leavevmode\vadjust pre{\hypertarget{exr-extremos-1}{}}%
+\begin{exercise}[]\label{exr-extremos-1}
+
+En muchos vertebrados existe una relación entre la longitud del cráneo y
+la longitud de la espina dorsal que puede expresarse mediante la
+ecuación \[
+C(x) = a E(x)^b
+\] donde \(a\) es una constante de proporcionalidad y \(b\) es otra
+constante que suele estar entre 0 y 1. Esta ecuación se conoce como
+\emph{ecuación alométrica}. ¿Cómo se relaciona la tasa de crecimiento de
+la espina dorsal con la del cráneo? ¿Para qué valores de \(b\) es la
+función \(C\) creciente, pero de forma que la relación \(C/E\) disminuye
+al aumentar \(E\)? ¿En qué estado de desarrollo tienen los vertebrados
+cráneos mayores en relación con la longitud de sus cuerpos?
+
+\end{exercise}
+
+\leavevmode\vadjust pre{\hypertarget{exr-cinematica-1}{}}%
+\begin{exercise}[]\label{exr-cinematica-1}
+
+La posición que ocupa un coche que se mueve en línea recta, puede
+expresarse en función del tiempo según la ecuación \[
+e(t) = 4t^3 -2t +1.
+\] Calcular su velocidad y aceleración en cualquier instante.\\
+Nota: La aceleración es la tasa de variación instantánea de la
+velocidad.
+
+\end{exercise}
+
+\leavevmode\vadjust pre{\hypertarget{exr-cinematica-2}{}}%
+\begin{exercise}[]\label{exr-cinematica-2}
+
+El espacio recorrido por un objeto que se lanza verticalmente hacia
+arriba, sin tener en cuenta la resistencia del aire, viene dado por la
+ecuación \[
+e(t) =v_0t-\frac{1}{2}gt^2
+\] donde \(v_0\) es la velocidad inicial con que se lanza el objeto,
+\(g=9.81\) m/s\(^2\) es la constante gravitatoria de la Tierra y \(t\)
+es el tiempo transcurrido desde que el objeto se lanza.
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  Calcular la velocidad y la aceleración en cualquier instante.
+\item
+  Si el objeto se lanza inicialmente a 50 km/h, ¿cuál será la altura
+  máxima que alcanzará el objeto? ¿Cuál será su velocidad en ese
+  momento?
+\item
+  ¿En qué instante volverá a tocar la tierra el objeto? ¿Con qué
+  velocidad?
+\end{enumerate}
+
+\end{exercise}
+
+\leavevmode\vadjust pre{\hypertarget{exr-transmision-errores-1}{}}%
+\begin{exercise}[]\label{exr-transmision-errores-1}
+
+Se desea medir la superficie de una célula esférica y para ello se ha
+medido el radio de una célula de 5 \(\mu\) con un error de 0.2 \(\mu\).
+¿Cuál será el error aproximado cometido en el cálculo de la superficie
+de la célula? En general, si al medir el radio se comete siempre un
+error relativo del 2\%? ¿Cómo afecta esto al error de la medida de la
+superficie de la célula?
+
+\end{exercise}
+
+\leavevmode\vadjust pre{\hypertarget{exr-transmision-errores-2}{}}%
+\begin{exercise}[]\label{exr-transmision-errores-2}
+
+La velocidad de la sangre que fluye por una arteria está dada por la ley
+de Poiseuille \[
+v(r) = cr^2,
+\] donde \(v\) es la velocidad de la sangre, \(r\) es el radio de la
+arteria y \(c\) es una constante. Si se puede medir el radio de la
+arteria con una precisión del 5\%, ¿qué precisión tendrá el cálculo de
+la velocidad?
 
 \end{exercise}
 
