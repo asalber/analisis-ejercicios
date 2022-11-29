@@ -130,6 +130,18 @@ donde $v$ es la velocidad de la sangre, $r$ es el radio de la arteria y $c$ es u
 Si se puede medir el radio de la arteria con una precisión del 5\%, ¿qué precisión tendrá el cálculo de la velocidad?
 :::
 
+:::{#exr-crecimiento-1}
+En muchos vertebrados existe una relación entre la longitud del cráneo y la longitud de la espina dorsal que puede expresarse mediante la ecuación
+$$
+C(x) = a E(x)^b
+$$
+donde $a$ es una constante de proporcionalidad y $b$ es otra constante que suele estar entre 0 y 1.
+Esta ecuación se conoce como _ecuación alométrica_.
+¿Cómo se relaciona la tasa de crecimiento de la espina dorsal con la del cráneo?
+¿Para qué valores de $b$ es la función $C$ creciente, pero de forma que la relación $C/E$ disminuye al aumentar $E$?
+¿En qué estado de desarrollo tienen los vertebrados cráneos mayores en relación con la longitud de sus cuerpos?
+:::
+
 :::{#exr-extremos-1}
 La siguiente figura muestra la gráfica de la derivada de una función $f$. Estudiar el comportamiento de la función (crecimiento, decrecimiento, extremos, concavidad y convexidad).
 
@@ -185,18 +197,6 @@ Se ha diseñado un envoltorio cilíndrico para unas cápsulas. Si el contenido d
 :::
 
 :::{#exr-extremos-9}
-En muchos vertebrados existe una relación entre la longitud del cráneo y la longitud de la espina dorsal que puede expresarse mediante la ecuación
-$$
-C(x) = a E(x)^b
-$$
-donde $a$ es una constante de proporcionalidad y $b$ es otra constante que suele estar entre 0 y 1.
-Esta ecuación se conoce como _ecuación alométrica_.
-¿Cómo se relaciona la tasa de crecimiento de la espina dorsal con la del cráneo?
-¿Para qué valores de $b$ es la función $C$ creciente, pero de forma que la relación $C/E$ disminuye al aumentar $E$?
-¿En qué estado de desarrollo tienen los vertebrados cráneos mayores en relación con la longitud de sus cuerpos?
-:::
-
-:::{#exr-extremos-10}
 La distancia en kilómetros que recorre un coche de alquiler con 1 litro de gasolina depende de la velocidad a la que circule según la función $d(x)=120-x$ para $x\in(50,120)$. Si el coste de la gasolina es de $2$ €/l y el coste del alquiler es de $10$ €/h, ¿a qué velocidad debe circular para que el coste del trayecto sea mínimo? ¿Cuál será el coste por kilómetro si circula a esa velocidad?
 :::
 
