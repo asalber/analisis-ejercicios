@@ -1,0 +1,21 @@
+% Author: Alfredo Sánchez Alberca (asalber@ceu.es)
+\begin{tikzpicture}[x=5cm,y=5cm]
+\begin{axis}[
+scale only axis,
+axis x line=middle,
+axis y line=left,
+xlabel={$x$},
+ylabel={$y$},
+every axis x label/.style={at={(ticklabel* cs:1)}, anchor=west,},
+every axis y label/.style={at={(ticklabel* cs:1)}, anchor=south,},
+ymin=-3, ymax=3,
+xtick={1.64, 2.41, 3.47, 4.46, 5.19},
+xticklabels={$a$, $b$, $c$, $d$, $e$},
+xticklabel style={yshift=-3ex, anchor=south},
+height=5cm,
+yticklabels={,,}
+]
+\addplot[domain=-0.62:8.56, samples=200, smooth, myblue,thick] {1.7+3*(x-2)-4.3*(x-2)^2+(x-2)^3}
+node[left, pos=0.36] {$f'(x)$};
+\end{axis}
+\end{tikzpicture}

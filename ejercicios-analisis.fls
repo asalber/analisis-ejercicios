@@ -1413,6 +1413,11 @@ INPUT /home/alf/texmf/fonts/tfm/public/lm/lmsy5.tfm
 INPUT /home/alf/texmf/fonts/tfm/public/amsfonts/symbols/msam5.tfm
 INPUT /home/alf/texmf/fonts/tfm/public/amsfonts/symbols/msbm5.tfm
 INPUT /home/alf/texmf/fonts/tfm/public/lm/ec-lmr6.tfm
+INPUT ././img/derivadas/grafica-ext-1.png
+INPUT ././img/derivadas/grafica-ext-1.png
+INPUT ././img/derivadas/grafica-ext-1.png
+INPUT ././img/derivadas/grafica-ext-1.png
+INPUT ././img/derivadas/grafica-ext-1.png
 INPUT ejercicios-analisis.aux
 INPUT /home/alf/texmf/fonts/enc/dvips/lm/lm-mathsy.enc
 INPUT /home/alf/texmf/fonts/enc/dvips/lm/lm-rm.enc

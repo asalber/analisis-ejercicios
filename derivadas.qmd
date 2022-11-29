@@ -130,6 +130,95 @@ donde $v$ es la velocidad de la sangre, $r$ es el radio de la arteria y $c$ es u
 Si se puede medir el radio de la arteria con una precisión del 5\%, ¿qué precisión tendrá el cálculo de la velocidad?
 :::
 
+:::{#exr-extremos-1}
+La siguiente figura muestra la gráfica de la derivada de una función $f$. Estudiar el comportamiento de la función (crecimiento, decrecimiento, extremos, concavidad y convexidad).
+
+:::{style="text-align:center;"}
+![](./img/derivadas/grafica-ext-1.png)
+:::
+
+:::{#exr-extremos-2}
+Hallar $a$, $b$ y $c$ en la función  $f(x)=x^3+bx^2+cx+d$ para que tenga un punto de inflexión en $x=3$, pase por el punto $(1,0)$ y alcance un máximo en $x=1$.
+:::
+
+:::{#exr-extremos-3}
+La cantidad de trigo en una cosecha $C$ depende del nivel de nitrógeno en el suelo $n$ según la ecuación
+
+$$
+C(n) = \frac{n}{1+n^2},\quad n\geq 0.
+$$
+
+¿Para qué nivel de nitrógeno se obtendrá la mayor cosecha de trigo?
+:::
+
+:::{#exr-extremos-4}
+La velocidad $v$ de una reacción irreversible $A+B\rightarrow AB$ es función de la concentración $x$ del producto $AB$ y puede expresarse según la ecuación
+
+$$
+v(x) = 4(3-x)(5-x).
+$$
+¿Qué valor de $x$ maximiza la velocidad de reacción?
+:::
+
+:::{#exr-extremos-5}
+Un naufrago se encuentra en una isla situada en un plano con coordenadas $(2,0)$. Se sabe que un ferry hace siempre la trayectoria dada por la función $f(x)=\sqrt{x+1}$. ¿Hacia qué punto de la trayectoria del ferry debe nadar el naufrago para recorrer la menor distancia posible? ¿Qué distancia recorrerá si nada hacia ese punto?
+:::
+
+:::{#exr-extremos-6}
+Un hotel alquila habitaciones por un precio entre 50€ y 100€ diarios. Se ha observado que el número de habitaciones que alquilan depende del precio $x$ según la función $h(x)=300-3x$. ¿Qué precio se debe cobrar por habitación para obtener el máximo beneficio?
+:::
+
+:::{#exr-extremos-7}
+Existen organismos que se reproducen una sola vez en su vida como por ejemplo los salmones.
+En este tipo de especies, la velocidad de incremento per cápita $v$, que mide la capacidad reproductiva, depende de la edad $x$ según la ecuación
+
+$$
+v(x) = \frac{\ln(p(x)h(x))}{x},
+$$
+
+donde $p(x)$ es la probabilidad de sobrevivir hasta la edad $x$ y $h(x)$ es el número de nacimientos de hembras a la edad $x$.
+Calcular la edad óptima de reproducción, es decir, el valor que maximice $v$, para $p(x)=e^{-0.1x}$ y $h(x)=4x^{0.9}$.
+:::
+
+:::{#exr-extremos-8}
+Se ha diseñado un envoltorio cilíndrico para unas cápsulas. Si el contenido de las cápsulas debe ser de $0.15$ ml, hallar las dimensiones del cilindro para que el material empleado en el envoltorio sea mínimo.
+:::
+
+:::{#exr-extremos-9}
+En muchos vertebrados existe una relación entre la longitud del cráneo y la longitud de la espina dorsal que puede expresarse mediante la ecuación
+$$
+C(x) = a E(x)^b
+$$
+donde $a$ es una constante de proporcionalidad y $b$ es otra constante que suele estar entre 0 y 1.
+Esta ecuación se conoce como _ecuación alométrica_.
+¿Cómo se relaciona la tasa de crecimiento de la espina dorsal con la del cráneo?
+¿Para qué valores de $b$ es la función $C$ creciente, pero de forma que la relación $C/E$ disminuye al aumentar $E$?
+¿En qué estado de desarrollo tienen los vertebrados cráneos mayores en relación con la longitud de sus cuerpos?
+:::
+
+:::{#exr-extremos-10}
+La distancia en kilómetros que recorre un coche de alquiler con 1 litro de gasolina depende de la velocidad a la que circule según la función $d(x)=120-x$ para $x\in(50,120)$. Si el coste de la gasolina es de $2$ €/l y el coste del alquiler es de $10$ €/h, ¿a qué velocidad debe circular para que el coste del trayecto sea mínimo? ¿Cuál será el coste por kilómetro si circula a esa velocidad?
+:::
+
+<!--
+:::{.callout-tip collapse="true"}
+## Solución
+Como la distancia recorrida a una velocidad $x$ es $d(x)=120-x$ y, como la velocidad es $x=\frac{d(x)}{t}$, el tiempo necesario para recorrer esa distancia es $\frac{d(x)}{x}$, de manera que el coste del alquiler para recorrer esa distancia es $\frac{d(x)}{x}10$. A esto hay que sumar el precio del litro de gasolina necesario para recorrer esa distancia, de manera que el coste de recorrer esa distancia es $\frac{d(x)}{x}10+2$. Por tanto, el coste por kilómetro para una velocidad $x$ viene dado por la función 
+
+$$
+c(x)=\frac{\frac{d(x)}{x}10+2}{120-x} = \frac{8x-1200}{x^2-120x}
+$$
+
+Para determinar el mínimo de la función calculamos los puntos críticos. La derivada vale
+
+$$
+c'(x)=\frac{-8x^2+2400x-144000}{x^4-240x^3+14400 x^2}
+$$
+
+y resolviendo la ecuación $-8x^2+2400x-144000=0$ se obtienen los puntos críticos $x=82.92$ y $x=217.08$. Como el segundo punto crítico queda fuera del rango de velocidades de 50 a 120, estudiaremos solo el primero. Usando el criterio de la primera derivada, estudiamos el signo de la primera derivada a la izquierda y a la derecha del punto crítico, por ejemplo $c'(80)=-1/3200<0$ y $c'(83)=88/9431041>0$, por lo que $c$ tiene un mínimo en $x=82.92$, es decir, la velocidad mínima a la que debe viajar es $82.92$ km/h, y el precio por kilómetro a esa velocidad será $0.17$ €/l.
+:::
+-->
+
 :::{#exr-cinematica-1}
 La posición que ocupa un coche que se mueve en línea recta, puede expresarse en función del tiempo según la ecuación
 $$
@@ -152,15 +241,4 @@ momento?
 c. ¿En qué instante volverá a tocar la tierra el objeto? ¿Con qué velocidad?
 :::
 
-:::{#exr-extremos-1}
-En muchos vertebrados existe una relación entre la longitud del cráneo y la longitud de la espina dorsal que puede expresarse mediante la ecuación
-$$
-C(x) = a E(x)^b
-$$
-donde $a$ es una constante de proporcionalidad y $b$ es otra constante que suele estar entre 0 y 1.
-Esta ecuación se conoce como _ecuación alométrica_.
-¿Cómo se relaciona la tasa de crecimiento de la espina dorsal con la del cráneo?
-¿Para qué valores de $b$ es la función $C$ creciente, pero de forma que la relación $C/E$ disminuye al aumentar $E$?
-¿En qué estado de desarrollo tienen los vertebrados cráneos mayores en relación con la longitud de sus cuerpos?
-:::
 
