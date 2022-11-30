@@ -205,11 +205,69 @@ ul.task-list li input[type="checkbox"] {
 <div id="exr-derivada-potencia" class="theorem exercise">
 <p><span class="theorem-title"><strong>Ejercicio 6.1 </strong></span>Usando la definición de derivada, demostrar que la derivada de la función <span class="math inline">\(f(x)=x^n\)</span> es <span class="math inline">\(f'(x)=nx^{n-1}\)</span> donde <span class="math inline">\(n\in\mathbb{N}\)</span>.</p>
 </div>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Ver <a href="limites.html#exr-limites-1">Ejercicio&nbsp;<span>5.9</span></a> apartado (g).</p>
+</div>
+</div>
+</div>
 <div id="exr-estudio-derivabilidad-1" class="theorem exercise">
 <p><span class="theorem-title"><strong>Ejercicio 6.2 </strong></span>Demostrar que la función <span class="math inline">\(f(x)=|x-1|\)</span> es continua en <span class="math inline">\(x=1\)</span> pero no es derivable en dicho punto.</p>
 </div>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Si calculamos los límites laterales tenemos</p>
+<p><span class="math display">\[\begin{align*}
+\lim_{x\to 1^-}\frac{f(x)-f(a)}{x-1} &amp;= \lim_{x\to 1^-}\frac{|x-1|-|1-1|}{x-1} = \lim_{x\to 1^-} \frac{-(x-1)}{x-1} = \lim_{x\to 1^-} -1 = -1.\\
+\lim_{x\to 1^+}\frac{f(x)-f(a)}{x-1} &amp;= \lim_{x\to 1^+}\frac{|x-1|-|1-1|}{x-1} = \lim_{x\to 1^+} \frac{x-1}{x-1} = \lim_{x\to 1^+} 1 = 1.
+\end{align*}\]</span> Como el límite por la izquierda y por la derecha son distintos, no existe la derivada de <span class="math inline">\(f\)</span> en <span class="math inline">\(1\)</span>.</p>
+</div>
+</div>
+</div>
 <div id="exr-estudio-derivabilidad-2" class="theorem exercise">
 <p><span class="theorem-title"><strong>Ejercicio 6.3 </strong></span>Estudiar si es derivable la función <span class="math inline">\(f(x)=\sqrt[3]{x-1}\)</span> en el punto <span class="math inline">\(x=1\)</span>.</p>
+</div>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Si calculamos los límites laterales tenemos</p>
+<p><span class="math display">\[\begin{align*}
+\lim_{x\to 1}\frac{f(x)-f(a)}{x-1} &amp;= \lim_{x\to 1}\frac{\sqrt[3]{x-1}-\sqrt[3]{1-1}}{x-1} = \lim_{x\to 1} \frac{\sqrt[3]{x-1}}{x-1} \\
+&amp;= \lim_{x\to 1} \frac{\sqrt[3]{x-1}\sqrt[3]{(x-1)^2}}{(x-1)\sqrt[3]{(x-1)^2}} = \lim_{x\to 1} \frac{x-1}{(x-1)\sqrt[3]{(x-1)^2}} \\
+&amp;= \lim_{x\to 1} \frac{1}{\sqrt[3]{(x-1)^2}} = \infty.
+\end{align*}\]</span></p>
+<p>Como el límite no existe, no existe la derivada de <span class="math inline">\(f\)</span> en <span class="math inline">\(1\)</span>.</p>
+</div>
+</div>
 </div>
 <div id="exr-derivabilidad-funcion-trozos-1" class="theorem exercise">
 <p><span class="theorem-title"><strong>Ejercicio 6.4 </strong></span>Estudiar la derivabilidad de <span class="math inline">\(f\)</span> en los puntos <span class="math inline">\(x=-1\)</span>, <span class="math inline">\(x=2\)</span> y <span class="math inline">\(x=3\)</span> siendo</p>
@@ -285,7 +343,7 @@ ax^2+b &amp;  \mbox{si $0&lt;x\leq c$},  \\
 <p><span class="theorem-title"><strong>Ejercicio 6.15 </strong></span>Un cilindro de 4 cm de radio (<span class="math inline">\(r\)</span>) y 3 cm de altura (<span class="math inline">\(h\)</span>) se somete a un proceso de calentamiento con el que varían sus dimensiones de tal forma que <span class="math inline">\(\frac{dr}{dt}=\frac{dh}{dt}= 1\)</span> cm/s. Hallar de forma aproximada la variación de su volumen a los 5 segundos y a los 10 segundos.</p>
 </div>
 <div id="exr-regla-cadena-5" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 6.16 </strong></span>La ventas mensuales de bicicletas en una ciudad depende del precio de las bicicletas, en euros, y el precio del combustible, en céntimos de euro, según la función <span class="math inline">\(v(x,y)=200-10\sqrt{x}+(\frac{y}{10}+20)^{3/2}\)</span>. Si en un determinado instante el precio de las bicicletas es de 200 € y el precio del combustible es de 1€, y el precio de las bicicletas comienza a subir a razón de 1€ al mes, mientras que el precio del combustible empieza a subir a razón de 5 céntimos al mes. ¿Qué tasa de variación experimentarán las ventas de bicicletas en ese instante? Según esta tasa de variación, ¿qué ventas aproximadas se espera tener el próximo mes?</p>
+<p><span class="theorem-title"><strong>Ejercicio 6.16 </strong></span>La ventas mensuales de bicicletas en una ciudad depende del precio de las bicicletas <span class="math inline">\(x\)</span>, en euros, y el precio del combustible <span class="math inline">\(y\)</span>, en céntimos de euro, según la función <span class="math inline">\(v(x,y)=200-10\sqrt{x}+(\frac{y}{10}+20)^{3/2}\)</span>. Si en un determinado instante el precio de las bicicletas es de 200 € y el precio del combustible es de 1€, y el precio de las bicicletas comienza a subir a razón de 1€ al mes, mientras que el precio del combustible empieza a subir a razón de 5 céntimos al mes. ¿Qué tasa de variación experimentarán las ventas de bicicletas en ese instante? Según esta tasa de variación, ¿qué ventas aproximadas se espera tener el próximo mes?</p>
 </div>
 <div id="exr-inversa-seno" class="theorem exercise">
 <p><span class="theorem-title"><strong>Ejercicio 6.17 </strong></span>Dada la función <span class="math inline">\(f:[-\pi/2, \pi/2]\to \mathbb{R}\)</span>, tal que <span class="math inline">\(f(x)=\operatorname{sen}(x)\)</span>, calcular la derivada de su función inversa <span class="math inline">\(f^{-1}(x) = \operatorname{arcsen}(x)\)</span> <span class="math inline">\(\forall x\in [-1,1]\)</span>.</p>

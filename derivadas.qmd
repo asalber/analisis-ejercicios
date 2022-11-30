@@ -8,12 +8,41 @@ lang: es
 Usando la definición de derivada, demostrar que la derivada de la función $f(x)=x^n$ es $f'(x)=nx^{n-1}$ donde $n\in\mathbb{N}$. 
 :::
 
+:::{.callout-tip collapse="true"}
+## Solución
+Ver @exr-limites-1 apartado (g).
+:::
+
 :::{#exr-estudio-derivabilidad-1}
 Demostrar que la función $f(x)=|x-1|$ es continua en $x=1$ pero no es derivable en dicho punto.
 :::
 
+:::{.callout-tip collapse="true"}
+## Solución
+Si calculamos los límites laterales tenemos
+
+\begin{align*}
+\lim_{x\to 1^-}\frac{f(x)-f(a)}{x-1} &= \lim_{x\to 1^-}\frac{|x-1|-|1-1|}{x-1} = \lim_{x\to 1^-} \frac{-(x-1)}{x-1} = \lim_{x\to 1^-} -1 = -1.\\ 
+\lim_{x\to 1^+}\frac{f(x)-f(a)}{x-1} &= \lim_{x\to 1^+}\frac{|x-1|-|1-1|}{x-1} = \lim_{x\to 1^+} \frac{x-1}{x-1} = \lim_{x\to 1^+} 1 = 1.
+\end{align*}
+Como el límite por la izquierda y por la derecha son distintos, no existe la derivada de $f$ en $1$.
+:::
+
 :::{#exr-estudio-derivabilidad-2}
 Estudiar si es derivable la función $f(x)=\sqrt[3]{x-1}$ en el punto $x=1$.
+:::
+
+:::{.callout-tip collapse="true"}
+## Solución
+Si calculamos los límites laterales tenemos
+
+\begin{align*}
+\lim_{x\to 1}\frac{f(x)-f(a)}{x-1} &= \lim_{x\to 1}\frac{\sqrt[3]{x-1}-\sqrt[3]{1-1}}{x-1} = \lim_{x\to 1} \frac{\sqrt[3]{x-1}}{x-1} \\ 
+&= \lim_{x\to 1} \frac{\sqrt[3]{x-1}\sqrt[3]{(x-1)^2}}{(x-1)\sqrt[3]{(x-1)^2}} = \lim_{x\to 1} \frac{x-1}{(x-1)\sqrt[3]{(x-1)^2}} \\ 
+&= \lim_{x\to 1} \frac{1}{\sqrt[3]{(x-1)^2}} = \infty.
+\end{align*}
+
+Como el límite no existe, no existe la derivada de $f$ en $1$.
 :::
 
 :::{#exr-derivabilidad-funcion-trozos-1}
@@ -107,7 +136,7 @@ forma que $\frac{dr}{dt}=\frac{dh}{dt}= 1$ cm/s. Hallar de forma aproximada la v
 :::
 
 :::{#exr-regla-cadena-5}
-La ventas mensuales de bicicletas en una ciudad depende del precio de las bicicletas, en euros, y el precio del combustible, en céntimos de euro, según la función $v(x,y)=200-10\sqrt{x}+(\frac{y}{10}+20)^{3/2}$. Si en un determinado instante el precio de las bicicletas es de 200 € y el precio del combustible es de 1€, y el precio de las bicicletas comienza a subir a razón de 1€ al mes, mientras que el precio del combustible empieza a subir a razón de 5 céntimos al mes. ¿Qué tasa de variación experimentarán las ventas de bicicletas en ese instante? Según esta tasa de variación, ¿qué ventas aproximadas se espera tener el próximo mes?
+La ventas mensuales de bicicletas en una ciudad depende del precio de las bicicletas $x$, en euros, y el precio del combustible $y$, en céntimos de euro, según la función $v(x,y)=200-10\sqrt{x}+(\frac{y}{10}+20)^{3/2}$. Si en un determinado instante el precio de las bicicletas es de 200 € y el precio del combustible es de 1€, y el precio de las bicicletas comienza a subir a razón de 1€ al mes, mientras que el precio del combustible empieza a subir a razón de 5 céntimos al mes. ¿Qué tasa de variación experimentarán las ventas de bicicletas en ese instante? Según esta tasa de variación, ¿qué ventas aproximadas se espera tener el próximo mes?
 :::
 
 :::{#exr-inversa-seno}
