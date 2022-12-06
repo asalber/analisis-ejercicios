@@ -281,6 +281,40 @@ x/2 &amp; \mbox{si $x\in (2,3)$,} \\
 \end{cases}
 \]</span></p>
 </div>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Las funciones de todos los trozos son derivables en todo su dominio, por lo que estudiaremos la derivada por la izquierda y por la derecha en cada uno de los puntos.</p>
+<p>Derivabilidad en en <span class="math inline">\(x=-1\)</span>:</p>
+<p><span class="math display">\[\begin{align*}
+f'^-(-1) &amp;= \frac{-1}{-1} = 1\\
+f'^+(-1) &amp;= \pi \cos(-\pi) = -\pi
+\end{align*}\]</span></p>
+<p>Como <span class="math inline">\(f'^-(-1)\neq f'^+(-1)\)</span> la función no es derivable en <span class="math inline">\(x=-1\)</span>.</p>
+<p>Derivabilidad en en <span class="math inline">\(x=2\)</span>:</p>
+<p><span class="math display">\[\begin{align*}
+f'^-(2) &amp;= \pi \cos(2\pi) = \pi\\
+f'^+(2) &amp;= 1/2
+\end{align*}\]</span></p>
+<p>Como <span class="math inline">\(f'^-(2)\neq f'^+(2)\)</span> la función no es derivable en <span class="math inline">\(x=2\)</span>.</p>
+<p>Derivabilidad en en <span class="math inline">\(x=2\)</span>:</p>
+<p><span class="math display">\[\begin{align*}
+f'^-(3) &amp;= 1/2\\
+f'^+(3) &amp;= 0
+\end{align*}\]</span></p>
+<p>Como <span class="math inline">\(f'^-(3)\neq f'^+(3)\)</span> la función no es derivable en <span class="math inline">\(x=3\)</span>.</p>
+</div>
+</div>
+</div>
 <div id="exr-derivabilidad-funcion-trozos-2" class="theorem exercise">
 <p><span class="theorem-title"><strong>Ejercicio 6.5 </strong></span>Estudiar la derivabilidad de las siguientes funciones y hallar la función derivada correspondiente en los puntos donde exista.</p>
 <ol type="a">
@@ -293,6 +327,78 @@ e^{-x} &amp; \mbox{si $x&gt;0$.}
 <li><p><span class="math inline">\(g(x)=2x+|x^2-2|\)</span>.</p></li>
 </ol>
 </div>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="a">
+<li><p>La función <span class="math inline">\(1-x\)</span> es un polinomio y por tanto es derivable en todo <span class="math inline">\(\mathbb{R}\)</span>. Del mismo modo, la función <span class="math inline">\(e^{-x}\)</span> es una función exponencial que también es derivable en todo <span class="math inline">\(\mathbb{R}\)</span>. Por tanto, faltaría estudiar si existe la derivada en el punto donde cambia la definición de la función, es decir, en <span class="math inline">\(x=0\)</span>. Estudiaremos la derivada por la izquierda y por la derecha en ese punto.</p>
+<p><span class="math display">\[\begin{align*}
+f'^-(0) &amp;= -1\\
+f'^+(0) &amp;= -e^0 = -1
+\end{align*}\]</span></p>
+<p>Como <span class="math inline">\(f'^-(0)= f'^+(0)\)</span> la función es derivable en <span class="math inline">\(x=0\)</span> y <span class="math inline">\(f'(0)=-1\)</span>.</p>
+<p>Así pues, la función derivada de <span class="math inline">\(f\)</span> es</p>
+<p><span class="math display">\[
+f'(x)=
+\begin{cases}
+-1 &amp; \mbox{si $x\leq 0$,} \\
+-e^{-x} &amp; \mbox{si $x&gt;0$.}
+\end{cases}
+\]</span></p></li>
+<li><p>Para estudiar la derivabilidad de <span class="math inline">\(g\)</span> primero vamos a expresar la función <span class="math inline">\(|x^2-2|\)</span> como una función a trozos. Para ello necesitamos saber en qué puntos la función <span class="math inline">\(x^2-2\)</span> es positiva, y en qué puntos es negativa. Si calculamos las raíces de esta función tenemos:</p>
+<p><span class="math display">\[
+|x^2-2| = 0 \Leftrightarrow x^2 = 2 \Leftrightarrow x = \pm \sqrt 2.
+\]</span></p>
+<p>Si estudiamos el signo en los intervalos definidos por las raíces, podemos comprobar fácilmente sin más que calcular la función en cualquier punto de los intervalos que <span class="math inline">\(x^2-2\)</span> es negativa en el intervalo <span class="math inline">\((-\sqrt 2, \sqrt 2)\)</span> y positiva en el resto de su dominio. Por tanto, podemos expresar el valor absoluto de la siguiente manera:</p>
+<p><span class="math display">\[
+|x^2-2| =
+\begin{cases}
+x^2-2 &amp; \mbox{si } x&lt;-\sqrt{2}, \\
+-x^2+2 &amp; \mbox{si } -\sqrt{2} \leq x \leq \sqrt{2},\\
+x^2-2 &amp; \mbox{si } x &gt; \sqrt{2}.
+\end{cases}
+\]</span></p>
+<p>y entonces, la función original puede expresarse como:</p>
+<p><span class="math display">\[
+g(x) =
+\begin{cases}
+2x+x^2-2 &amp; \mbox{si } x&lt; -\sqrt{2}, \\
+2x-x^2+2 &amp; \mbox{si } -\sqrt{2} \leq x \leq \sqrt{2},\\
+2x+x^2-2 &amp; \mbox{si } x &gt; \sqrt{2}.
+\end{cases}
+\]</span></p>
+<p>Ahora, si estudiamos la derivabilidad de cada una de estas funciones en los trozos correspondientes, vemos que ambas son polinomios y por tanto son derivables en sus dominios. Faltaría por estudiar la derivabilidad en los puntos donde cambia la definición de la función. Para ello estudiamos la derivada por la izquierda y por la derecha en esos puntos. En el punto <span class="math inline">\(x=-\sqrt 2\)</span> tenemos:</p>
+<p><span class="math display">\[\begin{align*}
+g'^-(-\sqrt{2}) &amp;= 2-2\sqrt 2\\
+g'^+(-\sqrt{2}) &amp;= 2+2\sqrt 2
+\end{align*}\]</span></p>
+<p>Y como ambas derivadas no coinciden la función no es derivable en <span class="math inline">\(x=-\sqrt 2\)</span>. En <span class="math inline">\(x=\sqrt{2}\)</span> tenemos:</p>
+<p><span class="math display">\[\begin{align*}
+g'^-(\sqrt{2}) &amp;= 2-2\sqrt 2\\
+g'^+(\sqrt{2}) &amp;= 2+2\sqrt 2
+\end{align*}\]</span></p>
+<p>Ambas derivadas no coinciden y tampoco es derivable en <span class="math inline">\(x=\sqrt 2\)</span>.</p>
+<p>Así pues, la derivada de <span class="math inline">\(g\)</span> vale: <span class="math display">\[
+g'(x)=
+\begin{cases}
+2+2x &amp; \mbox{si } x&lt; -\sqrt{2}, \\
+2-2x &amp; \mbox{si } -\sqrt{2} &lt; x &lt; \sqrt{2},\\
+2+2x &amp; \mbox{si } x &gt; \sqrt{2}.
+\end{cases}
+\]</span></p></li>
+</ol>
+</div>
+</div>
+</div>
 <div id="exr-derivabilidad-funcion-trozos-3" class="theorem exercise">
 <p><span class="theorem-title"><strong>Ejercicio 6.6 </strong></span>Dada la función</p>
 <p><span class="math display">\[
@@ -300,10 +406,79 @@ f(x)=
 \begin{cases}
 \operatorname{sen}(x)^2 &amp; \mbox{si $x\leq 0$},  \\
 ax^2+b &amp;  \mbox{si $0&lt;x\leq c$},  \\
-\ln x &amp;  \mbox{si $c&lt;x$},
+\ln(x) &amp;  \mbox{si $c&lt;x$},
 \end{cases}
 \]</span></p>
 <p>con <span class="math inline">\(a,b,c\in\mathbb{R}\)</span>, ¿existe algún valor de las constantes de manera que la función sea continua y derivable en todo su dominio?</p>
+</div>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-6" class="callout-6-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Estudiaremos primero la continuidad y luego la derivabilidad.</p>
+<p>Las funciones <span class="math inline">\(\operatorname{sen}(x)^2\)</span>, <span class="math inline">\(ax^2+b\)</span> y <span class="math inline">\(\ln(x)\)</span> son todas continuas en sus dominios, por tanto, basta con estudiar los puntos donde cambia la definición de la función.</p>
+<p>En el punto <span class="math inline">\(x=0\)</span> tenemos: <span class="math display">\[\begin{align*}
+\lim_{x\rightarrow 0^{-}}f(x) &amp;= \lim_{x\rightarrow 0^{-}}\operatorname{sen}(x)^2=\operatorname{sen}(0)^2=0, \\
+\lim_{x\rightarrow 0^{+}}f(x) &amp;= \lim_{x\rightarrow 0^{+}}ax^2+b=a0^2+b=b, \\
+f(0) &amp;= \operatorname{sen}(0)^2=0.
+\end{align*}\]</span></p>
+<p>Por tanto, la función será continua en <span class="math inline">\(x=0\)</span> si y sólo si <span class="math inline">\(b=0\)</span>.</p>
+<p>En el punto <span class="math inline">\(x=c\)</span> tenemos: <span class="math display">\[\begin{align*}
+\lim_{x\rightarrow c^{-}}f(x) &amp;= \lim_{x\rightarrow c^{-}}ax^2+b=ac^2+b, \\
+\lim_{x\rightarrow c^{+}}f(x) &amp;= \lim_{x\rightarrow c^{+}}\ln(x)=\ln(c), \\
+f(c) &amp;= ac^2+b.
+\end{align*}\]</span></p>
+<p>Luego la función será continua en <span class="math inline">\(x=c\)</span> si y sólo si <span class="math inline">\(ac^2+b=\ln(c)\)</span>.</p>
+<p>Por consiguiente, para que la función sea continua en todo su dominio deben cumplirse las dos ecuaciones siguientes: <span class="math display">\[
+\begin{cases}
+b=0 \\
+ac^2+b = \ln(c)
+\end{cases}
+\]</span></p>
+<p>Con la derivabilidad ocurre lo mismo pues las funciones <span class="math inline">\(\operatorname{sen}(x)^2\)</span> , <span class="math inline">\(ax^2+b\)</span> y <span class="math inline">\(\ln(x)\)</span> son derivables en su dominio y basta con estudiar la derivada por la izquierda y por la derecha en los puntos donde cambia la definición de la función.</p>
+<p>En el punto <span class="math inline">\(x=0\)</span> (imponemos <span class="math inline">\(b=0\)</span> pues de lo contrario la función no sería continua en este punto y tampoco derivable) tenemos:</p>
+<p><span class="math display">\[\begin{align*}
+f'^-(0) &amp;= 2\operatorname{sen}(0)\cos(0) = 0\\
+f'^+(0) &amp;= 2a\cdot 0 = 0
+\end{align*}\]</span></p>
+<p>Luego la función es derivable en <span class="math inline">\(x=0\)</span> si y sólo si <span class="math inline">\(b=0\)</span>.</p>
+<p>En el punto <span class="math inline">\(x=c\)</span> tenemos:</p>
+<p><span class="math display">\[\begin{align*}
+f'^-(c) &amp;= 2ac \\
+f'^+(c) &amp;= 1/c
+\end{align*}\]</span></p>
+<p>Luego, para que la función sea derivable en <span class="math inline">\(x=c\)</span>, además de la condición de continuidad, se debe cumplir <span class="math inline">\(2ac = \frac{1}{c}\)</span>.</p>
+<p>Así pues, para que la función sea continua y derivable en todo su dominio deben cumplirse las tres ecuaciones siguientes:</p>
+<p><span class="math display">\[
+\begin{cases}
+b=0 \\
+ac^2+b = \ln(c)\\
+2ac = \frac 1c
+\end{cases}
+\]</span></p>
+<p>Resolviendo el sistema llegamos a:</p>
+<p><span class="math display">\[
+a = \frac{1}{2c^2} \Rightarrow \ln(c) = ac^2+b = \frac{1}{2c^2}c^2 = \frac{1}{2} \Rightarrow c = e^{1/2},
+\]</span> y, por tanto,</p>
+<p><span class="math display">\[
+a = \frac{1}{2(e^{1/2})^2} = \frac{1}{2e}.
+\]</span></p>
+<p>Los valores de las constantes que hacen que la función sea continua y derivable en todo su dominio son:</p>
+<p><span class="math display">\[\begin{align*}
+a &amp;= \frac{1}{2e},\\
+b &amp;= 0, \\
+c &amp;= e^{1/2}.
+\end{align*}\]</span></p>
+</div>
+</div>
 </div>
 <div id="exr-tangente-normal-1" class="theorem exercise">
 <p><span class="theorem-title"><strong>Ejercicio 6.7 </strong></span>Para cada una de las siguientes curvas, hallar las ecuaciones de las rectas tangente y normal en el punto <span class="math inline">\(a\)</span> indicado.</p>
@@ -312,14 +487,107 @@ ax^2+b &amp;  \mbox{si $0&lt;x\leq c$},  \\
 <li><span class="math inline">\(y=\ln\sqrt{\frac{1+x}{1-x}}, \quad a=0\)</span>.</li>
 </ol>
 </div>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-7" class="callout-7-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>La ecuación de la recta tangente a la función <span class="math inline">\(f\)</span> en el punto <span class="math inline">\(x=a\)</span> es <span class="math inline">\(y=f(a)+f'(a)(x-a)\)</span> y la ecuación de la recta normal en ese mismo punto es <span class="math inline">\(y=f(a)-\frac{1}{f'(a)}(x-a)\)</span>, de modo que necesitamos calcular la derivada de la función en el punto dado.</p>
+<ol type="a">
+<li><p><span class="math inline">\(y'= x^{\operatorname{sen(x)}}\left(\cos(x)\ln(x)+\frac{\operatorname{sen}(x)}{x}\right)\)</span>, y en <span class="math inline">\(x=\pi/2\)</span> se tiene <span class="math inline">\(y'(\pi/2)= (\pi/2)^{\operatorname{sen(\pi/2)}}\left(\cos(\pi/2)\ln(\pi/2)+\frac{\operatorname{sen}(\pi/2)}{\pi/2}\right) = 1\)</span>.</p>
+<p>Por tanto, como <span class="math inline">\(\left(\frac{\pi}{2}\right)^{\operatorname{sen}(\pi/2)}=\frac{\pi}{2}\)</span>, la ecuación de la recta tangente en <span class="math inline">\(x=\pi/2\)</span> es <span class="math inline">\(y=\frac{\pi}{2} + x-\frac{\pi}{2} = x\)</span>, y la ecuación de la recta normal es <span class="math inline">\(y=\frac{\pi}{2}-x+\frac{\pi}{2} = -x+\pi\)</span>.</p></li>
+<li><p>Es este caso, antes de derivar conviene simplificar la función.</p>
+<p><span class="math display">\[\begin{align*}
+y'&amp;=\left(\ln\sqrt{\frac{1+x}{1-x}}\right)' = \left(\frac{1}{2}(\ln(1+x)-\ln(1-x))\right)' \\
+&amp;= \frac{1}{2}\left(\frac{1}{1+x}+\frac{1}{1-x}\right) = \frac{1}{1-x^2}
+\end{align*}\]</span></p>
+<p>, y en <span class="math inline">\(x=0\)</span> se tiene <span class="math inline">\(y'(0)=1\)</span>.</p>
+<p>Por tanto, como <span class="math inline">\(\ln\sqrt{\frac{1+0}{1-0}}=0\)</span>, la ecuación de la recta tangente en <span class="math inline">\(x=0\)</span> es <span class="math inline">\(y=x\)</span>, y la ecuación de la recta normal es <span class="math inline">\(y=-x\)</span>.</p></li>
+</ol>
+</div>
+</div>
+</div>
 <div id="exr-tangente-normal-2" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 6.8 </strong></span>Dadas las funciones <span class="math inline">\(f(x)=\log \left(\frac{x^2}{2}\right)\)</span> y <span class="math inline">\(g(x)=x^3+2\)</span>, ¿existe algún valor de <span class="math inline">\(x\)</span> en el que la recta normal a <span class="math inline">\(f\)</span> y la recta tangente a <span class="math inline">\(g\)</span> en dicho punto sean paralelas?</p>
+<p><span class="theorem-title"><strong>Ejercicio 6.8 </strong></span>Dadas las funciones <span class="math inline">\(f(x)=\ln\left(\frac{x^2}{2}\right)\)</span> y <span class="math inline">\(g(x)=x^3+2\)</span>, ¿existe algún valor de <span class="math inline">\(x\)</span> en el que la recta normal a <span class="math inline">\(f\)</span> y la recta tangente a <span class="math inline">\(g\)</span> en dicho punto sean paralelas?</p>
+</div>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-8" class="callout-8-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Para ver si dos rectas son paralelas, basta con ver si tienen la misma pendiente.</p>
+<p><span class="math display">\[\begin{align*}
+f'(x) &amp;= \left(\ln\left(\frac{x^2}{2}\right)\right)' = (2\ln(x) - \ln(2))' = \frac{2}{x}\\
+g'(x) &amp;= 3x^2
+\end{align*}\]</span></p>
+<p>Así pues, la pendiente de la recta normal a <span class="math inline">\(f\)</span> en <span class="math inline">\(x\)</span> es <span class="math inline">\(\frac{-1}{f'(x)} = \frac{-x}{2}\)</span> y la pendiente de la recta tangente a <span class="math inline">\(g\)</span> en <span class="math inline">\(x\)</span> es <span class="math inline">\(3x^2\)</span>. Igualando las dos pendientes y resolviendo la ecuación resultante, se tiene</p>
+<p><span class="math display">\[
+\frac{-x}{2} = 3x^2 \Leftrightarrow 6x^2 + x =0 \Leftrightarrow x(6x+1) = 0 \Leftrightarrow x=0 \mbox{ o } x=\frac{-1}{6}.
+\]</span></p>
+<p>Ahora bien, como <span class="math inline">\(f\)</span> no está definida en <span class="math inline">\(x=0\)</span>, el único valor de <span class="math inline">\(x\)</span> para el que la recta normal a <span class="math inline">\(f\)</span> es paralela a la recta tangente a <span class="math inline">\(g\)</span> es <span class="math inline">\(x=-1/6\)</span>.</p>
+</div>
+</div>
 </div>
 <div id="exr-derivada-funcion-polinomica" class="theorem exercise">
 <p><span class="theorem-title"><strong>Ejercicio 6.9 </strong></span>Demostrar que cualquier función polinómica <span class="math inline">\(f(x)=c_0+c_1x+c_2x^2+\cdots+c_nx^n\)</span> con <span class="math inline">\(n\in\mathbb{N}\)</span> es derivable en todo <span class="math inline">\(\mathbb{R}\)</span>.</p>
 </div>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-9" class="callout-9-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Sea el polinomio <span class="math inline">\(f(x)=c_0+c_1x+c_2x^2+\cdots+c_nx^n\)</span> con <span class="math inline">\(n\in\mathbb{N}\)</span>. Aplicando el álgebra de derivadas, se tiene</p>
+<p><span class="math display">\[\begin{align*}
+f'(x) &amp;= (c_0+c_1x+c_2x^2+\cdots+c_nx^n)' \\
+&amp;= c_0'+(c_1x)'+(c_2x^2)'+\cdots+(c_nx^n)' \\
+&amp;= c_1+c_2x+\cdots+c_nx^{n-1},
+\end{align*}\]</span></p>
+<p>que existe para todo <span class="math inline">\(\mathbb{R}\)</span>.</p>
+</div>
+</div>
+</div>
 <div id="exr-derivada-funcion-racional" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 6.10 </strong></span>Demostrar que cualquier función racional <span class="math inline">\(f(x)=\dfrac{f(x)}{g(x)}\)</span>, con <span class="math inline">\(f(x)\)</span> y <span class="math inline">\(g(x)\)</span> funciones polinómicas, es derivable en todo <span class="math inline">\(x\in\mathbb{R}\)</span> tal que <span class="math inline">\(g(x)\neq 0\)</span>.</p>
+<p><span class="theorem-title"><strong>Ejercicio 6.10 </strong></span>Demostrar que cualquier función racional <span class="math inline">\(h(x)=\dfrac{f(x)}{g(x)}\)</span>, con <span class="math inline">\(f(x)\)</span> y <span class="math inline">\(g(x)\)</span> funciones polinómicas, es derivable en todo <span class="math inline">\(x\in\mathbb{R}\)</span> tal que <span class="math inline">\(g(x)\neq 0\)</span>.</p>
+</div>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-10" class="callout-10-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Como <span class="math inline">\(f(x)\)</span> y <span class="math inline">\(g(x)\)</span> son dos polinomios, por el ejercicio anterior se tiene que son derivables en todo <span class="math inline">\(\mathbb{R}\)</span>, y aplicando el álgebra de derivadas se tiene <span class="math inline">\(h(x)\)</span> es derivable en todo <span class="math inline">\(x\in\mathbb{R}\)</span> tal que <span class="math inline">\(g(x)\neq 0\)</span>, y</p>
+<p><span class="math display">\[
+h'(x) = \left(\frac{f(x)}{g(x)}\right)' = \frac{f'(x)g(x)-f(x)g'(x)}{g(x)^2}.
+\]</span></p>
+</div>
+</div>
 </div>
 <div id="exr-derivadas-orden-n" class="theorem exercise">
 <p><span class="theorem-title"><strong>Ejercicio 6.11 </strong></span>Hallar la expresión de la derivada <span class="math inline">\(n\)</span>-ésima de las siguientes funciones:</p>
@@ -330,26 +598,268 @@ ax^2+b &amp;  \mbox{si $0&lt;x\leq c$},  \\
 <li><span class="math inline">\(j(x)=\dfrac{1}{\sqrt{1+x}}\)</span>.</li>
 </ol>
 </div>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-11" class="callout-11-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="a">
+<li><p><span class="math display">\[\begin{align*}
+f'(x) &amp;= a^x\ln(a)^2,\\
+f''(x) &amp;= a^x\ln(a)^3,\\
+f'''(x) &amp;= a^x\ln(a)^4,\\
+\vdots \\
+f^{(n}(x) &amp;= a^x\ln(a)^{n+1}
+\end{align*}\]</span></p></li>
+<li><p><span class="math display">\[\begin{align*}
+g'(x) &amp;= \frac{\cos(x)-\operatorname{sen}(x)}{2},\\
+g''(x) &amp;= \frac{-\operatorname{sen}(x)-\cos(x)}{2},\\
+g'''(x) &amp;= \frac{-\cos(x)+\operatorname{sen}(x)}{2},\\
+g''''(x) &amp;= \frac{\operatorname{sen}(x)+\cos(x)}{2}
+\end{align*}\]</span></p>
+<p>Como <span class="math inline">\(g'''' = g\)</span>, las derivadas se van a repetir cíclicamente cada múltiplo de cuatro. Podemos expresar la derivada de orden <span class="math inline">\(n\)</span> de la siguiente forma</p>
+<p><span class="math display">\[
+g^{(n}(x)=
+\begin{cases}
+\frac{\operatorname{sen}(x) + \cos(x)}{2} &amp; \mbox{si $n=4k$,}\\
+\frac{\cos(x)-\operatorname{sen}(x)}{2} &amp; \mbox{si $n=4k+1$,}\\
+\frac{-\operatorname{sen}(x)-\cos(x)}{2} &amp; \mbox{si $n=4k+2$,}\\
+\frac{\operatorname{sen}(x)+\cos(x)}{2} &amp; \mbox{si $n=4k+3$.}\\
+\end{cases}
+\quad k\in\mathbb{N}.
+\]</span></p></li>
+<li><p>Descomponiendo primero en fracciones simples, se tiene que</p>
+<p><span class="math display">\[\begin{align*}
+h(x) &amp;= \frac{9x^2-2x-25}{x^3-2x^2-5x+6} = \frac{9x^2-2x-25}{(x-3)(x-1)(x+2)} \\
+&amp;= \frac{5}{x-3}+\frac{3}{x-1}+\frac{1}{x+2} \\
+&amp;= 5(x-3)^{-1}+3(x-1)^{-1}+(x+2)^{-1}
+\end{align*}\]</span></p>
+<p>Calculamos ahora las sucesivas derivadas.</p>
+<p><span class="math display">\[\begin{align*}
+h'(x) &amp; = 5(-1)(x-3)^{-2}+3(-1)(x-1)^{-2}+(-1)(x+2)^{-2}\\
+h''(x) &amp;= 5(-1)(-2)(x-3)^{-3}+3(-1)(-2)(x-1)^{-3}+(-1)(-2)(x+2)^{-3}\\
+h'''(x) &amp;= 5(-1)(-2)(-3)(x-3)^{-4}+3(-1)(-2)(-3)(x-1)^{-4}+(-1)(-2)(-3)(x+2)^{-4}\\
+\vdots \\
+h^{(n}(x) &amp;= 5(-1)^n n!(x-3)^{-(n+1)}+ 3(-1)^n n!(x-1)^{-(n+1)} + (-1)^n n!(x+2)^{-(n+1)}
+\end{align*}\]</span></p></li>
+<li><p><span class="math inline">\(j(x)=\dfrac{1}{\sqrt{1+x}}=(1+x)^{-1/2}\)</span>.</p>
+<p><span class="math display">\[\begin{align*}
+j'(x) &amp;= \frac{-1}{2}(1+x)^{-3/2}\\
+j''(x) &amp;= \frac{-1}{2}\frac{-3}{2}(1+x)^{-5/2}\\
+j'''(x) &amp;= \frac{-1}{2}\frac{-3}{2}\frac{-5}{2}(1+x)^{-7/2}\\
+\vdots \\
+j^{(n}(x) &amp;= \frac{(-1)^n \prod_{i=1}^{n}2i-1}{2^n}(1+x)^{-\frac{2n+1}{2}}
+\end{align*}\]</span></p></li>
+</ol>
+</div>
+</div>
+</div>
 <div id="exr-regla-cadena-1" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 6.12 </strong></span>Se sabe que la demanda de un producto, en decenas de miles de unidades, depende de su precio según la función <span class="math inline">\(d(x)=\ln(10/x)\)</span>. Si el precio mensual evoluciona según la función <span class="math inline">\(x(t)=2+t/10\)</span>, ¿cuál será la tasa de variación de la demanda en el instante <span class="math inline">\(t=5\)</span>? Según esta tasa de variación de la demanda, ¿qué demanda aproximada se espera tener un mes después?</p>
+<p><span class="theorem-title"><strong>Ejercicio 6.12 </strong></span>Se sabe que la demanda de un producto, en decenas de miles de unidades, depende de su precio según la función <span class="math inline">\(D(x)=\ln(10/x)\)</span>. Si el precio mensual evoluciona según la función <span class="math inline">\(x(t)=2+\frac{t}{10}\)</span>, ¿cuál será la tasa de variación de la demanda en el instante <span class="math inline">\(t=5\)</span>? Según esta tasa de variación de la demanda, ¿qué demanda aproximada se espera tener un mes después?</p>
+</div>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-12-contents" aria-controls="callout-12" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-12" class="callout-12-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>La función que expresa la demanda en función del tiempo es la composición de <span class="math inline">\(x\)</span> con <span class="math inline">\(D\)</span>. Aplicando la regla de la cadena se tiene</p>
+<p><span class="math display">\[
+D'(t) = \frac{dD}{dt} = \frac{dD}{dx}\frac{dx}{dt} = \frac{-1}{x}\frac{1}{10} =\frac{-1}{(2+\frac{t}{10})10} = \frac{-1}{20+t}.
+\]</span></p>
+<p>En el instante <span class="math inline">\(t=5\)</span> la tasa de variación instantánea de la demanda es</p>
+<p><span class="math display">\[
+D'(5) = \frac{-1}{20+5} = \frac{-1}{25},
+\]</span></p>
+<p>es decir, la demanda decrecerá <span class="math inline">\(10000/25=400\)</span> unidades al mes, a partir de ese instante.</p>
+<p>Para predecir la demanda aproximada un més después se puede utilizar la recta tangente a <span class="math inline">\(D\)</span> en el instante <span class="math inline">\(t=5\)</span>, que tiene ecuación,</p>
+<p><span class="math display">\[
+y = D(5)+D'(5)(t-5) = \ln\left(\frac{10}{2+\frac{5}{10}}\right) -\frac{1}{25}(t-5) = \ln(4)+\frac{1}{5}-\frac{t}{25}.
+\]</span></p>
+<p>La predicción de la recta tangente un mes después, es decir para <span class="math inline">\(t=6\)</span> es <span class="math inline">\(\ln(4)+\frac{1}{5}-\frac{6}{25}=1.35\)</span> decenas de miles de unidades.</p>
+</div>
+</div>
 </div>
 <div id="exr-regla-cadena-2" class="theorem exercise">
 <p><span class="theorem-title"><strong>Ejercicio 6.13 </strong></span>Un balón relleno de aire tiene radio 10 cm cuando se empieza a introducir más aire, de manera que el radio se incrementa con una velocidad de 2 cm/s. ¿Con qué velocidad varía el volumen en ese instante?</p>
 </div>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-13-contents" aria-controls="callout-13" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-13" class="callout-13-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Suponiendo que el balón tiene forma esférica, el volumen de aire depende del radio del balón según la función <span class="math inline">\(V(r)=\frac{4}{3}\pi r^3\)</span>. Ahora bien, como empezamos a introducir aire en el balón, el radio dependerá del tiempo, según la función <span class="math inline">\(r(t)\)</span>, y por tanto el volumen depende también del tiempo según la función <span class="math inline">\(V(r(t)) = \frac{4}{3}\pi r(t)^3\)</span>.</p>
+<p>La velocidad con la que varía el volumen en el instante <span class="math inline">\(t_0\)</span> en que el radio es <span class="math inline">\(r(t_0)=10\)</span> cm y empieza a variar con una velocidad <span class="math inline">\(r'(t_0)=2\)</span> cm/s, es</p>
+<p><span class="math display">\[\begin{align*}
+V(r(t_0))' &amp;= \frac{dV}{dr}(r(t_0))\frac{dr}{dt}(t_0) = \frac{4}{3}\pi 3 r(t_0)^2 r'(t_0)\\
+&amp; = 4\pi (10\mbox{ cm})^2\cdot 2\mbox{ cm/s} = 800\pi \mbox{ cm$^3$/s}.
+\end{align*}\]</span></p>
+</div>
+</div>
+</div>
 <div id="exr-regla-cadena-3" class="theorem exercise">
 <p><span class="theorem-title"><strong>Ejercicio 6.14 </strong></span>Una pipeta cilíndrica de radio 5 mm almacena una solución. Si la pipeta empieza a vaciarse a razón de <span class="math inline">\(0.5\)</span> ml por segundo, ¿a qué velocidad disminuye el nivel de la pipeta?</p>
+</div>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-14-contents" aria-controls="callout-14" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-14" class="callout-14-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Como el radio de la pipeta es constante <span class="math inline">\(r=5\)</span> mm, el volumen de solución en la pipeta depende del nivel de la pipeta y según la función <span class="math inline">\(V(h) = \pi (5 \mbox{ mm})^2 h\)</span>. Ahora bien, como la pipeta empieza a vaciarse, el nivel de la pipeta dependerá del tiempo según la función <span class="math inline">\(h(t)\)</span>, y por tanto, el volumen también depende del tiempo según la función <span class="math inline">\(V(h(t)) = \pi (5 \mbox{ mm})^2 h(t)\)</span>.</p>
+<p>La velocidad con la que cambia el volumen en el instante <span class="math inline">\(t_0\)</span> es,aplicando la regla de la cadena,</p>
+<p><span class="math display">\[
+\begin{gathered}
+V(h(t_0))' = \frac{dV}{dh}(h(t_0))\frac{dh}{dt}(t_0) = 25\pi \mbox{ mm}^2 h'(t_0) = -500 \mbox{ mm$^3$/s}\\ \Rightarrow h'(t_0) = \frac{-500 \mbox{ mm$^3$/s}}{25\pi \mbox{ mm}^2} = \frac{-20}{\pi} \mbox{ mm/s}  \approx -6.37 \mbox{ mm/s}.
+\end{gathered}
+\]</span></p>
+</div>
+</div>
 </div>
 <div id="exr-regla-cadena-4" class="theorem exercise">
 <p><span class="theorem-title"><strong>Ejercicio 6.15 </strong></span>Un cilindro de 4 cm de radio (<span class="math inline">\(r\)</span>) y 3 cm de altura (<span class="math inline">\(h\)</span>) se somete a un proceso de calentamiento con el que varían sus dimensiones de tal forma que <span class="math inline">\(\frac{dr}{dt}=\frac{dh}{dt}= 1\)</span> cm/s. Hallar de forma aproximada la variación de su volumen a los 5 segundos y a los 10 segundos.</p>
 </div>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-15-contents" aria-controls="callout-15" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-15" class="callout-15-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>El volumen de un cilindro depende del radio de la base <span class="math inline">\(r\)</span> y de la altura <span class="math inline">\(h\)</span>, según la fórmula <span class="math inline">\(V(r,h)=\pi r^2h\)</span>. Ahora bien, como el proceso de calentamiento provoca un cambio de las dimensiones, podemos decir que el radio cambia con el tiempo según la función <span class="math inline">\(r(t)\)</span> y la altura cambia también con el tiempo según la función <span class="math inline">\(h(t)\)</span>, de manera que el volumen también depende del tiempo según la función <span class="math inline">\(V(r(t),h(t))=\pi r(t)^2h(t)\)</span>. La tasa de variación instantánea del volumen en el instante <span class="math inline">\(t_0\)</span> en el que comienza el calentamiento es, aplicando la regla de la cadena,</p>
+<p><span class="math display">\[\begin{align*}
+V(r(t_0),h(t_0))' &amp;= \pi((r(t_0)^2)'h(t_0)+r(t_0)^2h'(t_0)) \\
+&amp;= \pi(2r(t_0)r'(t_0)h(t_0)+r(t_0)^2h'(t_0))
+\end{align*}\]</span></p>
+<p>En el instante <span class="math inline">\(t_0\)</span> en el que comienza el proceso de calentamiento, sabemos que <span class="math inline">\(r(t_0)=4\)</span> cm, <span class="math inline">\(h(t_0)=3\)</span> cm y <span class="math inline">\(r'(t_0)=h'(t_0)=1\)</span> cm/s, de manera que sustituyendo en la expresión anterior se tiene</p>
+<p><span class="math display">\[
+V(r(t_0),h(t_0))' = \pi(2\cdot 4 \mbox{ cm }\cdot 1 \mbox{ cm/s } \cdot 3 \mbox{ cm }+ (4 \mbox{ cm })^2 \cdot 1 \mbox{ cm/s }) = 40\pi \mbox{ cm$^3$/s}.
+\]</span></p>
+<p>Así pues <span class="math inline">\(\frac{dV}{dt}=40\pi\)</span> cm<span class="math inline">\(^3\)</span>/s, de donde se deduce que <span class="math inline">\(dV = 40\pi\)</span> cm<span class="math inline">\(^3\)</span>/s <span class="math inline">\(dt\)</span>, de manera que para una variación de tiempo <span class="math inline">\(dt=5\)</span> s, la variación aproximada del volumen será <span class="math inline">\(dV = 40\pi\)</span> cm<span class="math inline">\(^3\)</span>/s <span class="math inline">\(\cdot 5\)</span> s <span class="math inline">\(= 200\pi\)</span> cm<span class="math inline">\(^3\)</span>, y para una variación de tiempo <span class="math inline">\(dt=10\)</span> s, la variación aproximada del volumen será <span class="math inline">\(dV = 40\pi\)</span> cm<span class="math inline">\(^3\)</span>/s <span class="math inline">\(\cdot 10\)</span> s <span class="math inline">\(= 400\pi\)</span> cm<span class="math inline">\(^3\)</span>.</p>
+</div>
+</div>
+</div>
 <div id="exr-regla-cadena-5" class="theorem exercise">
 <p><span class="theorem-title"><strong>Ejercicio 6.16 </strong></span>La ventas mensuales de bicicletas en una ciudad depende del precio de las bicicletas <span class="math inline">\(x\)</span>, en euros, y el precio del combustible <span class="math inline">\(y\)</span>, en céntimos de euro, según la función <span class="math inline">\(v(x,y)=200-10\sqrt{x}+(\frac{y}{10}+20)^{3/2}\)</span>. Si en un determinado instante el precio de las bicicletas es de 200 € y el precio del combustible es de 1€, y el precio de las bicicletas comienza a subir a razón de 1€ al mes, mientras que el precio del combustible empieza a subir a razón de 5 céntimos al mes. ¿Qué tasa de variación experimentarán las ventas de bicicletas en ese instante? Según esta tasa de variación, ¿qué ventas aproximadas se espera tener el próximo mes?</p>
 </div>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-16-contents" aria-controls="callout-16" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-16" class="callout-16-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Como el precio de las bicicletas y del combustible no son constantes, sino que dependen del tiempo según las funciones <span class="math inline">\(x(t)\)</span> y <span class="math inline">\(y(t)\)</span> respectivamente, las ventas también dependen del tiempo según la función <span class="math inline">\(v(x(t),y(t))=200-10\sqrt{x(t)}+(\frac{y(t)}{10}+20)^{3/2}\)</span>. Por tanto, la tasa de variación instantánea de las ventas es, aplicando la regla de la cadena,</p>
+<p><span class="math display">\[\begin{align*}
+v(x(t),y(t))' &amp;= (200)'-\left(10\sqrt{x(t)}\right)'+\left(\left(\frac{y(t)}{10}+20\right)^{3/2}\right)'\\
+&amp;= \frac{-10}{2\sqrt{x(t)}}x'(t) + \frac{3}{2}\sqrt{\frac{y(t)}{10}+20}\frac{y'(t)}{10} \\
+&amp;= \frac{-5x'(t)}{\sqrt{x(t)}} + \frac{3y'(t)}{20}\sqrt{\frac{y(t)}{10}+20}.
+\end{align*}\]</span></p>
+<p>En el instante <span class="math inline">\(t_0\)</span> en el que el precio de las bicicletas es <span class="math inline">\(x(t_0)=200\)</span> €, el precio del combustible es <span class="math inline">\(y(t) = 100\)</span> céntimos, y la tasa de variación instantánea del precio de las bicicletas es <span class="math inline">\(x'(t_0)=1\)</span> €/mes y del precio del combustible <span class="math inline">\(y(t_0)=5\)</span> céntimos/mes, sustituyendo en la expresión anterior se tiene</p>
+<p><span class="math display">\[\begin{align*}
+v(x(t_0),y(t_0))' &amp;= \frac{-5x'(t_0)}{\sqrt{x(t_0)}} + \frac{3y'(t_0)}{20}\sqrt{\frac{y(t_0)}{10}+20}\\
+&amp; = \frac{-5\cdot 1}{\sqrt{200}} + \frac{3\cdot 5}{20}\sqrt{\frac{100}{10}+20} = 3.75 \mbox{ unidades/mes}.
+\end{align*}\]</span></p>
+<p>Para predecir las ventas el próximo mes, podemos utilizar la aproximación de la recta tangente a <span class="math inline">\(v\)</span> en ese instante, que tiene ecuación</p>
+<p><span class="math display">\[\begin{align*}
+y &amp;= v(t_0) + v'(t_0) (t-t_0) \\
+&amp;= 200-10\sqrt{200}+(\frac{100}{10}+20)^{3/2} + 3.75 (t-t_0) \\
+&amp;= 222.9 + 3.75 (t-t_0).
+\end{align*}\]</span></p>
+<p>Si queremos predecir las ventas el mes siguiente, la variación del tiempo es <span class="math inline">\(t-t_0=1\)</span> mes, y sustituyendo en la ecuación de la tangente se tiene que las ventas aproximadas serán <span class="math inline">\(222.9+3.75\cdot 1 = 226.65\)</span> unidades.</p>
+</div>
+</div>
+</div>
 <div id="exr-inversa-seno" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 6.17 </strong></span>Dada la función <span class="math inline">\(f:[-\pi/2, \pi/2]\to \mathbb{R}\)</span>, tal que <span class="math inline">\(f(x)=\operatorname{sen}(x)\)</span>, calcular la derivada de su función inversa <span class="math inline">\(f^{-1}(x) = \operatorname{arcsen}(x)\)</span> <span class="math inline">\(\forall x\in [-1,1]\)</span>.</p>
+<p><span class="theorem-title"><strong>Ejercicio 6.17 </strong></span>Dada la función <span class="math inline">\(f:[-\pi/2, \pi/2]\to \mathbb{R}\)</span>, tal que <span class="math inline">\(f(x)=\operatorname{sen}(x)\)</span>, calcular la derivada de su función inversa <span class="math inline">\(f^{-1}(x) = \operatorname{arcsen}(x)\)</span> <span class="math inline">\(\forall x\in (-1,1)\)</span>.</p>
+</div>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-17-contents" aria-controls="callout-17" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-17" class="callout-17-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Aplicando la regla para la derivada de la función inversa, se tiene</p>
+<p><span class="math display">\[
+(f^{-1})'(x) = \frac{1}{f'(f^{-1}(x))} = \frac{1}{\cos(\operatorname{arcsen}(x))} \forall x\in (-1,1).
+\]</span></p>
+<p>Por otro lado, como <span class="math inline">\(\operatorname{sen}(x)^2+\cos(x)^2=1\)</span>, se deduce que <span class="math inline">\(\cos(x) = \sqrt{1-\operatorname{sen}(x)^2}\)</span>, de manera que sustituyendo en la expresión anterior se tiene</p>
+<p><span class="math display">\[
+(f^{-1})'(x) = \frac{1}{\sqrt{1-\operatorname{sen}(\operatorname{arcsen}(x))^2}} = \frac{1}{\sqrt{1-x^2}} \forall x\in (-1,1).
+\]</span></p>
+</div>
+</div>
 </div>
 <div id="exr-transmision-errores-1" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 6.18 </strong></span>Se desea medir la superficie de una célula esférica y para ello se ha medido el radio de una célula de 5 <span class="math inline">\(\mu\)</span> con un error de 0.2 <span class="math inline">\(\mu\)</span>. ¿Cuál será el error aproximado cometido en el cálculo de la superficie de la célula? En general, si al medir el radio se comete siempre un error relativo del 2%? ¿Cómo afecta esto al error de la medida de la superficie de la célula?</p>
+<p><span class="theorem-title"><strong>Ejercicio 6.18 </strong></span>Se desea medir la superficie de una célula esférica y para ello se ha medido el radio de una célula de 5 <span class="math inline">\(\mu\)</span>m con un error de <span class="math inline">\(0.2\)</span> <span class="math inline">\(\mu\)</span>m. ¿Cuál será el error aproximado cometido en el cálculo de la superficie de la célula? En general, si al medir el radio se comete siempre un error relativo del 2%? ¿Cómo afecta esto al error de la medida de la superficie de la célula?</p>
+</div>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-18-contents" aria-controls="callout-18" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-18" class="callout-18-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>La superficie de una esfera depende del radio según la función <span class="math inline">\(S(r) =4\pi r^2\)</span>.</p>
+<p>Como <span class="math inline">\(S'(r) = \frac{dS}{dr}\)</span> se deduce que <span class="math inline">\(dS=S'(r)dr\)</span>, de manera que si se interpreta la variación del radio <span class="math inline">\(dr\)</span> como el error en su medición, y la variación de la superficie <span class="math inline">\(dS\)</span> como el error en su medición, el error en la medición del radio se transmite a la medición de la superficie multiplicando por la derivada de la superficie. Como <span class="math inline">\(S'(r)=8\pi r\)</span>, para un radio de <span class="math inline">\(5\ \mu\mbox{m}\)</span> se tiene $S’(5) = 8&nbsp; = 40&nbsp;. Por tanto, una error en la medición del radio de <span class="math inline">\(dt=0.2\ \mu\mbox{m}\)</span>, producirá un error en la medición de la superficie de <span class="math inline">\(dS = 40\pi \ \mu\mbox{m} \cdot 0.2 \ \mu\mbox{m} = 8\pi \ \mu\mbox{m}^2.\)</span></p>
+<p>Para la segunda parte del problema, hay que tener en cuenta que si <span class="math inline">\(dr\)</span> se interpreta como el error absoluto del radio, <span class="math inline">\(\frac{dr}{r}\)</span> es el error relativo en la medición del radio, y <span class="math inline">\(\frac{dS}{S}\)</span> es el error relativo en la medición de la superficie. Así pues, se tiene</p>
+<p><span class="math display">\[
+\frac{dS}{S} = \frac{S'(r)dr}{S} = \frac{8\pi r dr}{4\pi r^2} = 2\frac{dr}{r}.
+\]</span></p>
+<p>Como el error relativo en la medición del radio es del 2%, se tiene que <span class="math inline">\(\frac{dr}{r}=0.02\)</span> y sustituyendo en el resultado anterior se tiene</p>
+<p><span class="math display">\[
+\frac{dS}{S} = 2\frac{dr}{r} = 2\cdot 0.02 = 0.04,
+\]</span></p>
+<p>de manera que el error relativo en la medición de la superficie es del 4%.</p>
+</div>
+</div>
 </div>
 <div id="exr-transmision-errores-2" class="theorem exercise">
 <p><span class="theorem-title"><strong>Ejercicio 6.19 </strong></span>La velocidad de la sangre que fluye por una arteria está dada por la ley de Poiseuille <span class="math display">\[
@@ -418,14 +928,17 @@ $$
 y resolviendo la ecuación $-8x^2+2400x-144000=0$ se obtienen los puntos críticos $x=82.92$ y $x=217.08$. Como el segundo punto crítico queda fuera del rango de velocidades de 50 a 120, estudiaremos solo el primero. Usando el criterio de la primera derivada, estudiamos el signo de la primera derivada a la izquierda y a la derecha del punto crítico, por ejemplo $c'(80)=-1/3200<0$ y $c'(83)=88/9431041>0$, por lo que $c$ tiene un mínimo en $x=82.92$, es decir, la velocidad mínima a la que debe viajar es $82.92$ km/h, y el precio por kilómetro a esa velocidad será $0.17$ €/l.
 :::
 -->
+<div id="exr-teorema-valor-medio" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 6.29 </strong></span>En un tramo de carretera limitado a una velocidad máxima de <span class="math inline">\(70\)</span> km/h existe un semáforo de tramo. Según el registro del semáforo, un vehículo pasa por el comienzo del tramo, situado en el kilómetro 12 a las 8:00 y pasa por el final del tramo, situado en el kilómetro <span class="math inline">\(14\)</span>, un minuto y medio después. ¿Será sancionado el vehículo por exceso de velocidad?</p>
+</div>
 <div id="exr-cinematica-1" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 6.29 </strong></span>La posición que ocupa un coche que se mueve en línea recta, puede expresarse en función del tiempo según la ecuación <span class="math display">\[
+<p><span class="theorem-title"><strong>Ejercicio 6.30 </strong></span>La posición que ocupa un coche que se mueve en línea recta, puede expresarse en función del tiempo según la ecuación <span class="math display">\[
 e(t) = 4t^3 -2t +1.
 \]</span> Calcular su velocidad y aceleración en cualquier instante.<br>
 Nota: La aceleración es la tasa de variación instantánea de la velocidad.</p>
 </div>
 <div id="exr-cinematica-2" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 6.30 </strong></span>El espacio recorrido por un objeto que se lanza verticalmente hacia arriba, sin tener en cuenta la resistencia del aire, viene dado por la ecuación <span class="math display">\[
+<p><span class="theorem-title"><strong>Ejercicio 6.31 </strong></span>El espacio recorrido por un objeto que se lanza verticalmente hacia arriba, sin tener en cuenta la resistencia del aire, viene dado por la ecuación <span class="math display">\[
 e(t) =v_0t-\frac{1}{2}gt^2
 \]</span> donde <span class="math inline">\(v_0\)</span> es la velocidad inicial con que se lanza el objeto, <span class="math inline">\(g=9.81\)</span> m/s<span class="math inline">\(^2\)</span> es la constante gravitatoria de la Tierra y <span class="math inline">\(t\)</span> es el tiempo transcurrido desde que el objeto se lanza.</p>
 <ol type="a">
@@ -434,6 +947,361 @@ e(t) =v_0t-\frac{1}{2}gt^2
 <li>¿En qué instante volverá a tocar la tierra el objeto? ¿Con qué velocidad?</li>
 </ol>
 </div>
+<div id="exr-derivada-implicita-1" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 6.32 </strong></span>Dada la función <span class="math inline">\(xy+e^x-\log y=0\)</span>, calcular las ecuaciones de las rectas tangente y normal a ella en <span class="math inline">\(x=0\)</span>.</p>
+</div>
+<!--
+:::{.callout-tip collapse="true"}
+## Solución
+Tangente: $y=(e^2+e)x+e$. Normal: $y=\frac{-x}{e^2+e}+e$.
+:::
+-->
+<div id="exr-derivada-implicita-2" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 6.33 </strong></span>Suponiendo que la temperatura, <span class="math inline">\(T\)</span> en grados centígrados, y el volumen, <span class="math inline">\(V\)</span> en metros cúbicos, de un gas real encerrado en un contenedor de volumen variable están relacionados mediante la siguiente ecuación:</p>
+<p><span class="math display">\[
+T^2(V^2-\pi^2)-V\cos(TV) = 0.
+\]</span></p>
+<ol type="a">
+<li>Calcular la derivada del volumen con respecto a la temperatura en el momento en el que el volumen es de <span class="math inline">\(\pi\)</span> m<span class="math inline">\(^3\)</span> y la temperatura es medio grado centígrado.</li>
+<li>¿Cuál sería la ecuación de la recta tangente a la gráfica de la función que daría el volumen en función de la temperatura en el mismo punto del apartado anterior? Suponiendo que tanto la temperatura como el volumen son, a su vez, funciones de la presión, qué ecuación ligaría la derivada de la temperatura con respecto a la presión con la derivada del volumen con respecto a la presión.</li>
+</ol>
+</div>
+<!--
+:::{.callout-tip collapse="true"}
+## Solución
+a. $\frac{dV}{dT} = \frac{-2T(V^2-\pi^2)-V^2\operatorname{sen}(TV)}{2T^2V-\cos(TV)+TV\operatorname{sen}(TV)}$ y $\frac{dV}{dT}(V=\pi,T=0.5)= -pi$ m$^3$/ºC.
+a. Tangente: $V=\pi(-T+1.5)$.
+a. $2T\frac{dT}{dP}(V^2-\pi^2)+T^2(2V\frac{dV}{dT})-\frac{dV}{dT}\cos(VT)-V(-\operatorname{sen}(TV)(\frac{dT}{dP}V+T\frac{dV}{dP})) =0$.
+:::
+-->
+<div id="exr-derivada-implicita-3" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 6.34 </strong></span>Un cuerpo se mueve en el plano a través de los puntos de coordenadas <span class="math inline">\((x,y)\)</span> relacionadas mediante la siguiente expresión: <span class="math display">\[
+2e^{xy} \operatorname{sen}(x) + y\cos(x) = 2.
+\]</span></p>
+<ol type="a">
+<li>Calcular su posición cuando <span class="math inline">\(x=\pi/2\)</span></li>
+<li>Calcular la ecuación de la recta tangente a la gráfica de la función cuando <span class="math inline">\(x=0\)</span>.</li>
+</ol>
+</div>
+<!--
+:::{.callout-tip collapse="true"}
+## Solución
+a. El punto $(x_0,y_0)$ en el que se encontrará el cuerpo cuando $x_0=\pi/2$
+cumple la ecuación del enunciado. Por lo tanto:
+$$
+2e^{x_0y_0} \operatorname{sen}(x)_0 + y_0\cos(x)_0 = 2
+$$
+y sustituyendo $x_0=\pi/2$, obtenemos:
+$$
+2e^{\frac{\pi }{2}y_0 } \operatorname{sen}\frac{\pi }{2} + y_0 \cos \frac{\pi }{2}
+= 2 \Rightarrow 2e^{\frac{\pi }{2}y_0 }  = 2
+$$
+con lo cual:
+$$
+e^{\frac{\pi }{2}y_0 }  = 1 \Leftrightarrow y_0  = 0
+$$
+
+a. Sabemos que la ecuación de la recta tangente a la gráfica de
+la función en el punto de coordenadas $(x_0,y_0)$ es:
+$$
+y-y_0=f'(x_0)(x-x_0)
+$$
+En nuestro caso, no tenemos la expresión explícita de la función
+$f$, pero sí que tenemos la expresión de partida que define a $y$
+como función de $x$ de forma implícita. Suponiendo que $y$ es
+función de $x$ y derivando con respecto a $x$, obtenemos:
+$$
+2 e^{xy}(y + xy')\operatorname{sen}(x) + 2e^{xy}\cos(x) + y'\cos(x) - y\operatorname{sen}(x) = 0
+$$
+Y sacando como factor común $y'$ y despejando, nos queda:
+$$
+y' = \frac{{ - 2e^{xy} y \operatorname{sen}(x) - 2e^{xy} \cos(x) + y \operatorname{sen}
+x}}{{2xe^{xy} \operatorname{sen}(x) + \cos(x)}}
+$$
+Teniendo en cuenta que $x_0=0$, y sustituyendo en la expresión
+inicial, obtenemos el valor de $y_0$:
+$$
+2e^0 \operatorname{sen} 0 + y_0 \cos 0 = 2 \Rightarrow y_0  = 2
+$$
+Y teniendo en cuenta el valor de la derivada implícita obtenido
+anteriormente:
+$$
+f'(0) = y'(0,2) = \frac{{ - 2e^0 \cos 0}}{{\cos 0}} =  - 2
+$$
+Por lo tanto, la ecuación de la recta tangente es:
+$$
+y-2=-2(x-0)\Leftrightarrow y=-2x+2.
+$$
+:::
+-->
+<div id="exr-derivada-implicita-4" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 6.35 </strong></span>Hallar la ecuación de la recta tangente y normal a la curva <span class="math inline">\(x^2+y^2=3xy-1\)</span> en los puntos en que <span class="math inline">\(x=1\)</span>. Calcular también los extremos relativos y decir si son máximos o mínimos.</p>
+</div>
+<!--
+:::{.callout-tip collapse="true"}
+## Solución
+Consideremos $y$ como función de $x$. Veamos primero los puntos de la curva en los que $x=1$:
+$$
+1^{2}+y^{2} = 3\cdot 1\cdot y-1 \Leftrightarrow y^{2} -3y+2 = 0.
+$$
+Resolviendo la ecuación obtenemos dos soluciones $y=1$ e $y=2$, de modo que existen dos puntos para los que $x=1$, que son el $(1,1)$ y el $(1,2)$.
+
+Para calcular las ecuaciones de las rectas tangente y normal en estos puntos, necesitamos calcular la derivada $dy/dx$ en dichos puntos. Derivamos implicitamente:
+$$
+d(x^{2}+y^{2} = d(3xy-1) \Leftrightarrow 2xdx+2ydy = 3(dxy+xdy) \Leftrightarrow (2x-3y)dx+(2y-3x)dy = 0,
+$$
+de donde se deduce
+$$
+\frac{dy}{dx} = \frac{3y-2x}{2y-3x},
+$$
+que en el punto $(1,1)$ vale
+$$
+\frac{dy}{dx} = \frac{3\cdot 1 - 2\cdot 1}{2\cdot 1-3\cdot 1} = -1,
+$$
+y en el punto $(1,2)$ vale
+$$
+\frac{dy}{dx} = \frac{3\cdot 2 - 2\cdot 1}{2\cdot 2-3\cdot 1} = 4.
+$$
+Así pues, la ecuación de la recta tangente en el punto $(1,1)$ es
+$$
+y-1 = \frac{dy}{dx}(1,1)(x-1) \Leftrightarrow y= 2-x,
+$$
+y la ecuación de la recta normal es
+$$
+y-1 = -\frac{1}{dy/dx}(1,1)(x-1) \Leftrightarrow y= x,
+$$
+mientras que la ecuación de la recta tangente en el punto $(1,2)$ es $$
+y-2 = \frac{dy}{dx}(1,2)(x-1) \Leftrightarrow y= 4x-2,
+$$
+y la ecuación de la recta normal es
+$$
+y-2 = -\frac{1}{dy/dx}(1,2)(x-1) \Leftrightarrow y=\frac{9-x}{4}.
+$$
+
+Por otro lado, para calcular los extremos relativos, primero calculamos los puntos críticos, que son los que anulan la primera derivada:
+$$
+\frac{dy}{dx}=\frac{3y-2x}{2y-3x}=0 \Leftrightarrow 3y-2x=0 \Leftrightarrow y=2x/3.
+$$
+Pero además deben pertenecer a la curva de la función, y por tanto deben satisfacer la ecuación de la función:
+$$
+x^{2}+(2x/3)^{2}=3x(2x/3)-1 \Leftrightarrow x^{2}+4x^{2}/9 = 2x^{2}-1 \Leftrightarrow x^{2}=9/5 \Leftrightarrow x=\pm 3/\sqrt{5}.
+$$
+Así pues, existen dos puntos críticos que son el $(3/\sqrt{5},2/\sqrt{5})$ y $(-3/\sqrt{5},-2/\sqrt{5})$. Para ver si son puntos de máximo o mínimo relativos, necesitamos calcular la segunda derivada en dichos puntos:
+$$
+\frac{d^{2}y}{dx^{2}}= \frac{d}{dx}\left(\frac{3y-2x}{2y-3x}\right) = \frac{(3\frac{dy}{dx}-2)(2y-3x)-(2\frac{dy}{dx}-3)(3y-2x)}{(2y-3x)^{2}}.
+$$
+En el punto, $(3/\sqrt{5},2/\sqrt{5})$ la segunda derivada vale
+$$
+\frac{d^{2}y}{dx^{2}}(3/\sqrt{5},2/\sqrt{5})=
+\frac{(3\cdot 0-2)(2\frac{2}{\sqrt{5}}-3\frac{3}{\sqrt{5}})-(2\cdot 0-3)(3\frac{2}{\sqrt{5}}-2\frac{3}{\sqrt{5}})}{(2\frac{2}{\sqrt{5}}-3\frac{3}{\sqrt{5}})^{2}} = 2\sqrt{5},
+$$
+que al ser positiva, indica que el punto $(3/\sqrt{5},2/\sqrt{5})$ es un punto de mínimo relativo.
+
+En el punto, $(-3/\sqrt{5},-2/\sqrt{5})$ la segunda derivada vale
+$$
+\frac{d^{2}y}{dx^{2}}(-3/\sqrt{5},-2/\sqrt{5})=
+\frac{(3\cdot 0-2)(2\frac{-2}{\sqrt{5}}-3\frac{-3}{\sqrt{5}})-(2\cdot 0-3)(3\frac{-2}{\sqrt{5}}-2\frac{-3}{\sqrt{5}})}{(2\frac{-2}{\sqrt{5}}-3\frac{--3}{\sqrt{5}})^{2}} = -2\sqrt{5},
+$$
+que al ser negativa, indica que el punto $(-3/\sqrt{5},-2/\sqrt{5})$ es un punto de máximo relativo.
+
+:::
+-->
+<div id="exr-derivada-implicita-5" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 6.36 </strong></span>Dada la curva <span class="math inline">\(x^2-xy+y^2=3\)</span>,</p>
+<ol type="a">
+<li>Calcular los posibles extremos relativos de <span class="math inline">\(y\)</span>, considerando <span class="math inline">\(y\)</span> como función implícita de <span class="math inline">\(x\)</span>. ¿En qué puntos se alcanzan dichos valores?</li>
+<li>Analizar si lo puntos anteriores son máximos o mínimos haciendo uso de la derivada segunda.</li>
+</ol>
+</div>
+<!--
+:::{.callout-tip collapse="true"}
+## Solución
+a. Derivamos implícitamente la ecuación
+$$
+\frac{d}{dx}(x^2-xy+y^2)=\frac{d}{dx}3=0
+$$
+Derivando el lado izquierdo tenemos
+\begin{align*}
+\frac{d}{dx}(x^2-xy+y^2)&=
+\frac{d}{dx}(x^2)-\frac{d}{dx}(xy)+\frac{d}{dx}(y^2)=
+2x-(\frac{dx}{dx}y+x\frac{dy}{dx})+2y\frac{dy}{dx}=\\
+&=2x-y-x\frac{dy}{dx}+2y\frac{dy}{dx}
+=2x-y+(2y-x)\frac{dy}{dx}=0
+\end{align*}
+Los posibles extremos serán los puntos donde se anule la derivada, es decir, $\dfrac{dy}{dx}=0$. Sustituyendo en la ecuación anterior tenemos
+$$
+2x-y+(2y-x)\cdot 0= 2x-y=0 \Leftrightarrow y=2x.
+$$
+Y sustituyendo ahora en la ecuación de la función tenemos
+$$
+x^2-x\cdot 2x+(2x)^2=3 \Leftrightarrow x^2-2x^2+4x^2=3 \Leftrightarrow 3x^2=3 \Leftrightarrow x=\pm1.
+$$
+Por tanto, los posibles puntos de extremo serán (1,2) y (-1,-2).
+
+a. Para ver si los puntos anteriores son efectivamente extremos, calculamos la derivada segunda en dichos puntos. 
+\begin{align*}
+\frac{d^2}{dx^2}(x^2-xy+y^2)&=
+\frac{d}{dx}\left(\frac{d}{dx}(x^2-xy+y^2)\right)=\\
+&=\frac{d}{dx}\left(2x-y+(2y-x)\frac{dy}{dx}\right)=\\
+&=\frac{d}{dx}(2x)-\frac{d}{dx}y+\left(\frac{d}{dx}(2y-x)\frac{dy}{dx}+(2y-x)\frac{d}{dx}\frac{dy}{dx}\right)=\\
+&=2-\frac{dy}{dx}+\left(2\frac{dy}{dx}-\frac{dx}{dx}\right)\frac{dy}{dx}+(2y-x)\frac{d^2y}{dx^2}=\\
+&= 2-\frac{dy}{dx}+2\frac{d^2y}{dx^2}-\frac{dy}{dx}+(2y-x)\frac{d^2y}{dx^2}=
+2-2\frac{dy}{dx}+(2y-x+2)\frac{d^2y}{dx^2}=0
+\end{align*}
+Para el primer punto tenemos que sustituir $x=1$, $y=2$ y $\dfrac{dy}{dx}=0$, y queda
+$$
+2-2\cdot 0+(2\cdot 2-1+2)\frac{d^2y}{dx^2}=0 \Leftrightarrow 2+5\frac{d^2y}{dx^2}=0 \Leftrightarrow \frac{d^2y}{dx^2}=\frac{-2}{5},
+$$
+que al ser negativo indica que el en el punto $(1,2)$ hay un máximo.
+
+Para el segundo punto tenemos que sustituir $x=-1$, $y=-2$ y $\dfrac{dy}{dx}=0$, y queda
+$$
+2-2\cdot 0+(2\cdot (-2)-(-1)1+2)\frac{d^2y}{dx^2}=0 \Leftrightarrow 2-\frac{d^2y}{dx^2}=0 \Leftrightarrow \frac{d^2y}{dx^2}=2,
+$$
+que al ser positivo indica que el en el punto $(-1,-2)$ hay un mínimo.
+:::
+-->
+<div id="exr-taylor-1" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 6.37 </strong></span>Dada la función <span class="math inline">\(f(x)=\operatorname{sen}(x)\)</span>, se pide:</p>
+<ol type="a">
+<li>Obtener el polinomio de Taylor de tercer grado de <span class="math inline">\(f\)</span> en el punto <span class="math inline">\(x=\pi/6\)</span> y usarlo para aproximar <span class="math inline">\(\operatorname{sen}(1/2)\)</span> dando una cota del error cometido.</li>
+<li>Dar una aproximación de <span class="math inline">\(\operatorname{sen}(1/2)\)</span> usando un el polinomio de Taylor de quinto grado en el punto <span class="math inline">\(x=0\)</span>, acotando el error cometido.</li>
+</ol>
+</div>
+<!--
+:::{.callout-tip collapse="true"}
+## Solución
+a. $P^3_{f,\pi/6}(x) = \frac{1}{2}+\frac{\sqrt{3}}{2}(x-\pi/6)-\frac{1}{4}(x-\pi/6)^2-\frac{\sqrt{3}}{12}(x-\pi/6)^3$.\\
+$\sen 1/2 \approx P^3_{f,\pi/6}(1/2) = 0.4794255322$.\\
+$|R^3_{f,\pi/6}(1/2)|\leq 6.46\cdot 10^{-9}$.
+a. $P^5_{f,0}(x) = x -\frac{1}{6} x^3 + \frac{1}{120}x^5$.\\
+$\sen 1/2 \approx P^5_{f,0}(1/2) = 0.4794270833$.\\
+$|R^5_{f,0}(1/2)|\leq 2.170\cdot 10^{-5}$.
+:::
+-->
+<div id="exr-taylor-2" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 6.38 </strong></span>Calcular el polinomio de Maclaurin de tercer grado para la función <span class="math inline">\(f(x)=\operatorname{arcsen}(x)\)</span>.</p>
+</div>
+<!--
+:::{.callout-tip collapse="true"}
+## Solución
+$P^3_{f,0}(x) = x+\frac{1}{6}x^3$.
+:::
+-->
+<div id="exr-taylor-3" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 6.39 </strong></span>Calcular <span class="math inline">\(\cos(1)\)</span> con un error menor que <span class="math inline">\(10^{-7}\)</span> usando aproximaciones de Taylor.</p>
+</div>
+<!--
+:::{.callout-tip collapse="true"}
+## Solución
+
+:::
+-->
+<div id="exr-taylor-4" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 6.40 </strong></span>Obtener polinomio de Maclaurin de grado 3 de las funciones <span class="math inline">\(\operatorname{sen}(x)\)</span> y <span class="math inline">\(\operatorname{tg}(x)\)</span>, y utilizar los polinomios anteriores para calcular <span class="math display">\[
+\lim_{x\rightarrow 0}\frac{\operatorname{tg}(x)-x}{x-\operatorname{sen}(x)}
+\]</span></p>
+</div>
+<!--
+:::{.callout-tip collapse="true"}
+## Solución
+La formula general para calcular el polinomio de Maclaurin de grado 3 de una función $f(x)$ es:
+$$
+P_{0}^{3}(x)=f(0)+f^{\prime }(0)x+\frac{f^{\prime \prime }(0)}{2!}x^{2}+\frac{f^{\prime \prime \prime }(0)}{3!}x^{3}.
+$$
+
+Consideremos, en primer lugar, la función $\sen x$, y calculemos sus tres primeras derivadas en 0:
+$$
+\begin{array}{lll}
+f(x)=\sen x &  & f(0)=\sen 0=0, \\
+f^{\prime }(x)=\cos x &  & f^{\prime }(0)=\cos 0=1, \\
+f^{\prime \prime }(x)=-\sen x &  & f^{\prime \prime }(0)=-\sen0=0, \\
+f^{\prime \prime \prime }(x)=-\cos x &  & f^{\prime \prime \prime }(0)=-\cos 0=-1.
+\end{array}
+$$
+Sustituyendo en la fórmula de arriba, llegamos al primer polinomio que buscamos:
+$$
+P_{0}^{3}(x)=0+1\cdot x+\frac{0}{2!}x^{2}+\frac{-1}{3!}x^{3}=x-\frac{x^{3}}{6}.
+$$
+
+Consideremos ahora la función $\tg x$ y calculemos sus tres primeras derivadas en 0:
+$$
+\begin{array}{lll}
+g(x)=\tg x &  & g(0)=\tg 0=0 \\
+g^{\prime }(x)=1+\tg^{2} x &  & g^{\prime }(0)=1+\tg^{2} 0=1 \\
+g^{\prime \prime }(x)= 2\tg x+2\tg ^{3}x &  & g^{\prime \prime}(0)= 2\tg 0+2\tg ^{3}0=0 \\
+g^{\prime \prime \prime }(x)=2+ 8\tg ^{2}x+6\tg ^{4}x &  & g^{\prime \prime \prime }(0)= 2+ 8\tg ^{2}0+6\tg ^{4}0=2
+\end{array}
+$$
+Sustituyendo de nuevo en la fórmula de arriba, pero utilizando esta vez $g(x)$ en lugar de $f(x)$, llegamos al otro polinomio que buscamos:
+$$
+Q_{0}^{3}(x)=0+1\cdot x+\frac{0}{2!}x^{2}+\frac{2}{3!}x^{3}=x+\frac{x^{3}}{3}
+$$
+
+Finalmente, para calcular ahora el límite que nos piden, podemos sustituir $\sen x$ por $P_{0}^{3}(x)$ y $\tg x$ por $Q_{0}^{3}(x)$, teniendo en cuenta dichos polinomios se comportan de igual forma que las correspondientes funciones en un entorno del 0. Así pues, tenemos:
+$$
+\lim_{x\rightarrow 0}\frac{\tg x-x}{x-\sen x} = \lim_{x\rightarrow 0}\frac{Q_{0}^{3}(x)-x}{x-P_{0}^{3}(x)} = \lim_{x\rightarrow 0}\frac{x+\frac{x^{3}}{3}-x}{x-x+\frac{x^{3}}{6}} = \lim_{x\rightarrow 0}\frac{\frac{x^{3}}{3}}{\frac{x^{3}}{6}} = \lim_{x\rightarrow 0}\frac{6}{3}=2.
+$$
+:::
+-->
+<div id="exr-taylor-5" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 6.41 </strong></span>La función <span class="math inline">\(C(t)\)</span> da la concentración (en mg/dl) de un fármaco en el torrente sanguíneo en función del tiempo (en horas): <span class="math display">\[
+C(t) = \frac{1}{{1 + e^{-2t}}}
+\]</span></p>
+<ol type="a">
+<li>Calcular el polinomio de Maclaurin de orden 3.</li>
+<li>Utilizando el polinomio anterior, calcular aproximadamente la concentración del fármaco transcurridos 15 minutos.</li>
+</ol>
+</div>
+<!--
+:::{.callout-tip collapse="true"}
+## Solución
+a.
+La fórmula del polinomio de Maclaurin de orden 3 para la función $C(t)$ es:
+\begin{equation}
+\label{e:Maclaurin}
+P_{C,0}^3(t)=C(0)+\frac{dC}{dt}(0)t+\frac{d^2C}{dt^2}(0)\frac{t^2}{2!}+\frac{d^3C}{dt^3}(0)\frac{t^3}{3!}
+\end{equation}
+Necesitamos calcular las tres primeras derivadas:
+\begin{align*}
+\frac{dC}{dt} &= \frac{2e^{-2t}}{(1+e^{-2t})^2},\\
+\frac{d^2C}{dt^2} &=
+\frac{\frac{d}{dt}(2e^{-2t})(1+e^{-2t})^2-2e^{-2t}\frac{d}{dt}(1+e^{-2t})^2}{(1+e^{-2t})^4} =\\
+&= \frac{-4e^{-2t}(1+e^{-2t})^2- 2e^{-2t}2(1+e^{-2t})(-2e^{-2t})}{(1+e^{-2t})^4}
+= \frac{-4e^{-2t}+4e^{-4t}}{(1+e^{-2t})^3},\\
+\frac{d^3C}{dt^3}
+&=
+\frac{\frac{d}{dt}(-4e^{-2t}1+4e^{-4t})(1+e^{-2t})^3-(-4e^{-2t}+4e^{-4t})\frac{d}{dt}(1+e^{-2t})^3}{(1+e^{-2t})^6}=\\
+&=
+\frac{(8e^{-2t}-16e^{-4t})(1+e^{-2t})^3-(-4e^{-2t}+4e^{-4t})3(1+e^{-2t})^2(-2e^{-2t})}{(1+e^{-2t})^6}=\\
+&=
+\frac{(8e^{-2t}-16e^{-4t})(1+e^{-2t})-(-4e^{-2t}+4e^{-4t})(-6e^{-2t})}{(1+e^{-2t})^4}=\\
+&=
+\frac{(8e^{-2t}-8e^{-4t}-16e^{-6t})-(24e^{-4t}-24e^{-6t})}{(1+e^{-2t})^4}=\\
+&=
+\frac{8e^{-2t}-32e^{-4t}+8e^{-6t}}{(1+e^{-2t})^4}.
+\end{align*}
+Sustituyendo para $t=0$ tenemos:
+\begin{align*}
+C(0)&= \frac{1}{1+e^{-2\cdot 0}}=\frac{1}{2},\\
+\frac{dC}{dt}(0) &= \frac{2e^{-2\cdot 0}}{(1+e^{-2\cdot 0})^2} = \frac{2}{2^2}=\frac{1}{2},\\
+\frac{d^2C}{dt^2}(0) &= \frac{-4e^{-2\cdot 0}+4e^{-4\cdot 0}}{(1+e^{-2\cdot
+0})^3} = \frac{-4+4}{2^3}= 0,\\
+\frac{d^3C}{dt^3}(0)&=\frac{(8e^{-2\cdot 0}-32e^{-4\cdot 0}+8e^{-6\cdot 0})}{(1+e^{-2\cdot 0})^4}=\frac{8-32+8}{16}=-1.
+\end{align*}
+
+Y por último, sustituyendo en la ecuación \ref{e:Maclaurin} llegamos al polinomio
+$$
+P_{C,0}^3(t)=\frac{1}{2}+\frac{1}{2}t+0\frac{t^2}{2!}-1\frac{t^3}{3!}=\frac{1}{2}+\frac{1}{2}t-\frac{1}{6}t^3.
+$$
+
+a. La concentración del fármaco transcurridos 15 minutos ($0.25$ horas) es aproximadamente
+$$
+C(0.25)\approx P_{C,0}^3(0.25)= \frac{1}{2}+\frac{1}{2}0.25-\frac{1}{6}0.25^3= 0.6223958333 \mbox{ mg/dl}.
+$$
+
+:::
+-->
 
 
 

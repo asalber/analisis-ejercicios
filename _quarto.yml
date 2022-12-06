@@ -1,6 +1,9 @@
 project:
   type: book
   output-dir: "docs"
+  preview:
+    port: 1313
+    browser: false
 
 website:
   favicon: "img/logos/favicon.ico"
