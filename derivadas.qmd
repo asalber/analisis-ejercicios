@@ -608,7 +608,7 @@ En muchos vertebrados existe una relación entre la longitud del cráneo y la lo
 $$
 C(x) = a E(x)^b
 $$
-donde $a$ es una constante de proporcionalidad y $b$ es otra constante que suele estar entre 0 y 1.
+donde $a$ y $b$ son constantes.
 Esta ecuación se conoce como _ecuación alométrica_.
 ¿Cómo se relaciona la tasa de crecimiento de la espina dorsal con la del cráneo?
 ¿Para qué valores de $b$ es la función $C$ creciente, pero de forma que la relación $C/E$ disminuye al aumentar $E$?
@@ -620,6 +620,7 @@ La siguiente figura muestra la gráfica de la derivada de una función $f$. Estu
 
 :::{style="text-align:center;"}
 ![](./img/derivadas/grafica-ext-1.png)
+:::
 :::
 
 :::{#exr-extremos-2}
@@ -650,7 +651,7 @@ Un naufrago se encuentra en una isla situada en un plano con coordenadas $(2,0)$
 :::
 
 :::{#exr-extremos-6}
-Un hotel alquila habitaciones por un precio entre 50€ y 100€ diarios. Se ha observado que el número de habitaciones que alquilan depende del precio $x$ según la función $h(x)=300-3x$. ¿Qué precio se debe cobrar por habitación para obtener el máximo beneficio?
+Un hotel alquila habitaciones por un precio entre 40€ y 100€ diarios. Se ha observado que el número de habitaciones que alquilan depende del precio $x$ según la función $h(x)=300-3x$. ¿Qué precio se debe cobrar por habitación para obtener el máximo beneficio?
 :::
 
 :::{#exr-extremos-7}
@@ -666,7 +667,7 @@ Calcular la edad óptima de reproducción, es decir, el valor que maximice $v$, 
 :::
 
 :::{#exr-extremos-8}
-Se ha diseñado un envoltorio cilíndrico para unas cápsulas. Si el contenido de las cápsulas debe ser de $0.15$ ml, hallar las dimensiones del cilindro para que el material empleado en el envoltorio sea mínimo.
+Un lata de refresco cilíndrica contiene $33$ cl. Hallar las dimensiones de la lata para que la cantidad de aluminio utilizada en su creación sea mínima.
 :::
 
 :::{#exr-extremos-9}
@@ -688,7 +689,7 @@ $$
 c'(x)=\frac{-8x^2+2400x-144000}{x^4-240x^3+14400 x^2}
 $$
 
-y resolviendo la ecuación $-8x^2+2400x-144000=0$ se obtienen los puntos críticos $x=82.92$ y $x=217.08$. Como el segundo punto crítico queda fuera del rango de velocidades de 50 a 120, estudiaremos solo el primero. Usando el criterio de la primera derivada, estudiamos el signo de la primera derivada a la izquierda y a la derecha del punto crítico, por ejemplo $c'(80)=-1/3200<0$ y $c'(83)=88/9431041>0$, por lo que $c$ tiene un mínimo en $x=82.92$, es decir, la velocidad mínima a la que debe viajar es $82.92$ km/h, y el precio por kilómetro a esa velocidad será $0.17$ €/l.
+y resolviendo la ecuación $-8x^2+2400x-144000=0$ se obtienen los puntos críticos $x=82.92$ y $x=217.08$. Como el segundo punto crítico queda fuera del rango de velocidades de 50 a 120, estudiaremos solo el primero. Usando el criterio de la primera derivada, estudiamos el signo de la primera derivada a la izquierda y a la derecha del punto crítico, por ejemplo $c'(80)=-1/3200<0$ y $c'(83)=88/9431041>0$, por lo que $c$ tiene un mínimo en $x=82.92$, es decir, la velocidad a la que debe viajar para que el coste sea mínimo es $82.92$ km/h, y el precio por kilómetro a esa velocidad será $0.17$ €/l.
 :::
 -->
 
