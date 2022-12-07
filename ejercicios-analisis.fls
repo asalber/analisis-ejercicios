@@ -1400,3 +1400,16 @@ INPUT /usr/local/texlive/2022/texmf-dist/tex/latex/lm/ts1lmr.fd
 INPUT /usr/local/texlive/2022/texmf-dist/tex/latex/lm/ts1lmr.fd
 INPUT /usr/local/texlive/2022/texmf-dist/tex/latex/lm/ts1lmr.fd
 INPUT /home/alf/texmf/fonts/tfm/public/lm/ts1-lmr10.tfm
+INPUT ././img/sucesiones/numero-aureo.png
+INPUT ././img/sucesiones/numero-aureo.png
+INPUT ././img/sucesiones/numero-aureo.png
+INPUT ././img/sucesiones/numero-aureo.png
+INPUT ././img/sucesiones/numero-aureo.png
+INPUT /home/alf/texmf/fonts/tfm/public/lm/ec-lmr10.tfm
+INPUT /home/alf/texmf/fonts/tfm/public/lm/ec-lmr8.tfm
+INPUT /home/alf/texmf/fonts/tfm/public/lm/rm-lmr5.tfm
+INPUT /home/alf/texmf/fonts/tfm/public/lm/lmmi5.tfm
+INPUT /home/alf/texmf/fonts/tfm/public/lm/lmsy5.tfm
+INPUT /home/alf/texmf/fonts/tfm/public/amsfonts/symbols/msam5.tfm
+INPUT /home/alf/texmf/fonts/tfm/public/amsfonts/symbols/msbm5.tfm
+INPUT /home/alf/texmf/fonts/tfm/public/lm/ec-lmr6.tfm
