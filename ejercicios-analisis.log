@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.9.20)  7 DEC 2022 10:11
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.9.20)  7 DEC 2022 18:39
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1147,7 +1147,7 @@ File: ././img/derivadas/grafica-ext-1.png Graphic file (type png)
 <use ././img/derivadas/grafica-ext-1.png>
 Package pdftex.def Info: ././img/derivadas/grafica-ext-1.png  used on input line 4414.
 (pdftex.def)             Requested size: 223.58815pt x 188.20552pt.
- [69] [70 <././img/derivadas/grafica-ext-1.png (PNG copy)>] [71] [72] [73] [74] (./ejercicios-analisis.aux)
+ [69] [70 <././img/derivadas/grafica-ext-1.png (PNG copy)>] [71] [72] [73] [74] [75] [76] [77] (./ejercicios-analisis.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -1156,18 +1156,18 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  ) 
 Here is how much of TeX's memory you used:
- 38700 strings out of 476932
- 786383 string characters out of 5824858
+ 38726 strings out of 476932
+ 786733 string characters out of 5824858
  1302999 words of memory out of 5000000
- 58374 multiletter control sequences out of 15000+600000
- 550025 words of font info for 213 fonts, out of 8000000 for 9000
+ 58383 multiletter control sequences out of 15000+600000
+ 550202 words of font info for 215 fonts, out of 8000000 for 9000
  62 hyphenation exceptions out of 8191
  122i,14n,120p,10690b,1066s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/home/alf/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/home/alf/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/home/alf/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/home/alf/texmf/fonts/enc/dvips/lm/lm-ts1.enc}{/home/alf/texmf/fonts/enc/dvips/lm/lm-mathex.enc}{/home/alf/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/home/alf/texmf/fonts/enc/dvips/fontawesome5/fa5free2.enc}</home/alf/texmf/fonts/type1/public/fontawesome5/FontAwesome5Free-Solid.pfb></home/alf/texmf/fonts/type1/public/lm/lmbx10.pfb></home/alf/texmf/fonts/type1/public/lm/lmex10.pfb></home/alf/texmf/fonts/type1/public/lm/lmmi10.pfb></home/alf/texmf/fonts/type1/public/lm/lmmi6.pfb></home/alf/texmf/fonts/type1/public/lm/lmmi8.pfb></home/alf/texmf/fonts/type1/public/lm/lmr10.pfb></home/alf/texmf/fonts/type1/public/lm/lmr6.pfb></home/alf/texmf/fonts/type1/public/lm/lmr8.pfb></home/alf/texmf/fonts/type1/public/lm/lmri10.pfb></home/alf/texmf/fonts/type1/public/lm/lmss12.pfb></home/alf/texmf/fonts/type1/public/lm/lmssbx10.pfb></home/alf/texmf/fonts/type1/public/lm/lmsy10.pfb></home/alf/texmf/fonts/type1/public/lm/lmsy6.pfb></home/alf/texmf/fonts/type1/public/lm/lmsy8.pfb></home/alf/texmf/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on ejercicios-analisis.pdf (74 pages, 531922 bytes).
+Output written on ejercicios-analisis.pdf (77 pages, 543893 bytes).
 PDF statistics:
- 1124 PDF objects out of 1200 (max. 8388607)
- 998 compressed objects within 10 object streams
- 597 named destinations out of 1000 (max. 500000)
+ 1149 PDF objects out of 1200 (max. 8388607)
+ 1019 compressed objects within 11 object streams
+ 610 named destinations out of 1000 (max. 500000)
  45145 words of extra memory for PDF output out of 51595 (max. 10000000)
 

@@ -910,24 +910,30 @@ v(x) = \frac{\ln(p(x)h(x))}{x},
 <div id="exr-extremos-9" class="theorem exercise">
 <p><span class="theorem-title"><strong>Ejercicio 6.29 </strong></span>La distancia en kilómetros que recorre un coche de alquiler con 1 litro de gasolina depende de la velocidad a la que circule según la función <span class="math inline">\(d(x)=120-x\)</span> para <span class="math inline">\(x\in(50,120)\)</span>. Si el coste de la gasolina es de <span class="math inline">\(2\)</span> €/l y el coste del alquiler es de <span class="math inline">\(10\)</span> €/h, ¿a qué velocidad debe circular para que el coste del trayecto sea mínimo? ¿Cuál será el coste por kilómetro si circula a esa velocidad?</p>
 </div>
-<!--
-:::{.callout-tip collapse="true"}
-## Solución
-Como la distancia recorrida a una velocidad $x$ es $d(x)=120-x$ y, como la velocidad es $x=\frac{d(x)}{t}$, el tiempo necesario para recorrer esa distancia es $\frac{d(x)}{x}$, de manera que el coste del alquiler para recorrer esa distancia es $\frac{d(x)}{x}10$. A esto hay que sumar el precio del litro de gasolina necesario para recorrer esa distancia, de manera que el coste de recorrer esa distancia es $\frac{d(x)}{x}10+2$. Por tanto, el coste por kilómetro para una velocidad $x$ viene dado por la función 
-
-$$
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-19-contents" aria-controls="callout-19" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-19" class="callout-19-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Como la distancia recorrida a una velocidad <span class="math inline">\(x\)</span> es <span class="math inline">\(d(x)=120-x\)</span> y, como la velocidad es <span class="math inline">\(x=\frac{d(x)}{t}\)</span>, el tiempo necesario para recorrer esa distancia es <span class="math inline">\(\frac{d(x)}{x}\)</span>, de manera que el coste del alquiler para recorrer esa distancia es <span class="math inline">\(\frac{d(x)}{x}10\)</span>. A esto hay que sumar el precio del litro de gasolina necesario para recorrer esa distancia, de manera que el coste de recorrer esa distancia es <span class="math inline">\(\frac{d(x)}{x}10+2\)</span>. Por tanto, el coste por kilómetro para una velocidad <span class="math inline">\(x\)</span> viene dado por la función</p>
+<p><span class="math display">\[
 c(x)=\frac{\frac{d(x)}{x}10+2}{120-x} = \frac{8x-1200}{x^2-120x}
-$$
-
-Para determinar el mínimo de la función calculamos los puntos críticos. La derivada vale
-
-$$
+\]</span></p>
+<p>Para determinar el mínimo de la función calculamos los puntos críticos. La derivada vale</p>
+<p><span class="math display">\[
 c'(x)=\frac{-8x^2+2400x-144000}{x^4-240x^3+14400 x^2}
-$$
-
-y resolviendo la ecuación $-8x^2+2400x-144000=0$ se obtienen los puntos críticos $x=82.92$ y $x=217.08$. Como el segundo punto crítico queda fuera del rango de velocidades de 50 a 120, estudiaremos solo el primero. Usando el criterio de la primera derivada, estudiamos el signo de la primera derivada a la izquierda y a la derecha del punto crítico, por ejemplo $c'(80)=-1/3200<0$ y $c'(83)=88/9431041>0$, por lo que $c$ tiene un mínimo en $x=82.92$, es decir, la velocidad a la que debe viajar para que el coste sea mínimo es $82.92$ km/h, y el precio por kilómetro a esa velocidad será $0.17$ €/l.
-:::
--->
+\]</span></p>
+<p>y resolviendo la ecuación <span class="math inline">\(-8x^2+2400x-144000=0\)</span> se obtienen los puntos críticos <span class="math inline">\(x=82.92\)</span> y <span class="math inline">\(x=217.08\)</span>. Como el segundo punto crítico queda fuera del rango de velocidades de 50 a 120, estudiaremos solo el primero. Usando el criterio de la primera derivada, estudiamos el signo de la primera derivada a la izquierda y a la derecha del punto crítico, por ejemplo <span class="math inline">\(c'(80)=-1/3200&lt;0\)</span> y <span class="math inline">\(c'(83)=88/9431041&gt;0\)</span>, por lo que <span class="math inline">\(c\)</span> tiene un mínimo en <span class="math inline">\(x=82.92\)</span>, es decir, la velocidad a la que debe viajar para que el coste sea mínimo es <span class="math inline">\(82.92\)</span> km/h, y el precio por kilómetro a esa velocidad será <span class="math inline">\(0.17\)</span> €/l.</p>
+</div>
+</div>
+</div>
 <div id="exr-teorema-valor-medio" class="theorem exercise">
 <p><span class="theorem-title"><strong>Ejercicio 6.30 </strong></span>En un tramo de carretera limitado a una velocidad máxima de <span class="math inline">\(70\)</span> km/h existe un semáforo de tramo. Según el registro del semáforo, un vehículo pasa por el comienzo del tramo, situado en el kilómetro 12 a las 8:00 y pasa por el final del tramo, situado en el kilómetro <span class="math inline">\(14\)</span>, un minuto y medio después. ¿Será sancionado el vehículo por exceso de velocidad?</p>
 </div>
@@ -940,15 +946,134 @@ Nota: La aceleración es la tasa de variación instantánea de la velocidad.</p>
 <div id="exr-cinematica-2" class="theorem exercise">
 <p><span class="theorem-title"><strong>Ejercicio 6.32 </strong></span>El espacio recorrido por un objeto que se lanza verticalmente hacia arriba, sin tener en cuenta la resistencia del aire, viene dado por la ecuación <span class="math display">\[
 e(t) =v_0t-\frac{1}{2}gt^2
-\]</span> donde <span class="math inline">\(v_0\)</span> es la velocidad inicial con que se lanza el objeto, <span class="math inline">\(g=9.81\)</span> m/s<span class="math inline">\(^2\)</span> es la constante gravitatoria de la Tierra y <span class="math inline">\(t\)</span> es el tiempo transcurrido desde que el objeto se lanza.</p>
+\]</span> donde <span class="math inline">\(v_0\)</span> es la velocidad inicial con que se lanza el objeto, <span class="math inline">\(g=9.81\)</span> m/s<span class="math inline">\(^2\)</span> es la aceleración de la gravedad en la superfice terrrestre y <span class="math inline">\(t\)</span> es el tiempo transcurrido desde que el objeto se lanza.</p>
 <ol type="a">
 <li>Calcular la velocidad y la aceleración en cualquier instante.</li>
 <li>Si el objeto se lanza inicialmente a 50 km/h, ¿cuál será la altura máxima que alcanzará el objeto? ¿Cuál será su velocidad en ese momento?</li>
 <li>¿En qué instante volverá a tocar la tierra el objeto? ¿Con qué velocidad?</li>
 </ol>
 </div>
+<div id="exr-trayectorias-1" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 6.33 </strong></span>Una partícula se mueve a lo largo de la curva</p>
+<p><span class="math display">\[
+\begin{cases}
+x = \operatorname{tg}(t),  \\
+y = t^2-2t+3. \\
+\end{cases}
+\]</span></p>
+<p>donde <span class="math inline">\(x\)</span> e <span class="math inline">\(y\)</span> están medidos en metros y el tiempo <span class="math inline">\(t\)</span> en segundos.</p>
+<ol type="a">
+<li>Hallar <span class="math inline">\(\frac{dy}{dx}\)</span> en <span class="math inline">\(t=0\)</span>.</li>
+<li>Hallar la tangente a la trayectoria en el punto <span class="math inline">\((0,3)\)</span>.</li>
+</ol>
+</div>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-20-contents" aria-controls="callout-20" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-20" class="callout-20-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="a">
+<li><p>Aplicando la regla de la cadena se tiene que</p>
+<p><span class="math display">\[
+\dfrac{dy}{dt} = \dfrac{dy}{dx}\dfrac{dx}{dt},
+\]</span></p>
+<p>y en consecuencia,</p>
+<p><span class="math display">\[
+\dfrac{dy}{dx}(t) = \frac{dy/dt}{dx/dt}(t)=\frac{2t-2}{1+\operatorname{tg}(t)^2}.
+\]</span></p>
+<p>En el punto <span class="math inline">\(t=0\)</span> tendremos</p>
+<p><span class="math display">\[
+\dfrac{dy}{dx}(0) = \frac{-2}{1+\operatorname{tg}(0)^2} = -2.
+\]</span></p></li>
+<li><p>La ecuación de la recta tangente a la trayectoria en el punto <span class="math inline">\((x(t_0),y(t_0))\)</span> correspondiente al instante <span class="math inline">\(t_0,\)</span> viene dada por la expresión</p>
+<p><span class="math display">\[
+y-y(t_0) = \dfrac{dy}{dx}(t_0)(x-x(t_0)).
+\]</span></p>
+<p>Como el punto <span class="math inline">\((0,3)\)</span> se alcanza precisamente en el instante <span class="math inline">\(t=0\)</span> tenemos que la ecuación de la recta tangente a la trayectoria en dicho instante es:</p>
+<p><span class="math display">\[
+y-y(0) = \dfrac{dy}{dx}(0)(x-x(0)),
+\]</span></p>
+<p>es decir,</p>
+<p><span class="math display">\[
+y-3 = -2(x-0),
+\]</span></p>
+<p>y simplificando obtenemos:</p>
+<p><span class="math display">\[
+y = 3-2x.
+\]</span></p></li>
+</ol>
+</div>
+</div>
+</div>
+<div id="exr-trayectorias-2" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 6.34 </strong></span>Las coordenadas paramétricas de un punto material lanzado bajo un ángulo respecto al horizonte son</p>
+<p><span class="math display">\[
+\begin{cases}
+x=v_0t, &amp; \\
+y=-\frac{1}{2}gt^2
+\end{cases}
+\]</span></p>
+<p>donde <span class="math inline">\(t\in \mathbb{R}^{+}\)</span> es el tiempo contado a partir del instante en que el punto llega a la posición más alta, <span class="math inline">\(v_0\)</span> es la velocidad horizontal en el instante <span class="math inline">\(t=0\)</span> y <span class="math inline">\(g=9.81\)</span> m<span class="math inline">\(^2\)</span>/s es la aceleración de la gravedad en la superficie terrestre. ¿En qué instante la magnitud de la velocidad horizontal será igual a la de la velocidad vertical? ¿Cuánto debería valer <span class="math inline">\(v_0\)</span> para que en dicho instante el punto haya recorrido 100 m horizontalmente? Calcular la ecuación de la recta tangente en dicho instante con el valor de <span class="math inline">\(v_0\)</span> calculado.</p>
+</div>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-21-contents" aria-controls="callout-21" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-21" class="callout-21-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>La velocidad horizontal es la derivada del espacio recorrido horizontalmente (componente <span class="math inline">\(x\)</span>) con respecto al tiempo, es decir,</p>
+<p><span class="math display">\[
+\frac{dx}{dt} = \frac{d}{dt}(v_0t)=v_0.
+\]</span></p>
+<p>Del mismo modo, la velocidad vertical es la derivada del espacio recorrido verticalmente (componente <span class="math inline">\(y\)</span>) en relación al tiempo,</p>
+<p><span class="math display">\[
+\frac{dy}{dt} = \frac{d}{dt}(-\frac{1}{2}gt^2)=-gt
+\]</span></p>
+<p>Para ver en qué instante ambas magnitudes serán iguales, las igualamos y resolvemos la ecuación:</p>
+<p><span class="math display">\[
+|\frac{dx}{dt}|=|\frac{dy}{dt}| \Leftrightarrow v_0 = gt \Leftrightarrow t=\frac{v_0}{g}=\frac{v_0}{9.81} s.
+\]</span></p>
+<p>Para que en dicho instante el punto haya recorrido 100 m horizontalmente, debe cumplirse que <span class="math inline">\(x(v_0/9.81)=100\)</span> m, de lo que se deduce:</p>
+<p><span class="math display">\[
+x(v_0/9.81)=v_0\frac{v_0}{9.81} = \frac{v_0^2}{9.81}=100 \Leftrightarrow v_0^2 = 981 \Leftrightarrow v_0 = +\sqrt{981}= 31.32 \mbox{ m/s}.
+\]</span></p>
+<p>Por tanto, el instance en cuestión es <span class="math inline">\(t=v_0/9.81= 31.32/9.81 = 3.19\)</span> s.</p>
+<p>Por último, la ecuación de la recta tangente en dicho instante, para el valor de <span class="math inline">\(v_0\)</span> calculado es:</p>
+<p><span class="math display">\[
+y = y(3.19) + \frac{dy}{dx}(3.19) (x-x(3.19))
+\]</span></p>
+<p>Ya hemos visto que <span class="math inline">\(x(3.19)=100\)</span>, y que en dicho instante la velocidad horizontal y vertical coinciden, de manera que</p>
+<p><span class="math display">\[
+\frac{dy}{dx}(3.19)=\frac{dy/dt}{dx/dt}=-1,
+\]</span></p>
+<p>de modo que sólo nos queda calcular el espacio vertical recorrido en dicho instante, que es</p>
+<p><span class="math display">\[
+y(3.19)=-\frac{1}{2}9.81\cdot 3.19^2= -49.91.
+\]</span></p>
+<p>Sustituyendo en la ecuación anterior llegamos a la recta tangente: <span class="math display">\[
+y = -49.91-(x-100) \Leftrightarrow y=-x+50.09.
+\]</span></p>
+</div>
+</div>
+</div>
+<div id="exr-trayectorias-3" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 6.35 </strong></span>La cantidad de árboles en un ecosistema depende del tiempo según la función <span class="math inline">\(a(t)=100\ln(t^2+1)\)</span>, y la cantidad de un determinado parásito de los árboles, también depende del tiempo según la función <span class="math inline">\(p(t) = \sqrt[3]{t^2+ 2}\)</span>. Calcular la tasa de variación instantánea del número de parásitos en relación al número de árboles, en el instante en que el número de parásitos es <span class="math inline">\(3\)</span>.</p>
+</div>
 <div id="exr-derivada-implicita-1" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 6.33 </strong></span>Dada la función <span class="math inline">\(xy+e^x-\log y=0\)</span>, calcular las ecuaciones de las rectas tangente y normal a ella en <span class="math inline">\(x=0\)</span>.</p>
+<p><span class="theorem-title"><strong>Ejercicio 6.36 </strong></span>Dada la función <span class="math inline">\(xy+e^x-\log y=0\)</span>, calcular las ecuaciones de las rectas tangente y normal a ella en <span class="math inline">\(x=0\)</span>.</p>
 </div>
 <!--
 :::{.callout-tip collapse="true"}
@@ -957,7 +1082,7 @@ Tangente: $y=(e^2+e)x+e$. Normal: $y=\frac{-x}{e^2+e}+e$.
 :::
 -->
 <div id="exr-derivada-implicita-2" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 6.34 </strong></span>Suponiendo que la temperatura, <span class="math inline">\(T\)</span> en grados centígrados, y el volumen, <span class="math inline">\(V\)</span> en metros cúbicos, de un gas real encerrado en un contenedor de volumen variable están relacionados mediante la siguiente ecuación:</p>
+<p><span class="theorem-title"><strong>Ejercicio 6.37 </strong></span>Suponiendo que la temperatura, <span class="math inline">\(T\)</span> en grados centígrados, y el volumen, <span class="math inline">\(V\)</span> en metros cúbicos, de un gas real encerrado en un contenedor de volumen variable están relacionados mediante la siguiente ecuación:</p>
 <p><span class="math display">\[
 T^2(V^2-\pi^2)-V\cos(TV) = 0.
 \]</span></p>
@@ -975,7 +1100,7 @@ a. $2T\frac{dT}{dP}(V^2-\pi^2)+T^2(2V\frac{dV}{dT})-\frac{dV}{dT}\cos(VT)-V(-\op
 :::
 -->
 <div id="exr-derivada-implicita-3" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 6.35 </strong></span>Un cuerpo se mueve en el plano a través de los puntos de coordenadas <span class="math inline">\((x,y)\)</span> relacionadas mediante la siguiente expresión: <span class="math display">\[
+<p><span class="theorem-title"><strong>Ejercicio 6.38 </strong></span>Un cuerpo se mueve en el plano a través de los puntos de coordenadas <span class="math inline">\((x,y)\)</span> relacionadas mediante la siguiente expresión: <span class="math display">\[
 2e^{xy} \operatorname{sen}(x) + y\cos(x) = 2.
 \]</span></p>
 <ol type="a">
@@ -1035,7 +1160,7 @@ $$
 :::
 -->
 <div id="exr-derivada-implicita-4" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 6.36 </strong></span>Hallar la ecuación de la recta tangente y normal a la curva <span class="math inline">\(x^2+y^2=3xy-1\)</span> en los puntos en que <span class="math inline">\(x=1\)</span>. Calcular también los extremos relativos y decir si son máximos o mínimos.</p>
+<p><span class="theorem-title"><strong>Ejercicio 6.39 </strong></span>Hallar la ecuación de la recta tangente y normal a la curva <span class="math inline">\(x^2+y^2=3xy-1\)</span> en los puntos en que <span class="math inline">\(x=1\)</span>. Calcular también los extremos relativos y decir si son máximos o mínimos.</p>
 </div>
 <!--
 :::{.callout-tip collapse="true"}
@@ -1107,7 +1232,7 @@ que al ser negativa, indica que el punto $(-3/\sqrt{5},-2/\sqrt{5})$ es un punto
 :::
 -->
 <div id="exr-derivada-implicita-5" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 6.37 </strong></span>Dada la curva <span class="math inline">\(x^2-xy+y^2=3\)</span>,</p>
+<p><span class="theorem-title"><strong>Ejercicio 6.40 </strong></span>Dada la curva <span class="math inline">\(x^2-xy+y^2=3\)</span>,</p>
 <ol type="a">
 <li>Calcular los posibles extremos relativos de <span class="math inline">\(y\)</span>, considerando <span class="math inline">\(y\)</span> como función implícita de <span class="math inline">\(x\)</span>. ¿En qué puntos se alcanzan dichos valores?</li>
 <li>Analizar si lo puntos anteriores son máximos o mínimos haciendo uso de la derivada segunda.</li>
@@ -1162,7 +1287,7 @@ que al ser positivo indica que el en el punto $(-1,-2)$ hay un mínimo.
 :::
 -->
 <div id="exr-taylor-1" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 6.38 </strong></span>Dada la función <span class="math inline">\(f(x)=\operatorname{sen}(x)\)</span>, se pide:</p>
+<p><span class="theorem-title"><strong>Ejercicio 6.41 </strong></span>Dada la función <span class="math inline">\(f(x)=\operatorname{sen}(x)\)</span>, se pide:</p>
 <ol type="a">
 <li>Obtener el polinomio de Taylor de tercer grado de <span class="math inline">\(f\)</span> en el punto <span class="math inline">\(x=\pi/6\)</span> y usarlo para aproximar <span class="math inline">\(\operatorname{sen}(1/2)\)</span> dando una cota del error cometido.</li>
 <li>Dar una aproximación de <span class="math inline">\(\operatorname{sen}(1/2)\)</span> usando un el polinomio de Taylor de quinto grado en el punto <span class="math inline">\(x=0\)</span>, acotando el error cometido.</li>
@@ -1180,7 +1305,7 @@ $|R^5_{f,0}(1/2)|\leq 2.170\cdot 10^{-5}$.
 :::
 -->
 <div id="exr-taylor-2" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 6.39 </strong></span>Calcular el polinomio de Maclaurin de tercer grado para la función <span class="math inline">\(f(x)=\operatorname{arcsen}(x)\)</span>.</p>
+<p><span class="theorem-title"><strong>Ejercicio 6.42 </strong></span>Calcular el polinomio de Maclaurin de tercer grado para la función <span class="math inline">\(f(x)=\operatorname{arcsen}(x)\)</span>.</p>
 </div>
 <!--
 :::{.callout-tip collapse="true"}
@@ -1189,7 +1314,7 @@ $P^3_{f,0}(x) = x+\frac{1}{6}x^3$.
 :::
 -->
 <div id="exr-taylor-3" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 6.40 </strong></span>Calcular <span class="math inline">\(\cos(1)\)</span> con un error menor que <span class="math inline">\(10^{-7}\)</span> usando aproximaciones de Taylor.</p>
+<p><span class="theorem-title"><strong>Ejercicio 6.43 </strong></span>Calcular <span class="math inline">\(\cos(1)\)</span> con un error menor que <span class="math inline">\(10^{-7}\)</span> usando aproximaciones de Taylor.</p>
 </div>
 <!--
 :::{.callout-tip collapse="true"}
@@ -1198,7 +1323,7 @@ $P^3_{f,0}(x) = x+\frac{1}{6}x^3$.
 :::
 -->
 <div id="exr-taylor-4" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 6.41 </strong></span>Obtener polinomio de Maclaurin de grado 3 de las funciones <span class="math inline">\(\operatorname{sen}(x)\)</span> y <span class="math inline">\(\operatorname{tg}(x)\)</span>, y utilizar los polinomios anteriores para calcular <span class="math display">\[
+<p><span class="theorem-title"><strong>Ejercicio 6.44 </strong></span>Obtener polinomio de Maclaurin de grado 3 de las funciones <span class="math inline">\(\operatorname{sen}(x)\)</span> y <span class="math inline">\(\operatorname{tg}(x)\)</span>, y utilizar los polinomios anteriores para calcular <span class="math display">\[
 \lim_{x\rightarrow 0}\frac{\operatorname{tg}(x)-x}{x-\operatorname{sen}(x)}
 \]</span></p>
 </div>
@@ -1224,13 +1349,13 @@ $$
 P_{0}^{3}(x)=0+1\cdot x+\frac{0}{2!}x^{2}+\frac{-1}{3!}x^{3}=x-\frac{x^{3}}{6}.
 $$
 
-Consideremos ahora la función $\tg x$ y calculemos sus tres primeras derivadas en 0:
+Consideremos ahora la función $\operatorname{tg}(x)$ y calculemos sus tres primeras derivadas en 0:
 $$
 \begin{array}{lll}
-g(x)=\tg x &  & g(0)=\tg 0=0 \\
-g^{\prime }(x)=1+\tg^{2} x &  & g^{\prime }(0)=1+\tg^{2} 0=1 \\
-g^{\prime \prime }(x)= 2\tg x+2\tg ^{3}x &  & g^{\prime \prime}(0)= 2\tg 0+2\tg ^{3}0=0 \\
-g^{\prime \prime \prime }(x)=2+ 8\tg ^{2}x+6\tg ^{4}x &  & g^{\prime \prime \prime }(0)= 2+ 8\tg ^{2}0+6\tg ^{4}0=2
+g(x)=\operatorname{tg}(x) &  & g(0)=\operatorname{tg}(0)=0 \\
+g^{\prime }(x)=1+\operatorname{tg}(x)^2 &  & g^{\prime }(0)=1+\operatorname{tg}(0)^2 0=1 \\
+g^{\prime \prime }(x)= 2\operatorname{tg}(x)+2\operatorname{tg}(x)^3 &  & g^{\prime \prime}(0)= 2\operatorname{tg}(0)+2\operatorname{tg}(0)^3=0 \\
+g^{\prime \prime \prime }(x)=2+ 8\operatorname{tg}(x)^2+6\operatorname{tg}(x)^4 &  & g^{\prime \prime \prime }(0)= 2+ 8\operatorname{tg}(0)^2+6\operatorname{tg}(0)^4=2
 \end{array}
 $$
 Sustituyendo de nuevo en la fórmula de arriba, pero utilizando esta vez $g(x)$ en lugar de $f(x)$, llegamos al otro polinomio que buscamos:
@@ -1238,14 +1363,14 @@ $$
 Q_{0}^{3}(x)=0+1\cdot x+\frac{0}{2!}x^{2}+\frac{2}{3!}x^{3}=x+\frac{x^{3}}{3}
 $$
 
-Finalmente, para calcular ahora el límite que nos piden, podemos sustituir $\sen x$ por $P_{0}^{3}(x)$ y $\tg x$ por $Q_{0}^{3}(x)$, teniendo en cuenta dichos polinomios se comportan de igual forma que las correspondientes funciones en un entorno del 0. Así pues, tenemos:
+Finalmente, para calcular ahora el límite que nos piden, podemos sustituir $\sen x$ por $P_{0}^{3}(x)$ y $\operatorname{tg}(x)$ por $Q_{0}^{3}(x)$, teniendo en cuenta dichos polinomios se comportan de igual forma que las correspondientes funciones en un entorno del 0. Así pues, tenemos:
 $$
-\lim_{x\rightarrow 0}\frac{\tg x-x}{x-\sen x} = \lim_{x\rightarrow 0}\frac{Q_{0}^{3}(x)-x}{x-P_{0}^{3}(x)} = \lim_{x\rightarrow 0}\frac{x+\frac{x^{3}}{3}-x}{x-x+\frac{x^{3}}{6}} = \lim_{x\rightarrow 0}\frac{\frac{x^{3}}{3}}{\frac{x^{3}}{6}} = \lim_{x\rightarrow 0}\frac{6}{3}=2.
+\lim_{x\rightarrow 0}\frac{\operatorname{tg}(x)-x}{x-\sen x} = \lim_{x\rightarrow 0}\frac{Q_{0}^{3}(x)-x}{x-P_{0}^{3}(x)} = \lim_{x\rightarrow 0}\frac{x+\frac{x^{3}}{3}-x}{x-x+\frac{x^{3}}{6}} = \lim_{x\rightarrow 0}\frac{\frac{x^{3}}{3}}{\frac{x^{3}}{6}} = \lim_{x\rightarrow 0}\frac{6}{3}=2.
 $$
 :::
 -->
 <div id="exr-taylor-5" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 6.42 </strong></span>La función <span class="math inline">\(C(t)\)</span> da la concentración (en mg/dl) de un fármaco en el torrente sanguíneo en función del tiempo (en horas): <span class="math display">\[
+<p><span class="theorem-title"><strong>Ejercicio 6.45 </strong></span>La función <span class="math inline">\(C(t)\)</span> da la concentración (en mg/dl) de un fármaco en el torrente sanguíneo en función del tiempo (en horas): <span class="math display">\[
 C(t) = \frac{1}{{1 + e^{-2t}}}
 \]</span></p>
 <ol type="a">
