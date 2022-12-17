@@ -603,24 +603,93 @@ donde $v$ es la velocidad de la sangre, $r$ es el radio de la arteria y $c$ es u
 Si se puede medir el radio de la arteria con una precisión del 5\%, ¿qué precisión tendrá el cálculo de la velocidad?
 :::
 
+:::{.callout-tip collapse="true"}
+## Solución
+Si se interpreta $dr$ se interpreta como el error absoluto del radio de la arteria, $\frac{dr}{r}$ es el error relativo en la medición del radio, y $\frac{dv}{v}$ es el error relativo en la medición de la velocidad de la sangre. Así pues, se tiene 
+
+$$
+\frac{dv}{v} = \frac{v'(r)dr}{v} = \frac{2cr\cdot dr}{cr^2} = 2\frac{dr}{r}.
+$$
+
+Como el error relativo en la medición del radio es del 5\%, se tiene que $\frac{dr}{r}=0.05$ y sustituyendo en el resultado anterior se tiene
+
+$$
+\frac{dv}{v} = 2\frac{dr}{r} = 2\cdot 0.05 = 0.1,
+$$
+
+de manera que el error relativo en la medición de la velocidad de la sangre es del 10\%.
+:::
+
 :::{#exr-crecimiento-1}
 En muchos vertebrados existe una relación entre la longitud del cráneo y la longitud de la espina dorsal que puede expresarse mediante la ecuación
 $$
-C(x) = a E(x)^b
+C(t) = a E(t)^b
 $$
-donde $a$ y $b$ son constantes.
+donde $a>0$ y $b$ son constantes y $t$ es el tiempo.
 Esta ecuación se conoce como _ecuación alométrica_.
 ¿Cómo se relaciona la tasa de crecimiento de la espina dorsal con la del cráneo?
 ¿Para qué valores de $b$ es la función $C$ creciente, pero de forma que la relación $C/E$ disminuye al aumentar $E$?
 ¿En qué estado de desarrollo tienen los vertebrados cráneos mayores en relación con la longitud de sus cuerpos?
 :::
 
+:::{.callout-tip collapse="true"}
+## Solución
+La tasa de crecimiento de la espina dorsal es $E'$ y la del cráneo es $C'$, así que se trata de ver la relación entre las dos derivadas. Si calculamos la derivada de la longitud del cráneo, como $E(t)$ es una función que depende del tiempo, aplicando la regla de la cadena se tiene
+
+$$
+C'(t) = a b E(t)^{b-1}E'(t)
+$$
+
+Para que la $C$ sea creciente su derivada debe ser positiva, es decir, $a b E(t)^{b-1}E'(t)>0$. Como $E(t)$ es el la longitud de la espina dorsal, que es positiva, $E'(t)$ es la tasa de crecimiento de la espina dorsal que en los vertebrados también es positiva ya que crece con los años, y $a>0$, para que $C'(t)>0$ debe ser $b>0$.
+
+Por otro lado, la relación $E/C$ es
+
+$$
+\frac{C(t)}{E(t)} = \frac{aE(t)^b}{E(t)} = aE(t)^{b-1},
+$$
+
+y su derivada vale
+
+$$
+\left(\frac{C(t)}{E(t)}\right)' = a(b-1)E(t)^{b-2}.
+$$
+
+Como $a>0$ y $E(t)>0$, para que la derivada sea negativa tiene que ser $(b-1)<0$, es decir, $b<1$. Por tanto, se debe cumplir $0<b<1$.
+
+Por tanto, si $0<b<1$ se tiene que $C/E$ es decreciente y eso quiere decir que la espina dorsal crece más rápidamente que el cráneo en los vertebrados, por lo que el cráneo será mayor en relación a la espina dorsal al nacer.
+:::
+
 :::{#exr-extremos-1}
-La siguiente figura muestra la gráfica de la derivada de una función $f$. Estudiar el comportamiento de la función (crecimiento, decrecimiento, extremos, concavidad y convexidad).
+La siguiente figura muestra la gráfica de la derivada de una función $f$. Estudiar el comportamiento de la función (crecimiento, decrecimiento, extremos, concavidad y puntos de inflexión).
 
 :::{style="text-align:center;"}
 ![](./img/derivadas/grafica-ext-1.png)
 :::
+:::
+
+:::{.callout-tip collapse="true"}
+## Solución
+A la vista de la gráfica de $f'(x)$ se observa que los puntos críticos de $f$ (los puntos que anulan la derivada) son $x=a$ y $x=c$ y $x=e$.
+
+**Estudio del crecimiento**
+
+Observando el signo de $f'$ podemos estudiar el crecimiento de $f$ aplicando el [criterio del signo de la primera derivada](https://aprendeconalf.es/analisis-manual/derivadas.html#thm-crecimiento-signo-derivada). A la vista de la gráfica se observa que $f'(x)>0$ $\forall x\in (a,c)\cup (e,\infty)$, y, por tanto, $f$ es creciente en estos intervalos, y $f'(x)<0$ $\forall x\in (-\infty, a)\cup (c,e)$, y, por tanto, $f$ es decreciente en estos intervalos.
+
+**Estudio de los extremos**
+
+Los posibles extremos de $f$ estarán entre sus puntos críticos. Observando el crecimiento de la $f$ a la izquierda y a la derecha de cada punto crítico podemos determinar si son máximos, mínimos o puntos de inflexión. 
+
+- En $x=a$ $f$ decrece a la izquierda y crece a la derecha, luego hay un mínimo relativo. 
+- En $x=c$ $f$ crece a la izquierda y decrece a la derecha, luego hay un máximo relativo.
+- En $x=e$ $f$ decrece a la izquierda y crece a la derecha, luego hay un mínimo relativo. 
+
+**Estudio de la concavidad**
+
+Para estudiar la concavidad utilizaremos el [criterio del signo de la segunda derivada](https://aprendeconalf.es/analisis-manual/derivadas.html#thm-concavidad). Para ver el signo de $f''$ basta con observar el crecimiento de $f'$ en la gráfica ya que $f''$ es la derivada de $f'$ y por tanto su signo depende del crecimiento de $f'$. Observando la gráfica de $f'$ se tiene que $f'(x)$ es creciente en $(-\infty, b)$ y $(d,\infty)$ de manera que $f''(x)>0$ $\forall x\in (-\infty, b)\cup (d,\infty)$, y, por tanto, la $f$ es cóncava hacia arriba en estos intervalos. Por otro lado, $f'(x)$ es decreciente en el intervalo $(b,d)$, por lo que $f''(x)<0$ $\forall x\in(b,d)$ y, por tanto, $f$ es cóncava hacia abajo en este intervalo.
+
+**Estudio de los puntos de inflexión**
+
+Los puntos de inflexión son los puntos donde cambia la concavidad de la función, de modo que, según el estudio de la concavidad, $f$ tiene puntos de inflexión en $x=b$ y $x=d$.
 :::
 
 :::{#exr-extremos-2}

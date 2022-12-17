@@ -864,15 +864,98 @@ Solución
 v(r) = cr^2,
 \]</span> donde <span class="math inline">\(v\)</span> es la velocidad de la sangre, <span class="math inline">\(r\)</span> es el radio de la arteria y <span class="math inline">\(c\)</span> es una constante. Si se puede medir el radio de la arteria con una precisión del 5%, ¿qué precisión tendrá el cálculo de la velocidad?</p>
 </div>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-19-contents" aria-controls="callout-19" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-19" class="callout-19-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Si se interpreta <span class="math inline">\(dr\)</span> se interpreta como el error absoluto del radio de la arteria, <span class="math inline">\(\frac{dr}{r}\)</span> es el error relativo en la medición del radio, y <span class="math inline">\(\frac{dv}{v}\)</span> es el error relativo en la medición de la velocidad de la sangre. Así pues, se tiene</p>
+<p><span class="math display">\[
+\frac{dv}{v} = \frac{v'(r)dr}{v} = \frac{2cr\cdot dr}{cr^2} = 2\frac{dr}{r}.
+\]</span></p>
+<p>Como el error relativo en la medición del radio es del 5%, se tiene que <span class="math inline">\(\frac{dr}{r}=0.05\)</span> y sustituyendo en el resultado anterior se tiene</p>
+<p><span class="math display">\[
+\frac{dv}{v} = 2\frac{dr}{r} = 2\cdot 0.05 = 0.1,
+\]</span></p>
+<p>de manera que el error relativo en la medición de la velocidad de la sangre es del 10%.</p>
+</div>
+</div>
+</div>
 <div id="exr-crecimiento-1" class="theorem exercise">
 <p><span class="theorem-title"><strong>Ejercicio 6.20 </strong></span>En muchos vertebrados existe una relación entre la longitud del cráneo y la longitud de la espina dorsal que puede expresarse mediante la ecuación <span class="math display">\[
-C(x) = a E(x)^b
-\]</span> donde <span class="math inline">\(a\)</span> y <span class="math inline">\(b\)</span> son constantes. Esta ecuación se conoce como <em>ecuación alométrica</em>. ¿Cómo se relaciona la tasa de crecimiento de la espina dorsal con la del cráneo? ¿Para qué valores de <span class="math inline">\(b\)</span> es la función <span class="math inline">\(C\)</span> creciente, pero de forma que la relación <span class="math inline">\(C/E\)</span> disminuye al aumentar <span class="math inline">\(E\)</span>? ¿En qué estado de desarrollo tienen los vertebrados cráneos mayores en relación con la longitud de sus cuerpos?</p>
+C(t) = a E(t)^b
+\]</span> donde <span class="math inline">\(a&gt;0\)</span> y <span class="math inline">\(b\)</span> son constantes y <span class="math inline">\(t\)</span> es el tiempo. Esta ecuación se conoce como <em>ecuación alométrica</em>. ¿Cómo se relaciona la tasa de crecimiento de la espina dorsal con la del cráneo? ¿Para qué valores de <span class="math inline">\(b\)</span> es la función <span class="math inline">\(C\)</span> creciente, pero de forma que la relación <span class="math inline">\(C/E\)</span> disminuye al aumentar <span class="math inline">\(E\)</span>? ¿En qué estado de desarrollo tienen los vertebrados cráneos mayores en relación con la longitud de sus cuerpos?</p>
+</div>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-20-contents" aria-controls="callout-20" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-20" class="callout-20-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>La tasa de crecimiento de la espina dorsal es <span class="math inline">\(E'\)</span> y la del cráneo es <span class="math inline">\(C'\)</span>, así que se trata de ver la relación entre las dos derivadas. Si calculamos la derivada de la longitud del cráneo, como <span class="math inline">\(E(t)\)</span> es una función que depende del tiempo, aplicando la regla de la cadena se tiene</p>
+<p><span class="math display">\[
+C'(t) = a b E(t)^{b-1}E'(t)
+\]</span></p>
+<p>Para que la <span class="math inline">\(C\)</span> sea creciente su derivada debe ser positiva, es decir, <span class="math inline">\(a b E(t)^{b-1}E'(t)&gt;0\)</span>. Como <span class="math inline">\(E(t)\)</span> es el la longitud de la espina dorsal, que es positiva, <span class="math inline">\(E'(t)\)</span> es la tasa de crecimiento de la espina dorsal que en los vertebrados también es positiva ya que crece con los años, y <span class="math inline">\(a&gt;0\)</span>, para que <span class="math inline">\(C'(t)&gt;0\)</span> debe ser <span class="math inline">\(b&gt;0\)</span>.</p>
+<p>Por otro lado, la relación <span class="math inline">\(E/C\)</span> es</p>
+<p><span class="math display">\[
+\frac{C(t)}{E(t)} = \frac{aE(t)^b}{E(t)} = aE(t)^{b-1},
+\]</span></p>
+<p>y su derivada vale</p>
+<p><span class="math display">\[
+\left(\frac{C(t)}{E(t)}\right)' = a(b-1)E(t)^{b-2}.
+\]</span></p>
+<p>Como <span class="math inline">\(a&gt;0\)</span> y <span class="math inline">\(E(t)&gt;0\)</span>, para que la derivada sea negativa tiene que ser <span class="math inline">\((b-1)&lt;0\)</span>, es decir, <span class="math inline">\(b&lt;1\)</span>. Por tanto, se debe cumplir <span class="math inline">\(0&lt;b&lt;1\)</span>.</p>
+<p>Por tanto, si <span class="math inline">\(0&lt;b&lt;1\)</span> se tiene que <span class="math inline">\(C/E\)</span> es decreciente y eso quiere decir que la espina dorsal crece más rápidamente que el cráneo en los vertebrados, por lo que el cráneo será mayor en relación a la espina dorsal al nacer.</p>
+</div>
+</div>
 </div>
 <div id="exr-extremos-1" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 6.21 </strong></span>La siguiente figura muestra la gráfica de la derivada de una función <span class="math inline">\(f\)</span>. Estudiar el comportamiento de la función (crecimiento, decrecimiento, extremos, concavidad y convexidad).</p>
+<p><span class="theorem-title"><strong>Ejercicio 6.21 </strong></span>La siguiente figura muestra la gráfica de la derivada de una función <span class="math inline">\(f\)</span>. Estudiar el comportamiento de la función (crecimiento, decrecimiento, extremos, concavidad y puntos de inflexión).</p>
 <div style="text-align:center;">
 <p><img src="./img/derivadas/grafica-ext-1.png" class="img-fluid"></p>
+</div>
+</div>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-21-contents" aria-controls="callout-21" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-21" class="callout-21-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>A la vista de la gráfica de <span class="math inline">\(f'(x)\)</span> se observa que los puntos críticos de <span class="math inline">\(f\)</span> (los puntos que anulan la derivada) son <span class="math inline">\(x=a\)</span> y <span class="math inline">\(x=c\)</span> y <span class="math inline">\(x=e\)</span>.</p>
+<p><strong>Estudio del crecimiento</strong></p>
+<p>Observando el signo de <span class="math inline">\(f'\)</span> podemos estudiar el crecimiento de <span class="math inline">\(f\)</span> aplicando el <a href="https://aprendeconalf.es/analisis-manual/derivadas.html#thm-crecimiento-signo-derivada">criterio del signo de la primera derivada</a>. A la vista de la gráfica se observa que <span class="math inline">\(f'(x)&gt;0\)</span> <span class="math inline">\(\forall x\in (a,c)\cup (e,\infty)\)</span>, y, por tanto, <span class="math inline">\(f\)</span> es creciente en estos intervalos, y <span class="math inline">\(f'(x)&lt;0\)</span> <span class="math inline">\(\forall x\in (-\infty, a)\cup (c,e)\)</span>, y, por tanto, <span class="math inline">\(f\)</span> es decreciente en estos intervalos.</p>
+<p><strong>Estudio de los extremos</strong></p>
+<p>Los posibles extremos de <span class="math inline">\(f\)</span> estarán entre sus puntos críticos. Observando el crecimiento de la <span class="math inline">\(f\)</span> a la izquierda y a la derecha de cada punto crítico podemos determinar si son máximos, mínimos o puntos de inflexión.</p>
+<ul>
+<li>En <span class="math inline">\(x=a\)</span> <span class="math inline">\(f\)</span> decrece a la izquierda y crece a la derecha, luego hay un mínimo relativo.</li>
+<li>En <span class="math inline">\(x=c\)</span> <span class="math inline">\(f\)</span> crece a la izquierda y decrece a la derecha, luego hay un máximo relativo.</li>
+<li>En <span class="math inline">\(x=e\)</span> <span class="math inline">\(f\)</span> decrece a la izquierda y crece a la derecha, luego hay un mínimo relativo.</li>
+</ul>
+<p><strong>Estudio de la concavidad</strong></p>
+<p>Para estudiar la concavidad utilizaremos el <a href="https://aprendeconalf.es/analisis-manual/derivadas.html#thm-concavidad">criterio del signo de la segunda derivada</a>. Para ver el signo de <span class="math inline">\(f''\)</span> basta con observar el crecimiento de <span class="math inline">\(f'\)</span> en la gráfica ya que <span class="math inline">\(f''\)</span> es la derivada de <span class="math inline">\(f'\)</span> y por tanto su signo depende del crecimiento de <span class="math inline">\(f'\)</span>. Observando la gráfica de <span class="math inline">\(f'\)</span> se tiene que <span class="math inline">\(f'(x)\)</span> es creciente en <span class="math inline">\((-\infty, b)\)</span> y <span class="math inline">\((d,\infty)\)</span> de manera que <span class="math inline">\(f''(x)&gt;0\)</span> <span class="math inline">\(\forall x\in (-\infty, b)\cup (d,\infty)\)</span>, y, por tanto, la <span class="math inline">\(f\)</span> es cóncava hacia arriba en estos intervalos. Por otro lado, <span class="math inline">\(f'(x)\)</span> es decreciente en el intervalo <span class="math inline">\((b,d)\)</span>, por lo que <span class="math inline">\(f''(x)&lt;0\)</span> <span class="math inline">\(\forall x\in(b,d)\)</span> y, por tanto, <span class="math inline">\(f\)</span> es cóncava hacia abajo en este intervalo.</p>
+<p><strong>Estudio de los puntos de inflexión</strong></p>
+<p>Los puntos de inflexión son los puntos donde cambia la concavidad de la función, de modo que, según el estudio de la concavidad, <span class="math inline">\(f\)</span> tiene puntos de inflexión en <span class="math inline">\(x=b\)</span> y <span class="math inline">\(x=d\)</span>.</p>
+</div>
 </div>
 </div>
 <div id="exr-extremos-2" class="theorem exercise">
@@ -911,7 +994,7 @@ v(x) = \frac{\ln(p(x)h(x))}{x},
 <p><span class="theorem-title"><strong>Ejercicio 6.29 </strong></span>La distancia en kilómetros que recorre un coche de alquiler con 1 litro de gasolina depende de la velocidad a la que circule según la función <span class="math inline">\(d(x)=120-x\)</span> para <span class="math inline">\(x\in(50,120)\)</span>. Si el coste de la gasolina es de <span class="math inline">\(2\)</span> €/l y el coste del alquiler es de <span class="math inline">\(10\)</span> €/h, ¿a qué velocidad debe circular para que el coste del trayecto sea mínimo? ¿Cuál será el coste por kilómetro si circula a esa velocidad?</p>
 </div>
 <div class="callout-tip callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-19-contents" aria-controls="callout-19" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-22-contents" aria-controls="callout-22" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -920,7 +1003,7 @@ Solución
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-19" class="callout-19-contents callout-collapse collapse">
+<div id="callout-22" class="callout-22-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Como la distancia recorrida a una velocidad <span class="math inline">\(x\)</span> es <span class="math inline">\(d(x)=120-x\)</span> y, como la velocidad es <span class="math inline">\(x=\frac{d(x)}{t}\)</span>, el tiempo necesario para recorrer esa distancia es <span class="math inline">\(\frac{d(x)}{x}\)</span>, de manera que el coste del alquiler para recorrer esa distancia es <span class="math inline">\(\frac{d(x)}{x}10\)</span>. A esto hay que sumar el precio del litro de gasolina necesario para recorrer esa distancia, de manera que el coste de recorrer esa distancia es <span class="math inline">\(\frac{d(x)}{x}10+2\)</span>. Por tanto, el coste por kilómetro para una velocidad <span class="math inline">\(x\)</span> viene dado por la función</p>
 <p><span class="math display">\[
@@ -968,7 +1051,7 @@ y = t^2-2t+3. \\
 </ol>
 </div>
 <div class="callout-tip callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-20-contents" aria-controls="callout-20" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-23-contents" aria-controls="callout-23" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -977,7 +1060,7 @@ Solución
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-20" class="callout-20-contents callout-collapse collapse">
+<div id="callout-23" class="callout-23-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ol type="a">
 <li><p>Aplicando la regla de la cadena se tiene que</p>
@@ -1023,7 +1106,7 @@ y=-\frac{1}{2}gt^2
 <p>donde <span class="math inline">\(t\in \mathbb{R}^{+}\)</span> es el tiempo contado a partir del instante en que el punto llega a la posición más alta, <span class="math inline">\(v_0\)</span> es la velocidad horizontal en el instante <span class="math inline">\(t=0\)</span> y <span class="math inline">\(g=9.81\)</span> m<span class="math inline">\(^2\)</span>/s es la aceleración de la gravedad en la superficie terrestre. ¿En qué instante la magnitud de la velocidad horizontal será igual a la de la velocidad vertical? ¿Cuánto debería valer <span class="math inline">\(v_0\)</span> para que en dicho instante el punto haya recorrido 100 m horizontalmente? Calcular la ecuación de la recta tangente en dicho instante con el valor de <span class="math inline">\(v_0\)</span> calculado.</p>
 </div>
 <div class="callout-tip callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-21-contents" aria-controls="callout-21" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-24-contents" aria-controls="callout-24" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1032,7 +1115,7 @@ Solución
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-21" class="callout-21-contents callout-collapse collapse">
+<div id="callout-24" class="callout-24-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>La velocidad horizontal es la derivada del espacio recorrido horizontalmente (componente <span class="math inline">\(x\)</span>) con respecto al tiempo, es decir,</p>
 <p><span class="math display">\[
