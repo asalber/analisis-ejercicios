@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.9.20)  18 DEC 2022 12:48
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.9.20)  18 DEC 2022 18:35
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1152,15 +1152,12 @@ Overfull \hbox (3.28989pt too wide) detected at line 5559
 \OML/lmm/m/it/10.95 P[]\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 x\OT1/lmr/m/n/10.95 ) = \OML/lmm/m/it/10.95 f\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 ^^Y=\OT1/lmr/m/n/10.95 6) + \OML/lmm/m/it/10.95 f[]\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 ^^Y=\OT1/lmr/m/n/10.95 6)(\OML/lmm/m/it/10.95 x \OMS/lmsy/m/n/10.95 ^^@ \OML/lmm/m/it/10.95 ^^Y=\OT1/lmr/m/n/10.95 6) + [](\OML/lmm/m/it/10.95 x \OMS/lmsy/m/n/10.95 ^^@ \OML/lmm/m/it/10.95 ^^Y=\OT1/lmr/m/n/10.95 6)[] + [](\OML/lmm/m/it/10.95 x \OMS/lmsy/m/n/10.95 ^^@ \OML/lmm/m/it/10.95 ^^Y=\OT1/lmr/m/n/10.95 6)[]\OML/lmm/m/it/10.95 :
  []
 
-[87] [88] [89]
-Overfull \hbox (6.47456pt too wide) detected at line 5745
+[87] [88] [89] [90]
+Overfull \hbox (6.47456pt too wide) detected at line 5807
 []
  []
 
-
-LaTeX Warning: Reference `e:Maclaurin' on page 90 undefined on input line 5754.
-
-[90] [91] (./ejercicios-analisis.aux)
+[91] [92] (./ejercicios-analisis.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -1169,18 +1166,18 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  ) 
 Here is how much of TeX's memory you used:
- 38794 strings out of 476932
- 787502 string characters out of 5824858
+ 38793 strings out of 476932
+ 787482 string characters out of 5824858
  1302999 words of memory out of 5000000
- 58416 multiletter control sequences out of 15000+600000
+ 58415 multiletter control sequences out of 15000+600000
  550498 words of font info for 218 fonts, out of 8000000 for 9000
  62 hyphenation exceptions out of 8191
  122i,14n,120p,10658b,1066s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/home/alf/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/home/alf/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/home/alf/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/home/alf/texmf/fonts/enc/dvips/lm/lm-ts1.enc}{/home/alf/texmf/fonts/enc/dvips/lm/lm-mathex.enc}{/home/alf/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/home/alf/texmf/fonts/enc/dvips/fontawesome5/fa5free2.enc}</home/alf/texmf/fonts/type1/public/fontawesome5/FontAwesome5Free-Solid.pfb></home/alf/texmf/fonts/type1/public/lm/lmbx10.pfb></home/alf/texmf/fonts/type1/public/lm/lmex10.pfb></home/alf/texmf/fonts/type1/public/lm/lmmi10.pfb></home/alf/texmf/fonts/type1/public/lm/lmmi6.pfb></home/alf/texmf/fonts/type1/public/lm/lmmi8.pfb></home/alf/texmf/fonts/type1/public/lm/lmr10.pfb></home/alf/texmf/fonts/type1/public/lm/lmr6.pfb></home/alf/texmf/fonts/type1/public/lm/lmr8.pfb></home/alf/texmf/fonts/type1/public/lm/lmri10.pfb></home/alf/texmf/fonts/type1/public/lm/lmss12.pfb></home/alf/texmf/fonts/type1/public/lm/lmssbx10.pfb></home/alf/texmf/fonts/type1/public/lm/lmsy10.pfb></home/alf/texmf/fonts/type1/public/lm/lmsy6.pfb></home/alf/texmf/fonts/type1/public/lm/lmsy8.pfb></home/alf/texmf/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on ejercicios-analisis.pdf (91 pages, 609378 bytes).
+Output written on ejercicios-analisis.pdf (92 pages, 612674 bytes).
 PDF statistics:
- 1233 PDF objects out of 1440 (max. 8388607)
- 1089 compressed objects within 11 object streams
+ 1236 PDF objects out of 1440 (max. 8388607)
+ 1091 compressed objects within 11 object streams
  639 named destinations out of 1000 (max. 500000)
  45145 words of extra memory for PDF output out of 51595 (max. 10000000)
 

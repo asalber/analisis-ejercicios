@@ -1368,12 +1368,14 @@ a. La fórmula del polinomio de Taylor de tercer grado de $f$ en el punto $a=\pi
 
     Necesitamos calcular, por tanto, hasta la tercera derivada en el punto $a=\pi/6$.
 
-    \begin{align*}
-    f(x) = \operatorname{sen}(x)\quad &  f(\pi/6) = 0.5\\ 
-    f'(x)=\cos(x) \quad & f'(\pi/6) = \sqrt{3}/2\\ 
-    f''(x) = -\operatorname{sen}(x) \quad & f''(\pi/6) = -0.5\\ 
-    f'''(x) = -\cos(x) \quad & f'''(\pi/6) = -\sqrt{3}/2.
-    \end{align*}
+    $$
+    \begin{array}{lll}
+    f(x) = \operatorname{sen}(x) &\quad &  f(\pi/6) = 0.5\\ 
+    f'(x)=\cos(x) &\quad & f'(\pi/6) = \sqrt{3}/2\\ 
+    f''(x) = -\operatorname{sen}(x) &\quad & f''(\pi/6) = -0.5\\ 
+    f'''(x) = -\cos(x) &\quad & f'''(\pi/6) = -\sqrt{3}/2.
+    \end{array}
+    $$
 
     Así pues, sustituyendo en la ecuación del polinomio anterior se llega a
 
@@ -1398,7 +1400,7 @@ a. La fórmula del polinomio de Taylor de tercer grado de $f$ en el punto $a=\pi
 a. La fórmula del polinomio de MacLaurin de quinto grado de $f$ es 
 
     $$
-    P^3_{f,0}(x) = f(0)+f'(0)x+ \frac{f''(0)}{2}x^2+\frac{f'''(0)}{3!}x^3+ +\frac{f''''(0)}{4!}x^4+ +\frac{f'''''(0)}{5!}x^5
+    P^3_{f,0}(x) = f(0)+f'(0)x+ \frac{f''(0)}{2}x^2+\frac{f'''(0)}{3!}x^3+ \frac{f''''(0)}{4!}x^4+\frac{f'''''(0)}{5!}x^5
     $$
 
 Calculando hasta la quinta derivada en $0$ y sustituyendo en esta fórmula se tiene
@@ -1415,7 +1417,28 @@ Calcular el polinomio de Maclaurin de tercer grado para la función $f(x)=\opera
 
 :::{.callout-tip collapse="true"}
 ## Solución
-$P^3_{f,0}(x) = x+\frac{1}{6}x^3$.
+La fórmula del polinomio de MacLaurin de quinto grado de $f$ es 
+
+$$
+P^3_{f,0}(x) = f(0)+f'(0)x+ \frac{f''(0)}{2}x^2+\frac{f'''(0)}{3!}x^3.
+$$
+
+Calculamos hasta la tercera derivada de $f$ en $a=0$.
+
+$$
+\begin{array}{lll}
+f(x) = \operatorname{arcsen}(x) & \quad &  f(0) = 0\\ 
+f'(x) =\frac{1}{\sqrt{1-x^2}}=(1-x^2)^{-1/2} & \quad & f'(0) = 1\\ 
+f''(x) = x(1-x^2)^{-3/2} & \quad & f''(0) = 0\\ 
+f'''(x) = (1-x^2)^{-3/2}+3x^2(1-x^2)^{-5/2} & \quad & f'''(0) = 1.
+\end{array}
+$$
+
+Así pues, sustituyendo en la fórmula anterior del polinomio se tiene
+
+$$
+P^3_{f,0}(x) = x+\frac{1}{6}x^3.
+$$
 :::
 
 :::{#exr-taylor-3}
@@ -1424,7 +1447,35 @@ Calcular $\cos(1)$ con un error menor que $10^{-7}$ usando aproximaciones de Tay
 
 :::{.callout-tip collapse="true"}
 ## Solución
+Para calcular de forma aproximada $\cos(1)$ utilizaremos un polinomio de MacLaurin para la función $f(x)=\cos(x)$.
 
+El resto del polinomio de Taylor de orden $n$ de $f$ en $a=0$ en la forma de Lagrange, para $x=1$ es
+
+$$
+R^n_{f,0}(t) = \frac{f^{(n+1}(t)}{(n+1)!}1^{n+1} = \frac{f^{(n+1}(t)}{(n+1)!} \mbox{ con }t\in [0,1].
+$$
+
+Como 
+
+$$|f^{(n}(t)| = 
+\begin{cases}
+|\operatorname{sen}(t)| & \mbox{si } n=2k+1\\
+|\cos(t)| & \mbox{si } n=2k
+\end{cases},
+k\in\mathbb{N}
+$$
+
+se tiene que $||f^{(n+1}(t)| \leq 1$ $\forall t\in\mathbb{R}$, por lo que una cota del resto es $R^n_{f,0}(t)\leq  1/(n+1)!$. Probando con sucesivos valores de $n$, el primer valor que cumple que $R^n_{f,0}(t)\leq  1/(n+1)!\leq 10^{-7}$ es $n=10$, por lo que necesitamos calcular el polinomio de de MacLaurin de orden 10, que vale
+
+$$
+P^{10}_{f,0}(x)= 1-\frac{x^2}{2!}+\frac{x^4}{4!}-\frac{x^6}{6!}+\frac{x^8}{8!}-\frac{x^{10}}{10!},
+$$
+
+que para $x=1$ vale
+
+$$
+P^{10}_{f,0}(1)= 1-\frac{1^2}{2!}+\frac{1^4}{4!}-\frac{1^6}{6!}+\frac{1^8}{8!}-\frac{1^{10}}{10!} \approx 0.5403023037919.
+$$
 :::
 
 :::{#exr-taylor-4}
@@ -1441,13 +1492,13 @@ $$
 P_{0}^{3}(x)=f(0)+f^{\prime }(0)x+\frac{f^{\prime \prime }(0)}{2!}x^{2}+\frac{f^{\prime \prime \prime }(0)}{3!}x^{3}.
 $$
 
-Consideremos, en primer lugar, la función $\sen x$, y calculemos sus tres primeras derivadas en 0:
+Consideremos, en primer lugar, la función $\operatorname{sen}(x)$, y calculemos sus tres primeras derivadas en 0:
 $$
 \begin{array}{lll}
-f(x)=\sen x &  & f(0)=\sen 0=0, \\
-f^{\prime }(x)=\cos x &  & f^{\prime }(0)=\cos 0=1, \\
-f^{\prime \prime }(x)=-\sen x &  & f^{\prime \prime }(0)=-\sen0=0, \\
-f^{\prime \prime \prime }(x)=-\cos x &  & f^{\prime \prime \prime }(0)=-\cos 0=-1.
+f(x)=\operatorname{sen}(x) &  & f(0)=\operatorname{sen}(0)=0, \\
+f^{\prime }(x)=\cos(x) &  & f^{\prime }(0)=\cos(0)=1, \\
+f^{\prime \prime }(x)=-\operatorname{sen}(x) &  & f^{\prime \prime }(0)=-\operatorname{sen}(0)=0, \\
+f^{\prime \prime \prime }(x)=-\cos(x) &  & f^{\prime \prime \prime }(0)=-\cos(0)=-1.
 \end{array}
 $$
 Sustituyendo en la fórmula de arriba, llegamos al primer polinomio que buscamos:
@@ -1469,9 +1520,9 @@ $$
 Q_{0}^{3}(x)=0+1\cdot x+\frac{0}{2!}x^{2}+\frac{2}{3!}x^{3}=x+\frac{x^{3}}{3}
 $$
 
-Finalmente, para calcular ahora el límite que nos piden, podemos sustituir $\sen x$ por $P_{0}^{3}(x)$ y $\operatorname{tg}(x)$ por $Q_{0}^{3}(x)$, teniendo en cuenta dichos polinomios se comportan de igual forma que las correspondientes funciones en un entorno del 0. Así pues, tenemos:
+Finalmente, para calcular ahora el límite que nos piden, podemos sustituir $\operatorname{sen}(x)$ por $P_{0}^{3}(x)$ y $\operatorname{tg}(x)$ por $Q_{0}^{3}(x)$, teniendo en cuenta dichos polinomios se comportan de igual forma que las correspondientes funciones en un entorno del 0. Así pues, tenemos:
 $$
-\lim_{x\rightarrow 0}\frac{\operatorname{tg}(x)-x}{x-\sen x} = \lim_{x\rightarrow 0}\frac{Q_{0}^{3}(x)-x}{x-P_{0}^{3}(x)} = \lim_{x\rightarrow 0}\frac{x+\frac{x^{3}}{3}-x}{x-x+\frac{x^{3}}{6}} = \lim_{x\rightarrow 0}\frac{\frac{x^{3}}{3}}{\frac{x^{3}}{6}} = \lim_{x\rightarrow 0}\frac{6}{3}=2.
+\lim_{x\rightarrow 0}\frac{\operatorname{tg}(x)-x}{x-\operatorname{sen}(x)} = \lim_{x\rightarrow 0}\frac{Q_{0}^{3}(x)-x}{x-P_{0}^{3}(x)} = \lim_{x\rightarrow 0}\frac{x+\frac{x^{3}}{3}-x}{x-x+\frac{x^{3}}{6}} = \lim_{x\rightarrow 0}\frac{\frac{x^{3}}{3}}{\frac{x^{3}}{6}} = \lim_{x\rightarrow 0}\frac{6}{3}=2.
 $$
 :::
 
@@ -1487,49 +1538,54 @@ a. Utilizando el polinomio anterior, calcular aproximadamente la concentración 
 
 :::{.callout-tip collapse="true"}
 ## Solución
-a.
-La fórmula del polinomio de Maclaurin de orden 3 para la función $C(t)$ es:
-\begin{equation}
-\label{e:Maclaurin}
-P_{C,0}^3(t)=C(0)+\frac{dC}{dt}(0)t+\frac{d^2C}{dt^2}(0)\frac{t^2}{2!}+\frac{d^3C}{dt^3}(0)\frac{t^3}{3!}
-\end{equation}
-Necesitamos calcular las tres primeras derivadas:
-\begin{align*}
-\frac{dC}{dt} &= \frac{2e^{-2t}}{(1+e^{-2t})^2},\\
-\frac{d^2C}{dt^2} &=
-\frac{\frac{d}{dt}(2e^{-2t})(1+e^{-2t})^2-2e^{-2t}\frac{d}{dt}(1+e^{-2t})^2}{(1+e^{-2t})^4} =\\
-&= \frac{-4e^{-2t}(1+e^{-2t})^2- 2e^{-2t}2(1+e^{-2t})(-2e^{-2t})}{(1+e^{-2t})^4}
-= \frac{-4e^{-2t}+4e^{-4t}}{(1+e^{-2t})^3},\\
-\frac{d^3C}{dt^3}
-&=
-\frac{\frac{d}{dt}(-4e^{-2t}1+4e^{-4t})(1+e^{-2t})^3-(-4e^{-2t}+4e^{-4t})\frac{d}{dt}(1+e^{-2t})^3}{(1+e^{-2t})^6}=\\
-&=
-\frac{(8e^{-2t}-16e^{-4t})(1+e^{-2t})^3-(-4e^{-2t}+4e^{-4t})3(1+e^{-2t})^2(-2e^{-2t})}{(1+e^{-2t})^6}=\\
-&=
-\frac{(8e^{-2t}-16e^{-4t})(1+e^{-2t})-(-4e^{-2t}+4e^{-4t})(-6e^{-2t})}{(1+e^{-2t})^4}=\\
-&=
-\frac{(8e^{-2t}-8e^{-4t}-16e^{-6t})-(24e^{-4t}-24e^{-6t})}{(1+e^{-2t})^4}=\\
-&=
-\frac{8e^{-2t}-32e^{-4t}+8e^{-6t}}{(1+e^{-2t})^4}.
-\end{align*}
-Sustituyendo para $t=0$ tenemos:
-\begin{align*}
-C(0)&= \frac{1}{1+e^{-2\cdot 0}}=\frac{1}{2},\\
-\frac{dC}{dt}(0) &= \frac{2e^{-2\cdot 0}}{(1+e^{-2\cdot 0})^2} = \frac{2}{2^2}=\frac{1}{2},\\
-\frac{d^2C}{dt^2}(0) &= \frac{-4e^{-2\cdot 0}+4e^{-4\cdot 0}}{(1+e^{-2\cdot
-0})^3} = \frac{-4+4}{2^3}= 0,\\
-\frac{d^3C}{dt^3}(0)&=\frac{(8e^{-2\cdot 0}-32e^{-4\cdot 0}+8e^{-6\cdot 0})}{(1+e^{-2\cdot 0})^4}=\frac{8-32+8}{16}=-1.
-\end{align*}
+a. La fórmula del polinomio de Maclaurin de orden 3 para la función $C(t)$ es:
 
-Y por último, sustituyendo en la ecuación \ref{e:Maclaurin} llegamos al polinomio
-$$
-P_{C,0}^3(t)=\frac{1}{2}+\frac{1}{2}t+0\frac{t^2}{2!}-1\frac{t^3}{3!}=\frac{1}{2}+\frac{1}{2}t-\frac{1}{6}t^3.
-$$
+    $$
+    P_{C,0}^3(t)=C(0)+\frac{dC}{dt}(0)t+\frac{d^2C}{dt^2}(0)\frac{t^2}{2!}+\frac{d^3C}{dt^3}(0)\frac{t^3}{3!}
+    $$
+
+    Necesitamos calcular las tres primeras derivadas:
+
+    \begin{align*}
+    \frac{dC}{dt} &= \frac{2e^{-2t}}{(1+e^{-2t})^2},\\
+    \frac{d^2C}{dt^2} &=
+    \frac{\frac{d}{dt}(2e^{-2t})(1+e^{-2t})^2-2e^{-2t}\frac{d}{dt}(1+e^{-2t})^2}{(1+e^{-2t})^4} =\\
+    &= \frac{-4e^{-2t}(1+e^{-2t})^2- 2e^{-2t}2(1+e^{-2t})(-2e^{-2t})}{(1+e^{-2t})^4}
+    = \frac{-4e^{-2t}+4e^{-4t}}{(1+e^{-2t})^3},\\
+    \frac{d^3C}{dt^3}
+    &=
+    \frac{\frac{d}{dt}(-4e^{-2t}1+4e^{-4t})(1+e^{-2t})^3-(-4e^{-2t}+4e^{-4t})\frac{d}{dt}(1+e^{-2t})^3}{(1+e^{-2t})^6}=\\
+    &=
+    \frac{(8e^{-2t}-16e^{-4t})(1+e^{-2t})^3-(-4e^{-2t}+4e^{-4t})3(1+e^{-2t})^2(-2e^{-2t})}{(1+e^{-2t})^6}=\\
+    &=
+    \frac{(8e^{-2t}-16e^{-4t})(1+e^{-2t})-(-4e^{-2t}+4e^{-4t})(-6e^{-2t})}{(1+e^{-2t})^4}=\\
+    &=
+    \frac{(8e^{-2t}-8e^{-4t}-16e^{-6t})-(24e^{-4t}-24e^{-6t})}{(1+e^{-2t})^4}=\\
+    &=
+    \frac{8e^{-2t}-32e^{-4t}+8e^{-6t}}{(1+e^{-2t})^4}.
+    \end{align*}
+
+    Sustituyendo para $t=0$ tenemos:
+
+    \begin{align*}
+    C(0)&= \frac{1}{1+e^{-2\cdot 0}}=\frac{1}{2},\\
+    \frac{dC}{dt}(0) &= \frac{2e^{-2\cdot 0}}{(1+e^{-2\cdot 0})^2} = \frac{2}{2^2}=\frac{1}{2},\\
+    \frac{d^2C}{dt^2}(0) &= \frac{-4e^{-2\cdot 0}+4e^{-4\cdot 0}}{(1+e^{-2\cdot
+    0})^3} = \frac{-4+4}{2^3}= 0,\\
+    \frac{d^3C}{dt^3}(0)&=\frac{(8e^{-2\cdot 0}-32e^{-4\cdot 0}+8e^{-6\cdot 0})}{(1+e^{-2\cdot 0})^4}=\frac{8-32+8}{16}=-1.
+    \end{align*}
+
+    Y por último, sustituyendo en la fórmula del polinomio anterior se tiene que
+
+    $$
+    P_{C,0}^3(t)=\frac{1}{2}+\frac{1}{2}t+0\frac{t^2}{2!}-1\frac{t^3}{3!}=\frac{1}{2}+\frac{1}{2}t-\frac{1}{6}t^3.
+    $$
 
 a. La concentración del fármaco transcurridos 15 minutos ($0.25$ horas) es aproximadamente
-$$
-C(0.25)\approx P_{C,0}^3(0.25)= \frac{1}{2}+\frac{1}{2}0.25-\frac{1}{6}0.25^3= 0.6223958333 \mbox{ mg/dl}.
-$$
+
+    $$
+    C(0.25)\approx P_{C,0}^3(0.25)= \frac{1}{2}+\frac{1}{2}0.25-\frac{1}{6}0.25^3= 0.6223958333 \mbox{ mg/dl}.
+    $$
 :::
 
 
