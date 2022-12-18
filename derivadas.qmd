@@ -1044,20 +1044,63 @@ y = -49.91-(x-100) \Leftrightarrow y=-x+50.09.
 $$
 :::
 
-:::{#exr-trayectorias-3}
+:::{#exr-derivadas-parametricas-1}
 La cantidad de árboles en un ecosistema depende del tiempo según la función $a(t)=100\ln(t^2+1)$, y la cantidad de un determinado parásito de los árboles, también depende del tiempo según la función $p(t) = \sqrt[3]{t^2+ 2}$. Calcular la tasa de variación instantánea del número de parásitos en relación al número de árboles, en el instante en que el número de parásitos es $3$.
+:::
+
+:::{.callout-tip collapse="true"}
+## Solución
+$$
+\frac{da}{dp} = \frac{da/dt}{dp/dt} = \frac{\frac{200t}{t^2+1}}{\frac{2t}{3\sqrt[3]{(t^2+2)^2}}} = \frac{200t\cdot 3\sqrt[3]{(t^2+2)^2}}{2t(t^2+1)} = \frac{600t\sqrt[3]{(t^2+2)^2}}{2t^3+2t}.
+$$
+
+El instante en el que el número de parásitos es $3$ es 
+
+$$
+p(t)=\sqrt[3]{t^2+2} = 3 \Leftrightarrow t^2+2 = 27 \Leftrightarrow t^2=25 \Leftrightarrow t=\pm 5.
+$$
+
+Como en el contexto del problema podemos suponer que el tiempo es positivo, el instante en el que el número de parásitos es $3$ es $t=5$, y
+
+$$
+\frac{da}{dp} (t=3) = \frac{600\cdot 5\sqrt[3]{(5^2+2)^2}}{2\cdot 5^3+2\cdot 5} \approx 103.85 \mbox{ árboles/parásitos}.
+$$
 :::
 
 :::{#exr-derivada-implicita-1}
 Dada la función $xy+e^x-\log y=0$, calcular las ecuaciones de las rectas tangente y normal a ella en $x=0$.
 :::
 
-<!--
 :::{.callout-tip collapse="true"}
 ## Solución
-Tangente: $y=(e^2+e)x+e$. Normal: $y=\frac{-x}{e^2+e}+e$.
+Sustituyendo $x=0$ en la ecuación de la curva implícita se tiene 
+
+$$
+0\cdot y + e^0-\ln(y) = 0 \Leftrightarrow \ln(y) = 1 \Leftrightarrow y=e.
+$$
+
+Así pues, hay que calcular la ecuación de las rectas tangente y normal en el punto $(0,e)$.
+
+La ecuación de la recta tangente en $(0,e)$ es $y=e+\frac{dy}{dx}(x=0)(x-0)$. Para calcular $\frac{dy}{dx}$ tenemos que derivar implícitamente la ecuación de la curva.
+
+$$
+\begin{gathered}
+(xy+e^x-\ln(y))'=(0)' \Leftrightarrow y+xy'+e^x-\frac{y'}{y} = 0 \\ 
+\Leftrightarrow xy'-\frac{y'}{y} = -y-e^x \Leftrightarrow y'(x-\frac{1}{y}) = -y-e^x \\ 
+\Leftrightarrow y'\frac{xy-1}{y}=-y-e^x \Leftrightarrow y' = \frac{(-y-e^x)y}{xy-1},
+\end{gathered}
+$$
+
+que en el punto $(0,e)$ vale
+
+$$
+\frac{dy}{dx}(0,e) = \frac{(-e-e^0)e}{0e-1} = e^2+e.
+$$
+
+Así pues, la ecuación de la recta tangente a la curva implícita en el punto $(0,e)$ es $y = e+(e^2+e)x$.
+
+Por otro lado, la ecuación de la recta normal a la curva implícita en el punto $(0,e)$ es $y=e-\frac{1}{dy/dx (x=0)}(x-0) = e-\frac{x}{e^2+e}$.
 :::
--->
 
 :::{#exr-derivada-implicita-2}
 Suponiendo que la temperatura, $T$ en grados centígrados, y el volumen, $V$ en metros cúbicos, de un gas real encerrado en un contenedor de volumen variable están relacionados mediante la siguiente ecuación:
@@ -1067,18 +1110,19 @@ T^2(V^2-\pi^2)-V\cos(TV) = 0.
 $$
 
 a. Calcular la derivada del volumen con respecto a la temperatura en el momento en el que el volumen es de $\pi$ m$^3$ y la temperatura es medio grado centígrado.
+
 a. ¿Cuál sería la ecuación de la recta tangente a la gráfica de la función que daría el volumen en función de la temperatura en el mismo punto del apartado anterior?
 Suponiendo que tanto la temperatura como el volumen son, a su vez, funciones de la presión, qué ecuación ligaría la derivada de la temperatura con respecto a la presión con la derivada del volumen con respecto a la presión.
 :::
 
-<!--
 :::{.callout-tip collapse="true"}
 ## Solución
-a. $\frac{dV}{dT} = \frac{-2T(V^2-\pi^2)-V^2\operatorname{sen}(TV)}{2T^2V-\cos(TV)+TV\operatorname{sen}(TV)}$ y $\frac{dV}{dT}(V=\pi,T=0.5)= -pi$ m$^3$/ºC.
+a. $\frac{dV}{dT} = \frac{-2T(V^2-\pi^2)-V^2\operatorname{sen}(TV)}{2T^2V-\cos(TV)+TV\operatorname{sen}(TV)}$ y $\frac{dV}{dT}(V=\pi,T=0.5)= -\pi$ m$^3$/ºC.
+
 a. Tangente: $V=\pi(-T+1.5)$.
+
 a. $2T\frac{dT}{dP}(V^2-\pi^2)+T^2(2V\frac{dV}{dT})-\frac{dV}{dT}\cos(VT)-V(-\operatorname{sen}(TV)(\frac{dT}{dP}V+T\frac{dV}{dP})) =0$.
 :::
--->
 
 :::{#exr-derivada-implicita-3}
 Un cuerpo se mueve en el plano a través de los puntos de coordenadas $(x,y)$ relacionadas mediante la siguiente expresión:
@@ -1086,136 +1130,159 @@ $$
 2e^{xy} \operatorname{sen}(x) + y\cos(x) = 2.
 $$
 
-a. Calcular su posición cuando $x=\pi/2$
+a. Calcular su posición cuando $x=\pi/2$.
 a. Calcular la ecuación de la recta tangente a la gráfica de la función cuando $x=0$.
 :::
 
-
-<!--
 :::{.callout-tip collapse="true"}
 ## Solución
-a. El punto $(x_0,y_0)$ en el que se encontrará el cuerpo cuando $x_0=\pi/2$
-cumple la ecuación del enunciado. Por lo tanto:
-$$
-2e^{x_0y_0} \operatorname{sen}(x)_0 + y_0\cos(x)_0 = 2
-$$
-y sustituyendo $x_0=\pi/2$, obtenemos:
-$$
-2e^{\frac{\pi }{2}y_0 } \operatorname{sen}\frac{\pi }{2} + y_0 \cos \frac{\pi }{2}
-= 2 \Rightarrow 2e^{\frac{\pi }{2}y_0 }  = 2
-$$
-con lo cual:
-$$
-e^{\frac{\pi }{2}y_0 }  = 1 \Leftrightarrow y_0  = 0
-$$
+a. El punto $(x,y)$ en el que se encontrará el cuerpo cuando $x=0$
+cumple la ecuación del enunciado, de manera que sustituyendo $x=0$, se tiene
+
+    $$
+    2e^0 \operatorname{sen}(0) + y \cos(0) = 2 \Leftrightarrow y = 2.
+    $$
+
+    Por tanto el cuerpo se encontrará en la posición $(0,2)$.
 
 a. Sabemos que la ecuación de la recta tangente a la gráfica de
 la función en el punto de coordenadas $(x_0,y_0)$ es:
-$$
-y-y_0=f'(x_0)(x-x_0)
-$$
-En nuestro caso, no tenemos la expresión explícita de la función
-$f$, pero sí que tenemos la expresión de partida que define a $y$
-como función de $x$ de forma implícita. Suponiendo que $y$ es
-función de $x$ y derivando con respecto a $x$, obtenemos:
-$$
-2 e^{xy}(y + xy')\operatorname{sen}(x) + 2e^{xy}\cos(x) + y'\cos(x) - y\operatorname{sen}(x) = 0
-$$
-Y sacando como factor común $y'$ y despejando, nos queda:
-$$
-y' = \frac{{ - 2e^{xy} y \operatorname{sen}(x) - 2e^{xy} \cos(x) + y \operatorname{sen}
-x}}{{2xe^{xy} \operatorname{sen}(x) + \cos(x)}}
-$$
-Teniendo en cuenta que $x_0=0$, y sustituyendo en la expresión
-inicial, obtenemos el valor de $y_0$:
-$$
-2e^0 \operatorname{sen} 0 + y_0 \cos 0 = 2 \Rightarrow y_0  = 2
-$$
-Y teniendo en cuenta el valor de la derivada implícita obtenido
-anteriormente:
-$$
-f'(0) = y'(0,2) = \frac{{ - 2e^0 \cos 0}}{{\cos 0}} =  - 2
-$$
-Por lo tanto, la ecuación de la recta tangente es:
-$$
-y-2=-2(x-0)\Leftrightarrow y=-2x+2.
-$$
+
+    $$
+    y-y_0=\frac{dy}{dx}(x_0)(x-x_0)
+    $$
+
+    En nuestro caso, no tenemos la expresión explícita de la función
+    $y=f(x)$, pero sí que tenemos la expresión de partida que define a $y$
+    como función de $x$ de forma implícita. Suponiendo que $y$ es
+    función de $x$ y derivando implícitamente con respecto a $x$, obtenemos:
+
+    $$
+    2 e^{xy}(y + xy')\operatorname{sen}(x) + 2e^{xy}\cos(x) + y'\cos(x) - y\operatorname{sen}(x) = 0
+    $$
+
+    Y sacando como factor común $y'$ y despejando, nos queda:
+
+    $$
+    y' = \frac{{ - 2e^{xy} y \operatorname{sen}(x) - 2e^{xy} \cos(x) + y \operatorname{sen}(x)}}{{2xe^{xy} \operatorname{sen}(x) + \cos(x)}}
+    $$
+
+    Y en el punto $(0,2)$ vale
+
+    $$
+    y'(0,2) = \frac{{-2e^0 \cos(0)}}{{\cos(0)}} = -2.
+    $$
+
+    Por lo tanto, la ecuación de la recta tangente es:
+
+    $$
+    y-2=-2(x-0)\Leftrightarrow y=-2x+2.
+    $$
 :::
--->
 
 :::{#exr-derivada-implicita-4}
 Hallar la ecuación de la recta tangente y normal a la curva $x^2+y^2=3xy-1$ en los puntos en que $x=1$. Calcular también los extremos relativos y decir si son máximos o mínimos.
 :::
 
-<!--
 :::{.callout-tip collapse="true"}
 ## Solución
 Consideremos $y$ como función de $x$. Veamos primero los puntos de la curva en los que $x=1$:
+
 $$
 1^{2}+y^{2} = 3\cdot 1\cdot y-1 \Leftrightarrow y^{2} -3y+2 = 0.
 $$
+
 Resolviendo la ecuación obtenemos dos soluciones $y=1$ e $y=2$, de modo que existen dos puntos para los que $x=1$, que son el $(1,1)$ y el $(1,2)$.
 
-Para calcular las ecuaciones de las rectas tangente y normal en estos puntos, necesitamos calcular la derivada $dy/dx$ en dichos puntos. Derivamos implicitamente:
+Para calcular las ecuaciones de las rectas tangente y normal en estos puntos, necesitamos calcular la derivada $dy/dx$ en dichos puntos. Derivamos implícitamente:
+
+
 $$
-d(x^{2}+y^{2} = d(3xy-1) \Leftrightarrow 2xdx+2ydy = 3(dxy+xdy) \Leftrightarrow (2x-3y)dx+(2y-3x)dy = 0,
+\begin{gathered}
+d(x^{2}+y^{2} = d(3xy-1) \Leftrightarrow 2xdx+2ydy = 3(dxy+xdy) \\ \Leftrightarrow (2x-3y)dx+(2y-3x)dy = 0,
+\end{gathered}
 $$
+
 de donde se deduce
+
 $$
 \frac{dy}{dx} = \frac{3y-2x}{2y-3x},
 $$
+
 que en el punto $(1,1)$ vale
+
 $$
 \frac{dy}{dx} = \frac{3\cdot 1 - 2\cdot 1}{2\cdot 1-3\cdot 1} = -1,
 $$
+
 y en el punto $(1,2)$ vale
+
 $$
 \frac{dy}{dx} = \frac{3\cdot 2 - 2\cdot 1}{2\cdot 2-3\cdot 1} = 4.
 $$
+
 Así pues, la ecuación de la recta tangente en el punto $(1,1)$ es
+
 $$
 y-1 = \frac{dy}{dx}(1,1)(x-1) \Leftrightarrow y= 2-x,
 $$
+
 y la ecuación de la recta normal es
+
 $$
 y-1 = -\frac{1}{dy/dx}(1,1)(x-1) \Leftrightarrow y= x,
 $$
-mientras que la ecuación de la recta tangente en el punto $(1,2)$ es $$
+
+mientras que la ecuación de la recta tangente en el punto $(1,2)$ es 
+
+$$
 y-2 = \frac{dy}{dx}(1,2)(x-1) \Leftrightarrow y= 4x-2,
 $$
+
 y la ecuación de la recta normal es
+
 $$
 y-2 = -\frac{1}{dy/dx}(1,2)(x-1) \Leftrightarrow y=\frac{9-x}{4}.
 $$
 
 Por otro lado, para calcular los extremos relativos, primero calculamos los puntos críticos, que son los que anulan la primera derivada:
+
 $$
 \frac{dy}{dx}=\frac{3y-2x}{2y-3x}=0 \Leftrightarrow 3y-2x=0 \Leftrightarrow y=2x/3.
 $$
-Pero además deben pertenecer a la curva de la función, y por tanto deben satisfacer la ecuación de la función:
+
+Pero además deben cumplir la ecuación de la curva implícita,
+
 $$
-x^{2}+(2x/3)^{2}=3x(2x/3)-1 \Leftrightarrow x^{2}+4x^{2}/9 = 2x^{2}-1 \Leftrightarrow x^{2}=9/5 \Leftrightarrow x=\pm 3/\sqrt{5}.
+\begin{gathered}
+x^{2}+(2x/3)^{2}=3x(2x/3)-1 \Leftrightarrow x^{2}+4x^{2}/9 = 2x^{2}-1\\  \Leftrightarrow x^{2}=9/5 \Leftrightarrow x=\pm 3/\sqrt{5}.
+\end{gathered}
 $$
+
 Así pues, existen dos puntos críticos que son el $(3/\sqrt{5},2/\sqrt{5})$ y $(-3/\sqrt{5},-2/\sqrt{5})$. Para ver si son puntos de máximo o mínimo relativos, necesitamos calcular la segunda derivada en dichos puntos:
+
 $$
 \frac{d^{2}y}{dx^{2}}= \frac{d}{dx}\left(\frac{3y-2x}{2y-3x}\right) = \frac{(3\frac{dy}{dx}-2)(2y-3x)-(2\frac{dy}{dx}-3)(3y-2x)}{(2y-3x)^{2}}.
 $$
+
 En el punto, $(3/\sqrt{5},2/\sqrt{5})$ la segunda derivada vale
+
 $$
 \frac{d^{2}y}{dx^{2}}(3/\sqrt{5},2/\sqrt{5})=
 \frac{(3\cdot 0-2)(2\frac{2}{\sqrt{5}}-3\frac{3}{\sqrt{5}})-(2\cdot 0-3)(3\frac{2}{\sqrt{5}}-2\frac{3}{\sqrt{5}})}{(2\frac{2}{\sqrt{5}}-3\frac{3}{\sqrt{5}})^{2}} = 2\sqrt{5},
 $$
+
 que al ser positiva, indica que el punto $(3/\sqrt{5},2/\sqrt{5})$ es un punto de mínimo relativo.
 
 En el punto, $(-3/\sqrt{5},-2/\sqrt{5})$ la segunda derivada vale
+
 $$
 \frac{d^{2}y}{dx^{2}}(-3/\sqrt{5},-2/\sqrt{5})=
 \frac{(3\cdot 0-2)(2\frac{-2}{\sqrt{5}}-3\frac{-3}{\sqrt{5}})-(2\cdot 0-3)(3\frac{-2}{\sqrt{5}}-2\frac{-3}{\sqrt{5}})}{(2\frac{-2}{\sqrt{5}}-3\frac{--3}{\sqrt{5}})^{2}} = -2\sqrt{5},
 $$
-que al ser negativa, indica que el punto $(-3/\sqrt{5},-2/\sqrt{5})$ es un punto de máximo relativo.
 
+que al ser negativa, indica que el punto $(-3/\sqrt{5},-2/\sqrt{5})$ es un punto de máximo relativo.
 :::
--->
 
 :::{#exr-derivada-implicita-5}
 Dada  la curva $x^2-xy+y^2=3$,
@@ -1224,95 +1291,141 @@ a. Calcular los posibles extremos relativos de $y$, considerando $y$ como funci�
 a. Analizar si lo puntos anteriores son máximos o mínimos haciendo uso de la derivada segunda.
 :::
 
-<!--
 :::{.callout-tip collapse="true"}
 ## Solución
 a. Derivamos implícitamente la ecuación
-$$
-\frac{d}{dx}(x^2-xy+y^2)=\frac{d}{dx}3=0
-$$
-Derivando el lado izquierdo tenemos
-\begin{align*}
-\frac{d}{dx}(x^2-xy+y^2)&=
-\frac{d}{dx}(x^2)-\frac{d}{dx}(xy)+\frac{d}{dx}(y^2)=
-2x-(\frac{dx}{dx}y+x\frac{dy}{dx})+2y\frac{dy}{dx}=\\
-&=2x-y-x\frac{dy}{dx}+2y\frac{dy}{dx}
-=2x-y+(2y-x)\frac{dy}{dx}=0
-\end{align*}
-Los posibles extremos serán los puntos donde se anule la derivada, es decir, $\dfrac{dy}{dx}=0$. Sustituyendo en la ecuación anterior tenemos
-$$
-2x-y+(2y-x)\cdot 0= 2x-y=0 \Leftrightarrow y=2x.
-$$
-Y sustituyendo ahora en la ecuación de la función tenemos
-$$
-x^2-x\cdot 2x+(2x)^2=3 \Leftrightarrow x^2-2x^2+4x^2=3 \Leftrightarrow 3x^2=3 \Leftrightarrow x=\pm1.
-$$
-Por tanto, los posibles puntos de extremo serán (1,2) y (-1,-2).
+
+    $$
+    \frac{d}{dx}(x^2-xy+y^2)=\frac{d}{dx}3=0
+    $$
+
+    Derivando el lado izquierdo tenemos
+    \begin{align*}
+    \frac{d}{dx}(x^2-xy+y^2) &=
+    \frac{d}{dx}(x^2)-\frac{d}{dx}(xy)+\frac{d}{dx}(y^2)=\\ 
+    &= 2x-(\frac{dx}{dx}y+x\frac{dy}{dx})+2y\frac{dy}{dx}=\\
+    &= 2x-y-x\frac{dy}{dx}+2y\frac{dy}{dx}\\ 
+    &= 2x-y+(2y-x)\frac{dy}{dx}=0
+    \end{align*}
+
+    Los posibles extremos serán los puntos donde se anule la derivada, es decir, $\dfrac{dy}{dx}=0$. Sustituyendo en la ecuación anterior tenemos
+
+    $$
+    2x-y+(2y-x)\cdot 0= 2x-y=0 \Leftrightarrow y=2x.
+    $$
+
+    Y sustituyendo ahora en la ecuación de la función tenemos
+
+    $$
+    x^2-x\cdot 2x+(2x)^2=3 \Leftrightarrow x^2-2x^2+4x^2=3 \Leftrightarrow 3x^2=3 \Leftrightarrow x=\pm1.
+    $$
+
+    Por tanto, los posibles puntos de extremo serán (1,2) y (-1,-2).
 
 a. Para ver si los puntos anteriores son efectivamente extremos, calculamos la derivada segunda en dichos puntos. 
-\begin{align*}
-\frac{d^2}{dx^2}(x^2-xy+y^2)&=
-\frac{d}{dx}\left(\frac{d}{dx}(x^2-xy+y^2)\right)=\\
-&=\frac{d}{dx}\left(2x-y+(2y-x)\frac{dy}{dx}\right)=\\
-&=\frac{d}{dx}(2x)-\frac{d}{dx}y+\left(\frac{d}{dx}(2y-x)\frac{dy}{dx}+(2y-x)\frac{d}{dx}\frac{dy}{dx}\right)=\\
-&=2-\frac{dy}{dx}+\left(2\frac{dy}{dx}-\frac{dx}{dx}\right)\frac{dy}{dx}+(2y-x)\frac{d^2y}{dx^2}=\\
-&= 2-\frac{dy}{dx}+2\frac{d^2y}{dx^2}-\frac{dy}{dx}+(2y-x)\frac{d^2y}{dx^2}=
-2-2\frac{dy}{dx}+(2y-x+2)\frac{d^2y}{dx^2}=0
-\end{align*}
-Para el primer punto tenemos que sustituir $x=1$, $y=2$ y $\dfrac{dy}{dx}=0$, y queda
-$$
-2-2\cdot 0+(2\cdot 2-1+2)\frac{d^2y}{dx^2}=0 \Leftrightarrow 2+5\frac{d^2y}{dx^2}=0 \Leftrightarrow \frac{d^2y}{dx^2}=\frac{-2}{5},
-$$
-que al ser negativo indica que el en el punto $(1,2)$ hay un máximo.
 
-Para el segundo punto tenemos que sustituir $x=-1$, $y=-2$ y $\dfrac{dy}{dx}=0$, y queda
-$$
-2-2\cdot 0+(2\cdot (-2)-(-1)1+2)\frac{d^2y}{dx^2}=0 \Leftrightarrow 2-\frac{d^2y}{dx^2}=0 \Leftrightarrow \frac{d^2y}{dx^2}=2,
-$$
-que al ser positivo indica que el en el punto $(-1,-2)$ hay un mínimo.
+    \begin{align*}
+    \frac{d^2}{dx^2}(x^2-xy+y^2)&=
+    \frac{d}{dx}\left(\frac{d}{dx}(x^2-xy+y^2)\right)=\\
+    &=\frac{d}{dx}\left(2x-y+(2y-x)\frac{dy}{dx}\right)=\\
+    &=\frac{d}{dx}(2x)-\frac{d}{dx}y+\left(\frac{d}{dx}(2y-x)\frac{dy}{dx}+(2y-x)\frac{d}{dx}\frac{dy}{dx}\right)=\\
+    &=2-\frac{dy}{dx}+\left(2\frac{dy}{dx}-\frac{dx}{dx}\right)\frac{dy}{dx}+(2y-x)\frac{d^2y}{dx^2}=\\
+    &= 2-\frac{dy}{dx}+2\frac{d^2y}{dx^2}-\frac{dy}{dx}+(2y-x)\frac{d^2y}{dx^2}\\ 
+    &= 2-2\frac{dy}{dx}+(2y-x+2)\frac{d^2y}{dx^2}=0
+    \end{align*}
+
+    Para el primer punto tenemos que sustituir $x=1$, $y=2$ y $\dfrac{dy}{dx}=0$, y queda
+
+    $$
+    2-2\cdot 0+(2\cdot 2-1+2)\frac{d^2y}{dx^2}=0 \Leftrightarrow 2+5\frac{d^2y}{dx^2}=0 \Leftrightarrow \frac{d^2y}{dx^2}=\frac{-2}{5},
+    $$
+
+    que al ser negativo indica que el en el punto $(1,2)$ hay un máximo relativo.
+
+    Para el segundo punto tenemos que sustituir $x=-1$, $y=-2$ y $\dfrac{dy}{dx}=0$, y queda
+
+    $$
+    2-2\cdot 0+(2\cdot (-2)-(-1)1+2)\frac{d^2y}{dx^2}=0 \Leftrightarrow 2-\frac{d^2y}{dx^2}=0 \Leftrightarrow \frac{d^2y}{dx^2}=2,
+    $$
+
+    que al ser positivo indica que el en el punto $(-1,-2)$ hay un mínimo relativo.
 :::
--->
 
 :::{#exr-taylor-1}
 Dada la función $f(x)=\operatorname{sen}(x)$, se pide:
 
-a.  Obtener el polinomio de Taylor de tercer grado de $f$ en el punto $x=\pi/6$ y usarlo para aproximar $\operatorname{sen}(1/2)$ dando una cota del error cometido.
-a.  Dar una aproximación de $\operatorname{sen}(1/2)$ usando un el polinomio de Taylor de quinto grado en el punto $x=0$, acotando el error cometido.
+a.  Obtener el polinomio de Taylor de tercer grado de $f$ en el punto $a=\pi/6$ y usarlo para aproximar $\operatorname{sen}(1/2)$ dando una cota del error cometido.
+a.  Dar una aproximación de $\operatorname{sen}(1/2)$ usando un el polinomio de Taylor de quinto grado en el punto $a=0$, acotando el error cometido.
 :::
 
-<!--
 :::{.callout-tip collapse="true"}
 ## Solución
-a. $P^3_{f,\pi/6}(x) = \frac{1}{2}+\frac{\sqrt{3}}{2}(x-\pi/6)-\frac{1}{4}(x-\pi/6)^2-\frac{\sqrt{3}}{12}(x-\pi/6)^3$.\\
-$\sen 1/2 \approx P^3_{f,\pi/6}(1/2) = 0.4794255322$.\\
-$|R^3_{f,\pi/6}(1/2)|\leq 6.46\cdot 10^{-9}$.
-a. $P^5_{f,0}(x) = x -\frac{1}{6} x^3 + \frac{1}{120}x^5$.\\
-$\sen 1/2 \approx P^5_{f,0}(1/2) = 0.4794270833$.\\
-$|R^5_{f,0}(1/2)|\leq 2.170\cdot 10^{-5}$.
+a. La fórmula del polinomio de Taylor de tercer grado de $f$ en el punto $a=\pi/6$ es
+
+    $$
+    P^3_{f,\pi/6}(x) = f(\pi/6)+f'(\pi/6)(x-\pi/6)+ \frac{f''(\pi/6)}{2}(x-\pi/6)^2+\frac{f'''(\pi/6)}{3!}(x-\pi/6)^3.
+    $$
+
+    Necesitamos calcular, por tanto, hasta la tercera derivada en el punto $a=\pi/6$.
+
+    \begin{align*}
+    f(x) = \operatorname{sen}(x)\quad &  f(\pi/6) = 0.5\\ 
+    f'(x)=\cos(x) \quad & f'(\pi/6) = \sqrt{3}/2\\ 
+    f''(x) = -\operatorname{sen}(x) \quad & f''(\pi/6) = -0.5\\ 
+    f'''(x) = -\cos(x) \quad & f'''(\pi/6) = -\sqrt{3}/2.
+    \end{align*}
+
+    Así pues, sustituyendo en la ecuación del polinomio anterior se llega a
+
+    $$
+    P^3_{f,\pi/6}(x) = \frac{1}{2}+\frac{\sqrt{3}}{2}(x-\pi/6)-\frac{1}{4}(x-\pi/6)^2-\frac{\sqrt{3}}{12}(x-\pi/6)^3.
+    $$
+
+    Sustituyendo en $x=1/2$ se tiene que $\operatorname{sen}(1/2) \approx P^3_{f,\pi/6}(1/2) = 0.4794255322$.
+
+    El error cometido en la aproximación es el resto $R^3_{f,\pi/6}(1/2)$. Expresando el resto de Taylor en la forma de Lagrange se tiene
+
+    $$
+    R^3_{f,\pi/6}(1/2) = \frac{f''''(x)}{4!}\left(\frac{1}{2}-\frac{\pi}{6}\right)^4 = \frac{\operatorname{sen}(x)}{24}\left(\frac{1}{2}-\frac{\pi}{6}\right)^4 \mbox{ con }x\in\left(\frac{1}{2}-\frac{\pi}{6}\right).
+    $$
+
+    Como $|\operatorname{sen}(x)|\leq 1$ $\forall x\in \mathbb{R}$, se tiene que una cota del error cometido es 
+
+    $$
+    |R^3_{f,\pi/6}(1/2)|\leq \frac{1}{24}\left(\frac{1}{2}-\frac{\pi}{6}\right)^4 = 6.46\cdot 10^{-9}.
+    $$
+
+a. La fórmula del polinomio de MacLaurin de quinto grado de $f$ es 
+
+    $$
+    P^3_{f,0}(x) = f(0)+f'(0)x+ \frac{f''(0)}{2}x^2+\frac{f'''(0)}{3!}x^3+ +\frac{f''''(0)}{4!}x^4+ +\frac{f'''''(0)}{5!}x^5
+    $$
+
+Calculando hasta la quinta derivada en $0$ y sustituyendo en esta fórmula se tiene
+$$
+P^5_{f,0}(x) = x -\frac{1}{6} x^3 + \frac{1}{120}x^5.
+$$
+
+Sustituyendo en $x=1/2$ se tiene que $\operatorname{sen}(1/2) \approx P^5_{f,0}(1/2) = 0.4794270833$, y podemos obtener una cota del error cometido de forma similar a la del apartado anterior, obteniendo $|R^5_{f,0}(1/2)|\leq 2.170\cdot 10^{-5}$.
 :::
--->
 
 :::{#exr-taylor-2}
 Calcular el polinomio de Maclaurin de tercer grado para la función $f(x)=\operatorname{arcsen}(x)$.
 :::
 
-<!--
 :::{.callout-tip collapse="true"}
 ## Solución
 $P^3_{f,0}(x) = x+\frac{1}{6}x^3$.
 :::
--->
 
 :::{#exr-taylor-3}
 Calcular $\cos(1)$ con un error menor que $10^{-7}$ usando aproximaciones de Taylor.
 :::
 
-<!--
 :::{.callout-tip collapse="true"}
 ## Solución
 
 :::
--->
 
 :::{#exr-taylor-4}
 Obtener polinomio de Maclaurin de grado 3 de las funciones $\operatorname{sen}(x)$ y $\operatorname{tg}(x)$, y utilizar los polinomios anteriores para calcular
@@ -1321,7 +1434,6 @@ $$
 $$
 :::
 
-<!--
 :::{.callout-tip collapse="true"}
 ## Solución
 La formula general para calcular el polinomio de Maclaurin de grado 3 de una función $f(x)$ es:
@@ -1362,7 +1474,6 @@ $$
 \lim_{x\rightarrow 0}\frac{\operatorname{tg}(x)-x}{x-\sen x} = \lim_{x\rightarrow 0}\frac{Q_{0}^{3}(x)-x}{x-P_{0}^{3}(x)} = \lim_{x\rightarrow 0}\frac{x+\frac{x^{3}}{3}-x}{x-x+\frac{x^{3}}{6}} = \lim_{x\rightarrow 0}\frac{\frac{x^{3}}{3}}{\frac{x^{3}}{6}} = \lim_{x\rightarrow 0}\frac{6}{3}=2.
 $$
 :::
--->
 
 :::{#exr-taylor-5}
 La función $C(t)$ da la concentración (en mg/dl) de un fármaco en el torrente sanguíneo en función del tiempo (en horas):
@@ -1374,7 +1485,6 @@ a. Calcular el polinomio de Maclaurin de orden 3.
 a. Utilizando el polinomio anterior, calcular aproximadamente la concentración del fármaco transcurridos 15 minutos.
 :::
 
-<!--
 :::{.callout-tip collapse="true"}
 ## Solución
 a.
@@ -1420,9 +1530,8 @@ a. La concentración del fármaco transcurridos 15 minutos ($0.25$ horas) es apr
 $$
 C(0.25)\approx P_{C,0}^3(0.25)= \frac{1}{2}+\frac{1}{2}0.25-\frac{1}{6}0.25^3= 0.6223958333 \mbox{ mg/dl}.
 $$
-
 :::
--->
+
 
 
 

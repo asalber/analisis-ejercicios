@@ -1353,168 +1353,236 @@ y = -49.91-(x-100) \Leftrightarrow y=-x+50.09.
 </div>
 </div>
 </div>
-<div id="exr-trayectorias-3" class="theorem exercise">
+<div id="exr-derivadas-parametricas-1" class="theorem exercise">
 <p><span class="theorem-title"><strong>Ejercicio 6.35 </strong></span>La cantidad de árboles en un ecosistema depende del tiempo según la función <span class="math inline">\(a(t)=100\ln(t^2+1)\)</span>, y la cantidad de un determinado parásito de los árboles, también depende del tiempo según la función <span class="math inline">\(p(t) = \sqrt[3]{t^2+ 2}\)</span>. Calcular la tasa de variación instantánea del número de parásitos en relación al número de árboles, en el instante en que el número de parásitos es <span class="math inline">\(3\)</span>.</p>
+</div>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-34-contents" aria-controls="callout-34" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-34" class="callout-34-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><span class="math display">\[
+\frac{da}{dp} = \frac{da/dt}{dp/dt} = \frac{\frac{200t}{t^2+1}}{\frac{2t}{3\sqrt[3]{(t^2+2)^2}}} = \frac{200t\cdot 3\sqrt[3]{(t^2+2)^2}}{2t(t^2+1)} = \frac{600t\sqrt[3]{(t^2+2)^2}}{2t^3+2t}.
+\]</span></p>
+<p>El instante en el que el número de parásitos es <span class="math inline">\(3\)</span> es</p>
+<p><span class="math display">\[
+p(t)=\sqrt[3]{t^2+2} = 3 \Leftrightarrow t^2+2 = 27 \Leftrightarrow t^2=25 \Leftrightarrow t=\pm 5.
+\]</span></p>
+<p>Como en el contexto del problema podemos suponer que el tiempo es positivo, el instante en el que el número de parásitos es <span class="math inline">\(3\)</span> es <span class="math inline">\(t=5\)</span>, y</p>
+<p><span class="math display">\[
+\frac{da}{dp} (t=3) = \frac{600\cdot 5\sqrt[3]{(5^2+2)^2}}{2\cdot 5^3+2\cdot 5} \approx 103.85 \mbox{ árboles/parásitos}.
+\]</span></p>
+</div>
+</div>
 </div>
 <div id="exr-derivada-implicita-1" class="theorem exercise">
 <p><span class="theorem-title"><strong>Ejercicio 6.36 </strong></span>Dada la función <span class="math inline">\(xy+e^x-\log y=0\)</span>, calcular las ecuaciones de las rectas tangente y normal a ella en <span class="math inline">\(x=0\)</span>.</p>
 </div>
-<!--
-:::{.callout-tip collapse="true"}
-## Solución
-Tangente: $y=(e^2+e)x+e$. Normal: $y=\frac{-x}{e^2+e}+e$.
-:::
--->
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-35-contents" aria-controls="callout-35" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-35" class="callout-35-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Sustituyendo <span class="math inline">\(x=0\)</span> en la ecuación de la curva implícita se tiene</p>
+<p><span class="math display">\[
+0\cdot y + e^0-\ln(y) = 0 \Leftrightarrow \ln(y) = 1 \Leftrightarrow y=e.
+\]</span></p>
+<p>Así pues, hay que calcular la ecuación de las rectas tangente y normal en el punto <span class="math inline">\((0,e)\)</span>.</p>
+<p>La ecuación de la recta tangente en <span class="math inline">\((0,e)\)</span> es <span class="math inline">\(y=e+\frac{dy}{dx}(x=0)(x-0)\)</span>. Para calcular <span class="math inline">\(\frac{dy}{dx}\)</span> tenemos que derivar implícitamente la ecuación de la curva.</p>
+<p><span class="math display">\[
+\begin{gathered}
+(xy+e^x-\ln(y))'=(0)' \Leftrightarrow y+xy'+e^x-\frac{y'}{y} = 0 \\
+\Leftrightarrow xy'-\frac{y'}{y} = -y-e^x \Leftrightarrow y'(x-\frac{1}{y}) = -y-e^x \\
+\Leftrightarrow y'\frac{xy-1}{y}=-y-e^x \Leftrightarrow y' = \frac{(-y-e^x)y}{xy-1},
+\end{gathered}
+\]</span></p>
+<p>que en el punto <span class="math inline">\((0,e)\)</span> vale</p>
+<p><span class="math display">\[
+\frac{dy}{dx}(0,e) = \frac{(-e-e^0)e}{0e-1} = e^2+e.
+\]</span></p>
+<p>Así pues, la ecuación de la recta tangente a la curva implícita en el punto <span class="math inline">\((0,e)\)</span> es <span class="math inline">\(y = e+(e^2+e)x\)</span>.</p>
+<p>Por otro lado, la ecuación de la recta normal a la curva implícita en el punto <span class="math inline">\((0,e)\)</span> es <span class="math inline">\(y=e-\frac{1}{dy/dx (x=0)}(x-0) = e-\frac{x}{e^2+e}\)</span>.</p>
+</div>
+</div>
+</div>
 <div id="exr-derivada-implicita-2" class="theorem exercise">
 <p><span class="theorem-title"><strong>Ejercicio 6.37 </strong></span>Suponiendo que la temperatura, <span class="math inline">\(T\)</span> en grados centígrados, y el volumen, <span class="math inline">\(V\)</span> en metros cúbicos, de un gas real encerrado en un contenedor de volumen variable están relacionados mediante la siguiente ecuación:</p>
 <p><span class="math display">\[
 T^2(V^2-\pi^2)-V\cos(TV) = 0.
 \]</span></p>
 <ol type="a">
-<li>Calcular la derivada del volumen con respecto a la temperatura en el momento en el que el volumen es de <span class="math inline">\(\pi\)</span> m<span class="math inline">\(^3\)</span> y la temperatura es medio grado centígrado.</li>
-<li>¿Cuál sería la ecuación de la recta tangente a la gráfica de la función que daría el volumen en función de la temperatura en el mismo punto del apartado anterior? Suponiendo que tanto la temperatura como el volumen son, a su vez, funciones de la presión, qué ecuación ligaría la derivada de la temperatura con respecto a la presión con la derivada del volumen con respecto a la presión.</li>
+<li><p>Calcular la derivada del volumen con respecto a la temperatura en el momento en el que el volumen es de <span class="math inline">\(\pi\)</span> m<span class="math inline">\(^3\)</span> y la temperatura es medio grado centígrado.</p></li>
+<li><p>¿Cuál sería la ecuación de la recta tangente a la gráfica de la función que daría el volumen en función de la temperatura en el mismo punto del apartado anterior? Suponiendo que tanto la temperatura como el volumen son, a su vez, funciones de la presión, qué ecuación ligaría la derivada de la temperatura con respecto a la presión con la derivada del volumen con respecto a la presión.</p></li>
 </ol>
 </div>
-<!--
-:::{.callout-tip collapse="true"}
-## Solución
-a. $\frac{dV}{dT} = \frac{-2T(V^2-\pi^2)-V^2\operatorname{sen}(TV)}{2T^2V-\cos(TV)+TV\operatorname{sen}(TV)}$ y $\frac{dV}{dT}(V=\pi,T=0.5)= -pi$ m$^3$/ºC.
-a. Tangente: $V=\pi(-T+1.5)$.
-a. $2T\frac{dT}{dP}(V^2-\pi^2)+T^2(2V\frac{dV}{dT})-\frac{dV}{dT}\cos(VT)-V(-\operatorname{sen}(TV)(\frac{dT}{dP}V+T\frac{dV}{dP})) =0$.
-:::
--->
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-36-contents" aria-controls="callout-36" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-36" class="callout-36-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="a">
+<li><p><span class="math inline">\(\frac{dV}{dT} = \frac{-2T(V^2-\pi^2)-V^2\operatorname{sen}(TV)}{2T^2V-\cos(TV)+TV\operatorname{sen}(TV)}\)</span> y <span class="math inline">\(\frac{dV}{dT}(V=\pi,T=0.5)= -\pi\)</span> m<span class="math inline">\(^3\)</span>/ºC.</p></li>
+<li><p>Tangente: <span class="math inline">\(V=\pi(-T+1.5)\)</span>.</p></li>
+<li><p><span class="math inline">\(2T\frac{dT}{dP}(V^2-\pi^2)+T^2(2V\frac{dV}{dT})-\frac{dV}{dT}\cos(VT)-V(-\operatorname{sen}(TV)(\frac{dT}{dP}V+T\frac{dV}{dP})) =0\)</span>.</p></li>
+</ol>
+</div>
+</div>
+</div>
 <div id="exr-derivada-implicita-3" class="theorem exercise">
 <p><span class="theorem-title"><strong>Ejercicio 6.38 </strong></span>Un cuerpo se mueve en el plano a través de los puntos de coordenadas <span class="math inline">\((x,y)\)</span> relacionadas mediante la siguiente expresión: <span class="math display">\[
 2e^{xy} \operatorname{sen}(x) + y\cos(x) = 2.
 \]</span></p>
 <ol type="a">
-<li>Calcular su posición cuando <span class="math inline">\(x=\pi/2\)</span></li>
+<li>Calcular su posición cuando <span class="math inline">\(x=\pi/2\)</span>.</li>
 <li>Calcular la ecuación de la recta tangente a la gráfica de la función cuando <span class="math inline">\(x=0\)</span>.</li>
 </ol>
 </div>
-<!--
-:::{.callout-tip collapse="true"}
-## Solución
-a. El punto $(x_0,y_0)$ en el que se encontrará el cuerpo cuando $x_0=\pi/2$
-cumple la ecuación del enunciado. Por lo tanto:
-$$
-2e^{x_0y_0} \operatorname{sen}(x)_0 + y_0\cos(x)_0 = 2
-$$
-y sustituyendo $x_0=\pi/2$, obtenemos:
-$$
-2e^{\frac{\pi }{2}y_0 } \operatorname{sen}\frac{\pi }{2} + y_0 \cos \frac{\pi }{2}
-= 2 \Rightarrow 2e^{\frac{\pi }{2}y_0 }  = 2
-$$
-con lo cual:
-$$
-e^{\frac{\pi }{2}y_0 }  = 1 \Leftrightarrow y_0  = 0
-$$
-
-a. Sabemos que la ecuación de la recta tangente a la gráfica de
-la función en el punto de coordenadas $(x_0,y_0)$ es:
-$$
-y-y_0=f'(x_0)(x-x_0)
-$$
-En nuestro caso, no tenemos la expresión explícita de la función
-$f$, pero sí que tenemos la expresión de partida que define a $y$
-como función de $x$ de forma implícita. Suponiendo que $y$ es
-función de $x$ y derivando con respecto a $x$, obtenemos:
-$$
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-37-contents" aria-controls="callout-37" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-37" class="callout-37-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="a">
+<li><p>El punto <span class="math inline">\((x,y)\)</span> en el que se encontrará el cuerpo cuando <span class="math inline">\(x=0\)</span> cumple la ecuación del enunciado, de manera que sustituyendo <span class="math inline">\(x=0\)</span>, se tiene</p>
+<p><span class="math display">\[
+2e^0 \operatorname{sen}(0) + y \cos(0) = 2 \Leftrightarrow y = 2.
+\]</span></p>
+<p>Por tanto el cuerpo se encontrará en la posición <span class="math inline">\((0,2)\)</span>.</p></li>
+<li><p>Sabemos que la ecuación de la recta tangente a la gráfica de la función en el punto de coordenadas <span class="math inline">\((x_0,y_0)\)</span> es:</p>
+<p><span class="math display">\[
+y-y_0=\frac{dy}{dx}(x_0)(x-x_0)
+\]</span></p>
+<p>En nuestro caso, no tenemos la expresión explícita de la función <span class="math inline">\(y=f(x)\)</span>, pero sí que tenemos la expresión de partida que define a <span class="math inline">\(y\)</span> como función de <span class="math inline">\(x\)</span> de forma implícita. Suponiendo que <span class="math inline">\(y\)</span> es función de <span class="math inline">\(x\)</span> y derivando implícitamente con respecto a <span class="math inline">\(x\)</span>, obtenemos:</p>
+<p><span class="math display">\[
 2 e^{xy}(y + xy')\operatorname{sen}(x) + 2e^{xy}\cos(x) + y'\cos(x) - y\operatorname{sen}(x) = 0
-$$
-Y sacando como factor común $y'$ y despejando, nos queda:
-$$
-y' = \frac{{ - 2e^{xy} y \operatorname{sen}(x) - 2e^{xy} \cos(x) + y \operatorname{sen}
-x}}{{2xe^{xy} \operatorname{sen}(x) + \cos(x)}}
-$$
-Teniendo en cuenta que $x_0=0$, y sustituyendo en la expresión
-inicial, obtenemos el valor de $y_0$:
-$$
-2e^0 \operatorname{sen} 0 + y_0 \cos 0 = 2 \Rightarrow y_0  = 2
-$$
-Y teniendo en cuenta el valor de la derivada implícita obtenido
-anteriormente:
-$$
-f'(0) = y'(0,2) = \frac{{ - 2e^0 \cos 0}}{{\cos 0}} =  - 2
-$$
-Por lo tanto, la ecuación de la recta tangente es:
-$$
+\]</span></p>
+<p>Y sacando como factor común <span class="math inline">\(y'\)</span> y despejando, nos queda:</p>
+<p><span class="math display">\[
+y' = \frac{{ - 2e^{xy} y \operatorname{sen}(x) - 2e^{xy} \cos(x) + y \operatorname{sen}(x)}}{{2xe^{xy} \operatorname{sen}(x) + \cos(x)}}
+\]</span></p>
+<p>Y en el punto <span class="math inline">\((0,2)\)</span> vale</p>
+<p><span class="math display">\[
+y'(0,2) = \frac{{-2e^0 \cos(0)}}{{\cos(0)}} = -2.
+\]</span></p>
+<p>Por lo tanto, la ecuación de la recta tangente es:</p>
+<p><span class="math display">\[
 y-2=-2(x-0)\Leftrightarrow y=-2x+2.
-$$
-:::
--->
+\]</span></p></li>
+</ol>
+</div>
+</div>
+</div>
 <div id="exr-derivada-implicita-4" class="theorem exercise">
 <p><span class="theorem-title"><strong>Ejercicio 6.39 </strong></span>Hallar la ecuación de la recta tangente y normal a la curva <span class="math inline">\(x^2+y^2=3xy-1\)</span> en los puntos en que <span class="math inline">\(x=1\)</span>. Calcular también los extremos relativos y decir si son máximos o mínimos.</p>
 </div>
-<!--
-:::{.callout-tip collapse="true"}
-## Solución
-Consideremos $y$ como función de $x$. Veamos primero los puntos de la curva en los que $x=1$:
-$$
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-38-contents" aria-controls="callout-38" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-38" class="callout-38-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Consideremos <span class="math inline">\(y\)</span> como función de <span class="math inline">\(x\)</span>. Veamos primero los puntos de la curva en los que <span class="math inline">\(x=1\)</span>:</p>
+<p><span class="math display">\[
 1^{2}+y^{2} = 3\cdot 1\cdot y-1 \Leftrightarrow y^{2} -3y+2 = 0.
-$$
-Resolviendo la ecuación obtenemos dos soluciones $y=1$ e $y=2$, de modo que existen dos puntos para los que $x=1$, que son el $(1,1)$ y el $(1,2)$.
-
-Para calcular las ecuaciones de las rectas tangente y normal en estos puntos, necesitamos calcular la derivada $dy/dx$ en dichos puntos. Derivamos implicitamente:
-$$
-d(x^{2}+y^{2} = d(3xy-1) \Leftrightarrow 2xdx+2ydy = 3(dxy+xdy) \Leftrightarrow (2x-3y)dx+(2y-3x)dy = 0,
-$$
-de donde se deduce
-$$
+\]</span></p>
+<p>Resolviendo la ecuación obtenemos dos soluciones <span class="math inline">\(y=1\)</span> e <span class="math inline">\(y=2\)</span>, de modo que existen dos puntos para los que <span class="math inline">\(x=1\)</span>, que son el <span class="math inline">\((1,1)\)</span> y el <span class="math inline">\((1,2)\)</span>.</p>
+<p>Para calcular las ecuaciones de las rectas tangente y normal en estos puntos, necesitamos calcular la derivada <span class="math inline">\(dy/dx\)</span> en dichos puntos. Derivamos implícitamente:</p>
+<p><span class="math display">\[
+\begin{gathered}
+d(x^{2}+y^{2} = d(3xy-1) \Leftrightarrow 2xdx+2ydy = 3(dxy+xdy) \\ \Leftrightarrow (2x-3y)dx+(2y-3x)dy = 0,
+\end{gathered}
+\]</span></p>
+<p>de donde se deduce</p>
+<p><span class="math display">\[
 \frac{dy}{dx} = \frac{3y-2x}{2y-3x},
-$$
-que en el punto $(1,1)$ vale
-$$
+\]</span></p>
+<p>que en el punto <span class="math inline">\((1,1)\)</span> vale</p>
+<p><span class="math display">\[
 \frac{dy}{dx} = \frac{3\cdot 1 - 2\cdot 1}{2\cdot 1-3\cdot 1} = -1,
-$$
-y en el punto $(1,2)$ vale
-$$
+\]</span></p>
+<p>y en el punto <span class="math inline">\((1,2)\)</span> vale</p>
+<p><span class="math display">\[
 \frac{dy}{dx} = \frac{3\cdot 2 - 2\cdot 1}{2\cdot 2-3\cdot 1} = 4.
-$$
-Así pues, la ecuación de la recta tangente en el punto $(1,1)$ es
-$$
+\]</span></p>
+<p>Así pues, la ecuación de la recta tangente en el punto <span class="math inline">\((1,1)\)</span> es</p>
+<p><span class="math display">\[
 y-1 = \frac{dy}{dx}(1,1)(x-1) \Leftrightarrow y= 2-x,
-$$
-y la ecuación de la recta normal es
-$$
+\]</span></p>
+<p>y la ecuación de la recta normal es</p>
+<p><span class="math display">\[
 y-1 = -\frac{1}{dy/dx}(1,1)(x-1) \Leftrightarrow y= x,
-$$
-mientras que la ecuación de la recta tangente en el punto $(1,2)$ es $$
+\]</span></p>
+<p>mientras que la ecuación de la recta tangente en el punto <span class="math inline">\((1,2)\)</span> es</p>
+<p><span class="math display">\[
 y-2 = \frac{dy}{dx}(1,2)(x-1) \Leftrightarrow y= 4x-2,
-$$
-y la ecuación de la recta normal es
-$$
+\]</span></p>
+<p>y la ecuación de la recta normal es</p>
+<p><span class="math display">\[
 y-2 = -\frac{1}{dy/dx}(1,2)(x-1) \Leftrightarrow y=\frac{9-x}{4}.
-$$
-
-Por otro lado, para calcular los extremos relativos, primero calculamos los puntos críticos, que son los que anulan la primera derivada:
-$$
+\]</span></p>
+<p>Por otro lado, para calcular los extremos relativos, primero calculamos los puntos críticos, que son los que anulan la primera derivada:</p>
+<p><span class="math display">\[
 \frac{dy}{dx}=\frac{3y-2x}{2y-3x}=0 \Leftrightarrow 3y-2x=0 \Leftrightarrow y=2x/3.
-$$
-Pero además deben pertenecer a la curva de la función, y por tanto deben satisfacer la ecuación de la función:
-$$
-x^{2}+(2x/3)^{2}=3x(2x/3)-1 \Leftrightarrow x^{2}+4x^{2}/9 = 2x^{2}-1 \Leftrightarrow x^{2}=9/5 \Leftrightarrow x=\pm 3/\sqrt{5}.
-$$
-Así pues, existen dos puntos críticos que son el $(3/\sqrt{5},2/\sqrt{5})$ y $(-3/\sqrt{5},-2/\sqrt{5})$. Para ver si son puntos de máximo o mínimo relativos, necesitamos calcular la segunda derivada en dichos puntos:
-$$
+\]</span></p>
+<p>Pero además deben cumplir la ecuación de la curva implícita,</p>
+<p><span class="math display">\[
+\begin{gathered}
+x^{2}+(2x/3)^{2}=3x(2x/3)-1 \Leftrightarrow x^{2}+4x^{2}/9 = 2x^{2}-1\\  \Leftrightarrow x^{2}=9/5 \Leftrightarrow x=\pm 3/\sqrt{5}.
+\end{gathered}
+\]</span></p>
+<p>Así pues, existen dos puntos críticos que son el <span class="math inline">\((3/\sqrt{5},2/\sqrt{5})\)</span> y <span class="math inline">\((-3/\sqrt{5},-2/\sqrt{5})\)</span>. Para ver si son puntos de máximo o mínimo relativos, necesitamos calcular la segunda derivada en dichos puntos:</p>
+<p><span class="math display">\[
 \frac{d^{2}y}{dx^{2}}= \frac{d}{dx}\left(\frac{3y-2x}{2y-3x}\right) = \frac{(3\frac{dy}{dx}-2)(2y-3x)-(2\frac{dy}{dx}-3)(3y-2x)}{(2y-3x)^{2}}.
-$$
-En el punto, $(3/\sqrt{5},2/\sqrt{5})$ la segunda derivada vale
-$$
+\]</span></p>
+<p>En el punto, <span class="math inline">\((3/\sqrt{5},2/\sqrt{5})\)</span> la segunda derivada vale</p>
+<p><span class="math display">\[
 \frac{d^{2}y}{dx^{2}}(3/\sqrt{5},2/\sqrt{5})=
 \frac{(3\cdot 0-2)(2\frac{2}{\sqrt{5}}-3\frac{3}{\sqrt{5}})-(2\cdot 0-3)(3\frac{2}{\sqrt{5}}-2\frac{3}{\sqrt{5}})}{(2\frac{2}{\sqrt{5}}-3\frac{3}{\sqrt{5}})^{2}} = 2\sqrt{5},
-$$
-que al ser positiva, indica que el punto $(3/\sqrt{5},2/\sqrt{5})$ es un punto de mínimo relativo.
-
-En el punto, $(-3/\sqrt{5},-2/\sqrt{5})$ la segunda derivada vale
-$$
+\]</span></p>
+<p>que al ser positiva, indica que el punto <span class="math inline">\((3/\sqrt{5},2/\sqrt{5})\)</span> es un punto de mínimo relativo.</p>
+<p>En el punto, <span class="math inline">\((-3/\sqrt{5},-2/\sqrt{5})\)</span> la segunda derivada vale</p>
+<p><span class="math display">\[
 \frac{d^{2}y}{dx^{2}}(-3/\sqrt{5},-2/\sqrt{5})=
 \frac{(3\cdot 0-2)(2\frac{-2}{\sqrt{5}}-3\frac{-3}{\sqrt{5}})-(2\cdot 0-3)(3\frac{-2}{\sqrt{5}}-2\frac{-3}{\sqrt{5}})}{(2\frac{-2}{\sqrt{5}}-3\frac{--3}{\sqrt{5}})^{2}} = -2\sqrt{5},
-$$
-que al ser negativa, indica que el punto $(-3/\sqrt{5},-2/\sqrt{5})$ es un punto de máximo relativo.
-
-:::
--->
+\]</span></p>
+<p>que al ser negativa, indica que el punto <span class="math inline">\((-3/\sqrt{5},-2/\sqrt{5})\)</span> es un punto de máximo relativo.</p>
+</div>
+</div>
+</div>
 <div id="exr-derivada-implicita-5" class="theorem exercise">
 <p><span class="theorem-title"><strong>Ejercicio 6.40 </strong></span>Dada la curva <span class="math inline">\(x^2-xy+y^2=3\)</span>,</p>
 <ol type="a">
@@ -1522,137 +1590,203 @@ que al ser negativa, indica que el punto $(-3/\sqrt{5},-2/\sqrt{5})$ es un punto
 <li>Analizar si lo puntos anteriores son máximos o mínimos haciendo uso de la derivada segunda.</li>
 </ol>
 </div>
-<!--
-:::{.callout-tip collapse="true"}
-## Solución
-a. Derivamos implícitamente la ecuación
-$$
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-39-contents" aria-controls="callout-39" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-39" class="callout-39-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="a">
+<li><p>Derivamos implícitamente la ecuación</p>
+<p><span class="math display">\[
 \frac{d}{dx}(x^2-xy+y^2)=\frac{d}{dx}3=0
-$$
-Derivando el lado izquierdo tenemos
-\begin{align*}
-\frac{d}{dx}(x^2-xy+y^2)&=
-\frac{d}{dx}(x^2)-\frac{d}{dx}(xy)+\frac{d}{dx}(y^2)=
-2x-(\frac{dx}{dx}y+x\frac{dy}{dx})+2y\frac{dy}{dx}=\\
-&=2x-y-x\frac{dy}{dx}+2y\frac{dy}{dx}
-=2x-y+(2y-x)\frac{dy}{dx}=0
-\end{align*}
-Los posibles extremos serán los puntos donde se anule la derivada, es decir, $\dfrac{dy}{dx}=0$. Sustituyendo en la ecuación anterior tenemos
-$$
+\]</span></p>
+<p>Derivando el lado izquierdo tenemos <span class="math display">\[\begin{align*}
+\frac{d}{dx}(x^2-xy+y^2) &amp;=
+\frac{d}{dx}(x^2)-\frac{d}{dx}(xy)+\frac{d}{dx}(y^2)=\\
+&amp;= 2x-(\frac{dx}{dx}y+x\frac{dy}{dx})+2y\frac{dy}{dx}=\\
+&amp;= 2x-y-x\frac{dy}{dx}+2y\frac{dy}{dx}\\
+&amp;= 2x-y+(2y-x)\frac{dy}{dx}=0
+\end{align*}\]</span></p>
+<p>Los posibles extremos serán los puntos donde se anule la derivada, es decir, <span class="math inline">\(\dfrac{dy}{dx}=0\)</span>. Sustituyendo en la ecuación anterior tenemos</p>
+<p><span class="math display">\[
 2x-y+(2y-x)\cdot 0= 2x-y=0 \Leftrightarrow y=2x.
-$$
-Y sustituyendo ahora en la ecuación de la función tenemos
-$$
+\]</span></p>
+<p>Y sustituyendo ahora en la ecuación de la función tenemos</p>
+<p><span class="math display">\[
 x^2-x\cdot 2x+(2x)^2=3 \Leftrightarrow x^2-2x^2+4x^2=3 \Leftrightarrow 3x^2=3 \Leftrightarrow x=\pm1.
-$$
-Por tanto, los posibles puntos de extremo serán (1,2) y (-1,-2).
-
-a. Para ver si los puntos anteriores son efectivamente extremos, calculamos la derivada segunda en dichos puntos. 
-\begin{align*}
-\frac{d^2}{dx^2}(x^2-xy+y^2)&=
+\]</span></p>
+<p>Por tanto, los posibles puntos de extremo serán (1,2) y (-1,-2).</p></li>
+<li><p>Para ver si los puntos anteriores son efectivamente extremos, calculamos la derivada segunda en dichos puntos.</p>
+<p><span class="math display">\[\begin{align*}
+\frac{d^2}{dx^2}(x^2-xy+y^2)&amp;=
 \frac{d}{dx}\left(\frac{d}{dx}(x^2-xy+y^2)\right)=\\
-&=\frac{d}{dx}\left(2x-y+(2y-x)\frac{dy}{dx}\right)=\\
-&=\frac{d}{dx}(2x)-\frac{d}{dx}y+\left(\frac{d}{dx}(2y-x)\frac{dy}{dx}+(2y-x)\frac{d}{dx}\frac{dy}{dx}\right)=\\
-&=2-\frac{dy}{dx}+\left(2\frac{dy}{dx}-\frac{dx}{dx}\right)\frac{dy}{dx}+(2y-x)\frac{d^2y}{dx^2}=\\
-&= 2-\frac{dy}{dx}+2\frac{d^2y}{dx^2}-\frac{dy}{dx}+(2y-x)\frac{d^2y}{dx^2}=
-2-2\frac{dy}{dx}+(2y-x+2)\frac{d^2y}{dx^2}=0
-\end{align*}
-Para el primer punto tenemos que sustituir $x=1$, $y=2$ y $\dfrac{dy}{dx}=0$, y queda
-$$
+&amp;=\frac{d}{dx}\left(2x-y+(2y-x)\frac{dy}{dx}\right)=\\
+&amp;=\frac{d}{dx}(2x)-\frac{d}{dx}y+\left(\frac{d}{dx}(2y-x)\frac{dy}{dx}+(2y-x)\frac{d}{dx}\frac{dy}{dx}\right)=\\
+&amp;=2-\frac{dy}{dx}+\left(2\frac{dy}{dx}-\frac{dx}{dx}\right)\frac{dy}{dx}+(2y-x)\frac{d^2y}{dx^2}=\\
+&amp;= 2-\frac{dy}{dx}+2\frac{d^2y}{dx^2}-\frac{dy}{dx}+(2y-x)\frac{d^2y}{dx^2}\\
+&amp;= 2-2\frac{dy}{dx}+(2y-x+2)\frac{d^2y}{dx^2}=0
+\end{align*}\]</span></p>
+<p>Para el primer punto tenemos que sustituir <span class="math inline">\(x=1\)</span>, <span class="math inline">\(y=2\)</span> y <span class="math inline">\(\dfrac{dy}{dx}=0\)</span>, y queda</p>
+<p><span class="math display">\[
 2-2\cdot 0+(2\cdot 2-1+2)\frac{d^2y}{dx^2}=0 \Leftrightarrow 2+5\frac{d^2y}{dx^2}=0 \Leftrightarrow \frac{d^2y}{dx^2}=\frac{-2}{5},
-$$
-que al ser negativo indica que el en el punto $(1,2)$ hay un máximo.
-
-Para el segundo punto tenemos que sustituir $x=-1$, $y=-2$ y $\dfrac{dy}{dx}=0$, y queda
-$$
+\]</span></p>
+<p>que al ser negativo indica que el en el punto <span class="math inline">\((1,2)\)</span> hay un máximo relativo.</p>
+<p>Para el segundo punto tenemos que sustituir <span class="math inline">\(x=-1\)</span>, <span class="math inline">\(y=-2\)</span> y <span class="math inline">\(\dfrac{dy}{dx}=0\)</span>, y queda</p>
+<p><span class="math display">\[
 2-2\cdot 0+(2\cdot (-2)-(-1)1+2)\frac{d^2y}{dx^2}=0 \Leftrightarrow 2-\frac{d^2y}{dx^2}=0 \Leftrightarrow \frac{d^2y}{dx^2}=2,
-$$
-que al ser positivo indica que el en el punto $(-1,-2)$ hay un mínimo.
-:::
--->
+\]</span></p>
+<p>que al ser positivo indica que el en el punto <span class="math inline">\((-1,-2)\)</span> hay un mínimo relativo.</p></li>
+</ol>
+</div>
+</div>
+</div>
 <div id="exr-taylor-1" class="theorem exercise">
 <p><span class="theorem-title"><strong>Ejercicio 6.41 </strong></span>Dada la función <span class="math inline">\(f(x)=\operatorname{sen}(x)\)</span>, se pide:</p>
 <ol type="a">
-<li>Obtener el polinomio de Taylor de tercer grado de <span class="math inline">\(f\)</span> en el punto <span class="math inline">\(x=\pi/6\)</span> y usarlo para aproximar <span class="math inline">\(\operatorname{sen}(1/2)\)</span> dando una cota del error cometido.</li>
-<li>Dar una aproximación de <span class="math inline">\(\operatorname{sen}(1/2)\)</span> usando un el polinomio de Taylor de quinto grado en el punto <span class="math inline">\(x=0\)</span>, acotando el error cometido.</li>
+<li>Obtener el polinomio de Taylor de tercer grado de <span class="math inline">\(f\)</span> en el punto <span class="math inline">\(a=\pi/6\)</span> y usarlo para aproximar <span class="math inline">\(\operatorname{sen}(1/2)\)</span> dando una cota del error cometido.</li>
+<li>Dar una aproximación de <span class="math inline">\(\operatorname{sen}(1/2)\)</span> usando un el polinomio de Taylor de quinto grado en el punto <span class="math inline">\(a=0\)</span>, acotando el error cometido.</li>
 </ol>
 </div>
-<!--
-:::{.callout-tip collapse="true"}
-## Solución
-a. $P^3_{f,\pi/6}(x) = \frac{1}{2}+\frac{\sqrt{3}}{2}(x-\pi/6)-\frac{1}{4}(x-\pi/6)^2-\frac{\sqrt{3}}{12}(x-\pi/6)^3$.\\
-$\sen 1/2 \approx P^3_{f,\pi/6}(1/2) = 0.4794255322$.\\
-$|R^3_{f,\pi/6}(1/2)|\leq 6.46\cdot 10^{-9}$.
-a. $P^5_{f,0}(x) = x -\frac{1}{6} x^3 + \frac{1}{120}x^5$.\\
-$\sen 1/2 \approx P^5_{f,0}(1/2) = 0.4794270833$.\\
-$|R^5_{f,0}(1/2)|\leq 2.170\cdot 10^{-5}$.
-:::
--->
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-40-contents" aria-controls="callout-40" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-40" class="callout-40-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="a">
+<li><p>La fórmula del polinomio de Taylor de tercer grado de <span class="math inline">\(f\)</span> en el punto <span class="math inline">\(a=\pi/6\)</span> es</p>
+<p><span class="math display">\[
+P^3_{f,\pi/6}(x) = f(\pi/6)+f'(\pi/6)(x-\pi/6)+ \frac{f''(\pi/6)}{2}(x-\pi/6)^2+\frac{f'''(\pi/6)}{3!}(x-\pi/6)^3.
+\]</span></p>
+<p>Necesitamos calcular, por tanto, hasta la tercera derivada en el punto <span class="math inline">\(a=\pi/6\)</span>.</p>
+<p><span class="math display">\[\begin{align*}
+f(x) = \operatorname{sen}(x)\quad &amp;  f(\pi/6) = 0.5\\
+f'(x)=\cos(x) \quad &amp; f'(\pi/6) = \sqrt{3}/2\\
+f''(x) = -\operatorname{sen}(x) \quad &amp; f''(\pi/6) = -0.5\\
+f'''(x) = -\cos(x) \quad &amp; f'''(\pi/6) = -\sqrt{3}/2.
+\end{align*}\]</span></p>
+<p>Así pues, sustituyendo en la ecuación del polinomio anterior se llega a</p>
+<p><span class="math display">\[
+P^3_{f,\pi/6}(x) = \frac{1}{2}+\frac{\sqrt{3}}{2}(x-\pi/6)-\frac{1}{4}(x-\pi/6)^2-\frac{\sqrt{3}}{12}(x-\pi/6)^3.
+\]</span></p>
+<p>Sustituyendo en <span class="math inline">\(x=1/2\)</span> se tiene que <span class="math inline">\(\operatorname{sen}(1/2) \approx P^3_{f,\pi/6}(1/2) = 0.4794255322\)</span>.</p>
+<p>El error cometido en la aproximación es el resto <span class="math inline">\(R^3_{f,\pi/6}(1/2)\)</span>. Expresando el resto de Taylor en la forma de Lagrange se tiene</p>
+<p><span class="math display">\[
+R^3_{f,\pi/6}(1/2) = \frac{f''''(x)}{4!}\left(\frac{1}{2}-\frac{\pi}{6}\right)^4 = \frac{\operatorname{sen}(x)}{24}\left(\frac{1}{2}-\frac{\pi}{6}\right)^4 \mbox{ con }x\in\left(\frac{1}{2}-\frac{\pi}{6}\right).
+\]</span></p>
+<p>Como <span class="math inline">\(|\operatorname{sen}(x)|\leq 1\)</span> <span class="math inline">\(\forall x\in \mathbb{R}\)</span>, se tiene que una cota del error cometido es</p>
+<p><span class="math display">\[
+|R^3_{f,\pi/6}(1/2)|\leq \frac{1}{24}\left(\frac{1}{2}-\frac{\pi}{6}\right)^4 = 6.46\cdot 10^{-9}.
+\]</span></p></li>
+<li><p>La fórmula del polinomio de MacLaurin de quinto grado de <span class="math inline">\(f\)</span> es</p>
+<p><span class="math display">\[
+P^3_{f,0}(x) = f(0)+f'(0)x+ \frac{f''(0)}{2}x^2+\frac{f'''(0)}{3!}x^3+ +\frac{f''''(0)}{4!}x^4+ +\frac{f'''''(0)}{5!}x^5
+\]</span></p></li>
+</ol>
+<p>Calculando hasta la quinta derivada en <span class="math inline">\(0\)</span> y sustituyendo en esta fórmula se tiene <span class="math display">\[
+P^5_{f,0}(x) = x -\frac{1}{6} x^3 + \frac{1}{120}x^5.
+\]</span></p>
+<p>Sustituyendo en <span class="math inline">\(x=1/2\)</span> se tiene que <span class="math inline">\(\operatorname{sen}(1/2) \approx P^5_{f,0}(1/2) = 0.4794270833\)</span>, y podemos obtener una cota del error cometido de forma similar a la del apartado anterior, obteniendo <span class="math inline">\(|R^5_{f,0}(1/2)|\leq 2.170\cdot 10^{-5}\)</span>.</p>
+</div>
+</div>
+</div>
 <div id="exr-taylor-2" class="theorem exercise">
 <p><span class="theorem-title"><strong>Ejercicio 6.42 </strong></span>Calcular el polinomio de Maclaurin de tercer grado para la función <span class="math inline">\(f(x)=\operatorname{arcsen}(x)\)</span>.</p>
 </div>
-<!--
-:::{.callout-tip collapse="true"}
-## Solución
-$P^3_{f,0}(x) = x+\frac{1}{6}x^3$.
-:::
--->
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-41-contents" aria-controls="callout-41" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-41" class="callout-41-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><span class="math inline">\(P^3_{f,0}(x) = x+\frac{1}{6}x^3\)</span>.</p>
+</div>
+</div>
+</div>
 <div id="exr-taylor-3" class="theorem exercise">
 <p><span class="theorem-title"><strong>Ejercicio 6.43 </strong></span>Calcular <span class="math inline">\(\cos(1)\)</span> con un error menor que <span class="math inline">\(10^{-7}\)</span> usando aproximaciones de Taylor.</p>
 </div>
-<!--
-:::{.callout-tip collapse="true"}
-## Solución
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-42-contents" aria-controls="callout-42" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-42" class="callout-42-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
 
-:::
--->
+</div>
+</div>
+</div>
 <div id="exr-taylor-4" class="theorem exercise">
 <p><span class="theorem-title"><strong>Ejercicio 6.44 </strong></span>Obtener polinomio de Maclaurin de grado 3 de las funciones <span class="math inline">\(\operatorname{sen}(x)\)</span> y <span class="math inline">\(\operatorname{tg}(x)\)</span>, y utilizar los polinomios anteriores para calcular <span class="math display">\[
 \lim_{x\rightarrow 0}\frac{\operatorname{tg}(x)-x}{x-\operatorname{sen}(x)}
 \]</span></p>
 </div>
-<!--
-:::{.callout-tip collapse="true"}
-## Solución
-La formula general para calcular el polinomio de Maclaurin de grado 3 de una función $f(x)$ es:
-$$
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-43-contents" aria-controls="callout-43" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-43" class="callout-43-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>La formula general para calcular el polinomio de Maclaurin de grado 3 de una función <span class="math inline">\(f(x)\)</span> es: <span class="math display">\[
 P_{0}^{3}(x)=f(0)+f^{\prime }(0)x+\frac{f^{\prime \prime }(0)}{2!}x^{2}+\frac{f^{\prime \prime \prime }(0)}{3!}x^{3}.
-$$
-
-Consideremos, en primer lugar, la función $\sen x$, y calculemos sus tres primeras derivadas en 0:
-$$
+\]</span></p>
+<p>Consideremos, en primer lugar, la función <span class="math inline">\(\sen x\)</span>, y calculemos sus tres primeras derivadas en 0: <span class="math display">\[
 \begin{array}{lll}
-f(x)=\sen x &  & f(0)=\sen 0=0, \\
-f^{\prime }(x)=\cos x &  & f^{\prime }(0)=\cos 0=1, \\
-f^{\prime \prime }(x)=-\sen x &  & f^{\prime \prime }(0)=-\sen0=0, \\
-f^{\prime \prime \prime }(x)=-\cos x &  & f^{\prime \prime \prime }(0)=-\cos 0=-1.
+f(x)=\sen x &amp;  &amp; f(0)=\sen 0=0, \\
+f^{\prime }(x)=\cos x &amp;  &amp; f^{\prime }(0)=\cos 0=1, \\
+f^{\prime \prime }(x)=-\sen x &amp;  &amp; f^{\prime \prime }(0)=-\sen0=0, \\
+f^{\prime \prime \prime }(x)=-\cos x &amp;  &amp; f^{\prime \prime \prime }(0)=-\cos 0=-1.
 \end{array}
-$$
-Sustituyendo en la fórmula de arriba, llegamos al primer polinomio que buscamos:
-$$
+\]</span> Sustituyendo en la fórmula de arriba, llegamos al primer polinomio que buscamos: <span class="math display">\[
 P_{0}^{3}(x)=0+1\cdot x+\frac{0}{2!}x^{2}+\frac{-1}{3!}x^{3}=x-\frac{x^{3}}{6}.
-$$
-
-Consideremos ahora la función $\operatorname{tg}(x)$ y calculemos sus tres primeras derivadas en 0:
-$$
+\]</span></p>
+<p>Consideremos ahora la función <span class="math inline">\(\operatorname{tg}(x)\)</span> y calculemos sus tres primeras derivadas en 0: <span class="math display">\[
 \begin{array}{lll}
-g(x)=\operatorname{tg}(x) &  & g(0)=\operatorname{tg}(0)=0 \\
-g^{\prime }(x)=1+\operatorname{tg}(x)^2 &  & g^{\prime }(0)=1+\operatorname{tg}(0)^2 0=1 \\
-g^{\prime \prime }(x)= 2\operatorname{tg}(x)+2\operatorname{tg}(x)^3 &  & g^{\prime \prime}(0)= 2\operatorname{tg}(0)+2\operatorname{tg}(0)^3=0 \\
-g^{\prime \prime \prime }(x)=2+ 8\operatorname{tg}(x)^2+6\operatorname{tg}(x)^4 &  & g^{\prime \prime \prime }(0)= 2+ 8\operatorname{tg}(0)^2+6\operatorname{tg}(0)^4=2
+g(x)=\operatorname{tg}(x) &amp;  &amp; g(0)=\operatorname{tg}(0)=0 \\
+g^{\prime }(x)=1+\operatorname{tg}(x)^2 &amp;  &amp; g^{\prime }(0)=1+\operatorname{tg}(0)^2 0=1 \\
+g^{\prime \prime }(x)= 2\operatorname{tg}(x)+2\operatorname{tg}(x)^3 &amp;  &amp; g^{\prime \prime}(0)= 2\operatorname{tg}(0)+2\operatorname{tg}(0)^3=0 \\
+g^{\prime \prime \prime }(x)=2+ 8\operatorname{tg}(x)^2+6\operatorname{tg}(x)^4 &amp;  &amp; g^{\prime \prime \prime }(0)= 2+ 8\operatorname{tg}(0)^2+6\operatorname{tg}(0)^4=2
 \end{array}
-$$
-Sustituyendo de nuevo en la fórmula de arriba, pero utilizando esta vez $g(x)$ en lugar de $f(x)$, llegamos al otro polinomio que buscamos:
-$$
+\]</span> Sustituyendo de nuevo en la fórmula de arriba, pero utilizando esta vez <span class="math inline">\(g(x)\)</span> en lugar de <span class="math inline">\(f(x)\)</span>, llegamos al otro polinomio que buscamos: <span class="math display">\[
 Q_{0}^{3}(x)=0+1\cdot x+\frac{0}{2!}x^{2}+\frac{2}{3!}x^{3}=x+\frac{x^{3}}{3}
-$$
-
-Finalmente, para calcular ahora el límite que nos piden, podemos sustituir $\sen x$ por $P_{0}^{3}(x)$ y $\operatorname{tg}(x)$ por $Q_{0}^{3}(x)$, teniendo en cuenta dichos polinomios se comportan de igual forma que las correspondientes funciones en un entorno del 0. Así pues, tenemos:
-$$
+\]</span></p>
+<p>Finalmente, para calcular ahora el límite que nos piden, podemos sustituir <span class="math inline">\(\sen x\)</span> por <span class="math inline">\(P_{0}^{3}(x)\)</span> y <span class="math inline">\(\operatorname{tg}(x)\)</span> por <span class="math inline">\(Q_{0}^{3}(x)\)</span>, teniendo en cuenta dichos polinomios se comportan de igual forma que las correspondientes funciones en un entorno del 0. Así pues, tenemos: <span class="math display">\[
 \lim_{x\rightarrow 0}\frac{\operatorname{tg}(x)-x}{x-\sen x} = \lim_{x\rightarrow 0}\frac{Q_{0}^{3}(x)-x}{x-P_{0}^{3}(x)} = \lim_{x\rightarrow 0}\frac{x+\frac{x^{3}}{3}-x}{x-x+\frac{x^{3}}{6}} = \lim_{x\rightarrow 0}\frac{\frac{x^{3}}{3}}{\frac{x^{3}}{6}} = \lim_{x\rightarrow 0}\frac{6}{3}=2.
-$$
-:::
--->
+\]</span></p>
+</div>
+</div>
+</div>
 <div id="exr-taylor-5" class="theorem exercise">
 <p><span class="theorem-title"><strong>Ejercicio 6.45 </strong></span>La función <span class="math inline">\(C(t)\)</span> da la concentración (en mg/dl) de un fármaco en el torrente sanguíneo en función del tiempo (en horas): <span class="math display">\[
 C(t) = \frac{1}{{1 + e^{-2t}}}
@@ -1662,55 +1796,58 @@ C(t) = \frac{1}{{1 + e^{-2t}}}
 <li>Utilizando el polinomio anterior, calcular aproximadamente la concentración del fármaco transcurridos 15 minutos.</li>
 </ol>
 </div>
-<!--
-:::{.callout-tip collapse="true"}
-## Solución
-a.
-La fórmula del polinomio de Maclaurin de orden 3 para la función $C(t)$ es:
-\begin{equation}
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-44-contents" aria-controls="callout-44" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-44" class="callout-44-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="a">
+<li>La fórmula del polinomio de Maclaurin de orden 3 para la función <span class="math inline">\(C(t)\)</span> es: <span class="math display">\[\begin{equation}
 \label{e:Maclaurin}
 P_{C,0}^3(t)=C(0)+\frac{dC}{dt}(0)t+\frac{d^2C}{dt^2}(0)\frac{t^2}{2!}+\frac{d^3C}{dt^3}(0)\frac{t^3}{3!}
-\end{equation}
-Necesitamos calcular las tres primeras derivadas:
-\begin{align*}
-\frac{dC}{dt} &= \frac{2e^{-2t}}{(1+e^{-2t})^2},\\
-\frac{d^2C}{dt^2} &=
+\end{equation}\]</span> Necesitamos calcular las tres primeras derivadas: <span class="math display">\[\begin{align*}
+\frac{dC}{dt} &amp;= \frac{2e^{-2t}}{(1+e^{-2t})^2},\\
+\frac{d^2C}{dt^2} &amp;=
 \frac{\frac{d}{dt}(2e^{-2t})(1+e^{-2t})^2-2e^{-2t}\frac{d}{dt}(1+e^{-2t})^2}{(1+e^{-2t})^4} =\\
-&= \frac{-4e^{-2t}(1+e^{-2t})^2- 2e^{-2t}2(1+e^{-2t})(-2e^{-2t})}{(1+e^{-2t})^4}
+&amp;= \frac{-4e^{-2t}(1+e^{-2t})^2- 2e^{-2t}2(1+e^{-2t})(-2e^{-2t})}{(1+e^{-2t})^4}
 = \frac{-4e^{-2t}+4e^{-4t}}{(1+e^{-2t})^3},\\
 \frac{d^3C}{dt^3}
-&=
+&amp;=
 \frac{\frac{d}{dt}(-4e^{-2t}1+4e^{-4t})(1+e^{-2t})^3-(-4e^{-2t}+4e^{-4t})\frac{d}{dt}(1+e^{-2t})^3}{(1+e^{-2t})^6}=\\
-&=
+&amp;=
 \frac{(8e^{-2t}-16e^{-4t})(1+e^{-2t})^3-(-4e^{-2t}+4e^{-4t})3(1+e^{-2t})^2(-2e^{-2t})}{(1+e^{-2t})^6}=\\
-&=
+&amp;=
 \frac{(8e^{-2t}-16e^{-4t})(1+e^{-2t})-(-4e^{-2t}+4e^{-4t})(-6e^{-2t})}{(1+e^{-2t})^4}=\\
-&=
+&amp;=
 \frac{(8e^{-2t}-8e^{-4t}-16e^{-6t})-(24e^{-4t}-24e^{-6t})}{(1+e^{-2t})^4}=\\
-&=
+&amp;=
 \frac{8e^{-2t}-32e^{-4t}+8e^{-6t}}{(1+e^{-2t})^4}.
-\end{align*}
-Sustituyendo para $t=0$ tenemos:
-\begin{align*}
-C(0)&= \frac{1}{1+e^{-2\cdot 0}}=\frac{1}{2},\\
-\frac{dC}{dt}(0) &= \frac{2e^{-2\cdot 0}}{(1+e^{-2\cdot 0})^2} = \frac{2}{2^2}=\frac{1}{2},\\
-\frac{d^2C}{dt^2}(0) &= \frac{-4e^{-2\cdot 0}+4e^{-4\cdot 0}}{(1+e^{-2\cdot
+\end{align*}\]</span> Sustituyendo para <span class="math inline">\(t=0\)</span> tenemos: <span class="math display">\[\begin{align*}
+C(0)&amp;= \frac{1}{1+e^{-2\cdot 0}}=\frac{1}{2},\\
+\frac{dC}{dt}(0) &amp;= \frac{2e^{-2\cdot 0}}{(1+e^{-2\cdot 0})^2} = \frac{2}{2^2}=\frac{1}{2},\\
+\frac{d^2C}{dt^2}(0) &amp;= \frac{-4e^{-2\cdot 0}+4e^{-4\cdot 0}}{(1+e^{-2\cdot
 0})^3} = \frac{-4+4}{2^3}= 0,\\
-\frac{d^3C}{dt^3}(0)&=\frac{(8e^{-2\cdot 0}-32e^{-4\cdot 0}+8e^{-6\cdot 0})}{(1+e^{-2\cdot 0})^4}=\frac{8-32+8}{16}=-1.
-\end{align*}
-
-Y por último, sustituyendo en la ecuación \ref{e:Maclaurin} llegamos al polinomio
-$$
+\frac{d^3C}{dt^3}(0)&amp;=\frac{(8e^{-2\cdot 0}-32e^{-4\cdot 0}+8e^{-6\cdot 0})}{(1+e^{-2\cdot 0})^4}=\frac{8-32+8}{16}=-1.
+\end{align*}\]</span></li>
+</ol>
+<p>Y por último, sustituyendo en la ecuación <span class="math inline">\(\ref{e:Maclaurin}\)</span> llegamos al polinomio <span class="math display">\[
 P_{C,0}^3(t)=\frac{1}{2}+\frac{1}{2}t+0\frac{t^2}{2!}-1\frac{t^3}{3!}=\frac{1}{2}+\frac{1}{2}t-\frac{1}{6}t^3.
-$$
-
-a. La concentración del fármaco transcurridos 15 minutos ($0.25$ horas) es aproximadamente
-$$
+\]</span></p>
+<ol type="a">
+<li>La concentración del fármaco transcurridos 15 minutos (<span class="math inline">\(0.25\)</span> horas) es aproximadamente <span class="math display">\[
 C(0.25)\approx P_{C,0}^3(0.25)= \frac{1}{2}+\frac{1}{2}0.25-\frac{1}{6}0.25^3= 0.6223958333 \mbox{ mg/dl}.
-$$
-
-:::
--->
+\]</span></li>
+</ol>
+</div>
+</div>
+</div>
 
 
 
