@@ -961,38 +961,6 @@ Solución
 <div id="exr-extremos-2" class="theorem exercise">
 <p><span class="theorem-title"><strong>Ejercicio 6.22 </strong></span>Hallar <span class="math inline">\(a\)</span>, <span class="math inline">\(b\)</span> y <span class="math inline">\(c\)</span> en la función <span class="math inline">\(f(x)=x^3+bx^2+cx+d\)</span> para que tenga un punto de inflexión en <span class="math inline">\(x=3\)</span>, pase por el punto <span class="math inline">\((1,0)\)</span> y alcance un máximo en <span class="math inline">\(x=1\)</span>.</p>
 </div>
-<div id="exr-extremos-3" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 6.23 </strong></span>La cantidad de trigo en una cosecha <span class="math inline">\(C\)</span> depende del nivel de nitrógeno en el suelo <span class="math inline">\(n\)</span> según la ecuación</p>
-<p><span class="math display">\[
-C(n) = \frac{n}{1+n^2},\quad n\geq 0.
-\]</span></p>
-<p>¿Para qué nivel de nitrógeno se obtendrá la mayor cosecha de trigo?</p>
-</div>
-<div id="exr-extremos-4" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 6.24 </strong></span>La velocidad <span class="math inline">\(v\)</span> de una reacción irreversible <span class="math inline">\(A+B\rightarrow AB\)</span> es función de la concentración <span class="math inline">\(x\)</span> del producto <span class="math inline">\(AB\)</span> y puede expresarse según la ecuación</p>
-<p><span class="math display">\[
-v(x) = 4(3-x)(5-x).
-\]</span> ¿Qué valor de <span class="math inline">\(x\)</span> maximiza la velocidad de reacción?</p>
-</div>
-<div id="exr-extremos-5" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 6.25 </strong></span>Un naufrago se encuentra en una isla situada en un plano con coordenadas <span class="math inline">\((2,0)\)</span>. Se sabe que un ferry hace siempre la trayectoria dada por la función <span class="math inline">\(f(x)=\sqrt{x+1}\)</span>. ¿Hacia qué punto de la trayectoria del ferry debe nadar el naufrago para recorrer la menor distancia posible? ¿Qué distancia recorrerá si nada hacia ese punto?</p>
-</div>
-<div id="exr-extremos-6" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 6.26 </strong></span>Un hotel alquila habitaciones por un precio entre 40€ y 100€ diarios. Se ha observado que el número de habitaciones que alquilan depende del precio <span class="math inline">\(x\)</span> según la función <span class="math inline">\(h(x)=300-3x\)</span>. ¿Qué precio se debe cobrar por habitación para obtener el máximo beneficio?</p>
-</div>
-<div id="exr-extremos-7" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 6.27 </strong></span>Existen organismos que se reproducen una sola vez en su vida como por ejemplo los salmones. En este tipo de especies, la velocidad de incremento per cápita <span class="math inline">\(v\)</span>, que mide la capacidad reproductiva, depende de la edad <span class="math inline">\(x\)</span> según la ecuación</p>
-<p><span class="math display">\[
-v(x) = \frac{\ln(p(x)h(x))}{x},
-\]</span></p>
-<p>donde <span class="math inline">\(p(x)\)</span> es la probabilidad de sobrevivir hasta la edad <span class="math inline">\(x\)</span> y <span class="math inline">\(h(x)\)</span> es el número de nacimientos de hembras a la edad <span class="math inline">\(x\)</span>. Calcular la edad óptima de reproducción, es decir, el valor que maximice <span class="math inline">\(v\)</span>, para <span class="math inline">\(p(x)=e^{-0.1x}\)</span> y <span class="math inline">\(h(x)=4x^{0.9}\)</span>.</p>
-</div>
-<div id="exr-extremos-8" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 6.28 </strong></span>Un lata de refresco cilíndrica contiene <span class="math inline">\(33\)</span> cl. Hallar las dimensiones de la lata para que la cantidad de aluminio utilizada en su creación sea mínima.</p>
-</div>
-<div id="exr-extremos-9" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 6.29 </strong></span>La distancia en kilómetros que recorre un coche de alquiler con 1 litro de gasolina depende de la velocidad a la que circule según la función <span class="math inline">\(d(x)=120-x\)</span> para <span class="math inline">\(x\in(50,120)\)</span>. Si el coste de la gasolina es de <span class="math inline">\(2\)</span> €/l y el coste del alquiler es de <span class="math inline">\(10\)</span> €/h, ¿a qué velocidad debe circular para que el coste del trayecto sea mínimo? ¿Cuál será el coste por kilómetro si circula a esa velocidad?</p>
-</div>
 <div class="callout-tip callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-22-contents" aria-controls="callout-22" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -1004,6 +972,174 @@ Solución
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
 <div id="callout-22" class="callout-22-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Calculamos las dos primeras derivadas.</p>
+<p><span class="math display">\[\begin{align*}
+f'(x) &amp;= 3x^2-2bx+c\\
+f''(x) &amp;= 6x-2b
+\end{align*}\]</span></p>
+<p>Para que la función tenga un punto de inflexión en <span class="math inline">\(x=3\)</span> debe ser <span class="math inline">\(f''(3)=0\)</span>, es decir, <span class="math inline">\(f''(3) = 6\cdot 3 - 2b = 18-2b = 0\)</span>, de donde se deduce que <span class="math inline">\(b=9\)</span>.</p>
+<p>Para que la función tenga un máximo en <span class="math inline">\(x=1\)</span> debe ser <span class="math inline">\(f'(1)=0\)</span>, es decir, <span class="math inline">\(f'(1)=3\cdot 1^2-2\cdot 9\cdot 1+c = 3-18+c = -15+c=0\)</span>, de donde se deduce que <span class="math inline">\(c=15\)</span>.</p>
+<p>Finalmente, para que pase por el punto <span class="math inline">\((1,0\)</span>)$ debe ser <span class="math inline">\(f(1)=0\)</span>, es decir, <span class="math inline">\(f(1) = 1^3-9\cdot 1^2+15\cdot 1+d = 1-9+15+d = 7+d=0\)</span>, de donde se deduce que <span class="math inline">\(d=-7\)</span>.</p>
+</div>
+</div>
+</div>
+<div id="exr-extremos-3" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 6.23 </strong></span>La cantidad de trigo en una cosecha <span class="math inline">\(C\)</span> depende del nivel de nitrógeno en el suelo <span class="math inline">\(n\)</span> según la ecuación</p>
+<p><span class="math display">\[
+C(n) = \frac{n}{1+n^2},\quad n\geq 0.
+\]</span></p>
+<p>¿Para qué nivel de nitrógeno se obtendrá la mayor cosecha de trigo?</p>
+</div>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-23-contents" aria-controls="callout-23" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-23" class="callout-23-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Se trata de calcular el valor de <span class="math inline">\(n\)</span> donde se alcanza el máximo de <span class="math inline">\(C(n)\)</span>. Veremos primero si hay algún máximo relativo. Para ello calculamos los puntos críticos.</p>
+<p><span class="math display">\[
+C'(n)= \frac{(n)'(1+n^2)-n(1+n^2)'}{(1+n^2)^2} = \frac{(1+n^2)-n(2n)}{(1+n^2)^2} = \frac{1-n^2}{(1+n^2)^2}
+\]</span></p>
+<p><span class="math inline">\(C'(x)=0 \Leftrightarrow 1-n^2 = 0 \Leftrightarrow n^2 =1 \Leftrightarrow n=\pm 1\)</span>.</p>
+<p>Como no tienen sentido cantidades de nitrógeno negativas, el único punto crítico está en <span class="math inline">\(n=1\)</span>. Para ver si se trata de un máximo, estudiamos ahora el signo de la primera derivada a la izquierda y a la derecha de este punto. Tomando, por ejemplo <span class="math inline">\(n=0\)</span>, se tiene <span class="math inline">\(C'(0) = \frac{1-0^2}{(1+0^2)^2} = 1&gt;0\)</span>, por lo que la función es creciente a la izquierda de <span class="math inline">\(n=1\)</span>. Y tomando, por ejemplo <span class="math inline">\(n=2\)</span>, se tiene <span class="math inline">\(C'(2) = \frac{1-2^2}{(1+2^2)^2}=-3/25&lt;0\)</span>, por lo que la función es decreciente a la derecha de <span class="math inline">\(n=1\)</span>. Por tanto, en <span class="math inline">\(n=1\)</span> existe un máximo relativo, que además, es único. Como la función es continua en todo <span class="math inline">\(\mathbb{R}\)</span> al ser una función racional y no anularse nunca su denominador, se tiene que el máximo absoluto coincide con el relativo, de manera que el nivel de nitrógeno para el que la cosecha será máxima es <span class="math inline">\(n=1\)</span>.</p>
+</div>
+</div>
+</div>
+<div id="exr-extremos-4" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 6.24 </strong></span>La velocidad <span class="math inline">\(v\)</span> de una reacción irreversible <span class="math inline">\(A+B\rightarrow AB\)</span> es función de la concentración <span class="math inline">\(x\)</span> del producto <span class="math inline">\(AB\)</span> y puede expresarse según la ecuación</p>
+<p><span class="math display">\[
+v(x) = 4(3-x)(5-x).
+\]</span> ¿Qué valor de <span class="math inline">\(x\)</span> maximiza la velocidad de reacción?</p>
+</div>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-24-contents" aria-controls="callout-24" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-24" class="callout-24-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Veremos primero si hay algún máximo relativo. Para ello calculamos los puntos críticos de $v(x)=4(3-x)(5-x)=4x^2-32x+60</p>
+<p><span class="math display">\[
+v'(x) = 8x-32 = 0 \Leftrightarrow x = 4.
+\]</span></p>
+<p>Para ver si se trata de un máximo relativo, estudiamos el signo de la segunda derivada en el punto crítico. <span class="math inline">\(v''(x)= 8&gt;0\)</span>, luego la función es cóncava hacia arriba en todo <span class="math inline">\(\mathbb{R}\)</span> y en particular en <span class="math inline">\(x=4\)</span>, por lo que tiene un mínimo local en <span class="math inline">\(x=4\)</span>.</p>
+<p>Como el dominio de la función es <span class="math inline">\([0,\infty)\)</span> ya que las concentraciones no pueden ser negativas, y <span class="math inline">\(\lim_{n\to\infty}v(x) = \lim_{x\to\infty}4x^2-32x+60=\infty\)</span>, la función no tiene máximo local, por lo que no existe un valor de <span class="math inline">\(x\)</span> que maximice la velocidad de reacción.</p>
+</div>
+</div>
+</div>
+<div id="exr-extremos-5" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 6.25 </strong></span>Un naufrago se encuentra en una isla situada en un plano con coordenadas <span class="math inline">\((2,0)\)</span>. Se sabe que un ferry hace siempre la trayectoria dada por la función <span class="math inline">\(f(x)=\sqrt{x+1}\)</span>. ¿Hacia qué punto de la trayectoria del ferry debe nadar el naufrago para recorrer la menor distancia posible? ¿Qué distancia recorrerá si nada hacia ese punto?</p>
+</div>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-25-contents" aria-controls="callout-25" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-25" class="callout-25-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>El ferry pasará por todos los puntos <span class="math inline">\((x,f(x))\)</span>, por lo que se trata de averiguar el valor de <span class="math inline">\(x\)</span> que hace mínima la distancia del punto <span class="math inline">\((2,0)\)</span> a <span class="math inline">\((x,f(x))\)</span>, o lo que es lo mismo, minimizar el módulo del vector $(x,f(x))-(2,0) = <span class="math inline">\((x-2, f(x))\)</span>, que vale</p>
+<p><span class="math display">\[
+|(x-2,f(x))|=\sqrt{(x-2)^2+(\sqrt{x})^2} = \sqrt{x^2-2x+4-x} = \sqrt{x^2-x+4}.
+\]</span></p>
+<p>Se trata, por tanto, de calcular el mínimo de la función <span class="math inline">\(m(x)=\sqrt{x^2-x+4}\)</span>. Calculamos los puntos críticos.</p>
+<p><span class="math display">\[
+m'(x) = \frac{2x-1}{2\sqrt{x^2-x+4}} = 0 \Leftrightarrow 2x-1 = 0 \Leftrightarrow x=1/2.
+\]</span></p>
+<p>Para ver si se trata de un mínimo relativo, estudiamos el signo de la derivada a la izquierda y a la derecha del punto crítico. Tomando, por ejemplo, <span class="math inline">\(x=0\)</span>, se tiene <span class="math inline">\(m'(0) = \frac{2\cdot 0-1}{2\sqrt{0^2-0+4}} = -1/4&lt;0\)</span>, de manera que el módulo decrece a la izquierda de <span class="math inline">\(x=1/2\)</span>. Y tomando, por ejemplo, <span class="math inline">\(x=1\)</span>, se tiene que <span class="math inline">\(m'(1)=\frac{2\cdot 1-1}{2\sqrt{1^2-1+4}}=1/4&gt;0\)</span>, de manera que el módulo crece a la derecha de <span class="math inline">\(x=1/2\)</span>. Por tanto, la función del módulo tiene un mínimo relativo en <span class="math inline">\(x=1/2\)</span>, que además es único, y como <span class="math inline">\(m\)</span> es continua en todo <span class="math inline">\(\mathbb{R}\)</span>, el mínimo relativo es también mínimo absoluto, y por tanto, el naufrago debe nadar hacia el punto <span class="math inline">\((1/2, \sqrt{1/2})\)</span>.</p>
+</div>
+</div>
+</div>
+<div id="exr-extremos-6" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 6.26 </strong></span>Un hotel alquila habitaciones por un precio entre 40€ y 100€ diarios. Se ha observado que el número de habitaciones que alquilan depende del precio <span class="math inline">\(x\)</span> según la función <span class="math inline">\(h(x)=300-3x\)</span>. ¿Qué precio se debe cobrar por habitación para obtener los máximos ingresos?</p>
+</div>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-26-contents" aria-controls="callout-26" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-26" class="callout-26-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Los ingresos vienen dados por la función <span class="math inline">\(f(x) = xh(x)=x(300-3x) = 300x-3x^2\)</span>. Se trata de calcular el máximo absoluto de esta función. Para ello veremos primero si tiene algún máximo relativo. Calculamos los puntos críticos.</p>
+<p><span class="math display">\[
+f'(x) = 300-6x = 0 \Leftrightarrow x=50.
+\]</span></p>
+<p>Para ver si se trata de un máximo relativo, estudiamos el signo de la segunda derivada en el punto crítico. <span class="math inline">\(f''(x)=-6&lt;0\)</span>, por lo que la función es cóncava hacia abajo en todo <span class="math inline">\(\mathbb{R}\)</span>, y en particular en <span class="math inline">\(x=50\)</span>, por lo que <span class="math inline">\(f\)</span> tiene un máximo relativo en este punto, que además es único. Como <span class="math inline">\(f\)</span> es continua en todo <span class="math inline">\(\mathbb{R}\)</span>, el máximo relativo es también absoluto, y el precio de las habitaciones que maximiza los ingresos es <span class="math inline">\(x=50\)</span>€.</p>
+</div>
+</div>
+</div>
+<div id="exr-extremos-7" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 6.27 </strong></span>Existen organismos que se reproducen una sola vez en su vida como por ejemplo los salmones. En este tipo de especies, la velocidad de incremento per cápita <span class="math inline">\(v\)</span>, que mide la capacidad reproductiva, depende de la edad <span class="math inline">\(x\)</span> según la ecuación</p>
+<p><span class="math display">\[
+v(x) = \frac{\ln(p(x)h(x))}{x},
+\]</span></p>
+<p>donde <span class="math inline">\(p(x)\)</span> es la probabilidad de sobrevivir hasta la edad <span class="math inline">\(x\)</span> y <span class="math inline">\(h(x)\)</span> es el número de nacimientos de hembras a la edad <span class="math inline">\(x\)</span>. Calcular la edad óptima de reproducción, es decir, el valor que maximice <span class="math inline">\(v\)</span>, para <span class="math inline">\(p(x)=e^{-0.1x}\)</span> y <span class="math inline">\(h(x)=4x^{0.9}\)</span>.</p>
+</div>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-27-contents" aria-controls="callout-27" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-27" class="callout-27-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Se trata de calcular el máximo absoluto de la función</p>
+<p><span class="math display">\[\begin{align*}
+v(x) &amp;=\frac{\ln(e^{-0.1x}4x^{0.9})}{x} = \frac{\ln(e^{-0.1x})+\ln(4)+\ln(x^{0.9})}{x}\\
+&amp;= \frac{-0.1x+\ln(4)+0.9\ln(x)}{x} = -0.1+\frac{\ln(4)+0.9\ln(x)}{x}.
+\end{align*}\]</span></p>
+<p>Veamos primero si la función tiene algún máximo relativo. Calculamos los puntos críticos.</p>
+<p><span class="math display">\[
+\begin{gathered}
+v'(x) = \frac{(x)'(\ln(4)+0.9\ln(x))-x(\ln(4)+0.9\ln(x))'}{x^2}\\ = \frac{\ln(4)+0.9\ln(x)-0.9}{x^2} = 0 \Leftrightarrow \ln(4)+0.9\ln(x)-0.9 = 0 \\ \Leftrightarrow \ln(x)=\frac{0.9-\ln(4)}{0.9} \Leftrightarrow x = e^{\frac{0.9-\ln(4)}{0.9}} \approx 0.5826.
+\end{gathered}
+\]</span></p>
+<p>Para ver si <span class="math inline">\(v\)</span> tiene un máximo relativo en este punto, estudiamos el signo de la derivada a la izquierda y a la derecha del punto crítico. Tomando, por ejemplo, <span class="math inline">\(x=0\)</span>, se tiene <span class="math inline">\(v'(0.5) \approx 0.5502 &gt;0\)</span>, por lo que la función crece a la izquierda de <span class="math inline">\(x=0.5826\)</span>. Y tomando, por ejemplo, <span class="math inline">\(x=0.6\)</span>, se tiene que <span class="math inline">\(v'(0.6)\approx -0.0738&lt;0\)</span>, por lo que <span class="math inline">\(v\)</span> decrece a la derecha de <span class="math inline">\(x=0.5826\)</span>, así que, <span class="math inline">\(v\)</span> tiene un máximo relativo en <span class="math inline">\(x=0.5826\)</span>, que además es único. Como <span class="math inline">\(v\)</span> es continua en <span class="math inline">\((0,\infty)\)</span>, que es el dominio que tiene sentido en el contexto del problema, el máximo relativo es también absoluto y la edad óptima de reproducción es a los <span class="math inline">\(0.5826\)</span> años.</p>
+</div>
+</div>
+</div>
+<div id="exr-extremos-8" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 6.28 </strong></span>Un lata de refresco cilíndrica contiene <span class="math inline">\(33\)</span> cl. Hallar las dimensiones de la lata para que la cantidad de aluminio utilizada en su creación sea mínima.</p>
+</div>
+<div id="exr-extremos-9" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 6.29 </strong></span>La distancia en kilómetros que recorre un coche de alquiler con 1 litro de gasolina depende de la velocidad a la que circule según la función <span class="math inline">\(d(x)=120-x\)</span> para <span class="math inline">\(x\in(50,120)\)</span>. Si el coste de la gasolina es de <span class="math inline">\(2\)</span> €/l y el coste del alquiler es de <span class="math inline">\(10\)</span> €/h, ¿a qué velocidad debe circular para que el coste del trayecto sea mínimo? ¿Cuál será el coste por kilómetro si circula a esa velocidad?</p>
+</div>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-28-contents" aria-controls="callout-28" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-28" class="callout-28-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Como la distancia recorrida a una velocidad <span class="math inline">\(x\)</span> es <span class="math inline">\(d(x)=120-x\)</span> y, como la velocidad es <span class="math inline">\(x=\frac{d(x)}{t}\)</span>, el tiempo necesario para recorrer esa distancia es <span class="math inline">\(\frac{d(x)}{x}\)</span>, de manera que el coste del alquiler para recorrer esa distancia es <span class="math inline">\(\frac{d(x)}{x}10\)</span>. A esto hay que sumar el precio del litro de gasolina necesario para recorrer esa distancia, de manera que el coste de recorrer esa distancia es <span class="math inline">\(\frac{d(x)}{x}10+2\)</span>. Por tanto, el coste por kilómetro para una velocidad <span class="math inline">\(x\)</span> viene dado por la función</p>
 <p><span class="math display">\[
@@ -1020,11 +1156,48 @@ c'(x)=\frac{-8x^2+2400x-144000}{x^4-240x^3+14400 x^2}
 <div id="exr-teorema-valor-medio" class="theorem exercise">
 <p><span class="theorem-title"><strong>Ejercicio 6.30 </strong></span>En un tramo de carretera limitado a una velocidad máxima de <span class="math inline">\(70\)</span> km/h existe un semáforo de tramo. Según el registro del semáforo, un vehículo pasa por el comienzo del tramo, situado en el kilómetro 12 a las 8:00 y pasa por el final del tramo, situado en el kilómetro <span class="math inline">\(14\)</span>, un minuto y medio después. ¿Será sancionado el vehículo por exceso de velocidad?</p>
 </div>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-29-contents" aria-controls="callout-29" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-29" class="callout-29-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Suponiendo que la función <span class="math inline">\(f\)</span> que determina la posición del vehículo en cada instante es continua y derivable en el tramo del enunciado, según el <a href="https://aprendeconalf.es/analisis-manual/derivadas.html#thm-valor-medio">teorema del valor medio</a>, existe al menos un instante <span class="math inline">\(c\)</span> en el que</p>
+<p><span class="math display">\[
+f'(c) = \frac{14-12}{8.025-8} = \frac{2}{0.025}I= 80 \mbox{ km/h}.
+\]</span></p>
+<p>Como <span class="math inline">\(f'\)</span> es la velocidad instantánea, se puede concluir que en algún momento la velocidad instantánea fue de 80 km/h, y como la máxima velocidad permitida en el tramo es de <span class="math inline">\(70\)</span> km/h, el vehículo será sancionado.</p>
+</div>
+</div>
+</div>
 <div id="exr-cinematica-1" class="theorem exercise">
 <p><span class="theorem-title"><strong>Ejercicio 6.31 </strong></span>La posición que ocupa un coche que se mueve en línea recta, puede expresarse en función del tiempo según la ecuación <span class="math display">\[
 e(t) = 4t^3 -2t +1.
 \]</span> Calcular su velocidad y aceleración en cualquier instante.<br>
 Nota: La aceleración es la tasa de variación instantánea de la velocidad.</p>
+</div>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-30-contents" aria-controls="callout-30" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-30" class="callout-30-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>La velocidad es la tasa de variación instantánea del espacio con respecto al tiempo, es decir, la primera derivada de <span class="math inline">\(e\)</span>, que vale <span class="math inline">\(e'(t)=12t^2-2\)</span>.</p>
+<p>La aceleración es la tasa de variación instantánea de la velocidad con respecto al tiempo, es decir, la segunda derivada de <span class="math inline">\(e\)</span>, que vale <span class="math inline">\(e''(t) = 24t\)</span>.</p>
+</div>
+</div>
 </div>
 <div id="exr-cinematica-2" class="theorem exercise">
 <p><span class="theorem-title"><strong>Ejercicio 6.32 </strong></span>El espacio recorrido por un objeto que se lanza verticalmente hacia arriba, sin tener en cuenta la resistencia del aire, viene dado por la ecuación <span class="math display">\[
@@ -1035,6 +1208,34 @@ e(t) =v_0t-\frac{1}{2}gt^2
 <li>Si el objeto se lanza inicialmente a 50 km/h, ¿cuál será la altura máxima que alcanzará el objeto? ¿Cuál será su velocidad en ese momento?</li>
 <li>¿En qué instante volverá a tocar la tierra el objeto? ¿Con qué velocidad?</li>
 </ol>
+</div>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-31-contents" aria-controls="callout-31" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-31" class="callout-31-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="a">
+<li><p>La velocidad es la tasa se variación instantánea con respecto al tiempo, es decir, la primera derivada de <span class="math inline">\(e\)</span>, que vale, <span class="math inline">\(e'(t) = v_0-gt\)</span>. Y la aceleración es la tasa de variación instantánea de la velocidad con respecto al tiempo, es decir, la segunda derivada de <span class="math inline">\(e\)</span>, que vale <span class="math inline">\(e''(t)=-g\)</span>.</p></li>
+<li><p>Para ver en qué punto el objeto alcanza la altura máxima, estudiamos primero si la función tiene un máximo relativo. Calculamos los puntos críticos, tomando <span class="math inline">\(v_0 = 50\)</span> km/h = <span class="math inline">\(\frac{125}{9}\)</span> m/s.</p>
+<p><span class="math display">\[
+e'(t) = \frac{125}{9}-9.81t = 0 \Leftrightarrow t \approx 1.42 \mbox{s}.
+\]</span></p>
+<p>Para ver si se trata de un máximo relativo, estudiamos el signo de la segunda derivada en el punto. Como <span class="math inline">\(e''(t)=-9.81&lt;0\)</span> la función es cóncava hacia abajo en todo <span class="math inline">\(\mathbb{R}\)</span>, y en particular en <span class="math inline">\(t\approx 1.42\)</span>, de manera que <span class="math inline">\(e\)</span> tiene un máximo relativo en <span class="math inline">\(t\approx 1.42\)</span>, que además es único. Como la función es continua en todo <span class="math inline">\(\mathbb{R}\)</span>, el máximo relativo es también absoluto, y por tanto, la altura máxima que alcanzará el objeto es aproximadamente $e(1.42)=<span class="math inline">\(9.83\)</span> m. En ese instante, la velocidad del objeto será nula ya que se trata de un punto crítico y <span class="math inline">\(e'(1.42)=0\)</span>.</p></li>
+<li><p>Para ver cuándo el objeto vuelve a tocar el suelo basta con resolver la ecuación</p>
+<p><span class="math display">\[
+e(t)=50t-\frac{1}{2}9.81t^2 =0 \Leftrightarrow t(50-4.905t) = 0 \Leftrightarrow t=0 \mbox{ o } t\approx 2.83 \mbox{ s}.
+\]</span></p>
+<p>Por tanto, el objeto volverá a tocar suelo a los <span class="math inline">\(2.83\)</span> segundos aproximadamente. En ese instante la velocidad será <span class="math inline">\(e'(2.83)=\frac{125}{9}-9.81\cdot 2.83 \approx -13.89\)</span> m/s, que es la misma velocidad con la que se lanzó pero negativa.</p></li>
+</ol>
+</div>
+</div>
 </div>
 <div id="exr-trayectorias-1" class="theorem exercise">
 <p><span class="theorem-title"><strong>Ejercicio 6.33 </strong></span>Una partícula se mueve a lo largo de la curva</p>
@@ -1051,7 +1252,7 @@ y = t^2-2t+3. \\
 </ol>
 </div>
 <div class="callout-tip callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-23-contents" aria-controls="callout-23" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-32-contents" aria-controls="callout-32" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1060,7 +1261,7 @@ Solución
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-23" class="callout-23-contents callout-collapse collapse">
+<div id="callout-32" class="callout-32-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ol type="a">
 <li><p>Aplicando la regla de la cadena se tiene que</p>
@@ -1106,7 +1307,7 @@ y=-\frac{1}{2}gt^2
 <p>donde <span class="math inline">\(t\in \mathbb{R}^{+}\)</span> es el tiempo contado a partir del instante en que el punto llega a la posición más alta, <span class="math inline">\(v_0\)</span> es la velocidad horizontal en el instante <span class="math inline">\(t=0\)</span> y <span class="math inline">\(g=9.81\)</span> m<span class="math inline">\(^2\)</span>/s es la aceleración de la gravedad en la superficie terrestre. ¿En qué instante la magnitud de la velocidad horizontal será igual a la de la velocidad vertical? ¿Cuánto debería valer <span class="math inline">\(v_0\)</span> para que en dicho instante el punto haya recorrido 100 m horizontalmente? Calcular la ecuación de la recta tangente en dicho instante con el valor de <span class="math inline">\(v_0\)</span> calculado.</p>
 </div>
 <div class="callout-tip callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-24-contents" aria-controls="callout-24" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-33-contents" aria-controls="callout-33" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1115,7 +1316,7 @@ Solución
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-24" class="callout-24-contents callout-collapse collapse">
+<div id="callout-33" class="callout-33-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>La velocidad horizontal es la derivada del espacio recorrido horizontalmente (componente <span class="math inline">\(x\)</span>) con respecto al tiempo, es decir,</p>
 <p><span class="math display">\[

@@ -696,6 +696,22 @@ Los puntos de inflexión son los puntos donde cambia la concavidad de la funció
 Hallar $a$, $b$ y $c$ en la función  $f(x)=x^3+bx^2+cx+d$ para que tenga un punto de inflexión en $x=3$, pase por el punto $(1,0)$ y alcance un máximo en $x=1$.
 :::
 
+:::{.callout-tip collapse="true"}
+## Solución
+Calculamos las dos primeras derivadas.
+
+\begin{align*}
+f'(x) &= 3x^2-2bx+c\\ 
+f''(x) &= 6x-2b
+\end{align*}
+
+Para que la función tenga un punto de inflexión en $x=3$ debe ser $f''(3)=0$, es decir, $f''(3) = 6\cdot 3 - 2b = 18-2b = 0$, de donde se deduce que $b=9$.
+
+Para que la función tenga un máximo en $x=1$ debe ser $f'(1)=0$, es decir, $f'(1)=3\cdot 1^2-2\cdot 9\cdot 1+c = 3-18+c = -15+c=0$, de donde se deduce que $c=15$.
+
+Finalmente, para que pase por el punto $(1,0$)$ debe ser $f(1)=0$, es decir, $f(1) = 1^3-9\cdot 1^2+15\cdot 1+d = 1-9+15+d = 7+d=0$, de donde se deduce que $d=-7$.
+:::
+
 :::{#exr-extremos-3}
 La cantidad de trigo en una cosecha $C$ depende del nivel de nitrógeno en el suelo $n$ según la ecuación
 
@@ -704,6 +720,19 @@ C(n) = \frac{n}{1+n^2},\quad n\geq 0.
 $$
 
 ¿Para qué nivel de nitrógeno se obtendrá la mayor cosecha de trigo?
+:::
+
+:::{.callout-tip collapse="true"}
+## Solución
+Se trata de calcular el valor de $n$ donde se alcanza el máximo de $C(n)$. Veremos primero si hay algún máximo relativo. Para ello calculamos los puntos críticos. 
+
+$$
+C'(n)= \frac{(n)'(1+n^2)-n(1+n^2)'}{(1+n^2)^2} = \frac{(1+n^2)-n(2n)}{(1+n^2)^2} = \frac{1-n^2}{(1+n^2)^2}
+$$
+
+$C'(x)=0 \Leftrightarrow 1-n^2 = 0 \Leftrightarrow n^2 =1 \Leftrightarrow n=\pm 1$. 
+
+Como no tienen sentido cantidades de nitrógeno negativas, el único punto crítico está en $n=1$. Para ver si se trata de un máximo, estudiamos ahora el signo de la primera derivada a la izquierda y a la derecha de este punto. Tomando, por ejemplo $n=0$, se tiene $C'(0) = \frac{1-0^2}{(1+0^2)^2} = 1>0$, por lo que la función es creciente a la izquierda de $n=1$. Y tomando, por ejemplo $n=2$, se tiene $C'(2) = \frac{1-2^2}{(1+2^2)^2}=-3/25<0$, por lo que la función es decreciente a la derecha de $n=1$. Por tanto, en $n=1$ existe un máximo relativo, que además, es único. Como la función es continua en todo $\mathbb{R}$ al ser una función racional y no anularse nunca su denominador, se tiene que el máximo absoluto coincide con el relativo, de manera que el nivel de nitrógeno para el que la cosecha será máxima es $n=1$.
 :::
 
 :::{#exr-extremos-4}
@@ -715,12 +744,54 @@ $$
 ¿Qué valor de $x$ maximiza la velocidad de reacción?
 :::
 
+:::{.callout-tip collapse="true"}
+## Solución
+Veremos primero si hay algún máximo relativo. Para ello calculamos los puntos críticos de $v(x)=4(3-x)(5-x)=4x^2-32x+60
+
+$$
+v'(x) = 8x-32 = 0 \Leftrightarrow x = 4.
+$$
+
+Para ver si se trata de un máximo relativo, estudiamos el signo de la segunda derivada en el punto crítico. $v''(x)= 8>0$, luego la función es cóncava hacia arriba en todo $\mathbb{R}$ y en particular en $x=4$, por lo que tiene un mínimo local en $x=4$.
+
+Como el dominio de la función es $[0,\infty)$ ya que las concentraciones no pueden ser negativas, y $\lim_{n\to\infty}v(x) = \lim_{x\to\infty}4x^2-32x+60=\infty$, la función no tiene máximo local, por lo que no existe un valor de $x$ que maximice la velocidad de reacción.
+:::
+
 :::{#exr-extremos-5}
 Un naufrago se encuentra en una isla situada en un plano con coordenadas $(2,0)$. Se sabe que un ferry hace siempre la trayectoria dada por la función $f(x)=\sqrt{x+1}$. ¿Hacia qué punto de la trayectoria del ferry debe nadar el naufrago para recorrer la menor distancia posible? ¿Qué distancia recorrerá si nada hacia ese punto?
 :::
 
+:::{.callout-tip collapse="true"}
+## Solución
+El ferry pasará por todos los puntos $(x,f(x))$, por lo que se trata de averiguar el valor de $x$ que hace mínima la distancia del punto $(2,0)$ a $(x,f(x))$, o lo que es lo mismo, minimizar el módulo del vector $(x,f(x))-(2,0) = $(x-2, f(x))$, que vale 
+
+$$
+|(x-2,f(x))|=\sqrt{(x-2)^2+(\sqrt{x})^2} = \sqrt{x^2-2x+4-x} = \sqrt{x^2-x+4}.
+$$
+
+Se trata, por tanto, de calcular el mínimo de la función $m(x)=\sqrt{x^2-x+4}$. Calculamos los puntos críticos.
+
+$$
+m'(x) = \frac{2x-1}{2\sqrt{x^2-x+4}} = 0 \Leftrightarrow 2x-1 = 0 \Leftrightarrow x=1/2.
+$$
+
+Para ver si se trata de un mínimo relativo, estudiamos el signo de la derivada a la izquierda y a la derecha del punto crítico. Tomando, por ejemplo, $x=0$, se tiene $m'(0) = \frac{2\cdot 0-1}{2\sqrt{0^2-0+4}} = -1/4<0$, de manera que el módulo decrece a la izquierda de $x=1/2$. Y tomando, por ejemplo, $x=1$, se tiene que $m'(1)=\frac{2\cdot 1-1}{2\sqrt{1^2-1+4}}=1/4>0$, de manera que el módulo crece a la derecha de $x=1/2$. Por tanto, la función del módulo tiene un mínimo relativo en $x=1/2$, que además es único, y como $m$ es continua en todo $\mathbb{R}$, el mínimo relativo es también mínimo absoluto, y por tanto, el naufrago debe nadar hacia el punto $(1/2, \sqrt{1/2})$.
+:::
+
 :::{#exr-extremos-6}
-Un hotel alquila habitaciones por un precio entre 40€ y 100€ diarios. Se ha observado que el número de habitaciones que alquilan depende del precio $x$ según la función $h(x)=300-3x$. ¿Qué precio se debe cobrar por habitación para obtener el máximo beneficio?
+Un hotel alquila habitaciones por un precio entre 40€ y 100€ diarios. Se ha observado que el número de habitaciones que alquilan depende del precio $x$ según la función $h(x)=300-3x$. ¿Qué precio se debe cobrar por habitación para obtener los máximos ingresos?
+:::
+
+:::{.callout-tip collapse="true"}
+## Solución
+Los ingresos vienen dados por la función $f(x) = xh(x)=x(300-3x) = 300x-3x^2$.
+Se trata de calcular el máximo absoluto de esta función. Para ello veremos primero si tiene algún máximo relativo. Calculamos los puntos críticos.
+
+$$
+f'(x) = 300-6x = 0 \Leftrightarrow x=50.
+$$
+
+Para ver si se trata de un máximo relativo, estudiamos el signo de la segunda derivada en el punto crítico. $f''(x)=-6<0$, por lo que la función es cóncava hacia abajo en todo $\mathbb{R}$, y en particular en $x=50$, por lo que $f$ tiene un máximo relativo en este punto, que además es único. Como $f$ es continua en todo $\mathbb{R}$, el máximo relativo es también absoluto, y el precio de las habitaciones que maximiza los ingresos es $x=50$€.
 :::
 
 :::{#exr-extremos-7}
@@ -733,6 +804,26 @@ $$
 
 donde $p(x)$ es la probabilidad de sobrevivir hasta la edad $x$ y $h(x)$ es el número de nacimientos de hembras a la edad $x$.
 Calcular la edad óptima de reproducción, es decir, el valor que maximice $v$, para $p(x)=e^{-0.1x}$ y $h(x)=4x^{0.9}$.
+:::
+
+:::{.callout-tip collapse="true"}
+## Solución
+Se trata de calcular el máximo absoluto de la función 
+
+\begin{align*}
+v(x) &=\frac{\ln(e^{-0.1x}4x^{0.9})}{x} = \frac{\ln(e^{-0.1x})+\ln(4)+\ln(x^{0.9})}{x}\\ 
+&= \frac{-0.1x+\ln(4)+0.9\ln(x)}{x} = -0.1+\frac{\ln(4)+0.9\ln(x)}{x}.
+\end{align*}
+
+Veamos primero si la función tiene algún máximo relativo. Calculamos los puntos críticos.
+
+$$
+\begin{gathered}
+v'(x) = \frac{(x)'(\ln(4)+0.9\ln(x))-x(\ln(4)+0.9\ln(x))'}{x^2}\\ = \frac{\ln(4)+0.9\ln(x)-0.9}{x^2} = 0 \Leftrightarrow \ln(4)+0.9\ln(x)-0.9 = 0 \\ \Leftrightarrow \ln(x)=\frac{0.9-\ln(4)}{0.9} \Leftrightarrow x = e^{\frac{0.9-\ln(4)}{0.9}} \approx 0.5826.
+\end{gathered}
+$$
+
+Para ver si $v$ tiene un máximo relativo en este punto, estudiamos el signo de la derivada a la izquierda y a la derecha del punto crítico. Tomando, por ejemplo, $x=0$, se tiene $v'(0.5) \approx 0.5502 >0$, por lo que la función crece a la izquierda de $x=0.5826$. Y tomando, por ejemplo, $x=0.6$, se tiene que $v'(0.6)\approx -0.0738<0$, por lo que $v$ decrece a la derecha de $x=0.5826$, así que, $v$ tiene un máximo relativo en $x=0.5826$, que además es único. Como $v$ es continua en $(0,\infty)$, que es el dominio que tiene sentido en el contexto del problema, el máximo relativo es también absoluto y la edad óptima de reproducción es a los $0.5826$ años.
 :::
 
 :::{#exr-extremos-8}
@@ -764,6 +855,17 @@ y resolviendo la ecuación $-8x^2+2400x-144000=0$ se obtienen los puntos crític
 En un tramo de carretera limitado a una velocidad máxima de $70$ km/h existe un semáforo de tramo. Según el registro del semáforo, un vehículo pasa por el comienzo del tramo, situado en el kilómetro 12 a las 8:00 y pasa por el final del tramo, situado en el kilómetro $14$, un minuto y medio después. ¿Será sancionado el vehículo por exceso de velocidad?
 :::
 
+:::{.callout-tip collapse="true"}
+## Solución
+Suponiendo que la función $f$ que determina la posición del vehículo en cada instante es continua y derivable en el tramo del enunciado, según el [teorema del valor medio](https://aprendeconalf.es/analisis-manual/derivadas.html#thm-valor-medio), existe al menos un instante $c$ en el que
+
+$$
+f'(c) = \frac{14-12}{8.025-8} = \frac{2}{0.025}I= 80 \mbox{ km/h}.
+$$
+
+Como $f'$ es la velocidad instantánea, se puede concluir que en algún momento la velocidad instantánea fue de 80 km/h, y como la máxima velocidad permitida en el tramo es de $70$ km/h, el vehículo será sancionado. 
+:::
+
 :::{#exr-cinematica-1}
 La posición que ocupa un coche que se mueve en línea recta, puede expresarse en función del tiempo según la ecuación
 $$
@@ -771,6 +873,13 @@ e(t) = 4t^3 -2t +1.
 $$
 Calcular su velocidad y aceleración en cualquier instante.  
 Nota: La aceleración es la tasa de variación instantánea de la velocidad.
+:::
+
+:::{.callout-tip collapse="true"}
+## Solución
+La velocidad es la tasa de variación instantánea del espacio con respecto al tiempo, es decir, la primera derivada de $e$, que vale $e'(t)=12t^2-2$. 
+
+La aceleración es la tasa de variación instantánea de la velocidad con respecto al tiempo, es decir, la segunda derivada de $e$, que vale $e''(t) = 24t$. 
 :::
 
 :::{#exr-cinematica-2}
@@ -784,6 +893,27 @@ a. Calcular la velocidad y la aceleración en cualquier instante.
 b. Si el objeto se lanza inicialmente a 50 km/h, ¿cuál será la altura máxima que alcanzará el objeto? ¿Cuál será su velocidad en ese
 momento?
 c. ¿En qué instante volverá a tocar la tierra el objeto? ¿Con qué velocidad?
+:::
+
+:::{.callout-tip collapse="true"}
+## Solución
+a. La velocidad es la tasa se variación instantánea con respecto al tiempo, es decir, la primera derivada de $e$, que vale, $e'(t) = v_0-gt$. Y la aceleración es la tasa de variación instantánea de la velocidad con respecto al tiempo, es decir, la segunda derivada de $e$, que vale $e''(t)=-g$.
+
+b. Para ver en qué punto el objeto alcanza la altura máxima, estudiamos primero si la función tiene un máximo relativo. Calculamos los puntos críticos, tomando $v_0 = 50$ km/h = $\frac{125}{9}$ m/s.
+
+    $$
+    e'(t) = \frac{125}{9}-9.81t = 0 \Leftrightarrow t \approx 1.42 \mbox{s}.
+    $$
+
+    Para ver si se trata de un máximo relativo, estudiamos el signo de la segunda derivada en el punto. Como $e''(t)=-9.81<0$ la función es cóncava hacia abajo en todo $\mathbb{R}$, y en particular en $t\approx 1.42$, de manera que $e$ tiene un máximo relativo en $t\approx 1.42$, que además es único. Como la función es continua en todo $\mathbb{R}$, el máximo relativo es también absoluto, y por tanto, la altura máxima que alcanzará el objeto es aproximadamente $e(1.42)=$9.83$ m. En ese instante, la velocidad del objeto será nula ya que se trata de un punto crítico y $e'(1.42)=0$.
+
+c. Para ver cuándo el objeto vuelve a tocar el suelo basta con resolver la ecuación 
+
+    $$
+    e(t)=50t-\frac{1}{2}9.81t^2 =0 \Leftrightarrow t(50-4.905t) = 0 \Leftrightarrow t=0 \mbox{ o } t\approx 2.83 \mbox{ s}.
+    $$
+
+    Por tanto, el objeto volverá a tocar suelo a los $2.83$ segundos aproximadamente. En ese instante la velocidad será $e'(2.83)=\frac{125}{9}-9.81\cdot 2.83 \approx -13.89$ m/s, que es la misma velocidad con la que se lanzó pero negativa.
 :::
 
 :::{#exr-trayectorias-1}

@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.9.20)  7 DEC 2022 18:39
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.9.20)  18 DEC 2022 10:11
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**/run/media/alf/datos/misrepositorios/docencia/analisis-ejercicios/ejercicios-analisis.tex
-(/run/media/alf/datos/misrepositorios/docencia/analisis-ejercicios/ejercicios-analisis.tex
+**/home/alf/tmp/analisis-ejercicios/ejercicios-analisis.tex
+(/home/alf/tmp/analisis-ejercicios/ejercicios-analisis.tex
 LaTeX2e <2022-06-01> patch level 5
 L3 programming layer <2022-08-30> (/usr/local/texlive/2022/texmf-dist/tex/latex/koma-script/scrreport.cls
 Document Class: scrreport 2022/07/04 v3.37 KOMA-Script document class (report)
@@ -1083,7 +1083,7 @@ Overfull \hbox (37.62894pt too wide) detected at line 2989
  []
 
 [44] [45] [46] [47] [48] [49] [50] [51]
-/run/media/alf/datos/misrepositorios/docencia/analisis-ejercicios/ejercicios-analisis.tex:3363: Missing $ inserted.
+/home/alf/tmp/analisis-ejercicios/ejercicios-analisis.tex:3363: Missing $ inserted.
 <inserted text> 
                 $
 l.3363 Cuando \$t\to
@@ -1092,7 +1092,7 @@ I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 
-/run/media/alf/datos/misrepositorios/docencia/analisis-ejercicios/ejercicios-analisis.tex:3363: LaTeX Error: Bad math environment delimiter.
+/home/alf/tmp/analisis-ejercicios/ejercicios-analisis.tex:3363: LaTeX Error: Bad math environment delimiter.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
@@ -1117,7 +1117,7 @@ Overfull \hbox (54.3679pt too wide) detected at line 4081
  []
 
 [63] [64] [65] [66] [67]
-/run/media/alf/datos/misrepositorios/docencia/analisis-ejercicios/ejercicios-analisis.tex:4352: Missing $ inserted.
+/home/alf/tmp/analisis-ejercicios/ejercicios-analisis.tex:4352: Missing $ inserted.
 <inserted text> 
                 $
 l.4352 8\pi
@@ -1129,7 +1129,7 @@ you left one out. Proceed, with fingers crossed.
 LaTeX Warning: Command \' invalid in math mode on input line 4353.
 
 
-/run/media/alf/datos/misrepositorios/docencia/analisis-ejercicios/ejercicios-analisis.tex:4353: LaTeX Error: Bad math environment delimiter.
+/home/alf/tmp/analisis-ejercicios/ejercicios-analisis.tex:4353: LaTeX Error: Bad math environment delimiter.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
@@ -1141,13 +1141,13 @@ Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-[68]
-<././img/derivadas/grafica-ext-1.png, id=809, 223.58531pt x 188.20313pt>
+[68] [69]
+<././img/derivadas/grafica-ext-1.png, id=818, 223.58531pt x 188.20313pt>
 File: ././img/derivadas/grafica-ext-1.png Graphic file (type png)
 <use ././img/derivadas/grafica-ext-1.png>
-Package pdftex.def Info: ././img/derivadas/grafica-ext-1.png  used on input line 4414.
+Package pdftex.def Info: ././img/derivadas/grafica-ext-1.png  used on input line 4478.
 (pdftex.def)             Requested size: 223.58815pt x 188.20552pt.
- [69] [70 <././img/derivadas/grafica-ext-1.png (PNG copy)>] [71] [72] [73] [74] [75] [76] [77] (./ejercicios-analisis.aux)
+ [70] [71 <././img/derivadas/grafica-ext-1.png (PNG copy)>] [72] [73] [74] [75] [76] [77] [78] [79] [80] [81] [82] [83] (./ejercicios-analisis.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -1156,18 +1156,18 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  ) 
 Here is how much of TeX's memory you used:
- 38726 strings out of 476932
- 786733 string characters out of 5824858
+ 38755 strings out of 476932
+ 787003 string characters out of 5824858
  1302999 words of memory out of 5000000
- 58383 multiletter control sequences out of 15000+600000
- 550202 words of font info for 215 fonts, out of 8000000 for 9000
+ 58397 multiletter control sequences out of 15000+600000
+ 550498 words of font info for 218 fonts, out of 8000000 for 9000
  62 hyphenation exceptions out of 8191
- 122i,14n,120p,10690b,1066s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 122i,14n,120p,10658b,1066s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/home/alf/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/home/alf/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/home/alf/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/home/alf/texmf/fonts/enc/dvips/lm/lm-ts1.enc}{/home/alf/texmf/fonts/enc/dvips/lm/lm-mathex.enc}{/home/alf/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/home/alf/texmf/fonts/enc/dvips/fontawesome5/fa5free2.enc}</home/alf/texmf/fonts/type1/public/fontawesome5/FontAwesome5Free-Solid.pfb></home/alf/texmf/fonts/type1/public/lm/lmbx10.pfb></home/alf/texmf/fonts/type1/public/lm/lmex10.pfb></home/alf/texmf/fonts/type1/public/lm/lmmi10.pfb></home/alf/texmf/fonts/type1/public/lm/lmmi6.pfb></home/alf/texmf/fonts/type1/public/lm/lmmi8.pfb></home/alf/texmf/fonts/type1/public/lm/lmr10.pfb></home/alf/texmf/fonts/type1/public/lm/lmr6.pfb></home/alf/texmf/fonts/type1/public/lm/lmr8.pfb></home/alf/texmf/fonts/type1/public/lm/lmri10.pfb></home/alf/texmf/fonts/type1/public/lm/lmss12.pfb></home/alf/texmf/fonts/type1/public/lm/lmssbx10.pfb></home/alf/texmf/fonts/type1/public/lm/lmsy10.pfb></home/alf/texmf/fonts/type1/public/lm/lmsy6.pfb></home/alf/texmf/fonts/type1/public/lm/lmsy8.pfb></home/alf/texmf/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on ejercicios-analisis.pdf (77 pages, 543893 bytes).
+Output written on ejercicios-analisis.pdf (83 pages, 575830 bytes).
 PDF statistics:
- 1149 PDF objects out of 1200 (max. 8388607)
- 1019 compressed objects within 11 object streams
- 610 named destinations out of 1000 (max. 500000)
+ 1184 PDF objects out of 1200 (max. 8388607)
+ 1048 compressed objects within 11 object streams
+ 619 named destinations out of 1000 (max. 500000)
  45145 words of extra memory for PDF output out of 51595 (max. 10000000)
 

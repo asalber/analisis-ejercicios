@@ -1,8 +1,8 @@
-PWD /run/media/alf/datos/misrepositorios/docencia/analisis-ejercicios
+PWD /home/alf/tmp/analisis-ejercicios
 INPUT /usr/local/texlive/2022/texmf.cnf
 INPUT /usr/local/texlive/2022/texmf-dist/web2c/texmf.cnf
 INPUT /usr/local/texlive/2022/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT /run/media/alf/datos/misrepositorios/docencia/analisis-ejercicios/ejercicios-analisis.tex
+INPUT /home/alf/tmp/analisis-ejercicios/ejercicios-analisis.tex
 OUTPUT ejercicios-analisis.log
 INPUT /usr/local/texlive/2022/texmf-dist/tex/latex/hyperref/hyperref.sty
 INPUT /usr/local/texlive/2022/texmf-dist/tex/latex/hyperref/hyperref.sty
