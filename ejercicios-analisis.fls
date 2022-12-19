@@ -1,8 +1,8 @@
-PWD /home/alf/tmp/analisis-ejercicios
+PWD /run/media/alf/datos/misrepositorios/docencia/analisis-ejercicios
 INPUT /usr/local/texlive/2022/texmf.cnf
 INPUT /usr/local/texlive/2022/texmf-dist/web2c/texmf.cnf
 INPUT /usr/local/texlive/2022/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT /home/alf/tmp/analisis-ejercicios/ejercicios-analisis.tex
+INPUT /run/media/alf/datos/misrepositorios/docencia/analisis-ejercicios/ejercicios-analisis.tex
 OUTPUT ejercicios-analisis.log
 INPUT /usr/local/texlive/2022/texmf-dist/tex/latex/hyperref/hyperref.sty
 INPUT /usr/local/texlive/2022/texmf-dist/tex/latex/hyperref/hyperref.sty
@@ -1419,12 +1419,12 @@ INPUT ././img/derivadas/grafica-ext-1.png
 INPUT ././img/derivadas/grafica-ext-1.png
 INPUT ././img/derivadas/grafica-ext-1.png
 INPUT ejercicios-analisis.aux
+INPUT /home/alf/texmf/fonts/enc/dvips/lm/lm-ec.enc
 INPUT /home/alf/texmf/fonts/enc/dvips/lm/lm-mathsy.enc
 INPUT /home/alf/texmf/fonts/enc/dvips/lm/lm-rm.enc
 INPUT /home/alf/texmf/fonts/enc/dvips/lm/lm-mathit.enc
 INPUT /home/alf/texmf/fonts/enc/dvips/lm/lm-ts1.enc
 INPUT /home/alf/texmf/fonts/enc/dvips/lm/lm-mathex.enc
-INPUT /home/alf/texmf/fonts/enc/dvips/lm/lm-ec.enc
 INPUT /home/alf/texmf/fonts/enc/dvips/fontawesome5/fa5free2.enc
 INPUT /home/alf/texmf/fonts/type1/public/fontawesome5/FontAwesome5Free-Solid.pfb
 INPUT /home/alf/texmf/fonts/type1/public/lm/lmbx10.pfb

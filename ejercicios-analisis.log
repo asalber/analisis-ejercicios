@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.9.20)  18 DEC 2022 18:35
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.9.20)  19 DEC 2022 19:16
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**/home/alf/tmp/analisis-ejercicios/ejercicios-analisis.tex
-(/home/alf/tmp/analisis-ejercicios/ejercicios-analisis.tex
+**/run/media/alf/datos/misrepositorios/docencia/analisis-ejercicios/ejercicios-analisis.tex
+(/run/media/alf/datos/misrepositorios/docencia/analisis-ejercicios/ejercicios-analisis.tex
 LaTeX2e <2022-06-01> patch level 5
 L3 programming layer <2022-08-30> (/usr/local/texlive/2022/texmf-dist/tex/latex/koma-script/scrreport.cls
 Document Class: scrreport 2022/07/04 v3.37 KOMA-Script document class (report)
@@ -1083,7 +1083,7 @@ Overfull \hbox (37.62894pt too wide) detected at line 2989
  []
 
 [44] [45] [46] [47] [48] [49] [50] [51]
-/home/alf/tmp/analisis-ejercicios/ejercicios-analisis.tex:3363: Missing $ inserted.
+/run/media/alf/datos/misrepositorios/docencia/analisis-ejercicios/ejercicios-analisis.tex:3363: Missing $ inserted.
 <inserted text> 
                 $
 l.3363 Cuando \$t\to
@@ -1092,7 +1092,7 @@ I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 
-/home/alf/tmp/analisis-ejercicios/ejercicios-analisis.tex:3363: LaTeX Error: Bad math environment delimiter.
+/run/media/alf/datos/misrepositorios/docencia/analisis-ejercicios/ejercicios-analisis.tex:3363: LaTeX Error: Bad math environment delimiter.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
@@ -1104,60 +1104,70 @@ Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-[52] [53] [54]
-chapter 6.
-
-LaTeX Warning: Reference `exr-limites-1' on page 55 undefined on input line 3547.
-
-[55
-
-] [56] [57] [58] [59] [60] [61] [62]
-Overfull \hbox (54.3679pt too wide) detected at line 4081
+[52] [53]
+Overfull \hbox (21.93388pt too wide) detected at line 3557
 []
  []
 
-[63] [64] [65] [66] [67]
-/home/alf/tmp/analisis-ejercicios/ejercicios-analisis.tex:4352: Missing $ inserted.
+
+Overfull \hbox (58.36763pt too wide) detected at line 3571
+[]
+ []
+
+[54] [55] [56] [57]
+chapter 6.
+
+LaTeX Warning: Reference `exr-limites-1' on page 58 undefined on input line 3659.
+
+[58
+
+] [59] [60] [61] [62] [63] [64] [65]
+Overfull \hbox (54.3679pt too wide) detected at line 4193
+[]
+ []
+
+[66] [67] [68] [69] [70]
+/run/media/alf/datos/misrepositorios/docencia/analisis-ejercicios/ejercicios-analisis.tex:4464: Missing $ inserted.
 <inserted text> 
                 $
-l.4352 8\pi
+l.4464 8\pi
             5~\mu\mbox{m} = 40\pi ~\mu\mbox{m}. Por tanto, una error en la
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 
-LaTeX Warning: Command \' invalid in math mode on input line 4353.
+LaTeX Warning: Command \' invalid in math mode on input line 4465.
 
 
-/home/alf/tmp/analisis-ejercicios/ejercicios-analisis.tex:4353: LaTeX Error: Bad math environment delimiter.
+/run/media/alf/datos/misrepositorios/docencia/analisis-ejercicios/ejercicios-analisis.tex:4465: LaTeX Error: Bad math environment delimiter.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.4353 medición del radio de \(
+l.4465 medición del radio de \(
                                 dt=0.2\ \mu\mbox{m}\), producirá un error e...
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-[68] [69]
-<././img/derivadas/grafica-ext-1.png, id=818, 223.58531pt x 188.20313pt>
+[71] [72]
+<././img/derivadas/grafica-ext-1.png, id=833, 223.58531pt x 188.20313pt>
 File: ././img/derivadas/grafica-ext-1.png Graphic file (type png)
 <use ././img/derivadas/grafica-ext-1.png>
-Package pdftex.def Info: ././img/derivadas/grafica-ext-1.png  used on input line 4478.
+Package pdftex.def Info: ././img/derivadas/grafica-ext-1.png  used on input line 4590.
 (pdftex.def)             Requested size: 223.58815pt x 188.20552pt.
- [70] [71 <././img/derivadas/grafica-ext-1.png (PNG copy)>] [72] [73] [74] [75] [76] [77] [78] [79] [80] [81] [82] [83] [84] [85] [86]
-Overfull \hbox (3.28989pt too wide) detected at line 5559
+ [73] [74 <././img/derivadas/grafica-ext-1.png (PNG copy)>] [75] [76] [77] [78] [79] [80] [81] [82] [83] [84] [85] [86] [87] [88] [89]
+Overfull \hbox (3.28989pt too wide) detected at line 5671
 \OML/lmm/m/it/10.95 P[]\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 x\OT1/lmr/m/n/10.95 ) = \OML/lmm/m/it/10.95 f\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 ^^Y=\OT1/lmr/m/n/10.95 6) + \OML/lmm/m/it/10.95 f[]\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 ^^Y=\OT1/lmr/m/n/10.95 6)(\OML/lmm/m/it/10.95 x \OMS/lmsy/m/n/10.95 ^^@ \OML/lmm/m/it/10.95 ^^Y=\OT1/lmr/m/n/10.95 6) + [](\OML/lmm/m/it/10.95 x \OMS/lmsy/m/n/10.95 ^^@ \OML/lmm/m/it/10.95 ^^Y=\OT1/lmr/m/n/10.95 6)[] + [](\OML/lmm/m/it/10.95 x \OMS/lmsy/m/n/10.95 ^^@ \OML/lmm/m/it/10.95 ^^Y=\OT1/lmr/m/n/10.95 6)[]\OML/lmm/m/it/10.95 :
  []
 
-[87] [88] [89] [90]
-Overfull \hbox (6.47456pt too wide) detected at line 5807
+[90] [91] [92] [93]
+Overfull \hbox (6.47456pt too wide) detected at line 5919
 []
  []
 
-[91] [92] (./ejercicios-analisis.aux)
+[94] [95] (./ejercicios-analisis.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -1166,18 +1176,18 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  ) 
 Here is how much of TeX's memory you used:
- 38793 strings out of 476932
- 787482 string characters out of 5824858
+ 38801 strings out of 476932
+ 787666 string characters out of 5824858
  1302999 words of memory out of 5000000
- 58415 multiletter control sequences out of 15000+600000
+ 58418 multiletter control sequences out of 15000+600000
  550498 words of font info for 218 fonts, out of 8000000 for 9000
  62 hyphenation exceptions out of 8191
- 122i,14n,120p,10658b,1066s stack positions out of 10000i,1000n,20000p,200000b,200000s
-{/home/alf/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/home/alf/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/home/alf/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/home/alf/texmf/fonts/enc/dvips/lm/lm-ts1.enc}{/home/alf/texmf/fonts/enc/dvips/lm/lm-mathex.enc}{/home/alf/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/home/alf/texmf/fonts/enc/dvips/fontawesome5/fa5free2.enc}</home/alf/texmf/fonts/type1/public/fontawesome5/FontAwesome5Free-Solid.pfb></home/alf/texmf/fonts/type1/public/lm/lmbx10.pfb></home/alf/texmf/fonts/type1/public/lm/lmex10.pfb></home/alf/texmf/fonts/type1/public/lm/lmmi10.pfb></home/alf/texmf/fonts/type1/public/lm/lmmi6.pfb></home/alf/texmf/fonts/type1/public/lm/lmmi8.pfb></home/alf/texmf/fonts/type1/public/lm/lmr10.pfb></home/alf/texmf/fonts/type1/public/lm/lmr6.pfb></home/alf/texmf/fonts/type1/public/lm/lmr8.pfb></home/alf/texmf/fonts/type1/public/lm/lmri10.pfb></home/alf/texmf/fonts/type1/public/lm/lmss12.pfb></home/alf/texmf/fonts/type1/public/lm/lmssbx10.pfb></home/alf/texmf/fonts/type1/public/lm/lmsy10.pfb></home/alf/texmf/fonts/type1/public/lm/lmsy6.pfb></home/alf/texmf/fonts/type1/public/lm/lmsy8.pfb></home/alf/texmf/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on ejercicios-analisis.pdf (92 pages, 612674 bytes).
+ 122i,14n,120p,10690b,1066s stack positions out of 10000i,1000n,20000p,200000b,200000s
+{/home/alf/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/home/alf/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/home/alf/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/home/alf/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/home/alf/texmf/fonts/enc/dvips/lm/lm-ts1.enc}{/home/alf/texmf/fonts/enc/dvips/lm/lm-mathex.enc}{/home/alf/texmf/fonts/enc/dvips/fontawesome5/fa5free2.enc}</home/alf/texmf/fonts/type1/public/fontawesome5/FontAwesome5Free-Solid.pfb></home/alf/texmf/fonts/type1/public/lm/lmbx10.pfb></home/alf/texmf/fonts/type1/public/lm/lmex10.pfb></home/alf/texmf/fonts/type1/public/lm/lmmi10.pfb></home/alf/texmf/fonts/type1/public/lm/lmmi6.pfb></home/alf/texmf/fonts/type1/public/lm/lmmi8.pfb></home/alf/texmf/fonts/type1/public/lm/lmr10.pfb></home/alf/texmf/fonts/type1/public/lm/lmr6.pfb></home/alf/texmf/fonts/type1/public/lm/lmr8.pfb></home/alf/texmf/fonts/type1/public/lm/lmri10.pfb></home/alf/texmf/fonts/type1/public/lm/lmss12.pfb></home/alf/texmf/fonts/type1/public/lm/lmssbx10.pfb></home/alf/texmf/fonts/type1/public/lm/lmsy10.pfb></home/alf/texmf/fonts/type1/public/lm/lmsy6.pfb></home/alf/texmf/fonts/type1/public/lm/lmsy8.pfb></home/alf/texmf/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on ejercicios-analisis.pdf (95 pages, 622351 bytes).
 PDF statistics:
- 1236 PDF objects out of 1440 (max. 8388607)
- 1091 compressed objects within 11 object streams
- 639 named destinations out of 1000 (max. 500000)
+ 1255 PDF objects out of 1440 (max. 8388607)
+ 1105 compressed objects within 12 object streams
+ 644 named destinations out of 1000 (max. 500000)
  45145 words of extra memory for PDF output out of 51595 (max. 10000000)
 

@@ -806,6 +806,77 @@ e^{\frac{1}{x-1}} &amp; \text{si $x\geq 0$.}
 \]</span></p></li>
 </ol>
 </div>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-17-contents" aria-controls="callout-17" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-17" class="callout-17-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="a">
+<li><p>A simple vista, podemos ver que se trata de una función racional y estará definida en todo <span class="math inline">\(\mathbb{R}\)</span> salvo en los puntos que anulen alguno de los denominadores. Dichos puntos son fáciles de obtener igualando a 0 los denominadores:</p>
+<p><span class="math display">\[\begin{align*}
+x &amp;= 0 \\
+x+1 &amp;= 0\Leftrightarrow x=-1 \\
+x-1 &amp;= 0\Leftrightarrow x=1 \\
+\frac{3}{x-1}-\frac{1}{x} &amp;= 0 \Leftrightarrow x=-\frac{1}{2}
+\end{align*}\]</span></p>
+<p>Por tanto, obtenemos 4 punto de discontinuidad, que son: <span class="math inline">\(x=0,\)</span> <span class="math inline">\(x=1\)</span>, <span class="math inline">\(x=-1\)</span> y <span class="math inline">\(x=-\frac{1}{2}\)</span>.</p>
+<p>Para clasificar estas cuatro discontinuidades, tenemos que estudiar los correspondientes límites por la izquierda y por la derecha.</p>
+<ul>
+<li>Discontinuidad en <span class="math inline">\(x=0\)</span>:</li>
+</ul>
+<p><span class="math display">\[\begin{align*}
+\lim_{x\rightarrow 0^{-}}f(x) &amp;= \lim_{x\rightarrow 0^{-}}\frac{\frac{1}{x}-\frac{1}{x+1}}{\frac{3}{x-1}-\frac{1}{x}} = \lim_{x\rightarrow 0^{-}}\frac{x-1}{\left( x+1\right) \left( 2x+1\right) } = \lim_{x\rightarrow 0^{-}}\frac{-1}{1}=-1, \\
+\lim_{x\rightarrow 0^{+}}f(x) &amp;= \lim_{x\rightarrow 0^{+}}\frac{\frac{1}{x}-\frac{1}{x+1}}{\frac{3}{x-1}-\frac{1}{x}} = \lim_{x\rightarrow 0^{+}}\frac{x-1}{\left( x+1\right) \left( 2x+1\right) } = \lim_{x\rightarrow 0^{+}}\frac{-1}{1}=-1.
+\end{align*}\]</span></p>
+<p>Como ambos límites coinciden, se trata de una discontinuidad evitable.</p>
+<ul>
+<li>Discontinuidad en <span class="math inline">\(x=1\)</span>:</li>
+</ul>
+<p><span class="math display">\[\begin{align*}
+\lim_{x\rightarrow 1^{-}}f(x) &amp;= \lim_{x\rightarrow 1^{-}}\frac{\frac{1}{x}-\frac{1}{x+1}}{\frac{3}{x-1}-\frac{1}{x}} = \lim_{x\rightarrow 1^{-}}\frac{x-1}{\left( x+1\right) \left( 2x+1\right) } = \lim_{x\rightarrow 1^{-}}\frac{0}{6}=0, \\
+\lim_{x\rightarrow 1^{+}}f(x) &amp;= \lim_{x\rightarrow 1^{+}}\frac{\frac{1}{x}-\frac{1}{x+1}}{\frac{3}{x-1}-\frac{1}{x}} = \lim_{x\rightarrow 1^{+}}\frac{x-1}{\left( x+1\right) \left( 2x+1\right) } = \lim_{x\rightarrow 1^{+}}\frac{0}{6}=0.
+\end{align*}\]</span></p>
+<p>De nuevo, como ambos límites coinciden, se trata de una discontinuidad evitable.</p>
+<ul>
+<li>Discontinuidad en <span class="math inline">\(x=-1\)</span>:</li>
+</ul>
+<p><span class="math display">\[\begin{align*}
+\lim_{x\rightarrow -1^{-}}f(x) &amp;= \lim_{x\rightarrow -1^{-}}\frac{\frac{1}{x}-\frac{1}{x+1}}{\frac{3}{x-1}-\frac{1}{x}} = \lim_{x\rightarrow -1^{-}}\frac{x-1}{\left( x+1\right) \left( 2x+1\right) } = \lim_{x\rightarrow -1^{-}}\frac{-2}{-0\cdot -1}=-\infty, \\
+\lim_{x\rightarrow -1^{+}}f(x) &amp;= \lim_{x\rightarrow -1^{+}}\frac{\frac{1}{x}-\frac{1}{x+1}}{\frac{3}{x-1}-\frac{1}{x}} = \lim_{x\rightarrow -1^{+}}\frac{x-1}{\left( x+1\right) \left( 2x+1\right) } = \lim_{x\rightarrow -1^{+}}\frac{-2}{+0\cdot -1}=\infty.
+\end{align*}\]</span></p>
+<p>Como ambos límites divergen, se trata de una discontinuidad de primera especie de salto infinito.</p>
+<ul>
+<li>Discontinuidad en <span class="math inline">\(x=-\frac{1}{2}\)</span>:</li>
+</ul>
+<p><span class="math display">\[\begin{align*}
+\lim_{x\rightarrow -1/2^{-}}f(x) &amp;= \lim_{x\rightarrow -1/2^{-}}\frac{\frac{1}{x}-\frac{1}{x+1}}{\frac{3}{x-1}-\frac{1}{x}} = \lim_{x\rightarrow -1/2^{-}}\frac{x-1}{\left( x+1\right) \left( 2x+1\right) } = \lim_{x\rightarrow-1/2^{-}}\frac{-3/2}{1/2\cdot -0} = +\infty, \\
+\lim_{x\rightarrow -1/2^{+}}f(x) &amp;= \lim_{x\rightarrow -1/2^{+}}\frac{\frac{1}{x}-\frac{1}{x+1}}{\frac{3}{x-1}-\frac{1}{x}} = \lim_{x\rightarrow -1/2^{+}}\frac{x-1}{\left( x+1\right) \left( 2x+1\right) } = \lim_{x\rightarrow-1/2^{+}}\frac{-2}{1/2\cdot +0} = -\infty.
+\end{align*}\]</span></p>
+<p>Por último, como ambos límites divergen, se trata también de una discontinuidad de primera especie de salto infinito.</p></li>
+<li><p>La función <span class="math inline">\(\frac{\operatorname{sen}(x)}{x}\)</span> es continua en <span class="math inline">\(\mathbb{R}\setminus{\{0\}}\)</span> y en consecuencia es continua en la región donde está definida, es decir <span class="math inline">\((-\infty ,0)\)</span>. Por su parte, la función <span class="math inline">\(e^{\frac 1{x-1}}\)</span> es continua en todos los puntos en que sea continuo el exponente <span class="math inline">\(\frac{1}{x-1},\)</span> es decir en <span class="math inline">\(\mathbb{R}\setminus\{1\}\)</span>, en consecuencia, es continua en toda la región en donde está definida, menos en el 1. Así pues, reduciremos el estudio de la continuidad a dos puntos, el 0 por ser donde cambia la definición de la función y el 1, por no estar definida la función <span class="math inline">\(e^{\frac{1}{x-1}}.\)</span></p>
+<p>Estudiamos primero la continuidad en el punto <span class="math inline">\(x=0\)</span>:</p>
+<p><span class="math display">\[\begin{align*}
+\lim_{x\rightarrow 0^{-}}f(x) &amp;= \lim_{x\rightarrow 0^{-}}\frac{\operatorname{sen}(x)}{x}\stackrel{\text{L}^{\prime }\text{H\^{o}pital}}{=} \lim_{x\rightarrow 0^{-}}\frac{\cos x}{1} = 1,\\
+\lim_{x\rightarrow 0^{+}}f(x) &amp;= \lim_{x\rightarrow 0^{+}}e^{\frac{1}{x-1}} = e^{-1}.\\
+\end{align*}\]</span></p>
+<p>Como ambos límites laterales son distintos, en <span class="math inline">\(x=0\)</span> hay una discontinuidad de salto.</p>
+<p>Estudiamos ahora la continuidad en el punto <span class="math inline">\(x=1\)</span>:</p>
+<p><span class="math display">\[\begin{align*}
+\lim_{x\rightarrow 1^{-}}f(x) &amp;= \lim_{x\rightarrow 1^{-}}e^{\frac{1}{x-1}}=e^{-\infty }=0, \\
+\lim_{x\rightarrow 1^{+}}f(x) &amp;= \lim_{x\rightarrow 1^{+}}e^{\frac{1}{x-1}}=e^\infty = \infty.\\
+\end{align*}\]</span></p>
+<p>Como el límite lateral por la derecha no existe, en <span class="math inline">\(x=1\)</span> hay una discontinuidad de segunda especie.</p></li>
+</ol>
+</div>
+</div>
+</div>
 <div id="exr-bolzano" class="theorem exercise">
 <p><span class="theorem-title"><strong>Ejercicio 5.22 </strong></span>Calcular una raíz de la función <span class="math inline">\(f(x)=x^5-x+1\)</span> con una aproximación de 2 decimales.</p>
 </div>
