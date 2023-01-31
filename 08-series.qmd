@@ -1,0 +1,75 @@
+---
+title: Series de números reales
+lang: es
+---
+
+:::{#exr-conversion-sucesiones-series}
+Demostrar que cualquier sucesión puede expresarse como una serie.
+:::
+
+:::{.callout-tip collapse="true"}
+## Solucion
+Dada una sucesión $(a_n)_{n=1}^\infty$, veamos cómo podemos expresarla como una serie. Para ello, basta con construir la sucesión de las diferencias de dos términos consecutivos, es decir, la sucesión $(d_n)_{n=1}^\infty$ dada por:
+\begin{align*}
+d_1&=a_1\\ 
+d_2&=a_2-a_1\\ 
+d_3&=a_3-a_2\\ 
+\vdots\\ 
+d_{n+1}&=a_{n+1}-a_n
+\end{align*}
+
+Resulta sencillo comprobar que $a_n=\sum_{i=1}^n d_i$, por lo que la sucesión $(a_n)_{n=1}^\infty = \left(\sum_{i=1}^n d_i\right)_{n=1}^\infty = \sum d_n$.
+:::  
+
+:::{#exr-series-geometricas}
+Demostrar que una serie geométrica $\sum x^n$ converge si y solo si $|x|<1$.
+:::
+
+:::{.callout-tip collapse="true"}
+## Pista
+Utilizar la igualdad $(1+x+x^2+\cdots + x^n)(1-x) = 1-x^{n+1}$.
+:::
+
+:::{.callout-tip collapse="true"}
+## Solucion
+Usando la igualdad $(1+x+x^2+\cdots + x^n)(1-x) = 1-x^{n+1}$ se tiene
+
+$$
+\sum_{i=0}^n x^i = \frac{1-x^{n+1}}{1-x} = \frac{1}{1-x}-\frac{x^{n+1}}{1-x}.
+$$
+
+Si $|x|<1$ entonces $\lim_{n\to\infty}\frac{x^{n+1}}{1-x} = 0$, de manera que 
+
+$$
+\sum_{n=1}^\infty x^n = \lim_{n\to \infty}\sum_{i=1}^n x^i = \frac{1}{1-x}.
+$$
+
+Si $|x|>1$, entonces $\lim_{n\to\infty}\frac{x^{n+1}}{1-x}=\infty$, y la serie no converge.
+
+Si $x=1$ entonces $\sum_{i=0}^n 1^i = n+1$ que tampoco converge, y si $x=-1$, se obtiene una sucesión de sumas alternada, ya que $\sum_{i=0}^{2n} (-1)^i = 1$ y $\sum_{i=0}^{2n+1} (-1)^i = 0$, por lo que la serie tampoco converge.
+:::
+
+:::{#exr-serie-armonica-alternada}
+Haciendo uso de la serie de Taylor del logaritmo, demostrar que una serie armónica alternada $\sum \frac{(-1)^{n+1}}{n}$ converge y calcular su límite.
+:::
+
+:::{.callout-tip collapse="true"}
+## Solucion
+El polinomio de Taylor de grado $n$ de la función $f(x)=\ln(x)$ en el punto $a=1$ es 
+
+\begin{align*}
+P^n_{f,1}(x) &= 1(x-1) - \frac{1}{2}(x-1)^2 + \frac{2!}{3!}(x-1)^3 - \frac{3!}{4!} (x-1)^4 + \cdots + (-1)^{n+1}\frac{(n-1)!}{n!}(x-1)^n \\ 
+&= 1(x-1) -\frac{1}{2}(x-1)^2 + \frac{1}{3}(x-1)^3 - \frac{1}{4} (x-1)^4 + \cdots + (-1)^{n+1}\frac{1}{n}(x-1)^n 
+\end{align*}
+
+y en $x=2$ se tiene
+
+$$
+P^n_{f,1}(2) = 1 -\frac{1}{2} + \frac{1}{3} - \frac{1}{4} + \cdots + (-1)^{n+1}\frac{1}{n} = \sum_{i=1}^n \frac{(-1)^{i+1}}{i} 
+$$
+
+Por tanto, $\sum_{n=1}^\infty \frac{(-1)^{n+1}}{n} = \lim_{n\to\infty}P^n_{f,1}(2) = \ln(2)$.
+:::
+
+
+

@@ -18,8 +18,8 @@ book:
   author: "Alfredo Sánchez Alberca"
   date: "1/6/2022"
   output-file: "ejercicios-analisis"
-  image: cover.png
-  cover-image: img/logos/pi.jpg
+  image: img/logos/sticker.png
+  cover-image: img/logos/sticker.png
   sharing: [twitter, linkedin]
   downloads: [pdf, epub]
   favicon: "img/logos/favicon.ico"
@@ -33,15 +33,15 @@ book:
     site: "@aprendeconalf"
   chapters:
     - index.qmd
-    - teoria-conjuntos.qmd
-    - reales.qmd
-    - topologia.qmd
-    - sucesiones.qmd
-    - limites.qmd
-    - derivadas.qmd
+    - 01-teoria-conjuntos.qmd
+    - 02-numeros-reales.qmd
+    - 03-topologia.qmd
+    - 04-sucesiones.qmd
+    - 06-limites.qmd
+    - 07-derivadas.qmd
+    - 08-series.qmd
     
 #bibliography: references.bib
-
 
 format:
   html:
@@ -55,7 +55,7 @@ format:
     papersize: a4
     template-partials:
       - before-body.tex
-    titlegraphic: img/logos/infinito.png
+    titlegraphic: img/logos/sticker.png
     institution: CEU San Pablo
     email: asalber@ceu.es
     web: https://aprendeconalf.es
@@ -70,7 +70,7 @@ format:
     #  - Numbers=Proportional    
     
   epub:
-    cover-image: img/logos/pi.jpg
+    cover-image: img/logos/sticker.png
 
 
 
