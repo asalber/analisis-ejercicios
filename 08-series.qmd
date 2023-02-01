@@ -8,7 +8,7 @@ Demostrar que cualquier sucesión puede expresarse como una serie.
 :::
 
 :::{.callout-tip collapse="true"}
-## Solucion
+## Solución
 Dada una sucesión $(a_n)_{n=1}^\infty$, veamos cómo podemos expresarla como una serie. Para ello, basta con construir la sucesión de las diferencias de dos términos consecutivos, es decir, la sucesión $(d_n)_{n=1}^\infty$ dada por:
 \begin{align*}
 d_1&=a_1\\ 
@@ -21,17 +21,48 @@ d_{n+1}&=a_{n+1}-a_n
 Resulta sencillo comprobar que $a_n=\sum_{i=1}^n d_i$, por lo que la sucesión $(a_n)_{n=1}^\infty = \left(\sum_{i=1}^n d_i\right)_{n=1}^\infty = \sum d_n$.
 :::  
 
+:::{#exr-números-decimales-series}
+Demostrar que la serie $\sum \frac{9}{10^n}$ converge y calcular su límite.
+:::
+
+:::{.callout-tip collapse="true"}
+## Solución
+Los primeros términos de la serie son 
+
+\begin{align*}
+\sum_{i=1}^1 \frac{9}{10^i} &= \frac{9}{10} = 0.9\\ 
+\sum_{i=1}^2 \frac{9}{10^i} &= \frac{9}{10} + \frac{9}{100} = 0.99\\ 
+\sum_{i=1}^3 \frac{9}{10^i} &= \frac{9}{10} + \frac{9}{100} + \frac{9}{1000} = 0.999\\ 
+\vdots
+\end{align*}
+
+por lo que las sumas parciales cada vez están más cerca de $1$ y se puede probar fácilmente que $\sum_{n=1}^\infty \frac{9}{10^n} = \lim_{n\to\infty} \sum_{i=1}^n \frac{9}{10^i} = 1$. Para ello, dado un $\varepsilon>0$, por la propiedad arquimediana se puede tomar $k\in\mathbb{N}$ con $\frac{1}{k}<\varepsilon$, de manera que $|\sum_{i=1}^n \frac{9}{10^i} -1|<\frac{1}{10^k}<\frac{1}{k}<\varepsilon$ $\forall n\geq k$.
+::: 
+
+:::{#exr-sumas-parciales}
+Si $\sum_{i=1}^n a_n=\frac{n-1}{n+1}$, ¿cuál es el término general de la sucesión $a_n$? Calcular $\sum_{n=1}^\infty a_n$.
+:::
+
+:::{.callout-tip collapse="true"}
+## Solución
+Sea $A_n=\sum_{i=1}^n a_i$ la suma parcial de los $n$ primeros términos de la sucesión $(a_n)_{n=1}^\infty$. Entones, el primer término de la sucesión es $a_1 = A_1= \sum_{i=1}^1 a_i = \frac{1-1}{1+1} = 0$.
+
+Por otro lado, $A_n=A_{n-1}+a_n$ por lo que $a_n=A_n-A_{n-1} = \frac{n-1}{n+1}-\frac{n-2}{n} = \frac{2}{n(n+1)}$.
+
+Por último, $\sum_{n=1}^\infty a_n = \lim_{n\to\infty} A_n = \lim_{n\to\infty} \frac{n-1}{n+1} = 1$.
+::: 
+
 :::{#exr-series-geometricas}
 Demostrar que una serie geométrica $\sum x^n$ converge si y solo si $|x|<1$.
 :::
 
-:::{.callout-tip collapse="true"}
+:::{.callout-note collapse="true"}
 ## Pista
 Utilizar la igualdad $(1+x+x^2+\cdots + x^n)(1-x) = 1-x^{n+1}$.
 :::
 
 :::{.callout-tip collapse="true"}
-## Solucion
+## Solución
 Usando la igualdad $(1+x+x^2+\cdots + x^n)(1-x) = 1-x^{n+1}$ se tiene
 
 $$
@@ -49,12 +80,35 @@ Si $|x|>1$, entonces $\lim_{n\to\infty}\frac{x^{n+1}}{1-x}=\infty$, y la serie n
 Si $x=1$ entonces $\sum_{i=0}^n 1^i = n+1$ que tampoco converge, y si $x=-1$, se obtiene una sucesión de sumas alternada, ya que $\sum_{i=0}^{2n} (-1)^i = 1$ y $\sum_{i=0}^{2n+1} (-1)^i = 0$, por lo que la serie tampoco converge.
 :::
 
+:::{#exr-serie-geometrica-farmaco}
+Un enfermo crónico toma cada día una pastilla con 200 mg de un principio activo. Su cuerpo es capaz de metabolizar diariamente el 90\% de la cantidad de principio activo presente. ¿Qué cantidad de principio activo quedará en el cuerpo del enfermo tras $n$ días tomando la pastilla? ¿Qué cantidad de principio activo quedará en el cuerpo del enfermo a largo plazo?
+:::
+
+:::{.callout-tip collapse="true"}
+## Solución
+Sea $A_n$ la cantidad de medicamento que queda en el cuerpo del enfermo tras $n$ días tomando la pastilla. Veamos cuáles son las cantidades de principio activo que quedan en el cuerpo del enfermo los primeros días.
+
+\begin{align*}
+A_1 &= 0.1\cdot 200 \mbox{ mg}\\ 
+A_2 &= 0.1 (200 + 0.1\cdot 200) = 0.1\cdot 200 + 0.1^2 \cdot 200 = A_1 + 0.1^2\cdot 200 \mbox{ mg}\\ 
+A_3 &= 0.1 (200 + 0.1\cdot 200 + 0.1^2 \cdot 200) = 0.1\cdot 200 + 0.1^2 \cdot 200 + 0.1^3\cdot 200 = A_2 + 0.1^3\cdot 200 \mbox{ mg}\\ 
+\vdots\\
+A_n &= A_{n-1} + 0.1^n \cdot 200 \mbox{ mg}
+\end{align*}
+
+Por tanto, el término general de la sucesión que subyace a la serie es $a_n = A_n-A_{n-1} = 200\cdot 0.1^n$, de manera que se trata de la serie geométrica $\sum 200\cdot 0.1^n$, y, por el ejercicio anterior, como $0.1<1$, la serie converge a $\sum_{n=1}^\infty 200\cdot 0.1^n = 200\sum_{n=1}^\infty 0.1^n = 200\frac{1}{1-0.1} = 222.2222\cdots$ mg.
+:::
+
+:::{#exr-propensiones-marginales-gasto-ahorro}
+Cuando una persona gasta una cantidad de dinero en un bien o servicio, la persona que recibe el dinero directa o indirectamente, también gasta un porcentaje $k$ de esa cantidad en otros bienes y servicios, mientras que ahorra el resto. En Economía, el valor $\frac{k}{100}$ se conoce como _propensión marginal al consumo_ mientras que $1-\frac{k}{100}$ se conoce como _propensión marginal al ahorro_. Si una persona inicia el proceso gastando una cantidad $x$, qué cantidad total se habrá gastado después de $n$ transacciones? ¿Hacia dónde converge el gasto cuando se realiza un número infinito de transacciones? ¿A largo plazo, cuál es el efecto multiplicador sobre el gasto inicial de una propensión marginal al consumo de $0.6$?
+:::
+
 :::{#exr-serie-armonica-alternada}
 Haciendo uso de la serie de Taylor del logaritmo, demostrar que una serie armónica alternada $\sum \frac{(-1)^{n+1}}{n}$ converge y calcular su límite.
 :::
 
 :::{.callout-tip collapse="true"}
-## Solucion
+## Solución
 El polinomio de Taylor de grado $n$ de la función $f(x)=\ln(x)$ en el punto $a=1$ es 
 
 \begin{align*}
@@ -71,5 +125,37 @@ $$
 Por tanto, $\sum_{n=1}^\infty \frac{(-1)^{n+1}}{n} = \lim_{n\to\infty}P^n_{f,1}(2) = \ln(2)$.
 :::
 
+:::{#exr-serie-convergente}
+Demostrar que la serie $\sum_{n=1}^\infty \frac{1}{n(n+1)} = 1$.
+:::
+
+:::{.callout-note collapse="true"}
+## Pista
+Descomponer el término general de la sucesión subyacente a la serie en fraccione simples.
+:::
+
+:::{.callout-tip collapse="true"}
+## Solución
+El término general de la sucesión se puede descomponer en fracciones simples de la siguiente manera $\frac{1}{n(n+1)} = \frac{1}{n}-\frac{1}{n+1}$, de modo que la suma parcial de los $n$ primeros términos de la serie es
+
+\begin{align*}
+A_n &= \left(1-\frac{1}{2}\right)+\left(\frac{1}{2}-\frac{1}{3}\right)+\left(\frac{1}{3}-\frac{1}{4}\right)+\cdots +\left(\frac{1}{n}-\frac{1}{n+1}\right) = 1-\frac{1}{n+1}
+\end{align*}
+
+Así pues, 
+
+$$
+\sum_{n=1}^\infty \frac{1}{n(n+1)} = \lim_{n\to\infty} A_n  = \lim_{n\to\infty} 1-\frac{1}{n+1} = 1.
+$$
+:::
+
+:::{#exr-series-divergentes}
+Demostrar que las siguientes series divergen.
+
+a. $\sum \frac{n^2}{n+1}$.
+b. $\sum \cos\left(\frac{1}{n}\right)$.
+c. $\sum n\operatorname{sen}\left(\frac{1}{n}\right)$.
+d. $\sum \frac{1}{2n}$.
+:::
 
 

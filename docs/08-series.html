@@ -214,7 +214,7 @@ ul.task-list li input[type="checkbox"] {
 <i class="callout-icon"></i>
 </div>
 <div class="callout-caption-container flex-fill">
-Solucion
+Solución
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -231,11 +231,58 @@ d_{n+1}&amp;=a_{n+1}-a_n
 </div>
 </div>
 </div>
-<div id="exr-series-geometricas" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 7.2 </strong></span>Demostrar que una serie geométrica <span class="math inline">\(\sum x^n\)</span> converge si y solo si <span class="math inline">\(|x|&lt;1\)</span>.</p>
+<div id="exr-números-decimales-series" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 7.2 </strong></span>Demostrar que la serie <span class="math inline">\(\sum \frac{9}{10^n}\)</span> converge y calcular su límite.</p>
 </div>
 <div class="callout-tip callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Los primeros términos de la serie son</p>
+<p><span class="math display">\[\begin{align*}
+\sum_{i=1}^1 \frac{9}{10^i} &amp;= \frac{9}{10} = 0.9\\
+\sum_{i=1}^2 \frac{9}{10^i} &amp;= \frac{9}{10} + \frac{9}{100} = 0.99\\
+\sum_{i=1}^3 \frac{9}{10^i} &amp;= \frac{9}{10} + \frac{9}{100} + \frac{9}{1000} = 0.999\\
+\vdots
+\end{align*}\]</span></p>
+<p>por lo que las sumas parciales cada vez están más cerca de <span class="math inline">\(1\)</span> y se puede probar fácilmente que <span class="math inline">\(\sum_{n=1}^\infty \frac{9}{10^n} = \lim_{n\to\infty} \sum_{i=1}^n \frac{9}{10^i} = 1\)</span>. Para ello, dado un <span class="math inline">\(\varepsilon&gt;0\)</span>, por la propiedad arquimediana se puede tomar <span class="math inline">\(k\in\mathbb{N}\)</span> con <span class="math inline">\(\frac{1}{k}&lt;\varepsilon\)</span>, de manera que <span class="math inline">\(|\sum_{i=1}^n \frac{9}{10^i} -1|&lt;\frac{1}{10^k}&lt;\frac{1}{k}&lt;\varepsilon\)</span> <span class="math inline">\(\forall n\geq k\)</span>.</p>
+</div>
+</div>
+</div>
+<div id="exr-sumas-parciales" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 7.3 </strong></span>Si <span class="math inline">\(\sum_{i=1}^n a_n=\frac{n-1}{n+1}\)</span>, ¿cuál es el término general de la sucesión <span class="math inline">\(a_n\)</span>? Calcular <span class="math inline">\(\sum_{n=1}^\infty a_n\)</span>.</p>
+</div>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Sea <span class="math inline">\(A_n=\sum_{i=1}^n a_i\)</span> la suma parcial de los <span class="math inline">\(n\)</span> primeros términos de la sucesión <span class="math inline">\((a_n)_{n=1}^\infty\)</span>. Entones, el primer término de la sucesión es <span class="math inline">\(a_1 = A_1= \sum_{i=1}^1 a_i = \frac{1-1}{1+1} = 0\)</span>.</p>
+<p>Por otro lado, <span class="math inline">\(A_n=A_{n-1}+a_n\)</span> por lo que <span class="math inline">\(a_n=A_n-A_{n-1} = \frac{n-1}{n+1}-\frac{n-2}{n} = \frac{2}{n(n+1)}\)</span>.</p>
+<p>Por último, <span class="math inline">\(\sum_{n=1}^\infty a_n = \lim_{n\to\infty} A_n = \lim_{n\to\infty} \frac{n-1}{n+1} = 1\)</span>.</p>
+</div>
+</div>
+</div>
+<div id="exr-series-geometricas" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 7.4 </strong></span>Demostrar que una serie geométrica <span class="math inline">\(\sum x^n\)</span> converge si y solo si <span class="math inline">\(|x|&lt;1\)</span>.</p>
+</div>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -244,23 +291,23 @@ Pista
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Utilizar la igualdad <span class="math inline">\((1+x+x^2+\cdots + x^n)(1-x) = 1-x^{n+1}\)</span>.</p>
 </div>
 </div>
 </div>
 <div class="callout-tip callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-caption-container flex-fill">
-Solucion
+Solución
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Usando la igualdad <span class="math inline">\((1+x+x^2+\cdots + x^n)(1-x) = 1-x^{n+1}\)</span> se tiene</p>
 <p><span class="math display">\[
@@ -275,20 +322,50 @@ Solucion
 </div>
 </div>
 </div>
-<div id="exr-serie-armonica-alternada" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 7.3 </strong></span>Haciendo uso de la serie de Taylor del logaritmo, demostrar que una serie armónica alternada <span class="math inline">\(\sum \frac{(-1)^{n+1}}{n}\)</span> converge y calcular su límite.</p>
+<div id="exr-serie-geometrica-farmaco" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 7.5 </strong></span>Un enfermo crónico toma cada día una pastilla con 200 mg de un principio activo. Su cuerpo es capaz de metabolizar diariamente el 90% de la cantidad de principio activo presente. ¿Qué cantidad de principio activo quedará en el cuerpo del enfermo tras <span class="math inline">\(n\)</span> días tomando la pastilla? ¿Qué cantidad de principio activo quedará en el cuerpo del enfermo a largo plazo?</p>
 </div>
 <div class="callout-tip callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-caption-container flex-fill">
-Solucion
+Solución
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div id="callout-6" class="callout-6-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Sea <span class="math inline">\(A_n\)</span> la cantidad de medicamento que queda en el cuerpo del enfermo tras <span class="math inline">\(n\)</span> días tomando la pastilla. Veamos cuáles son las cantidades de principio activo que quedan en el cuerpo del enfermo los primeros días.</p>
+<p><span class="math display">\[\begin{align*}
+A_1 &amp;= 0.1\cdot 200 \mbox{ mg}\\
+A_2 &amp;= 0.1 (200 + 0.1\cdot 200) = 0.1\cdot 200 + 0.1^2 \cdot 200 = A_1 + 0.1^2\cdot 200 \mbox{ mg}\\
+A_3 &amp;= 0.1 (200 + 0.1\cdot 200 + 0.1^2 \cdot 200) = 0.1\cdot 200 + 0.1^2 \cdot 200 + 0.1^3\cdot 200 = A_2 + 0.1^3\cdot 200 \mbox{ mg}\\
+\vdots\\
+A_n &amp;= A_{n-1} + 0.1^n \cdot 200 \mbox{ mg}
+\end{align*}\]</span></p>
+<p>Por tanto, el término general de la sucesión que subyace a la serie es <span class="math inline">\(a_n = A_n-A_{n-1} = 200\cdot 0.1^n\)</span>, de manera que se trata de la serie geométrica <span class="math inline">\(\sum 200\cdot 0.1^n\)</span>, y, por el ejercicio anterior, como <span class="math inline">\(0.1&lt;1\)</span>, la serie converge a <span class="math inline">\(\sum_{n=1}^\infty 200\cdot 0.1^n = 200\sum_{n=1}^\infty 0.1^n = 200\frac{1}{1-0.1} = 222.2222\cdots\)</span> mg.</p>
+</div>
+</div>
+</div>
+<div id="exr-propensiones-marginales-gasto-ahorro" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 7.6 </strong></span>Cuando una persona gasta una cantidad de dinero en un bien o servicio, la persona que recibe el dinero directa o indirectamente, también gasta un porcentaje <span class="math inline">\(k\)</span> de esa cantidad en otros bienes y servicios, mientras que ahorra el resto. En Economía, el valor <span class="math inline">\(\frac{k}{100}\)</span> se conoce como <em>propensión marginal al consumo</em> mientras que <span class="math inline">\(1-\frac{k}{100}\)</span> se conoce como <em>propensión marginal al ahorro</em>. Si una persona inicia el proceso gastando una cantidad <span class="math inline">\(x\)</span>, qué cantidad total se habrá gastado después de <span class="math inline">\(n\)</span> transacciones? ¿Hacia dónde converge el gasto cuando se realiza un número infinito de transacciones? ¿A largo plazo, cuál es el efecto multiplicador sobre el gasto inicial de una propensión marginal al consumo de <span class="math inline">\(0.6\)</span>?</p>
+</div>
+<div id="exr-serie-armonica-alternada" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 7.7 </strong></span>Haciendo uso de la serie de Taylor del logaritmo, demostrar que una serie armónica alternada <span class="math inline">\(\sum \frac{(-1)^{n+1}}{n}\)</span> converge y calcular su límite.</p>
+</div>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-7" class="callout-7-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>El polinomio de Taylor de grado <span class="math inline">\(n\)</span> de la función <span class="math inline">\(f(x)=\ln(x)\)</span> en el punto <span class="math inline">\(a=1\)</span> es</p>
 <p><span class="math display">\[\begin{align*}
@@ -302,6 +379,57 @@ P^n_{f,1}(2) = 1 -\frac{1}{2} + \frac{1}{3} - \frac{1}{4} + \cdots + (-1)^{n+1}\
 <p>Por tanto, <span class="math inline">\(\sum_{n=1}^\infty \frac{(-1)^{n+1}}{n} = \lim_{n\to\infty}P^n_{f,1}(2) = \ln(2)\)</span>.</p>
 </div>
 </div>
+</div>
+<div id="exr-serie-convergente" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 7.8 </strong></span>Demostrar que la serie <span class="math inline">\(\sum_{n=1}^\infty \frac{1}{n(n+1)} = 1\)</span>.</p>
+</div>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Pista
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-8" class="callout-8-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Descomponer el término general de la sucesión subyacente a la serie en fraccione simples.</p>
+</div>
+</div>
+</div>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-9" class="callout-9-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>El término general de la sucesión se puede descomponer en fracciones simples de la siguiente manera <span class="math inline">\(\frac{1}{n(n+1)} = \frac{1}{n}-\frac{1}{n+1}\)</span>, de modo que la suma parcial de los <span class="math inline">\(n\)</span> primeros términos de la serie es</p>
+<p><span class="math display">\[\begin{align*}
+A_n &amp;= \left(1-\frac{1}{2}\right)+\left(\frac{1}{2}-\frac{1}{3}\right)+\left(\frac{1}{3}-\frac{1}{4}\right)+\cdots +\left(\frac{1}{n}-\frac{1}{n+1}\right) = 1-\frac{1}{n+1}
+\end{align*}\]</span></p>
+<p>Así pues,</p>
+<p><span class="math display">\[
+\sum_{n=1}^\infty \frac{1}{n(n+1)} = \lim_{n\to\infty} A_n  = \lim_{n\to\infty} 1-\frac{1}{n+1} = 1.
+\]</span></p>
+</div>
+</div>
+</div>
+<div id="exr-series-divergentes" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 7.9 </strong></span>Demostrar que las siguientes series divergen.</p>
+<ol type="a">
+<li><span class="math inline">\(\sum \frac{n^2}{n+1}\)</span>.</li>
+<li><span class="math inline">\(\sum \cos\left(\frac{1}{n}\right)\)</span>.</li>
+<li><span class="math inline">\(\sum n\operatorname{sen}\left(\frac{1}{n}\right)\)</span>.</li>
+<li><span class="math inline">\(\sum \frac{1}{2n}\)</span>.</li>
+</ol>
 </div>
 
 
