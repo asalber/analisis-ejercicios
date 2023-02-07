@@ -315,7 +315,7 @@ Solución
 \]</span></p>
 <p>Si <span class="math inline">\(|x|&lt;1\)</span> entonces <span class="math inline">\(\lim_{n\to\infty}\frac{x^{n+1}}{1-x} = 0\)</span>, de manera que</p>
 <p><span class="math display">\[
-\sum_{n=1}^\infty x^n = \lim_{n\to \infty}\sum_{i=1}^n x^i = \frac{1}{1-x}.
+\sum_{n=0}^\infty x^n = \lim_{n\to \infty}\sum_{i=0}^n x^i = \frac{1}{1-x}.
 \]</span></p>
 <p>Si <span class="math inline">\(|x|&gt;1\)</span>, entonces <span class="math inline">\(\lim_{n\to\infty}\frac{x^{n+1}}{1-x}=\infty\)</span>, y la serie no converge.</p>
 <p>Si <span class="math inline">\(x=1\)</span> entonces <span class="math inline">\(\sum_{i=0}^n 1^i = n+1\)</span> que tampoco converge, y si <span class="math inline">\(x=-1\)</span>, se obtiene una sucesión de sumas alternada, ya que <span class="math inline">\(\sum_{i=0}^{2n} (-1)^i = 1\)</span> y <span class="math inline">\(\sum_{i=0}^{2n+1} (-1)^i = 0\)</span>, por lo que la serie tampoco converge.</p>
@@ -352,8 +352,8 @@ A_n &amp;= A_{n-1} + 0.1^n \cdot 200 \mbox{ mg}
 <div id="exr-propensiones-marginales-gasto-ahorro" class="theorem exercise">
 <p><span class="theorem-title"><strong>Ejercicio 7.6 </strong></span>Cuando una persona gasta una cantidad de dinero en un bien o servicio, la persona que recibe el dinero directa o indirectamente, también gasta un porcentaje <span class="math inline">\(k\)</span> de esa cantidad en otros bienes y servicios, mientras que ahorra el resto. En Economía, el valor <span class="math inline">\(\frac{k}{100}\)</span> se conoce como <em>propensión marginal al consumo</em> mientras que <span class="math inline">\(1-\frac{k}{100}\)</span> se conoce como <em>propensión marginal al ahorro</em>. Si una persona inicia el proceso gastando una cantidad <span class="math inline">\(x\)</span>, qué cantidad total se habrá gastado después de <span class="math inline">\(n\)</span> transacciones? ¿Hacia dónde converge el gasto cuando se realiza un número infinito de transacciones? ¿A largo plazo, cuál es el efecto multiplicador sobre el gasto inicial de una propensión marginal al consumo de <span class="math inline">\(0.6\)</span>?</p>
 </div>
-<div id="exr-serie-armonica-alternada" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 7.7 </strong></span>Haciendo uso de la serie de Taylor del logaritmo, demostrar que una serie armónica alternada <span class="math inline">\(\sum \frac{(-1)^{n+1}}{n}\)</span> converge y calcular su límite.</p>
+<div id="exr-cuenta-ahorro" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 7.7 </strong></span>Una cuenta de ahorro ofrece un <span class="math inline">\(5\)</span>% de interés anual. Una persona abre la cuenta de ahorro con un depósito de <span class="math inline">\(2000\)</span>€ y cada año que pasa hace un depósito de <span class="math inline">\(1000\)</span>€. Calcular la cantidad de dinero que habrá en la cuenta después de <span class="math inline">\(n\)</span> años de forma cerrada. ¿Converge la serie asociada?</p>
 </div>
 <div class="callout-tip callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
@@ -366,6 +366,50 @@ Solución
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
 <div id="callout-7" class="callout-7-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Sea <span class="math inline">\(A_n\)</span> la cantidad de dinero en la cuenta tras <span class="math inline">\(n\)</span> años. Veamos cuáles son las cantidades en la cuenta durante los primeros años.</p>
+<p><span class="math display">\[\begin{align*}
+A_1 &amp;= 2000\cdot 1.05 \mbox{€}\\
+A_2 &amp;= ((2000\cdot 1.05) + 1000))1.05\mbox{€} = 2000\cdot 1.05^2 + 1000\cdot 1.05\mbox{€}\\
+A_3 &amp;= ((2000\cdot 1.05^2 + 1000\cdot 1.05)+1000)1.05\mbox{€}\\
+&amp;= 2000\cdot 1.05^3 + 1000\cdot 1.05^2 + 1000\cdot 1.05\mbox{€}
+\vdots
+\end{align*}\]</span></p>
+<p>A partir de aquí, se intuye que la suma parcial de orden <span class="math inline">\(n\)</span> es</p>
+<p><span class="math display">\[
+A_n = 2000\cdot 1.05^n + \sum_{i=1}^{n-1} 1000\cdot 1.05^i\mbox{€}.
+\]</span></p>
+<p>Como se trata de una serie geométrica, haciendo uso de la pista del <a href="#exr-series-geometricas">Ejercicio&nbsp;<span>7.4</span></a>, se puede concluir que</p>
+<p><span class="math display">\[\begin{align*}
+A_n &amp;= 2000\cdot 1.05^n + 1000\frac{1.05^n-1}{1.05-1} - 1000\\
+&amp;= 2000\cdot 1.05^n + 20000 (1.05^n-1) - 1000\\
+&amp;= 22000\cdot 1.05^n-21000\mbox{€}.
+\end{align*}\]</span></p>
+</div>
+</div>
+</div>
+<div id="exr-distribucion-hipergeometrica" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 7.8 </strong></span>Supongamos un experimento aleatorio que consiste en repetir una prueba con dos posibles resultados (éxito y fracaso) hasta que se obtiene el primer éxito (por ejemplo tirar una moneda hasta que sale la primera cara). La distribución de la variable aleatoria que mide el número de repeticiones hasta obtener el primer éxito se conoce como <a href="https://es.wikipedia.org/wiki/Distribuci%C3%B3n_hipergeom%C3%A9trica"><em>distribución hipergeométrica</em></a> y su función de probabilidad es</p>
+<p><span class="math display">\[
+P(X=n)=(1-p)^{n-1}p,
+\]</span></p>
+<p>donde <span class="math inline">\(p\)</span> es la probabilidad de que ocurra éxito en cada repetición de la prueba.</p>
+<p>Una de las condiciones que debe cumplir una función de probabilidad de una variable aleatoria es que la suma de las probabilidades de todos los posibles valores de la variable debe ser <span class="math inline">\(1\)</span>. Demostrar que la función de probabilidad de la variable hipergeométrica lo cumple.</p>
+</div>
+<div id="exr-serie-armonica-alternada" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 7.9 </strong></span>Haciendo uso de la serie de Taylor del logaritmo, demostrar que una serie armónica alternada <span class="math inline">\(\sum \frac{(-1)^{n+1}}{n}\)</span> converge y calcular su límite.</p>
+</div>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-8" class="callout-8-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>El polinomio de Taylor de grado <span class="math inline">\(n\)</span> de la función <span class="math inline">\(f(x)=\ln(x)\)</span> en el punto <span class="math inline">\(a=1\)</span> es</p>
 <p><span class="math display">\[\begin{align*}
@@ -381,10 +425,10 @@ P^n_{f,1}(2) = 1 -\frac{1}{2} + \frac{1}{3} - \frac{1}{4} + \cdots + (-1)^{n+1}\
 </div>
 </div>
 <div id="exr-serie-convergente" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 7.8 </strong></span>Demostrar que la serie <span class="math inline">\(\sum_{n=1}^\infty \frac{1}{n(n+1)} = 1\)</span>.</p>
+<p><span class="theorem-title"><strong>Ejercicio 7.10 </strong></span>Demostrar que la serie <span class="math inline">\(\sum_{n=1}^\infty \frac{1}{n(n+1)} = 1\)</span>.</p>
 </div>
 <div class="callout-note callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -393,14 +437,14 @@ Pista
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-8" class="callout-8-contents callout-collapse collapse">
+<div id="callout-9" class="callout-9-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Descomponer el término general de la sucesión subyacente a la serie en fraccione simples.</p>
 </div>
 </div>
 </div>
 <div class="callout-tip callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -409,9 +453,9 @@ Solución
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-9" class="callout-9-contents callout-collapse collapse">
+<div id="callout-10" class="callout-10-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>El término general de la sucesión se puede descomponer en fracciones simples de la siguiente manera <span class="math inline">\(\frac{1}{n(n+1)} = \frac{1}{n}-\frac{1}{n+1}\)</span>, de modo que la suma parcial de los <span class="math inline">\(n\)</span> primeros términos de la serie es</p>
+<p>El término general de la sucesión se puede descomponer en fracciones simples de la siguiente manera <span class="math inline">\(\frac{1}{n(n+1)} = \frac{1}{n}-\frac{1}{n+1}\)</span>, que es una serie telescópica, de modo que la suma parcial de los <span class="math inline">\(n\)</span> primeros términos de la serie es</p>
 <p><span class="math display">\[\begin{align*}
 A_n &amp;= \left(1-\frac{1}{2}\right)+\left(\frac{1}{2}-\frac{1}{3}\right)+\left(\frac{1}{3}-\frac{1}{4}\right)+\cdots +\left(\frac{1}{n}-\frac{1}{n+1}\right) = 1-\frac{1}{n+1}
 \end{align*}\]</span></p>
@@ -423,13 +467,164 @@ A_n &amp;= \left(1-\frac{1}{2}\right)+\left(\frac{1}{2}-\frac{1}{3}\right)+\left
 </div>
 </div>
 <div id="exr-series-divergentes" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 7.9 </strong></span>Demostrar que las siguientes series divergen.</p>
+<p><span class="theorem-title"><strong>Ejercicio 7.11 </strong></span>Demostrar que las siguientes series divergen.</p>
 <ol type="a">
-<li><span class="math inline">\(\sum \frac{n^2}{n+1}\)</span>.</li>
-<li><span class="math inline">\(\sum \cos\left(\frac{1}{n}\right)\)</span>.</li>
-<li><span class="math inline">\(\sum n\operatorname{sen}\left(\frac{1}{n}\right)\)</span>.</li>
-<li><span class="math inline">\(\sum \frac{1}{2n}\)</span>.</li>
+<li><p><span class="math inline">\(\sum \frac{n^2}{n+1}\)</span></p></li>
+<li><p><span class="math inline">\(\sum \cos\left(\frac{1}{n}\right)\)</span></p></li>
+<li><p><span class="math inline">\(\sum n\operatorname{sen}\left(\frac{1}{n}\right)\)</span></p></li>
+<li><p><span class="math inline">\(\sum \frac{1}{2n}\)</span></p></li>
 </ol>
+</div>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-11" class="callout-11-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="a">
+<li><p>Como <span class="math inline">\(\lim_{n\to\infty} \frac{n^2}{n+1} = \infty\)</span>, por la <a href="https://aprendeconalf.es/analisis-manual/08-series.html#thm-condicion-convergencia-series">condición de convergencia</a>, la serie <span class="math inline">\(\sum \frac{n^2}{n+1}\)</span> diverge.</p></li>
+<li><p>Como <span class="math inline">\(\lim_{n\to\infty} \cos\left(\frac{1}{n}\right)=1\neq 0\)</span>, por la <a href="https://aprendeconalf.es/analisis-manual/08-series.html#thm-condicion-convergencia-series">condición de convergencia</a>, la serie <span class="math inline">\(\sum \cos\left(\frac{1}{n}\right)\)</span> diverge.</p></li>
+<li><p>Como <span class="math inline">\(\lim_{n\to\infty} n\operatorname{sen}\left(\frac{1}{n}\right)=1\neq 0\)</span>, por la <a href="https://aprendeconalf.es/analisis-manual/08-series.html#thm-condicion-convergencia-series">condición de convergencia</a>, la serie <span class="math inline">\(\sum n\operatorname{sen}\left(\frac{1}{n}\right)\)</span> diverge.</p></li>
+<li><p><span class="math inline">\(\sum \frac{1}{2n} = \frac{1}{2}\sum \frac{1}{n}\)</span> y como la serie armónica <span class="math inline">\(\sum \frac{1}{n}\)</span> diverge, la serie <span class="math inline">\(\sum \frac{1}{2n}\)</span> también.</p></li>
+</ol>
+</div>
+</div>
+</div>
+<div id="exr-series-telescopicas" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 7.12 </strong></span>Estudiar la convergencia de las siguientes series telescópicas.</p>
+<ol type="a">
+<li><p><span class="math inline">\(\sum \cos(n^2)-\cos((n+1)^2)\)</span></p></li>
+<li><p><span class="math inline">\(\sum \operatorname{sen}\left(\frac{1}{n}\right)-\operatorname{sen}\left(\frac{1}{n+1}\right)\)</span></p></li>
+<li><p><span class="math inline">\(\sum \ln\left(\frac{n+1}{n}\right)\)</span></p></li>
+<li><p><span class="math inline">\(\sum_{n\geq 2} \frac{2}{n^2-1}\)</span></p></li>
+</ol>
+</div>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-12-contents" aria-controls="callout-12" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-12" class="callout-12-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="a">
+<li><p>Como se trata de una serie telescópica, se tiene que la suma parcial de orden <span class="math inline">\(n\)</span> es</p>
+<p><span class="math display">\[\begin{align*}
+A_n &amp;= \sum_{i=1}^n \cos(i^2)-\cos((i+1)^2)\\  
+&amp;= \cos(1)-\cos(2^2)+\cos(2^2)-\cos(3^2)+\cdots +\cos(n^2)-\cos((n+1)^2)\\  
+&amp;= \cos(1)-\cos((n+1)^2).
+\end{align*}\]</span></p>
+<p>Así pues,</p>
+<p><span class="math display">\[\begin{align*}
+\sum_{n=1}^\infty \cos(n^2)-\cos((n+1)^2) &amp;= \lim_{n\to\infty} A_n = \lim_{n\to\infty} \cos(1)-\cos((n+1)^2) \\
+&amp;= \cos(1)-\lim_{n\to\infty} \cos((n+1)^2).
+\end{align*}\]</span></p>
+<p>Pero como no existe <span class="math inline">\(\lim_{n\to\infty} \cos((n+1)^2)\)</span>, la serie no converge.</p></li>
+<li><p>Como se trata de una serie telescópica, se tiene que la suma parcial de orden <span class="math inline">\(n\)</span> es</p>
+<p><span class="math display">\[\begin{align*}
+A_n &amp;= \sum_{i=1}^n \operatorname{sen}\left(\frac{1}{i}\right)- \operatorname{sen}\left(\frac{1}{i+1}\right)\\  
+&amp;=  \operatorname{sen}(1)- \operatorname{sen}\left(\frac{1}{2}\right)+ \operatorname{sen}\left(\frac{1}{2}\right)- \operatorname{sen}\left(\frac{1}{3}\right)+ \cdots +  \operatorname{sen}\left(\frac{1}{n}\right)- \operatorname{sen}\left(\frac{1}{n+1}\right)\\  
+&amp;= \operatorname{sen}(1)- \operatorname{sen}\left(\frac{1}{n+1}\right).
+\end{align*}\]</span></p>
+<p>Así pues,</p>
+<p><span class="math display">\[\begin{align*}
+\sum_{n=1}^\infty  \operatorname{sen}\left(\frac{1}{n}\right) - \operatorname{sen}\left(\frac{1}{n+1}\right) &amp;= \lim_{n\to\infty} A_n = \lim_{n\to\infty} \operatorname{sen}(1)- \operatorname{sen}\left(\frac{1}{n+1}\right) \\
+&amp;= \operatorname{sen}(1)- \lim_{n\to\infty}\operatorname{sen}\left(\frac{1}{n+1}\right) = \operatorname{sen}(1),
+\end{align*}\]</span></p>
+<p>y, por tanto, la serie converge a <span class="math inline">\(\operatorname{sen}(1)\)</span>.</p></li>
+<li><p><span class="math inline">\(\sum \ln\left(\frac{n+1}{n}\right) = \sum \ln(n+1)-\ln(n)\)</span> que de nuevo es una serie telescópica, por lo que su suma parcial de orden <span class="math inline">\(n\)</span> es</p>
+<p><span class="math display">\[\begin{align*}
+A_n &amp;= \sum_{i=1}^n \ln(i+1)-\ln(i) \\
+&amp;= \ln(2)-\ln(1)+\ln(3)-\ln(2)+\ln(4)-\ln(3)+\cdots +\ln(n+1)-\ln(n) \\
+&amp;= \ln(n+1)-\ln(1) = \ln(n+1).
+\end{align*}\]</span></p>
+<p>Así pues,</p>
+<p><span class="math display">\[
+\sum_{n=1}^\infty \ln\left(\frac{n+1}{n}\right) = \lim_{n\to\infty} A_n = \lim_{n\to\infty} \ln(n+1) =\infty,
+\]</span></p>
+<p>y, por tanto, la serie diverge.</p></li>
+<li><p><span class="math inline">\(\sum_{n\geq 2} \frac{2}{n^2-1} = \sum_{n\geq 2} \frac{1}{n-1}-\frac{1}{n+1}\)</span>, que también es una serie telescópica, cuya suma parcial de orden <span class="math inline">\(n\)</span> es</p>
+<p><span class="math display">\[\begin{align*}
+A_n &amp;= \sum_{i=2}^n \frac{1}{i-1}-\frac{1}{i+1} \\
+&amp;= 1-\frac{1}{3}+\frac{1}{2}-\frac{1}{4}+\frac{1}{3}-\frac{1}{5}+\cdots + \frac{1}{n-1}-\frac{1}{n+1} \\
+&amp;= 1+\frac{1}{2}-\frac{1}{n+1} = \frac{3}{2}-\frac{1}{n+1}.
+\end{align*}\]</span></p>
+<p>Así pues,</p>
+<p><span class="math display">\[
+\sum_{n=2}^\infty \frac{1}{n-1}-\frac{1}{n+1} = \lim_{n\to\infty} A_n = \lim_{n\to\infty}\frac{3}{2}-\frac{1}{n+1} = \frac{3}{2}-\lim_{n\to\infty}\frac{1}{n+1} =\frac{3}{2},
+\]</span></p>
+<p>y, por tanto, la serie converge a <span class="math inline">\(\frac{3}{2}\)</span>.</p></li>
+</ol>
+</div>
+</div>
+</div>
+<div id="exr-serie-conjunto-cantor" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 7.13 </strong></span>El <a href="https://es.wikipedia.org/wiki/Conjunto_de_Cantor">conjunto de cantor</a> es un subconjunto fractal del intervalo <span class="math inline">\([0,1]\)</span> que se construye de manera recursiva eliminando en cada paso el tercio central de los intervalos que van resultando. El procedimiento sería el siguiente:</p>
+<ol type="1">
+<li>Quitar del intervalo <span class="math inline">\([0,1]\)</span> el intervalo abierto <span class="math inline">\(\left(\frac{1}{3},\frac{2}{3}\right)\)</span>.</li>
+<li>Quitar de los intervalos restantes, los intervalos <span class="math inline">\(\left(\frac{1}{9},\frac{2}{9}\right)\)</span> y <span class="math inline">\(\left(\frac{7}{9},\frac{8}{9}\right)\)</span>.</li>
+<li>Quitar de los intervalos restantes, los intervalos <span class="math inline">\(\left(\frac{1}{27},\frac{2}{27}\right)\)</span>, <span class="math inline">\(\left(\frac{7}{27},\frac{8}{27}\right)\)</span>, <span class="math inline">\(\left(\frac{19}{27},\frac{20}{27}\right)\)</span> y <span class="math inline">\(\left(\frac{25}{27},\frac{26}{27}\right)\)</span>.</li>
+<li><span class="math inline">\(\ldots\)</span></li>
+</ol>
+<p>Demostrar que la longitud total de todos los intervalos eliminados es <span class="math inline">\(1\)</span>, y que, a pesar de ello, el conjunto de Cantor tiene un número infinito de puntos. Se dice que este conjunto es un conjunto de medida nula, pero que ni es vacío ni numerable.</p>
+</div>
+<div id="exr-comparacion-series" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 7.14 </strong></span>Estudiar la convergencia de las siguientes series comparándolas con otras conocidas.</p>
+<div class="columns">
+<div class="column">
+<ol type="a">
+<li><p><span class="math inline">\(\sum \frac{2n}{3n^3-n+1}\)</span></p></li>
+<li><p><span class="math inline">\(\sum \frac{\ln(n)}{n}\)</span></p></li>
+<li><p><span class="math inline">\(\sum \frac{3^n}{2^n+1}\)</span></p></li>
+<li><p><span class="math inline">\(\sum \frac{n+1}{\sqrt{n^3}}\)</span></p></li>
+</ol>
+</div><div class="column">
+<ol start="5" type="a">
+<li><p><span class="math inline">\(\sum \frac{e^{1/n}}{n}\)</span></p></li>
+<li><p><span class="math inline">\(\sum \operatorname{sen}\left(\frac{1}{n}\right)\)</span></p></li>
+<li><p><span class="math inline">\(\sum \frac{n+1}{n!}\)</span></p></li>
+<li><p><span class="math inline">\(\sum \frac{n!}{n^n}\)</span></p></li>
+</ol>
+</div>
+</div>
+</div>
+<div id="exr-series-positivas-convergentes" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 7.15 </strong></span>Dada una serie de términos positivos <span class="math inline">\(\sum a_n\)</span> convergente, estudiar si las siguientes series convergen.</p>
+<ol type="a">
+<li><p><span class="math inline">\(\sum a_n^2\)</span></p></li>
+<li><p><span class="math inline">\(\sum \frac{1}{a_n^3}\)</span></p></li>
+<li><p><span class="math inline">\(\sum \ln(1+a_n)\)</span></p></li>
+<li><p><span class="math inline">\(\sum \operatorname{sen}(a_n)\)</span>.</p></li>
+</ol>
+</div>
+<div id="exr-series-alternadas" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 7.16 </strong></span>Estudiar la convergencia de las siguientes series alternadas.</p>
+<ol type="a">
+<li><p><span class="math inline">\(\sum \frac{(-1)^{n-1}}{2n-1}\)</span></p></li>
+<li><p><span class="math inline">\(\sum (-1)^ne^{-n}\)</span></p></li>
+<li><p><span class="math inline">\(\sum (-1)^n\operatorname{sen}\left(\frac{\pi}{n}\right)\)</span></p></li>
+<li><p><span class="math inline">\(\sum (-1)^n\left(\frac{1}{\sqrt{n+1}}-\frac{1}{\sqrt{n}}\right)\)</span></p></li>
+</ol>
+</div>
+<div id="exr-serie-exponential" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 7.17 </strong></span>Demostrar que la serie <span class="math inline">\(\sum \frac{x^n}{n!}\)</span> es absolutamente convergente para cualquier <span class="math inline">\(x\in\mathbb{R}\)</span> y que su suma es <span class="math inline">\(\sum_{n=1}^\infty \frac{x^n}{n!} = e^x\)</span>.</p>
+</div>
+<div id="exr-serie-poisson" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 7.18 </strong></span>La <a href="https://es.wikipedia.org/wiki/Distribuci%C3%B3n_de_Poisson"><em>distribución de Poisson</em></a> es una de las distribuciones de probabilidad más importantes, ya que explica la probabilidad de que ocurra un número determinado de fenómenos puntuales en un soporte continuo (como por ejemplo el número de llamadas telefónicas que llegan a un servicio de atención al cliente e un intervalo de tiempo). Su función de probabilidad es</p>
+<p><span class="math display">\[
+P(n)= e^{-\lambda}\frac{\lambda^n}{n!}\ \forall n\in \mathbb{N},
+\]</span> donde <span class="math inline">\(\lambda&gt;0\)</span> es su media.</p>
+<p>Demostrar que esta función es una función de masa de probabilidad.</p>
 </div>
 
 
