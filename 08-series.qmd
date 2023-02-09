@@ -312,7 +312,7 @@ Estudiar la convergencia de las siguientes series comparándolas con otras conoc
 
 :::: {.columns}
 ::: {.column}
-a. $\sum \frac{2n}{3n^3-n+1}$
+a. $\sum \frac{2n}{4n^3-n+1}$
 
 b. $\sum \frac{\ln(n)}{n}$
 
