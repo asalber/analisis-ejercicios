@@ -328,9 +328,17 @@ f. $\sum \operatorname{sen}\left(\frac{1}{n}\right)$
 
 g. $\sum \frac{n+1}{n!}$
 
-h. $\sum \frac{n!}{n^n}$
+h. $\sum \frac{n^n}{n!}$
 :::
 :::
+:::
+
+:::{#exr-criterio-cociente}
+Demostrar que si $\sum a_n$ y $\sum b_n$ son dos series de términos positivos entonces se cumple que 
+
+a. Si $\lim_{n\to\infty} \frac{a_n}{b_n} = 0$ y $\sum b_n$ converge, entonces $\sum a_n$ también converge.
+
+b. Si $\lim_{n\to\infty} \frac{a_n}{b_n} = \infty$ y $\sum b_n$ diverge, entonces $\sum a_n$ también diverge.
 :::
 
 :::{#exr-series-positivas-convergentes}
@@ -342,11 +350,7 @@ b. $\sum \frac{1}{a_n^3}$
 
 b. $\sum \ln(1+a_n)$
 
-c. $\sum \operatorname{sen}(a_n)$.
-:::
-
-:::{#exr-muelle-amortiguado}
-El movimiento de un [muelle amortiguado](https://upload.wikimedia.org/wikipedia/commons/f/fa/Spring-mass_under-damped.gif) con un peso colgado de él es oscilante. Si la posición que ocupa el peso en cada periodo de oscilación $n$ viene dado por la serie $\sum (-1)^{n-1}e^{-n/2}$, ¿cuál será la posición de equilibrio del peso a largo plazo?
+c. $\sum \operatorname{sen}(a_n)$
 :::
 
 :::{#exr-series-alternadas}
@@ -361,6 +365,32 @@ c. $\sum (-1)^n\operatorname{sen}\left(\frac{\pi}{n}\right)$
 d. $\sum (-1)^n\left(\frac{1}{\sqrt{n+1}}-\frac{1}{\sqrt{n}}\right)$
 :::
 
+:::{#exr-muelle-amortiguado}
+El movimiento de un [muelle amortiguado](https://upload.wikimedia.org/wikipedia/commons/f/fa/Spring-mass_under-damped.gif) con un peso colgado de él es oscilante. Si la posición que ocupa el peso en cada periodo de oscilación $n$ viene dado por la serie $\sum (-1)^{n-1}e^{-n/2}$, ¿llegará a estabilizarse en una posición de equilibrio a largo plazo?
+:::
+
+:::{#exr-convergencia-absoluta}
+Estudiar la convergencia absoluta de las siguientes series.
+
+
+:::: {.columns}
+::: {.column}
+a. $\sum \frac{(-2)^n}{n^2}$.
+
+b. $\sum \frac{n}{3^n}$
+
+c. $\sum \frac{\operatorname{sen}(n)}{n^2}$.
+:::
+
+::: {.column}
+d. $\sum \frac{(-1)^n}{\ln(n)}$
+
+e. $\sum \left(\frac{n^2+1}{2n^2-1}\right)^n$
+
+d. $\sum \frac{n!}{n^n}$
+:::
+:::
+:::
 
 :::{#exr-serie-exponential}
 Demostrar que la serie $\sum \frac{x^n}{n!}$ es absolutamente convergente para cualquier $x\in\mathbb{R}$ y que su suma es $\sum_{n=1}^\infty \frac{x^n}{n!} = e^x$.

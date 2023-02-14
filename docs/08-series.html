@@ -593,22 +593,26 @@ A_n &amp;= \sum_{i=2}^n \frac{1}{i-1}-\frac{1}{i+1} \\
 <li><p><span class="math inline">\(\sum \frac{e^{1/n}}{n}\)</span></p></li>
 <li><p><span class="math inline">\(\sum \operatorname{sen}\left(\frac{1}{n}\right)\)</span></p></li>
 <li><p><span class="math inline">\(\sum \frac{n+1}{n!}\)</span></p></li>
-<li><p><span class="math inline">\(\sum \frac{n!}{n^n}\)</span></p></li>
+<li><p><span class="math inline">\(\sum \frac{n^n}{n!}\)</span></p></li>
 </ol>
 </div>
 </div>
 </div>
+<div id="exr-criterio-cociente" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 7.15 </strong></span>Demostrar que si <span class="math inline">\(\sum a_n\)</span> y <span class="math inline">\(\sum b_n\)</span> son dos series de términos positivos entonces se cumple que</p>
+<ol type="a">
+<li><p>Si <span class="math inline">\(\lim_{n\to\infty} \frac{a_n}{b_n} = 0\)</span> y <span class="math inline">\(\sum b_n\)</span> converge, entonces <span class="math inline">\(\sum a_n\)</span> también converge.</p></li>
+<li><p>Si <span class="math inline">\(\lim_{n\to\infty} \frac{a_n}{b_n} = \infty\)</span> y <span class="math inline">\(\sum b_n\)</span> diverge, entonces <span class="math inline">\(\sum a_n\)</span> también diverge.</p></li>
+</ol>
+</div>
 <div id="exr-series-positivas-convergentes" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 7.15 </strong></span>Dada una serie de términos positivos <span class="math inline">\(\sum a_n\)</span> convergente, estudiar si las siguientes series convergen.</p>
+<p><span class="theorem-title"><strong>Ejercicio 7.16 </strong></span>Dada una serie de términos positivos <span class="math inline">\(\sum a_n\)</span> convergente, estudiar si las siguientes series convergen.</p>
 <ol type="a">
 <li><p><span class="math inline">\(\sum a_n^2\)</span></p></li>
 <li><p><span class="math inline">\(\sum \frac{1}{a_n^3}\)</span></p></li>
 <li><p><span class="math inline">\(\sum \ln(1+a_n)\)</span></p></li>
-<li><p><span class="math inline">\(\sum \operatorname{sen}(a_n)\)</span>.</p></li>
+<li><p><span class="math inline">\(\sum \operatorname{sen}(a_n)\)</span></p></li>
 </ol>
-</div>
-<div id="exr-muelle-amortiguado" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 7.16 </strong></span>El movimiento de un <a href="https://upload.wikimedia.org/wikipedia/commons/f/fa/Spring-mass_under-damped.gif">muelle amortiguado</a> con un peso colgado de él es oscilante. Si la posición que ocupa el peso en cada periodo de oscilación <span class="math inline">\(n\)</span> viene dado por la serie <span class="math inline">\(\sum (-1)^{n-1}e^{-n/2}\)</span>, ¿cuál será la posición de equilibrio del peso a largo plazo?</p>
 </div>
 <div id="exr-series-alternadas" class="theorem exercise">
 <p><span class="theorem-title"><strong>Ejercicio 7.17 </strong></span>Estudiar la convergencia de las siguientes series alternadas.</p>
@@ -619,11 +623,32 @@ A_n &amp;= \sum_{i=2}^n \frac{1}{i-1}-\frac{1}{i+1} \\
 <li><p><span class="math inline">\(\sum (-1)^n\left(\frac{1}{\sqrt{n+1}}-\frac{1}{\sqrt{n}}\right)\)</span></p></li>
 </ol>
 </div>
+<div id="exr-muelle-amortiguado" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 7.18 </strong></span>El movimiento de un <a href="https://upload.wikimedia.org/wikipedia/commons/f/fa/Spring-mass_under-damped.gif">muelle amortiguado</a> con un peso colgado de él es oscilante. Si la posición que ocupa el peso en cada periodo de oscilación <span class="math inline">\(n\)</span> viene dado por la serie <span class="math inline">\(\sum (-1)^{n-1}e^{-n/2}\)</span>, ¿llegará a estabilizarse en una posición de equilibrio a largo plazo?</p>
+</div>
+<div id="exr-convergencia-absoluta" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 7.19 </strong></span>Estudiar la convergencia absoluta de las siguientes series.</p>
+<div class="columns">
+<div class="column">
+<ol type="a">
+<li><p><span class="math inline">\(\sum \frac{(-2)^n}{n^2}\)</span>.</p></li>
+<li><p><span class="math inline">\(\sum \frac{n}{3^n}\)</span></p></li>
+<li><p><span class="math inline">\(\sum \frac{\operatorname{sen}(n)}{n^2}\)</span>.</p></li>
+</ol>
+</div><div class="column">
+<ol start="4" type="a">
+<li><p><span class="math inline">\(\sum \frac{(-1)^n}{\ln(n)}\)</span></p></li>
+<li><p><span class="math inline">\(\sum \left(\frac{n^2+1}{2n^2-1}\right)^n\)</span></p></li>
+<li><p><span class="math inline">\(\sum \frac{n!}{n^n}\)</span></p></li>
+</ol>
+</div>
+</div>
+</div>
 <div id="exr-serie-exponential" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 7.18 </strong></span>Demostrar que la serie <span class="math inline">\(\sum \frac{x^n}{n!}\)</span> es absolutamente convergente para cualquier <span class="math inline">\(x\in\mathbb{R}\)</span> y que su suma es <span class="math inline">\(\sum_{n=1}^\infty \frac{x^n}{n!} = e^x\)</span>.</p>
+<p><span class="theorem-title"><strong>Ejercicio 7.20 </strong></span>Demostrar que la serie <span class="math inline">\(\sum \frac{x^n}{n!}\)</span> es absolutamente convergente para cualquier <span class="math inline">\(x\in\mathbb{R}\)</span> y que su suma es <span class="math inline">\(\sum_{n=1}^\infty \frac{x^n}{n!} = e^x\)</span>.</p>
 </div>
 <div id="exr-serie-poisson" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 7.19 </strong></span>La <a href="https://es.wikipedia.org/wiki/Distribuci%C3%B3n_de_Poisson"><em>distribución de Poisson</em></a> es una de las distribuciones de probabilidad más importantes, ya que explica la probabilidad de que ocurra un número determinado de fenómenos puntuales en un soporte continuo (como por ejemplo el número de llamadas telefónicas que llegan a un servicio de atención al cliente e un intervalo de tiempo). Su función de probabilidad es</p>
+<p><span class="theorem-title"><strong>Ejercicio 7.21 </strong></span>La <a href="https://es.wikipedia.org/wiki/Distribuci%C3%B3n_de_Poisson"><em>distribución de Poisson</em></a> es una de las distribuciones de probabilidad más importantes, ya que explica la probabilidad de que ocurra un número determinado de fenómenos puntuales en un soporte continuo (como por ejemplo el número de llamadas telefónicas que llegan a un servicio de atención al cliente e un intervalo de tiempo). Su función de probabilidad es</p>
 <p><span class="math display">\[
 P(n)= e^{-\lambda}\frac{\lambda^n}{n!}\ \forall n\in \mathbb{N},
 \]</span> donde <span class="math inline">\(\lambda&gt;0\)</span> es su media.</p>
