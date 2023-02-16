@@ -645,14 +645,40 @@ A_n &amp;= \sum_{i=2}^n \frac{1}{i-1}-\frac{1}{i+1} \\
 </div>
 </div>
 <div id="exr-serie-exponential" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 7.20 </strong></span>Demostrar que la serie <span class="math inline">\(\sum \frac{x^n}{n!}\)</span> es absolutamente convergente para cualquier <span class="math inline">\(x\in\mathbb{R}\)</span> y que su suma es <span class="math inline">\(\sum_{n=1}^\infty \frac{x^n}{n!} = e^x\)</span>.</p>
+<p><span class="theorem-title"><strong>Ejercicio 7.20 </strong></span>Demostrar que la serie de potencias <span class="math inline">\(f(x)=\sum \frac{x^n}{n!}\)</span> es absolutamente convergente para cualquier <span class="math inline">\(x\in\mathbb{R}\)</span>.</p>
+<p>Demostrar también que esta serie cumple la ecuación diferencial <span class="math inline">\(f'(x)=f(x)\)</span>. ¿Qué otras funciones conoces que la cumplen?</p>
+<p>Demostrar finalmente que <span class="math inline">\(f(x)=e^x\)</span>.</p>
+</div>
+<div id="exr-suma-serie-potencias" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 7.21 </strong></span>Usar el resultado del ejercicio anterior para calcular la suma de la serie de potencias <span class="math inline">\(\sum \frac{(x+2)^n}{(n+1)!}\)</span>.</p>
 </div>
 <div id="exr-serie-poisson" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 7.21 </strong></span>La <a href="https://es.wikipedia.org/wiki/Distribuci%C3%B3n_de_Poisson"><em>distribución de Poisson</em></a> es una de las distribuciones de probabilidad más importantes, ya que explica la probabilidad de que ocurra un número determinado de fenómenos puntuales en un soporte continuo (como por ejemplo el número de llamadas telefónicas que llegan a un servicio de atención al cliente e un intervalo de tiempo). Su función de probabilidad es</p>
+<p><span class="theorem-title"><strong>Ejercicio 7.22 </strong></span>La <a href="https://es.wikipedia.org/wiki/Distribuci%C3%B3n_de_Poisson"><em>distribución de Poisson</em></a> es una de las distribuciones de probabilidad más importantes, ya que explica la probabilidad de que ocurra un número determinado de fenómenos puntuales en un soporte continuo (como por ejemplo el número de llamadas telefónicas que llegan a un servicio de atención al cliente e un intervalo de tiempo). Su función de probabilidad es</p>
 <p><span class="math display">\[
 P(n)= e^{-\lambda}\frac{\lambda^n}{n!}\ \forall n\in \mathbb{N},
 \]</span> donde <span class="math inline">\(\lambda&gt;0\)</span> es su media.</p>
 <p>Demostrar que esta función es una función de masa de probabilidad.</p>
+</div>
+<div id="exr-serie-taylor" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 7.23 </strong></span>Calcular la serie de Taylor de las siguientes funciones en los puntos dados.</p>
+<ol type="a">
+<li><p><span class="math inline">\(f(x)=\cos(x)\)</span> en <span class="math inline">\(a=\pi\)</span>.</p></li>
+<li><p><span class="math inline">\(g(x)=\ln(x)\)</span> en <span class="math inline">\(a=1\)</span>.</p></li>
+<li><p><span class="math inline">\(h(x)=\frac{1}{\sqrt{x}}\)</span> en <span class="math inline">\(a=1\)</span>.</p></li>
+</ol>
+</div>
+<div id="exr-serie-binomial" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 7.24 </strong></span>Construir la serie de McLaurin de la función <span class="math inline">\(f(x)= (1+x)^k\)</span> para cualquier <span class="math inline">\(k\in\mathbb{R}\)</span> y estudiar su dominio de convergencia. ¿Qué serie se obtiene cuando <span class="math inline">\(k\in\mathbb{N}\)</span>?</p>
+</div>
+<div id="exr-serie-arcotangente" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 7.25 </strong></span>Calcular la serie de McLaurin de la función <span class="math inline">\(f(x)=\operatorname{arctg}(x)\)</span> y utilizarla para obtener una serie cuya suma sea <span class="math inline">\(\pi\)</span>.</p>
+</div>
+<div id="exr-limite-tangente" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 7.26 </strong></span>Usando desarrollos de Taylor, calcular los siguientes límites.</p>
+<ol type="a">
+<li><p><span class="math inline">\(\lim_{x\to 0}\frac{\ln(1+x)-x}{x^2}\)</span></p></li>
+<li><p><span class="math inline">\(\lim_{x\to 0}\frac{\operatorname{tg}(x)-x}{x^3}\)</span></p></li>
+</ol>
 </div>
 
 

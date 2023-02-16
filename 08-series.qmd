@@ -393,7 +393,15 @@ d. $\sum \frac{n!}{n^n}$
 :::
 
 :::{#exr-serie-exponential}
-Demostrar que la serie $\sum \frac{x^n}{n!}$ es absolutamente convergente para cualquier $x\in\mathbb{R}$ y que su suma es $\sum_{n=1}^\infty \frac{x^n}{n!} = e^x$.
+Demostrar que la serie de potencias $f(x)=\sum \frac{x^n}{n!}$ es absolutamente convergente para cualquier $x\in\mathbb{R}$.
+
+Demostrar también que esta serie cumple la ecuación diferencial $f'(x)=f(x)$. ¿Qué otras funciones conoces que la cumplen?
+
+Demostrar finalmente que $f(x)=e^x$.
+:::
+
+:::{#exr-suma-serie-potencias}
+Usar el resultado del ejercicio anterior para calcular la suma de la serie de potencias $\sum \frac{(x+2)^n}{(n+1)!}$.
 :::
 
 :::{#exr-serie-poisson}
@@ -405,4 +413,31 @@ $$
 donde $\lambda>0$ es su media.
 
 Demostrar que esta función es una función de masa de probabilidad.
+:::
+
+:::{#exr-serie-taylor}
+Calcular la serie de Taylor de las siguientes funciones en los puntos dados.
+
+a. $f(x)=\cos(x)$ en $a=\pi$.
+
+b. $g(x)=\ln(x)$ en $a=1$.
+
+c. $h(x)=\frac{1}{\sqrt{x}}$ en $a=1$.
+:::
+
+:::{#exr-serie-binomial}
+Construir la serie de McLaurin de la función $f(x)= (1+x)^k$ para cualquier $k\in\mathbb{R}$ y estudiar su dominio de convergencia.
+¿Qué serie se obtiene cuando $k\in\mathbb{N}$?
+:::
+
+:::{#exr-serie-arcotangente}
+Calcular la serie de McLaurin de la función $f(x)=\operatorname{arctg}(x)$ y utilizarla para obtener una serie cuya suma sea $\pi$.
+:::
+
+:::{#exr-limite-tangente}
+Usando desarrollos de Taylor, calcular los siguientes límites.
+
+a. $\lim_{x\to 0}\frac{\ln(1+x)-x}{x^2}$
+
+b. $\lim_{x\to 0}\frac{\operatorname{tg}(x)-x}{x^3}$
 :::
