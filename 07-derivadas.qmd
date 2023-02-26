@@ -1397,7 +1397,7 @@ a. La fórmula del polinomio de Taylor de tercer grado de $f$ en el punto $a=\pi
     |R^3_{f,\pi/6}(1/2)|\leq \frac{1}{24}\left(\frac{1}{2}-\frac{\pi}{6}\right)^4 = 6.46\cdot 10^{-9}.
     $$
 
-a. La fórmula del polinomio de MacLaurin de quinto grado de $f$ es 
+a. La fórmula del polinomio de Maclaurin de quinto grado de $f$ es 
 
     $$
     P^3_{f,0}(x) = f(0)+f'(0)x+ \frac{f''(0)}{2}x^2+\frac{f'''(0)}{3!}x^3+ \frac{f''''(0)}{4!}x^4+\frac{f'''''(0)}{5!}x^5
@@ -1417,7 +1417,7 @@ Calcular el polinomio de Maclaurin de tercer grado para la función $f(x)=\opera
 
 :::{.callout-tip collapse="true"}
 ## Solución
-La fórmula del polinomio de MacLaurin de quinto grado de $f$ es 
+La fórmula del polinomio de Maclaurin de quinto grado de $f$ es 
 
 $$
 P^3_{f,0}(x) = f(0)+f'(0)x+ \frac{f''(0)}{2}x^2+\frac{f'''(0)}{3!}x^3.
@@ -1447,7 +1447,7 @@ Calcular $\cos(1)$ con un error menor que $10^{-7}$ usando aproximaciones de Tay
 
 :::{.callout-tip collapse="true"}
 ## Solución
-Para calcular de forma aproximada $\cos(1)$ utilizaremos un polinomio de MacLaurin para la función $f(x)=\cos(x)$.
+Para calcular de forma aproximada $\cos(1)$ utilizaremos un polinomio de Maclaurin para la función $f(x)=\cos(x)$.
 
 El resto del polinomio de Taylor de orden $n$ de $f$ en $a=0$ en la forma de Lagrange, para $x=1$ es
 
@@ -1465,7 +1465,7 @@ $$|f^{(n}(t)| =
 k\in\mathbb{N}
 $$
 
-se tiene que $||f^{(n+1}(t)| \leq 1$ $\forall t\in\mathbb{R}$, por lo que una cota del resto es $R^n_{f,0}(t)\leq  1/(n+1)!$. Probando con sucesivos valores de $n$, el primer valor que cumple que $R^n_{f,0}(t)\leq  1/(n+1)!\leq 10^{-7}$ es $n=10$, por lo que necesitamos calcular el polinomio de de MacLaurin de orden 10, que vale
+se tiene que $||f^{(n+1}(t)| \leq 1$ $\forall t\in\mathbb{R}$, por lo que una cota del resto es $R^n_{f,0}(t)\leq  1/(n+1)!$. Probando con sucesivos valores de $n$, el primer valor que cumple que $R^n_{f,0}(t)\leq  1/(n+1)!\leq 10^{-7}$ es $n=10$, por lo que necesitamos calcular el polinomio de de Maclaurin de orden 10, que vale
 
 $$
 P^{10}_{f,0}(x)= 1-\frac{x^2}{2!}+\frac{x^4}{4!}-\frac{x^6}{6!}+\frac{x^8}{8!}-\frac{x^{10}}{10!},

@@ -71,6 +71,8 @@ format:
     
   epub:
     cover-image: img/logos/sticker.png
+    html-math-method: mathml
+    toc: true
 
 
 

@@ -352,9 +352,6 @@ A_n &amp;= A_{n-1} + 0.1^n \cdot 200 \mbox{ mg}
 <div id="exr-propensiones-marginales-gasto-ahorro" class="theorem exercise">
 <p><span class="theorem-title"><strong>Ejercicio 7.6 </strong></span>Cuando una persona gasta una cantidad de dinero en un bien o servicio, la persona que recibe el dinero directa o indirectamente, también gasta un porcentaje <span class="math inline">\(k\)</span> de esa cantidad en otros bienes y servicios, mientras que ahorra el resto. En Economía, el valor <span class="math inline">\(\frac{k}{100}\)</span> se conoce como <em>propensión marginal al consumo</em> mientras que <span class="math inline">\(1-\frac{k}{100}\)</span> se conoce como <em>propensión marginal al ahorro</em>. Si una persona inicia el proceso gastando una cantidad <span class="math inline">\(x\)</span>, qué cantidad total se habrá gastado después de <span class="math inline">\(n\)</span> transacciones? ¿Hacia dónde converge el gasto cuando se realiza un número infinito de transacciones? ¿A largo plazo, cuál es el efecto multiplicador sobre el gasto inicial de una propensión marginal al consumo de <span class="math inline">\(0.6\)</span>?</p>
 </div>
-<div id="exr-cuenta-ahorro" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 7.7 </strong></span>Una cuenta de ahorro ofrece un <span class="math inline">\(5\)</span>% de interés anual. Una persona abre la cuenta de ahorro con un depósito de <span class="math inline">\(2000\)</span>€ y cada año que pasa hace un depósito de <span class="math inline">\(1000\)</span>€. Calcular la cantidad de dinero que habrá en la cuenta después de <span class="math inline">\(n\)</span> años de forma cerrada. ¿Converge la serie asociada?</p>
-</div>
 <div class="callout-tip callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -366,6 +363,41 @@ Solución
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
 <div id="callout-7" class="callout-7-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Sea <span class="math inline">\(a_n\)</span> el dinero total gastado en la transacción <span class="math inline">\(n\)</span>. Veamos el total de dinero gastado en las primeras <span class="math inline">\(n\)</span> transacciones.</p>
+<p><span class="math display">\[\begin{align*}
+a_0 &amp;=  x\\
+a_1 &amp;= x\frac{k}{100}\\
+a_2 &amp;= x\left(\frac{k}{100}\right)^2\\
+\vdots\\
+a_n &amp;= x\left(\frac{k}{100}\right)^n
+\end{align*}\]</span></p>
+<p>Por tanto, el dinero total gastado tras <span class="math inline">\(n\)</span> transacciones será <span class="math inline">\(\sum_{i=0}^n x\left(\frac{k}{100}\right)^i\)</span>, y como se trata de una serie geométrica, tal y como se ha visto en el <a href="#exr-series-geometricas">Ejercicio&nbsp;<span>7.4</span></a>, la suma vale</p>
+<p><span class="math display">\[
+\sum_{i=0}^n x\left(\frac{k}{100}\right)^i = x\frac{1-\left(\frac{k}{100}\right)^{n+1}}{1-\frac{k}{100}}.
+\]</span></p>
+<p>Como la razón es <span class="math inline">\(\frac{k}{100}&lt;1\)</span>, la serie converge y <span class="math display">\[
+\sum_{n=0}^\infty x\left(\frac{k}{100}\right)^n = \frac{x}{1-\frac{k}{100}},
+\]</span></p>
+<p>es decir, la cantidad inicial dividida por la propensión marginal al ahorro.</p>
+<p>Para una propensión marginal al consumo de <span class="math inline">\(0.6\)</span> se tiene <span class="math inline">\(\sum_{n=0}^\infty x\left(0.6\right)^n = \frac{x}{1-0.6} = 2.5x\)</span>, así que se produce un efecto multiplicador del <span class="math inline">\(2.5\)</span>.</p>
+</div>
+</div>
+</div>
+<div id="exr-cuenta-ahorro" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 7.7 </strong></span>Una cuenta de ahorro ofrece un <span class="math inline">\(5\)</span>% de interés anual. Una persona abre la cuenta de ahorro con un depósito de <span class="math inline">\(2000\)</span>€ y cada año que pasa hace un depósito de <span class="math inline">\(1000\)</span>€. Calcular la cantidad de dinero que habrá en la cuenta después de <span class="math inline">\(n\)</span> años de forma cerrada. ¿Converge la serie asociada?</p>
+</div>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-8" class="callout-8-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Sea <span class="math inline">\(A_n\)</span> la cantidad de dinero en la cuenta tras <span class="math inline">\(n\)</span> años. Veamos cuáles son las cantidades en la cuenta durante los primeros años.</p>
 <p><span class="math display">\[\begin{align*}
@@ -396,6 +428,26 @@ P(X=n)=(1-p)^{n-1}p,
 <p>donde <span class="math inline">\(p\)</span> es la probabilidad de que ocurra éxito en cada repetición de la prueba.</p>
 <p>Una de las condiciones que debe cumplir una función de probabilidad de una variable aleatoria es que la suma de las probabilidades de todos los posibles valores de la variable debe ser <span class="math inline">\(1\)</span>. Demostrar que la función de probabilidad de la variable hipergeométrica lo cumple.</p>
 </div>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-9" class="callout-9-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>El conjunto de posibles valores que puede tomar la variable aleatoria <span class="math inline">\(X\)</span> es <span class="math inline">\(\mathbb{N}\)</span>. Si consideramos la suma de las probabilidades de todos los posibles valores de la variable se tiene <span class="math inline">\(\sum_{n=1}^\infty P(n) = \sum_{n=1}^\infty (1-p)^{n-1}p = \sum_{n=0}^\infty (1-p)^n p\)</span>, que, al tratarse de una serie geométrica de razón <span class="math inline">\((1-p)&lt;1\)</span>, converge, y como se ha visto en el <a href="#exr-series-geometricas">Ejercicio&nbsp;<span>7.4</span></a>, la suma vale</p>
+<p><span class="math display">\[
+\sum_{n=1}^\infty (1-p)^n p = \frac{p}{1-(1-p)}= 1.
+\]</span></p>
+<p>Por tanto, cumple la condición para ser una función de probabilidad.</p>
+</div>
+</div>
+</div>
 <div id="exr-serie-conjunto-cantor" class="theorem exercise">
 <p><span class="theorem-title"><strong>Ejercicio 7.9 </strong></span>El <a href="https://es.wikipedia.org/wiki/Conjunto_de_Cantor">conjunto de cantor</a> es un subconjunto fractal del intervalo <span class="math inline">\([0,1]\)</span> que se construye de manera recursiva eliminando en cada paso el tercio central de los intervalos que van resultando. El procedimiento sería el siguiente:</p>
 <ol type="1">
@@ -406,11 +458,8 @@ P(X=n)=(1-p)^{n-1}p,
 </ol>
 <p>Demostrar que la longitud total de todos los intervalos eliminados es <span class="math inline">\(1\)</span>, y que, a pesar de ello, el conjunto de Cantor tiene un número infinito de puntos. Se dice que este conjunto es un conjunto de medida nula, pero que ni es vacío ni numerable.</p>
 </div>
-<div id="exr-serie-armonica-alternada" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 7.10 </strong></span>Haciendo uso de la serie de Taylor del logaritmo, demostrar que una serie armónica alternada <span class="math inline">\(\sum \frac{(-1)^{n+1}}{n}\)</span> converge y calcular su límite.</p>
-</div>
 <div class="callout-tip callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -419,7 +468,35 @@ Solución
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-8" class="callout-8-contents callout-collapse collapse">
+<div id="callout-10" class="callout-10-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Sea <span class="math inline">\(a_n\)</span> la longitud de los segmentos eliminados en la etapa <span class="math inline">\(n\)</span>. Veamos cuál es la longitud de los segmentos eliminados en las primeras etapas.</p>
+<p>En la primera etapa se quita el intervalo <span class="math inline">\(\left(\frac{1}{3},\frac{2}{3}\right)\)</span>, y <span class="math inline">\(a_1 = \frac{1}{3}\)</span>.</p>
+<p>En la segunda etapa se quitan los intervalos <span class="math inline">\(\left(\frac{1}{9},\frac{2}{9}\right)\)</span> y <span class="math inline">\(\left(\frac{7}{9},\frac{8}{9}\right)\)</span>, y por tanto, <span class="math inline">\(a_n = 2\frac{1}{9}\)</span>.</p>
+<p>En la tercera etapa se quitan los intervalos <span class="math inline">\(\left(\frac{1}{27},\frac{2}{27}\right)\)</span>, <span class="math inline">\(\left(\frac{7}{27},\frac{8}{27}\right)\)</span>, <span class="math inline">\(\left(\frac{19}{27},\frac{20}{27}\right)\)</span> y <span class="math inline">\(\left(\frac{25}{27},\frac{26}{27}\right)\)</span>, y por tanto, <span class="math inline">\(a_3=4\frac{1}{27}\)</span>.</p>
+<p>En consecuencia, se deduce que <span class="math inline">\(a_n=\frac{2^{n-1}}{3^n}\)</span>.</p>
+<p>Así pues, la suma de las longitudes de los intervalos quitados es <span class="math inline">\(\sum_{n=1}^\infty \frac{2^{n-1}}{3^n} = \frac{1}{3}\sum_{n=1}^\infty \left(\frac{2}{3}\right)^{n-1} = \frac{1}{3}\sum_{n=0}^\infty \left(\frac{2}{3}\right)^n\)</span>, que, al ser una serie geométrica con razón <span class="math inline">\(\frac{2}{3}&lt;1\)</span>, converge, y como se ha visto en el <a href="#exr-series-geometricas">Ejercicio&nbsp;<span>7.4</span></a>, su suma vale</p>
+<p><span class="math display">\[
+\frac{1}{3}\sum_{n=0}^\infty \left(\frac{2}{3}\right)^n = \frac{1}{3}\frac{1}{1-\frac{2}{3}} = 1.
+\]</span></p>
+<p>Así pues, el conjunto de Cantor es de medida nula. Para ver que, a pesar de ello tiene infinitos números, basta con ver que contiene, entre otros, los números <span class="math inline">\(\frac{1}{3^n}\)</span> <span class="math inline">\(\forall n\in\mathbb{N}\)</span>.</p>
+</div>
+</div>
+</div>
+<div id="exr-serie-armonica-alternada" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 7.10 </strong></span>Haciendo uso del polinomio de Taylor del logaritmo, demostrar que una serie armónica alternada <span class="math inline">\(\sum \frac{(-1)^{n+1}}{n}\)</span> converge y calcular su suma.</p>
+</div>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-11" class="callout-11-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>El polinomio de Taylor de grado <span class="math inline">\(n\)</span> de la función <span class="math inline">\(f(x)=\ln(x)\)</span> en el punto <span class="math inline">\(a=1\)</span> es</p>
 <p><span class="math display">\[\begin{align*}
@@ -434,17 +511,11 @@ P^n_{f,1}(2) = 1 -\frac{1}{2} + \frac{1}{3} - \frac{1}{4} + \cdots + (-1)^{n+1}\
 </div>
 </div>
 </div>
-<div id="exr-series-divergentes" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 7.11 </strong></span>Demostrar que las siguientes series divergen.</p>
-<ol type="a">
-<li><p><span class="math inline">\(\sum \frac{n^2}{n+1}\)</span></p></li>
-<li><p><span class="math inline">\(\sum \cos\left(\frac{1}{n}\right)\)</span></p></li>
-<li><p><span class="math inline">\(\sum n\operatorname{sen}\left(\frac{1}{n}\right)\)</span></p></li>
-<li><p><span class="math inline">\(\sum \frac{1}{2n}\)</span></p></li>
-</ol>
+<div id="exr-serie-exponencial" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 7.11 </strong></span>Haciendo uso del polinomio de Maclaurin de la función exponencial, demostrar que una serie <span class="math inline">\(\sum \frac{1}{n!}\)</span> converge y calcular su suma.</p>
 </div>
 <div class="callout-tip callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-12-contents" aria-controls="callout-12" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -453,7 +524,40 @@ Solución
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-9" class="callout-9-contents callout-collapse collapse">
+<div id="callout-12" class="callout-12-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>El polinomio de Maclaurin de grado <span class="math inline">\(n\)</span> de la función <span class="math inline">\(f(x)=e^x\)</span> es</p>
+<p><span class="math display">\[
+P^n_{f,0}(x) = 1 + x + \frac{x^2}{2!} + \frac{x^3}{3!} + \cdots + \frac{x^n}{n!}\\
+\]</span></p>
+<p>y en <span class="math inline">\(x=1\)</span> se tiene</p>
+<p><span class="math display">\[
+P^n_{f,0}(1) = 1 + 1 + \frac{1}{2!} + \frac{1}{3!} + \cdots + \frac{1}{n!}\\
+\]</span></p>
+<p>Por tanto, <span class="math inline">\(\sum_{n=0}^\infty \frac{1}{n!} = \lim_{n\to\infty}P^n_{f,0}(1) = e^1 = e.\)</span></p>
+</div>
+</div>
+</div>
+<div id="exr-series-divergentes" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 7.12 </strong></span>Demostrar que las siguientes series divergen.</p>
+<ol type="a">
+<li><p><span class="math inline">\(\sum \frac{n^2}{n+1}\)</span></p></li>
+<li><p><span class="math inline">\(\sum \cos\left(\frac{1}{n}\right)\)</span></p></li>
+<li><p><span class="math inline">\(\sum n\operatorname{sen}\left(\frac{1}{n}\right)\)</span></p></li>
+<li><p><span class="math inline">\(\sum \frac{1}{2n}\)</span></p></li>
+</ol>
+</div>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-13-contents" aria-controls="callout-13" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-13" class="callout-13-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ol type="a">
 <li><p>Como <span class="math inline">\(\lim_{n\to\infty} \frac{n^2}{n+1} = \infty\)</span>, por la <a href="https://aprendeconalf.es/analisis-manual/08-series.html#thm-condicion-convergencia-series">condición de convergencia</a>, la serie <span class="math inline">\(\sum \frac{n^2}{n+1}\)</span> diverge.</p></li>
@@ -465,10 +569,10 @@ Solución
 </div>
 </div>
 <div id="exr-serie-telescopica-convergente" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 7.12 </strong></span>Demostrar que <span class="math inline">\(\sum_{n=1}^\infty \frac{1}{n(n+1)} = 1\)</span>.</p>
+<p><span class="theorem-title"><strong>Ejercicio 7.13 </strong></span>Demostrar que <span class="math inline">\(\sum_{n=1}^\infty \frac{1}{n(n+1)} = 1\)</span>.</p>
 </div>
 <div class="callout-note callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-14-contents" aria-controls="callout-14" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -477,14 +581,14 @@ Pista
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-10" class="callout-10-contents callout-collapse collapse">
+<div id="callout-14" class="callout-14-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Descomponer el término general de la sucesión subyacente a la serie en fraccione simples.</p>
 </div>
 </div>
 </div>
 <div class="callout-tip callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-15-contents" aria-controls="callout-15" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -493,7 +597,7 @@ Solución
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-11" class="callout-11-contents callout-collapse collapse">
+<div id="callout-15" class="callout-15-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>El término general de la sucesión se puede descomponer en fracciones simples de la siguiente manera <span class="math inline">\(\frac{1}{n(n+1)} = \frac{1}{n}-\frac{1}{n+1}\)</span>, que es una serie telescópica, de modo que la suma parcial de los <span class="math inline">\(n\)</span> primeros términos de la serie es</p>
 <p><span class="math display">\[\begin{align*}
@@ -507,7 +611,7 @@ A_n &amp;= \left(1-\frac{1}{2}\right)+\left(\frac{1}{2}-\frac{1}{3}\right)+\left
 </div>
 </div>
 <div id="exr-series-telescopicas" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 7.13 </strong></span>Estudiar la convergencia de las siguientes series telescópicas.</p>
+<p><span class="theorem-title"><strong>Ejercicio 7.14 </strong></span>Estudiar la convergencia de las siguientes series telescópicas.</p>
 <ol type="a">
 <li><p><span class="math inline">\(\sum \cos(n^2)-\cos((n+1)^2)\)</span></p></li>
 <li><p><span class="math inline">\(\sum \operatorname{sen}\left(\frac{1}{n}\right)-\operatorname{sen}\left(\frac{1}{n+1}\right)\)</span></p></li>
@@ -516,7 +620,7 @@ A_n &amp;= \left(1-\frac{1}{2}\right)+\left(\frac{1}{2}-\frac{1}{3}\right)+\left
 </ol>
 </div>
 <div class="callout-tip callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-12-contents" aria-controls="callout-12" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-16-contents" aria-controls="callout-16" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -525,7 +629,7 @@ Solución
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-12" class="callout-12-contents callout-collapse collapse">
+<div id="callout-16" class="callout-16-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ol type="a">
 <li><p>Como se trata de una serie telescópica, se tiene que la suma parcial de orden <span class="math inline">\(n\)</span> es</p>
@@ -579,7 +683,7 @@ A_n &amp;= \sum_{i=2}^n \frac{1}{i-1}-\frac{1}{i+1} \\
 </div>
 </div>
 <div id="exr-comparacion-series" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 7.14 </strong></span>Estudiar la convergencia de las siguientes series comparándolas con otras conocidas.</p>
+<p><span class="theorem-title"><strong>Ejercicio 7.15 </strong></span>Estudiar la convergencia de las siguientes series comparándolas con otras conocidas.</p>
 <div class="columns">
 <div class="column">
 <ol type="a">
@@ -598,15 +702,78 @@ A_n &amp;= \sum_{i=2}^n \frac{1}{i-1}-\frac{1}{i+1} \\
 </div>
 </div>
 </div>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-17-contents" aria-controls="callout-17" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-17" class="callout-17-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="a">
+<li><p><span class="math inline">\(\frac{2n}{4n^3-n+1}&gt;0\)</span> <span class="math inline">\(\forall n\in\mathbb{N}\)</span>, por lo que se trata de una serie de términos positivos. Como <span class="math inline">\(4n^3-n+1&gt;4n^3-n&gt;0\)</span> <span class="math inline">\(\forall n\mathbb{N}\)</span> se tiene que</p>
+<p><span class="math display">\[
+\frac{2n}{4n^3-n+1}&lt;\frac{2n}{4n^3-n}=\frac{2}{4n^2-1} = \frac{2}{(2n+1)(2n-1)} = \frac{1}{2n-1}-\frac{1}{2n+1}\ \forall n\in\mathbb{N}.
+\]</span></p>
+<p>Así pues, por el criterio de comparación de series, <span class="math inline">\(\sum \frac{2n}{4n^3-n+1}\)</span> converge sí <span class="math inline">\(\sum \frac{1}{2n-1}-\frac{1}{2n+1}\)</span> converge. Pero esta última serie es una serie telescópica, y como <span class="math inline">\(\lim_{n\to\infty} \frac{1}{2n-1}=0\)</span>, converge, de manera que <span class="math inline">\(\sum \frac{2n}{4n^3-n+1}\)</span> también converge.</p></li>
+<li><p><span class="math inline">\(\frac{\ln(n)}{n}\geq 0\)</span> <span class="math inline">\(\forall n\in\mathbb{N}\)</span>, por lo que se trata de una serie de términos positivos. Como <span class="math inline">\(\ln(n)&gt;1\)</span> <span class="math inline">\(\forall n\geq 3\)</span>, se tiene que <span class="math inline">\(\frac{\ln(n)}{n}&gt;\frac{1}{n}\)</span> <span class="math inline">\(\forall n\geq 3\)</span>, y como <span class="math inline">\(\sum \frac{1}{n}\)</span> es la serie armónica, que diverge, por el criterio de la comparación de series, <span class="math inline">\(\sum \frac{\ln(n)}{n}\)</span> también diverge.</p></li>
+<li><p><span class="math inline">\(\frac{3^n}{2^n+1}&gt;0\)</span> <span class="math inline">\(\forall n\in\mathbb{N}\)</span> por lo que se trata de una serie de términos positivos. Como <span class="math inline">\(2^n+1&gt;2^n\)</span> <span class="math inline">\(\forall n\in\mathbb{N}\)</span>, se tiene que <span class="math inline">\(\frac{3^n}{2n+1}&lt;\frac{3^n}{2^n}=\left(\frac{3}{2}\right)^n\)</span> <span class="math inline">\(\forall n\in\mathbb{N}\)</span>. Y como <span class="math inline">\(\sum \left(\frac{3}{2}\right)^n\)</span> diverge al ser una serie geométrica de razón <span class="math inline">\(\frac{3}{2}&gt;1\)</span>, por el criterio de comparación de series se tiene que <span class="math inline">\(\sum \frac{3^n}{2^n+1}\)</span> también diverge.</p></li>
+<li><p><span class="math inline">\(\frac{n+1}{\sqrt{n^3}}&gt;0\)</span> <span class="math inline">\(\forall n\in\mathbb{N}\)</span> por lo que se trata de una serie de términos positivos. Por otro lado,</p>
+<p><span class="math display">\[
+\sum \frac{n+1}{\sqrt{n^3}} = \sum \frac{n+1}{n^{3/2}} = \sum \left(\frac{n}{n^{3/2}} + \frac{1}{n^{3/2}}\right) = \sum \frac{1}{n^{1/2}} + \sum \frac{1}{n^{3/2}}.
+\]</span></p>
+<p>Como <span class="math inline">\(\sum \frac{1}{n^{1/2}}\)</span> es una serie <span class="math inline">\(p\)</span> con <span class="math inline">\(p&lt;1\)</span>, diverge, y por tanto, <span class="math inline">\(\sum \frac{n+1}{\sqrt{n^3}}\)</span> también diverge.</p></li>
+<li><p><span class="math inline">\(\frac{e^{1/n}}{n}&gt;0\)</span> <span class="math inline">\(\forall n\in\mathbb{N}\)</span> por lo que se trata de una serie de términos positivos. Como <span class="math inline">\(e^{1/n}&gt;1\)</span> <span class="math inline">\(\forall n\in\mathbb{N}\)</span> se tiene que <span class="math inline">\(\frac{e^{1/n}}{n}&gt;\frac{1}{n}\)</span> <span class="math inline">\(\forall n\in\mathbb{N}\)</span>, y como <span class="math inline">\(\sum \frac{1}{n}\)</span> es la serie armónica, que diverge, por el criterio de la comparación de series, <span class="math inline">\(\sum \frac{e^{1/n})}{n}\)</span> también diverge.</p></li>
+<li><p><span class="math inline">\(\operatorname{sen}\left(\frac{1}{n}\right)&gt;0\)</span> <span class="math inline">\(\forall n\in\mathbb{N}\)</span> por lo que se trata de una serie de términos positivos. Haciendo el cambio de variable <span class="math inline">\(x=\frac{1}{n}\)</span>, se tiene</p>
+<p><span class="math display">\[
+\lim_{n\to\infty}\frac{\operatorname{sen}\left(\frac{1}{n}\right)}{\frac{1}{n}} = \lim_{x\to 0}\frac{\operatorname{sen}(x)}{x} = 1,
+\]</span></p>
+<p>al ser <span class="math inline">\(\operatorname{sen}(x)\)</span> y <span class="math inline">\(x\)</span> infinitésimos equivalentes en <span class="math inline">\(0\)</span>. Así pues, por el criterio del cociente, se tiene que <span class="math inline">\(\sum \operatorname{sen}\left(\frac{1}{n}\right)\)</span> converge si y solo si <span class="math inline">\(\sum \frac{1}{n}\)</span> converge, pero <span class="math inline">\(\sum \frac{1}{n}\)</span> es la serie armónica, que diverge, y por tanto, <span class="math inline">\(\sum \operatorname{sen}\left(\frac{1}{n}\right)\)</span> también diverge.</p></li>
+<li><p><span class="math inline">\(\frac{n+1}{n!}&gt;0\)</span> <span class="math inline">\(\forall n\in\mathbb{N}\)</span> por lo que se trata de una serie de términos positivos. Por otro lado, se tiene</p>
+<p><span class="math display">\[
+\sum \frac{n+1}{n!} = \sum \frac{n}{n!}+\frac{1}{n!} = \sum \frac{1}{{n-1}!}+\sum \frac{1}{n!},
+\]</span></p>
+<p>y como se ha visto en el <a href="#exr-serie-exponencial">Ejercicio&nbsp;<span>7.11</span></a>, tanto <span class="math inline">\(\sum \frac{1}{(n-1)!}\)</span> como <span class="math inline">\(\sum \frac{1}{n!}\)</span> convergen, por lo que <span class="math inline">\(\sum \frac{n+1}{n!}\)</span> también converge.</p></li>
+<li><p><span class="math inline">\(\frac{n^n}{n!}&gt;0\)</span> <span class="math inline">\(\forall n\in\mathbb{N}\)</span> por lo que se trata de una serie de términos positivos. Por otro lado, se tiene</p>
+<p><span class="math display">\[ \frac{n^n}{n!} = \frac{n}{n} \frac{n}{n-1} \frac{n}{n-2} \cdots \frac{n}{1}\geq n \ \forall n\in \mathbb{N}.
+\]</span></p>
+<p>Y como <span class="math inline">\(\sum n\)</span> diverge, por el criterio de comparación de series, <span class="math inline">\(\sum \frac{n^n}{n!}\)</span> también diverge.</p></li>
+</ol>
+</div>
+</div>
+</div>
 <div id="exr-criterio-cociente" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 7.15 </strong></span>Demostrar que si <span class="math inline">\(\sum a_n\)</span> y <span class="math inline">\(\sum b_n\)</span> son dos series de términos positivos entonces se cumple que</p>
+<p><span class="theorem-title"><strong>Ejercicio 7.16 </strong></span>Demostrar que si <span class="math inline">\(\sum a_n\)</span> y <span class="math inline">\(\sum b_n\)</span> son dos series de términos positivos entonces se cumple que</p>
 <ol type="a">
 <li><p>Si <span class="math inline">\(\lim_{n\to\infty} \frac{a_n}{b_n} = 0\)</span> y <span class="math inline">\(\sum b_n\)</span> converge, entonces <span class="math inline">\(\sum a_n\)</span> también converge.</p></li>
 <li><p>Si <span class="math inline">\(\lim_{n\to\infty} \frac{a_n}{b_n} = \infty\)</span> y <span class="math inline">\(\sum b_n\)</span> diverge, entonces <span class="math inline">\(\sum a_n\)</span> también diverge.</p></li>
 </ol>
 </div>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-18-contents" aria-controls="callout-18" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-18" class="callout-18-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="a">
+<li><p>Supongamos que <span class="math inline">\(\lim_{n\to\infty} \frac{a_n}{b_n}=0\)</span>. Entonces, para <span class="math inline">\(\varepsilon=1\)</span> existe <span class="math inline">\(k\in\mathbb{N}\)</span> tal que <span class="math inline">\(\left|\frac{a_n}{b_n}\right|=\frac{a_n}{b_n}&lt;1\)</span> <span class="math inline">\(\forall n\geq k\)</span>, y por tanto, <span class="math inline">\(a_n&lt;b_n\)</span> <span class="math inline">\(\forall n\geq k\)</span>. Así pues, por el criterio de comparación de series, si <span class="math inline">\(\sum_{n\geq k} b_n\)</span> converge, <span class="math inline">\(\sum_{n\geq k} a_n\)</span> también, y como un número finito de términos no influye en la convergencia de una serie, <span class="math inline">\(\sum a_n\)</span> converge.</p></li>
+<li><p>Supongamos que <span class="math inline">\(\lim_{n\to\infty} \frac{a_n}{b_n}=\infty\)</span>. Entonces, para <span class="math inline">\(\varepsilon=1\)</span> existe <span class="math inline">\(k\in\mathbb{N}\)</span> tal que <span class="math inline">\(\left|\frac{a_n}{b_n}\right|=\frac{a_n}{b_n}&gt;1\)</span> <span class="math inline">\(\forall n\geq k\)</span>, y por tanto, <span class="math inline">\(a_n&gt;b_n\)</span> <span class="math inline">\(\forall n\geq k\)</span>. Así pues, por el criterio de comparación de series, si <span class="math inline">\(\sum_{n\geq k} b_n\)</span> diverge, <span class="math inline">\(\sum_{n\geq k} a_n\)</span> también, y como un número finito de términos no influye en la convergencia de una serie, <span class="math inline">\(\sum a_n\)</span> diverge.</p></li>
+</ol>
+</div>
+</div>
+</div>
 <div id="exr-series-positivas-convergentes" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 7.16 </strong></span>Dada una serie de términos positivos <span class="math inline">\(\sum a_n\)</span> convergente, estudiar si las siguientes series convergen.</p>
+<p><span class="theorem-title"><strong>Ejercicio 7.17 </strong></span>Dada una serie de términos positivos <span class="math inline">\(\sum a_n\)</span> convergente, estudiar si las siguientes series convergen.</p>
 <ol type="a">
 <li><p><span class="math inline">\(\sum a_n^2\)</span></p></li>
 <li><p><span class="math inline">\(\sum \frac{1}{a_n^3}\)</span></p></li>
@@ -614,8 +781,37 @@ A_n &amp;= \sum_{i=2}^n \frac{1}{i-1}-\frac{1}{i+1} \\
 <li><p><span class="math inline">\(\sum \operatorname{sen}(a_n)\)</span></p></li>
 </ol>
 </div>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-19-contents" aria-controls="callout-19" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-19" class="callout-19-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="a">
+<li><p>Por el criterio de divergencia, como <span class="math inline">\(\sum a_n\)</span> converge, se tiene que <span class="math inline">\(\lim_{n\to\infty} a_n = 0\)</span>. Por otro lado, <span class="math inline">\(\lim_{n\to\infty}\frac{a_n^2}{a_n} = \lim_{n\to\infty} a_n = 0\)</span>, y por lo visto en el <a href="#exr-criterio-cociente">Ejercicio&nbsp;<span>7.16</span></a>, como <span class="math inline">\(\sum a_n\)</span> converge, <span class="math inline">\(\sum a_n^2\)</span> también.</p></li>
+<li><p><span class="math inline">\(\lim_{n\to\infty}\frac{a_n^3}{a_n} = \lim_{n\to\infty} a_n^2 = 0\)</span>, ya que, según el apartado anterior <span class="math inline">\(\sum a_n^2\)</span> converge, y por lo visto en el <a href="#exr-criterio-cociente">Ejercicio&nbsp;<span>7.16</span></a>, como <span class="math inline">\(\sum a_n\)</span> converge, <span class="math inline">\(\sum a_n^3\)</span> también. Finalmente, como <span class="math inline">\(\sum a_n^3\)</span> converge, la serie de los inversos <span class="math inline">\(\sum a_n^{-3}\)</span> diverge.</p></li>
+<li><p>Por el criterio de divergencia, como <span class="math inline">\(\sum a_n\)</span> converge, se tiene que <span class="math inline">\(\lim_{n\to\infty} a_n = 0\)</span>, y haciendo el cambio de variable <span class="math inline">\(x=a_n\)</span>, se tiene</p>
+<p><span class="math display">\[
+\lim_{n\to\infty} \frac{\ln(1+a_n)}{a_n} = \lim_{x\to 0}\frac{\ln(1+x)}{x} = 1,
+\]</span></p>
+<p>ya que <span class="math inline">\(\ln(1+x)\)</span> y <span class="math inline">\(x\)</span> son infinitésimos equivalentes en <span class="math inline">\(0\)</span>. Por tanto, por el criterio del cociente, <span class="math inline">\(\sum \ln(1+a_n)\)</span> también converge.</p></li>
+<li><p>Por el criterio de divergencia, como <span class="math inline">\(\sum a_n\)</span> converge, se tiene que <span class="math inline">\(\lim_{n\to\infty} a_n = 0\)</span>, y haciendo el cambio de variable <span class="math inline">\(x=a_n\)</span>, se tiene</p>
+<p><span class="math display">\[
+\lim_{n\to\infty} \frac{\operatorname{sen}(a_n)}{a_n} = \lim_{x\to 0}\frac{\operatorname{sen}(x)}{x} = 1,
+\]</span></p>
+<p>ya que <span class="math inline">\(\operatorname{sen}(x)\)</span> y <span class="math inline">\(x\)</span> son infinitésimos equivalentes en <span class="math inline">\(0\)</span>. Por tanto, por el criterio del cociente, <span class="math inline">\(\sum \operatorname{sen}(a_n)\)</span> también converge.</p></li>
+</ol>
+</div>
+</div>
+</div>
 <div id="exr-series-alternadas" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 7.17 </strong></span>Estudiar la convergencia de las siguientes series alternadas.</p>
+<p><span class="theorem-title"><strong>Ejercicio 7.18 </strong></span>Estudiar la convergencia de las siguientes series alternadas.</p>
 <ol type="a">
 <li><p><span class="math inline">\(\sum \frac{(-1)^{n-1}}{2n-1}\)</span></p></li>
 <li><p><span class="math inline">\(\sum (-1)^ne^{-n}\)</span></p></li>
@@ -623,11 +819,57 @@ A_n &amp;= \sum_{i=2}^n \frac{1}{i-1}-\frac{1}{i+1} \\
 <li><p><span class="math inline">\(\sum (-1)^n\left(\frac{1}{\sqrt{n+1}}-\frac{1}{\sqrt{n}}\right)\)</span></p></li>
 </ol>
 </div>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-20-contents" aria-controls="callout-20" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-20" class="callout-20-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="a">
+<li><p><span class="math inline">\(\left(\frac{1}{2n-1}\right)_{n=1}^\infty\)</span> es una sucesión monótona decreciente, ya que <span class="math inline">\(\frac{1}{2n-1}&gt;\frac{1}{2(n+1)-1}=\frac{1}{2n+1}\)</span> <span class="math inline">\(\forall n\in\mathbb{N}\)</span>. Como además <span class="math inline">\(\lim_{n\to\infty} \frac{1}{2n-1} = 0\)</span>, por el criterio de la serie alternada se tiene que <span class="math inline">\(\sum \frac{(-1)^{n-1}}{2n-1}\)</span> converge.</p></li>
+<li><p><span class="math inline">\((e^{-n})_{n=1}^\infty\)</span> es una sucesión monótona decreciente, ya que <span class="math inline">\(e^{-n}&gt;e^{-(n+1)}\)</span> <span class="math inline">\(\forall n\in\mathbb{N}\)</span>. Como además <span class="math inline">\(\lim_{n\to\infty} e^{-n} = 0\)</span>, por el criterio de la serie alternada se tiene que <span class="math inline">\(\sum (-1)^ne^{-n}\)</span> converge.</p></li>
+<li><p><span class="math inline">\(\left(\operatorname{sen}\left(\frac{\pi}{n}\right)\right)_{n=1}^\infty\)</span> es una sucesión monótona decreciente, ya que <span class="math inline">\(\operatorname{sen}\left(\frac{\pi}{n}\right)&gt;\operatorname{sen}\left(\frac{\pi}{n+1}\right)\)</span> <span class="math inline">\(\forall n\geq 2\)</span>. Como además <span class="math inline">\(\lim_{n\to\infty} \operatorname{sen}\left(\frac{\pi}{n}\right) = 0\)</span>, por el criterio de la serie alternada se tiene que <span class="math inline">\(\sum (-1)^n\operatorname{sen}\left(\frac{\pi}{n}\right)\)</span> converge.</p></li>
+<li><p>Sea <span class="math inline">\(A_n\)</span> la suma parcial de orden <span class="math inline">\(n\)</span> de la serie <span class="math inline">\(\sum (-1)^n\left(\frac{1}{\sqrt{n+1}}-\frac{1}{\sqrt{n}}\right)\)</span>. Si desarrollamos las primeras sumas parciales se tiene</p>
+<p><span class="math display">\[\begin{align*}
+A_1 &amp;= \frac{-1}{\sqrt{2}}+\frac{1}{\sqrt{1}}\\
+A_2 &amp;= \frac{-1}{\sqrt{2}}+\frac{1}{\sqrt{1}} + \frac{1}{\sqrt{3}}-\frac{1}{\sqrt{2}} = 1 - \frac{2}{\sqrt{2}} + \frac{1}{\sqrt{3}}\\
+A_3 &amp;= 1 - \frac{2}{\sqrt{2}} + \frac{1}{\sqrt{3}} -\frac{1}{\sqrt{4}} +\frac{1}{\sqrt{3}} =  1 - \frac{2}{\sqrt{2}} + \frac{2}{\sqrt{3}} -\frac{1}{\sqrt{4}} \\
+A_3 &amp;= 1 - \frac{2}{\sqrt{2}} + \frac{2}{\sqrt{3}} -\frac{1}{\sqrt{4}} + \frac{1}{\sqrt{5}} -\frac{1}{\sqrt{4}} = 1 - \frac{2}{\sqrt{2}} + \frac{2}{\sqrt{3}} -\frac{2}{\sqrt{4}} + \frac{1}{\sqrt{5}}\\
+\vdots\\
+A_n &amp;= 1 + 2\sum_{i=1}^n \frac{(-1)^n}{\sqrt{n}}
+\end{align*}\]</span></p>
+<p>Como la sucesión <span class="math inline">\(\left(\frac{1}{\sqrt{n}}\right)_{n=1}^\infty\)</span> es monótona decreciente, ya que <span class="math inline">\(\frac{1}{\sqrt{n}}&gt;\frac{1}{\sqrt{n+1}}\)</span> <span class="math inline">\(\forall n\in\mathbb{N}\)</span>, y <span class="math inline">\(\lim_{n\to\infty} \frac{1}{\sqrt{n}} = 0\)</span>, por el criterio de la serie alternada se tiene que <span class="math inline">\(\sum \frac{(-1)^n}{\sqrt{n}}\)</span> converge, y por tanto, <span class="math inline">\(\sum (-1)^n\left(\frac{1}{\sqrt{n+1}}-\frac{1}{\sqrt{n}}\right) = 1 + 2\sum \frac{(-1)^n}{\sqrt{n}}\)</span> también converge.</p></li>
+</ol>
+</div>
+</div>
+</div>
 <div id="exr-muelle-amortiguado" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 7.18 </strong></span>El movimiento de un <a href="https://upload.wikimedia.org/wikipedia/commons/f/fa/Spring-mass_under-damped.gif">muelle amortiguado</a> con un peso colgado de él es oscilante. Si la posición que ocupa el peso en cada periodo de oscilación <span class="math inline">\(n\)</span> viene dado por la serie <span class="math inline">\(\sum (-1)^{n-1}e^{-n/2}\)</span>, ¿llegará a estabilizarse en una posición de equilibrio a largo plazo?</p>
+<p><span class="theorem-title"><strong>Ejercicio 7.19 </strong></span>El movimiento de un <a href="https://upload.wikimedia.org/wikipedia/commons/f/fa/Spring-mass_under-damped.gif">muelle amortiguado</a> con un peso colgado de él es oscilante. Si la posición que ocupa el peso en cada periodo de oscilación <span class="math inline">\(n\)</span> viene dado por la serie <span class="math inline">\(\sum (-1)^{n-1}e^{-n/2}\)</span>, ¿llegará a estabilizarse en una posición de equilibrio a largo plazo?</p>
+</div>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-21-contents" aria-controls="callout-21" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-21" class="callout-21-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><span class="math inline">\((e^{-n/2})_{n=1}^\infty\)</span> es una sucesión monótona decreciente, ya que <span class="math inline">\(e^{-n/2}&gt;e^{-(n+1)/2}\)</span> <span class="math inline">\(\forall n\in\mathbb{N}\)</span>. Como además <span class="math inline">\(\lim_{n\to\infty} e^{-n/2} = 0\)</span>, por el criterio de la serie alternada se tiene que <span class="math inline">\(\sum (-1)^{n-1}e^{-n/2}\)</span> converge, así que el peso colgado del muelle se estabilizará a largo plazo en la posición <span class="math inline">\(\sum (-1)^{n-1}e^{-n/2}\)</span>.</p>
+</div>
+</div>
 </div>
 <div id="exr-convergencia-absoluta" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 7.19 </strong></span>Estudiar la convergencia absoluta de las siguientes series.</p>
+<p><span class="theorem-title"><strong>Ejercicio 7.20 </strong></span>Estudiar la convergencia absoluta de las siguientes series.</p>
 <div class="columns">
 <div class="column">
 <ol type="a">
@@ -644,41 +886,226 @@ A_n &amp;= \sum_{i=2}^n \frac{1}{i-1}-\frac{1}{i+1} \\
 </div>
 </div>
 </div>
-<div id="exr-serie-exponential" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 7.20 </strong></span>Demostrar que la serie de potencias <span class="math inline">\(f(x)=\sum \frac{x^n}{n!}\)</span> es absolutamente convergente para cualquier <span class="math inline">\(x\in\mathbb{R}\)</span>.</p>
-<p>Demostrar también que esta serie cumple la ecuación diferencial <span class="math inline">\(f'(x)=f(x)\)</span>. ¿Qué otras funciones conoces que la cumplen?</p>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-22-contents" aria-controls="callout-22" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-22" class="callout-22-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="a">
+<li><p>Como</p>
+<p><span class="math display">\[
+\lim_{n\to\infty} \left|\frac{a_{n+1}}{a_n}\right| = \lim_{n\to\infty} \frac{\frac{2^{n+1}}{(n+1)^2}}{\frac{2^n}{n^2}} = \lim_{n\to\infty}\frac{2n^2}{(n+1)^2} = 2 &gt;1,
+\]</span></p>
+<p>por el criterio de la razón, se tiene que <span class="math inline">\(\sum \frac{(-2)^n}{n^2}\)</span> diverge.</p></li>
+<li><p>Como</p>
+<p><span class="math display">\[
+\lim_{n\to\infty} \left|\frac{a_{n+1}}{a_n}\right| = \lim_{n\to\infty} \frac{\frac{n+1}{3^{n+1}}}{\frac{n}{3^n}} = \lim_{n\to\infty}\frac{n+1}{3n} = \frac{1}{3} &lt;1,
+\]</span></p>
+<p>por el criterio de la razón, se tiene que <span class="math inline">\(\sum \frac{n}{3^n}\)</span> es absolutamente convergente.</p></li>
+<li><p>Como <span class="math inline">\(\left|\frac{\operatorname{sen}(n)}{n^2}\right|&lt; \frac{1}{n^2}\)</span> <span class="math inline">\(\forall n\in\mathbb{N}\)</span>, y <span class="math inline">\(\sum \frac{1}{n^2}\)</span> converge al ser una serie <span class="math inline">\(p\)</span> con <span class="math inline">\(p=2&gt;1\)</span>, por el criterio de comparación de series, <span class="math inline">\(\sum \left|\frac{\operatorname{sen}(n)}{n^2}\right|\)</span> converge, y por tanto, <span class="math inline">\(\sum \frac{\operatorname{sen}(n)}{n^2}\)</span> es absolutamente convergente.</p></li>
+<li><p><span class="math inline">\(\sum \left|\frac{(-1)^n}{\ln(n)}\right|= \sum \frac{1}{\ln(n)}\)</span> <span class="math inline">\(\forall n&gt;1\)</span>, y como <span class="math inline">\(\frac{1}{\ln(n)}&gt;\frac{1}{n}\)</span> <span class="math inline">\(\forall n&gt;1\)</span>, por el criterio de comparación de series, <span class="math inline">\(\sum \frac{1}{\ln(n)}\)</span> diverge ya que <span class="math inline">\(\sum \frac{1}{n}\)</span> diverge. Por tanto, <span class="math inline">\(\sum \frac{(-1)^n}{\ln(n)}\)</span> no es absolutamente converge.</p></li>
+<li><p>Como</p>
+<p><span class="math display">\[
+\lim_{n\to\infty} \sqrt[n]{\left|\left(\frac{n^2+1}{2n^2-1}\right)^n\right|} = \lim_{n\to\infty} \frac{n^2+1}{2n^2-1} = \frac{1}{2}&lt;1,
+\]</span></p>
+<p>por el criterio de la razón, se tiene que <span class="math inline">\(\sum \left(\frac{n^2+1}{2n^2-1}\right)^n\)</span> es absolutamente convergente.</p></li>
+<li><p>Como</p>
+<p><span class="math display">\[\begin{align*}
+\lim_{n\to\infty} \left|\frac{a_{n+1}}{a_n}\right| &amp;= \lim_{n\to\infty} \frac{\frac{(n+1)!}{(n+1)^{n+1}}}{\frac{n!}{n^n}} = \lim_{n\to\infty} \frac{\frac{(n+1)n!}{(n+1)(n+1)^n}}{\frac{n!}{n^n}} \\
+&amp; = \lim_{n\to\infty} \frac{n^n}{(n+1)^n} = \lim_{n\to\infty} \left(\frac{n}{n+1}\right)^n = \frac{1}{e}&lt;1,
+\end{align*}\]</span></p>
+<p>por el criterio de la razón, se tiene que <span class="math inline">\(\sum \frac{n!}{n^n}\)</span> es absolutamente convergente.</p></li>
+</ol>
+</div>
+</div>
+</div>
+<div id="exr-suma-serie-potencias-exponencial" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 7.21 </strong></span>Demostrar que la serie de potencias <span class="math inline">\(\sum \frac{x^n}{n!}\)</span> es absolutamente convergente para cualquier <span class="math inline">\(x\in\mathbb{R}\)</span>.</p>
+<p>Demostrar también que la función <span class="math inline">\(f(x)=\sum_{n=0}^\infty \frac{x^n}{n!}\)</span> cumple la ecuación diferencial <span class="math inline">\(f'(x)=f(x)\)</span>. ¿Qué otras funciones conoces que la cumplen?</p>
 <p>Demostrar finalmente que <span class="math inline">\(f(x)=e^x\)</span>.</p>
 </div>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-23-contents" aria-controls="callout-23" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-23" class="callout-23-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Como</p>
+<p><span class="math display">\[\begin{align*}
+\lim_{n\to\infty} \left|\frac{a_{n+1}}{a_n}\right| &amp;= \lim_{n\to\infty} \frac{\frac{x^{n+1}}{(n+1)!}}{\frac{x^n}{n!}} = \lim_{n\to\infty} \frac{\frac{|xx^n|}{(n+1)n!}}{\frac{|x^n|}{n!}} \\
+&amp; = \lim_{n\to\infty} \frac{|x|}{n+1} = 0 \ \forall x\in\mathbb{R},
+\end{align*}\]</span></p>
+<p>por el criterio de la razón, se tiene que <span class="math inline">\(\sum \frac{x^n}{n!}\)</span> es absolutamente convergente <span class="math inline">\(\forall x\in\mathbb{R}\)</span>.</p>
+<p>Sea <span class="math inline">\(A_n(x)\)</span> la función de la suma parcial de orden <span class="math inline">\(n\)</span> de la serie anterior para cualquier <span class="math inline">\(x\in\mathbb{R}\)</span>, es decir,</p>
+<p><span class="math display">\[
+A_n(x) = 1 + x + \frac{x^2}{2!} + \frac{x^3}{3!} + \frac{x^4}{4!} + \cdots +\frac{x^n}{n!}
+\]</span></p>
+<p>Entonces, su derivada vale</p>
+<p><span class="math display">\[\begin{align*}
+A_n'(x) &amp;= (1)' + (x)' + \left(\frac{x^2}{2!}\right)' + \left(\frac{x^3}{3!}\right)' + \left(\frac{x^4}{4!}\right)' + \cdots + \left(\frac{x^n}{n!}\right)'\\
+&amp;= 0 + 1 + \frac{2x}{2!} + \frac{3x^2}{3!} + \frac{4x^3}{4!} + \cdots +\frac{nx^{n-1}}{n!} \\
+&amp;=  1 + x + \frac{x^2}{2!} + \frac{x^3}{3!} + \frac{x^4}{4!} + \cdots +\frac{x^{n-1}}{(n-1)!} = A_{n-1}(x)
+\end{align*}\]</span></p>
+<p>Así pues, si tomamos la función <span class="math inline">\(f(x)=\sum_{n=0}^\infty \frac{x^n}{n!} = \lim_{n\to\infty} A_n(x)\)</span>, su derivada vale</p>
+<p><span class="math display">\[
+f'(x) = \lim_{n\to\infty} A_n'(x) = \lim_{n\to\infty} A_{n-1}(x) = \lim_{n\to\infty} A_{n}(x) = f(x).
+\]</span></p>
+<p>Por tanto, la función <span class="math inline">\(f(x)=\sum_{n=0}^\infty \frac{x^n}{n!}\)</span> cumple la ecuación diferencial <span class="math inline">\(f'(x)=f(x)\)</span>.</p>
+<p>Otra función conocida que cumple esa ecuación diferencial es <span class="math inline">\(g(x)=e^x\)</span>.</p>
+<p>Veamos que <span class="math inline">\(f(x)=e^x\)</span>.</p>
+</div>
+</div>
+</div>
 <div id="exr-suma-serie-potencias" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 7.21 </strong></span>Usar el resultado del ejercicio anterior para calcular la suma de la serie de potencias <span class="math inline">\(\sum \frac{(x+2)^n}{(n+1)!}\)</span>.</p>
+<p><span class="theorem-title"><strong>Ejercicio 7.22 </strong></span>Usar el resultado del ejercicio anterior para calcular la suma de la serie de potencias <span class="math inline">\(\sum \frac{(x+2)^n}{(n+1)!}\)</span>.</p>
+</div>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-24-contents" aria-controls="callout-24" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-24" class="callout-24-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><span class="math display">\[
+\sum_{n=0}^\infty \frac{(x+2)^n}{(n+1)!} = \sum_{n=0}^\infty \frac{(x+2)^{n+1}}{(x+2)(n+1)!} = \frac{1}{x+2}\sum_{n=1}^\infty \frac{(x+2)^n}{n!} = \frac{e^{x+2}-1}{x+2}.
+\]</span></p>
+</div>
+</div>
 </div>
 <div id="exr-serie-poisson" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 7.22 </strong></span>La <a href="https://es.wikipedia.org/wiki/Distribuci%C3%B3n_de_Poisson"><em>distribución de Poisson</em></a> es una de las distribuciones de probabilidad más importantes, ya que explica la probabilidad de que ocurra un número determinado de fenómenos puntuales en un soporte continuo (como por ejemplo el número de llamadas telefónicas que llegan a un servicio de atención al cliente e un intervalo de tiempo). Su función de probabilidad es</p>
+<p><span class="theorem-title"><strong>Ejercicio 7.23 </strong></span>La <a href="https://es.wikipedia.org/wiki/Distribuci%C3%B3n_de_Poisson"><em>distribución de Poisson</em></a> es una de las distribuciones de probabilidad más importantes, ya que explica la probabilidad de que ocurra un número determinado de fenómenos puntuales en un soporte continuo (como por ejemplo el número de llamadas telefónicas que llegan a un servicio de atención al cliente en un intervalo de tiempo). Su función de probabilidad es</p>
 <p><span class="math display">\[
 P(n)= e^{-\lambda}\frac{\lambda^n}{n!}\ \forall n\in \mathbb{N},
-\]</span> donde <span class="math inline">\(\lambda&gt;0\)</span> es su media.</p>
+\]</span></p>
+<p>donde <span class="math inline">\(\lambda&gt;0\)</span> es su media.</p>
 <p>Demostrar que esta función es una función de masa de probabilidad.</p>
 </div>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-25-contents" aria-controls="callout-25" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-25" class="callout-25-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>El conjunto de posibles valores que puede tomar la variable aleatoria <span class="math inline">\(X\)</span> es <span class="math inline">\(\mathbb{N}\cup \{0\}\)</span>. Si consideramos la suma de las probabilidades de todos los posibles valores de la variable se tiene</p>
+<p><span class="math display">\[
+\sum_{n=0}^\infty P(n) = \sum_{n=0}^\infty e^{-\lambda}\frac{\lambda^n}{n!} = e^{-\lambda}\sum_{n=0}^\infty \frac{\lambda^n}{n!}.
+\]</span></p>
+<p>Como se ha visto en el <a href="#exr-suma-serie-potencias-exponencial">Ejercicio&nbsp;<span>7.21</span></a>, <span class="math inline">\(\sum_{n=0}^\infty \frac{x^n}{n!}=e^x\)</span> <span class="math inline">\(\forall x\in\mathbb{R}\)</span>, en particular se tiene que <span class="math inline">\(\sum_{n=0}^\infty \frac{\lambda^n}{n!}=e^\lambda\)</span>, por lo que finalmente se tiene</p>
+<p><span class="math display">\[
+\sum_{n=0}^\infty P(n) = e^{-\lambda}e^{\lambda} = 1,
+\]</span></p>
+<p>y se cumple la condición para ser una función de probabilidad.</p>
+</div>
+</div>
+</div>
 <div id="exr-serie-taylor" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 7.23 </strong></span>Calcular la serie de Taylor de las siguientes funciones en los puntos dados.</p>
+<p><span class="theorem-title"><strong>Ejercicio 7.24 </strong></span>Calcular la serie de Taylor de las siguientes funciones en los puntos dados.</p>
 <ol type="a">
 <li><p><span class="math inline">\(f(x)=\cos(x)\)</span> en <span class="math inline">\(a=\pi\)</span>.</p></li>
 <li><p><span class="math inline">\(g(x)=\ln(x)\)</span> en <span class="math inline">\(a=1\)</span>.</p></li>
 <li><p><span class="math inline">\(h(x)=\frac{1}{\sqrt{x}}\)</span> en <span class="math inline">\(a=1\)</span>.</p></li>
 </ol>
 </div>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-26-contents" aria-controls="callout-26" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-26" class="callout-26-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+
+</div>
+</div>
+</div>
 <div id="exr-serie-binomial" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 7.24 </strong></span>Construir la serie de McLaurin de la función <span class="math inline">\(f(x)= (1+x)^k\)</span> para cualquier <span class="math inline">\(k\in\mathbb{R}\)</span> y estudiar su dominio de convergencia. ¿Qué serie se obtiene cuando <span class="math inline">\(k\in\mathbb{N}\)</span>?</p>
+<p><span class="theorem-title"><strong>Ejercicio 7.25 </strong></span>Construir la serie de Maclaurin de la función <span class="math inline">\(f(x)= (1+x)^k\)</span> para cualquier <span class="math inline">\(k\in\mathbb{R}\)</span> y estudiar su dominio de convergencia. ¿Qué serie se obtiene cuando <span class="math inline">\(k\in\mathbb{N}\)</span>?</p>
+</div>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-27-contents" aria-controls="callout-27" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-27" class="callout-27-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+
+</div>
+</div>
 </div>
 <div id="exr-serie-arcotangente" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 7.25 </strong></span>Calcular la serie de McLaurin de la función <span class="math inline">\(f(x)=\operatorname{arctg}(x)\)</span> y utilizarla para obtener una serie cuya suma sea <span class="math inline">\(\pi\)</span>.</p>
+<p><span class="theorem-title"><strong>Ejercicio 7.26 </strong></span>Calcular la serie de Maclaurin de la función <span class="math inline">\(f(x)=\operatorname{arctg}(x)\)</span> y utilizarla para obtener una serie cuya suma sea <span class="math inline">\(\pi\)</span>.</p>
+</div>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-28-contents" aria-controls="callout-28" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-28" class="callout-28-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+
+</div>
+</div>
 </div>
 <div id="exr-limite-tangente" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 7.26 </strong></span>Usando desarrollos de Taylor, calcular los siguientes límites.</p>
+<p><span class="theorem-title"><strong>Ejercicio 7.27 </strong></span>Usando desarrollos de Taylor, calcular los siguientes límites.</p>
 <ol type="a">
 <li><p><span class="math inline">\(\lim_{x\to 0}\frac{\ln(1+x)-x}{x^2}\)</span></p></li>
 <li><p><span class="math inline">\(\lim_{x\to 0}\frac{\operatorname{tg}(x)-x}{x^3}\)</span></p></li>
 </ol>
+</div>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-29-contents" aria-controls="callout-29" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-29" class="callout-29-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+
+</div>
+</div>
 </div>
 
 
