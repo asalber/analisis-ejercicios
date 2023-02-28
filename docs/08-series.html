@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.2.313">
+<meta name="generator" content="quarto-1.2.335">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -926,10 +926,11 @@ Solución
 </div>
 </div>
 </div>
-<div id="exr-suma-serie-potencias-exponencial" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 7.21 </strong></span>Demostrar que la serie de potencias <span class="math inline">\(\sum \frac{x^n}{n!}\)</span> es absolutamente convergente para cualquier <span class="math inline">\(x\in\mathbb{R}\)</span>.</p>
-<p>Demostrar también que la función <span class="math inline">\(f(x)=\sum_{n=0}^\infty \frac{x^n}{n!}\)</span> cumple la ecuación diferencial <span class="math inline">\(f'(x)=f(x)\)</span>. ¿Qué otras funciones conoces que la cumplen?</p>
-<p>Demostrar finalmente que <span class="math inline">\(f(x)=e^x\)</span>.</p>
+<div id="exr-radio-convergencia-raiz-razon" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 7.21 </strong></span>Demostrar que el radio de convergencia de una serie de potencias <span class="math inline">\(\sum c_nx^n\)</span> se puede calcular mediante las siguientes fórmulas</p>
+<p><span class="math display">\[
+R = \frac{1}{\lim_{n\to\infty} \sqrt[n]{|c_n|}} \quad \mbox{o}\quad R = \lim_{n\to\infty} \left|\frac{c_n}{c_{n+1}}\right|.
+\]</span></p>
 </div>
 <div class="callout-tip callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-23-contents" aria-controls="callout-23" aria-expanded="false" aria-label="Toggle callout">
@@ -942,6 +943,68 @@ Solución
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
 <div id="callout-23" class="callout-23-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Para probar la validez de la primera fórmula utilizaremos el criterio de la raíz para convergencia absoluta de series.</p>
+<p><span class="math display">\[
+\lim_{n\to\infty} \sqrt[n]{|c_nx^n|} = |x| \lim_{n\to\infty}\sqrt[n]{|c_n|} &lt; 1 \Leftrightarrow |x| &lt; \frac{1}{\lim_{n\to\infty} \sqrt[n]{|c_n|}}.
+\]</span></p>
+<p>Y para probar la validez de la segunda fórmula utilizaremos el criterio de la razón para la convergencia absoluta de series.</p>
+<p><span class="math display">\[
+\lim_{n\to\infty} \left|\frac{c_{n+1}x^{n+1}}{c_nx^n}\right| = |x|\lim_{n\to\infty} \left|\frac{c_{n+1}}{c_n}\right| &lt; 1 \Leftrightarrow |x| &lt; \frac{1}{\lim_{n\to\infty} \left|\frac{c_{n+1}}{c_n}\right|} = \lim_{n\to\infty} \left|\frac{c_n}{c_{n+1}}\right|.
+\]</span></p>
+</div>
+</div>
+</div>
+<div id="exr-radio-convergencia" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 7.22 </strong></span>Calcular el radio de convergencia y el dominio de convergencia puntual de las siguientes series de potencias.</p>
+<div class="columns">
+<div class="column">
+<ol type="a">
+<li><p><span class="math inline">\(\sum nx^n\)</span></p></li>
+<li><p><span class="math inline">\(\sum \frac{(-1)^nx^n}{\sqrt{n}}\)</span></p></li>
+<li><p><span class="math inline">\(\sum n!(x-1)^n\)</span></p></li>
+</ol>
+</div><div class="column">
+<ol start="4" type="a">
+<li><p><span class="math inline">\(\sum \frac{(x-2)^n}{n^3}\)</span></p></li>
+<li><p><span class="math inline">\(\sum \frac{n!(x-3)^n}{n^n}\)</span></p></li>
+<li><p><span class="math inline">\(\sum \operatorname{sen}(1/n) (x+1)^n\)</span></p></li>
+</ol>
+</div>
+</div>
+</div>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-24-contents" aria-controls="callout-24" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-24" class="callout-24-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+
+</div>
+</div>
+</div>
+<div id="exr-suma-serie-potencias-exponencial" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 7.23 </strong></span>Demostrar que la serie de potencias <span class="math inline">\(\sum \frac{x^n}{n!}\)</span> es absolutamente convergente para cualquier <span class="math inline">\(x\in\mathbb{R}\)</span>.</p>
+<p>Demostrar también que la función <span class="math inline">\(f(x)=\sum_{n=0}^\infty \frac{x^n}{n!}\)</span> cumple la ecuación diferencial <span class="math inline">\(f'(x)=f(x)\)</span>. ¿Qué otras funciones conoces que la cumplen?</p>
+<p>Demostrar finalmente que <span class="math inline">\(f(x)=e^x\)</span>.</p>
+</div>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-25-contents" aria-controls="callout-25" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-25" class="callout-25-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Como</p>
 <p><span class="math display">\[\begin{align*}
@@ -970,65 +1033,7 @@ f'(x) = \lim_{n\to\infty} A_n'(x) = \lim_{n\to\infty} A_{n-1}(x) = \lim_{n\to\in
 </div>
 </div>
 <div id="exr-suma-serie-potencias" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 7.22 </strong></span>Usar el resultado del ejercicio anterior para calcular la suma de la serie de potencias <span class="math inline">\(\sum \frac{(x+2)^n}{(n+1)!}\)</span>.</p>
-</div>
-<div class="callout-tip callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-24-contents" aria-controls="callout-24" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-caption-container flex-fill">
-Solución
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-24" class="callout-24-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p><span class="math display">\[
-\sum_{n=0}^\infty \frac{(x+2)^n}{(n+1)!} = \sum_{n=0}^\infty \frac{(x+2)^{n+1}}{(x+2)(n+1)!} = \frac{1}{x+2}\sum_{n=1}^\infty \frac{(x+2)^n}{n!} = \frac{e^{x+2}-1}{x+2}.
-\]</span></p>
-</div>
-</div>
-</div>
-<div id="exr-serie-poisson" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 7.23 </strong></span>La <a href="https://es.wikipedia.org/wiki/Distribuci%C3%B3n_de_Poisson"><em>distribución de Poisson</em></a> es una de las distribuciones de probabilidad más importantes, ya que explica la probabilidad de que ocurra un número determinado de fenómenos puntuales en un soporte continuo (como por ejemplo el número de llamadas telefónicas que llegan a un servicio de atención al cliente en un intervalo de tiempo). Su función de probabilidad es</p>
-<p><span class="math display">\[
-P(n)= e^{-\lambda}\frac{\lambda^n}{n!}\ \forall n\in \mathbb{N},
-\]</span></p>
-<p>donde <span class="math inline">\(\lambda&gt;0\)</span> es su media.</p>
-<p>Demostrar que esta función es una función de masa de probabilidad.</p>
-</div>
-<div class="callout-tip callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-25-contents" aria-controls="callout-25" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-caption-container flex-fill">
-Solución
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-25" class="callout-25-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p>El conjunto de posibles valores que puede tomar la variable aleatoria <span class="math inline">\(X\)</span> es <span class="math inline">\(\mathbb{N}\cup \{0\}\)</span>. Si consideramos la suma de las probabilidades de todos los posibles valores de la variable se tiene</p>
-<p><span class="math display">\[
-\sum_{n=0}^\infty P(n) = \sum_{n=0}^\infty e^{-\lambda}\frac{\lambda^n}{n!} = e^{-\lambda}\sum_{n=0}^\infty \frac{\lambda^n}{n!}.
-\]</span></p>
-<p>Como se ha visto en el <a href="#exr-suma-serie-potencias-exponencial">Ejercicio&nbsp;<span>7.21</span></a>, <span class="math inline">\(\sum_{n=0}^\infty \frac{x^n}{n!}=e^x\)</span> <span class="math inline">\(\forall x\in\mathbb{R}\)</span>, en particular se tiene que <span class="math inline">\(\sum_{n=0}^\infty \frac{\lambda^n}{n!}=e^\lambda\)</span>, por lo que finalmente se tiene</p>
-<p><span class="math display">\[
-\sum_{n=0}^\infty P(n) = e^{-\lambda}e^{\lambda} = 1,
-\]</span></p>
-<p>y se cumple la condición para ser una función de probabilidad.</p>
-</div>
-</div>
-</div>
-<div id="exr-serie-taylor" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 7.24 </strong></span>Calcular la serie de Taylor de las siguientes funciones en los puntos dados.</p>
-<ol type="a">
-<li><p><span class="math inline">\(f(x)=\cos(x)\)</span> en <span class="math inline">\(a=\pi\)</span>.</p></li>
-<li><p><span class="math inline">\(g(x)=\ln(x)\)</span> en <span class="math inline">\(a=1\)</span>.</p></li>
-<li><p><span class="math inline">\(h(x)=\frac{1}{\sqrt{x}}\)</span> en <span class="math inline">\(a=1\)</span>.</p></li>
-</ol>
+<p><span class="theorem-title"><strong>Ejercicio 7.24 </strong></span>Usar el resultado del ejercicio anterior para calcular la suma de la serie de potencias <span class="math inline">\(\sum \frac{(x+2)^n}{(n+1)!}\)</span>.</p>
 </div>
 <div class="callout-tip callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-26-contents" aria-controls="callout-26" aria-expanded="false" aria-label="Toggle callout">
@@ -1042,12 +1047,19 @@ Solución
 </div>
 <div id="callout-26" class="callout-26-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-
+<p><span class="math display">\[
+\sum_{n=0}^\infty \frac{(x+2)^n}{(n+1)!} = \sum_{n=0}^\infty \frac{(x+2)^{n+1}}{(x+2)(n+1)!} = \frac{1}{x+2}\sum_{n=1}^\infty \frac{(x+2)^n}{n!} = \frac{e^{x+2}-1}{x+2}.
+\]</span></p>
 </div>
 </div>
 </div>
-<div id="exr-serie-binomial" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 7.25 </strong></span>Construir la serie de Maclaurin de la función <span class="math inline">\(f(x)= (1+x)^k\)</span> para cualquier <span class="math inline">\(k\in\mathbb{R}\)</span> y estudiar su dominio de convergencia. ¿Qué serie se obtiene cuando <span class="math inline">\(k\in\mathbb{N}\)</span>?</p>
+<div id="exr-serie-poisson" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 7.25 </strong></span>La <a href="https://es.wikipedia.org/wiki/Distribuci%C3%B3n_de_Poisson"><em>distribución de Poisson</em></a> es una de las distribuciones de probabilidad más importantes, ya que explica la probabilidad de que ocurra un número determinado de fenómenos puntuales en un soporte continuo (como por ejemplo el número de llamadas telefónicas que llegan a un servicio de atención al cliente en un intervalo de tiempo). Su función de probabilidad es</p>
+<p><span class="math display">\[
+P(n)= e^{-\lambda}\frac{\lambda^n}{n!}\ \forall n\in \mathbb{N},
+\]</span></p>
+<p>donde <span class="math inline">\(\lambda&gt;0\)</span> es su media.</p>
+<p>Demostrar que esta función es una función de masa de probabilidad.</p>
 </div>
 <div class="callout-tip callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-27-contents" aria-controls="callout-27" aria-expanded="false" aria-label="Toggle callout">
@@ -1061,12 +1073,25 @@ Solución
 </div>
 <div id="callout-27" class="callout-27-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-
+<p>El conjunto de posibles valores que puede tomar la variable aleatoria <span class="math inline">\(X\)</span> es <span class="math inline">\(\mathbb{N}\cup \{0\}\)</span>. Si consideramos la suma de las probabilidades de todos los posibles valores de la variable se tiene</p>
+<p><span class="math display">\[
+\sum_{n=0}^\infty P(n) = \sum_{n=0}^\infty e^{-\lambda}\frac{\lambda^n}{n!} = e^{-\lambda}\sum_{n=0}^\infty \frac{\lambda^n}{n!}.
+\]</span></p>
+<p>Como se ha visto en el <a href="#exr-suma-serie-potencias-exponencial">Ejercicio&nbsp;<span>7.23</span></a>, <span class="math inline">\(\sum_{n=0}^\infty \frac{x^n}{n!}=e^x\)</span> <span class="math inline">\(\forall x\in\mathbb{R}\)</span>, en particular se tiene que <span class="math inline">\(\sum_{n=0}^\infty \frac{\lambda^n}{n!}=e^\lambda\)</span>, por lo que finalmente se tiene</p>
+<p><span class="math display">\[
+\sum_{n=0}^\infty P(n) = e^{-\lambda}e^{\lambda} = 1,
+\]</span></p>
+<p>y se cumple la condición para ser una función de probabilidad.</p>
 </div>
 </div>
 </div>
-<div id="exr-serie-arcotangente" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 7.26 </strong></span>Calcular la serie de Maclaurin de la función <span class="math inline">\(f(x)=\operatorname{arctg}(x)\)</span> y utilizarla para obtener una serie cuya suma sea <span class="math inline">\(\pi\)</span>.</p>
+<div id="exr-serie-taylor" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 7.26 </strong></span>Calcular la serie de Taylor de las siguientes funciones en los puntos dados.</p>
+<ol type="a">
+<li><p><span class="math inline">\(f(x)=\cos(x)\)</span> en <span class="math inline">\(a=\pi\)</span>.</p></li>
+<li><p><span class="math inline">\(g(x)=\ln(x)\)</span> en <span class="math inline">\(a=1\)</span>.</p></li>
+<li><p><span class="math inline">\(h(x)=\frac{1}{\sqrt{x}}\)</span> en <span class="math inline">\(a=1\)</span>.</p></li>
+</ol>
 </div>
 <div class="callout-tip callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-28-contents" aria-controls="callout-28" aria-expanded="false" aria-label="Toggle callout">
@@ -1084,12 +1109,8 @@ Solución
 </div>
 </div>
 </div>
-<div id="exr-limite-tangente" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 7.27 </strong></span>Usando desarrollos de Taylor, calcular los siguientes límites.</p>
-<ol type="a">
-<li><p><span class="math inline">\(\lim_{x\to 0}\frac{\ln(1+x)-x}{x^2}\)</span></p></li>
-<li><p><span class="math inline">\(\lim_{x\to 0}\frac{\operatorname{tg}(x)-x}{x^3}\)</span></p></li>
-</ol>
+<div id="exr-serie-binomial" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 7.27 </strong></span>Construir la serie de Maclaurin de la función <span class="math inline">\(f(x)= (1+x)^k\)</span> para cualquier <span class="math inline">\(k\in\mathbb{R}\)</span> y estudiar su dominio de convergencia. ¿Qué serie se obtiene cuando <span class="math inline">\(k\in\mathbb{N}\)</span>?</p>
 </div>
 <div class="callout-tip callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-29-contents" aria-controls="callout-29" aria-expanded="false" aria-label="Toggle callout">
@@ -1102,6 +1123,48 @@ Solución
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
 <div id="callout-29" class="callout-29-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+
+</div>
+</div>
+</div>
+<div id="exr-serie-arcotangente" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 7.28 </strong></span>Calcular la serie de Maclaurin de la función <span class="math inline">\(f(x)=\operatorname{arctg}(x)\)</span> y utilizarla para obtener una serie cuya suma sea <span class="math inline">\(\pi\)</span>.</p>
+</div>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-30-contents" aria-controls="callout-30" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-30" class="callout-30-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+
+</div>
+</div>
+</div>
+<div id="exr-limite-tangente" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 7.29 </strong></span>Usando desarrollos de Taylor, calcular los siguientes límites.</p>
+<ol type="a">
+<li><p><span class="math inline">\(\lim_{x\to 0}\frac{\ln(1+x)-x}{x^2}\)</span></p></li>
+<li><p><span class="math inline">\(\lim_{x\to 0}\frac{\operatorname{tg}(x)-x}{x^3}\)</span></p></li>
+</ol>
+</div>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-31-contents" aria-controls="callout-31" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-31" class="callout-31-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 
 </div>

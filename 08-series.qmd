@@ -617,6 +617,56 @@ f. Como
     por el criterio de la razón, se tiene que $\sum \frac{n!}{n^n}$ es absolutamente convergente.
 :::
 
+:::{#exr-radio-convergencia-raiz-razon}
+Demostrar que el radio de convergencia de una serie de potencias $\sum c_nx^n$ se puede calcular mediante las siguientes fórmulas
+
+$$
+R = \frac{1}{\lim_{n\to\infty} \sqrt[n]{|c_n|}} \quad \mbox{o}\quad R = \lim_{n\to\infty} \left|\frac{c_n}{c_{n+1}}\right|.
+$$
+:::
+
+:::{.callout-tip collapse="true"}
+## Solución
+Para probar la validez de la primera fórmula utilizaremos el criterio de la raíz para convergencia absoluta de series. 
+
+$$
+\lim_{n\to\infty} \sqrt[n]{|c_nx^n|} = |x| \lim_{n\to\infty}\sqrt[n]{|c_n|} < 1 \Leftrightarrow |x| < \frac{1}{\lim_{n\to\infty} \sqrt[n]{|c_n|}}.
+$$
+
+Y para probar la validez de la segunda fórmula utilizaremos el criterio de la razón para la convergencia absoluta de series.
+
+$$
+\lim_{n\to\infty} \left|\frac{c_{n+1}x^{n+1}}{c_nx^n}\right| = |x|\lim_{n\to\infty} \left|\frac{c_{n+1}}{c_n}\right| < 1 \Leftrightarrow |x| < \frac{1}{\lim_{n\to\infty} \left|\frac{c_{n+1}}{c_n}\right|} = \lim_{n\to\infty} \left|\frac{c_n}{c_{n+1}}\right|.
+$$
+:::
+
+:::{#exr-radio-convergencia}
+Calcular el radio de convergencia y el dominio de convergencia puntual de las siguientes series de potencias.
+
+:::: {.columns}
+::: {.column}
+a. $\sum nx^n$
+
+b. $\sum \frac{(-1)^nx^n}{\sqrt{n}}$
+
+c. $\sum n!(x-1)^n$
+:::
+
+::: {.column}
+d. $\sum \frac{(x-2)^n}{n^3}$
+
+e. $\sum \frac{n!(x-3)^n}{n^n}$
+
+f. $\sum \operatorname{sen}(1/n) (x+1)^n$
+:::
+:::
+:::
+
+:::{.callout-tip collapse="true"}
+## Solución
+
+:::
+
 :::{#exr-suma-serie-potencias-exponencial}
 Demostrar que la serie de potencias $\sum \frac{x^n}{n!}$ es absolutamente convergente para cualquier $x\in\mathbb{R}$.
 
