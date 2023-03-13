@@ -40,6 +40,7 @@ book:
     - 06-limites.qmd
     - 07-derivadas.qmd
     - 08-series.qmd
+    - 09-integrales.qmd
     
 #bibliography: references.bib
 

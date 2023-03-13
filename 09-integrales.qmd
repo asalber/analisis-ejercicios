@@ -1,0 +1,45 @@
+---
+title: Integrales de funciones
+lang: es
+---
+
+:::{#exr-sumas-inferiores-superiores-riemann}
+Calcular las sumas inferior y superior de Riemann de las siguientes funciones en el intervalo $[0,1]$, tomando particiones de igual tamaño con $n$ puntos, desde $n=2$ hasta $n=5$.
+
+a. $f(x) = 1-x$
+
+b. $g(x) = x^2$
+
+c. $h(x) = e^{-x}$
+:::
+
+<!-- :::{.callout-tip collapse="true"} -->
+<!-- ## Solución -->
+<!--  -->
+<!-- :::   -->
+
+
+:::{#exr-sumas-inferiores-superiores-seno-coseno}
+Usar las sumas inferiores y superiores de Riemann para dar una aproximación del área contenida entre la gráfica de la función $\operatorname{sen}(x)$ y el eje $x$ en el intervalo $[0,\pi/2]$, usando 4 rectángulos.
+:::
+
+:::{#exr-integral-inferior-superior}
+Calcular la integral inferior y superior de Riemann de la función $f(x)=x^2$ en el intervalo $[0,1]$. ¿Es una función integrable Riemann? 
+:::
+
+:::{.callout-note collapse="true"}
+## Pista
+Usar la fórmula $\sum_{i=1}^n i^2 = \frac{n(n+1)(2n+1)}{6}$
+:::
+
+:::{#exr-integral-riemann-no-area}
+Calcular la integral de Riemann de la función $f(x)=x^3-2x$ en el intervalo $[0,2]$.
+:::
+
+:::{.callout-note collapse="true"}
+## Pista
+Usar la fórmula $\sum_{i=1}^n i^3 = \left(\frac{n(n+1)}{2}\right)^2$
+:::
+
+
+
