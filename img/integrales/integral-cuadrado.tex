@@ -1,0 +1,9 @@
+\begin{tikzpicture}[scale=1]
+    \tkzInit[xmax=1, ymax=1, xstep=0.1, ystep=0.1]
+    \tkzAxeXY
+    \tkzGrid[color=myblack!20]
+    \tkzFct[line width=1pt, color = myblue]{x**3-2*x**2}
+    \tkzText[color=myblack](0.5,1.1){\Large $f(x)= x^3-2x^2$}
+    \tkzDrawArea[color=myblue!40, domain=0:1]
+    \tkzText[color=myblack](0.7,0.2){\Large $\displaystyle\int_0^1 x^3-2x^2\,dx = \frac{-5}{12}$}
+\end{tikzpicture}

@@ -13,33 +13,274 @@ b. $g(x) = x^2$
 c. $h(x) = e^{-x}$
 :::
 
-<!-- :::{.callout-tip collapse="true"} -->
-<!-- ## Solución -->
-<!--  -->
-<!-- :::   -->
+:::{.callout-tip collapse="true"}
+## Solución
+Tomaremos particiones de igual tamaño $P_n=\{x_0,x_1,\ldots,x_n\}$ con $x_i=\frac{i}{n}$ para $i=0,1,\ldots, n$.
 
+a. 
+    | $n$ | $s(f,P_n)$ | $S(f,P_n)$ |
+    |:-:|:-:|:-:|
+    | 2 | 0.25 | 0.75 |
+    | 3 | 1/3 | 2/3 |
+    | 4 | 0.375 | 0.625 |
+    | 5 | 0.4 | 0.6 |
+
+
+b. 
+    | $n$ | $s(f,P_n)$ | $S(f,P_n)$ |
+    |:-:|:-:|:-:|
+    | 2 | 0.125 | 0.625 |
+    | 3 | 0.1852 | 0.5185 |
+    | 4 | 0.2188 | 0.4687 |
+    | 5 | 0.24 | 0.44 |
+
+c.
+    | $n$ | $s(f,P_n)$ | $S(f,P_n)$ |
+    |:-:|:-:|:-:|
+    | 2 | 0.4872 | 0.8033 |
+    | 3 | 0.5326 | 0.7433 |
+    | 4 | 0.5564 | 0.7144 |
+    | 5 | 0.571 | 0.6974 |
+
+:::  
 
 :::{#exr-sumas-inferiores-superiores-seno-coseno}
-Usar las sumas inferiores y superiores de Riemann para dar una aproximación del área contenida entre la gráfica de la función $\operatorname{sen}(x)$ y el eje $x$ en el intervalo $[0,\pi/2]$, usando 4 rectángulos.
+Usar las sumas inferiores y superiores de Riemann para dar una aproximación del área contenida entre la gráfica de la función $\operatorname{sen}(x)$ y el eje $x$ en el intervalo $[0,\pi/2]$, usando 4 rectángulos de igual base.
 :::
 
-:::{#exr-integral-inferior-superior}
+:::{.callout-tip collapse="true"}
+## Solución
+Tomando la partición $P=\{0, \pi/8, \pi/4, 3\pi/4, \pi/2\}$ se tiene
+
+\begin{align*}
+s(f,P) &= \operatorname{sen}(0)\frac{\pi}{8} + \operatorname{sen}\left(\frac{\pi}{8}\right) \frac{\pi}{8} + \operatorname{sen}\left(\frac{\pi}{4}\right) \frac{\pi}{8} + \operatorname{sen}\left(\frac{3\pi}{8}\right) \frac{\pi}{8} = 0.7908.\\
+S(f,P) &= \operatorname{sen}\left(\frac{\pi}{8}\right) \frac{\pi}{8} + \operatorname{sen}\left(\frac{\pi}{4}\right) \frac{\pi}{8} + \operatorname{sen}\left(\frac{3\pi}{8}\right) \frac{\pi}{8} + \operatorname{sen}\left(\frac{\pi}{2}\right) \frac{\pi}{8} = 1.1835.
+\end{align*}
+:::
+
+:::{#exr-integral-riemann-cuadrado}
 Calcular la integral inferior y superior de Riemann de la función $f(x)=x^2$ en el intervalo $[0,1]$. ¿Es una función integrable Riemann? 
 :::
 
 :::{.callout-note collapse="true"}
 ## Pista
-Usar la fórmula $\sum_{i=1}^n i^2 = \frac{n(n+1)(2n+1)}{6}$
+Usar las fórmulas $\sum_{n=1}^n i = \frac{n(n+1)}{2}$ y $\sum_{i=1}^n i^2 = \frac{n(n+1)(2n+1)}{6}$.
 :::
 
-:::{#exr-integral-riemann-no-area}
-Calcular la integral de Riemann de la función $f(x)=x^3-2x$ en el intervalo $[0,2]$.
+:::{.callout-tip collapse="true"}
+## Solución
+Para calcular las sumas inferiores y superiores de Riemann utilizaremos la partición $P_n = \{x_0, x_1,\ldots, x_n\}$ con $x_i = \frac{i}{n}$ para $i=0,1,\ldots, n$.
+
+Como $f(x)=x^2$ es una función monótona creciente en $[0,1]$, el mínimo en cada subintervalo se alcanzará en el extremo inferior y el máximo en el superior.
+
+\begin{align*}
+s(f,P_n) 
+&= \sum_{i=1}^n f(x_{i-1})(x_i-x_{i-1}) = \sum_{i=1}^n \left(\frac{i-1}{n}\right)^2 \frac{1}{n}\\
+& = \frac{1}{n^3} \sum_{i=1}^n (i^2-2i+1) = \frac{1}{n^3} \left(\sum_{i=1}^n i^2 - 2\sum_{i=1}^n i + \sum_{i=1}^n 1\right)\\
+& = \frac{1}{n^3} \left(\frac{n(n+1)(2n+1)}{6} - 2\frac{n(n+1)}{2} + n\right) = \frac{2n^3-3n^2+n}{6n^3}\\
+S(f,P_n) 
+&= \sum_{i=1}^n f(x_{i})(x_i-x_{i-1}) = \sum_{i=1}^n \left(\frac{i}{n}\right)^2 \frac{1}{n}\\
+& = \frac{1}{n^3} \sum_{i=1}^n i^2 = \frac{1}{n^3} = \frac{2n^3+3n^2+n}{6n^3}
+\end{align*}
+
+Para calcular las integrales inferior y superior, basta con calcular el límite cuando $n\to\infty$ de las sumas inferiores y superiores, respectivamente. 
+
+\begin{align*}
+\underline{\int_0^1} x^2 
+& = \lim_{n\to\infty} s(f,P_n) = \lim_{n\to\infty} \frac{2n^3-3n^2+n}{6n^3} = \frac{1}{3}\\
+\overline{\int_0^1} x^2 
+& = \lim_{n\to\infty} S(f,P_n) = \lim_{n\to\infty} \frac{2n^3+3n^2+n}{6n^3} = \frac{1}{3}
+\end{align*}
+
+Como $\underline{\int_0^1} x^2 = \overline{\int_0^1} x^2=\frac{1}{3}$, la función $f(x)=x^2$ es integrable Riemann en $[0,1]$ y $\int_0^1 x^2\, dx = \frac{1}{3}$.
+
+:::{.content-visible when-format="html"}
+![Integral de Riemann de $f(x)=x^2$ en $[0,1]$.](img/integrales/integral-cuadrado.png)
+:::
+
+:::{.content-visible unless-format="html"}
+![Integral de Riemann de $f(x)=x^2$ en $[0,1]$.](img/integrales/integral-cuadrado.pdf)
+:::
+:::
+
+:::{#exr-integral-riemann-2}
+Calcular la integral de Riemann de la función $f(x)=x^3-2x^2$ en el intervalo $[0,1]$.
 :::
 
 :::{.callout-note collapse="true"}
 ## Pista
 Usar la fórmula $\sum_{i=1}^n i^3 = \left(\frac{n(n+1)}{2}\right)^2$
 :::
+
+:::{.callout-tip collapse="true"}
+## Solución
+Aplicando la linealidad de la integral, se tiene que 
+
+$$
+\int_0^1 x^3-2x^2\,dx = \int_0^1 x^3\, dx -2\int_0^1 x^2\, dx
+$$
+
+Para calcular $\int_0^1 x^3\,dx$ seguiremos el mismo procedimiento del ejercicio anterior. Tomando la partición $P_n = \{x_0, x_1,\ldots, x_n\}$ con $x_i = \frac{i}{n}$ para $i=0,1,\ldots, n$.
+
+Como $f(x)=x^3$ es una función monótona creciente en $[0,1]$, el mínimo en cada subintervalo se alcanzará en el extremo inferior y el máximo en el superior.
+
+\begin{align*}
+s(f,P_n) 
+&= \sum_{i=1}^n f(x_{i-1})(x_i-x_{i-1}) = \sum_{i=1}^n \left(\frac{i-1}{n}\right)^3 \frac{1}{n}\\
+& = \frac{1}{n^4} \sum_{i=1}^n (i^3-3i^2+3i-1) 
+= \frac{1}{n^3} \left(\sum_{i=1}^n i^3 - 3\sum_{i=1}^n i^2 + 3\sum_{i=1}^n i - \sum_{i=1}^n 1\right)\\
+& = \frac{1}{n^4} \left(\left(\frac{n(n+1)}{2}\right)^2 - 3\frac{n(n+1)(2n+1)}{6} + 3\frac{n(n+1)}{2} - n\right) \\
+& = \frac{n^4-2n^3+n^2}{4n^4}\\
+S(f,P_n) 
+&= \sum_{i=1}^n f(x_{i})(x_i-x_{i-1}) 
+= \sum_{i=1}^n \left(\frac{i}{n}\right)^3 \frac{1}{n}
+= \frac{1}{n^4} \sum_{i=1}^n i^3 \\
+& = \frac{1}{n^4} \left(\frac{n(n+1)}{2}\right)^2 
+= \frac{n^4+2n^3+n^2}{4n^4}
+\end{align*}
+
+Para calcular las integrales inferior y superior, basta con calcular el límite cuando $n\to\infty$ de las sumas inferiores y superiores, respectivamente. 
+
+\begin{align*}
+\underline{\int_0^1} x^3 
+& = \lim_{n\to\infty} s(f,P_n) = \lim_{n\to\infty} \frac{n^4-2n^3+n^2}{4n^4} = \frac{1}{4}\\
+\overline{\int_0^1} x^2 
+& = \lim_{n\to\infty} S(f,P_n) = \lim_{n\to\infty} \frac{n^4+2n^3+n^2}{4n^4} = \frac{1}{4}
+\end{align*}
+
+Como $\underline{\int_0^1} x^2 = \overline{\int_0^1} x^2=\frac{1}{4}$, la función $f(x)=x^3$ es integrable Riemann en $[0,1]$ y $\int_0^1 x^3\, dx = \frac{1}{4}$.
+
+Así pues, utilizando el resultado del ejercicio anterior se tiene
+
+$$
+\int_0^1 x^3-2x^2\,dx = \int_0^1 x^3\, dx -2\int_0^1 x^2\, dx = \frac{1}{4} - 2\frac{1}{3} = \frac{-5}{12}  
+$$
+
+:::{.content-visible when-format="html"}
+![Integral de Riemann de $f(x)=x^3-2x^2$ en $[0,1]$.](img/integrales/integral-2.png)
+:::
+
+:::{.content-visible unless-format="html"}
+![Integral de Riemann de $f(x)=x^3-2x^2$ en $[0,1]$.](img/integrales/integral-2.pdf)
+:::
+:::
+
+:::{#exr-integral-inversa}
+Calcular la integral de Riemann de la función $f(x)=\frac{1}{x}$ en el intervalo $[a,b]$.
+:::
+
+:::{.callout-note collapse="true"}
+## Pista
+Usar la sucesión de particiones $(P_n)_{n=1}^\infty$ con $P_n=\{x_0,x_1,\ldots,x_n\}$ con $x_i=a(1+c)^i$ para $i=1,\ldots,n$.
+:::
+
+:::{.callout-tip collapse="true"}
+## Solución
+Sea $P_n=\{x_0,x_1,\ldots,x_n\}$ con $x_i=a(1+c)^i$ para $i=1,\ldots,n$ una partición del intervalo $[a,b]$. Como el último punto de la partición debe ser $b$, se debe cumplir $a(1+c)^n = b$, de donde se deduce que $c=\left(\frac{b}{a}\right)^{1/n}-1$.
+
+Calcularemos la suma superior de Riemann de $f$ en el intervalo $[a,b]$. Como $f(x)=\frac{1}{x}$ es una función monótona decreciente, se alcanza el máximo en el extremo inferior de cada subintervalo. Por tanto, se tiene
+
+\begin{align*}
+S(f,P_n) 
+& = \sum_{i=1}^n f(x_{i-1}) (x_i-x_{i-1})
+= \sum_{i=1}^n \frac{1}{x_{i-1}} (a(1+c)^i-a(1+c)^{i-1}) \\
+& = \sum_{i=1}^n \frac{1}{a(1+c)^{i-1}} (ca(1+c)^{i-1}) 
+= \sum_{i=1}^n c 
+= nc 
+= n\left(\left(\frac{b}{a}\right)^{1/n}-1\right) \\
+& = \frac{\left(\frac{b}{a}\right)^{1/n}-1}{\frac{1}{n}}
+\end{align*}
+
+Para calcular la integral superior de Riemann, basta con calcular el límite de las sumas superiores cuando $n\to\infty$.
+
+\begin{align*}
+\overline{\int_a^b}f 
+& = \lim_{n\to\infty} S(f,P_n) 
+= \lim_{n\to\infty} \frac{\left(\frac{b}{a}\right)^{1/n}-1}{\frac{1}{n}} \\
+& = \lim_{x\to 0} \frac{\left(\frac{b}{a}\right)^x-1}{x} \tag{$x=\frac{1}{n}$}\\
+& =  \lim_{n\to 0} \left(\frac{b}{a}\right)^x \ln\left(\frac{b}{a}\right) = \ln(b) - \ln(a) \tag{L'Hôpital}.
+\end{align*}
+
+Del mismo modo se puede probar que $\underline{\int_a^b} f = \ln(b) - \ln(a)$, por lo que la función $f(x)=\frac{1}{x}$ es integrable Riemann en $[a,b]$ y $\int_a^b \frac{1}{x}\,dx = \ln(b)-\ln(a)$.
+:::
+
+:::{#exr-sumas-riemann-punto-intermedio}
+Demostrar que si $f$ es una función integrable Riemann en un intervalo $I=[a,b]$, se puede calcular $\int_a^b f(x)\,dx$ mediante sumas de Riemann tomando como altura de los rectángulos el valor de la función en cualquier punto de los subintervalos de la partición.
+:::
+
+:::{.callout-tip collapse="true"}
+## Solución
+Si $f$ es una función integrable en $I=[a,b]$, por el [criterio de integrabilidad de Riemann](https://aprendeconalf.es/analisis-manual/09-integrales.html#thm-criterio-integrabilidad-riemann), dado $\varepsilon>0$ existe una partición $P=\{x_0,x_1,\ldots,x_n\}$ tal que $S(f,P)-s(f,P)<\varepsilon$, es decir, existe una sucesión de particiones $(P_n)_{n=1}^\infty$ tal que $\lim_{n\to\infty} S(f,P_n)-s(f,P_n)=0$.
+
+Sea $x_i^*$ cualquier valor del intervalo $[x_{i-1},x_i]$. Como $s(f,P_n) = \sum_{i=1}^n m_i (x_i-x_{i-1})$ con $m_i=\inf\{f(x):x\in [x_{i-1},x_i]\}$ y $S(f,P_n) = \sum_{i=1}^n M_i (x_i-x_{i-1})$ con $M_i=\sup\{f(x):x\in [x_{i-1},x_i]\}$, se cumple que 
+
+$$
+s(f,P_n) = \sum_{i=1}^n m_i (x_i-x_{i-1}) \leq \sum_{i=1}^n f(x_i^*) (x_i-x_{i-1}) \leq \sum_{i=1}^n M_i (x_i-x_{i-1}) = S(f,P_n)
+$$
+
+Por tanto, 
+
+$$
+\int_a^b f(x)\,dx = \lim_{n\to\infty} s(f,P_n) = \lim_{n\to\infty} \sum_{i=1}^n f(x_i^*) (x_i-x_{i-1}) = \lim_{n\to\infty} S(f,P_n).
+$$
+:::
+
+
+:::{#exr-cota-integral}
+Demostrar que $1\leq \displaystyle \int_{-1}^1 \frac{1}{1+x^2}\,dx \leq 2$.
+:::
+
+:::{.callout-tip collapse="true"}
+## Solución
+Por las propiedades de la integral (ver [corolario](https://aprendeconalf.es/analisis-manual/09-integrales.html#cor-integral-funcion-acotada)), sabemos que 
+
+$$
+m(b-a)\leq \int_a^b f(x)\,dx \leq M(b-a),
+$$
+
+donde $m$ y $M$ son el mínimo y el máximo de la función $f$ en el intervalo $[a,b]$.
+
+En el caso concreto del ejercicio se tiene que $f'(x) = \frac{-2x}{x^4+2x^2+1}$ que se solo se anula en $x=0$. Estudiando el signo de la derivada a la izquierda y la derecha del punto crítico se concluye fácilmente que $f$ alcanza un máximo relativo en este punto y $f(0)=1$. Por otro lado $f(-1)=f(1)=\frac{1}{2}$, por lo que se puede concluir que el mínimo absoluto de la función en $[-1,1]$ es $m=\frac{1}{2}$ y el máximo absoluto $M=1$. Y aplicando el corolario anterior se tiene
+
+$$
+\frac{1}{2}(1-(-1)) = 1 \leq \int_a^b \frac{1}{1+x^2}\,dx \leq 1(1-(-1)) = 2.
+$$
+:::
+
+:::{#exr-funcion-discontinua-integrable}
+Demostrar que si $f$ es una función acotada en el intervalo $[a,b]$ que es continua en $[a,b]\setminus\{c\}$, con $c\in[a,b]$, entonces $f$ es integrable Riemann en $[a,b]$
+:::
+
+:::{#exr-integrales-definidas}
+Calcular las siguientes integrales definidas
+
+:::: {.columns}
+::: {.column}
+a. $\int_1^2 x^4-2x\,dx$
+
+b. $\int_0^{\pi} \operatorname{sen}(x)\, dx$
+
+c. $\int_{-1}^1 \frac{1}{1+x^2}\,dx$
+
+d. $\int_{-2}^2 \sqrt{4-x^2}\,dx$
+
+e. $\int_1^e \ln(x)\,dx$
+:::
+
+::: {.column}
+f. $\int_1^2 \frac{x+1}{x^3+x^2-6x},dx$
+
+g. $\int_0^{\pi/2} \cos(x)^2\, dx$
+
+h. $\int_1^2 \frac{1+\sqrt{x}}{\sqrt{x}}\,dx$
+
+i. $\int_{-\pi/2}^{\pi/2} e^x\cos(x)\,dx$
+
+j. $\int_{0}^{\pi/4}\frac{tg(x)^3}{\cos(x)^2}\,dx$
+:::
+:::
+:::
+
 
 
 

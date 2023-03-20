@@ -1,0 +1,49 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{mathptmx}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepackage{tkz-fct}
+\usetikzlibrary{angles, quotes}
+\usetikzlibrary{arrows.meta, arrows}
+\usetikzlibrary{external}
+\tikzexternalize[prefix={external/}]
+
+\tikzset{
+    export as png/.style={
+        external/system call/.add={}{
+            && convert -density #1 -transparent white "\image.pdf" "\image.png"
+        },
+    },
+    export as png/.default={200},
+}
+
+\DeclareSymbolFont{symbolsb}{OMS}{cmsy}{m}{n}
+\SetSymbolFont{symbolsb}{bold}{OMS}{cmsy}{b}{n}
+\DeclareSymbolFontAlphabet{\mathcal}{symbolsb}
+\definecolor{myblue}{rgb}{0.067,0.529,0.871}
+\definecolor{mypurple}{rgb}{0.859,0.071,0.525}
+\definecolor{myred}{rgb}{1.0, 0.13, 0.32}
+\definecolor{mygreen}{rgb}{0.01, 0.75, 0.24}
+\definecolor{myblack}{gray}{0.5}
+\definecolor{mygray}{gray}{0.7}
+
+\def\req{\protect\rotatebox{90}{$\scriptstyle=$}}
+
+\begin{document}
+
+\tikzset{export as png}
+
+\tikzsetnextfilename{integral-2}
+\begin{tikzpicture}[scale=1]
+    \tkzInit[xmax=1, ymin=-1, ymax=0, xstep=0.1, ystep=0.1]
+    \tkzAxeXY
+    \tkzGrid[color=myblack!20]
+    \tkzFct[samples=300, domain=0:1, line width=1pt, color = myblue]{\x**3-2*\x**2}
+    \tkzText[color=myblack](0.5,0.1){\Large $f(x)= x^3-2x^2$}
+    \tkzDrawArea[color=myblue!40, domain=0:1]
+    \tkzText[color=myblack](0.7,-0.2){\Large $\displaystyle\int_0^1 x^3-2x^2\,dx = \frac{-5}{12}$}
+\end{tikzpicture}
+\end{document}
+
+

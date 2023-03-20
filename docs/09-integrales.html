@@ -218,37 +218,145 @@ ul.task-list li input[type="checkbox"] {
 <li><p><span class="math inline">\(h(x) = e^{-x}\)</span></p></li>
 </ol>
 </div>
-<!-- :::{.callout-tip collapse="true"} -->
-<!-- ## Solución -->
-<!--  -->
-<!-- :::   -->
-<div id="exr-sumas-inferiores-superiores-seno-coseno" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 8.2 </strong></span>Usar las sumas inferiores y superiores de Riemann para dar una aproximación del área contenida entre la gráfica de la función <span class="math inline">\(\operatorname{sen}(x)\)</span> y el eje <span class="math inline">\(x\)</span> en el intervalo <span class="math inline">\([0,\pi/2]\)</span>, usando 4 rectángulos.</p>
-</div>
-<div id="exr-integral-inferior-superior" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 8.3 </strong></span>Calcular la integral inferior y superior de Riemann de la función <span class="math inline">\(f(x)=x^2\)</span> en el intervalo <span class="math inline">\([0,1]\)</span>. ¿Es una función integrable Riemann?</p>
-</div>
-<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-tip callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-caption-container flex-fill">
-Pista
+Solución
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
 <div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Usar la fórmula <span class="math inline">\(\sum_{i=1}^n i^2 = \frac{n(n+1)(2n+1)}{6}\)</span></p>
+<p>Tomaremos particiones de igual tamaño <span class="math inline">\(P_n=\{x_0,x_1,\ldots,x_n\}\)</span> con <span class="math inline">\(x_i=\frac{i}{n}\)</span> para <span class="math inline">\(i=0,1,\ldots, n\)</span>.</p>
+<ol type="a">
+<li><table class="table">
+<thead>
+<tr class="header">
+<th style="text-align: center;"><span class="math inline">\(n\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(s(f,P_n)\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(S(f,P_n)\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">0.25</td>
+<td style="text-align: center;">0.75</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">1/3</td>
+<td style="text-align: center;">2/3</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">0.375</td>
+<td style="text-align: center;">0.625</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">0.4</td>
+<td style="text-align: center;">0.6</td>
+</tr>
+</tbody>
+</table></li>
+<li><table class="table">
+<thead>
+<tr class="header">
+<th style="text-align: center;"><span class="math inline">\(n\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(s(f,P_n)\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(S(f,P_n)\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">0.125</td>
+<td style="text-align: center;">0.625</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">0.1852</td>
+<td style="text-align: center;">0.5185</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">0.2188</td>
+<td style="text-align: center;">0.4687</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">0.24</td>
+<td style="text-align: center;">0.44</td>
+</tr>
+</tbody>
+</table></li>
+<li><table class="table">
+<thead>
+<tr class="header">
+<th style="text-align: center;"><span class="math inline">\(n\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(s(f,P_n)\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(S(f,P_n)\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">0.4872</td>
+<td style="text-align: center;">0.8033</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">0.5326</td>
+<td style="text-align: center;">0.7433</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">0.5564</td>
+<td style="text-align: center;">0.7144</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">0.571</td>
+<td style="text-align: center;">0.6974</td>
+</tr>
+</tbody>
+</table></li>
+</ol>
 </div>
 </div>
 </div>
-<div id="exr-integral-riemann-no-area" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 8.4 </strong></span>Calcular la integral de Riemann de la función <span class="math inline">\(f(x)=x^3-2x\)</span> en el intervalo <span class="math inline">\([0,2]\)</span>.</p>
+<div id="exr-sumas-inferiores-superiores-seno-coseno" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 8.2 </strong></span>Usar las sumas inferiores y superiores de Riemann para dar una aproximación del área contenida entre la gráfica de la función <span class="math inline">\(\operatorname{sen}(x)\)</span> y el eje <span class="math inline">\(x\)</span> en el intervalo <span class="math inline">\([0,\pi/2]\)</span>, usando 4 rectángulos de igual base.</p>
+</div>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Tomando la partición <span class="math inline">\(P=\{0, \pi/8, \pi/4, 3\pi/4, \pi/2\}\)</span> se tiene</p>
+<p><span class="math display">\[\begin{align*}
+s(f,P) &amp;= \operatorname{sen}(0)\frac{\pi}{8} + \operatorname{sen}\left(\frac{\pi}{8}\right) \frac{\pi}{8} + \operatorname{sen}\left(\frac{\pi}{4}\right) \frac{\pi}{8} + \operatorname{sen}\left(\frac{3\pi}{8}\right) \frac{\pi}{8} = 0.7908.\\
+S(f,P) &amp;= \operatorname{sen}\left(\frac{\pi}{8}\right) \frac{\pi}{8} + \operatorname{sen}\left(\frac{\pi}{4}\right) \frac{\pi}{8} + \operatorname{sen}\left(\frac{3\pi}{8}\right) \frac{\pi}{8} + \operatorname{sen}\left(\frac{\pi}{2}\right) \frac{\pi}{8} = 1.1835.
+\end{align*}\]</span></p>
+</div>
+</div>
+</div>
+<div id="exr-integral-riemann-cuadrado" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 8.3 </strong></span>Calcular la integral inferior y superior de Riemann de la función <span class="math inline">\(f(x)=x^2\)</span> en el intervalo <span class="math inline">\([0,1]\)</span>. ¿Es una función integrable Riemann?</p>
 </div>
 <div class="callout-note callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -257,9 +365,259 @@ Pista
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Usar las fórmulas <span class="math inline">\(\sum_{n=1}^n i = \frac{n(n+1)}{2}\)</span> y <span class="math inline">\(\sum_{i=1}^n i^2 = \frac{n(n+1)(2n+1)}{6}\)</span>.</p>
+</div>
+</div>
+</div>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Para calcular las sumas inferiores y superiores de Riemann utilizaremos la partición <span class="math inline">\(P_n = \{x_0, x_1,\ldots, x_n\}\)</span> con <span class="math inline">\(x_i = \frac{i}{n}\)</span> para <span class="math inline">\(i=0,1,\ldots, n\)</span>.</p>
+<p>Como <span class="math inline">\(f(x)=x^2\)</span> es una función monótona creciente en <span class="math inline">\([0,1]\)</span>, el mínimo en cada subintervalo se alcanzará en el extremo inferior y el máximo en el superior.</p>
+<p><span class="math display">\[\begin{align*}
+s(f,P_n)
+&amp;= \sum_{i=1}^n f(x_{i-1})(x_i-x_{i-1}) = \sum_{i=1}^n \left(\frac{i-1}{n}\right)^2 \frac{1}{n}\\
+&amp; = \frac{1}{n^3} \sum_{i=1}^n (i^2-2i+1) = \frac{1}{n^3} \left(\sum_{i=1}^n i^2 - 2\sum_{i=1}^n i + \sum_{i=1}^n 1\right)\\
+&amp; = \frac{1}{n^3} \left(\frac{n(n+1)(2n+1)}{6} - 2\frac{n(n+1)}{2} + n\right) = \frac{2n^3-3n^2+n}{6n^3}\\
+S(f,P_n)
+&amp;= \sum_{i=1}^n f(x_{i})(x_i-x_{i-1}) = \sum_{i=1}^n \left(\frac{i}{n}\right)^2 \frac{1}{n}\\
+&amp; = \frac{1}{n^3} \sum_{i=1}^n i^2 = \frac{1}{n^3} = \frac{2n^3+3n^2+n}{6n^3}
+\end{align*}\]</span></p>
+<p>Para calcular las integrales inferior y superior, basta con calcular el límite cuando <span class="math inline">\(n\to\infty\)</span> de las sumas inferiores y superiores, respectivamente.</p>
+<p><span class="math display">\[\begin{align*}
+\underline{\int_0^1} x^2
+&amp; = \lim_{n\to\infty} s(f,P_n) = \lim_{n\to\infty} \frac{2n^3-3n^2+n}{6n^3} = \frac{1}{3}\\
+\overline{\int_0^1} x^2
+&amp; = \lim_{n\to\infty} S(f,P_n) = \lim_{n\to\infty} \frac{2n^3+3n^2+n}{6n^3} = \frac{1}{3}
+\end{align*}\]</span></p>
+<p>Como <span class="math inline">\(\underline{\int_0^1} x^2 = \overline{\int_0^1} x^2=\frac{1}{3}\)</span>, la función <span class="math inline">\(f(x)=x^2\)</span> es integrable Riemann en <span class="math inline">\([0,1]\)</span> y <span class="math inline">\(\int_0^1 x^2\, dx = \frac{1}{3}\)</span>.</p>
+<div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/integrales/integral-cuadrado.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Integral de Riemann de <span class="math inline">\(f(x)=x^2\)</span> en <span class="math inline">\([0,1]\)</span>.</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="exr-integral-riemann-2" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 8.4 </strong></span>Calcular la integral de Riemann de la función <span class="math inline">\(f(x)=x^3-2x^2\)</span> en el intervalo <span class="math inline">\([0,1]\)</span>.</p>
+</div>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Pista
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Usar la fórmula <span class="math inline">\(\sum_{i=1}^n i^3 = \left(\frac{n(n+1)}{2}\right)^2\)</span></p>
+</div>
+</div>
+</div>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-6" class="callout-6-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Aplicando la linealidad de la integral, se tiene que</p>
+<p><span class="math display">\[
+\int_0^1 x^3-2x^2\,dx = \int_0^1 x^3\, dx -2\int_0^1 x^2\, dx
+\]</span></p>
+<p>Para calcular <span class="math inline">\(\int_0^1 x^3\,dx\)</span> seguiremos el mismo procedimiento del ejercicio anterior. Tomando la partición <span class="math inline">\(P_n = \{x_0, x_1,\ldots, x_n\}\)</span> con <span class="math inline">\(x_i = \frac{i}{n}\)</span> para <span class="math inline">\(i=0,1,\ldots, n\)</span>.</p>
+<p>Como <span class="math inline">\(f(x)=x^3\)</span> es una función monótona creciente en <span class="math inline">\([0,1]\)</span>, el mínimo en cada subintervalo se alcanzará en el extremo inferior y el máximo en el superior.</p>
+<p><span class="math display">\[\begin{align*}
+s(f,P_n)
+&amp;= \sum_{i=1}^n f(x_{i-1})(x_i-x_{i-1}) = \sum_{i=1}^n \left(\frac{i-1}{n}\right)^3 \frac{1}{n}\\
+&amp; = \frac{1}{n^4} \sum_{i=1}^n (i^3-3i^2+3i-1)
+= \frac{1}{n^3} \left(\sum_{i=1}^n i^3 - 3\sum_{i=1}^n i^2 + 3\sum_{i=1}^n i - \sum_{i=1}^n 1\right)\\
+&amp; = \frac{1}{n^4} \left(\left(\frac{n(n+1)}{2}\right)^2 - 3\frac{n(n+1)(2n+1)}{6} + 3\frac{n(n+1)}{2} - n\right) \\
+&amp; = \frac{n^4-2n^3+n^2}{4n^4}\\
+S(f,P_n)
+&amp;= \sum_{i=1}^n f(x_{i})(x_i-x_{i-1})
+= \sum_{i=1}^n \left(\frac{i}{n}\right)^3 \frac{1}{n}
+= \frac{1}{n^4} \sum_{i=1}^n i^3 \\
+&amp; = \frac{1}{n^4} \left(\frac{n(n+1)}{2}\right)^2
+= \frac{n^4+2n^3+n^2}{4n^4}
+\end{align*}\]</span></p>
+<p>Para calcular las integrales inferior y superior, basta con calcular el límite cuando <span class="math inline">\(n\to\infty\)</span> de las sumas inferiores y superiores, respectivamente.</p>
+<p><span class="math display">\[\begin{align*}
+\underline{\int_0^1} x^3
+&amp; = \lim_{n\to\infty} s(f,P_n) = \lim_{n\to\infty} \frac{n^4-2n^3+n^2}{4n^4} = \frac{1}{4}\\
+\overline{\int_0^1} x^2
+&amp; = \lim_{n\to\infty} S(f,P_n) = \lim_{n\to\infty} \frac{n^4+2n^3+n^2}{4n^4} = \frac{1}{4}
+\end{align*}\]</span></p>
+<p>Como <span class="math inline">\(\underline{\int_0^1} x^2 = \overline{\int_0^1} x^2=\frac{1}{4}\)</span>, la función <span class="math inline">\(f(x)=x^3\)</span> es integrable Riemann en <span class="math inline">\([0,1]\)</span> y <span class="math inline">\(\int_0^1 x^3\, dx = \frac{1}{4}\)</span>.</p>
+<p>Así pues, utilizando el resultado del ejercicio anterior se tiene</p>
+<p><span class="math display">\[
+\int_0^1 x^3-2x^2\,dx = \int_0^1 x^3\, dx -2\int_0^1 x^2\, dx = \frac{1}{4} - 2\frac{1}{3} = \frac{-5}{12}  
+\]</span></p>
+<div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/integrales/integral-2.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Integral de Riemann de <span class="math inline">\(f(x)=x^3-2x^2\)</span> en <span class="math inline">\([0,1]\)</span>.</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="exr-integral-inversa" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 8.5 </strong></span>Calcular la integral de Riemann de la función <span class="math inline">\(f(x)=\frac{1}{x}\)</span> en el intervalo <span class="math inline">\([a,b]\)</span>.</p>
+</div>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Pista
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-7" class="callout-7-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Usar la sucesión de particiones <span class="math inline">\((P_n)_{n=1}^\infty\)</span> con <span class="math inline">\(P_n=\{x_0,x_1,\ldots,x_n\}\)</span> con <span class="math inline">\(x_i=a(1+c)^i\)</span> para <span class="math inline">\(i=1,\ldots,n\)</span>.</p>
+</div>
+</div>
+</div>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-8" class="callout-8-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Sea <span class="math inline">\(P_n=\{x_0,x_1,\ldots,x_n\}\)</span> con <span class="math inline">\(x_i=a(1+c)^i\)</span> para <span class="math inline">\(i=1,\ldots,n\)</span> una partición del intervalo <span class="math inline">\([a,b]\)</span>. Como el último punto de la partición debe ser <span class="math inline">\(b\)</span>, se debe cumplir <span class="math inline">\(a(1+c)^n = b\)</span>, de donde se deduce que <span class="math inline">\(c=\left(\frac{b}{a}\right)^{1/n}-1\)</span>.</p>
+<p>Calcularemos la suma superior de Riemann de <span class="math inline">\(f\)</span> en el intervalo <span class="math inline">\([a,b]\)</span>. Como <span class="math inline">\(f(x)=\frac{1}{x}\)</span> es una función monótona decreciente, se alcanza el máximo en el extremo inferior de cada subintervalo. Por tanto, se tiene</p>
+<p><span class="math display">\[\begin{align*}
+S(f,P_n)
+&amp; = \sum_{i=1}^n f(x_{i-1}) (x_i-x_{i-1})
+= \sum_{i=1}^n \frac{1}{x_{i-1}} (a(1+c)^i-a(1+c)^{i-1}) \\
+&amp; = \sum_{i=1}^n \frac{1}{a(1+c)^{i-1}} (ca(1+c)^{i-1})
+= \sum_{i=1}^n c
+= nc
+= n\left(\left(\frac{b}{a}\right)^{1/n}-1\right) \\
+&amp; = \frac{\left(\frac{b}{a}\right)^{1/n}-1}{\frac{1}{n}}
+\end{align*}\]</span></p>
+<p>Para calcular la integral superior de Riemann, basta con calcular el límite de las sumas superiores cuando <span class="math inline">\(n\to\infty\)</span>.</p>
+<p><span class="math display">\[\begin{align*}
+\overline{\int_a^b}f
+&amp; = \lim_{n\to\infty} S(f,P_n)
+= \lim_{n\to\infty} \frac{\left(\frac{b}{a}\right)^{1/n}-1}{\frac{1}{n}} \\
+&amp; = \lim_{x\to 0} \frac{\left(\frac{b}{a}\right)^x-1}{x} \tag{$x=\frac{1}{n}$}\\
+&amp; =  \lim_{n\to 0} \left(\frac{b}{a}\right)^x \ln\left(\frac{b}{a}\right) = \ln(b) - \ln(a) \tag{L'Hôpital}.
+\end{align*}\]</span></p>
+<p>Del mismo modo se puede probar que <span class="math inline">\(\underline{\int_a^b} f = \ln(b) - \ln(a)\)</span>, por lo que la función <span class="math inline">\(f(x)=\frac{1}{x}\)</span> es integrable Riemann en <span class="math inline">\([a,b]\)</span> y <span class="math inline">\(\int_a^b \frac{1}{x}\,dx = \ln(b)-\ln(a)\)</span>.</p>
+</div>
+</div>
+</div>
+<div id="exr-sumas-riemann-punto-intermedio" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 8.6 </strong></span>Demostrar que si <span class="math inline">\(f\)</span> es una función integrable Riemann en un intervalo <span class="math inline">\(I=[a,b]\)</span>, se puede calcular <span class="math inline">\(\int_a^b f(x)\,dx\)</span> mediante sumas de Riemann tomando como altura de los rectángulos el valor de la función en cualquier punto de los subintervalos de la partición.</p>
+</div>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-9" class="callout-9-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Si <span class="math inline">\(f\)</span> es una función integrable en <span class="math inline">\(I=[a,b]\)</span>, por el <a href="https://aprendeconalf.es/analisis-manual/09-integrales.html#thm-criterio-integrabilidad-riemann">criterio de integrabilidad de Riemann</a>, dado <span class="math inline">\(\varepsilon&gt;0\)</span> existe una partición <span class="math inline">\(P=\{x_0,x_1,\ldots,x_n\}\)</span> tal que <span class="math inline">\(S(f,P)-s(f,P)&lt;\varepsilon\)</span>, es decir, existe una sucesión de particiones <span class="math inline">\((P_n)_{n=1}^\infty\)</span> tal que <span class="math inline">\(\lim_{n\to\infty} S(f,P_n)-s(f,P_n)=0\)</span>.</p>
+<p>Sea <span class="math inline">\(x_i^*\)</span> cualquier valor del intervalo <span class="math inline">\([x_{i-1},x_i]\)</span>. Como <span class="math inline">\(s(f,P_n) = \sum_{i=1}^n m_i (x_i-x_{i-1})\)</span> con <span class="math inline">\(m_i=\inf\{f(x):x\in [x_{i-1},x_i]\}\)</span> y <span class="math inline">\(S(f,P_n) = \sum_{i=1}^n M_i (x_i-x_{i-1})\)</span> con <span class="math inline">\(M_i=\sup\{f(x):x\in [x_{i-1},x_i]\}\)</span>, se cumple que</p>
+<p><span class="math display">\[
+s(f,P_n) = \sum_{i=1}^n m_i (x_i-x_{i-1}) \leq \sum_{i=1}^n f(x_i^*) (x_i-x_{i-1}) \leq \sum_{i=1}^n M_i (x_i-x_{i-1}) = S(f,P_n)
+\]</span></p>
+<p>Por tanto,</p>
+<p><span class="math display">\[
+\int_a^b f(x)\,dx = \lim_{n\to\infty} s(f,P_n) = \lim_{n\to\infty} \sum_{i=1}^n f(x_i^*) (x_i-x_{i-1}) = \lim_{n\to\infty} S(f,P_n).
+\]</span></p>
+</div>
+</div>
+</div>
+<div id="exr-cota-integral" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 8.7 </strong></span>Demostrar que <span class="math inline">\(1\leq \displaystyle \int_{-1}^1 \frac{1}{1+x^2}\,dx \leq 2\)</span>.</p>
+</div>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-10" class="callout-10-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Por las propiedades de la integral (ver <a href="https://aprendeconalf.es/analisis-manual/09-integrales.html#cor-integral-funcion-acotada">corolario</a>), sabemos que</p>
+<p><span class="math display">\[
+m(b-a)\leq \int_a^b f(x)\,dx \leq M(b-a),
+\]</span></p>
+<p>donde <span class="math inline">\(m\)</span> y <span class="math inline">\(M\)</span> son el mínimo y el máximo de la función <span class="math inline">\(f\)</span> en el intervalo <span class="math inline">\([a,b]\)</span>.</p>
+<p>En el caso concreto del ejercicio se tiene que <span class="math inline">\(f'(x) = \frac{-2x}{x^4+2x^2+1}\)</span> que se solo se anula en <span class="math inline">\(x=0\)</span>. Estudiando el signo de la derivada a la izquierda y la derecha del punto crítico se concluye fácilmente que <span class="math inline">\(f\)</span> alcanza un máximo relativo en este punto y <span class="math inline">\(f(0)=1\)</span>. Por otro lado <span class="math inline">\(f(-1)=f(1)=\frac{1}{2}\)</span>, por lo que se puede concluir que el mínimo absoluto de la función en <span class="math inline">\([-1,1]\)</span> es <span class="math inline">\(m=\frac{1}{2}\)</span> y el máximo absoluto <span class="math inline">\(M=1\)</span>. Y aplicando el corolario anterior se tiene</p>
+<p><span class="math display">\[
+\frac{1}{2}(1-(-1)) = 1 \leq \int_a^b \frac{1}{1+x^2}\,dx \leq 1(1-(-1)) = 2.
+\]</span></p>
+</div>
+</div>
+</div>
+<div id="exr-funcion-discontinua-integrable" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 8.8 </strong></span>Demostrar que si <span class="math inline">\(f\)</span> es una función acotada en el intervalo <span class="math inline">\([a,b]\)</span> que es continua en <span class="math inline">\([a,b]\setminus\{c\}\)</span>, con <span class="math inline">\(c\in[a,b]\)</span>, entonces <span class="math inline">\(f\)</span> es integrable Riemann en <span class="math inline">\([a,b]\)</span></p>
+</div>
+<div id="exr-integrales-definidas" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 8.9 </strong></span>Calcular las siguientes integrales definidas</p>
+<div class="columns">
+<div class="column">
+<ol type="a">
+<li><p><span class="math inline">\(\int_1^2 x^4-2x\,dx\)</span></p></li>
+<li><p><span class="math inline">\(\int_0^{\pi} \operatorname{sen}(x)\, dx\)</span></p></li>
+<li><p><span class="math inline">\(\int_{-1}^1 \frac{1}{1+x^2}\,dx\)</span></p></li>
+<li><p><span class="math inline">\(\int_{-2}^2 \sqrt{4-x^2}\,dx\)</span></p></li>
+<li><p><span class="math inline">\(\int_1^e \ln(x)\,dx\)</span></p></li>
+</ol>
+</div><div class="column">
+<ol start="6" type="a">
+<li><p><span class="math inline">\(\int_1^2 \frac{x+1}{x^3+x^2-6x},dx\)</span></p></li>
+<li><p><span class="math inline">\(\int_0^{\pi/2} \cos(x)^2\, dx\)</span></p></li>
+<li><p><span class="math inline">\(\int_1^2 \frac{1+\sqrt{x}}{\sqrt{x}}\,dx\)</span></p></li>
+<li><p><span class="math inline">\(\int_{-\pi/2}^{\pi/2} e^x\cos(x)\,dx\)</span></p></li>
+<li><p><span class="math inline">\(\int_{0}^{\pi/4}\frac{tg(x)^3}{\cos(x)^2}\,dx\)</span></p></li>
+</ol>
 </div>
 </div>
 </div>
