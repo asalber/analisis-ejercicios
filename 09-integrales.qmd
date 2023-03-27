@@ -268,7 +268,7 @@ e. $\int_1^e \ln(x)\,dx$
 :::
 
 ::: {.column}
-f. $\int_1^2 \frac{x+1}{x^3+x^2-6x},dx$
+f. $\int_1^2 \frac{x+1}{x^3+x^2+x}\,dx$
 
 g. $\int_0^{\pi/2} \cos(x)^2\, dx$
 
@@ -280,6 +280,169 @@ j. $\int_{0}^{\pi/4}\frac{tg(x)^3}{\cos(x)^2}\,dx$
 :::
 :::
 :::
+
+:::{.callout-tip collapse="true"}
+## Solución
+a. $\int_1^2 x^4-2x\,dx = \left[\frac{x^5}{5}-x^2\right]_1^2 = \frac{16}{5}$.
+
+b. $\int_0^{\pi} \operatorname{sen}(x)\, dx = \left[\cos(x)\right]_0^\pi = 2$.
+
+c. $\int_{-1}^1 \frac{1}{1+x^2}\,dx = \left[\operatorname{arctg}\right]_{-1}^1 = \frac{\pi}{2}$.
+
+d. $\int_{-2}^2 \sqrt{4-x^2}\,dx = \left[2\operatorname{arcsen}\left(\frac{x}{2}\right)+\frac{x}{2}\sqrt{4-x^2}\right]_{-2}^2 = 2\pi$.
+
+e. $\int_1^e \ln(x)\,dx = \left[x\ln(x)-x\right]_1^e = 1$.
+
+f. $\int_1^2 \frac{x+1}{x^3+x^2+x}\,dx = \left[\ln|x| - \frac{1}{2}\ln|x^2+x+1|+\frac{1}{\sqrt{3}}\operatorname{arctg}\left(\frac{2x+1}{\sqrt{3}}\right) \right]_1^2 \approx 0.0782.$
+
+g. $\int_0^{\pi/2} \cos(x)^2\, dx = \left[\frac{1}{4}\operatorname{sen}(2x)\frac{x}{2}\right]_0^{\pi/2} \approx 0.8172.$
+
+h. $\int_1^2 \frac{1+\sqrt{x}}{\sqrt{x}}\,dx = \left[x+2\sqrt{x}\right]_1^2 = -2\sqrt{3}+5$.
+
+i. $\int_{-\pi/2}^{\pi/2} e^x\cos(x)\,dx = \left[e^x\left(\frac{\operatorname{sen}(x)+\cos(x)}{2}\right)\right]_{-\pi/2}^{\pi/2} = \frac{e^{-\pi/2}+e^{\pi/2}}{2}$.
+
+j. $\int_{0}^{\pi/4}\frac{tg(x)^3}{\cos(x)^2}\,dx = \left[\frac{\operatorname{tg}(x)^4}{4}\right]_0^{\pi/4} = \frac{1}{4}$.
+:::
+
+:::{#exr-areas-1}
+Calcular el área encerrada entre la gráfica de las siguientes funciones y el eje $x$ en los intervalos dados.
+
+a. $f(x) = \ln\left(\frac{x}{2}\right)$ en $[1,2]$.
+
+b. $g(x) = \cos(x)$ en $[0,2\pi]$.
+
+c. $h(x) = xe^{-x}$ en $[-1,2]$.
+
+d. $i(x) = \frac{x}{\sqrt{3-2x-x^2}}$ en $[-1,1]$.
+:::
+
+:::{.callout-tip collapse="true"}
+## Solución
+
+a. $\int_1^2 \left|\ln\left(\frac{x}{2}\right)\right|\,dx = -\left[x\ln\left(\frac{x}{2}\right)-x\right]_1^2 = 1-\ln(2)$.
+
+b. 
+
+    \begin{align*}
+    \int_0^{2\pi} |\cos(x)|\,dx 
+    &= \int_0^{\pi/2}\cos(x)\,dx -\int_{\pi/2}^{3\pi/2}\cos(x)\,dx + \int_{3\pi/2}^{2\pi}\cos(x)\,dx \\
+    &= \left[\operatorname{sen}(x)\right]_0^{\pi/2} - \left[\operatorname{sen}(x)\right]_{\pi/2}^{3\pi/2} + \left[\operatorname{sen}(x)\right]_{3\pi/2}^{2\pi} = 1 + 2 + 1.
+    \end{align*}
+
+c. 
+
+    \begin{align*}
+    \int_{-1}^2 |xe^{-x}|\,dx 
+    &= -\int_{-1}^0 xe^{-x}\, dx + \int_{0}^2 xe^{-x}\, dx \\
+    &= -\left[-e^{-x}(1+x)\right]_{-1}^0 + \left[-e^{-x}(1+x)\right]_0^2 = 1 + 1-\frac{3}{e^2} = 2-\frac{3}{e^2}
+    \end{align*}
+
+d. 
+
+    \begin{align*}
+    \int_{-1}^1 \left|\frac{x}{\sqrt{3-2x-x^2}}\right|\,dx 
+    &= -\int_{-1}^0 \frac{x}{\sqrt{3-2x-x^2}}\,dx + \int_{0}^1 \frac{x}{\sqrt{3-2x-x^2}}\,dx \\
+    &= -\left[\sqrt{3-2x-x^2}-\operatorname{arcsen}\left(\frac{x+1}{2}\right)\right]_{-1}^0\\
+    &+ \left[\sqrt{3-2x-x^2}-\operatorname{arcsen}\left(\frac{x+1}{2}\right)\right]_{0}^1\\
+    &= \frac{\pi}{6}+\sqrt{3}-2 -\frac{\pi}{3}+\sqrt{3} = \frac{-\pi}{6}+2\sqrt{3}-2
+    \end{align*}
+:::
+
+:::{#exr-area-entre-funciones}
+Calcular el area comprendida entre las funciones $f$ y $g$ en los intervalos dados en los siguientes apartados:
+
+a. $f(x)=\cos(x)$ y $g(x)=-\cos(x)$ en $[0,2\pi]$.
+
+b. $f(x)=x^2$ y $g(x)=\sqrt{x}$ en $[0,2]$. 
+
+c. $f(x)=\operatorname{tg}(x)$ y $g(x)=x$ en $[-1,1]$.
+
+d. $f(x)= 2^{-x}$ y $g(x)=\frac{x^2}{x^3+1}$ en $[0,2]$.
+:::
+
+:::{.callout-tip collapse="true"}
+## Solución
+a. 
+
+    \begin{align*}
+    \int_0^{2\pi} |\cos(x)+\cos(x)|\,dx 
+    &= \int_0^{\pi/2} 2\cos(x)\,dx - \int_{\pi/2}^{3\pi/2} 2\cos(x)\,dx +\int_{3\pi/2}^{2\pi} 2\cos(x)\,dx\\
+    &= \left[2\operatorname{sen}(x)\right]_{0}^{\pi/2} - \left[2\operatorname{sen}(x)\right]_{\pi/2}^{3\pi/2} + \left[2\operatorname{sen}(x)\right]_{3\pi/2}^{2\pi}\\
+    &= 2 +4 + 2 = 8
+    \end{align*}
+
+b.
+
+    \begin{align*}
+    \int_0^2 |x^2-\sqrt{x}|\,dx 
+    &= \int_{0}^1 \sqrt{x}-x^2\,dx + \int_1^2 x^2-\sqrt{x}\,dx \\
+    &= \left[\frac{2}{3}\sqrt{x^3}-\frac{x^3}{3}\right]_0^1 + \left[\frac{x^3}{3}-\frac{2}{3}\sqrt{x^3}\right]_1^2 \\ 
+    &= \frac{1}{3}-\frac{4}{3}\sqrt{2}+3 = \frac{-4\sqrt{2}+10}{3}.
+    \end{align*}
+
+c. 
+
+    \begin{align*}
+    \int_{-1}^1 |\operatorname{tg}(x)-x|\,dx 
+    &= \int_{-1}^0 x-\operatorname{tg}(x)\,dx + \int_0^1 \operatorname{tg}(x)-x\,dx \\
+    &= \left[\frac{x^2}{2}+\ln|\cos(x)|\right]_{-1}^1 + \left[-\frac{x^2}{2}-\ln|\cos(x)|\right]_0^1 \\ 
+    &= 0.1156 + 0.1156 = 0.2313.
+    \end{align*}
+
+d. 
+
+    \begin{align*}
+    \int_0^2 \left|2^{-x}-\frac{x^2}{1+x^3}\right|\,dx 
+    &= \int_0^1 2^{-x}-\frac{x^2}{1+x^3}\,dx + \int_1^2 \frac{x^2}{1+x^3}-2^{-x}\,dx\\
+    &= \left[\frac{-2^{-x}}{\ln(2)}-\frac{\ln|x^3+1|}{3}\right]_0^1 + \left[\frac{\ln|x^3+1|}{3}+\frac{2^{-x}}{\ln(2)}\right]_1^2 \\
+    &= 0.4903 + 0.1407 = 0.631.
+    \end{align*}
+:::
+
+:::{#exr-area-entre-funciones-2}
+Calcular el área encerrada entre la parábola $y=2x-x^2$ y la recta $y=2x-1$.
+:::
+
+:::{.callout-tip collapse="true"}
+## Solución
+Igualando las dos ecuaciones obtenemos los puntos donde se cortan la parábola y la recta.
+
+$$
+2x-x^2=2x-1 \Leftrightarrow x^2-1 = 0 \Leftrightarrow x=\pm 1.
+$$
+
+Así pues, el área encerrada entre la parábola y la recta es 
+
+\begin{align*}
+\int_{-1}^1 |2x-x^2 - (2x-1)|\,dx 
+&= \int_{-1}^1 -x^2+1\,dx = \left[-\frac{x^3}{3}+x\right]_{-1}^1 \\
+&= -\frac{1}{3}+1-\frac{1}{3}+1 = \frac{4}{3}.
+\end{align*}
+:::
+
+:::{#exr-curva-roc}
+Para evaluar un test diagnóstico se suele utilizar la curva ROC (Receiver Operating Characteristics) que resulta de representar la razón de verdaderos positivos (sensibilidad) frente a la razón de falsos positivos (1-especificidad) para los diferentes umbrales de positivo del test. Esta curva se representa en el cuadrante $[0,1]\times [0,1]$ y está siempre por encima de la recta $y=x$ que representa un diagnóstico aleatorio. El área por debajo de la curva ROC se conoce como AUC (area under the curve) y cuanto mayor sea, mejor es el test diagnóstico.
+
+Se dispone de dos test diagnósticos para detectar el virus  SARS-CoV, el primero con una curva ROC $f(x)=\sqrt{x}$ y el segundo con una curva $g(x)=-x^2+2x$. ¿Qué test diagnóstico es mejor?
+:::
+
+:::{#exr-area-2}
+Encontrar el valor $c$ tal que la recta $y=c$ divide la región limitada por la parábola $y=x^2$, el eje $x$ y la recta $y=4$ en dos regiones con la misma área.
+:::
+
+:::{#exr-tschirnhausen}
+En geometría, la ecuación $y^2=x^2(x+3)$ define una curva implícita conocida como la [cúbica de Tschirnhausen](https://es.wikipedia.org/wiki/C%C3%BAbica_de_Tschirnhausen). Calcular el área encerrada por esta curva.
+:::
+
+:::{exr-crecimiento-población}
+La tasa de nacimientos de una población viene dada por la función $n(t)=5000e^{0.03t}$ personas por año, mientras que la tasa de defunciones viene dada por la función $m(t)=3500 e^{0.02t} personas por año. Calcular el area comprendida entre $n$ y $m$ entre $0$ y $5$ años. ¿Qué representa esta area?
+:::
+
+
+
+
+
+
 
 
 

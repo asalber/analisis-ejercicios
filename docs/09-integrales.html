@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.2.335">
+<meta name="generator" content="quarto-1.2.475">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -612,7 +612,7 @@ m(b-a)\leq \int_a^b f(x)\,dx \leq M(b-a),
 </ol>
 </div><div class="column">
 <ol start="6" type="a">
-<li><p><span class="math inline">\(\int_1^2 \frac{x+1}{x^3+x^2-6x},dx\)</span></p></li>
+<li><p><span class="math inline">\(\int_1^2 \frac{x+1}{x^3+x^2+x}\,dx\)</span></p></li>
 <li><p><span class="math inline">\(\int_0^{\pi/2} \cos(x)^2\, dx\)</span></p></li>
 <li><p><span class="math inline">\(\int_1^2 \frac{1+\sqrt{x}}{\sqrt{x}}\,dx\)</span></p></li>
 <li><p><span class="math inline">\(\int_{-\pi/2}^{\pi/2} e^x\cos(x)\,dx\)</span></p></li>
@@ -620,6 +620,168 @@ m(b-a)\leq \int_a^b f(x)\,dx \leq M(b-a),
 </ol>
 </div>
 </div>
+</div>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-11" class="callout-11-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="a">
+<li><p><span class="math inline">\(\int_1^2 x^4-2x\,dx = \left[\frac{x^5}{5}-x^2\right]_1^2 = \frac{16}{5}\)</span>.</p></li>
+<li><p><span class="math inline">\(\int_0^{\pi} \operatorname{sen}(x)\, dx = \left[\cos(x)\right]_0^\pi = 2\)</span>.</p></li>
+<li><p><span class="math inline">\(\int_{-1}^1 \frac{1}{1+x^2}\,dx = \left[\operatorname{arctg}\right]_{-1}^1 = \frac{\pi}{2}\)</span>.</p></li>
+<li><p><span class="math inline">\(\int_{-2}^2 \sqrt{4-x^2}\,dx = \left[2\operatorname{arcsen}\left(\frac{x}{2}\right)+\frac{x}{2}\sqrt{4-x^2}\right]_{-2}^2 = 2\pi\)</span>.</p></li>
+<li><p><span class="math inline">\(\int_1^e \ln(x)\,dx = \left[x\ln(x)-x\right]_1^e = 1\)</span>.</p></li>
+<li><p><span class="math inline">\(\int_1^2 \frac{x+1}{x^3+x^2+x}\,dx = \left[\ln|x| - \frac{1}{2}\ln|x^2+x+1|+\frac{1}{\sqrt{3}}\operatorname{arctg}\left(\frac{2x+1}{\sqrt{3}}\right) \right]_1^2 \approx 0.0782.\)</span></p></li>
+<li><p><span class="math inline">\(\int_0^{\pi/2} \cos(x)^2\, dx = \left[\frac{1}{4}\operatorname{sen}(2x)\frac{x}{2}\right]_0^{\pi/2} \approx 0.8172.\)</span></p></li>
+<li><p><span class="math inline">\(\int_1^2 \frac{1+\sqrt{x}}{\sqrt{x}}\,dx = \left[x+2\sqrt{x}\right]_1^2 = -2\sqrt{3}+5\)</span>.</p></li>
+<li><p><span class="math inline">\(\int_{-\pi/2}^{\pi/2} e^x\cos(x)\,dx = \left[e^x\left(\frac{\operatorname{sen}(x)+\cos(x)}{2}\right)\right]_{-\pi/2}^{\pi/2} = \frac{e^{-\pi/2}+e^{\pi/2}}{2}\)</span>.</p></li>
+<li><p><span class="math inline">\(\int_{0}^{\pi/4}\frac{tg(x)^3}{\cos(x)^2}\,dx = \left[\frac{\operatorname{tg}(x)^4}{4}\right]_0^{\pi/4} = \frac{1}{4}\)</span>.</p></li>
+</ol>
+</div>
+</div>
+</div>
+<div id="exr-areas-1" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 8.10 </strong></span>Calcular el área encerrada entre la gráfica de las siguientes funciones y el eje <span class="math inline">\(x\)</span> en los intervalos dados.</p>
+<ol type="a">
+<li><p><span class="math inline">\(f(x) = \ln\left(\frac{x}{2}\right)\)</span> en <span class="math inline">\([1,2]\)</span>.</p></li>
+<li><p><span class="math inline">\(g(x) = \cos(x)\)</span> en <span class="math inline">\([0,2\pi]\)</span>.</p></li>
+<li><p><span class="math inline">\(h(x) = xe^{-x}\)</span> en <span class="math inline">\([-1,2]\)</span>.</p></li>
+<li><p><span class="math inline">\(i(x) = \frac{x}{\sqrt{3-2x-x^2}}\)</span> en <span class="math inline">\([-1,1]\)</span>.</p></li>
+</ol>
+</div>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-12-contents" aria-controls="callout-12" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-12" class="callout-12-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="a">
+<li><p><span class="math inline">\(\int_1^2 \left|\ln\left(\frac{x}{2}\right)\right|\,dx = -\left[x\ln\left(\frac{x}{2}\right)-x\right]_1^2 = 1-\ln(2)\)</span>.</p></li>
+<li><p><span class="math display">\[\begin{align*}
+\int_0^{2\pi} |\cos(x)|\,dx
+&amp;= \int_0^{\pi/2}\cos(x)\,dx -\int_{\pi/2}^{3\pi/2}\cos(x)\,dx + \int_{3\pi/2}^{2\pi}\cos(x)\,dx \\
+&amp;= \left[\operatorname{sen}(x)\right]_0^{\pi/2} - \left[\operatorname{sen}(x)\right]_{\pi/2}^{3\pi/2} + \left[\operatorname{sen}(x)\right]_{3\pi/2}^{2\pi} = 1 + 2 + 1.
+\end{align*}\]</span></p></li>
+<li><p><span class="math display">\[\begin{align*}
+\int_{-1}^2 |xe^{-x}|\,dx
+&amp;= -\int_{-1}^0 xe^{-x}\, dx + \int_{0}^2 xe^{-x}\, dx \\
+&amp;= -\left[-e^{-x}(1+x)\right]_{-1}^0 + \left[-e^{-x}(1+x)\right]_0^2 = 1 + 1-\frac{3}{e^2} = 2-\frac{3}{e^2}
+\end{align*}\]</span></p></li>
+<li><p><span class="math display">\[\begin{align*}
+\int_{-1}^1 \left|\frac{x}{\sqrt{3-2x-x^2}}\right|\,dx
+&amp;= -\int_{-1}^0 \frac{x}{\sqrt{3-2x-x^2}}\,dx + \int_{0}^1 \frac{x}{\sqrt{3-2x-x^2}}\,dx \\
+&amp;= -\left[\sqrt{3-2x-x^2}-\operatorname{arcsen}\left(\frac{x+1}{2}\right)\right]_{-1}^0\\
+&amp;+ \left[\sqrt{3-2x-x^2}-\operatorname{arcsen}\left(\frac{x+1}{2}\right)\right]_{0}^1\\
+&amp;= \frac{\pi}{6}+\sqrt{3}-2 -\frac{\pi}{3}+\sqrt{3} = \frac{-\pi}{6}+2\sqrt{3}-2
+\end{align*}\]</span></p></li>
+</ol>
+</div>
+</div>
+</div>
+<div id="exr-area-entre-funciones" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 8.11 </strong></span>Calcular el area comprendida entre las funciones <span class="math inline">\(f\)</span> y <span class="math inline">\(g\)</span> en los intervalos dados en los siguientes apartados:</p>
+<ol type="a">
+<li><p><span class="math inline">\(f(x)=\cos(x)\)</span> y <span class="math inline">\(g(x)=-\cos(x)\)</span> en <span class="math inline">\([0,2\pi]\)</span>.</p></li>
+<li><p><span class="math inline">\(f(x)=x^2\)</span> y <span class="math inline">\(g(x)=\sqrt{x}\)</span> en <span class="math inline">\([0,2]\)</span>.</p></li>
+<li><p><span class="math inline">\(f(x)=\operatorname{tg}(x)\)</span> y <span class="math inline">\(g(x)=x\)</span> en <span class="math inline">\([-1,1]\)</span>.</p></li>
+<li><p><span class="math inline">\(f(x)= 2^{-x}\)</span> y <span class="math inline">\(g(x)=\frac{x^2}{x^3+1}\)</span> en <span class="math inline">\([0,2]\)</span>.</p></li>
+</ol>
+</div>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-13-contents" aria-controls="callout-13" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-13" class="callout-13-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="a">
+<li><p><span class="math display">\[\begin{align*}
+\int_0^{2\pi} |\cos(x)+\cos(x)|\,dx
+&amp;= \int_0^{\pi/2} 2\cos(x)\,dx - \int_{\pi/2}^{3\pi/2} 2\cos(x)\,dx +\int_{3\pi/2}^{2\pi} 2\cos(x)\,dx\\
+&amp;= \left[2\operatorname{sen}(x)\right]_{0}^{\pi/2} - \left[2\operatorname{sen}(x)\right]_{\pi/2}^{3\pi/2} + \left[2\operatorname{sen}(x)\right]_{3\pi/2}^{2\pi}\\
+&amp;= 2 +4 + 2 = 8
+\end{align*}\]</span></p></li>
+<li><p><span class="math display">\[\begin{align*}
+  \int_0^2 |x^2-\sqrt{x}|\,dx
+  &amp;= \int_{0}^1 \sqrt{x}-x^2\,dx + \int_1^2 x^2-\sqrt{x}\,dx \\
+  &amp;= \left[\frac{2}{3}\sqrt{x^3}-\frac{x^3}{3}\right]_0^1 + \left[\frac{x^3}{3}-\frac{2}{3}\sqrt{x^3}\right]_1^2 \\
+  &amp;= \frac{1}{3}-\frac{4}{3}\sqrt{2}+3 = \frac{-4\sqrt{2}+10}{3}.
+  \end{align*}\]</span></p></li>
+<li><p><span class="math display">\[\begin{align*}
+\int_{-1}^1 |\operatorname{tg}(x)-x|\,dx
+&amp;= \int_{-1}^0 x-\operatorname{tg}(x)\,dx + \int_0^1 \operatorname{tg}(x)-x\,dx \\
+&amp;= \left[\frac{x^2}{2}+\ln|\cos(x)|\right]_{-1}^1 + \left[-\frac{x^2}{2}-\ln|\cos(x)|\right]_0^1 \\
+&amp;= 0.1156 + 0.1156 = 0.2313.
+\end{align*}\]</span></p></li>
+<li><p><span class="math display">\[\begin{align*}
+\int_0^2 \left|2^{-x}-\frac{x^2}{1+x^3}\right|\,dx
+&amp;= \int_0^1 2^{-x}-\frac{x^2}{1+x^3}\,dx + \int_1^2 \frac{x^2}{1+x^3}-2^{-x}\,dx\\
+&amp;= \left[\frac{-2^{-x}}{\ln(2)}-\frac{\ln|x^3+1|}{3}\right]_0^1 + \left[\frac{\ln|x^3+1|}{3}+\frac{2^{-x}}{\ln(2)}\right]_1^2 \\
+&amp;= 0.4903 + 0.1407 = 0.631.
+\end{align*}\]</span></p></li>
+</ol>
+</div>
+</div>
+</div>
+<div id="exr-area-entre-funciones-2" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 8.12 </strong></span>Calcular el área encerrada entre la parábola <span class="math inline">\(y=2x-x^2\)</span> y la recta <span class="math inline">\(y=2x-1\)</span>.</p>
+</div>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-14-contents" aria-controls="callout-14" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-14" class="callout-14-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Igualando las dos ecuaciones obtenemos los puntos donde se cortan la parábola y la recta.</p>
+<p><span class="math display">\[
+2x-x^2=2x-1 \Leftrightarrow x^2-1 = 0 \Leftrightarrow x=\pm 1.
+\]</span></p>
+<p>Así pues, el área encerrada entre la parábola y la recta es</p>
+<p><span class="math display">\[\begin{align*}
+\int_{-1}^1 |2x-x^2 - (2x-1)|\,dx
+&amp;= \int_{-1}^1 -x^2+1\,dx = \left[-\frac{x^3}{3}+x\right]_{-1}^1 \\
+&amp;= -\frac{1}{3}+1-\frac{1}{3}+1 = \frac{4}{3}.
+\end{align*}\]</span></p>
+</div>
+</div>
+</div>
+<div id="exr-curva-roc" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 8.13 </strong></span>Para evaluar un test diagnóstico se suele utilizar la curva ROC (Receiver Operating Characteristics) que resulta de representar la razón de verdaderos positivos (sensibilidad) frente a la razón de falsos positivos (1-especificidad) para los diferentes umbrales de positivo del test. Esta curva se representa en el cuadrante <span class="math inline">\([0,1]\times [0,1]\)</span> y está siempre por encima de la recta <span class="math inline">\(y=x\)</span> que representa un diagnóstico aleatorio. El área por debajo de la curva ROC se conoce como AUC (area under the curve) y cuanto mayor sea, mejor es el test diagnóstico.</p>
+<p>Se dispone de dos test diagnósticos para detectar el virus SARS-CoV, el primero con una curva ROC <span class="math inline">\(f(x)=\sqrt{x}\)</span> y el segundo con una curva <span class="math inline">\(g(x)=-x^2+2x\)</span>. ¿Qué test diagnóstico es mejor?</p>
+</div>
+<div id="exr-area-2" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 8.14 </strong></span>Encontrar el valor <span class="math inline">\(c\)</span> tal que la recta <span class="math inline">\(y=c\)</span> divide la región limitada por la parábola <span class="math inline">\(y=x^2\)</span>, el eje <span class="math inline">\(x\)</span> y la recta <span class="math inline">\(y=4\)</span> en dos regiones con la misma área.</p>
+</div>
+<div id="exr-tschirnhausen" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 8.15 </strong></span>En geometría, la ecuación <span class="math inline">\(y^2=x^2(x+3)\)</span> define una curva implícita conocida como la <a href="https://es.wikipedia.org/wiki/C%C3%BAbica_de_Tschirnhausen">cúbica de Tschirnhausen</a>. Calcular el área encerrada por esta curva.</p>
+</div>
+<div class="{exr-crecimiento-población}">
+<p>La tasa de nacimientos de una población viene dada por la función <span class="math inline">\(n(t)=5000e^{0.03t}\)</span> personas por año, mientras que la tasa de defunciones viene dada por la función $m(t)=3500 e^{0.02t} personas por año. Calcular el area comprendida entre <span class="math inline">\(n\)</span> y <span class="math inline">\(m\)</span> entre <span class="math inline">\(0\)</span> y <span class="math inline">\(5\)</span> años. ¿Qué representa esta area?</p>
 </div>
 
 
