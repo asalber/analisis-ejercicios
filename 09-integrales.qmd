@@ -285,7 +285,7 @@ j. $\int_{0}^{\pi/4}\frac{tg(x)^3}{\cos(x)^2}\,dx$
 ## Solución
 a. $\int_1^2 x^4-2x\,dx = \left[\frac{x^5}{5}-x^2\right]_1^2 = \frac{16}{5}$.
 
-b. $\int_0^{\pi} \operatorname{sen}(x)\, dx = \left[\cos(x)\right]_0^\pi = 2$.
+b. $\int_0^{\pi} \operatorname{sen}(x)\, dx = \left[-\cos(x)\right]_0^\pi = 2$.
 
 c. $\int_{-1}^1 \frac{1}{1+x^2}\,dx = \left[\operatorname{arctg}\right]_{-1}^1 = \frac{\pi}{2}$.
 
@@ -295,7 +295,7 @@ e. $\int_1^e \ln(x)\,dx = \left[x\ln(x)-x\right]_1^e = 1$.
 
 f. $\int_1^2 \frac{x+1}{x^3+x^2+x}\,dx = \left[\ln|x| - \frac{1}{2}\ln|x^2+x+1|+\frac{1}{\sqrt{3}}\operatorname{arctg}\left(\frac{2x+1}{\sqrt{3}}\right) \right]_1^2 \approx 0.0782.$
 
-g. $\int_0^{\pi/2} \cos(x)^2\, dx = \left[\frac{1}{4}\operatorname{sen}(2x)\frac{x}{2}\right]_0^{\pi/2} \approx 0.8172.$
+g. $\int_0^{\pi/2} \cos(x)^2\, dx = \left[\frac{x}{2}+\frac{\operatorname{sen}(2x)}{4}\right]_0^{\pi/2} \approx 0.8172.$
 
 h. $\int_1^2 \frac{1+\sqrt{x}}{\sqrt{x}}\,dx = \left[x+2\sqrt{x}\right]_1^2 = -2\sqrt{3}+5$.
 
@@ -434,7 +434,7 @@ Encontrar el valor $c$ tal que la recta $y=c$ divide la región limitada por la 
 En geometría, la ecuación $y^2=x^2(x+3)$ define una curva implícita conocida como la [cúbica de Tschirnhausen](https://es.wikipedia.org/wiki/C%C3%BAbica_de_Tschirnhausen). Calcular el área encerrada por esta curva.
 :::
 
-:::{exr-crecimiento-población}
+:::{#exr-crecimiento-población}
 La tasa de nacimientos de una población viene dada por la función $n(t)=5000e^{0.03t}$ personas por año, mientras que la tasa de defunciones viene dada por la función $m(t)=3500 e^{0.02t} personas por año. Calcular el area comprendida entre $n$ y $m$ entre $0$ y $5$ años. ¿Qué representa esta area?
 :::
 
