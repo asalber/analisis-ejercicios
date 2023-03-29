@@ -421,9 +421,55 @@ Así pues, el área encerrada entre la parábola y la recta es
 :::
 
 :::{#exr-curva-roc}
-Para evaluar un test diagnóstico se suele utilizar la curva ROC (Receiver Operating Characteristics) que resulta de representar la razón de verdaderos positivos (sensibilidad) frente a la razón de falsos positivos (1-especificidad) para los diferentes umbrales de positivo del test. Esta curva se representa en el cuadrante $[0,1]\times [0,1]$ y está siempre por encima de la recta $y=x$ que representa un diagnóstico aleatorio. El área por debajo de la curva ROC se conoce como AUC (area under the curve) y cuanto mayor sea, mejor es el test diagnóstico.
+Para evaluar un test diagnóstico se suele utilizar la curva ROC (Receiver Operating Characteristics) que resulta de representar la razón de verdaderos positivos (sensibilidad) frente a la razón de falsos positivos (1-especificidad) para los diferentes umbrales de positivo del test. Esta curva se representa en el cuadrante $[0,1]\times [0,1]$ y está siempre por encima de la recta $y=x$ que representa un diagnóstico aleatorio. El área por debajo de la curva ROC se conoce como AUC (area under the curve), y cuanto mayor sea, mejor es el test diagnóstico.
 
 Se dispone de dos test diagnósticos para detectar el virus  SARS-CoV, el primero con una curva ROC $f(x)=\sqrt{x}$ y el segundo con una curva $g(x)=-x^2+2x$. ¿Qué test diagnóstico es mejor?
+:::
+
+:::{.callout-tip collapse="true"}
+## Solución
+La medida AUC para el primer test diagnostico es
+
+$$
+\int_0^1 \sqrt{x}\,dx = \left[\frac{2}{3}x^{3/2}\right]_0^1 = \frac{2}{3}.
+$$
+
+Y para el segundo test diagnóstico es
+
+$$
+\int_0^1 -x^2+2x\,dx = \left[-\frac{x^3}{3}+x^2\right]_0^1 = -\frac{1}{3} + 1 = \frac{2}{3}.
+$$
+
+Por tanto, ambos test tienen la misma AUC y desde este punto de vista serían iguales.
+:::
+
+:::{#exr-gini}
+La [curva de Lorenz](https://es.wikipedia.org/wiki/Curva_de_Lorenz) se utiliza en Economía para representar la distribución relativa de los ingresos o la riqueza de una población. Esta curva se representa siempre en el cuadrante $[0,1]\times [0,1]$ del plano y cada punto $(x,y)$ de la curva representa qué proporción de la riqueza total $y$ acumula la proporción de la población $x$. De este modo, la bisectriz del (recta $y=x$) representa una distribución equitativa de la riqueza, y cuanto más se desvíe la curva de esta recta, mayor desigualdad habrá en el reparto de la riqueza. 
+
+Para medir la desigualdad en el reparto de la riqueza se suele utilizar el [coeficiente Gini](https://es.wikipedia.org/wiki/Coeficiente_de_Gini), que se define como el doble del área encerrada entre la recta $y=x$ y la curva de Lorenz. En una población con una distribución equitativa de la riqueza, el coeficiente de Gini vale 1, mientras que en una población con la mayor desigualdad posible en el reparto de la riqueza, este coeficiente vale 0.
+
+Si las curvas de Lorenz de dos poblaciones vienen dadas por las funciones $f(x)=x^2$ y $g(x)=1-\cos\left(x\frac{\pi}{2}\right)$, ¿qué población es más desigual?
+:::
+
+:::{.callout-tip collapse="true"}
+## Solución
+Para la primera población el área entre la recta $y=x$ y su curva de Lorenz es
+
+$$
+\int_0^1 x-x^2\,dx = \left[\frac{x^2}{2}-\frac{x^3}{3}\right]_0^1 = \frac{1}{2}-\frac{1}{3} = \frac{1}{6},
+$$
+
+por lo que su coeficiente Gini es $2\frac{1}{6}=\frac{1}{3}$.
+
+Del mismo modo, para la segunda población se tiene
+
+$$
+\int_0^1 1-\cos\left(x\frac{\pi}{2}\right)\,dx = \left[x-\frac{2}{\pi}\operatorname{sen}\left(x\frac{\pi}{2}\right)\right]_0^1 = 1-\frac{2}{\pi} \approx 0.3634.
+$$
+
+por lo que su coeficiente Gini es $2\left(1-\frac{2}{\pi}\right) \approx 0.7268$.
+
+Así pues, la segunda población es un poco más desigual que la primera.
 :::
 
 :::{#exr-area-2}
@@ -435,15 +481,82 @@ En geometría, la ecuación $y^2=x^2(x+3)$ define una curva implícita conocida 
 :::
 
 :::{#exr-crecimiento-población}
-La tasa de nacimientos de una población viene dada por la función $n(t)=5000e^{0.03t}$ personas por año, mientras que la tasa de defunciones viene dada por la función $m(t)=3500 e^{0.02t} personas por año. Calcular el area comprendida entre $n$ y $m$ entre $0$ y $5$ años. ¿Qué representa esta area?
+La tasa de nacimientos de una población viene dada por la función $n(t)=5000e^{0.03t}$ personas por año, mientras que la tasa de defunciones viene dada por la función $m(t)=3500 e^{0.02t}$ personas por año. Calcular el area comprendida entre $n$ y $m$ entre $0$ y $5$ años. ¿Qué representa esta area?
 :::
 
+:::{#exr-area-circulo-polares}
+Calcular el area de un círculo de radio $r$ en coordenadas polares.
+:::
 
+:::{#exr-area-polar}
+Calcular el area encerrada por la curva polar $r=\cos(2\theta)$.
+:::
 
+:::{#exr-area-polares}
+Calcular el área encerrada por las siguientes curvas polares $r=f(\theta)$ en los intervalo dados.
 
+a. $f(\theta) = \theta^2$ para $\theta\in[-\pi,\pi]$.
 
+b. $f(\theta) = e^{\theta/2}$ para $\theta\in[0,2\pi]$.
+:::
 
+:::{#exr-area-entre-polares}
+Calcular el area encerrada entre las curvas polares $r=2\operatorname{sen}(\theta)$ y $r=1+\operatorname{sen}(\theta)$.
+:::
 
+:::{#exr-integrales-impropias}
+Calcular el area encerrada entre las siguientes curvas y el eje $x$ en los intervalos dados.
 
+a. $y=\frac{1}{1+x^2}$ en $(-\infty,\infty)$.
 
+b. $y = \frac{\ln(x)}{x^2}$ en $[1,\infty)$.
+
+c. $y=\frac{e^{1/x}}{x^3}$ en $(-\infty,0]$.
+:::
+
+:::{#exr-criterio-integral-convergencia-series}
+Un criterio para estudiar la convergencia de una serie $\sum a_n$ es estudiar la integral impropia $\int_1^\infty a_n\,dn$. La serie converge si y solo si la integral es finita. Usar este criterio para demostrar que la serie armónica $\sum \frac{1}{n}$ diverge y que las serie $\sum \frac{1}{n^2}$ converge.
+:::
+
+:::{.callout-tip collapse="true"}
+## Solución
+Para la serie armónica $\sum \frac{1}{n}$ se tiene
+
+$$
+\int_1^\infty \frac{1}{n}\,dn = \left[\ln|n|\right]_1^\infty = \lim_{n\to\infty}\ln(n) - \ln(1)= \infty.
+$$
+
+Por tanto, la serie armónica diverge.
+
+Para la serie $\sum \frac{1}{n^2}$ se tiene
+
+$$
+\int_1^\infty \frac{1}{n^2}\,dn = \left[\frac{-1}{n}\right]_1^\infty = \lim_{n\to\infty}\frac{-1}{n}-\frac{-1}{1}= 1,
+$$
+
+y por tanto, la serie converge.
+:::
+
+:::{#exr-distribucion-exponencial}
+En Estadística, la [distribución exponencial](https://es.wikipedia.org/wiki/Distribuci%C3%B3n_exponencial) se utiliza para modelar el tiempo que tarda en ocurrir un evento en un proceso de Poisson, es decir, un proceso en el que ocurren fenómenos puntuales de marea continua e independiente a un ritmo constante $\lambda$. La función de densidad de probabilidad la distribución exponencial de parámetro $\lambda$ es
+
+$$
+f(x) = 
+\begin{cases}
+\lambda e^{-\lambda x} & \mbox{si $x\geq 0$}\\
+0 & \mbox{si $x<0$}
+\end{cases}
+$$
+
+a. Comprobar que $f$ es una función de densidad de probabilidad, es decir, que el area total encerrada entre su gráfica y el eje $x$ es 1.
+
+b. Calcular la media de la distribución.
+
+c. Calcular la varianza de la distribución.
+:::
+
+:::{.callout-note collapse="true"}
+## Pista
+La media de una variable aleatoria continua con función de densidad de probabilidad $f$ es $\mu = \int_{-\infty}^\infty xf(x)\,dx$ y la varianza $\mu = \int_{-\infty}^\infty x^2f(x)\,dx-\mu^2$.
+:::
 

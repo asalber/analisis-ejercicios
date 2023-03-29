@@ -771,17 +771,155 @@ Solución
 </div>
 </div>
 <div id="exr-curva-roc" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 8.13 </strong></span>Para evaluar un test diagnóstico se suele utilizar la curva ROC (Receiver Operating Characteristics) que resulta de representar la razón de verdaderos positivos (sensibilidad) frente a la razón de falsos positivos (1-especificidad) para los diferentes umbrales de positivo del test. Esta curva se representa en el cuadrante <span class="math inline">\([0,1]\times [0,1]\)</span> y está siempre por encima de la recta <span class="math inline">\(y=x\)</span> que representa un diagnóstico aleatorio. El área por debajo de la curva ROC se conoce como AUC (area under the curve) y cuanto mayor sea, mejor es el test diagnóstico.</p>
+<p><span class="theorem-title"><strong>Ejercicio 8.13 </strong></span>Para evaluar un test diagnóstico se suele utilizar la curva ROC (Receiver Operating Characteristics) que resulta de representar la razón de verdaderos positivos (sensibilidad) frente a la razón de falsos positivos (1-especificidad) para los diferentes umbrales de positivo del test. Esta curva se representa en el cuadrante <span class="math inline">\([0,1]\times [0,1]\)</span> y está siempre por encima de la recta <span class="math inline">\(y=x\)</span> que representa un diagnóstico aleatorio. El área por debajo de la curva ROC se conoce como AUC (area under the curve), y cuanto mayor sea, mejor es el test diagnóstico.</p>
 <p>Se dispone de dos test diagnósticos para detectar el virus SARS-CoV, el primero con una curva ROC <span class="math inline">\(f(x)=\sqrt{x}\)</span> y el segundo con una curva <span class="math inline">\(g(x)=-x^2+2x\)</span>. ¿Qué test diagnóstico es mejor?</p>
 </div>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-15-contents" aria-controls="callout-15" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-15" class="callout-15-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>La medida AUC para el primer test diagnostico es</p>
+<p><span class="math display">\[
+\int_0^1 \sqrt{x}\,dx = \left[\frac{2}{3}x^{3/2}\right]_0^1 = \frac{2}{3}.
+\]</span></p>
+<p>Y para el segundo test diagnóstico es</p>
+<p><span class="math display">\[
+\int_0^1 -x^2+2x\,dx = \left[-\frac{x^3}{3}+x^2\right]_0^1 = -\frac{1}{3} + 1 = \frac{2}{3}.
+\]</span></p>
+<p>Por tanto, ambos test tienen la misma AUC y desde este punto de vista serían iguales.</p>
+</div>
+</div>
+</div>
+<div id="exr-gini" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 8.14 </strong></span>La <a href="https://es.wikipedia.org/wiki/Curva_de_Lorenz">curva de Lorenz</a> se utiliza en Economía para representar la distribución relativa de los ingresos o la riqueza de una población. Esta curva se representa siempre en el cuadrante <span class="math inline">\([0,1]\times [0,1]\)</span> del plano y cada punto <span class="math inline">\((x,y)\)</span> de la curva representa qué proporción de la riqueza total <span class="math inline">\(y\)</span> acumula la proporción de la población <span class="math inline">\(x\)</span>. De este modo, la bisectriz del (recta <span class="math inline">\(y=x\)</span>) representa una distribución equitativa de la riqueza, y cuanto más se desvíe la curva de esta recta, mayor desigualdad habrá en el reparto de la riqueza.</p>
+<p>Para medir la desigualdad en el reparto de la riqueza se suele utilizar el <a href="https://es.wikipedia.org/wiki/Coeficiente_de_Gini">coeficiente Gini</a>, que se define como el doble del área encerrada entre la recta <span class="math inline">\(y=x\)</span> y la curva de Lorenz. En una población con una distribución equitativa de la riqueza, el coeficiente de Gini vale 1, mientras que en una población con la mayor desigualdad posible en el reparto de la riqueza, este coeficiente vale 0.</p>
+<p>Si las curvas de Lorenz de dos poblaciones vienen dadas por las funciones <span class="math inline">\(f(x)=x^2\)</span> y <span class="math inline">\(g(x)=1-\cos\left(x\frac{\pi}{2}\right)\)</span>, ¿qué población es más desigual?</p>
+</div>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-16-contents" aria-controls="callout-16" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-16" class="callout-16-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Para la primera población el área entre la recta <span class="math inline">\(y=x\)</span> y su curva de Lorenz es</p>
+<p><span class="math display">\[
+\int_0^1 x-x^2\,dx = \left[\frac{x^2}{2}-\frac{x^3}{3}\right]_0^1 = \frac{1}{2}-\frac{1}{3} = \frac{1}{6},
+\]</span></p>
+<p>por lo que su coeficiente Gini es <span class="math inline">\(2\frac{1}{6}=\frac{1}{3}\)</span>.</p>
+<p>Del mismo modo, para la segunda población se tiene</p>
+<p><span class="math display">\[
+\int_0^1 1-\cos\left(x\frac{\pi}{2}\right)\,dx = \left[x-\frac{2}{\pi}\operatorname{sen}\left(x\frac{\pi}{2}\right)\right]_0^1 = 1-\frac{2}{\pi} \approx 0.3634.
+\]</span></p>
+<p>por lo que su coeficiente Gini es <span class="math inline">\(2\left(1-\frac{2}{\pi}\right) \approx 0.7268\)</span>.</p>
+<p>Así pues, la segunda población es un poco más desigual que la primera.</p>
+</div>
+</div>
+</div>
 <div id="exr-area-2" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 8.14 </strong></span>Encontrar el valor <span class="math inline">\(c\)</span> tal que la recta <span class="math inline">\(y=c\)</span> divide la región limitada por la parábola <span class="math inline">\(y=x^2\)</span>, el eje <span class="math inline">\(x\)</span> y la recta <span class="math inline">\(y=4\)</span> en dos regiones con la misma área.</p>
+<p><span class="theorem-title"><strong>Ejercicio 8.15 </strong></span>Encontrar el valor <span class="math inline">\(c\)</span> tal que la recta <span class="math inline">\(y=c\)</span> divide la región limitada por la parábola <span class="math inline">\(y=x^2\)</span>, el eje <span class="math inline">\(x\)</span> y la recta <span class="math inline">\(y=4\)</span> en dos regiones con la misma área.</p>
 </div>
 <div id="exr-tschirnhausen" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 8.15 </strong></span>En geometría, la ecuación <span class="math inline">\(y^2=x^2(x+3)\)</span> define una curva implícita conocida como la <a href="https://es.wikipedia.org/wiki/C%C3%BAbica_de_Tschirnhausen">cúbica de Tschirnhausen</a>. Calcular el área encerrada por esta curva.</p>
+<p><span class="theorem-title"><strong>Ejercicio 8.16 </strong></span>En geometría, la ecuación <span class="math inline">\(y^2=x^2(x+3)\)</span> define una curva implícita conocida como la <a href="https://es.wikipedia.org/wiki/C%C3%BAbica_de_Tschirnhausen">cúbica de Tschirnhausen</a>. Calcular el área encerrada por esta curva.</p>
 </div>
 <div id="exr-crecimiento-población" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 8.16 </strong></span>La tasa de nacimientos de una población viene dada por la función <span class="math inline">\(n(t)=5000e^{0.03t}\)</span> personas por año, mientras que la tasa de defunciones viene dada por la función $m(t)=3500 e^{0.02t} personas por año. Calcular el area comprendida entre <span class="math inline">\(n\)</span> y <span class="math inline">\(m\)</span> entre <span class="math inline">\(0\)</span> y <span class="math inline">\(5\)</span> años. ¿Qué representa esta area?</p>
+<p><span class="theorem-title"><strong>Ejercicio 8.17 </strong></span>La tasa de nacimientos de una población viene dada por la función <span class="math inline">\(n(t)=5000e^{0.03t}\)</span> personas por año, mientras que la tasa de defunciones viene dada por la función <span class="math inline">\(m(t)=3500 e^{0.02t}\)</span> personas por año. Calcular el area comprendida entre <span class="math inline">\(n\)</span> y <span class="math inline">\(m\)</span> entre <span class="math inline">\(0\)</span> y <span class="math inline">\(5\)</span> años. ¿Qué representa esta area?</p>
+</div>
+<div id="exr-area-circulo-polares" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 8.18 </strong></span>Calcular el area de un círculo de radio <span class="math inline">\(r\)</span> en coordenadas polares.</p>
+</div>
+<div id="exr-area-polar" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 8.19 </strong></span>Calcular el area encerrada por la curva polar <span class="math inline">\(r=\cos(2\theta)\)</span>.</p>
+</div>
+<div id="exr-area-polares" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 8.20 </strong></span>Calcular el área encerrada por las siguientes curvas polares <span class="math inline">\(r=f(\theta)\)</span> en los intervalo dados.</p>
+<ol type="a">
+<li><p><span class="math inline">\(f(\theta) = \theta^2\)</span> para <span class="math inline">\(\theta\in[-\pi,\pi]\)</span>.</p></li>
+<li><p><span class="math inline">\(f(\theta) = e^{\theta/2}\)</span> para <span class="math inline">\(\theta\in[0,2\pi]\)</span>.</p></li>
+</ol>
+</div>
+<div id="exr-area-entre-polares" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 8.21 </strong></span>Calcular el area encerrada entre las curvas polares <span class="math inline">\(r=2\operatorname{sen}(\theta)\)</span> y <span class="math inline">\(r=1+\operatorname{sen}(\theta)\)</span>.</p>
+</div>
+<div id="exr-integrales-impropias" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 8.22 </strong></span>Calcular el area encerrada entre las siguientes curvas y el eje <span class="math inline">\(x\)</span> en los intervalos dados.</p>
+<ol type="a">
+<li><p><span class="math inline">\(y=\frac{1}{1+x^2}\)</span> en <span class="math inline">\((-\infty,\infty)\)</span>.</p></li>
+<li><p><span class="math inline">\(y = \frac{\ln(x)}{x^2}\)</span> en <span class="math inline">\([1,\infty)\)</span>.</p></li>
+<li><p><span class="math inline">\(y=\frac{e^{1/x}}{x^3}\)</span> en <span class="math inline">\((-\infty,0]\)</span>.</p></li>
+</ol>
+</div>
+<div id="exr-criterio-integral-convergencia-series" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 8.23 </strong></span>Un criterio para estudiar la convergencia de una serie <span class="math inline">\(\sum a_n\)</span> es estudiar la integral impropia <span class="math inline">\(\int_1^\infty a_n\,dn\)</span>. La serie converge si y solo si la integral es finita. Usar este criterio para demostrar que la serie armónica <span class="math inline">\(\sum \frac{1}{n}\)</span> diverge y que las serie <span class="math inline">\(\sum \frac{1}{n^2}\)</span> converge.</p>
+</div>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-17-contents" aria-controls="callout-17" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-17" class="callout-17-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Para la serie armónica <span class="math inline">\(\sum \frac{1}{n}\)</span> se tiene</p>
+<p><span class="math display">\[
+\int_1^\infty \frac{1}{n}\,dn = \left[\ln|n|\right]_1^\infty = \lim_{n\to\infty}\ln(n) - \ln(1)= \infty.
+\]</span></p>
+<p>Por tanto, la serie armónica diverge.</p>
+<p>Para la serie <span class="math inline">\(\sum \frac{1}{n^2}\)</span> se tiene</p>
+<p><span class="math display">\[
+\int_1^\infty \frac{1}{n^2}\,dn = \left[\frac{-1}{n}\right]_1^\infty = \lim_{n\to\infty}\frac{-1}{n}-\frac{-1}{1}= 1,
+\]</span></p>
+<p>y por tanto, la serie converge.</p>
+</div>
+</div>
+</div>
+<div id="exr-distribucion-exponencial" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 8.24 </strong></span>En Estadística, la <a href="https://es.wikipedia.org/wiki/Distribuci%C3%B3n_exponencial">distribución exponencial</a> se utiliza para modelar el tiempo que tarda en ocurrir un evento en un proceso de Poisson, es decir, un proceso en el que ocurren fenómenos puntuales de marea continua e independiente a un ritmo constante <span class="math inline">\(\lambda\)</span>. La función de densidad de probabilidad la distribución exponencial de parámetro <span class="math inline">\(\lambda\)</span> es</p>
+<p><span class="math display">\[
+f(x) =
+\begin{cases}
+\lambda e^{-\lambda x} &amp; \mbox{si $x\geq 0$}\\
+0 &amp; \mbox{si $x&lt;0$}
+\end{cases}
+\]</span></p>
+<ol type="a">
+<li><p>Comprobar que <span class="math inline">\(f\)</span> es una función de densidad de probabilidad, es decir, que el area total encerrada entre su gráfica y el eje <span class="math inline">\(x\)</span> es 1.</p></li>
+<li><p>Calcular la media de la distribución.</p></li>
+<li><p>Calcular la varianza de la distribución.</p></li>
+</ol>
+</div>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-18-contents" aria-controls="callout-18" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Pista
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-18" class="callout-18-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>La media de una variable aleatoria continua con función de densidad de probabilidad <span class="math inline">\(f\)</span> es <span class="math inline">\(\mu = \int_{-\infty}^\infty xf(x)\,dx\)</span> y la varianza <span class="math inline">\(\mu = \int_{-\infty}^\infty x^2f(x)\,dx-\mu^2\)</span>.</p>
+</div>
+</div>
 </div>
 
 
