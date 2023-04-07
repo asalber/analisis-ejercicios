@@ -1095,7 +1095,7 @@ Solución
 <p><span class="theorem-title"><strong>Ejercicio 7.26 </strong></span>Calcular la serie de Taylor de las siguientes funciones en los puntos dados.</p>
 <ol type="a">
 <li><p><span class="math inline">\(f(x)=\cos(x)\)</span> en <span class="math inline">\(a=\pi\)</span>.</p></li>
-<li><p><span class="math inline">\(g(x)=\ln(x)\)</span> en <span class="math inline">\(a=1\)</span>.</p></li>
+<li><p><span class="math inline">\(g(x)=\ln(x+1)\)</span> en <span class="math inline">\(a=0\)</span>.</p></li>
 <li><p><span class="math inline">\(h(x)=\frac{1}{\sqrt{x}}\)</span> en <span class="math inline">\(a=1\)</span>.</p></li>
 </ol>
 </div>
@@ -1111,7 +1111,59 @@ Solución
 </div>
 <div id="callout-28" class="callout-28-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-
+<ol type="a">
+<li><p>Calculamos las primeras derivadas de <span class="math inline">\(f\)</span> en <span class="math inline">\(\pi\)</span> para llegar a la expresión de la derivada <span class="math inline">\(n\)</span>-ésima.</p>
+<p><span class="math display">\[\begin{align*}
+f(x) &amp;= \cos(x) &amp; f(\pi) &amp;= \cos(\pi) = -1, \\
+f'(x) &amp;= -\operatorname{sen}(x) &amp; f'(\pi) &amp;= -\operatorname{sen}(\pi) = 0, \\
+f''(x) &amp;= -\cos(\pi) &amp; f''(\pi) &amp;= -\cos(\pi) = 1, \\
+f'''(x) &amp;= \operatorname{sen}(x) &amp; f'''(\pi) &amp;= \operatorname{sen}(\pi) = 0 \\
+f''''(x) &amp;= \cos(x) &amp; f''''(\pi) &amp;= \cos(\pi) = -1. \\
+\end{align*}\]</span></p>
+<p>Así pues, las derivadas se repiten en órdenes múltiplos de 4, y la expresión general de la derivada de orden <span class="math inline">\(n\)</span> en <span class="math inline">\(\pi\)</span> es</p>
+<p><span class="math display">\[
+f^{(n)}(\pi) =
+\begin{cases}
+0 &amp; \mbox{si $n=2k+1$, $k\in\mathbb{N}$}\\
+(-1)^{k+1} &amp; \mbox{si $n=2k$, $k\in\mathbb{N}$}\\
+\end{cases}
+\]</span></p>
+<p>Por tanto, la serie de Taylor de <span class="math inline">\(f\)</span> en <span class="math inline">\(\pi\)</span> es</p>
+<p><span class="math display">\[
+\sum \frac{f^{(n)}(\pi)}{n!}(x-\pi)^n = \sum \frac{(-1)^{k+1}}{(2k)!}(x-\pi)^{2k}.
+\]</span></p></li>
+<li><p>Calculamos las primeras derivadas de <span class="math inline">\(g\)</span> en <span class="math inline">\(0\)</span> para llegar a la expresión de la derivada <span class="math inline">\(n\)</span>-ésima.</p>
+<p><span class="math display">\[\begin{align*}
+g(x) &amp;= \ln(x+1) &amp; g(0) &amp;= \ln(1) =0,\\
+g'(x) &amp;= (x+1)^{-1} &amp; g'(0) &amp;= 1^{-1} = 1,\\
+g''(x) &amp;= -(x+1)^{-2} &amp; g''(0) &amp;= -(1)^{-2} = -1,\\
+g'''(x) &amp;= 2(x+1)^{-3} &amp; g'''(0) &amp;= 2(1)^{-3} = 2,\\
+g''''(x) &amp;= -3!(x+1)^{-4} &amp; g''''(0) &amp;= -3!(1)^{-4} = -3!.\\
+\end{align*}\]</span></p>
+<p>Así pues, la derivada de orden <span class="math inline">\(n\)</span> en <span class="math inline">\(0\)</span> es</p>
+<p><span class="math display">\[
+g^{(n)}(0) = (-1)^{n-1}(n-1)!
+\]</span></p>
+<p>y sustituyendo en la fórmula de la serie de Taylor se tiene</p>
+<p><span class="math display">\[
+\sum \frac{g^{(n)}(0)}{n!}x^n = \sum \frac{(-1)^{n-1}(n-1)!}{n!}x^n = \sum \frac{(-1)^{n-1}}{n}x^n.
+\]</span></p></li>
+<li><p>Calculamos las primeras derivadas de <span class="math inline">\(h\)</span> en <span class="math inline">\(1\)</span> para llegar a la expresión de la derivada <span class="math inline">\(n\)</span>-ésima.</p>
+<p><span class="math display">\[\begin{align*}
+h(x) &amp;= \frac{1}{\sqrt{x}} = x^{-1/2} &amp; h(1) &amp;= 1^{-1/2} = 1,\\
+h'(x) &amp;= -\frac{1}{2}x^{-3/2} &amp; h'(1) &amp;= -\frac{1}{2}1^{-3/2} = -\frac{1}{2},\\
+h''(x) &amp;= \frac{1}{2}\frac{3}{2}x^{-5/2} &amp; h''(1) &amp;= \frac{1}{2}\frac{3}{2}1^{-5/2} = \frac{1}{2}\frac{3}{2},\\
+h'''(x) &amp;= -\frac{1}{2}\frac{3}{2}\frac{5}{2}x^{-7/2} &amp; h'''(1) &amp;= -\frac{1}{2}\frac{3}{2}\frac{5}{2}1^{-7/2} = -\frac{1}{2}\frac{3}{2}\frac{5}{2}.
+\end{align*}\]</span></p>
+<p>Así pues, la derivada de orden <span class="math inline">\(n\)</span> en <span class="math inline">\(1\)</span> es</p>
+<p><span class="math display">\[
+h^{(n)}(1) = (-1)^n\frac{\prod_{i=1}^n(2i-1)}{2^n},
+\]</span></p>
+<p>y sustituyendo en la fórmula de la serie de Taylor se tiene</p>
+<p><span class="math display">\[
+\sum \frac{h^{(n)}(1)}{n!}(x-1)^n = \sum (-1)^n\frac{\prod_{i=1}^n(2i-1)}{2^nn!}(x-1)^n.
+\]</span></p></li>
+</ol>
 </div>
 </div>
 </div>
@@ -1130,7 +1182,30 @@ Solución
 </div>
 <div id="callout-29" class="callout-29-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-
+<p>Calculamos las primeras derivadas de <span class="math inline">\(f\)</span> en <span class="math inline">\(0\)</span> para llegar a la expresión de la derivada <span class="math inline">\(n\)</span>-ésima.</p>
+<p><span class="math display">\[\begin{align*}
+f(x) &amp;= (1+x)^k &amp; f(0) &amp;= 1^k = 1,\\
+f'(x) &amp;= k(1+x)^{k-1} &amp; f'(0) &amp;= k(1)^{k-1} = k,\\
+f''(x) &amp;= k(k-1)(1+x)^{k-2} &amp; f''(0) &amp;= k(k-1)(1)^{k-2} = k(k-1),\\
+f'''(x) &amp;= k(k-1)(k-2)(1+x)^{k-3} &amp; f'''(0) &amp;= k(k-1)(k-2)(1)^{k-3} = k(k-1)(k-2).\\
+\end{align*}\]</span></p>
+<p>Así pues, la derivada de orden <span class="math inline">\(n\)</span> en <span class="math inline">\(0\)</span> es</p>
+<p><span class="math display">\[
+f^{(n)}(0) = k(k-1)(k-2)\cdots (k-n+1)
+\]</span></p>
+<p>y sustituyendo en la fórmula de la serie de Taylor se tiene</p>
+<p><span class="math display">\[
+\sum \frac{f^{(n)}(0)}{n!}x^n = \sum \frac{k(k-1)(k-2)\cdots (k-n+1)}{n!}x^n.
+\]</span></p>
+<p>Cuando <span class="math inline">\(k\in\mathbb{N}\)</span> se tiene que la derivada de orden <span class="math inline">\(k\)</span> es</p>
+<p><span class="math display">\[
+f^{k}(x) = k(k-1)\cdots (k-k+1)(1+x)^{k-k} = k!
+\]</span></p>
+<p>y, a partir de aquí las siguientes derivadas se anulan, por lo que, al sustituir en la fórmula de las serie de Maclaurin se obtiene la suma finita</p>
+<p><span class="math display">\[
+\sum \frac{f^{(n)}(0)}{n!}x^n = \sum_{i=1}^k \frac{k(k-1)(k-2)\cdots (k-i+1)}{i!}x^i = \sum_{i=1}^k \binom{k}{i}x^i,
+\]</span></p>
+<p>que es el desarrollo del binomio.</p>
 </div>
 </div>
 </div>
@@ -1149,11 +1224,39 @@ Solución
 </div>
 <div id="callout-30" class="callout-30-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-
+<p>Calculamos las primeras derivadas de <span class="math inline">\(f\)</span> en <span class="math inline">\(0\)</span> para llegar a la expresión de la derivada <span class="math inline">\(n\)</span>-ésima.</p>
+<p><span class="math display">\[\begin{align*}
+f(x) &amp;= \operatorname{arctg}(x) &amp; f(0) &amp;= \operatorname{arctg}(0) = 0,\\
+f'(x) &amp;= \frac{1}{1+x^2} = (1+x^2)^{-1} &amp; f'(0) &amp;= 1^{-1} = 1,\\
+f''(x) &amp;= -(1+x^2)^{-2}2x &amp; f''(0) &amp;= -(1)^{-2}2\cdot 0 = 0,\\
+f'''(x) &amp;= 2(1+x^2)^{-3}4x^2-2(1+x^2)^{-2} &amp; f'''(0) &amp;= 2(1)^{-3}4\cdot 0-2(1)^{-2} = -2.\\
+f''''(x) &amp;= -3!(1+x^2)^{-4}2^3x^3+4!(1+x^2)^{-3}x &amp; f''''(0) &amp;= -3!(1)^{-4}2^3\cdot 0^3+4!(1)^{-3}0 = 0.\\
+f'''''(x) &amp;= 4!(1+x^2)^{-5}2^4x^4-288(1+x^2)^{-5}x^2+4!(1+x^2)^{-3} &amp; f''''(0) &amp;= 4!.
+\end{align*}\]</span></p>
+<p>Así pues, la derivada de orden <span class="math inline">\(n\)</span> en <span class="math inline">\(0\)</span> es</p>
+<p><span class="math display">\[
+f^{(n)}(0) =
+\begin{cases}
+0 &amp; \mbox{si $n=2k$, $k\in\mathbb{N}$}\\
+(-1)^{k}(2k)! &amp; \mbox{si $n=2k+1$, $k\in\mathbb{N}$}\\
+\end{cases}
+\]</span></p>
+<p>y sustituyendo en la fórmula de la serie de Taylor se tiene</p>
+<p><span class="math display">\[
+\sum \frac{f^{(n)}(0)}{n!}x^n = \sum \frac{(-1)^k(2k)!}{(2k+1)!}x^{2k+1} = \sum (-1)^k\frac{x^{2k+1}}{2k+1}
+\]</span></p>
+<p>Se puede probar que el radio de convergencia de esta serie es <span class="math inline">\(|x|\leq 1\)</span>, por lo que para <span class="math inline">\(x=1\)</span> se tiene que</p>
+<p><span class="math display">\[
+\sum (-1)^k\frac{1^{2k+1}}{2k+1} = \sum \frac{(-1)^k}{2k+1} =\operatorname{arctg}(1) = \pi/4,
+\]</span></p>
+<p>de manera que</p>
+<p><span class="math display">\[
+4 \sum \frac{(-1)^k}{2k+1} = \pi.
+\]</span></p>
 </div>
 </div>
 </div>
-<div id="exr-limite-tangente" class="theorem exercise">
+<div id="exr-limites-taylor" class="theorem exercise">
 <p><span class="theorem-title"><strong>Ejercicio 7.29 </strong></span>Usando desarrollos de Taylor, calcular los siguientes límites.</p>
 <ol type="a">
 <li><p><span class="math inline">\(\lim_{x\to 0}\frac{\ln(1+x)-x}{x^2}\)</span></p></li>
