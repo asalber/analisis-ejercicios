@@ -835,6 +835,27 @@ Solución
 <div id="exr-tschirnhausen" class="theorem exercise">
 <p><span class="theorem-title"><strong>Ejercicio 8.16 </strong></span>En geometría, la ecuación <span class="math inline">\(y^2=x^2(x+3)\)</span> define una curva implícita conocida como la <a href="https://es.wikipedia.org/wiki/C%C3%BAbica_de_Tschirnhausen">cúbica de Tschirnhausen</a>. Calcular el área encerrada por esta curva.</p>
 </div>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-17-contents" aria-controls="callout-17" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-17" class="callout-17-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>La curva se puede expresar mediante dos ramas, una positiva y otra negativa, dadas por <span class="math inline">\(y=\pm \sqrt{x^2(x+3)}\)</span>, que coinciden en <span class="math inline">\(x=-3\)</span> y <span class="math inline">\(x=0\)</span> ya que son los puntos donde se anula <span class="math inline">\(y\)</span>. Así pues, podemos calcular el area encerrada por la curva, descomponiendola en dos mitades, la positiva y la negativa.</p>
+<p>La semiarea positiva se calcula mediante la siguiente integral</p>
+<p><span class="math display">\[\begin{align*}
+\int_{-3}^0 \sqrt{x^2(x+3)}\,dx = \int_{-3}^0 (-x)\sqrt{(x+3)}\,dx =
+= \left[-frac{2}{5}(x-2)(x+3)^{3/2}\right]_{-3}^0 = \frac{2}{5}(-2)(3)^{3/2} = 4.1569.
+\end{align*}\]</span></p>
+</div>
+</div>
+</div>
 <div id="exr-crecimiento-población" class="theorem exercise">
 <p><span class="theorem-title"><strong>Ejercicio 8.17 </strong></span>La tasa de nacimientos de una población viene dada por la función <span class="math inline">\(n(t)=5000e^{0.03t}\)</span> personas por año, mientras que la tasa de defunciones viene dada por la función <span class="math inline">\(m(t)=3500 e^{0.02t}\)</span> personas por año. Calcular el area comprendida entre <span class="math inline">\(n\)</span> y <span class="math inline">\(m\)</span> entre <span class="math inline">\(0\)</span> y <span class="math inline">\(5\)</span> años. ¿Qué representa esta area?</p>
 </div>
@@ -849,6 +870,7 @@ Solución
 <ol type="a">
 <li><p><span class="math inline">\(f(\theta) = \theta^2\)</span> para <span class="math inline">\(\theta\in[-\pi,\pi]\)</span>.</p></li>
 <li><p><span class="math inline">\(f(\theta) = e^{\theta/2}\)</span> para <span class="math inline">\(\theta\in[0,2\pi]\)</span>.</p></li>
+<li><p><span class="math inline">\(f(\theta) = \sqrt{1+\cos(4\theta)^2}\)</span> para <span class="math inline">\(\theta\in[0,2\pi]\)</span>.</p></li>
 </ol>
 </div>
 <div id="exr-area-entre-polares" class="theorem exercise">
@@ -862,11 +884,8 @@ Solución
 <li><p><span class="math inline">\(y=\frac{e^{1/x}}{x^3}\)</span> en <span class="math inline">\((-\infty,0]\)</span>.</p></li>
 </ol>
 </div>
-<div id="exr-criterio-integral-convergencia-series" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 8.23 </strong></span>Un criterio para estudiar la convergencia de una serie <span class="math inline">\(\sum a_n\)</span> es estudiar la integral impropia <span class="math inline">\(\int_1^\infty a_n\,dn\)</span>. La serie converge si y solo si la integral es finita. Usar este criterio para demostrar que la serie armónica <span class="math inline">\(\sum \frac{1}{n}\)</span> diverge y que las serie <span class="math inline">\(\sum \frac{1}{n^2}\)</span> converge.</p>
-</div>
 <div class="callout-tip callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-17-contents" aria-controls="callout-17" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-18-contents" aria-controls="callout-18" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -875,18 +894,61 @@ Solución
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-17" class="callout-17-contents callout-collapse collapse">
+<div id="callout-18" class="callout-18-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="a">
+<li><p><span class="math display">\[
+\int_{-\infty}^\infty \frac{1}{1+x^2}\, dx
+= \lim_{t\to\infty} \left[\operatorname{arctg}(x)\right]_{-t}^{t}
+= \lim_{t\to\infty} \operatorname{arctg}(t)-\operatorname{arctg}(-t)
+= \frac{\pi}{2}+\frac{\pi}{2} = \pi.
+\]</span></p></li>
+<li><p><span class="math display">\[
+\int_{-\infty}^\infty \frac{\ln(x)}{x^2}\, dx
+= \lim_{t\to\infty} \left[-\frac{1}{x}-\frac{\ln(x)}{x}\right]_1^t
+= \lim_{t\to\infty} -\frac{1}{t}-\frac{\ln(t)}{t} + \frac{1}{1}+\frac{\ln(1)}{1} = 1.
+\]</span></p></li>
+<li><p><span class="math display">\[
+\int_{-\infty}^0 \left|\frac{e^{1/x}}{x^3}\right| \, dx
+= -\lim_{t\to-\infty} \left[e^{1/x}-\frac{e^{1/x}}{x}\right]_{t}^0
+= -\lim_{t\to-\infty} e^{1/0}-\frac{e^{1/0}}{x}- e^{1/t}+\frac{e^{1/t}}{x} = 1.
+\]</span></p></li>
+</ol>
+</div>
+</div>
+</div>
+<div id="exr-criterio-integral-convergencia-series" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 8.23 </strong></span>Un criterio para estudiar la convergencia de una serie <span class="math inline">\(\sum a_n\)</span> es estudiar la integral impropia <span class="math inline">\(\int_1^\infty a_n\,dn\)</span>. La serie converge si y solo si la integral es finita.</p>
+<p>Usar este criterio para demostrar que la serie armónica <span class="math inline">\(\sum \frac{1}{n}\)</span> diverge y que las serie <span class="math inline">\(\sum \frac{1}{n^2}\)</span> converge.</p>
+<p>¿Para qué valores de <span class="math inline">\(p\)</span> la integral <span class="math inline">\(\int_1^\infty \frac{1}{n^p}\,dn\)</span> converge?</p>
+</div>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-19-contents" aria-controls="callout-19" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-19" class="callout-19-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Para la serie armónica <span class="math inline">\(\sum \frac{1}{n}\)</span> se tiene</p>
 <p><span class="math display">\[
-\int_1^\infty \frac{1}{n}\,dn = \left[\ln|n|\right]_1^\infty = \lim_{n\to\infty}\ln(n) - \ln(1)= \infty.
+\int_1^\infty \frac{1}{n}\,dn = \lim_{t\to\infty}\left[\ln|n|\right]_1^t = \lim_{t\to\infty}\ln(t) - \ln(1)= \infty.
 \]</span></p>
 <p>Por tanto, la serie armónica diverge.</p>
 <p>Para la serie <span class="math inline">\(\sum \frac{1}{n^2}\)</span> se tiene</p>
 <p><span class="math display">\[
-\int_1^\infty \frac{1}{n^2}\,dn = \left[\frac{-1}{n}\right]_1^\infty = \lim_{n\to\infty}\frac{-1}{n}-\frac{-1}{1}= 1,
+\int_1^\infty \frac{1}{n^2}\,dn = \lim_{t\to\infty} \left[\frac{-1}{n}\right]_1^t = \lim_{t\to\infty}\frac{-1}{t}-\frac{-1}{1}= 1,
 \]</span></p>
 <p>y por tanto, la serie converge.</p>
+<p>Veamos ahora para que valores de <span class="math inline">\(p\)</span> la integral impropia de <span class="math inline">\(\frac{1}{x^p}\)</span> converge.</p>
+<p><span class="math display">\[
+\int_1^\infty \frac{1}{n^p}\,dn = \int_1^\infty n^{-p}\,dn = \lim_{t\to\infty} \left[(-p+1)n^{-p+1}\right]_1^t = \lim_{t\to\infty}\frac{-p+1}{t^{p-1}}+p-1.
+\]</span></p>
+<p>Este límite existe para <span class="math inline">\(p&gt;1\)</span> por lo que la integral impropia converge para esos valores de <span class="math inline">\(p\)</span>.</p>
 </div>
 </div>
 </div>
@@ -906,7 +968,7 @@ f(x) =
 </ol>
 </div>
 <div class="callout-note callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-18-contents" aria-controls="callout-18" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-20-contents" aria-controls="callout-20" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -915,7 +977,7 @@ Pista
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-18" class="callout-18-contents callout-collapse collapse">
+<div id="callout-20" class="callout-20-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>La media de una variable aleatoria continua con función de densidad de probabilidad <span class="math inline">\(f\)</span> es <span class="math inline">\(\mu = \int_{-\infty}^\infty xf(x)\,dx\)</span> y la varianza <span class="math inline">\(\mu = \int_{-\infty}^\infty x^2f(x)\,dx-\mu^2\)</span>.</p>
 </div>

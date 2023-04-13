@@ -480,6 +480,18 @@ Encontrar el valor $c$ tal que la recta $y=c$ divide la región limitada por la 
 En geometría, la ecuación $y^2=x^2(x+3)$ define una curva implícita conocida como la [cúbica de Tschirnhausen](https://es.wikipedia.org/wiki/C%C3%BAbica_de_Tschirnhausen). Calcular el área encerrada por esta curva.
 :::
 
+:::{.callout-tip collapse="true"}
+## Solución
+La curva se puede expresar mediante dos ramas, una positiva y otra negativa, dadas por $y=\pm \sqrt{x^2(x+3)}$, que coinciden en $x=-3$ y $x=0$ ya que son los puntos donde se anula $y$. Así pues, podemos calcular el area encerrada por la curva, descomponiendola en dos mitades, la positiva y la negativa.
+
+La semiarea positiva se calcula mediante la siguiente integral
+
+\begin{align*}
+\int_{-3}^0 \sqrt{x^2(x+3)}\,dx = \int_{-3}^0 (-x)\sqrt{(x+3)}\,dx = 
+= \left[-frac{2}{5}(x-2)(x+3)^{3/2}\right]_{-3}^0 = \frac{2}{5}(-2)(3)^{3/2} = 4.1569.
+\end{align*}
+:::
+
 :::{#exr-crecimiento-población}
 La tasa de nacimientos de una población viene dada por la función $n(t)=5000e^{0.03t}$ personas por año, mientras que la tasa de defunciones viene dada por la función $m(t)=3500 e^{0.02t}$ personas por año. Calcular el area comprendida entre $n$ y $m$ entre $0$ y $5$ años. ¿Qué representa esta area?
 :::
@@ -497,7 +509,9 @@ Calcular el área encerrada por las siguientes curvas polares $r=f(\theta)$ en l
 
 a. $f(\theta) = \theta^2$ para $\theta\in[-\pi,\pi]$.
 
-b. $f(\theta) = e^{\theta/2}$ para $\theta\in[0,2\pi]$.
+a. $f(\theta) = e^{\theta/2}$ para $\theta\in[0,2\pi]$.
+
+a. $f(\theta) = \sqrt{1+\cos(4\theta)^2}$ para $\theta\in[0,2\pi]$.
 :::
 
 :::{#exr-area-entre-polares}
@@ -514,8 +528,40 @@ b. $y = \frac{\ln(x)}{x^2}$ en $[1,\infty)$.
 c. $y=\frac{e^{1/x}}{x^3}$ en $(-\infty,0]$.
 :::
 
+:::{.callout-tip collapse="true"}
+## Solución
+a. 
+
+    $$
+    \int_{-\infty}^\infty \frac{1}{1+x^2}\, dx 
+    = \lim_{t\to\infty} \left[\operatorname{arctg}(x)\right]_{-t}^{t} 
+    = \lim_{t\to\infty} \operatorname{arctg}(t)-\operatorname{arctg}(-t) 
+    = \frac{\pi}{2}+\frac{\pi}{2} = \pi.
+    $$
+
+b. 
+
+    $$
+    \int_{-\infty}^\infty \frac{\ln(x)}{x^2}\, dx 
+    = \lim_{t\to\infty} \left[-\frac{1}{x}-\frac{\ln(x)}{x}\right]_1^t
+    = \lim_{t\to\infty} -\frac{1}{t}-\frac{\ln(t)}{t} + \frac{1}{1}+\frac{\ln(1)}{1} = 1.
+    $$
+
+c. 
+
+    $$
+    \int_{-\infty}^0 \left|\frac{e^{1/x}}{x^3}\right| \, dx 
+    = -\lim_{t\to-\infty} \left[e^{1/x}-\frac{e^{1/x}}{x}\right]_{t}^0 
+    = -\lim_{t\to-\infty} e^{1/0}-\frac{e^{1/0}}{x}- e^{1/t}+\frac{e^{1/t}}{x} = 1.
+    $$
+:::
+
 :::{#exr-criterio-integral-convergencia-series}
-Un criterio para estudiar la convergencia de una serie $\sum a_n$ es estudiar la integral impropia $\int_1^\infty a_n\,dn$. La serie converge si y solo si la integral es finita. Usar este criterio para demostrar que la serie armónica $\sum \frac{1}{n}$ diverge y que las serie $\sum \frac{1}{n^2}$ converge.
+Un criterio para estudiar la convergencia de una serie $\sum a_n$ es estudiar la integral impropia $\int_1^\infty a_n\,dn$. La serie converge si y solo si la integral es finita. 
+
+Usar este criterio para demostrar que la serie armónica $\sum \frac{1}{n}$ diverge y que las serie $\sum \frac{1}{n^2}$ converge.
+
+¿Para qué valores de $p$ la integral $\int_1^\infty \frac{1}{n^p}\,dn$ converge?
 :::
 
 :::{.callout-tip collapse="true"}
@@ -523,7 +569,7 @@ Un criterio para estudiar la convergencia de una serie $\sum a_n$ es estudiar la
 Para la serie armónica $\sum \frac{1}{n}$ se tiene
 
 $$
-\int_1^\infty \frac{1}{n}\,dn = \left[\ln|n|\right]_1^\infty = \lim_{n\to\infty}\ln(n) - \ln(1)= \infty.
+\int_1^\infty \frac{1}{n}\,dn = \lim_{t\to\infty}\left[\ln|n|\right]_1^t = \lim_{t\to\infty}\ln(t) - \ln(1)= \infty.
 $$
 
 Por tanto, la serie armónica diverge.
@@ -531,10 +577,18 @@ Por tanto, la serie armónica diverge.
 Para la serie $\sum \frac{1}{n^2}$ se tiene
 
 $$
-\int_1^\infty \frac{1}{n^2}\,dn = \left[\frac{-1}{n}\right]_1^\infty = \lim_{n\to\infty}\frac{-1}{n}-\frac{-1}{1}= 1,
+\int_1^\infty \frac{1}{n^2}\,dn = \lim_{t\to\infty} \left[\frac{-1}{n}\right]_1^t = \lim_{t\to\infty}\frac{-1}{t}-\frac{-1}{1}= 1,
 $$
 
 y por tanto, la serie converge.
+
+Veamos ahora para que valores de $p$ la integral impropia de $\frac{1}{x^p}$ converge.
+
+$$
+\int_1^\infty \frac{1}{n^p}\,dn = \int_1^\infty n^{-p}\,dn = \lim_{t\to\infty} \left[(-p+1)n^{-p+1}\right]_1^t = \lim_{t\to\infty}\frac{-p+1}{t^{p-1}}+p-1.
+$$
+
+Este límite existe para $p>1$ por lo que la integral impropia converge para esos valores de $p$.
 :::
 
 :::{#exr-distribucion-exponencial}
@@ -559,4 +613,5 @@ c. Calcular la varianza de la distribución.
 ## Pista
 La media de una variable aleatoria continua con función de densidad de probabilidad $f$ es $\mu = \int_{-\infty}^\infty xf(x)\,dx$ y la varianza $\mu = \int_{-\infty}^\infty x^2f(x)\,dx-\mu^2$.
 :::
+
 
