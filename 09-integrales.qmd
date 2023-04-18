@@ -349,7 +349,7 @@ d.
 :::
 
 :::{#exr-area-entre-funciones}
-Calcular el area comprendida entre las funciones $f$ y $g$ en los intervalos dados en los siguientes apartados:
+Calcular el área comprendida entre las funciones $f$ y $g$ en los intervalos dados en los siguientes apartados:
 
 a. $f(x)=\cos(x)$ y $g(x)=-\cos(x)$ en $[0,2\pi]$.
 
@@ -472,8 +472,36 @@ por lo que su coeficiente Gini es $2\left(1-\frac{2}{\pi}\right) \approx 0.7268$
 Así pues, la segunda población es un poco más desigual que la primera.
 :::
 
-:::{#exr-area-2}
+:::{#exr-área-2}
 Encontrar el valor $c$ tal que la recta $y=c$ divide la región limitada por la parábola $y=x^2$, el eje $x$ y la recta $y=4$ en dos regiones con la misma área.
+:::
+
+:::{.callout-note collapse="true"}
+## Pista
+Expresar $x$ en función de $y$, e integrar con respecto a $y$.
+:::
+
+:::{.callout-tip collapse="true"}
+## Solución
+El problema resulta más sencillo de resolver si se integra con respecto a $y$. Despejando $x$ de la ecuación de la parábola se tiene que $x=\pm\sqrt{y}$, de manera que área encerrada entre la recta $y=4$ y la parábola $y=x^2$ es la misma que el área encerrada entre las funciones $\sqrt{y}$ y $-\sqrt{y}$ en el intervalo $[0,4]$, que vale
+
+$$
+\int_0^4 \sqrt{y}-(-\sqrt{y})\,dy
+= \int_0^4 2\sqrt{y}\,dy 
+= \left[\frac{4}{3}x^{3/2}\right]_0^4
+= \frac{4}{3}4^{3/2} = \frac{32}{3}
+$$
+
+Así pues, tenemos que buscar la recta $y=c$ que cumple que el área encerrada entre ella y la parábola es la mitad del área anterior, es decir, $16/3$. Como el área encerrada entre la recta $y=c$ y la parábola $y=x^2$ es igual que el área encerrada entre las funciones $\sqrt{y}$ y $-\sqrt{y}$ en el intervalo $[0,c]$, que vale
+
+$$
+\int_0^c \sqrt{y}-(-\sqrt{y})\,dy
+= \int_0^c 2\sqrt{y}\,dy 
+= \left[\frac{4}{3}x^{3/2}\right]_0^c
+= \frac{4}{3}c^{3/2},
+$$
+
+se tiene que cumplir que $\frac{4}{3}c^{3/2}=\frac{16}{3}$, es decir, $c^{3/2} = 4$, de donde se deduce $c = 4^{2/3}$.
 :::
 
 :::{#exr-tschirnhausen}
@@ -482,26 +510,69 @@ En geometría, la ecuación $y^2=x^2(x+3)$ define una curva implícita conocida 
 
 :::{.callout-tip collapse="true"}
 ## Solución
-La curva se puede expresar mediante dos ramas, una positiva y otra negativa, dadas por $y=\pm \sqrt{x^2(x+3)}$, que coinciden en $x=-3$ y $x=0$ ya que son los puntos donde se anula $y$. Así pues, podemos calcular el area encerrada por la curva, descomponiendola en dos mitades, la positiva y la negativa.
+La curva se puede expresar mediante dos ramas, una positiva y otra negativa, dadas por $y=\pm \sqrt{x^2(x+3)}$, que coinciden en $x=-3$ y $x=0$ ya que son los puntos donde se anula $y$. Así pues, podemos calcular el área encerrada por la curva, descomponiéndola en dos mitades, la positiva y la negativa.
 
-La semiarea positiva se calcula mediante la siguiente integral
+La semiárea positiva se calcula mediante la siguiente integral
 
 \begin{align*}
-\int_{-3}^0 \sqrt{x^2(x+3)}\,dx = \int_{-3}^0 (-x)\sqrt{(x+3)}\,dx = 
-= \left[-frac{2}{5}(x-2)(x+3)^{3/2}\right]_{-3}^0 = \frac{2}{5}(-2)(3)^{3/2} = 4.1569.
+\int_{-3}^0 \sqrt{x^2(x+3)}\,dx 
+&= \int_{-3}^0 (-x)\sqrt{(x+3)}\,dx 
+= \left[-\frac{2}{5}(x-2)(x+3)^{3/2}\right]_{-3}^0 \\
+&= \frac{2}{5}(-2)(3)^{3/2} 
+= 4.1569,
 \end{align*}
+
+por lo que el área total es $2\cdot 4.1569 = 8.3138$.
 :::
 
 :::{#exr-crecimiento-población}
-La tasa de nacimientos de una población viene dada por la función $n(t)=5000e^{0.03t}$ personas por año, mientras que la tasa de defunciones viene dada por la función $m(t)=3500 e^{0.02t}$ personas por año. Calcular el area comprendida entre $n$ y $m$ entre $0$ y $5$ años. ¿Qué representa esta area?
+La tasa de nacimientos de una población viene dada por la función $n(t)=5000e^{0.03t}$ personas por año, mientras que la tasa de defunciones viene dada por la función $m(t)=3500 e^{0.02t}$ personas por año. Calcular el área comprendida entre $n$ y $m$ entre $0$ y $5$ años. ¿Qué representa esta área?
+:::
+
+:::{.callout-tip collapse="true"}
+## Solución
+Como $n(t)\geq m(t)$ $\forall t\geq 0$, el área comprendida entre la dos funciones en el intervalo $[0,5]$ viene dada por la integral definida
+
+\begin{align*}
+\int_0^5 n(t)-m(t)\,dt 
+&= \int_0^5 5000e^{0.03t}-3500 e^{0.02t}\,dt\\
+&= 5000\int_0^5 e^{0.03t}\,dt -3500 \int_0^5 e^{0.02t}\,dt \\
+&= \left[\frac{5000}{0.03}e^{0.03t}\right]_0^5 - \left[\frac{3500}{0.02}e^{0.02t}\right]_0^5\\
+&= \frac{5000}{0.03}e^{0.03\cdot 5} - \frac{3500}{0.02}e^{0.02\cdot 5}
+= 8567.4631
+\end{align*}
+
+La integral de la tasa de nacimientos nos da el número de personas que han nacido en el periodo de 0 a 5 años y la integral de la tasa de defunciones nos da el número de personas fallecidas en ese mismo periodo, por lo que el área comprendida entre las dos funciones es el incremento de la población en ese periodo. 
 :::
 
 :::{#exr-area-circulo-polares}
-Calcular el area de un círculo de radio $r$ en coordenadas polares.
+Calcular el área de un círculo de radio $r$ en coordenadas polares.
+:::
+
+:::{.callout-tip collapse="true"}
+## Solución
+La curva que define una circunferencia de radio $r$ en coordenadas polares es $f(\theta)=r$ con $\theta\in[0,2\pi]$, que es una función constante. Por tanto, el área del círculo de radio $r$ puede calcularse mediante la siguiente integral definida,
+
+$$
+\int_0^{2pi} \frac{r^2}{2}r\,d\theta = \left[\frac{r^2}{2}\theta \right]_0^{2\pi} = \frac{r^2}{2}2\pi = \pi r^2.
+$$
 :::
 
 :::{#exr-area-polar}
-Calcular el area encerrada por la curva polar $r=\cos(2\theta)$.
+Calcular el área encerrada por la curva polar $r=\cos(2\theta)$.
+:::
+
+:::{.callout-tip collapse="true"}
+## Solución
+La curva $r=\cos(2\theta)$ tiene periodo $2\pi$, por lo que hay que integrar la curva en el intervalo $[0,2\pi]$, de manera que el área encerrada por la curva es 
+
+\begin{align*}
+\int_0^{2\pi} \frac{\cos(2\theta)^2}{2}\,d\theta 
+&= \frac{1}{2} \int_0^{2\pi}\frac{1+\cos(2\theta)}{2}\,d\theta
+= \frac{1}{4}\left[\theta + \frac{\operatorname{sen}(2\theta)}{2}\right]_0^{2\pi}\\
+&= \frac{1}{4} 2\pi + \frac{\operatorname{sen}(4\pi)}{2}
+= \frac{\pi}{2}.
+\end{align*}
 :::
 
 :::{#exr-area-polares}
@@ -514,12 +585,49 @@ a. $f(\theta) = e^{\theta/2}$ para $\theta\in[0,2\pi]$.
 a. $f(\theta) = \sqrt{1+\cos(4\theta)^2}$ para $\theta\in[0,2\pi]$.
 :::
 
+:::{.callout-tip collapse="true"}
+## Solución
+a. 
+
+    \begin{align*}
+    \int_{-\pi}^{\pi} \frac{\theta^2}{2}\,d\theta 
+    &= \frac{1}{2} \left[\frac{\theta^3}{3}\right]_{-\pi}^{\pi}
+    = \frac{1}{2}\left(\frac{\pi^3}{3}-\frac{(-\pi)^3}{3}\right)
+    = \frac{\pi^3}{3}
+    \end{align*}
+
+a.
+
+    \begin{align*}
+    \int_{0}^{2\pi} \frac{\left(e^{\theta/2}\right)^2}{2}\,d\theta 
+    &= \frac{1}{2} \int_{0}^{2\pi} e^{\theta}\,d\theta  
+    = \frac{1}{2} \left[e^{\theta}\right]_{0}^{2\pi}
+    = \frac{1}{2}(e^{2\pi}-1).
+    \end{align*}
+
+a. 
+
+    \begin{align*}
+    \int_{0}^{2\pi} \frac{\left(\sqrt{1+\cos(4\theta)^2}\right)^2}{2}\,d\theta 
+    &= \frac{1}{2} \int_{0}^{2\pi} 1+\cos(4\theta)^2\,d\theta \\
+    &= \frac{1}{2}\left( \int_{0}^{2\pi} 1\,d\theta + \int_0^{2\pi}\cos(4\theta)^2\,d\theta\right) \\
+    &= \frac{1}{2}\left([\theta]_0^{2\pi} + \left[\frac{\theta}{2}+\frac{\operatorname{sen}(8\theta)}{16}\right]_0^{2\pi}\right)\\
+    &= \frac{1}{2}\left(2\pi + \frac{2\pi}{2}\right)
+    = \frac{3\pi}{2}.
+    \end{align*}
+:::
+
 :::{#exr-area-entre-polares}
-Calcular el area encerrada entre las curvas polares $r=2\operatorname{sen}(\theta)$ y $r=1+\operatorname{sen}(\theta)$.
+Calcular el área encerrada entre las curvas polares $r=2\operatorname{sen}(\theta)$ y $r=1+\operatorname{sen}(\theta)$.
+:::
+
+:::{.callout-tip collapse="true"}
+## Solución
+
 :::
 
 :::{#exr-integrales-impropias}
-Calcular el area encerrada entre las siguientes curvas y el eje $x$ en los intervalos dados.
+Calcular el área encerrada entre las siguientes curvas y el eje $x$ en los intervalos dados.
 
 a. $y=\frac{1}{1+x^2}$ en $(-\infty,\infty)$.
 
@@ -602,7 +710,7 @@ f(x) =
 \end{cases}
 $$
 
-a. Comprobar que $f$ es una función de densidad de probabilidad, es decir, que el area total encerrada entre su gráfica y el eje $x$ es 1.
+a. Comprobar que $f$ es una función de densidad de probabilidad, es decir, que el área total encerrada entre su gráfica y el eje $x$ es 1.
 
 b. Calcular la media de la distribución.
 
@@ -611,7 +719,62 @@ c. Calcular la varianza de la distribución.
 
 :::{.callout-note collapse="true"}
 ## Pista
-La media de una variable aleatoria continua con función de densidad de probabilidad $f$ es $\mu = \int_{-\infty}^\infty xf(x)\,dx$ y la varianza $\mu = \int_{-\infty}^\infty x^2f(x)\,dx-\mu^2$.
+La media de una variable aleatoria continua con función de densidad de probabilidad $f$ es $\mu = \int_{-\infty}^\infty xf(x)\,dx$ y la varianza $\sigma^2 = \int_{-\infty}^\infty x^2f(x)\,dx-\mu^2$.
 :::
 
+:::{.callout-tip collapse="true"}
+## Solución
+a. 
 
+    \begin{align*}
+    \int_{-\infty}^\infty f(x)\,dx 
+    &= \int_{-\infty}^0 0\,dx + \int_0^\infty \lambda e^{-\lambda x}\,dx\\
+    &= 0 + \lim_{t\to\infty}[-e^{-\lambda x} ]_0^t 
+    = \lim_{t\to\infty}-e^{-t}-(-1) = 1. 
+    \end{align*}
+
+    Luego, $f(x)$ es una función de densidad de probabilidad.
+
+b. 
+
+    \begin{align*}
+    \mu 
+    &= \int_{-\infty}^\infty xf(x)\,dx 
+    = \int_{-\infty}^0 x\cdot 0\,dx + \int_0^\infty x\lambda e^{-\lambda x}\,dx\\
+    &= 0 + \lim_{t\to\infty}\left[\frac{-\lambda x-1}{\lambda e^{\lambda x}}\right]_0^t 
+    = \lim_{t\to\infty}\frac{-\lambda t-1}{\lambda e^{\lambda t}}- (\frac{-\lambda\cdot 0-1}{\lambda e^{\lambda \cdot 0}})
+    = \frac{1}{\lambda} 
+    \end{align*}
+
+c. 
+
+    \begin{align*}
+    \sigma^2 
+    &= \int_{-\infty}^\infty x^2f(x)\,dx -\mu^2
+    = \int_{-\infty}^0 x^2\cdot 0\,dx + \int_0^\infty x^2\lambda e^{-\lambda x}\,dx - \frac{1}{\lambda^2}\\
+     &= 0 + \lim_{t\to\infty}\left[\frac{-\lambda^2 x^2-2\lambda x-2}{\lambda^2 e^{\lambda x}}\right]_0^t -\frac{1}{\lambda^2} \\
+    &= \lim_{t\to\infty}\frac{-\lambda^2 t^2-2\lambda t-2}{\lambda^2 e^{\lambda t}}- \left(\frac{-\lambda^2\cdot 0^2-2\lambda\cdot 0-2}{\lambda^2 e^{\lambda \cdot 0}}\right) -\frac{1}{\lambda^2} \\
+    &= \frac{2}{\lambda^2} -\frac{1}{\lambda^2}
+    = \frac{1}{\lambda^2}
+    \end{align*}
+:::
+
+:::{#exr-volumen-piramide}
+Calcular el volumen de la esta [pirámide](https://www.geogebra.org/m/g2wu3tqw).
+:::
+
+:::{#exr-volumen-paraboloide}
+Calcular el volumen de este [paraboloide](https://www.geogebra.org/m/xugkcvn5)
+:::
+
+:::{#exr-volumen-toro}
+Calcular el volumen de este [toro](https://www.geogebra.org/m/xugkcvn5).
+:::
+
+:::{#exr-volumen-revolucion}
+Calcular el volumen del sólido de revolución generado por la rotación al rededor del eje $y$ del area comprendida entre las funciones $f(x)=x$ y $g(x)=x^2$.
+:::
+
+:::{#exr-volumen-revolucion-2}
+Calcular el volumen del sólido de revolución generado por la rotación al rededor del eje $y$ del area comprendida entre las funciones $f(x)=x+1$ y $g(x)=(x-1)^2$.
+:::
