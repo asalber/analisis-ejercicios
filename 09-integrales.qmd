@@ -759,22 +759,38 @@ c.
     \end{align*}
 :::
 
+:::{#exr-tomografía}
+Una tomografía ofrece secciones transversales del cerebro de un paciente cada 1.5 cm. Las areas de cada una de las secciones transversales tomadas fueron 
+
+0, 32, 65, 120, 142, 157, 175, 161, 133, 103, 68, 0
+
+Calcular de forma aproximada el volumen del cerebro. 
+:::
+
 :::{#exr-volumen-piramide}
-Calcular el volumen de la esta [pirámide](https://www.geogebra.org/m/g2wu3tqw).
-:::
-
-:::{#exr-volumen-paraboloide}
-Calcular el volumen de este [paraboloide](https://www.geogebra.org/m/xugkcvn5)
-:::
-
-:::{#exr-volumen-toro}
-Calcular el volumen de este [toro](https://www.geogebra.org/m/xugkcvn5).
+Calcular el volumen de la esta [pirámide](https://www.geogebra.org/m/g2wu3tqw). Calcular a continuación el volumen de una pirámide de base cuadrada de lado $l$ y altura $h$.
 :::
 
 :::{#exr-volumen-revolucion}
-Calcular el volumen del sólido de revolución generado por la rotación al rededor del eje $y$ del area comprendida entre las funciones $f(x)=x$ y $g(x)=x^2$.
+Calcular el volumen del sólido de revolución generado por la rotación al rededor del eje $y$ del area comprendida entre las funciones $f(x)=x$ y $g(x)=x^2$. Calcular también el volumen del sólido de revolución generado al rotar esa misma área alrededor de la recta $x=1$.
+:::
+
+:::{#exr-volumen-toro}
+Calcular el volumen de este [toro](https://www.geogebra.org/m/xugkcvn5). Calcular a continuación el volumen de un toro de radio mayor $R$ y radio menor $r$.
 :::
 
 :::{#exr-volumen-revolucion-2}
 Calcular el volumen del sólido de revolución generado por la rotación al rededor del eje $y$ del area comprendida entre las funciones $f(x)=x+1$ y $g(x)=(x-1)^2$.
+:::
+
+:::{#exr-volumen-revolucion-3}
+Calcular el volumen del sólido de revolución generado por la rotación al rededor del eje $y$ del area comprendida entre las funciones $f(x)=x+1$ y $g(x)=(x-1)^2$.
+:::
+
+:::{#exr-volumen-revolucion-4}
+Calcular el volumen del sólido de revolución generado por la rotación al rededor del eje $x$ el área comprendida entre las funciones $f(x)=\cos(x)$ y $g(x)=\operatorname{sen}(x)$ en el intervalo $[0,\pi/2]$. Calcular también el volumen del sólido de revolución generado al rotar la mima área alrededor del eje $y$.
+:::
+
+:::{#exr-volumen-cuba-vino}
+Una cuba para almacenar vino tiene forma parabólica, dada por la función $y=x^2$ y sus secciones transversales con respecto al eje $y$ son cuadrados. ¿Cuántos litros de vino puede almacenar la cuba si su altura es de 2 metros?
 :::
