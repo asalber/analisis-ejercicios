@@ -788,5 +788,5 @@ Calcular el volumen del sólido de revolución generado por la rotación al rede
 :::
 
 :::{#exr-volumen-cuba-vino}
-Un helado tiene forma parabólica dada por la función $y=x^2$ y sus secciones transversales con respecto al eje $y$ son cuadrados. ¿Cuántos litros de vino puede almacenar la cuba si su altura es de 2 metros?
+Un helado tiene forma parabólica dada por la función $y=x^2$ y sus secciones transversales con respecto al eje $y$ son cuadrados. ¿Cuál es el volumen del helado si su altura es de 12 cm?
 :::
