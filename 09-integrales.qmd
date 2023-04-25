@@ -776,7 +776,7 @@ Calcular el volumen del sólido de revolución generado por la rotación al rede
 :::
 
 :::{#exr-volumen-toro}
-Calcular el volumen de este [toro](https://www.geogebra.org/m/xugkcvn5). Calcular a continuación el volumen de un toro de radio mayor $R$ y radio menor $r$.
+Calcular el volumen de este [toro](https://www.geogebra.org/m/wy2uquqc) obtenido al rotar la circunferencia de ecuación $(x-2)^2+y^2=1$ alrededor del eje $y$. Calcular a continuación el volumen de un toro de radio mayor $R$ y radio menor $r$.
 :::
 
 :::{#exr-volumen-revolucion-2}
@@ -787,6 +787,66 @@ Calcular el volumen del sólido de revolución generado por la rotación al rede
 Calcular el volumen del sólido de revolución generado por la rotación al rededor del eje $x$ el área comprendida entre las funciones $f(x)=\cos(x)$ y $g(x)=\operatorname{sen}(x)$ en el intervalo $[0,\pi/2]$. Calcular también el volumen del sólido de revolución generado al rotar la mima área alrededor del eje $y$.
 :::
 
-:::{#exr-volumen-cuba-vino}
-Un helado tiene forma parabólica dada por la función $y=x^2$ y sus secciones transversales con respecto al eje $y$ son cuadrados. ¿Cuál es el volumen del helado si su altura es de 12 cm?
+:::{#exr-volumen-helado}
+Un helado tiene forma parabólica dada por la función $y=1-x^2$ y sus secciones transversales con respecto al eje $y$ son cuadrados. ¿Cuál es el volumen del helado?
 :::
+
+:::{#exr-pluviometro}
+Un pluviómetro tiene la forma de un sólido de revolución obtenido al rotar la función $f(x)=x^3$ alrededor del eje $y$. ¿Cuál debe ser su altura para que sea capaz de almacenar 1 litro de agua?
+:::
+
+:::{#exr-longitud-circunferencia}
+Calcular la longitud de una circunferencia de radio $r$ centrada en el origen.
+:::
+
+<!-- :::{.callout-tip collapse="true"}
+## Solución
+\begin{align*}
+\int_{-r}^r \sqrt{1+\left(\frac{-x}{\sqrt{r^2-x^2}}\right)^2}\,dx 
+&= \int_{-r}^r \sqrt{1+\frac{x^2}{r^2-x^2}}\,dx 
+= \int_{-r}^r \sqrt{\frac{1}{r^2-x^2}}\,dx
+= \left[\operatorname{arcsen}\left(\frac{x}{r}\right)\right]_{-r}^r 
+= \pi r
+\end{align*}
+::: -->
+
+:::{#exr-longitud-curvas}
+Calcular la longitud de las siguientes curvas en los intervalos dados
+
+a. $y=x^2$ en $[0,1]$.
+
+b. $y^2=4x^3$ en $[1,2]$.
+
+c. $\ln(\operatorname{sen}(x))$ en $\left[\frac{\pi}{4},\frac{\pi}{2}\right]$
+:::
+
+:::{#exr-longitud-montaña-rusa}
+Un tramo de una montaña rusa tiene la forma de la curva $y=\frac{1}{3}(x-3)\sqrt{x}$, donde $x$ viene dado en decámetros. ¿Qué longitud tiene el rail del tramo desde el origen hasta el punto que alcanza la misma altura? 
+:::
+
+:::{#exr-longitud-catenaria}
+Calcular la longitud de un cable eléctrico con forma de catenaria que cuelga entre dos postes separados 100 metros de distancia con una altura mínima sobre el suelo de 5 metros.
+
+Nota: La ecuación que define una curva con forma de catenaria centrada en el eje $y$ es $y=a\cosh\left(\frac{x}{a}\right)$, donde $a$ es la altura mínima de la catenaria. 
+:::
+
+:::{#exr-superficie-solido-revolucion}
+Calcular la superficie de los sólidos de revolución obtenidos al girar las siguientes funciones alrededor del eje $x$ en los intervalos dados.
+
+a. $f(x)=2\sqrt{1-x}$ en $[-1,1]$.
+
+b. $g(x)=\frac{1}{3}\sqrt{x^3}$ en $[0,2]$
+
+c. $f(x)=e^x$ en $[0,1]$.
+:::
+
+:::{#exr-superficie-deposito}
+Un depósito metálico tiene la forma del elipsoide que se obtiene al rotar la elipse $\frac{x^2}{4}+y^2=1$ alrededor del eje $x$. Calcular la cantidad de chapa metálica necesaria para construir el depósito. ¿Y si el depósito se construye rotando la elipse alrededor del eje $y$?
+:::
+
+:::{#exr-superficie-toro}
+Calcular la superficie de este [toro](https://www.geogebra.org/m/wy2uquqc) obtenido al rotar la circunferencia de ecuación $(x-2)^2+y^2=1$ alrededor del eje $y$. Calcular a continuación la superficie de un toro de radio mayor $R$ y radio menor $r$.
+:::
+
+
+

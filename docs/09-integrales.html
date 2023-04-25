@@ -1206,7 +1206,7 @@ Solución
 <p><span class="theorem-title"><strong>Ejercicio 8.27 </strong></span>Calcular el volumen del sólido de revolución generado por la rotación al rededor del eje <span class="math inline">\(y\)</span> del area comprendida entre las funciones <span class="math inline">\(f(x)=x\)</span> y <span class="math inline">\(g(x)=x^2\)</span>. Calcular también el volumen del sólido de revolución generado al rotar esa misma área alrededor de la recta <span class="math inline">\(x=1\)</span>.</p>
 </div>
 <div id="exr-volumen-toro" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 8.28 </strong></span>Calcular el volumen de este <a href="https://www.geogebra.org/m/xugkcvn5">toro</a>. Calcular a continuación el volumen de un toro de radio mayor <span class="math inline">\(R\)</span> y radio menor <span class="math inline">\(r\)</span>.</p>
+<p><span class="theorem-title"><strong>Ejercicio 8.28 </strong></span>Calcular el volumen de este <a href="https://www.geogebra.org/m/wy2uquqc">toro</a> obtenido al rotar la circunferencia de ecuación <span class="math inline">\((x-2)^2+y^2=1\)</span> alrededor del eje <span class="math inline">\(y\)</span>. Calcular a continuación el volumen de un toro de radio mayor <span class="math inline">\(R\)</span> y radio menor <span class="math inline">\(r\)</span>.</p>
 </div>
 <div id="exr-volumen-revolucion-2" class="theorem exercise">
 <p><span class="theorem-title"><strong>Ejercicio 8.29 </strong></span>Calcular el volumen del sólido de revolución generado por la rotación al rededor del eje <span class="math inline">\(y\)</span> del area comprendida entre las funciones <span class="math inline">\(f(x)=x+1\)</span> y <span class="math inline">\(g(x)=(x-1)^2\)</span>.</p>
@@ -1214,8 +1214,53 @@ Solución
 <div id="exr-volumen-revolucion-3" class="theorem exercise">
 <p><span class="theorem-title"><strong>Ejercicio 8.30 </strong></span>Calcular el volumen del sólido de revolución generado por la rotación al rededor del eje <span class="math inline">\(x\)</span> el área comprendida entre las funciones <span class="math inline">\(f(x)=\cos(x)\)</span> y <span class="math inline">\(g(x)=\operatorname{sen}(x)\)</span> en el intervalo <span class="math inline">\([0,\pi/2]\)</span>. Calcular también el volumen del sólido de revolución generado al rotar la mima área alrededor del eje <span class="math inline">\(y\)</span>.</p>
 </div>
-<div id="exr-volumen-cuba-vino" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 8.31 </strong></span>Un helado tiene forma parabólica dada por la función <span class="math inline">\(y=x^2\)</span> y sus secciones transversales con respecto al eje <span class="math inline">\(y\)</span> son cuadrados. ¿Cuál es el volumen del helado si su altura es de 12 cm?</p>
+<div id="exr-volumen-helado" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 8.31 </strong></span>Un helado tiene forma parabólica dada por la función <span class="math inline">\(y=1-x^2\)</span> y sus secciones transversales con respecto al eje <span class="math inline">\(y\)</span> son cuadrados. ¿Cuál es el volumen del helado?</p>
+</div>
+<div id="exr-pluviometro" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 8.32 </strong></span>Un pluviómetro tiene la forma de un sólido de revolución obtenido al rotar la función <span class="math inline">\(f(x)=x^3\)</span> alrededor del eje <span class="math inline">\(y\)</span>. ¿Cuál debe ser su altura para que sea capaz de almacenar 1 litro de agua?</p>
+</div>
+<div id="exr-longitud-circunferencia" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 8.33 </strong></span>Calcular la longitud de una circunferencia de radio <span class="math inline">\(r\)</span> centrada en el origen.</p>
+</div>
+<!-- :::{.callout-tip collapse="true"}
+## Solución
+\begin{align*}
+\int_{-r}^r \sqrt{1+\left(\frac{-x}{\sqrt{r^2-x^2}}\right)^2}\,dx 
+&= \int_{-r}^r \sqrt{1+\frac{x^2}{r^2-x^2}}\,dx 
+= \int_{-r}^r \sqrt{\frac{1}{r^2-x^2}}\,dx
+= \left[\operatorname{arcsen}\left(\frac{x}{r}\right)\right]_{-r}^r 
+= \pi r
+\end{align*}
+::: -->
+<div id="exr-longitud-curvas" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 8.34 </strong></span>Calcular la longitud de las siguientes curvas en los intervalos dados</p>
+<ol type="a">
+<li><p><span class="math inline">\(y=x^2\)</span> en <span class="math inline">\([0,1]\)</span>.</p></li>
+<li><p><span class="math inline">\(y^2=4x^3\)</span> en <span class="math inline">\([1,2]\)</span>.</p></li>
+<li><p><span class="math inline">\(\ln(\operatorname{sen}(x))\)</span> en <span class="math inline">\(\left[\frac{\pi}{4},\frac{\pi}{2}\right]\)</span></p></li>
+</ol>
+</div>
+<div id="exr-longitud-montaña-rusa" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 8.35 </strong></span>Un tramo de una montaña rusa tiene la forma de la curva <span class="math inline">\(y=\frac{1}{3}(x-3)\sqrt{x}\)</span>, donde <span class="math inline">\(x\)</span> viene dado en decámetros. ¿Qué longitud tiene el rail del tramo desde el origen hasta el punto que alcanza la misma altura?</p>
+</div>
+<div id="exr-longitud-catenaria" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 8.36 </strong></span>Calcular la longitud de un cable eléctrico con forma de catenaria que cuelga entre dos postes separados 100 metros de distancia con una altura mínima sobre el suelo de 5 metros.</p>
+<p>Nota: La ecuación que define una curva con forma de catenaria centrada en el eje <span class="math inline">\(y\)</span> es <span class="math inline">\(y=a\cosh\left(\frac{x}{a}\right)\)</span>, donde <span class="math inline">\(a\)</span> es la altura mínima de la catenaria.</p>
+</div>
+<div id="exr-superficie-solido-revolucion" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 8.37 </strong></span>Calcular la superficie de los sólidos de revolución obtenidos al girar las siguientes funciones alrededor del eje <span class="math inline">\(x\)</span> en los intervalos dados.</p>
+<ol type="a">
+<li><p><span class="math inline">\(f(x)=2\sqrt{1-x}\)</span> en <span class="math inline">\([-1,1]\)</span>.</p></li>
+<li><p><span class="math inline">\(g(x)=\frac{1}{3}\sqrt{x^3}\)</span> en <span class="math inline">\([0,2]\)</span></p></li>
+<li><p><span class="math inline">\(f(x)=e^x\)</span> en <span class="math inline">\([0,1]\)</span>.</p></li>
+</ol>
+</div>
+<div id="exr-superficie-deposito" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 8.38 </strong></span>Un depósito metálico tiene la forma del elipsoide que se obtiene al rotar la elipse <span class="math inline">\(\frac{x^2}{4}+y^2=1\)</span> alrededor del eje <span class="math inline">\(x\)</span>. Calcular la cantidad de chapa metálica necesaria para construir el depósito. ¿Y si el depósito se construye rotando la elipse alrededor del eje <span class="math inline">\(y\)</span>?</p>
+</div>
+<div id="exr-superficie-toro" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 8.39 </strong></span>Calcular la superficie de este <a href="https://www.geogebra.org/m/wy2uquqc">toro</a> obtenido al rotar la circunferencia de ecuación <span class="math inline">\((x-2)^2+y^2=1\)</span> alrededor del eje <span class="math inline">\(y\)</span>. Calcular a continuación la superficie de un toro de radio mayor <span class="math inline">\(R\)</span> y radio menor <span class="math inline">\(r\)</span>.</p>
 </div>
 
 
