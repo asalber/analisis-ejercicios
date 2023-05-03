@@ -848,5 +848,47 @@ Un depósito metálico tiene la forma del elipsoide que se obtiene al rotar la e
 Calcular la superficie de este [toro](https://www.geogebra.org/m/wy2uquqc) obtenido al rotar la circunferencia de ecuación $(x-2)^2+y^2=1$ alrededor del eje $y$. Calcular a continuación la superficie de un toro de radio mayor $R$ y radio menor $r$.
 :::
 
+:::{#exr-cinematica-1}
+Se lanza una pelota verticalmente desde la ventana de un edificio situada a 20 m sobre el suelo con una velocidad inicial de 10 m/s. ¿Cual será la distancia recorrida por la pelota hasta que toque el suelo?
+:::
+
+:::{#exr-cinematica-2}
+Un vehículo se mueve con una aceleración dada por la función $a(t)=10\cos(2t)$. Suponiendo que el vehículo parte de un estado de reposo, ¿cuál será la distancia neta recorrida por el vehículo en el intervalo de $[0,2\pi]$? ¿Y la distancia total?
+:::
+
+:::{#exr-trabajo-muelle}
+La [ley de Hooke](https://es.wikipedia.org/wiki/Ley_de_elasticidad_de_Hooke) establece que la fuerza necesaria para estirar un muelle es proporcional a la distancia de estiramiento, es decir, cumple la ecuación
+
+$$
+F = kx
+$$
+
+donde $x$ es la distancia de estiramiento desde la posición natural del muelle, y $k$ es una constante de proporcionalidad que es propia del tipo de muelle. 
+
+Si al aplicar una fuerza de 3 N se consigue comprimir el muelle una distancia de $0.1$ m desde su posición natural, ¿qué trabajo se realiza al estirar el muelle $0.2$ m desde su posición natural?
+:::
+
+:::{#exr-trabajo-cohete}
+¿Qué trabajo se realiza al lanzar un cohete de 50 toneladas desde la superficie de la tierra a una órbita situada a 100 km sobre la superficie terrestre?  
+Nota: Debe tenerse en cuenta que la aceleración de la gravedad disminuye con la altura según la fórmula 
+
+$$
+g_h = g_0 \left(\frac{R}{R+h}\right)^2,
+$$
+donde $g_h$ es la aceleración de la gravedad a una altura $h$ m sobre la superficie terrestre, $g_0=9.81$ m/s$^2$ es la aceleración de la gravedad en la superficie terrestre, y $R=6371$ km es el radio de la Tierra.
+:::
+
+:::{#exr-trabajo-deposito}
+Un depósito con forma de cono invertido de radio $2$ m y altura $5$ m está lleno de agua. ¿Qué trabajo se realiza al vaciar el tanque por arriba?
+:::
+
+:::{#exr-trabajo-deposito-2}
+Un depósito con forma de sólido de revolución generado al rotar la gráfica de la función $f(x)=\frac{x^2}{2}$ alrededor del eje $y$ en el intervalo de $0$ a $4$ m, contiene $100000$ l de aceite con una densidad de $900$ kg/m$^3$. ¿Qué trabajo se realiza al vaciar el depósito por arriba?
+:::
+
+
+
+
+
 
 
