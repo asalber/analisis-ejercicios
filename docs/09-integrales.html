@@ -1281,10 +1281,100 @@ Solución
 <p><span class="theorem-title"><strong>Ejercicio 8.39 </strong></span>Calcular la superficie de este <a href="https://www.geogebra.org/m/wy2uquqc">toro</a> obtenido al rotar la circunferencia de ecuación <span class="math inline">\((x-2)^2+y^2=1\)</span> alrededor del eje <span class="math inline">\(y\)</span>. Calcular a continuación la superficie de un toro de radio mayor <span class="math inline">\(R\)</span> y radio menor <span class="math inline">\(r\)</span>.</p>
 </div>
 <div id="exr-cinematica-1" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 8.40 </strong></span>Se lanza una pelota verticalmente desde la ventana de un edificio situada a 20 m sobre el suelo con una velocidad inicial de 10 m/s. ¿Cual será la distancia recorrida por la pelota hasta que toque el suelo?</p>
+<p><span class="theorem-title"><strong>Ejercicio 8.40 </strong></span>Se lanza una pelota verticalmente desde la ventana de un edificio situada a 20 m sobre el suelo con una velocidad inicial de 10 m/s. ¿A qué distancia del suelo estará la pelota transcurridos 3 segundos? ¿Qué distancia habrá recorrido hasta ese instante?</p>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-29-contents" aria-controls="callout-29" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-29" class="callout-29-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>La posición que ocupa la pelota en cada instante <span class="math inline">\(t\)</span> viene dada por la integral de la velocidad <span class="math inline">\(v(t)\)</span>, <span class="math inline">\(\int_0^t v(t)\, dt\)</span>, pero, a su vez, la velocidad en cada instante viene dada por la integral de la aceleración. En este caso la aceleración que sufre la pelota es la de la fuerza de la gravedad, que es constante y negativa, por lo que tenemos</p>
+<p><span class="math display">\[
+v(t) = v(0) + \int_0^t g \,dx = v(0) + [g]_0^t = v(0) + gt.
+\]</span></p>
+<p>Por tanto, el espacio en cada instante <span class="math inline">\(t\)</span> es</p>
+<p><span class="math display">\[
+s(t) = s(0) + \int_0^t v(0) + gx\,dx = s(0) + \left[v(0)x+g\frac{x^2}{2}\right]_0^t = s(0) + v(0)t + g\frac{t^2}{2}.
+\]</span></p>
+<p>Como la posición en el instante inicial es <span class="math inline">\(s(0) = 20 m\)</span>, la velocidad inicial es <span class="math inline">\(v(0) = 10\)</span> m/s y <span class="math inline">\(g=-9.81\)</span> m/s<span class="math inline">\(^2\)</span>, sustituyendo en la expresión anterior se tiene</p>
+<p><span class="math display">\[
+s(t) = 20 + 10 t - 9.81 \frac{t^2}{2}.
+\]</span></p>
+<p>Así pues, la posición de la pelota a los 3 segundos es</p>
+<p><span class="math display">\[
+s(3) = 20 + 10\cdot 3 -9.81 \frac{3^2}{2} = 5.855 \mbox{ m}.
+\]</span></p>
+<p>Para calcular la distancia recorrida hasta los 3 segundos tenemos que descomponer la región de integración en los intervalos donde la velocidad es positiva y los intervalos donde es negativa, y calcular la integral por separado. Para ello obtenemos el instante donde la velocidad se anula</p>
+<p><span class="math display">\[
+v(t) = v(0) + gt = 10 - 9.81 t = 0 \Leftrightarrow t = \frac{10}{9.81} = 1.0194 \mbox{ s}.
+\]</span></p>
+<p>Por tanto, la velocidad es positiva en el intervalo <span class="math inline">\([0, 1.0194]\)</span> y negativa en el intervalo <span class="math inline">\([1.0194, 3]\)</span>, de manera que la distancia recorrida hasta los 3 segundos es</p>
+<p><span class="math display">\[\begin{align*}
+\int_0^3 |10 -9.81 t|\,dt
+&amp;= \int_0^{1.0194} 10 -9.81 t\,dt - \int_{1.0194}^3 10 -9.81 t\,dt \\
+&amp; = \left[10t-9.81\frac{t^2}{2}\right]_0^{1.0194} - \left[10t-9.81\frac{t^2}{2}\right]_{1.0194}^3 \\
+&amp;= 10\cdot 1.0194 - 9.81 \frac{1.0194^2}{2} - \left(10\cdot 3 -9.81\frac{3^2}{2} - 10\cdot 1.0194 + 9.81 \frac{1.0194^2}{2}\right) \\
+&amp;= 5.0968 + 19.2418  = 24.3387 \mbox { m}.
+\end{align*}\]</span></p>
+</div>
+</div>
 </div>
 <div id="exr-cinematica-2" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 8.41 </strong></span>Un vehículo se mueve con una aceleración dada por la función <span class="math inline">\(a(t)=10\cos(2t)\)</span>. Suponiendo que el vehículo parte de un estado de reposo, ¿cuál será la distancia neta recorrida por el vehículo en el intervalo de <span class="math inline">\([0,2\pi]\)</span>? ¿Y la distancia total?</p>
+<p><span class="theorem-title"><strong>Ejercicio 8.41 </strong></span>Un vehículo se mueve con una aceleración dada por la función <span class="math inline">\(a(t)=10\cos(2t)\)</span>. Suponiendo que el vehículo parte de un estado de reposo en la posición <span class="math inline">\(0\)</span>, ¿cuál será la distancia neta recorrida por el vehículo en el intervalo de <span class="math inline">\([0,\pi]\)</span>? ¿Y la distancia total?</p>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-30-contents" aria-controls="callout-30" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-30" class="callout-30-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Calculamos primero la velocidad en cada instante <span class="math inline">\(t\)</span>.</p>
+<p><span class="math display">\[\begin{align*}
+v(t)
+&amp;= v(0) + \int_0^t a(x)\,dx
+= 0 + \int_0^t 10\cos(2x)\,dx
+= 5[\operatorname{sen}(2x)]_0^t \\
+&amp;= 5(\operatorname{sen}(2t) - \operatorname{sen}(0))
+= 5 \operatorname{sen}(2t).
+\end{align*}\]</span></p>
+<p>Y ahora calculamos la distancia neta recorrida.</p>
+<p><span class="math display">\[
+\int_0^{\pi} v(t)\,dt
+= \int_0^{\pi} 5\operatorname{sen}(2t)\, dt
+= -\frac{5}{2}[\cos(2x)]_0^{\pi}
+= -\frac{5}{2}(\cos(2\pi) - \cos(0))
+= 0.
+\]</span></p>
+<p>Es decir, la distancia neta recorrida en el intervalo <span class="math inline">\([0,\pi]\)</span> es nula y, por tanto, el vehículo vuelve a la posición inicial en el instante <span class="math inline">\(\pi\)</span>.</p>
+<p>Para calcular la distancia neta, debemos descomponer el intervalo de integración en los subintervalos donde la velocidad es positiva y los subintervalos donde es negativa, y calcular la integral por separado. Para ello, obtenemos primero los valores donde la velocidad es nula.</p>
+<p><span class="math display">\[
+v(t) = 5\operatorname{sen}{2t} = 0 \Leftrightarrow t = \frac{\operatorname{arcsen}(0)}{2} = \pi/2.
+\]</span></p>
+<p>Así pues, la velocidad es positiva en el intervalo <span class="math inline">\([0,\pi/2]\)</span> y negativa en le intervalo <span class="math inline">\([\pi/2, \pi]\)</span>, de manera que a distancia total recorrida por el vehículo en el intervalo <span class="math inline">\([0,2\pi]\)</span> es</p>
+<p><span class="math display">\[\begin{align*}
+\int_0^\pi |v(t)|\,dt
+&amp;= \int_0^{\pi/2} v(t)\,dt - \int_{\pi/2}^\pi v(t)\,dt
+= \int_0^{\pi/2} 5\operatorname{sen}(2t)\,dt - \int_{\pi/2}^\pi 5\operatorname{sen}(2t)\,dt\\
+&amp;= -\frac{5}{2}[\cos(2t)]_0^{\pi/2} + \frac{5}{2}[\cos(2t)]_{\pi/2}^\pi \\
+&amp;= -\frac{5}{2}(\cos(\pi)-\cos(0)) + \frac{5}{2}(\cos(2\pi)- \cos(\pi)) \\
+&amp;= -\frac{5}{2}(-4)
+= 10.
+\end{align*}\]</span></p>
+</div>
+</div>
 </div>
 <div id="exr-trabajo-muelle" class="theorem exercise">
 <p><span class="theorem-title"><strong>Ejercicio 8.42 </strong></span>La <a href="https://es.wikipedia.org/wiki/Ley_de_elasticidad_de_Hooke">ley de Hooke</a> establece que la fuerza necesaria para estirar un muelle es proporcional a la distancia de estiramiento, es decir, cumple la ecuación</p>
@@ -1292,7 +1382,34 @@ Solución
 F = kx
 \]</span></p>
 <p>donde <span class="math inline">\(x\)</span> es la distancia de estiramiento desde la posición natural del muelle, y <span class="math inline">\(k\)</span> es una constante de proporcionalidad que es propia del tipo de muelle.</p>
-<p>Si al aplicar una fuerza de 3 N se consigue comprimir el muelle una distancia de <span class="math inline">\(0.1\)</span> m desde su posición natural, ¿qué trabajo se realiza al estirar el muelle <span class="math inline">\(0.2\)</span> m desde su posición natural?</p>
+<p>Si al aplicar una fuerza de <span class="math inline">\(3\)</span> N se consigue comprimir el muelle una distancia de <span class="math inline">\(0.1\)</span> m desde su posición natural, ¿qué trabajo se realiza al estirar el muelle <span class="math inline">\(0.2\)</span> m desde su posición natural?</p>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-31-contents" aria-controls="callout-31" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-31" class="callout-31-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Como al aplicar una fuerza de <span class="math inline">\(3\)</span> N el muelle se comprime <span class="math inline">\(0.1\)</span> m, aplicando la ley de Hooke se puede calcular la constante de proporcionalidad del muelle.</p>
+<p><span class="math display">\[
+3 \mbox{ N} = k 0.1 \mbox{ m} \Leftrightarrow k = \frac{3 \mbox{ N}}{0.1 \mbox{ m}} = 30 \mbox{ N/m}.
+\]</span></p>
+<p>Así pues, la fuerza ejercida por el muelle a una distancia <span class="math inline">\(x\)</span> de su posición natural viene dada por la función <span class="math inline">\(F(x) = 30 x\)</span>, y el trabajo realizado al estirarlo <span class="math inline">\(0.2\)</span> m es</p>
+<p><span class="math display">\[
+\int_0^{0.2} F(x)\,dx
+= \int_0^{0.2} 30 x\,dx
+= 30 \left[\frac{x^2}{2}\right]_0^{0.2}
+= 30 \frac{0.2^2}{2}
+= 0.6 \mbox{ J}.
+\]</span></p>
+</div>
+</div>
 </div>
 <div id="exr-trabajo-cohete" class="theorem exercise">
 <p><span class="theorem-title"><strong>Ejercicio 8.43 </strong></span>¿Qué trabajo se realiza al lanzar un cohete de 50 toneladas desde la superficie de la tierra a una órbita situada a 100 km sobre la superficie terrestre?<br>
@@ -1301,11 +1418,129 @@ Nota: Debe tenerse en cuenta que la aceleración de la gravedad disminuye con la
 g_h = g_0 \left(\frac{R}{R+h}\right)^2,
 \]</span> donde <span class="math inline">\(g_h\)</span> es la aceleración de la gravedad a una altura <span class="math inline">\(h\)</span> m sobre la superficie terrestre, <span class="math inline">\(g_0=9.81\)</span> m/s<span class="math inline">\(^2\)</span> es la aceleración de la gravedad en la superficie terrestre, y <span class="math inline">\(R=6371\)</span> km es el radio de la Tierra.</p>
 </div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-32-contents" aria-controls="callout-32" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-32" class="callout-32-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+
+</div>
+</div>
+</div>
 <div id="exr-trabajo-deposito" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 8.44 </strong></span>Un depósito con forma de cono invertido de radio <span class="math inline">\(2\)</span> m y altura <span class="math inline">\(5\)</span> m está lleno de agua. ¿Qué trabajo se realiza al vaciar el tanque por arriba?</p>
+<p><span class="theorem-title"><strong>Ejercicio 8.44 </strong></span>Un depósito con forma de cono invertido de radio <span class="math inline">\(2\)</span> m y altura <span class="math inline">\(5\)</span> m está lleno de agua. ¿Qué trabajo se realiza al vaciar el tanque por arriba?<br>
+Nota: La densidad del agua es de <span class="math inline">\(\delta = 1000\)</span> kg/m<span class="math inline">\(^3\)</span>.</p>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-33-contents" aria-controls="callout-33" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-33" class="callout-33-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>En este caso, aunque la aceleración de la gravedad es constante, el volumen de agua a cada altura <span class="math inline">\(y\)</span> es distinto, por lo que su masa y la fuerza necesaria para elevarla será distinta.</p>
+<p>Siguiendo la misma estrategia de las sumas de Riemann, podemos descomponer el intervalo <span class="math inline">\([0, 5]\)</span> de la altura del depósito en subintervalos de igual amplitud de acuerdo a una partición <span class="math inline">\(P_n=\{y_0=0, y_1, \ldots, y_n=5\}\)</span>, y considerar, para cada subintervalo <span class="math inline">\([y_{i-1}, y_i]\)</span> el cilindro de radio <span class="math inline">\(x_i=f(y_i)\)</span>, donde <span class="math inline">\(f(y)\)</span> es la función de la generatriz del cono, y altura <span class="math inline">\(\Delta y=y_i-y_{i-1}\)</span>. Como la ecuación de la recta que define la generatriz del cono es <span class="math inline">\(y=\frac{5}{2}x\)</span>, expresando <span class="math inline">\(x\)</span> en función de <span class="math inline">\(y\)</span> se tiene que <span class="math inline">\(x_i=\frac{2}{5}y_i\)</span>, de manera que el volumen del cilindro correspondiente al intervalo <span class="math inline">\([x_{i-1},x_i]\)</span> es</p>
+<p><span class="math display">\[
+V_i = \pi\left(\frac{2}{5}y_i\right)^2\Delta y = \frac{4}{25}\pi y_i^2 \Delta y.
+\]</span></p>
+<p>Teniendo en cuenta la densidad del agua, la masa de este cilindro de agua es</p>
+<p><span class="math display">\[
+M_i = \delta V_i = 1000 \frac{4}{25}\pi y_i^2 \Delta y = 160\pi y_i^2 \Delta y,
+\]</span></p>
+<p>y por panto, la fuerza que hay que aplicar para elevar esa masa es</p>
+<p><span class="math display">\[
+F_i = g M_i = 9.81 \cdot 160 \pi y_i^2 \Delta y = 1569 \pi y_i^2 \Delta y.
+\]</span></p>
+<p>Como el agua de este sector cilíndrico hay que subirla una distancia <span class="math inline">\(5-y_i\)</span>, el trabajo realizado al elevar este cilindro de agua hasta el desagüe del tanque es</p>
+<p><span class="math display">\[
+W_i = (5-y_i)1569 \pi y_i^2 \Delta y = 1569 \pi( 5y_i^2-y_i^3) \Delta y.
+\]</span></p>
+<p>Por tanto, el trabajo realizado al elevar todos los cilindros de agua de la partición viene dado por la suma de Riemann</p>
+<p><span class="math display">\[
+\sum_{i=1}^n W_i
+\]</span></p>
+<p>lo que nos da una aproximación del trabajo real realizado al vaciar el depósito. A medida que tomemos más subintervalos, en el límite cuando <span class="math inline">\(n\)</span> tiende a <span class="math inline">\(\infty\)</span>, esta suma de Riemann se transforma en la integral definida</p>
+<p><span class="math display">\[
+\int_0^5 1569 \pi (5y^2-y^3)\,dy,
+\]</span></p>
+<p>que nos dará el trabajo necesario para vaciar el tanque.</p>
+<p>Así pues, resolviendo la integral se tiene</p>
+<p><span class="math display">\[\begin{align*}
+W
+&amp;= \int_0^5 1569 \pi 5y^2-y^3\,dy,
+= 1569\pi \left[5\frac{y^3}{3}-\frac{y^4}{4}\right]_0^5 \\
+&amp;= 1569\pi\left(5\frac{5^3}{3}-\frac{5^4}{4}\right)
+= 256727.02 \mbox{ J.}
+\end{align*}\]</span></p>
+</div>
+</div>
 </div>
 <div id="exr-trabajo-deposito-2" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 8.45 </strong></span>Un depósito con forma de sólido de revolución generado al rotar la gráfica de la función <span class="math inline">\(f(x)=\frac{x^2}{2}\)</span> alrededor del eje <span class="math inline">\(y\)</span> en el intervalo de <span class="math inline">\(0\)</span> a <span class="math inline">\(4\)</span> m, contiene <span class="math inline">\(100000\)</span> l de aceite con una densidad de <span class="math inline">\(900\)</span> kg/m<span class="math inline">\(^3\)</span>. ¿Qué trabajo se realiza al vaciar el depósito por arriba?</p>
+<p><span class="theorem-title"><strong>Ejercicio 8.45 </strong></span>Un depósito con forma de sólido de revolución generado al rotar la gráfica de la función <span class="math inline">\(f(x)=\frac{x^2}{2}\)</span> alrededor del eje <span class="math inline">\(y\)</span> en el intervalo de <span class="math inline">\(0\)</span> a <span class="math inline">\(4\)</span> m, contiene <span class="math inline">\(100000\)</span> l de aceite con una densidad de <span class="math inline">\(\delta = 900\)</span> kg/m<span class="math inline">\(^3\)</span>. ¿Qué trabajo se realiza al vaciar el depósito por arriba?</p>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-34-contents" aria-controls="callout-34" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-34" class="callout-34-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>El problema es similar al anterior, pero ahora, el radio de los sectores circulares viene dado por la función <span class="math inline">\(y=\frac{x^2}{2}\)</span>, de manera que <span class="math inline">\(x=\sqrt{2y}\)</span>.</p>
+<p>Tal y como vimos en el <a href="https://aprendeconalf.es/analisis-manual/09-integrales.html#c%C3%A1lculo-de-vol%C3%BAmenes-de-s%C3%B3lidos-de-revoluci%C3%B3n">cálculo de volúmenes de sólidos de revolución</a>, el volumen almacenado en el depósito hasta una altura <span class="math inline">\(h\)</span> es</p>
+<p><span class="math display">\[
+V(h) = \int_0^h \pi \sqrt{2y}^2\,dy = \pi \int_0^h 2y\,dy = \pi [y^2]_0^h = \pi h^2 \mbox{ m}^3.
+\]</span></p>
+<p>Por tanto, si el volumen almacenado es de 100 m<span class="math inline">\(^3\)</span> de aceite, el nivel del depósito es</p>
+<p><span class="math display">\[
+V(h) = \pi h^2 = 100 \Leftrightarrow h = \sqrt{\frac{100}{\pi}} = 5.6419 \mbox{ m}.
+\]</span></p>
+<p>Por tanto, siguiendo la misma estrategia del problema anterior, el trajo total realizado al vaciar el depósito por arriba, viene dado por la integral definida</p>
+<p><span class="math display">\[\begin{align*}
+W
+&amp;= \int_0^{5.6419} g\delta \pi \sqrt{2y}^2 (4-y) ,dy,
+= \int_0^{5.6419} 9.81\cdot 900 \pi 2y (4-y) ,dy, \\
+&amp;= 8829\pi \int_0^{5.6419} 8y-2y^2 ,dy,
+= 8829\pi \left[8\frac{y^2}{2}-2\frac{y^3}{3}\right]_0^{5.6419} \\
+&amp;= 8829\pi \left(8\frac{5.6419^2}{2}-2\frac{5.6419^3}{3}\right)
+= 210777.97 \mbox{ J}
+\end{align*}\]</span></p>
+</div>
+</div>
+</div>
+<div id="exr-centro-masas-1" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 8.46 </strong></span>Una varilla varilla metálica de 20 m de longitud, tiene una densidad <span class="math inline">\(d(x) = \operatorname{sen}(\pi x)\)</span> a una distancia <span class="math inline">\(x\)</span> de su extremo izquierdo. Calcular su centro de masas.</p>
+</div>
+<div id="exr-centro-masas-3" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 8.47 </strong></span>Calcular el centroide del sector circular definido por la ecuación <span class="math inline">\(x^2+y^2=4\)</span> en el primer cuadrante.</p>
+</div>
+<div id="exr-centro-masas-3" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 8.48 </strong></span>Calcular el centroide de la región encerrada por la recta <span class="math inline">\(y=x\)</span> y la curva <span class="math inline">\(y=x^2\)</span>.</p>
+</div>
+<div id="exr-teorema-pappus" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 8.49 </strong></span>El teorema de Pappus establece que si una región plana está a un lado de una recta <span class="math inline">\(l\)</span>, el volumen de revolución generado al rotar la región alrededor de la recta <span class="math inline">\(l\)</span> coincide con el producto del area de la región y la distancia recorrida por su centroide en la rotación. Dar una demostración del teorema.</p>
+</div>
+<div id="exr-valor-medio-1" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 8.50 </strong></span>Calcular el valor medio de la función <span class="math inline">\(f(x)=\sqrt{1-x^2}\)</span> en el intervalo <span class="math inline">\([-1,1]\)</span>.</p>
+</div>
+<div id="exr-velocidad-media" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 8.51 </strong></span>Se deja caer una pelota desde la terraza de un edificio situada a una altura de 25 m. Suponiendo que no hubiese rozamiento, ¿cuál es la velocidad media de la pelota desde su lanzamiento hasta que toca el suelo?</p>
 </div>
 
 

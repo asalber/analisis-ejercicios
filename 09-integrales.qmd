@@ -849,11 +849,98 @@ Calcular la superficie de este [toro](https://www.geogebra.org/m/wy2uquqc) obten
 :::
 
 :::{#exr-cinematica-1}
-Se lanza una pelota verticalmente desde la ventana de un edificio situada a 20 m sobre el suelo con una velocidad inicial de 10 m/s. ¿Cual será la distancia recorrida por la pelota hasta que toque el suelo?
+Se lanza una pelota verticalmente desde la ventana de un edificio situada a 20 m sobre el suelo con una velocidad inicial de 10 m/s. ¿A qué distancia del suelo estará la pelota transcurridos 3 segundos? ¿Qué distancia habrá recorrido hasta ese instante?
+:::
+
+:::{.callout-tip collapse="true"}
+## Solución
+La posición que ocupa la pelota en cada instante $t$ viene dada por la integral de la velocidad $v(t)$, $\int_0^t v(t)\, dt$, pero, a su vez, la velocidad en cada instante viene dada por la integral de la aceleración. En este caso la aceleración que sufre la pelota es la de la fuerza de la gravedad, que es constante y negativa, por lo que tenemos
+
+$$
+v(t) = v(0) + \int_0^t g \,dx = v(0) + [g]_0^t = v(0) + gt.
+$$
+
+Por tanto, el espacio en cada instante $t$ es
+
+$$
+s(t) = s(0) + \int_0^t v(0) + gx\,dx = s(0) + \left[v(0)x+g\frac{x^2}{2}\right]_0^t = s(0) + v(0)t + g\frac{t^2}{2}.
+$$
+
+Como la posición en el instante inicial es $s(0) = 20 m$, la velocidad inicial es $v(0) = 10$ m/s y $g=-9.81$ m/s$^2$, sustituyendo en la expresión anterior se tiene
+
+$$
+s(t) = 20 + 10 t - 9.81 \frac{t^2}{2}.
+$$
+
+Así pues, la posición de la pelota a los 3 segundos es
+
+$$
+s(3) = 20 + 10\cdot 3 -9.81 \frac{3^2}{2} = 5.855 \mbox{ m}.
+$$
+
+Para calcular la distancia recorrida hasta los 3 segundos tenemos que descomponer la región de integración en los intervalos donde la velocidad es positiva y los intervalos donde es negativa, y calcular la integral por separado. Para ello obtenemos el instante donde la velocidad se anula
+
+$$
+v(t) = v(0) + gt = 10 - 9.81 t = 0 \Leftrightarrow t = \frac{10}{9.81} = 1.0194 \mbox{ s}.
+$$
+
+Por tanto, la velocidad es positiva en el intervalo $[0, 1.0194]$ y negativa en el intervalo $[1.0194, 3]$, de manera que la distancia recorrida hasta los 3 segundos es 
+
+\begin{align*}
+\int_0^3 |10 -9.81 t|\,dt 
+&= \int_0^{1.0194} 10 -9.81 t\,dt - \int_{1.0194}^3 10 -9.81 t\,dt \\
+& = \left[10t-9.81\frac{t^2}{2}\right]_0^{1.0194} - \left[10t-9.81\frac{t^2}{2}\right]_{1.0194}^3 \\
+&= 10\cdot 1.0194 - 9.81 \frac{1.0194^2}{2} - \left(10\cdot 3 -9.81\frac{3^2}{2} - 10\cdot 1.0194 + 9.81 \frac{1.0194^2}{2}\right) \\
+&= 5.0968 + 19.2418  = 24.3387 \mbox { m}.
+\end{align*}
 :::
 
 :::{#exr-cinematica-2}
-Un vehículo se mueve con una aceleración dada por la función $a(t)=10\cos(2t)$. Suponiendo que el vehículo parte de un estado de reposo, ¿cuál será la distancia neta recorrida por el vehículo en el intervalo de $[0,2\pi]$? ¿Y la distancia total?
+Un vehículo se mueve con una aceleración dada por la función $a(t)=10\cos(2t)$. Suponiendo que el vehículo parte de un estado de reposo en la posición $0$, ¿cuál será la distancia neta recorrida por el vehículo en el intervalo de $[0,\pi]$? ¿Y la distancia total?
+:::
+
+:::{.callout-tip collapse="true"}
+## Solución
+Calculamos primero la velocidad en cada instante $t$.
+
+\begin{align*}
+v(t) 
+&= v(0) + \int_0^t a(x)\,dx 
+= 0 + \int_0^t 10\cos(2x)\,dx 
+= 5[\operatorname{sen}(2x)]_0^t \\
+&= 5(\operatorname{sen}(2t) - \operatorname{sen}(0))
+= 5 \operatorname{sen}(2t).
+\end{align*}
+
+Y ahora calculamos la distancia neta recorrida.
+
+$$
+\int_0^{\pi} v(t)\,dt 
+= \int_0^{\pi} 5\operatorname{sen}(2t)\, dt 
+= -\frac{5}{2}[\cos(2x)]_0^{\pi}
+= -\frac{5}{2}(\cos(2\pi) - \cos(0))
+= 0.
+$$
+
+Es decir, la distancia neta recorrida en el intervalo $[0,\pi]$ es nula y, por tanto, el vehículo vuelve a la posición inicial en el instante $\pi$.
+
+Para calcular la distancia neta, debemos descomponer el intervalo de integración en los subintervalos donde la velocidad es positiva y los subintervalos donde es negativa, y calcular la integral por separado. Para ello, obtenemos primero los valores donde la velocidad es nula.
+
+$$
+v(t) = 5\operatorname{sen}{2t} = 0 \Leftrightarrow t = \frac{\operatorname{arcsen}(0)}{2} = \pi/2.
+$$
+
+Así pues, la velocidad es positiva en el intervalo $[0,\pi/2]$ y negativa en le intervalo $[\pi/2, \pi]$, de manera que a distancia total recorrida por el vehículo en el intervalo $[0,2\pi]$ es 
+
+\begin{align*}
+\int_0^\pi |v(t)|\,dt 
+&= \int_0^{\pi/2} v(t)\,dt - \int_{\pi/2}^\pi v(t)\,dt 
+= \int_0^{\pi/2} 5\operatorname{sen}(2t)\,dt - \int_{\pi/2}^\pi 5\operatorname{sen}(2t)\,dt\\
+&= -\frac{5}{2}[\cos(2t)]_0^{\pi/2} + \frac{5}{2}[\cos(2t)]_{\pi/2}^\pi \\
+&= -\frac{5}{2}(\cos(\pi)-\cos(0)) + \frac{5}{2}(\cos(2\pi)- \cos(\pi)) \\
+&= -\frac{5}{2}(-4) 
+= 10.
+\end{align*}
 :::
 
 :::{#exr-trabajo-muelle}
@@ -865,7 +952,26 @@ $$
 
 donde $x$ es la distancia de estiramiento desde la posición natural del muelle, y $k$ es una constante de proporcionalidad que es propia del tipo de muelle. 
 
-Si al aplicar una fuerza de 3 N se consigue comprimir el muelle una distancia de $0.1$ m desde su posición natural, ¿qué trabajo se realiza al estirar el muelle $0.2$ m desde su posición natural?
+Si al aplicar una fuerza de $3$ N se consigue comprimir el muelle una distancia de $0.1$ m desde su posición natural, ¿qué trabajo se realiza al estirar el muelle $0.2$ m desde su posición natural?
+:::
+
+:::{.callout-tip collapse="true"}
+## Solución
+Como al aplicar una fuerza de $3$ N el muelle se comprime $0.1$ m, aplicando la ley de Hooke se puede calcular la constante de proporcionalidad del muelle.
+
+$$
+3 \mbox{ N} = k 0.1 \mbox{ m} \Leftrightarrow k = \frac{3 \mbox{ N}}{0.1 \mbox{ m}} = 30 \mbox{ N/m}.
+$$ 
+
+Así pues, la fuerza ejercida por el muelle a una distancia $x$ de su posición natural viene dada por la función $F(x) = 30 x$, y el trabajo realizado al estirarlo $0.2$ m es
+
+$$
+\int_0^{0.2} F(x)\,dx 
+= \int_0^{0.2} 30 x\,dx 
+= 30 \left[\frac{x^2}{2}\right]_0^{0.2} 
+= 30 \frac{0.2^2}{2} 
+= 0.6 \mbox{ J}.
+$$
 :::
 
 :::{#exr-trabajo-cohete}
@@ -878,17 +984,124 @@ $$
 donde $g_h$ es la aceleración de la gravedad a una altura $h$ m sobre la superficie terrestre, $g_0=9.81$ m/s$^2$ es la aceleración de la gravedad en la superficie terrestre, y $R=6371$ km es el radio de la Tierra.
 :::
 
+:::{.callout-tip collapse="true"}
+## Solución
+
+:::
+
 :::{#exr-trabajo-deposito}
-Un depósito con forma de cono invertido de radio $2$ m y altura $5$ m está lleno de agua. ¿Qué trabajo se realiza al vaciar el tanque por arriba?
+Un depósito con forma de cono invertido de radio $2$ m y altura $5$ m está lleno de agua. ¿Qué trabajo se realiza al vaciar el tanque por arriba?  
+Nota: La densidad del agua es de $\delta = 1000$ kg/m$^3$.
+:::
+
+:::{.callout-tip collapse="true"}
+## Solución
+En este caso, aunque la aceleración de la gravedad es constante, el volumen de agua a cada altura $y$ es distinto, por lo que su masa y la fuerza necesaria para elevarla será distinta. 
+
+Siguiendo la misma estrategia de las sumas de Riemann, podemos descomponer el intervalo $[0, 5]$ de la altura del depósito en subintervalos de igual amplitud de acuerdo a una partición $P_n=\{y_0=0, y_1, \ldots, y_n=5\}$, y considerar, para cada subintervalo $[y_{i-1}, y_i]$ el cilindro de radio $x_i=f(y_i)$, donde $f(y)$ es la función de la generatriz del cono, y altura $\Delta y=y_i-y_{i-1}$. Como la ecuación de la recta que define la generatriz del cono es $y=\frac{5}{2}x$, expresando $x$ en función de $y$ se tiene que $x_i=\frac{2}{5}y_i$, de manera que el volumen del cilindro correspondiente al intervalo $[x_{i-1},x_i]$ es
+
+$$
+V_i = \pi\left(\frac{2}{5}y_i\right)^2\Delta y = \frac{4}{25}\pi y_i^2 \Delta y.
+$$
+
+Teniendo en cuenta la densidad del agua, la masa de este cilindro de agua es
+
+$$
+M_i = \delta V_i = 1000 \frac{4}{25}\pi y_i^2 \Delta y = 160\pi y_i^2 \Delta y,
+$$
+
+y por panto, la fuerza que hay que aplicar para elevar esa masa es
+
+$$
+F_i = g M_i = 9.81 \cdot 160 \pi y_i^2 \Delta y = 1569 \pi y_i^2 \Delta y.
+$$
+
+Como el agua de este sector cilíndrico hay que subirla una distancia $5-y_i$, el trabajo realizado al elevar este cilindro de agua hasta el desagüe del tanque es 
+
+$$
+W_i = (5-y_i)1569 \pi y_i^2 \Delta y = 1569 \pi( 5y_i^2-y_i^3) \Delta y.
+$$
+
+Por tanto, el trabajo realizado al elevar todos los cilindros de agua de la partición viene dado por la suma de Riemann
+
+$$
+\sum_{i=1}^n W_i
+$$
+
+lo que nos da una aproximación del trabajo real realizado al vaciar el depósito. A medida que tomemos más subintervalos, en el límite cuando $n$ tiende a $\infty$, esta suma de Riemann se transforma en la integral definida
+
+$$
+\int_0^5 1569 \pi (5y^2-y^3)\,dy,
+$$
+
+que nos dará el trabajo necesario para vaciar el tanque. 
+
+Así pues, resolviendo la integral se tiene
+
+\begin{align*}
+W 
+&= \int_0^5 1569 \pi 5y^2-y^3\,dy,
+= 1569\pi \left[5\frac{y^3}{3}-\frac{y^4}{4}\right]_0^5 \\
+&= 1569\pi\left(5\frac{5^3}{3}-\frac{5^4}{4}\right)
+= 256727.02 \mbox{ J.}
+\end{align*}
 :::
 
 :::{#exr-trabajo-deposito-2}
-Un depósito con forma de sólido de revolución generado al rotar la gráfica de la función $f(x)=\frac{x^2}{2}$ alrededor del eje $y$ en el intervalo de $0$ a $4$ m, contiene $100000$ l de aceite con una densidad de $900$ kg/m$^3$. ¿Qué trabajo se realiza al vaciar el depósito por arriba?
+Un depósito con forma de sólido de revolución generado al rotar la gráfica de la función $f(x)=\frac{x^2}{2}$ alrededor del eje $y$ en el intervalo de $0$ a $4$ m, contiene $100000$ l de aceite con una densidad de $\delta = 900$ kg/m$^3$. ¿Qué trabajo se realiza al vaciar el depósito por arriba?
 :::
 
+:::{.callout-tip collapse="true"}
+## Solución
+El problema es similar al anterior, pero ahora, el radio de los sectores circulares viene dado por la función $y=\frac{x^2}{2}$, de manera que $x=\sqrt{2y}$.
 
+Tal y como vimos en el [cálculo de volúmenes de sólidos de revolución](https://aprendeconalf.es/analisis-manual/09-integrales.html#c%C3%A1lculo-de-vol%C3%BAmenes-de-s%C3%B3lidos-de-revoluci%C3%B3n), el volumen almacenado en el depósito hasta una altura $h$ es 
 
+$$
+V(h) = \int_0^h \pi \sqrt{2y}^2\,dy = \pi \int_0^h 2y\,dy = \pi [y^2]_0^h = \pi h^2 \mbox{ m}^3.
+$$
 
+Por tanto, si el volumen almacenado es de 100 m$^3$ de aceite, el nivel del depósito es
 
+$$
+V(h) = \pi h^2 = 100 \Leftrightarrow h = \sqrt{\frac{100}{\pi}} = 5.6419 \mbox{ m}.
+$$
 
+Por tanto, siguiendo la misma estrategia del problema anterior, el trajo total realizado al vaciar el depósito por arriba, viene dado por la integral definida
+
+\begin{align*}
+W 
+&= \int_0^{5.6419} g\delta \pi \sqrt{2y}^2 (4-y) ,dy,
+= \int_0^{5.6419} 9.81\cdot 900 \pi 2y (4-y) ,dy, \\
+&= 8829\pi \int_0^{5.6419} 8y-2y^2 ,dy,
+= 8829\pi \left[8\frac{y^2}{2}-2\frac{y^3}{3}\right]_0^{5.6419} \\
+&= 8829\pi \left(8\frac{5.6419^2}{2}-2\frac{5.6419^3}{3}\right)
+= 210777.97 \mbox{ J}
+\end{align*}
+:::
+
+:::{#exr-centro-masas-1}
+Una varilla varilla metálica de 20 m de longitud, tiene una densidad $d(x) = \operatorname{sen}(\pi x)$ a una distancia $x$ de su extremo izquierdo. Calcular su centro de masas.
+:::
+
+:::{#exr-centro-masas-3}
+Calcular el centroide del sector circular definido por la ecuación $x^2+y^2=4$ en el primer cuadrante.
+:::
+
+:::{#exr-centro-masas-3}
+Calcular el centroide de la región encerrada por la recta $y=x$ y la curva $y=x^2$.
+:::
+
+:::{#exr-teorema-pappus}
+El teorema de Pappus establece que si una región plana está a un lado de una recta $l$, el volumen de revolución generado al rotar la región alrededor de la recta $l$ coincide con el producto del area de la región y la distancia recorrida por su centroide en la rotación.
+Dar una demostración del teorema.
+:::
+
+:::{#exr-valor-medio-1}
+Calcular el valor medio de la función $f(x)=\sqrt{1-x^2}$ en el intervalo $[-1,1]$.
+:::
+
+:::{#exr-velocidad-media}
+Se deja caer una pelota desde la terraza de un edificio situada a una altura de 25 m. Suponiendo que no hubiese rozamiento, ¿cuál es la velocidad media de la pelota desde su lanzamiento hasta que toca el suelo?
+:::
 
