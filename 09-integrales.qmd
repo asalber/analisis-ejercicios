@@ -1094,7 +1094,7 @@ Calcular el centroide de la región encerrada por la recta $y=x$ y la curva $y=x
 
 :::{#exr-teorema-pappus}
 El teorema de Pappus establece que si una región plana está a un lado de una recta $l$, el volumen de revolución generado al rotar la región alrededor de la recta $l$ coincide con el producto del area de la región y la distancia recorrida por su centroide en la rotación.
-Dar una demostración del teorema.
+Dar una demostración del teorema para el caso particular en el que la región plana está delimitada por dos funciones $f(x)$ y $g(x)$ en un intervalo $[a,b]$.
 :::
 
 :::{#exr-valor-medio-1}
