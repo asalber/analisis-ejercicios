@@ -1531,22 +1531,308 @@ W
 </div>
 </div>
 <div id="exr-centro-masas-1" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 8.46 </strong></span>Una varilla varilla metálica de 20 m de longitud, tiene una densidad <span class="math inline">\(d(x) = \operatorname{sen}(\pi x)\)</span> a una distancia <span class="math inline">\(x\)</span> de su extremo izquierdo. Calcular su centro de masas.</p>
+<p><span class="theorem-title"><strong>Ejercicio 8.46 </strong></span>Una varilla varilla metálica de 20 m de longitud, tiene una densidad <span class="math inline">\(f(x)=\operatorname{sen}(\pi x)+1\)</span> a una distancia <span class="math inline">\(x\)</span> de su extremo izquierdo. Calcular su centro de masas.</p>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-35-contents" aria-controls="callout-35" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-35" class="callout-35-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Para calcular el <a href="https://aprendeconalf.es/analisis-manual/09-integrales.html#centro-de-masas-de-una-varilla-con-densidad-variable">centro de masas de una varilla con densidad variable</a> <span class="math inline">\(f(x)\)</span> tenemos que dividir su momento y su masa, es decir, calcular el cociente de integrales</p>
+<p><span class="math display">\[
+\bar x = \frac{\int_0^{20} x f(x)\,dx}{\int_0^{20}f(x)\,dx},
+\]</span></p>
+<p>así que procedemos a calcular estas dos integrales,</p>
+<p><span class="math display">\[\begin{align*}
+\int_0^{20} f(x)\,dx
+&amp;= \int_0^{20} \operatorname{sen}(\pi x)+1 \,dx
+= \frac{-1}{\pi}[\cos(\pi x)]_0^{20} + [x]_0^{20}\\
+&amp;= \frac{-1}{\pi}(\cos(20\pi)-\cos(0)) + 20
+= 20
+\end{align*}\]</span></p>
+<p>y</p>
+<p><span class="math display">\[\begin{align*}
+\int_0^{20} xf(x)\,dx
+&amp;= \int_0^{20} x(\operatorname{sen}(\pi x)+1) \,dx
+= \int_0^{20} x\operatorname{sen}(\pi x)\,dx + \int_0^{20}x \,dx \\
+&amp;= \frac{1}{\pi^2}[\operatorname{sen}(\pi x)]_0^{20}-\frac{1}{\pi}[x\cos(\pi x)]_0^{20} + \frac{1}{2}[x^2]_0^{20} \tag{partes} \\
+&amp;= \frac{1}{\pi^2}(\operatorname{sen}(20\pi)-\operatorname{sen}(0)) -\frac{1}{\pi}(20\cos(20\pi)-0\cos(0)) + \frac{20^2}{2} \\
+&amp;= -\frac{20}{\pi}+200
+\approx 193.6338
+\end{align*}\]</span></p>
+<p>Por tanto, se tiene</p>
+<p><span class="math display">\[
+\bar x = \frac{\int_0^{20} x f(x)\,dx}{\int_0^{20}f(x)\,dx},
+= \frac{193.6338}{20}
+= 9.6817.
+\]</span></p>
+</div>
+</div>
 </div>
 <div id="exr-centro-masas-3" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 8.47 </strong></span>Calcular el centroide del sector circular definido por la ecuación <span class="math inline">\(x^2+y^2=4\)</span> en el primer cuadrante.</p>
+<p><span class="theorem-title"><strong>Ejercicio 8.47 </strong></span>Calcular el centroide del sector circular definido por la ecuación <span class="math inline">\(x^2+y^2=1\)</span> en el primer cuadrante.</p>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-36-contents" aria-controls="callout-36" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-36" class="callout-36-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>En primer lugar expresamos <span class="math inline">\(y\)</span> en función de <span class="math inline">\(x\)</span>, de manera que se obtiene <span class="math inline">\(y = \pm\sqrt{1-x^2}\)</span>. Como estamos interesados en la región del primer cuadrante, tomamos la raíz positiva, es decir, la función que delimita la región es <span class="math inline">\(f(x)=\sqrt{1-x^2}\)</span>.</p>
+<p>Para calcular el <a href="https://aprendeconalf.es/analisis-manual/09-integrales.html#centro-de-masas-de-una-regi%C3%B3n-plana-con-densidad-fija">centro de masas una región plana con densidad constante</a> <span class="math inline">\(f(x)\)</span> tenemos que calcular las coordenadas del centroide por separado. Para calcular la primera coordenada del centroide tenemos que calcular el cociente de integrales</p>
+<p><span class="math display">\[
+\bar x = \frac{\int_0^1 x f(x)\,dx}{\int_0^1f(x)\,dx},
+\]</span></p>
+<p>así que procedemos a calcular estas dos integrales. Calculamos primero la integral del denominador que se corresponde con el area encerrada entre la gráfica de la función y el eje <span class="math inline">\(x\)</span> en el intervalo <span class="math inline">\([0,1]\)</span>.</p>
+<p><span class="math display">\[\begin{align*}
+\int_0^1 f(x)\,dx
+&amp;= \int_0^1 \sqrt{1-x^2} \,dx
+= \int_0^{\pi/2} \cos(\theta)^2\,d\theta  \tag{cambio $x=\operatorname{sen}(\theta)$}\\
+&amp;= \int_0^{\pi/2} \frac{1+\cos(2\theta)}{2}\,d\theta
+= \frac{1}{2}\left[x+\frac{\operatorname{sen}(2\theta)}{2}\right]_0^{\pi/2} \\
+&amp;= \frac{1}{2}\left(\frac{\pi}{2}+\frac{\operatorname{sen}(\pi)}{2}-\frac{\operatorname{sen}(0)}{2}\right)
+= \frac{\pi}{4}
+\approx 0.7854.
+\end{align*}\]</span></p>
+<p>Y ahora calculamos la integral del numerador que se corresponde con el momento de la región con respecto al eje <span class="math inline">\(y\)</span>.</p>
+<p><span class="math display">\[\begin{align*}
+\int_0^{20} xf(x)\,dx
+&amp;= \int_0^1 x\sqrt{1-x^2} \,dx
+= -\frac{1}{2}\int_1^0 u^{1/2}\,du  \tag{cambio $u=1-x^2$} \\
+&amp;= \frac{-1}{2}\left[\frac{u^{3/2}}{3/2}\right]_1^0
+= \frac{-1}{3}[u^{3/2}]_1^0
+= \frac{-1}{3}(0-1)
+= \frac{1}{3}
+\end{align*}\]</span></p>
+<p>Por tanto, se tiene</p>
+<p><span class="math display">\[
+\bar x = \frac{\int_0^{1} x f(x)\,dx}{\int_0^{1}f(x)\,dx}
+= \frac{1/3}{\pi/4}
+= \frac{4}{3\pi}
+\approx 0.4244.
+\]</span></p>
+<p>Y para calcular la segunda coordenada del centroide tenemos que calcular el cociente de integrales</p>
+<p><span class="math display">\[
+\bar y = \frac{\int_0^1 f(x)^2\,dx}{2\int_0^1f(x)\,dx},
+\]</span></p>
+<p>La integral del denominador ya la hemos calculado previamente, así que queda calcular la integral del numerador.</p>
+<p><span class="math display">\[\begin{align*}
+\int_0^{20} f(x)^2\,dx
+&amp;= \int_0^1 (\sqrt{1-x^2})^2 \,dx
+= \int_0^1 1-x^2 \,dx
+= \left[x-\frac{x^3}{3}\right]_0^1 \\
+&amp;= \left(1-\frac{1^3}{3}\right)
+= \frac{2}{3}
+\end{align*}\]</span></p>
+<p>Por tanto, se tiene</p>
+<p><span class="math display">\[
+\bar y = \frac{\int_0^1 f(x)^2\,dx}{2\int_0^1f(x)\,dx}
+= \frac{2/3}{2\pi/4}
+= \frac{4}{3\pi}
+\approx 0.4244.
+\]</span></p>
+<p>Así pues, el centroide es el punto de coordenadas <span class="math inline">\(\left(\frac{4}{3\pi}, \frac{4}{3\pi}\right)\)</span>. Como se observa las dos coordenadas son iguales, algo que tiene sentido desde un punto de vista geométrico.</p>
+</div>
+</div>
 </div>
 <div id="exr-centro-masas-3" class="theorem exercise">
 <p><span class="theorem-title"><strong>Ejercicio 8.48 </strong></span>Calcular el centroide de la región encerrada por la recta <span class="math inline">\(y=x\)</span> y la curva <span class="math inline">\(y=x^2\)</span>.</p>
 </div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-37-contents" aria-controls="callout-37" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-37" class="callout-37-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>En primer lugar calculamos los valores de <span class="math inline">\(x\)</span> en los que las gráficas de ambas funciones se cortan, resolviendo la ecuación que resulta de igualar sus ecuaciones.</p>
+<p><span class="math display">\[
+x = x^2 \Leftarrow x^2-x = 0 \Leftarrow x(x-1) = 0 \Leftarrow x=0 \mbox{ o } x=1.
+\]</span></p>
+<p>Así pues se trata de calcular el centroide de la región comprendida entre las gráficas de <span class="math inline">\(f(x)=x\)</span> y <span class="math inline">\(g(x)=x^2\)</span> en el intervalo <span class="math inline">\([0,1]\)</span>.</p>
+<p>Para calcular el <a href="https://aprendeconalf.es/analisis-manual/09-integrales.html#centro-de-masas-de-una-regi%C3%B3n-plana-con-densidad-fija">centro de masas una región plana con densidad constante</a> <span class="math inline">\(f(x)\)</span> tenemos que calcular las coordenadas del centroide por separado. Para calcular la primera coordenada del centroide tenemos que calcular el cociente de integrales</p>
+<p><span class="math display">\[
+\bar x = \frac{\int_0^1 x (f(x)-g(x))\,dx}{\int_0^1f(x)-g(x)\,dx},
+\]</span></p>
+<p>así que procedemos a calcular estas dos integrales. Calculamos primero la integral del denominador que se corresponde con el área encerrada entre las gráficas de las dos funciones.</p>
+<p><span class="math display">\[\begin{align*}
+\int_0^1 x-x^2\,dx
+&amp;= \left[\frac{x^2}{2}-\frac{x^3}{3}\right]_0^1
+= \left(\frac{1^2}{2}-\frac{1^3}{3}\right)
+= \frac{1}{6}.
+\end{align*}\]</span></p>
+<p>Ahora calculamos la integral del numerador que se corresponde con el momento de la región con respecto al eje <span class="math inline">\(y\)</span>.</p>
+<p><span class="math display">\[\begin{align*}
+\int_0^1 x(x-x^2)\,dx
+&amp;= \int_0^1 x^2-x^3\,dx
+= \left[\frac{x^3}{3}-\frac{x^4}{4}\right]_0^1
+= \left(\frac{1^3}{3}-\frac{1^4}{4}\right)
+= \frac{1}{12}.
+\end{align*}\]</span></p>
+<p>Por tanto, la primera coordenada del centroide es</p>
+<p><span class="math display">\[
+\bar x = \frac{\int_0^1 x (f(x)-g(x))\,dx}{\int_0^1f(x)-g(x)\,dx}
+= \frac{1/12}{1/6}
+= \frac{1}{2}
+= 0.5.
+\]</span></p>
+<p>Y para calcular la segunda coordenada del centroide tenemos que calcular el cociente de integrales</p>
+<p><span class="math display">\[
+\bar y = \frac{\int_0^1 f(x)^2-g(x)^2\,dx}{2\int_0^1f(x)-g(x)\,dx},
+\]</span></p>
+<p>La integral del denominador ya la hemos calculado previamente, así que queda calcular la integral del numerador.</p>
+<p><span class="math display">\[\begin{align*}
+\int_0^1 x^2 - (x^2)^2\,dx
+&amp;= \int_0^1 x^2-x^4\,dx
+= \left[\frac{x^3}{3}-\frac{x^5}{5}\right]_0^1
+= \left(\frac{1^3}{3}-\frac{1^5}{5}\right)
+= \frac{2}{15}.
+\end{align*}\]</span></p>
+<p>Por tanto, se tiene</p>
+<p><span class="math display">\[
+\bar y = \frac{\int_0^1 f(x)^2-g(x)^2\,dx}{2\int_0^1f(x)-g(x)\,dx}
+= \frac{2/15}{2/6}
+= \frac{2}{5}
+= 0.4.
+\]</span></p>
+<p>Así pues, el centroide es el punto de coordenadas <span class="math inline">\((0.5, 0.4)\)</span>.</p>
+</div>
+</div>
+</div>
 <div id="exr-teorema-pappus" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 8.49 </strong></span>El teorema de Pappus establece que si una región plana está a un lado de una recta <span class="math inline">\(l\)</span>, el volumen de revolución generado al rotar la región alrededor de la recta <span class="math inline">\(l\)</span> coincide con el producto del area de la región y la distancia recorrida por su centroide en la rotación. Dar una demostración del teorema para el caso particular en el que la región plana está delimitada por dos funciones <span class="math inline">\(f(x)\)</span> y <span class="math inline">\(g(x)\)</span> en un intervalo <span class="math inline">\([a,b]\)</span>.</p>
+<p><span class="theorem-title"><strong>Ejercicio 8.49 </strong></span>El teorema de Pappus establece que si una región plana está a un lado de una recta <span class="math inline">\(l\)</span>, el volumen de revolución generado al rotar la región alrededor de la recta <span class="math inline">\(l\)</span> coincide con el producto del area de la región y la distancia recorrida por su centroide en la rotación. Dar una demostración del teorema para el caso particular en el que la región plana está delimitada por dos funciones <span class="math inline">\(f(x)\)</span> y <span class="math inline">\(g(x)\)</span> en un intervalo <span class="math inline">\([a,b]\)</span> y el eje de rotación es el eje <span class="math inline">\(y\)</span>.</p>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-38-contents" aria-controls="callout-38" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-38" class="callout-38-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Aplicando el método de los envoltorios cilíndricos para calcular el volumen del sólido de revolución que se obtiene al rotar la región comprendida entre las gráficas de <span class="math inline">\(f\)</span> y <span class="math inline">\(g\)</span> en el intervalo <span class="math inline">\([a,b]\)</span> alrededor del eje <span class="math inline">\(y\)</span> se tiene</p>
+<p><span class="math display">\[
+V = \int_a^b 2\pi x(f(x)-g(x))\, dx = 2\pi \int_a^b x(f(x)-g(x))\, dx
+\]</span></p>
+<p>Ahora bien, como la primera coordenada del centroide se calcula mediante el cociente de integrales</p>
+<p><span class="math display">\[
+\bar x = \frac{\int_a^b x (f(x)-g(x))\,dx}{\int_a^b f(x)-g(x)\,dx},
+\]</span></p>
+<p>de aquí se deduce que</p>
+<p><span class="math display">\[
+\int_a^b x(f(x)-g(x))\, dx  = \bar x \int_a^b f(x)-g(x)\,dx.
+\]</span></p>
+<p>Así pues, el volumen es</p>
+<p><span class="math display">\[
+2\pi \int_a^b x(f(x)-g(x))\, dx = 2\pi \bar x \int_a^b f(x)-g(x)\,dx,
+\]</span></p>
+<p>donde <span class="math inline">\(2\pi \bar x\)</span> es la distancia recorrida por el centroide en una rotación completa alrededor del eje <span class="math inline">\(y\)</span>, y <span class="math inline">\(\int_a^b f(x)-g(x)\,dx\)</span> es el área de la región encerrada entre las gráficas de <span class="math inline">\(f\)</span> y <span class="math inline">\(g\)</span> en el intervalo <span class="math inline">\([a,b]\)</span>.</p>
+</div>
+</div>
 </div>
 <div id="exr-valor-medio-1" class="theorem exercise">
 <p><span class="theorem-title"><strong>Ejercicio 8.50 </strong></span>Calcular el valor medio de la función <span class="math inline">\(f(x)=\sqrt{1-x^2}\)</span> en el intervalo <span class="math inline">\([-1,1]\)</span>.</p>
 </div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-39-contents" aria-controls="callout-39" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-39" class="callout-39-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Para calcular el <a href="https://aprendeconalf.es/analisis-manual/09-integrales.html#c%C3%A1lculo-de-la-media-de-una-funci%C3%B3n">valor medio de una función</a> en el intervalo <span class="math inline">\([-1,1]\)</span> tenemos que calcular la siguiente integral</p>
+<p><span class="math display">\[\begin{align*}
+\bar f[-1,1]
+&amp;= \frac{1}{1-(-1)}\int_{-1}^1 f(x)\,dx
+= \frac{1}{2}\int_{-1}^1 \sqrt{1-x^2}\,dx \\
+&amp;= \frac{1}{2}\int_{-\pi/2}^{\pi/2} \cos(\theta)^2\,d\theta  
+= \frac{1}{2}\int_{-\pi/2}^{\pi/2} \frac{1+\cos(2\theta)}{2}\,d\theta \tag{cambio $x=\operatorname{sen}(\theta)$} \\
+&amp;= \frac{1}{4}\left[x+\frac{\operatorname{sen}(2\theta)}{2}\right]_{-\pi/2}^{\pi/2} \\
+&amp;= \frac{1}{4}\left(\frac{\pi}{2}+\frac{\operatorname{sen}(\pi)}{2}+\frac{\pi}{2}-\frac {\operatorname{sen}(-\pi)}{2}\right)
+= \frac{\pi}{4}.
+\end{align*}\]</span></p>
+</div>
+</div>
+</div>
 <div id="exr-velocidad-media" class="theorem exercise">
 <p><span class="theorem-title"><strong>Ejercicio 8.51 </strong></span>Se deja caer una pelota desde la terraza de un edificio situada a una altura de 25 m. Suponiendo que no hubiese rozamiento, ¿cuál es la velocidad media de la pelota desde su lanzamiento hasta que toca el suelo?</p>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-40-contents" aria-controls="callout-40" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-40" class="callout-40-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>La única fuerza que actúa sobre la pelota es la fuerza de la gravedad, que podemos suponer con una aceleración constante <span class="math inline">\(g=-9.81\)</span> m/s<span class="math inline">\(^2\)</span>. Según las fórmulas de <a href="https://aprendeconalf.es/analisis-manual/09-integrales.html#cinem%C3%A1tica">cinemática</a>, la posición que ocupa la pelota en cada instante <span class="math inline">\(t\)</span> viene dada por la expresión</p>
+<p><span class="math display">\[
+s(t) = s(0) + \int_0^t v(x)\,dx,
+\]</span></p>
+<p>donde <span class="math inline">\(s(0)\)</span> es la posición inicial, en este caso <span class="math inline">\(25\)</span> m, y <span class="math inline">\(v(x)\)</span> es la función velocidad, que, a su vez, se obtiene mediante la expresión</p>
+<p><span class="math display">\[
+v(t) = v(0) + \int_0^t a(x)\,dx,
+\]</span> donde <span class="math inline">\(v(0)\)</span> es la velocidad inicial, en este caso <span class="math inline">\(0\)</span> m/s, y <span class="math inline">\(a(x)\)</span> es la función aceleración, que en este caso es constante <span class="math inline">\(g=-9.81\)</span> m/s<span class="math inline">\(^2\)</span>, de manera que se tiene</p>
+<p><span class="math display">\[
+v(t) = \int_0^t -9.81 \,dx
+= -9.81[x]_0^t
+= -9.81t,
+\]</span></p>
+<p>y sustituyendo en la expresión de la posición de la pelota se tiene</p>
+<p><span class="math display">\[
+s(t) = 25 + \int_0^t -9.81x\,dx,
+= 25 - 9.81 \left[\frac{x^2}{2}\right]_0^t
+= 25 - 4.905 t^2.
+\]</span></p>
+<p>Igualando la posición a <span class="math inline">\(0\)</span> obtenemos el tiempo que tarda la pelota en alcanzar el suelo.</p>
+<p><span class="math display">\[
+s(t) = 0
+\Leftrightarrow 25 - 4.905 t^2 = 0
+\Leftrightarrow t^2 = \frac{25}{4.905} = 5.0968
+\Leftrightarrow t = \sqrt{5.0968} = 2.2576 \mbox{ s}.
+\]</span></p>
+<p>Así pues, tenemos que calcular la velocidad media en el intervalo <span class="math inline">\([0, 2.2576]\)</span>. El <a href="https://aprendeconalf.es/analisis-manual/09-integrales.html#c%C3%A1lculo-de-la-media-de-una-funci%C3%B3n">valor medio de la función</a> velocidad en ese intervalo viene dado por la siguiente expresión</p>
+<p><span class="math display">\[\begin{align*}
+\bar v[0,2.2576]
+&amp;= \frac{1}{2.2576} \int_0^{2.2576} v(x)\, dx
+= \frac{1}{2.2576} \int_0^{2.2576} -9.81 x\, dx \\
+&amp;= \frac{-9.81}{2.2576} \left[\frac{x^2}{2}\right]_0^{2.2576}
+= \frac{-9.81}{2.2576}\frac{2.2576^2}{2}
+= -11.0735 \mbox{ m/s}.
+\end{align*}\]</span></p>
+</div>
+</div>
 </div>
 
 
