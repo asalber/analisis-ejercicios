@@ -773,10 +773,56 @@ Una tomografía ofrece secciones transversales del cerebro de un paciente cada 1
 Calcular de forma aproximada el volumen del cerebro. 
 :::
 
-:::{#exr-volumen-piramide}
-Calcular el volumen de la esta [pirámide](https://www.geogebra.org/m/g2wu3tqw). Calcular a continuación el volumen de una pirámide de base cuadrada de lado $l$ y altura $h$.
+:::{.callout-tip collapse="true"}
+## Solución
+Podemos calcular el volumen del cerebro de manera aproximada tomando secciones cilíndricas con base la sección transversal, cuya área es conocida, y altura la distancia entre las secciones consecutivas, en este caso 1.5 cm. Así se obtiene la siguiente suma de Riemann.
+
+$$ 
+(32 + 65 + 115 + 132 + 147 + 155 + 141 + 123 + 93 + 58) * 1.5 = 1591.5 \mbox{cm}^3.
+$$
 :::
 
+:::{#exr-volumen-piramide}
+Calcular el volumen de la esta [pirámide](https://www.geogebra.org/m/g2wu3tqw) con base cuadrada de lado 2 y altura 2. Calcular a continuación el volumen de una pirámide de base cuadrada de lado $l$ y altura $h$.
+:::
+
+:::{.callout-tip collapse="true"}
+## Solución
+Calcularemos el volumen de la pirámide tomando secciones transversales con respecto al eje $x$ en el intervalo $[0,2]$.
+El apotema de la pirámide está inscrito en la recta de ecuación $y=-\frac{1}{2}x+1$, por lo que, para cualquier $a\in[0,2]$, la intersección de la pirámide con el plano $x=a$ es un cuadrado de 
+lado $2(-\frac{a}{2}+1)=2-a$, y por tanto su área es $(2-a)^2$. 
+Así pues, para calcular el volumen de la pirámide basta con integrar la función $f(x)=(2-x)^2$, que nos da el área de la sección transversal al eje $x$ en $x$, en el intervalo $[0,2]$.
+
+\begin{align*}
+\int_0^2 f(x)\,dx 
+&= \int_0^2 (2-x)^2\,dx 
+= \int_0^2 x^2-4x+4\,dx \\
+&= \left[\frac{x^3}{3}-2x^2+4x\right]_0^2
+= \left(\frac{2^3}{3}-2\cdot 2^2+4\cdot 2\right)
+= 8/3 \mbox{ unidades}^3.
+\end{align*}
+
+En general, para una pirámide de lado $l$ y altura $h$, lo único que cambia es el intervalo de integración, que será $[0,h]$, y la recta que define el apotema, que será $y=-\frac{l}{2h}x+\frac{l}{2}$, por lo que el área de las secciones transversales vendrá dado por la función 
+
+$$
+f(x)=\left(2\left(-\frac{lx}{2h}+\frac{l}{2}\right)\right)^2 
+= \left(-\frac{lx}{h}+l\right)^2
+=\frac{l^2x^2}{h^2}-\frac{2l^2x}{h}+l^2.
+$$
+
+Así pues, el volumen viene dado por la siguiente integral.
+
+\begin{align*}
+\int_0^h f(x)\,dx
+&= \int_0^h \frac{l^2x^2}{h^2}-\frac{2l^2x}{h}+l^2\,dx 
+= \left[\frac{l^2x^3}{3h^2}-\frac{l^2x^2}{h}+l^2x\right]_0^h \\
+&= \left(\frac{l^2h^3}{3h^2}-\frac{l^2h^2}{h}+l^2h\right) 
+= \frac{1}{3}l^2h,
+\end{align*}
+
+que efectivamente es la fórmula que da el volumen de una pirámide de base cuadrada con lado $l$ y altura $h$.
+:::
+ 
 :::{#exr-volumen-revolucion}
 Calcular el volumen del sólido de revolución generado por la rotación al rededor del eje $y$ del area comprendida entre las funciones $f(x)=x$ y $g(x)=x^2$. Calcular también el volumen del sólido de revolución generado al rotar esa misma área alrededor de la recta $x=1$.
 :::
