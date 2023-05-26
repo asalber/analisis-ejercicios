@@ -824,7 +824,40 @@ que efectivamente es la fórmula que da el volumen de una pirámide de base cuad
 :::
  
 :::{#exr-volumen-revolucion}
-Calcular el volumen del sólido de revolución generado por la rotación al rededor del eje $y$ del area comprendida entre las funciones $f(x)=x$ y $g(x)=x^2$. Calcular también el volumen del sólido de revolución generado al rotar esa misma área alrededor de la recta $x=1$.
+Calcular el volumen del sólido de revolución generado por la rotación al rededor del eje $y$ del area comprendida entre las gráficas de las funciones $f(x)=x$ y $g(x)=x^2$. Calcular también el volumen del sólido de revolución generado al rotar esa misma área alrededor de la recta $x=1$.
+:::
+
+:::{.callout-tip collapse="true"}
+## Solución
+Para ver los puntos donde se cortan las gráficas de las dos funciones resolvemos la ecuación que surge al igualarlas.
+
+$$
+x = x^2 \Leftrightarrow x^2-x = 0 \Leftrightarrow x(x-1)= 0 \Leftrightarrow x=0 \mbox{ o } x=1.
+$$
+
+Para calcular el volumen del sólido de revolución que se obtiene al rotar alrededor del eje $y$ la región comprendida entre las gráficas de $f$ y $g$ en el intervalo $[0,1]$, utilizaremos sumas de Riemann de [envoltorios cilíndricos](https://aprendeconalf.es/analisis-manual/09-integrales.html#c%C3%A1lculo-de-vol%C3%BAmenes-con-envoltorios-cil%C3%ADndricos). Para ello hay que calcular la siguiente integral
+
+\begin{align*}
+\int_0^1 2\pi x (f(x)-g(x))\,dx 
+&= \int_0^1 2\pi x (x-x^2)\,dx 
+= 2\pi \int_0^1 x^2-x^3 \, dx \\
+&= 2\pi \left[\frac{x^3}{3}-\frac{x^4}{4}\right]_0^1
+= 2\pi \left(\frac{1^3}{3}-\frac{1^4}{4}\right)
+= \pi/6.
+\end{align*}
+
+Si en lugar de rotar la región alrededor de la recta $x=0$ la rotamos alrededor de la recta $x=1$, lo único que cambia, al utilizar envoltorios cilíndricos es el radio del circulo de la base de los cilindros, que ahora será $1-x$ en lugar de $x$, por lo que el volumen del sólido de revolución generado viene dado por la integral 
+
+\begin{align*}
+\int_0^1 2\pi (1-x) (f(x)-g(x))\,dx 
+&= \int_0^1 2\pi (1-x) (x-x^2)\,dx 
+= 2\pi \int_0^1 x-2x^2+x^3 \, dx \\
+&= 2\pi \left[\frac{x^2}{2}-2\frac{x^3}{3}+\frac{x^4}{4}\right]_0^1
+= 2\pi \left(\frac{1^2}{2}-2\frac{1^3}{3}+\frac{1^4}{4}\right)
+= \pi/6.
+\end{align*}
+
+Así pues, se obtiene el mismo volumen.
 :::
 
 :::{#exr-volumen-toro}
@@ -835,9 +868,55 @@ Calcular el volumen de este [toro](https://www.geogebra.org/m/wy2uquqc) obtenido
 Calcular el volumen del sólido de revolución generado por la rotación al rededor del eje $y$ del area comprendida entre las funciones $f(x)=x+1$ y $g(x)=(x-1)^2$.
 :::
 
-:::{#exr-volumen-revolucion-3}
-Calcular el volumen del sólido de revolución generado por la rotación al rededor del eje $x$ el área comprendida entre las funciones $f(x)=\cos(x)$ y $g(x)=\operatorname{sen}(x)$ en el intervalo $[0,\pi/2]$. Calcular también el volumen del sólido de revolución generado al rotar la mima área alrededor del eje $y$.
+:::{.callout-tip collapse="true"}
+## Solución
+Para ver los puntos donde se cortan las gráficas de las dos funciones resolvemos la ecuación que surge al igualarlas.
+
+$$
+x+1 = (x-1)^2 \Leftrightarrow x+1 = x^2-2x+1 \Leftrightarrow x^2-3x= 0 \Leftrightarrow x(x-3) \Leftrightarrow x=0 \mbox{ o } x=3.
+$$
+
+Para calcular el volumen del sólido de revolución que se obtiene al rotar alrededor del eje $y$ la región comprendida entre las gráficas de $f$ y $g$ en el intervalo $[0,3]$, utilizaremos sumas de Riemann de [envoltorios cilíndricos](https://aprendeconalf.es/analisis-manual/09-integrales.html#c%C3%A1lculo-de-vol%C3%BAmenes-con-envoltorios-cil%C3%ADndricos). Para ello hay que calcular la siguiente integral
+
+\begin{align*}
+\int_0^3 2\pi x (f(x)-g(x))\,dx 
+&= \int_0^3 2\pi x (x+1-(x-1)^2)\,dx 
+= 2\pi \int_0^3 3x^2-x^3 \, dx \\
+&= 2\pi \left[x^3-\frac{x^4}{4}\right]_0^3
+= 2\pi \left(3^3 - \frac{3^4}{4}\right)
+= \frac{27\pi}{2}.
+\end{align*}
 :::
+
+:::{#exr-volumen-revolucion-3}
+Calcular el volumen del sólido de revolución generado por la rotación al rededor del eje $x$ de la región comprendida entre las funciones $f(x)=\cos(x)$ y $g(x)=\operatorname{sen}(x)$ en el intervalo $[0,\pi/2]$. Calcular también el volumen del sólido de revolución generado al rotar la mima área alrededor del eje $y$.
+:::
+
+:::{.callout-tip collapse="true"}
+## Solución
+Veamos primero en qué puntos se cortan las gráficas de las dos funciones. 
+
+$$
+\cos(x)=\operatorname{sen}(x) \Leftrightarrow x = \frac{\pi}{4}+k\pi\ k\in\mathbb{Z}.
+$$
+
+En el intervalo de integración el único valor donde se cortan las gráficas de las dos funciones es en $x=\pi/4$. Es fácil comprobar que $f(x)>g(x)$ $\forall x\in [0,\pi/4)$ y $f(x)<g(x)$ $\forall x\in (\pi/4,\pi/2]$, por lo que tenemos que descomponer el intervalo de integración en estos dos subintervalos. 
+
+Para calcular el volumen del sólido de revolución generado por la rotación alrededor del eje $x$ de la región comprendida entre $f(x)=\cos(x)$ y $g(x)=\operatorname{sen}(x)$ en el intervalo $[0,\pi/2]$ podemos utilizar sumas de Riemann de [discos cilíndricos](https://aprendeconalf.es/analisis-manual/09-integrales.html#c%C3%A1lculo-de-vol%C3%BAmenes-de-s%C3%B3lidos-de-revoluci%C3%B3n) transversales al eje $x$. Para ello hay que calcular las siguientes integrales
+
+$$
+\begin{gathered}
+\int_0^{\pi/4} \pi (f(x)^2-g(x)^2)\,dx + \int_{\pi/4}^{\pi/2} \pi (g(x)^2 - f(x)^2)\,dx \\
+= \int_0^{\pi/4} \pi (\cos(x)^2-\operatorname{sen}(x)^2)\,dx + \int_{\pi/4}^{\pi/2} \pi (\operatorname{sen}(x)^2 - \cos(x)^2)\,dx \\
+= \pi  \int_0^{\pi/4} -\cos(2x)\,dx + \pi \int_{\pi/4}^{\pi/2} \cos(2x)\,dx
+= \pi \left[\frac{-\operatorname{sen}(2x)}{2}\right]_0^{\pi/4} + \pi \left[\frac{\operatorname{sen}(2x)}{2}\right]_{\pi/4}^{\pi/2} \\
+=  \frac{\pi}{2} (-\operatorname{sen}(2\pi/4)) + \frac{\pi}{2} (\operatorname{sen}(2\pi/4)-\operatorname{sen}(2\pi/2)) 
+= \frac{\pi}{2}+\frac{\pi}{2}
+= \pi.
+\end{gathered}
+$$
+:::
+
 
 :::{#exr-volumen-helado}
 Un helado tiene forma parabólica dada por la función $y=1-x^2$ y sus secciones transversales con respecto al eje $y$ son cuadrados. ¿Cuál es el volumen del helado?
