@@ -1386,7 +1386,7 @@ Solución
 = \int_0^{\pi/4} \pi (\cos(x)^2-\operatorname{sen}(x)^2)\,dx + \int_{\pi/4}^{\pi/2} \pi (\operatorname{sen}(x)^2 - \cos(x)^2)\,dx \\
 = \pi  \int_0^{\pi/4} -\cos(2x)\,dx + \pi \int_{\pi/4}^{\pi/2} \cos(2x)\,dx
 = \pi \left[\frac{-\operatorname{sen}(2x)}{2}\right]_0^{\pi/4} + \pi \left[\frac{\operatorname{sen}(2x)}{2}\right]_{\pi/4}^{\pi/2} \\
-=  \frac{\pi}{2} (-\operatorname{sen}(2\pi/4)) + \frac{\pi}{2} (\operatorname{sen}(2\pi/4)-\operatorname{sen}(2\pi/2))
+=  \frac{\pi}{2} (-\operatorname{sen}(2\pi/4)) +\operatorname{sen}(0) + \frac{\pi}{2} (\operatorname{sen}(2\pi/4)-\operatorname{sen}(2\pi/2))
 = \frac{\pi}{2}+\frac{\pi}{2}
 = \pi.
 \end{gathered}
@@ -1395,10 +1395,68 @@ Solución
 </div>
 </div>
 <div id="exr-volumen-helado" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 8.31 </strong></span>Un helado tiene forma parabólica dada por la función <span class="math inline">\(y=1-x^2\)</span> y sus secciones transversales con respecto al eje <span class="math inline">\(y\)</span> son cuadrados. ¿Cuál es el volumen del helado?</p>
+<p><span class="theorem-title"><strong>Ejercicio 8.31 </strong></span>Un helado tiene forma parabólica dada por la función <span class="math inline">\(y=9-x^2\)</span> (en cm) y sus secciones transversales con respecto al eje <span class="math inline">\(y\)</span> son cuadrados. ¿Cuál es el volumen del helado?</p>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-34-contents" aria-controls="callout-34" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-34" class="callout-34-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Como las secciones transversales con respecto al eje <span class="math inline">\(y\)</span> son figuras regulares, en este caso cuadrados, calcularemos el volumen del helado integrando a lo largo del eje <span class="math inline">\(y\)</span> las áreas de esos cuadrados. Para cualquier sección transversal en <span class="math inline">\(y=a\)</span>, el semi-lado del cuadrado resultante es</p>
+<p><span class="math display">\[
+a=9-x^2 \Leftrightarrow x^2 = 9-a \Leftrightarrow x = \sqrt{9-a},
+\]</span></p>
+<p>por lo que el área de la sección transversal es</p>
+<p><span class="math display">\[
+f(x) = 2\sqrt{9-x}^2 = 4(9-x)=36-4x.
+\]</span></p>
+<p>Por otro lado, es fácil ver que el máximo de la curva <span class="math inline">\(y=9-x^2\)</span> es <span class="math inline">\(y=9\)</span> por lo que el intervalo de integración es <span class="math inline">\([0,9]\)</span>. Así pues, el volumen del helado viene dado por la siguiente integral</p>
+<p><span class="math display">\[
+\int_0^9 36-4x\,dx
+= [36x-2x^2]_0^9
+= 36\cdot 9 -2\cdot 9^2
+= 162 \mbox{ cm}^3
+\]</span></p>
+</div>
+</div>
 </div>
 <div id="exr-pluviometro" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 8.32 </strong></span>Un pluviómetro tiene la forma de un sólido de revolución obtenido al rotar la función <span class="math inline">\(f(x)=x^3\)</span> alrededor del eje <span class="math inline">\(y\)</span>. ¿Cuál debe ser su altura para que sea capaz de almacenar 1 litro de agua?</p>
+<p><span class="theorem-title"><strong>Ejercicio 8.32 </strong></span>Un pluviómetro tiene la forma de un sólido de revolución obtenido al rotar la gráfica de la función <span class="math inline">\(f(x)=x^3\)</span> <span class="math inline">\((x\geq 0)\)</span> alrededor del eje <span class="math inline">\(y\)</span>. ¿Cuál debe ser su altura para que sea capaz de almacenar 1 litro de agua?</p>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-35-contents" aria-controls="callout-35" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-35" class="callout-35-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Al rotar la gráfica de <span class="math inline">\(f\)</span> alrededor del eje <span class="math inline">\(y\)</span>, las secciones transversales con respecto al eje <span class="math inline">\(y\)</span> del sólido de revolución generado serán círculos cuyo radio vendrá dado por la función inversa de <span class="math inline">\(y\)</span>, <span class="math inline">\(x = f^{-1}(y) = y^{1/3}\)</span>. Por tanto, para calcular el volumen del sólido de revolución podemos tomar <a href="https://aprendeconalf.es/analisis-manual/09-integraleshtml#c%C3%A1lculo-de-vol%C3%BAmenes-de-s%C3%B3lidos-de-revoluci%C3%B3n">discos cilíndricos</a>, de manera que el volumen del pluviómetro de altura <span class="math inline">\(h\)</span> viene dado por la integral</p>
+<p><span class="math display">\[
+\int_0^h \pi f^{-1}(y)\,dy
+= \pi \int_0^h y^{1/3}\,dy
+= \pi \left[\frac{y^{4/3}}{4/3}\right]_0^h
+= \frac{3\pi}{4}h^{4/3}.
+\]</span></p>
+<p>Por consiguiente, para que el pluviómetro pueda almacenar 1 litro de agua, es decir 1000 cm<span class="math inline">\(^3\)</span>, su altura debe ser</p>
+<p><span class="math display">\[
+\frac{3\pi}{4}h^{4/3} = 1000
+\Leftrightarrow h^{4/3} = \frac{4000}{3\pi}
+\Leftrightarrow h = \left(\frac{4000}{3\pi}\right)^{3/4} = 93.5064 \mbox{ cm}.
+\]</span></p>
+</div>
+</div>
 </div>
 <div id="exr-longitud-circunferencia" class="theorem exercise">
 <p><span class="theorem-title"><strong>Ejercicio 8.33 </strong></span>Calcular la longitud de una circunferencia de radio <span class="math inline">\(r\)</span> centrada en el origen.</p>
@@ -1433,7 +1491,7 @@ Solución
 <ol type="a">
 <li><p><span class="math inline">\(f(x)=2\sqrt{1-x}\)</span> en <span class="math inline">\([-1,1]\)</span>.</p></li>
 <li><p><span class="math inline">\(g(x)=\frac{1}{3}\sqrt{x^3}\)</span> en <span class="math inline">\([0,2]\)</span></p></li>
-<li><p><span class="math inline">\(f(x)=e^x\)</span> en <span class="math inline">\([0,1]\)</span>.</p></li>
+<li><p><span class="math inline">\(f(x)=e^x\)</span> en $</p></li>
 </ol>
 </div>
 <div id="exr-superficie-deposito" class="theorem exercise">
@@ -1446,7 +1504,7 @@ Solución
 <p><span class="theorem-title"><strong>Ejercicio 8.40 </strong></span>Se lanza una pelota verticalmente desde la ventana de un edificio situada a 20 m sobre el suelo con una velocidad inicial de 10 m/s. ¿A qué distancia del suelo estará la pelota transcurridos 3 segundos? ¿Qué distancia habrá recorrido hasta ese instante?</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-34-contents" aria-controls="callout-34" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-36-contents" aria-controls="callout-36" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1455,7 +1513,7 @@ Solución
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-34" class="callout-34-contents callout-collapse collapse">
+<div id="callout-36" class="callout-36-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>La posición que ocupa la pelota en cada instante <span class="math inline">\(t\)</span> viene dada por la integral de la velocidad <span class="math inline">\(v(t)\)</span>, <span class="math inline">\(\int_0^t v(t)\, dt\)</span>, pero, a su vez, la velocidad en cada instante viene dada por la integral de la aceleración. En este caso la aceleración que sufre la pelota es la de la fuerza de la gravedad, que es constante y negativa, por lo que tenemos</p>
 <p><span class="math display">\[
@@ -1492,7 +1550,7 @@ v(t) = v(0) + gt = 10 - 9.81 t = 0 \Leftrightarrow t = \frac{10}{9.81} = 1.0194 
 <p><span class="theorem-title"><strong>Ejercicio 8.41 </strong></span>Un vehículo se mueve con una aceleración dada por la función <span class="math inline">\(a(t)=10\cos(2t)\)</span>. Suponiendo que el vehículo parte de un estado de reposo en la posición <span class="math inline">\(0\)</span>, ¿cuál será la distancia neta recorrida por el vehículo en el intervalo de <span class="math inline">\([0,\pi]\)</span>? ¿Y la distancia total?</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-35-contents" aria-controls="callout-35" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-37-contents" aria-controls="callout-37" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1501,7 +1559,7 @@ Solución
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-35" class="callout-35-contents callout-collapse collapse">
+<div id="callout-37" class="callout-37-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Calculamos primero la velocidad en cada instante <span class="math inline">\(t\)</span>.</p>
 <p><span class="math display">\[\begin{align*}
@@ -1547,7 +1605,7 @@ F = kx
 <p>Si al aplicar una fuerza de <span class="math inline">\(3\)</span> N se consigue comprimir el muelle una distancia de <span class="math inline">\(0.1\)</span> m desde su posición natural, ¿qué trabajo se realiza al estirar el muelle <span class="math inline">\(0.2\)</span> m desde su posición natural?</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-36-contents" aria-controls="callout-36" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-38-contents" aria-controls="callout-38" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1556,7 +1614,7 @@ Solución
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-36" class="callout-36-contents callout-collapse collapse">
+<div id="callout-38" class="callout-38-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Como al aplicar una fuerza de <span class="math inline">\(3\)</span> N el muelle se comprime <span class="math inline">\(0.1\)</span> m, aplicando la ley de Hooke se puede calcular la constante de proporcionalidad del muelle.</p>
 <p><span class="math display">\[
@@ -1581,7 +1639,7 @@ g_h = g_0 \left(\frac{R}{R+h}\right)^2,
 \]</span> donde <span class="math inline">\(g_h\)</span> es la aceleración de la gravedad a una altura <span class="math inline">\(h\)</span> m sobre la superficie terrestre, <span class="math inline">\(g_0=9.81\)</span> m/s<span class="math inline">\(^2\)</span> es la aceleración de la gravedad en la superficie terrestre, y <span class="math inline">\(R=6371\)</span> km es el radio de la Tierra.</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-37-contents" aria-controls="callout-37" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-39-contents" aria-controls="callout-39" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1590,7 +1648,7 @@ Solución
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-37" class="callout-37-contents callout-collapse collapse">
+<div id="callout-39" class="callout-39-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 
 </div>
@@ -1601,7 +1659,7 @@ Solución
 Nota: La densidad del agua es de <span class="math inline">\(\delta = 1000\)</span> kg/m<span class="math inline">\(^3\)</span>.</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-38-contents" aria-controls="callout-38" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-40-contents" aria-controls="callout-40" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1610,7 +1668,7 @@ Solución
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-38" class="callout-38-contents callout-collapse collapse">
+<div id="callout-40" class="callout-40-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>En este caso, aunque la aceleración de la gravedad es constante, el volumen de agua a cada altura <span class="math inline">\(y\)</span> es distinto, por lo que su masa y la fuerza necesaria para elevarla será distinta.</p>
 <p>Siguiendo la misma estrategia de las sumas de Riemann, podemos descomponer el intervalo <span class="math inline">\([0, 5]\)</span> de la altura del depósito en subintervalos de igual amplitud de acuerdo a una partición <span class="math inline">\(P_n=\{y_0=0, y_1, \ldots, y_n=5\}\)</span>, y considerar, para cada subintervalo <span class="math inline">\([y_{i-1}, y_i]\)</span> el cilindro de radio <span class="math inline">\(x_i=f(y_i)\)</span>, donde <span class="math inline">\(f(y)\)</span> es la función de la generatriz del cono, y altura <span class="math inline">\(\Delta y=y_i-y_{i-1}\)</span>. Como la ecuación de la recta que define la generatriz del cono es <span class="math inline">\(y=\frac{5}{2}x\)</span>, expresando <span class="math inline">\(x\)</span> en función de <span class="math inline">\(y\)</span> se tiene que <span class="math inline">\(x_i=\frac{2}{5}y_i\)</span>, de manera que el volumen del cilindro correspondiente al intervalo <span class="math inline">\([x_{i-1},x_i]\)</span> es</p>
@@ -1653,7 +1711,7 @@ W
 <p><span class="theorem-title"><strong>Ejercicio 8.45 </strong></span>Un depósito con forma de sólido de revolución generado al rotar la gráfica de la función <span class="math inline">\(f(x)=\frac{x^2}{2}\)</span> alrededor del eje <span class="math inline">\(y\)</span> en el intervalo de <span class="math inline">\(0\)</span> a <span class="math inline">\(4\)</span> m, contiene <span class="math inline">\(100000\)</span> l de aceite con una densidad de <span class="math inline">\(\delta = 900\)</span> kg/m<span class="math inline">\(^3\)</span>. ¿Qué trabajo se realiza al vaciar el depósito por arriba?</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-39-contents" aria-controls="callout-39" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-41-contents" aria-controls="callout-41" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1662,7 +1720,7 @@ Solución
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-39" class="callout-39-contents callout-collapse collapse">
+<div id="callout-41" class="callout-41-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>El problema es similar al anterior, pero ahora, el radio de los sectores circulares viene dado por la función <span class="math inline">\(y=\frac{x^2}{2}\)</span>, de manera que <span class="math inline">\(x=\sqrt{2y}\)</span>.</p>
 <p>Tal y como vimos en el <a href="https://aprendeconalf.es/analisis-manual/09-integrales.html#c%C3%A1lculo-de-vol%C3%BAmenes-de-s%C3%B3lidos-de-revoluci%C3%B3n">cálculo de volúmenes de sólidos de revolución</a>, el volumen almacenado en el depósito hasta una altura <span class="math inline">\(h\)</span> es</p>
@@ -1690,7 +1748,7 @@ W
 <p><span class="theorem-title"><strong>Ejercicio 8.46 </strong></span>Una varilla varilla metálica de 20 m de longitud, tiene una densidad <span class="math inline">\(f(x)=\operatorname{sen}(\pi x)+1\)</span> a una distancia <span class="math inline">\(x\)</span> de su extremo izquierdo. Calcular su centro de masas.</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-40-contents" aria-controls="callout-40" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-42-contents" aria-controls="callout-42" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1699,7 +1757,7 @@ Solución
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-40" class="callout-40-contents callout-collapse collapse">
+<div id="callout-42" class="callout-42-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Para calcular el <a href="https://aprendeconalf.es/analisis-manual/09-integrales.html#centro-de-masas-de-una-varilla-con-densidad-variable">centro de masas de una varilla con densidad variable</a> <span class="math inline">\(f(x)\)</span> tenemos que dividir su momento y su masa, es decir, calcular el cociente de integrales</p>
 <p><span class="math display">\[
@@ -1736,7 +1794,7 @@ Solución
 <p><span class="theorem-title"><strong>Ejercicio 8.47 </strong></span>Calcular el centroide del sector circular definido por la ecuación <span class="math inline">\(x^2+y^2=1\)</span> en el primer cuadrante.</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-41-contents" aria-controls="callout-41" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-43-contents" aria-controls="callout-43" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1745,7 +1803,7 @@ Solución
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-41" class="callout-41-contents callout-collapse collapse">
+<div id="callout-43" class="callout-43-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>En primer lugar expresamos <span class="math inline">\(y\)</span> en función de <span class="math inline">\(x\)</span>, de manera que se obtiene <span class="math inline">\(y = \pm\sqrt{1-x^2}\)</span>. Como estamos interesados en la región del primer cuadrante, tomamos la raíz positiva, es decir, la función que delimita la región es <span class="math inline">\(f(x)=\sqrt{1-x^2}\)</span>.</p>
 <p>Para calcular el <a href="https://aprendeconalf.es/analisis-manual/09-integrales.html#centro-de-masas-de-una-regi%C3%B3n-plana-con-densidad-fija">centro de masas una región plana con densidad constante</a> <span class="math inline">\(f(x)\)</span> tenemos que calcular las coordenadas del centroide por separado. Para calcular la primera coordenada del centroide tenemos que calcular el cociente de integrales</p>
@@ -1808,7 +1866,7 @@ Solución
 <p><span class="theorem-title"><strong>Ejercicio 8.48 </strong></span>Calcular el centroide de la región encerrada por la recta <span class="math inline">\(y=x\)</span> y la curva <span class="math inline">\(y=x^2\)</span>.</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-42-contents" aria-controls="callout-42" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-44-contents" aria-controls="callout-44" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1817,7 +1875,7 @@ Solución
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-42" class="callout-42-contents callout-collapse collapse">
+<div id="callout-44" class="callout-44-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>En primer lugar calculamos los valores de <span class="math inline">\(x\)</span> en los que las gráficas de ambas funciones se cortan, resolviendo la ecuación que resulta de igualar sus ecuaciones.</p>
 <p><span class="math display">\[
@@ -1877,7 +1935,7 @@ x = x^2 \Leftarrow x^2-x = 0 \Leftarrow x(x-1) = 0 \Leftarrow x=0 \mbox{ o } x=1
 <p><span class="theorem-title"><strong>Ejercicio 8.49 </strong></span>El teorema de Pappus establece que si una región plana está a un lado de una recta <span class="math inline">\(l\)</span>, el volumen de revolución generado al rotar la región alrededor de la recta <span class="math inline">\(l\)</span> coincide con el producto del area de la región y la distancia recorrida por su centroide en la rotación. Dar una demostración del teorema para el caso particular en el que la región plana está delimitada por dos funciones <span class="math inline">\(f(x)\)</span> y <span class="math inline">\(g(x)\)</span> en un intervalo <span class="math inline">\([a,b]\)</span> y el eje de rotación es el eje <span class="math inline">\(y\)</span>.</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-43-contents" aria-controls="callout-43" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-45-contents" aria-controls="callout-45" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1886,7 +1944,7 @@ Solución
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-43" class="callout-43-contents callout-collapse collapse">
+<div id="callout-45" class="callout-45-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Aplicando el método de los envoltorios cilíndricos para calcular el volumen del sólido de revolución que se obtiene al rotar la región comprendida entre las gráficas de <span class="math inline">\(f\)</span> y <span class="math inline">\(g\)</span> en el intervalo <span class="math inline">\([a,b]\)</span> alrededor del eje <span class="math inline">\(y\)</span> se tiene</p>
 <p><span class="math display">\[
@@ -1912,7 +1970,7 @@ V = \int_a^b 2\pi x(f(x)-g(x))\, dx = 2\pi \int_a^b x(f(x)-g(x))\, dx
 <p><span class="theorem-title"><strong>Ejercicio 8.50 </strong></span>Calcular el valor medio de la función <span class="math inline">\(f(x)=\sqrt{1-x^2}\)</span> en el intervalo <span class="math inline">\([-1,1]\)</span>.</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-44-contents" aria-controls="callout-44" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-46-contents" aria-controls="callout-46" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1921,7 +1979,7 @@ Solución
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-44" class="callout-44-contents callout-collapse collapse">
+<div id="callout-46" class="callout-46-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Para calcular el <a href="https://aprendeconalf.es/analisis-manual/09-integrales.html#c%C3%A1lculo-de-la-media-de-una-funci%C3%B3n">valor medio de una función</a> en el intervalo <span class="math inline">\([-1,1]\)</span> tenemos que calcular la siguiente integral</p>
 <p><span class="math display">\[\begin{align*}
@@ -1941,7 +1999,7 @@ Solución
 <p><span class="theorem-title"><strong>Ejercicio 8.51 </strong></span>Se deja caer una pelota desde la terraza de un edificio situada a una altura de 25 m. Suponiendo que no hubiese rozamiento, ¿cuál es la velocidad media de la pelota desde su lanzamiento hasta que toca el suelo?</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-45-contents" aria-controls="callout-45" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-47-contents" aria-controls="callout-47" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1950,7 +2008,7 @@ Solución
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-45" class="callout-45-contents callout-collapse collapse">
+<div id="callout-47" class="callout-47-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>La única fuerza que actúa sobre la pelota es la fuerza de la gravedad, que podemos suponer con una aceleración constante <span class="math inline">\(g=-9.81\)</span> m/s<span class="math inline">\(^2\)</span>. Según las fórmulas de <a href="https://aprendeconalf.es/analisis-manual/09-integrales.html#cinem%C3%A1tica">cinemática</a>, la posición que ocupa la pelota en cada instante <span class="math inline">\(t\)</span> viene dada por la expresión</p>
 <p><span class="math display">\[

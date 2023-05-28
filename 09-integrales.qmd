@@ -910,20 +910,64 @@ $$
 = \int_0^{\pi/4} \pi (\cos(x)^2-\operatorname{sen}(x)^2)\,dx + \int_{\pi/4}^{\pi/2} \pi (\operatorname{sen}(x)^2 - \cos(x)^2)\,dx \\
 = \pi  \int_0^{\pi/4} -\cos(2x)\,dx + \pi \int_{\pi/4}^{\pi/2} \cos(2x)\,dx
 = \pi \left[\frac{-\operatorname{sen}(2x)}{2}\right]_0^{\pi/4} + \pi \left[\frac{\operatorname{sen}(2x)}{2}\right]_{\pi/4}^{\pi/2} \\
-=  \frac{\pi}{2} (-\operatorname{sen}(2\pi/4)) + \frac{\pi}{2} (\operatorname{sen}(2\pi/4)-\operatorname{sen}(2\pi/2)) 
+=  \frac{\pi}{2} (-\operatorname{sen}(2\pi/4)) +\operatorname{sen}(0) + \frac{\pi}{2} (\operatorname{sen}(2\pi/4)-\operatorname{sen}(2\pi/2)) 
 = \frac{\pi}{2}+\frac{\pi}{2}
 = \pi.
 \end{gathered}
 $$
 :::
 
-
 :::{#exr-volumen-helado}
-Un helado tiene forma parabólica dada por la función $y=1-x^2$ y sus secciones transversales con respecto al eje $y$ son cuadrados. ¿Cuál es el volumen del helado?
+Un helado tiene forma parabólica dada por la función $y=9-x^2$ (en cm) y sus secciones transversales con respecto al eje $y$ son cuadrados. ¿Cuál es el volumen del helado?
+:::
+
+:::{.callout-tip collapse="true"}
+### Solución
+Como las secciones transversales con respecto al eje $y$ son figuras regulares, en este caso cuadrados, calcularemos el volumen del helado integrando a lo largo del eje $y$ las áreas de esos cuadrados. Para cualquier sección transversal en $y=a$, el semi-lado del cuadrado resultante es 
+
+$$
+a=9-x^2 \Leftrightarrow x^2 = 9-a \Leftrightarrow x = \sqrt{9-a},
+$$
+
+por lo que el área de la sección transversal es 
+
+$$
+f(x) = 2\sqrt{9-x}^2 = 4(9-x)=36-4x.
+$$
+
+Por otro lado, es fácil ver que el máximo de la curva $y=9-x^2$ es $y=9$ por lo que el intervalo de integración es $[0,9]$. Así pues, el volumen del helado viene dado por la siguiente integral
+
+$$
+\int_0^9 36-4x\,dx 
+= [36x-2x^2]_0^9 
+= 36\cdot 9 -2\cdot 9^2 
+= 162 \mbox{ cm}^3
+$$
 :::
 
 :::{#exr-pluviometro}
-Un pluviómetro tiene la forma de un sólido de revolución obtenido al rotar la función $f(x)=x^3$ alrededor del eje $y$. ¿Cuál debe ser su altura para que sea capaz de almacenar 1 litro de agua?
+Un pluviómetro tiene la forma de un sólido de revolución obtenido al rotar la gráfica de la función $f(x)=x^3$ $(x\geq 0)$ alrededor del eje $y$. ¿Cuál debe ser su altura para que sea capaz de almacenar 1 litro de agua?
+:::
+
+:::{.callout-tip collapse="true"}
+### Solución
+Al rotar la gráfica de $f$ alrededor del eje $y$, las secciones transversales con respecto al eje $y$ del sólido de revolución generado serán círculos cuyo radio vendrá dado por la función inversa de $y$,
+$x = f^{-1}(y) = y^{1/3}$. Por tanto, para calcular el volumen del sólido de revolución podemos tomar [discos cilíndricos](https://aprendeconalf.es/analisis-manual/09-integraleshtml#c%C3%A1lculo-de-vol%C3%BAmenes-de-s%C3%B3lidos-de-revoluci%C3%B3n), de manera que el volumen del pluviómetro de altura $h$ viene dado por la integral 
+
+$$
+\int_0^h \pi f^{-1}(y)\,dy
+= \pi \int_0^h y^{1/3}\,dy
+= \pi \left[\frac{y^{4/3}}{4/3}\right]_0^h
+= \frac{3\pi}{4}h^{4/3}.
+$$ 
+
+Por consiguiente, para que el pluviómetro pueda almacenar 1 litro de agua, es decir 1000 cm$^3$, su altura debe ser
+
+$$
+\frac{3\pi}{4}h^{4/3} = 1000 
+\Leftrightarrow h^{4/3} = \frac{4000}{3\pi} 
+\Leftrightarrow h = \left(\frac{4000}{3\pi}\right)^{3/4} = 93.5064 \mbox{ cm}.
+$$
 :::
 
 :::{#exr-longitud-circunferencia}
@@ -968,7 +1012,7 @@ a. $f(x)=2\sqrt{1-x}$ en $[-1,1]$.
 
 b. $g(x)=\frac{1}{3}\sqrt{x^3}$ en $[0,2]$
 
-c. $f(x)=e^x$ en $[0,1]$.
+c. $f(x)=e^x$ en $
 :::
 
 :::{#exr-superficie-deposito}
