@@ -974,29 +974,109 @@ $$
 Calcular la longitud de una circunferencia de radio $r$ centrada en el origen.
 :::
 
-<!-- :::{.callout-tip collapse="true"}
+
+:::{.callout-tip collapse="true"}
 ## Solución
+La ecuación de la circunferencia de radio $r$ centrada en el origen es $x^2+y^2=r^2$, de donde se deduce que $y=\pm\sqrt{r^2-x^2}$. Si tomamos la función correspondiente a la semicircunferencia positiva $f(x)=\sqrt{r^2-x^2}$, podemos calcular la [longitud de la curva](https://aprendeconalf.es/analisis-manual/09-integrales.html#c%C3%A1lculo-de-la-longitud-de-una-curva) de la semicircunferencia con la siguiente integral
+
 \begin{align*}
-\int_{-r}^r \sqrt{1+\left(\frac{-x}{\sqrt{r^2-x^2}}\right)^2}\,dx 
-&= \int_{-r}^r \sqrt{1+\frac{x^2}{r^2-x^2}}\,dx 
-= \int_{-r}^r \sqrt{\frac{1}{r^2-x^2}}\,dx
-= \left[\operatorname{arcsen}\left(\frac{x}{r}\right)\right]_{-r}^r 
-= \pi r
+\int_{-r}^r \sqrt{1+f'(x)^2}\,dx
+&= \int_{-r}^r \sqrt{1+\left({\sqrt{r^2-x^2}}\right)^2}\,dx \\
+&= \int_{-r}^r \sqrt{1+\frac{x^2}{r^2-x^2}}\,dx \\
+&= \int_{-r}^r \sqrt{\frac{r^2}{r^2-x^2}}\,dx 
+= \int_{-r}^r \frac{r}{\sqrt{r^2-x^2}}\,dx \\
+&= \int_{-r}^r \frac{1}{\sqrt{\frac{r^2-x^2}{r^2}}}\,dx
+= \int_{-r}^r \frac{1}{\sqrt{1-\left(\frac{x}{r}\right)^2}}\,dx \\
+&= \int_{-1}^1 \frac{1}{\sqrt{1-u^2}} r\,du \tag{Cambio $u=\frac{x}{r}$}\\
+&= r[\operatorname{arcsen}(u)]_{-1}^1 
+= r \left(\frac{\pi}{2}+\frac{\pi}{2}\right)
+= \pi r.
 \end{align*}
-::: -->
+
+Y por tanto, la longitud de la circunferencia será el doble $2\pi r$.
+:::
 
 :::{#exr-longitud-curvas}
 Calcular la longitud de las siguientes curvas en los intervalos dados
 
 a. $y=x^2$ en $[0,1]$.
 
-b. $y^2=4x^3$ en $[1,2]$.
+b. $y^2=4x^3$ en $[0,2]$.
 
-c. $\ln(\operatorname{sen}(x))$ en $\left[\frac{\pi}{4},\frac{\pi}{2}\right]$
+c. $y=\ln(\operatorname{sen}(x))$ en $\left[\frac{\pi}{4},\frac{\pi}{2}\right]$.
+:::
+
+:::{.callout-tip collapse="true"}
+## Solución
+a.  Tomando $f(x)=x^2$, la logitud de la curva de la gráfica de $f$ en el intervalo $[0,1]$ es
+
+    \begin{align*}
+    \int_0^1 \sqrt{1+f'(x)^2}\,dx 
+    &= \int_0^1 \sqrt{1+(2x)^2}\, dx
+    = \int_0^1 \sqrt{1+4x^2}\,dx \\
+    &= \int_0^{\operatorname{arctg}(2)} \sec(\theta)\frac{1}{2}\sec(\theta)^2\,d\theta 
+    = \frac{1}{2}\int_0^{\operatorname{arctg}(2)} \sec(\theta)^3\,d\theta \tag{1} \\ 
+    &= \left[\frac{1}{2} \frac{\sec(\theta)\operatorname{tg}(\theta)+\ln|\sec(\theta)+\operatorname(tg)(\theta)|}{2}\right]_0^{\operatorname{arctg}(2)} \tag{2}\\
+    &= \left[\frac{\sqrt{1+4x^2} 2x+\ln(\sqrt{1+4x^2}+2x)}{4}\right]_0^1 \tag{Deshacer 1}\\
+    &= \frac{\sqrt{1+4\cdot 1^2} 2+\ln(\sqrt{1+4\cdot 1^2}+2)}{4} \\
+    &= \frac{2\sqrt{5}+\ln(\sqrt{5}+2)}{4}
+    \approx 1.4789  
+    \end{align*}
+
+    (1) Cambio $\operatorname{tg}(\theta)=2x$, $\sec(\theta)=\sqrt{1+4x^2}$.  
+    (2) Ver [integral secante cúbica](https://es.wikipedia.org/wiki/Integral_de_la_secante_c%C3%BAbica).
+
+b.  $y^2=4x^3 \Leftrightarrow y=\pm\sqrt{4x^3} = \pm 2x^{3/2}$, así que tomaremos $f(x)=2x^{3/2}$ y calcularemos la longitud de rama positiva.  
+
+    \begin{align*}
+    \int_0^1 \sqrt{1+f'(x)^2}\,dx 
+    &= \int_0^1 \sqrt{1+(3\sqrt{x})^2}\, dx 
+    = \int_0^1 \sqrt{1+9x}\,dx \\
+    &=\left[\frac{1}{9}\frac{(1+9x)^{3/2}}{3/2}\right]_0^1
+    = \frac{2}{27}(19^{3/2}-1)
+    \approx 6.0607.
+    \end{align*}
+
+    Por tanto, por simetría, la longitud de la curva será el doble $2\cdot 6.0607 = 12.1213$.
+
+c.  Tomando $f(x)=\ln(\operatorname{sen}(x))$, la logitud de la curva de la gráfica de $f$ en el intervalo $[\pi/4,\pi/2]$ es
+
+    \begin{align*}
+    \int_{\pi/4}^{\pi/2} \sqrt{1+f'(x)^2}\,dx 
+    &= \int_{\pi/4}^{\pi/2} \sqrt{1+\frac{\cos(x)^2}{\operatorname{sen}(x)^2}}\, dx 
+    = \int_{\pi/4}^{\pi/2} \sqrt{\frac{1}{\operatorname{sen}(x)^2}}\,dx \\
+    &= \int_{\pi/4}^{\pi/2} \csc(x)\,dx 
+    = \int_{\pi/4}^{\pi/2} \csc(x)\frac{\csc(x)+\cot(x)}{\csc(x)+\cot(x)}\,dx \\
+    &= \int_{\pi/4}^{\pi/2} \frac{\csc(x)^2+\csc(x)\cot(x)}{\csc(x)+\cot(x)}\,dx \\
+    &= \int_{1+\sqrt{2}}^1 \frac{-1}{u}\,du \tag{1}\\
+    &= [-\ln(u)]_{1+\sqrt{2}}^1 = -\ln(1)+\ln(1+\sqrt{2}) \approx 0.8814. 
+    \end{align*}
+
+    (1) Cambio $u=\csc(x)+\cot(x)$.
 :::
 
 :::{#exr-longitud-montaña-rusa}
 Un tramo de una montaña rusa tiene la forma de la curva $y=\frac{1}{3}(x-3)\sqrt{x}$, donde $x$ viene dado en decámetros. ¿Qué longitud tiene el rail del tramo desde el origen hasta el punto que alcanza la misma altura? 
+:::
+
+:::{.callout-tip collapse="true"}
+## Solución
+La longitud del rail es la longitud de la curva correspondiente a la gráfica de la función $f(x)=\frac{1}{3}(x-3)\sqrt{x}$. Resulta sencillo ver que las dos raíces de esta función son $x=0$ (el origen) y $x=3$, por lo que hay que el intervalo de integración es $[0,3]$. Para calcular la [longitud de la curva](https://aprendeconalf.es/analisis-manual/09-integrales.html#c%C3%A1lculo-de-la-longitud-de-una-curva) correspondiente a la gráfica de $f$ en este intervalo hay que calcular la siguiente integral   
+
+\begin{align*}
+\int_0^3 \sqrt{1+f'(x)^2}\,dx 
+&= \int_0^3 \sqrt{1+\left(\frac{1}{3}\left(\sqrt{x}+\frac{x-3}{2\sqrt{x}}\right)\right)^2}\,dx \\
+&= \int_0^3 \sqrt{1+\frac{1}{9}\left(x+(x-3)+\frac{(x-3)^2}{4x}\right)}\,dx \\
+&= \int_0^3 \sqrt{1+\frac{x^2-2x+1}{4x}}\,dx 
+= \int_0^3 \sqrt{\frac{x^2+2x+1}{4x}}\,dx \\
+&= \int_0^3 \frac{x+1}{2\sqrt{x}}\,dx 
+= \frac{1}{2}\left(\int_0^3 x^{1/2}\,dx + \int_0^3 x^{-1/2}\,dx\right) \\
+&= \frac{1}{2}\left(\left[\frac{x^{3/2}}{3/2}\right]_0^3 + \left[\frac{x^{1/2}}{1/2}\right]_0^3\right) 
+= \left[\frac{x^{3/2}}{3}+x^{1/2}\right]_0^3 \\ 
+&= \frac{3^{3/2}}{3}+\sqrt(3)
+= 2\sqrt{3}
+\approx 3.4641 \mbox{ Dm}.
+\end{align*}
 :::
 
 :::{#exr-longitud-catenaria}
