@@ -1080,9 +1080,25 @@ La longitud del rail es la longitud de la curva correspondiente a la gráfica de
 :::
 
 :::{#exr-longitud-catenaria}
-Calcular la longitud de un cable eléctrico con forma de catenaria que cuelga entre dos postes separados 100 metros de distancia con una altura mínima sobre el suelo de 5 metros.
+Calcular la longitud de un cable eléctrico con forma de catenaria que cuelga entre dos postes separados 10 metros de distancia con una altura mínima sobre el suelo de 5 metros.
 
 Nota: La ecuación que define una curva con forma de catenaria centrada en el eje $y$ es $y=a\cosh\left(\frac{x}{a}\right)$, donde $a$ es la altura mínima de la catenaria. 
+:::
+
+:::{.callout-tip collapse="true"}
+## Solución
+La longitud del cable eléctrico es la [longitud de la curva](https://aprendeconalf.es/analisis-manual/09-integrales.html#c%C3%A1lculo-de-la-longitud-de-una-curva) correspondiente a la gráfica de la función $f(x)=5\cosh(x/5)$ en el intervalo $[-5,5]$, que viene dado por la integral
+
+\begin{align*}
+\int_{-5}^5 \sqrt{1+f'(x)^2}\,dx
+&= \int_{-5}^5 \sqrt{1+\operatorname{senh}(x/5)^2}\,dx\\
+&= \int_{-5}^5 \sqrt{\cosh(x/5)^2}\,dx
+= \int_{-5}^5 \cosh(x/5)\,dx\\
+&= [5\operatorname{senh(x/5)}]_{-5}^5
+= 5(\operatorname{senh}(1)-\operatorname{senh}(-1)) \\
+&= 5(e-e^{-1}) 
+\approx 11.7520 \mbox{ m.}
+\end{align*}
 :::
 
 :::{#exr-superficie-solido-revolucion}
@@ -1090,9 +1106,39 @@ Calcular la superficie de los sólidos de revolución obtenidos al girar las sig
 
 a. $f(x)=2\sqrt{1-x}$ en $[-1,1]$.
 
-b. $g(x)=\frac{1}{3}\sqrt{x^3}$ en $[0,2]$
+b. $g(x)=\frac{1}{3}\sqrt{x^3}$ en $[0,2]$.
 
-c. $f(x)=e^x$ en $
+c. $h(x)=e^x$ en $[0,1]$.
+:::
+
+:::{.callout-tip collapse="true"}
+## Solución
+a.  La [superficie del sólido de revolución](https://aprendeconalf.es/analisis-manual/09-integrales.html#c%C3%A1lculo-de-superficies-de-s%C3%B3lidos-de-revoluci%C3%B3n) que se obtiene al rotar la gráfica de la función $f(x)$ alrededor del eje $x$ en el interavlo $[-1,1]$, viene dada por la siguiente integral
+
+    \begin{align*}
+    \int_{-1}^1 2\pi f(x)\sqrt{1+f'(x)^2}\,dx 
+    &= 2\pi\int_{-1}^1 2\sqrt{1-x}\sqrt{1+\left(\frac{-1}{\sqrt{1-x}}\right)^2}\,dx \\
+    &= 2\pi\int_{-1}^1 2\sqrt{1-x}\sqrt{1+\frac{1}{1-x}}\,dx \\
+    &= 2\pi\int_{-1}^1 2\sqrt{(1-x)\left(1+\frac{1}{1-x}\right)}\,dx \\
+    &= 2\pi\int_{-1}^1 2\sqrt{2-x}\,dx
+    = 2\pi\left[\frac{-4}{3}(2-x)^{3/2}\right]_{-1}^1 \\
+    &= \frac{-8\pi}{3}(1-3^{3/2})
+    \approx 35.1536.
+    \end{align*}
+
+a.  \begin{align*}
+    \int_{-1}^1 2\pi h(x)\sqrt{1+h'(x)^2}\,dx 
+    &= 2\pi\int_{-1}^1 e^x\sqrt{1+e^{2x}}\,dx \\
+    &= 2\pi\int_1^e \sqrt{1+u^2}\,du \tag{cambio $u=e^x$} \\
+    &= 2\pi \int_{\pi/4}^{\operatorname{arctg}(e)} \sec(\theta)^3\,d\theta \tag{1} \\
+    &= 2\pi \frac{1}{2}[\sec(\theta)\operatorname{tg}(\theta)+\ln|\sec(\theta)+\operatorname{tg}(\theta)|]_{\pi/4}^{\operatorname{arctg}(e)} \tag{2}\\
+    &= \pi(\sec(\operatorname{arctg}(e))\operatorname{tg}(\operatorname{arctg}(e))+\ln|\sec(\operatorname{arctg}(e))+\operatorname{tg}(\operatorname{arctg}(e))|- \sqrt{2} - \ln(\sqrt{2}+1)) \\
+    &= \pi(e\sqrt{1+e^2}+\ln(e+\sqrt{1+e^2})-\sqrt{2}-\ln(\sqrt{2}+1))
+    \approx 22.943.
+    \end{align*}
+
+    (1) Cambio $\operatorname{tg}(\theta)=u$, $\sec(\theta)=\sqrt{1+u^2}$.  
+    (2) Ver [integral secante cúbica](https://es.wikipedia.org/wiki/Integral_de_la_secante_c%C3%BAbica).
 :::
 
 :::{#exr-superficie-deposito}
