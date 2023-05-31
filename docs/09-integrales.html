@@ -1445,16 +1445,16 @@ Solución
 <div class="callout-body-container callout-body">
 <p>Al rotar la gráfica de <span class="math inline">\(f\)</span> alrededor del eje <span class="math inline">\(y\)</span>, las secciones transversales con respecto al eje <span class="math inline">\(y\)</span> del sólido de revolución generado serán círculos cuyo radio vendrá dado por la función inversa de <span class="math inline">\(y\)</span>, <span class="math inline">\(x = f^{-1}(y) = y^{1/3}\)</span>. Por tanto, para calcular el volumen del sólido de revolución podemos tomar <a href="https://aprendeconalf.es/analisis-manual/09-integraleshtml#c%C3%A1lculo-de-vol%C3%BAmenes-de-s%C3%B3lidos-de-revoluci%C3%B3n">discos cilíndricos</a>, de manera que el volumen del pluviómetro de altura <span class="math inline">\(h\)</span> viene dado por la integral</p>
 <p><span class="math display">\[
-\int_0^h \pi f^{-1}(y)\,dy
-= \pi \int_0^h y^{1/3}\,dy
-= \pi \left[\frac{y^{4/3}}{4/3}\right]_0^h
-= \frac{3\pi}{4}h^{4/3}.
+\int_0^h \pi f^{-1}(y)^2\,dy
+= \pi \int_0^h y^{2/3}\,dy
+= \pi \left[\frac{y^{5/3}}{5/3}\right]_0^h
+= \frac{3\pi}{5}h^{5/3}.
 \]</span></p>
 <p>Por consiguiente, para que el pluviómetro pueda almacenar 1 litro de agua, es decir 1000 cm<span class="math inline">\(^3\)</span>, su altura debe ser</p>
 <p><span class="math display">\[
-\frac{3\pi}{4}h^{4/3} = 1000
-\Leftrightarrow h^{4/3} = \frac{4000}{3\pi}
-\Leftrightarrow h = \left(\frac{4000}{3\pi}\right)^{3/4} = 93.5064 \mbox{ cm}.
+\frac{3\pi}{5}h^{5/3} = 1000
+\Leftrightarrow h^{5/3} = \frac{5000}{3\pi}
+\Leftrightarrow h = \left(\frac{5000}{3\pi}\right)^{3/5} = 43.134 \mbox{ cm}.
 \]</span></p>
 </div>
 </div>
@@ -2017,12 +2017,12 @@ V(h) = \pi h^2 = 100 \Leftrightarrow h = \sqrt{\frac{100}{\pi}} = 5.6419 \mbox{ 
 <p>Por tanto, siguiendo la misma estrategia del problema anterior, el trajo total realizado al vaciar el depósito por arriba, viene dado por la integral definida</p>
 <p><span class="math display">\[\begin{align*}
 W
-&amp;= \int_0^{5.6419} g\delta \pi \sqrt{2y}^2 (4-y) ,dy,
-= \int_0^{5.6419} 9.81\cdot 900 \pi 2y (4-y) ,dy, \\
-&amp;= 8829\pi \int_0^{5.6419} 8y-2y^2 ,dy,
-= 8829\pi \left[8\frac{y^2}{2}-2\frac{y^3}{3}\right]_0^{5.6419} \\
-&amp;= 8829\pi \left(8\frac{5.6419^2}{2}-2\frac{5.6419^3}{3}\right)
-= 210777.97 \mbox{ J}
+&amp;= \int_0^{5.6419} g\delta \pi \sqrt{2y}^2 (8-y) ,dy,
+= \int_0^{5.6419} 9.81\cdot 900 \pi 2y (8-y) ,dy, \\
+&amp;= 17658\pi \int_0^{5.6419} 8y-y^2 ,dy,
+= 17658\pi \left[8\frac{y^2}{2}-\frac{y^3}{3}\right]_0^{5.6419} \\
+&amp;= 17658\pi \left(8\frac{5.6419^2}{2}-\frac{5.6419^3}{3}\right)
+\approx 3742383 \mbox{ J}.
 \end{align*}\]</span></p>
 </div>
 </div>
