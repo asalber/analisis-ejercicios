@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Problemas de Análisis Matemático - 3&nbsp; Topología de los números reales</title>
+<title>Problemas de Análisis Matemático - 9&nbsp; Funciones vectoriales</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./04-sucesiones.html" rel="next">
-<link href="./02-numeros-reales.html" rel="prev">
+<link href="./09-integrales.html" rel="prev">
 <link href="./img/logos/favicon.ico" rel="icon">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -68,9 +67,9 @@ ul.task-list li input[type="checkbox"] {
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<meta property="og:title" content="Problemas de Análisis Matemático - 3&nbsp; Topología de los números reales">
+<meta property="og:title" content="Problemas de Análisis Matemático - 9&nbsp; Funciones vectoriales">
 <meta property="og:site-name" content="Problemas de Análisis Matemático">
-<meta name="twitter:title" content="Problemas de Análisis Matemático - 3&nbsp; Topología de los números reales">
+<meta name="twitter:title" content="Problemas de Análisis Matemático - 9&nbsp; Funciones vectoriales">
 <meta name="twitter:site" content="@aprendeconalf">
 <meta name="twitter:card" content="summary">
 </head>
@@ -84,7 +83,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./03-topologia.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Topología de los números reales</span></a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./10-funciones-vectoriales.html"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Funciones vectoriales</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -170,7 +169,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./03-topologia.html" class="sidebar-item-text sidebar-link active">
+  <a href="./03-topologia.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Topología de los números reales</span></span></a>
   </div>
 </li>
@@ -206,7 +205,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./10-funciones-vectoriales.html" class="sidebar-item-text sidebar-link">
+  <a href="./10-funciones-vectoriales.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Funciones vectoriales</span></span></a>
   </div>
 </li>
@@ -223,7 +222,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Topología de los números reales</span></h1>
+<h1 class="title"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Funciones vectoriales</span></h1>
 </div>
 
 
@@ -238,9 +237,8 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<!-- LTeX: language = es-ES -->
-<div id="exr-sucesion-intervalos-anidados" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 3.1 </strong></span>Dada la sucesión de intervalos anidados <span class="math inline">\(I_n=[0,\frac{1}{n}]\)</span>, <span class="math inline">\(n\in\mathbb{N}\)</span>, demostrar que <span class="math inline">\(\cap_{n=1}^\infty I_n= \{0\}\)</span>. Demostrar también que si se consideran intervalos abiertos en lugar de cerrados entonces la intersección es vacía.</p>
+<div id="exr-trayectorias-funciones-vectoriales" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 9.1 </strong></span>Emparejar las siguientes funciones vectoriales con las trayectorias de más abajo.</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
@@ -254,13 +252,12 @@ Solución
 </div>
 <div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>En primer lugar, es fácil ver que <span class="math inline">\(0\in\cap_{n=1}^\infty I_n\)</span> ya que <span class="math inline">\(0\in I_n\)</span> <span class="math inline">\(\forall n\in\mathbb{N}\)</span>. Veamos ahora que <span class="math inline">\(0\)</span> es el único elemento de la intersección. Para cualquier <span class="math inline">\(x&gt;0\)</span>, aplicando la propiedad arquimediana se tiene que existe <span class="math inline">\(n\in\mathbb{N}\)</span> tal que <span class="math inline">\(\frac{1}{n}&lt;x\)</span>, de manera que <span class="math inline">\(x\not\in [0,\frac{1}{n}]=I_n\)</span>, por lo que <span class="math inline">\(x\not\in\cap_{n=1}^\infty I_n\)</span>. Por tanto, <span class="math inline">\(\cap_{n=1}^\infty I_n=\{0\}\)</span>.</p>
-<p>Si se consideran intervalos abiertos en lugar de cerrados, entonces <span class="math inline">\(0\)</span> tampoco pertenecería a la intersección y <span class="math inline">\(\cap_{n=1}^\infty I_n=\emptyset\)</span>.</p>
+
 </div>
 </div>
 </div>
-<div id="exr-interior-conjunto-unitario" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 3.2 </strong></span>¿Cuál es el interior del conjunto <span class="math inline">\(A=\{a\}\)</span>?</p>
+<div id="exr-trayectoria-interseccion-superficies" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 9.2 </strong></span>Determinar la función vectorial cuya trayectoria coincide de la intersección del cilindro <span class="math inline">\(x^2+y^2=2\)</span> y el plano <span class="math inline">\(2x-z=1\)</span>.</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
@@ -274,13 +271,17 @@ Solución
 </div>
 <div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p><span class="math inline">\(a\)</span> no es un punto interior de <span class="math inline">\(A\)</span>, ya que para cualquier <span class="math inline">\(\varepsilon&gt;0\)</span>, el entorno <span class="math inline">\((a-\varepsilon, a+\varepsilon)\not\subseteq A\)</span>. Por tanto, <span class="math inline">\(\operatorname{Int}(A)=\emptyset\)</span>.</p>
-<p>En general, cualquier conjunto con un solo punto no tiene puntos interiores.</p>
+<p>Como la proyección del cilindro de ecuación <span class="math inline">\(x^2+y^2=2\)</span> sobre el plano <span class="math inline">\(xy\)</span> es una circunferencia, podemos parametrizarla de la manera habitual haciendo <span class="math inline">\(x=\operatorname{sen}(t)\)</span> e <span class="math inline">\(y=\cos(t)\)</span> con <span class="math inline">\(0\leq t \leq 2\pi\)</span>.</p>
+<p>Por otro lado, de la ecuación del plano se deduce que <span class="math inline">\(z = 1+2x\)</span>, y sustituyendo la parametrización anterior se tiene <span class="math inline">\(z = 1+2\operatorname{sen}(t)\)</span>.</p>
+<p>Así pues, la función vectorial que resulta es</p>
+<p><span class="math display">\[
+\mathbf{f}(t) = \operatorname{sen}(t)\mathbf{i} + \cos(t)\mathbf{j} + (1+2\operatorname{sen}(t)) \quad 0\leq t \leq 2\pi.
+\]</span></p>
 </div>
 </div>
 </div>
-<div id="exr-interior-exterior-frontera" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 3.3 </strong></span>Sean <span class="math inline">\(a,b,c\in\mathbb{R}\)</span> tales que <span class="math inline">\(a&lt;b&lt;c\)</span> y sea <span class="math inline">\(A=\{a\}\cup (b,c)\)</span>. Calcular <span class="math inline">\(\operatorname{Int}(A)\)</span>, <span class="math inline">\(\operatorname{Ext}(A)\)</span> y <span class="math inline">\(\operatorname{Fr}(A)\)</span>.</p>
+<div id="exr-intersección-trayectorias" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 9.3 </strong></span>Dos aviones vuelan siguiendo las trayectorias dadas por las funciones vectoriales <span class="math inline">\(\mathbf{f}(t)=t^2\mathbf{i}+(2t+1)\mathbf{j}+t^3\mathbf{j}\)</span> y <span class="math inline">\(\mathbf{g}(t)=t-2\mathbf{i}+\frac{t}{2}\mathbf{j}+3t+10\mathbf{j}\)</span>. ¿Se cortan sus trayectorias? ¿Llegarán a chocar en algún momento?</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
@@ -294,12 +295,29 @@ Solución
 </div>
 <div id="callout-3" class="callout-3-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Como el interior de un conjunto con un solo punto es vacío y el interior de un intervalo abierto es el propio intervalo abierto (ver <a href="https://aprendeconalf.es/analisis-manual/topologia-reales.html#prp-interior-intervalo-abierto">proposición</a>), se tiene que <span class="math inline">\(\operatorname{Int}(A)=(a,b)\)</span>. Por otro lado, <span class="math inline">\(\overline{A}=(-\infty,a)\cup (a,b)\cup (c,\infty)\)</span>, que al ser la unión de intervalos abiertos se tiene que <span class="math inline">\(\operatorname{Ext}(A)=\operatorname{Int}(\overline{A})=(-\infty,a)\cup (a,b)\cup (c,\infty)\)</span>. Finalmente, <span class="math inline">\(\operatorname{Fr}(A)=\{a,b,c\}\)</span>, ya que cualquier entorno de estos puntos contiene puntos de <span class="math inline">\(A\)</span> y de <span class="math inline">\(\overline{A}\)</span>.</p>
+<p>Para ver si las trayectorias de los dos aviones se cortan deben existir instantes <span class="math inline">\(t_1\)</span> y <span class="math inline">\(t_2\)</span> tales que <span class="math inline">\(f(t_1)=f(t_2)\)</span>, es decir,</p>
+<p><span class="math display">\[\begin{align*}
+t_1^2 &amp;= t_2-2\\
+2t_1+1 &amp;= \frac{t_2}{2}\\
+t_1^3 &amp;= 3t_2+10
+\end{align*}\]</span></p>
+<p>Despejando <span class="math inline">\(t_2\)</span> en la primera ecuación se tiene <span class="math inline">\(t_2 = t_1^2+2\)</span> y sustituyendo en la segunda llegamos a</p>
+<p><span class="math display">\[
+2t_1 + 1 = \frac{t_1^2+2}{2} \Leftrightarrow \frac{t_1^2}{2}-2t_1 = 0 \Leftrightarrow t_1\left(\frac{t_1}{2}-2\right)=0 \Leftrightarrow t_1 = 0 \mbox{ o } t_1 = 4.
+\]</span></p>
+<p>Para <span class="math inline">\(t_1=0\)</span> se tiene que <span class="math inline">\(t_2 = 0^2+2 = 2\)</span>, que no cumplen la tercera ecuación, ya que <span class="math inline">\(0^3=0\neq 3\cdot 2 +10 =16\)</span>. Y para <span class="math inline">\(t_1=4\)</span> se tiene que <span class="math inline">\(t_2=4^2+2=18\)</span>, que sí cumple la tercera ecuación, ya que <span class="math inline">\(4^3 = 64 = 3\cdot 18 + 10\)</span>.</p>
+<p>Así pues, para <span class="math inline">\(t_1=4\)</span> y <span class="math inline">\(t_2=18\)</span> se tiene que <span class="math inline">\(\mathbf(f)(4) = (16, 9, 64) = \mathbf{g}(18)\)</span>, por lo que las trayectorias de <span class="math inline">\(\mathbf(f)\)</span> y <span class="math inline">\(\mathbf(g)\)</span> se cortan en le punto <span class="math inline">\((16, 9, 64)\)</span>. Sin embargo, los aviones no llegan a colisionar ya que para ello los dos aviones deberían estar en ese punto en el mismo instante.</p>
 </div>
 </div>
 </div>
-<div id="exr-frontera-enteros" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 3.4 </strong></span><span class="math inline">\(\star\)</span> Demostrar que todos los puntos de <span class="math inline">\(\mathbb{Z}\)</span> son puntos frontera.</p>
+<div id="exr-algebra-limites-funciones-vectoriales" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 9.4 </strong></span>Dadas dos funciones vectoriales <span class="math inline">\(\mathbf{f}\)</span> y <span class="math inline">\(\mathbf{g}\)</span> en <span class="math inline">\(\mathbb{R}^n\)</span>, demostrar que si existen su límites cuando <span class="math inline">\(t\to a\)</span>, entonces se cumplen las siguientes propiedades:</p>
+<ol type="a">
+<li><p><span class="math inline">\(\displaystyle \lim_{t\to a} \mathbf{f}(t) + \mathbf{g}(t) = \lim_{t\to a} \mathbf{f}(t) + \lim_{t\to a} \mathbf{g}(t)\)</span>.</p></li>
+<li><p><span class="math inline">\(\displaystyle \lim_{t\to a} c\mathbf{f}(t) = c\lim_{t\to a} \mathbf{f}(t)\ \forall c\in\mathbb{R}\)</span>.</p></li>
+<li><p><span class="math inline">\(\displaystyle \lim_{t\to a} \mathbf{f}(t)\cdot \mathbf{g}(t) = \lim_{t\to a} \mathbf{f}(t) \cdot \lim_{t\to a} \mathbf{g}(t)\)</span>.</p></li>
+<li><p><span class="math inline">\(\displaystyle \lim_{t\to a} \mathbf{f}(t) \times \mathbf{g}(t) = \lim_{t\to a} \mathbf{f}(t) \times \lim_{t\to a} \mathbf{g}(t)\)</span>.</p></li>
+</ol>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
@@ -313,12 +331,16 @@ Solución
 </div>
 <div id="callout-4" class="callout-4-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Sea <span class="math inline">\(x\in\mathbb{Z}\)</span>, entonces, para cualquier <span class="math inline">\(\varepsilon&gt;0\)</span>, el entorno <span class="math inline">\((x-\varepsilon, x+\varepsilon)\)</span> siempre contiene números enteros (por ejemplo el propio <span class="math inline">\(x\)</span>), y números no enteros, por los que <span class="math inline">\(x\)</span> es un punto frontera.</p>
+
 </div>
 </div>
 </div>
-<div id="exr-interior-racionales-irracionales" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 3.5 </strong></span><span class="math inline">\(\star\)</span> Demostrar que el conjunto de los números racionales no tiene puntos interiores. ¿Y el conjunto de los números irracionales?</p>
+<div id="exr-limites-funciones-vectoriales" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 9.5 </strong></span>Calcular los siguientes límites de funciones vectoriales.</p>
+<ol type="a">
+<li><p><span class="math inline">\(\displaystyle \lim_{t\to 0} \left(t^2e^{-t}, \frac{\operatorname{tg}(t)}{t} \right)\)</span>.</p></li>
+<li><p><span class="math inline">\(\displaystyle \lim_{t\to \infty} \left(\frac{t^2+2t}{2t^2-1}, t\cos(t^{-1}), \frac{\operatorname{sen}(t^2)}{t} \right)\)</span>.</p></li>
+</ol>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
@@ -332,13 +354,16 @@ Solución
 </div>
 <div id="callout-5" class="callout-5-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Sea <span class="math inline">\(x\in\mathbb{Q}\)</span>, entonces, para cualquier <span class="math inline">\(\varepsilon&gt;0\)</span>, por la <a href="https://aprendeconalf.es/analisis-manual/cuerpo-reales.html#thm-densidad-racionales">densidad de los números racionales</a>, el entorno <span class="math inline">\((x-\varepsilon, x+\varepsilon)\)</span> siempre contiene números racionales, y por la <a href="https://aprendeconalf.es/analisis-manual/cuerpo-reales.html#thm-densidad-irracionales">densidad de los números irracionales</a> también contiene números irracionales, de manera que todos los puntos de <span class="math inline">\(\mathbb{Q}\)</span> son frontera y no tiene puntos interiores.</p>
-<p>Por el mismo motivo, <span class="math inline">\(\mathbb{R}\setminus\mathbb{Q}\)</span> tampoco tiene puntos interiores y todos sus puntos son puntos frontera.</p>
+
 </div>
 </div>
 </div>
-<div id="exr-interior-subconjunto" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 3.6 </strong></span>Demostrar que si <span class="math inline">\(x\)</span> es un punto interior de <span class="math inline">\(A\)</span> y <span class="math inline">\(A\subseteq B\)</span>, entonces <span class="math inline">\(x\)</span> también es un punto interior de <span class="math inline">\(B\)</span>.</p>
+<div id="exr-derivadas-funciones-vectoriales" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 9.6 </strong></span>Calcular la derivada de las siguientes funciones vectoriales</p>
+<ol type="a">
+<li><p><span class="math inline">\(\displaystyle \mathbf{f}(t)=\left(t^2e^{-t}, \frac{\operatorname{tg}(t)}{t} \right)\)</span>.</p></li>
+<li><p><span class="math inline">\(\displaystyle \mathbf{g}(t)= \left(\frac{t^2+2t}{2t^2-1}, t\cos(t^{-1}), \frac{\operatorname{sen}(t^2)}{t} \right)\)</span>.</p></li>
+</ol>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
@@ -352,12 +377,12 @@ Solución
 </div>
 <div id="callout-6" class="callout-6-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Sea <span class="math inline">\(x\)</span> un punto interior de <span class="math inline">\(A\)</span>. Entonces existe un <span class="math inline">\(\varepsilon&gt;0\)</span> tal que el entorno <span class="math inline">\((x-\varepsilon, x+\varepsilon)\subseteq A\subseteq B\)</span>, de manera que <span class="math inline">\(x\)</span> también es un punto interior de <span class="math inline">\(B\)</span>.</p>
+
 </div>
 </div>
 </div>
-<div id="exr-punto-interior-union-interseccion" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 3.7 </strong></span>Demostrar que si <span class="math inline">\(x\)</span> es un punto interior de dos conjuntos <span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span>, entonces también es un punto interior de su unión y su intersección.</p>
+<div id="exr-cinematica-1" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 9.7 </strong></span>Una partícula se mueve a lo largo de una curva <span class="math inline">\(y=\cos(2x+1)\)</span>, siendo <span class="math inline">\(x=t^2+1\)</span> y <span class="math inline">\(t\)</span> el tiempo en segundos. ¿Con qué velocidad está desplazándose respecto a las direcciones vertical y horizontal cuando <span class="math inline">\(t=2\)</span> s?</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
@@ -371,14 +396,23 @@ Solución
 </div>
 <div id="callout-7" class="callout-7-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Sea <span class="math inline">\(x\)</span> un punto interior de <span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span>. Entonces, existe un <span class="math inline">\(\varepsilon_1&gt;0\)</span> tal que el entorno <span class="math inline">\((x-\varepsilon_1, x+\varepsilon_1)\subseteq A\subseteq A\cup B\)</span>, de manera que <span class="math inline">\(x\)</span> es también un punto interior de <span class="math inline">\(A\cup B\)</span>.</p>
-<p>Por otro lado, como <span class="math inline">\(x\)</span> es también un punto interior de <span class="math inline">\(B\)</span>, existe otro <span class="math inline">\(\varepsilon_2&gt;0\)</span> tal que el entorno <span class="math inline">\((x-\varepsilon_2, x+\varepsilon_2)\subseteq B\)</span>. Tomando <span class="math inline">\(\varepsilon=\min\{\varepsilon_1,\varepsilon_2\}\)</span>, se tiene que el entorno <span class="math inline">\((x-\varepsilon, x+\varepsilon)\subseteq A\)</span> y <span class="math inline">\((x-\varepsilon, x+\varepsilon)\subseteq B\)</span>, por lo que <span class="math inline">\((x-\varepsilon, x+\varepsilon)\subseteq A\cap B\)</span>, y <span class="math inline">\(x\)</span> es también un punto interior de <span class="math inline">\(A\cap B\)</span>.</p>
+<p>Velocidad horizontal: <span class="math inline">\(\frac{dx}{dt} = 2t\)</span> y en el instante <span class="math inline">\(t=2\)</span>, <span class="math inline">\(\frac{dx}{dt}(t=2)=4\)</span>.</p>
+<p>Velocidad vertical: <span class="math inline">\(\frac{dy}{dt}=-\operatorname{sen}(2t^2+3)4t\)</span> y en el instante <span class="math inline">\(t=2\)</span>, <span class="math inline">\(\frac{dy}{dt}=-8\operatorname{sen}(11)\)</span>.</p>
 </div>
 </div>
 </div>
-<div id="exr-interior-union-interseccion" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 3.8 </strong></span>Demostrar que para cualesquiera dos conjuntos de números reales <span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span>, se cumple que <span class="math inline">\(\operatorname{Int}(A\cap B) = \operatorname{Int}(A) \cap \operatorname{Int}(B)\)</span>.</p>
-<p>Demostrar también que el anterior resultado no es cierto para la unión, es decir, dados <span class="math inline">\(A,B\subseteq \mathbb{R}\)</span>, no se cumple siempre que <span class="math inline">\(\operatorname{Int}(A\cup B) = \operatorname{Int}(A) \cup \operatorname{Int}(B)\)</span>.</p>
+<div id="exr-cinematica-tangente-trayectoria" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 9.8 </strong></span>Un punto se mueve en el plano siguiendo una trayectoria</p>
+<p><span class="math display">\[
+\begin{cases}
+x = \operatorname{tg} t,  \\
+y = t^2-2t+3. \\
+\end{cases}
+\]</span></p>
+<ol type="a">
+<li>Hallar <span class="math inline">\(\frac{\partial y}{\partial x}\)</span> en <span class="math inline">\(t=0\)</span>.</li>
+<li>Hallar la tangente a la trayectoria en el punto <span class="math inline">\((0,3)\)</span>.</li>
+</ol>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
@@ -392,14 +426,54 @@ Solución
 </div>
 <div id="callout-8" class="callout-8-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>En el <a href="#exr-punto-interior-union-interseccion">Ejercicio&nbsp;<span>3.7</span></a> hemos visto que si <span class="math inline">\(x\)</span> es un punto interior de <span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span>, entonces también lo es de su intersección. Veamos ahora el otro sentido de la implicación.</p>
-<p>Supongamos que <span class="math inline">\(x\)</span> es un punto interior de <span class="math inline">\(A\cap B\)</span>. Entonces, existe un <span class="math inline">\(\varepsilon&gt;0\)</span> tal que el entorno <span class="math inline">\((x-\varepsilon, x+\varepsilon)\subseteq A\cap B\)</span>. Pero como <span class="math inline">\(A\cap B\subseteq A\)</span> y <span class="math inline">\(A\cap B\subseteq B\)</span>, se tiene que <span class="math inline">\(x\)</span> es también un punto interior de <span class="math inline">\(A\)</span> y de <span class="math inline">\(B\)</span>.</p>
-<p>Para ver que este resultado no es cierto para la unión, basta con tomar <span class="math inline">\(A=(-1,0)\)</span> y <span class="math inline">\(B=[0,1)\)</span>. Entonces <span class="math inline">\(A\cup B=(-1,1)\)</span>, y al ser un intervalo abierto, <span class="math inline">\(\operatorname{Int}(A\cup B)=(-1,1)\)</span>. Sin embargo, <span class="math inline">\(\operatorname{Int}(A)=(-1,0)\)</span> y <span class="math inline">\(\operatorname{Int}(B)=(0,1)\)</span>, por lo que <span class="math inline">\(\operatorname{Int}(A)\cup \operatorname{Int}(B)=(-1,1)\setminus\{0\}\neq (-1,1)= \operatorname{Int}(A\cup B)\)</span>.</p>
+<p>Se trata de la ecuación de una trayectoria en coordenadas paramétricas.</p>
+<ol type="a">
+<li>Aplicando la regla de la cadena se tiene que</li>
+</ol>
+<p><span class="math display">\[
+\dfrac{\partial y}{\partial t} = \dfrac{\partial y}{\partial x}\dfrac{\partial x}{\partial t},
+\]</span></p>
+<p>en consecuencia, <span class="math display">\[
+\dfrac{\partial y}{\partial x}(t) = \frac{\partial y/\partial t}{\partial x/\partial t}(t)=\frac{2t-2}{1+\operatorname{tg}^2t}.
+\]</span></p>
+<p>En el punto <span class="math inline">\(t=0\)</span> tendremos</p>
+<p><span class="math display">\[
+\dfrac{\partial y}{\partial x}(0) = \frac{-2}{1+\operatorname{tg}^20} = -2.
+\]</span></p>
+<ol type="a">
+<li>La ecuación de la recta tangente a la trayectoria en el punto <span class="math inline">\((x(t_0),y(t_0))\)</span> correspondiente al instante <span class="math inline">\(t_0,\)</span> viene dada por la expresión</li>
+</ol>
+<p><span class="math display">\[
+y-y(t_0) = \dfrac{\partial y}{\partial x}(t_0)(x-x(t_0)).
+\]</span></p>
+<p>Como el punto <span class="math inline">\((0,3)\)</span> se alcanza precisamente en el instante <span class="math inline">\(t=0\)</span> tenemos que la ecuación de la recta tangente a la trayectoria en dicho instante es:</p>
+<p><span class="math display">\[
+y-y(0) = \dfrac{\partial y}{\partial x}(0)(x-x(0)),
+\]</span></p>
+<p>es decir,</p>
+<p><span class="math display">\[
+y-3 = -2(x-0),
+\]</span></p>
+<p>y simplificando obtenemos:</p>
+<p><span class="math display">\[
+y = 3-2x.
+\]</span></p>
 </div>
 </div>
 </div>
-<div id="exr-particion-interior-exterior-frontera" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 3.9 </strong></span>Dado un conjunto <span class="math inline">\(A\subset\mathbb{R}\)</span>, probar que los conjuntos <span class="math inline">\(\operatorname{Int}(A)\)</span>, <span class="math inline">\(\operatorname{Ext}(A)\)</span> y <span class="math inline">\(\operatorname{Fr}(A)\)</span> forman una partición de <span class="math inline">\(\mathbb{R}\)</span>.</p>
+<div id="exr-cinematica-tangente-normal-trayectoria" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 9.9 </strong></span>Una partícula se mueve a lo largo de la curva</p>
+<p><span class="math display">\[
+\begin{cases}
+x = 2\operatorname{sen}(t), \\
+y = \sqrt{3}\cos(t),
+\end{cases}
+\]</span></p>
+<p>donde <span class="math inline">\(x\)</span> e <span class="math inline">\(y\)</span> están medidos en metros y el tiempo <span class="math inline">\(t\)</span> en segundos.</p>
+<ol type="a">
+<li><p>Hallar la ecuación de la rectas tangente y normal a la trayectoria en el punto <span class="math inline">\((1,3/2)\)</span>.</p></li>
+<li><p>¿Con qué velocidad se mueve la partícula respecto a las direcciones vertical y horizontal en dicho punto?</p></li>
+</ol>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
@@ -413,23 +487,12 @@ Solución
 </div>
 <div id="callout-9" class="callout-9-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Veamos primero, que <span class="math inline">\(\operatorname{Int}(A)\)</span>, <span class="math inline">\(\operatorname{Ext}(A)\)</span> y <span class="math inline">\(\operatorname{Fr}(A)\)</span> son disjuntos dos a dos.</p>
-<ul>
-<li>Si <span class="math inline">\(x\in \operatorname{Int}(A)\)</span>, entonces existe <span class="math inline">\(\varepsilon&gt;0\)</span> tal que el entorno <span class="math inline">\((x-\varepsilon, x+\varepsilon)\subseteq A\)</span>. De aquí se deduce que <span class="math inline">\(a\in A\)</span>, y por tanto <span class="math inline">\(x\not\in \overline{A}\)</span> por lo que <span class="math inline">\((x-\varepsilon, x+\varepsilon)\not\subseteq \overline{A}\)</span> <span class="math inline">\(\forall \varepsilon&gt;0\)</span> y <span class="math inline">\(x\)</span> no es un punto exterior de <span class="math inline">\(A\)</span>. Por otro lado, <span class="math inline">\((x-\varepsilon, x+\varepsilon)\subseteq A\)</span>, por lo que este entorno de <span class="math inline">\(x\)</span> no contiene puntos de <span class="math inline">\(\overline{A}\)</span> y <span class="math inline">\(x\not\in \operatorname{Fr}(A)\)</span>.</li>
-<li>Si <span class="math inline">\(x\in \operatorname{Ext}(A)\)</span>, entonces existe <span class="math inline">\(\varepsilon&gt;0\)</span> tal que el entorno <span class="math inline">\((x-\varepsilon, x+\varepsilon)\subseteq \overline{A}\)</span>. De aquí se deduce que <span class="math inline">\(x\not\in A\)</span>, y por tanto <span class="math inline">\(x\)</span> no es un punto interior de <span class="math inline">\(A\)</span>. Por otro lado, como <span class="math inline">\((x-\varepsilon, x+\varepsilon)\subseteq \overline{A}\)</span>, existe un entorno de <span class="math inline">\(x\)</span> que no contiene puntos de <span class="math inline">\(A\)</span> y <span class="math inline">\(x\not\in \operatorname{Fr}(A)\)</span>.</li>
-<li>Si <span class="math inline">\(x\in \operatorname{Fr}(A)\)</span>, entonces para cualquier <span class="math inline">\(\varepsilon&gt;0\)</span>, el entorno <span class="math inline">\((x-\varepsilon, x+\varepsilon)\)</span> contiene puntos de <span class="math inline">\(A\)</span> y de <span class="math inline">\(\overline{A}\)</span>, de manera que, no existe <span class="math inline">\(\varepsilon&gt;0\)</span> tal que <span class="math inline">\((x-\varepsilon, x+\varepsilon)\subseteq A\)</span> o <span class="math inline">\((x-\varepsilon, x+\varepsilon)\subseteq \overline{A}\)</span>, así que, <span class="math inline">\(x\)</span> no es un punto interior ni exterior de <span class="math inline">\(A\)</span>.</li>
-</ul>
-<p>Veamos ahora que <span class="math inline">\(\operatorname{Int}(A)\cup\operatorname{Ext}(A)\cup\operatorname{Fr}(A)=\mathbb{R}\)</span>, o dicho de otro modo, cualquier <span class="math inline">\(x\in\mathbb{R}\)</span> debe pertenecer a alguno de estos conjuntos.</p>
-<ul>
-<li>Si existe <span class="math inline">\(\varepsilon&gt;0\)</span> tal que <span class="math inline">\((x-\varepsilon, x+\varepsilon)\subseteq A\)</span>, entonces <span class="math inline">\(x\)</span> es un punto interior de <span class="math inline">\(A\)</span>.</li>
-<li>En caso contrario, si existe <span class="math inline">\(\varepsilon&gt;0\)</span> tal que <span class="math inline">\((x-\varepsilon, x+\varepsilon)\subseteq \overline{A}\)</span>, entonces <span class="math inline">\(x\)</span> es un punto exterior de <span class="math inline">\(A\)</span>.</li>
-<li>Finalmente, si para cualquier <span class="math inline">\(\varepsilon&gt;0\)</span> <span class="math inline">\((x-\varepsilon, x+\varepsilon)\not\subseteq A\)</span> y <span class="math inline">\((x-\varepsilon, x+\varepsilon)\not\subseteq \overline{A}\)</span>, se tiene que <span class="math inline">\((x-\varepsilon, x+\varepsilon)\)</span> contiene tanto puntos de <span class="math inline">\(A\)</span> como de <span class="math inline">\(\overline{A}\)</span>, por lo que <span class="math inline">\(x\)</span> es un punto frontera de <span class="math inline">\(A\)</span>.</li>
-</ul>
+
 </div>
 </div>
 </div>
-<div id="exr-particion-interior-exterior-frontera" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 3.10 </strong></span><span class="math inline">\(\star\)</span> Calcular los puntos de adherencia y de acumulación del conjunto <span class="math inline">\(A=\{\frac{n+1}{n}:n\in\mathbb{N}\}\)</span>.</p>
+<div id="exr-derivadas-función-modulo-constante" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 9.10 </strong></span>Un móvil sigue la trayectoria en el espacio real dada por una función vectorial <span class="math inline">\(\mathbf{f}(t)\)</span> con módulo constante. ¿Cómo es la trayectoria que describe? Demostrar que su vector velocidad es ortogonal al vector posición.</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="false" aria-label="Toggle callout">
@@ -443,14 +506,21 @@ Solución
 </div>
 <div id="callout-10" class="callout-10-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Como <span class="math inline">\(\frac{n+1}{n}=1+\frac{1}{n}\)</span>, <span class="math inline">\(1\)</span> es un punto de acumulación de <span class="math inline">\(A\)</span>, ya que para cualquier <span class="math inline">\(\varepsilon&gt;0\)</span>, <span class="math inline">\((1-\varepsilon, 1+\varepsilon)\setminus \{1\}\)</span> contiene puntos de <span class="math inline">\(A\)</span>. Para verlo, basta aplicar la propiedad arquimediana, por la que existe <span class="math inline">\(n\in\mathbb{N}\)</span> tal que <span class="math inline">\(\frac{1}{n}&lt;\varepsilon\)</span>, de manera que <span class="math inline">\(1+\frac{1}{n}&lt;1+\varepsilon\)</span>, y por tanto <span class="math inline">\((1-\varepsilon, 1+\varepsilon)\setminus \{1\}\cap A\neq \emptyset\)</span>.</p>
-<p>Para calcular los puntos de adherencia de <span class="math inline">\(A\)</span> basta tener en cuenta que <span class="math inline">\(A\subseteq \operatorname{Adh}(A)\)</span>, y que <span class="math inline">\(\operatorname{Ac}(A)\subseteq \operatorname{Adh}(A)\)</span>, por lo que <span class="math inline">\(1\)</span> también es un punto de adherencia de <span class="math inline">\(A\)</span>. Veamos ahora que cualquier otro punto, no es punto de adherencia de <span class="math inline">\(A\)</span>. Si <span class="math inline">\(x&lt;1\)</span>, tomando <span class="math inline">\(\varepsilon=|x-1|\)</span> el entorno <span class="math inline">\((x-\varepsilon, x+\varepsilon)\)</span> no contiene puntos de <span class="math inline">\(A\)</span>. Del mismo modo, si <span class="math inline">\(x&gt;2\)</span>, tomando <span class="math inline">\(\varepsilon=|x-2|\)</span> el entorno <span class="math inline">\((x-\varepsilon, x+\varepsilon)\)</span> tampoco contiene puntos de <span class="math inline">\(A\)</span>. Finalmente, si <span class="math inline">\(1&lt;x\leq 2\)</span>, por la propiedad arquimediana, existe <span class="math inline">\(n\in\mathbb{N}\)</span> tal que <span class="math inline">\(\frac{1}{n+1}\leq x&lt;\frac{1}{n}\)</span>. Tomando <span class="math inline">\(\varepsilon=\min(\{|x-\frac{1}{n+1}|,|x-\frac{1}{n}|\})\)</span> también se tiene que el entorno <span class="math inline">\((x-\varepsilon, x+\varepsilon)\)</span> no contiene puntos de <span class="math inline">\(A\)</span>. Por tanto, <span class="math inline">\(\operatorname{Adh}(A)=A\cup \{1\}\)</span>.</p>
-<p>Para calcular los puntos de acumulación de <span class="math inline">\(A\)</span>, ya sabemos que <span class="math inline">\(1\)</span> es un punto de acumulación y faltaría por ver si algún otro punto de <span class="math inline">\(A\)</span> es un punto de acumulación de <span class="math inline">\(A\)</span>, ya que el resto de puntos no pertenecen a la adherencia y por tanto no pueden ser puntos de acumulación al ser <span class="math inline">\(\operatorname{Ac}(A)\subseteq\operatorname{Adh}(A)\)</span>. Ahora bien, si <span class="math inline">\(x\in A\)</span>, entonces existe <span class="math inline">\(n\in\mathbb{N}\)</span> tal que <span class="math inline">\(x=1+\frac{1}{n}\)</span>, de manera que tomando <span class="math inline">\(\varepsilon=\frac{1}{n}-\frac{1}{n+1}\)</span> se tiene que el entorno reducido <span class="math inline">\((x-\varepsilon,x+\varepsilon)\setminus\{x\}\)</span> no contiene puntos de <span class="math inline">\(A\)</span>, por lo que <span class="math inline">\(x\)</span> no es punto de acumulación de <span class="math inline">\(A\)</span>. Así pues, <span class="math inline">\(\operatorname{Ac}(A)=\{1\}\)</span>.</p>
+<p>Supongamos que <span class="math inline">\(|\mathbf{f}(t)|=c\)</span> <span class="math inline">\(\forall t\in \mathbb{R}\)</span>. Resulta sencillo ver el tipo de trayectoria que seguirá el móvil si pasamos a coordenadas esféricas. Al ser el módulo constante, independientemente del ángulo, la trayectoria estará inscrita en la esfera centrada en el origen de radio <span class="math inline">\(c\)</span>.</p>
+<p>Para ver que su vector velocidad es ortogonal al vector de posición, se tiene que</p>
+<p><span class="math display">\[
+\mathbf{f}(t)\cdot \mathbf{f}(t) = |\mathbf{f}(t)|^2 = c^2,
+\]</span></p>
+<p>que al ser constante, tendrá derivada nula, y por tanto,</p>
+<p><span class="math display">\[
+(\mathbf{f}(t)\cdot \mathbf{f}(t))' = \mathbf{f}(t)'\cdot \mathbf{f}(t) + \mathbf{f}(t)\cdot \mathbf{f}(t) = 2 \mathbf{f}(t)'\cdot \mathbf{f}(t) = 0.
+\]</span></p>
+<p>Así pues, el vector velocidad <span class="math inline">\(\mathbf{f}(t)\)</span> y el vector posición <span class="math inline">\(\mathbf{f}(t)\)</span> son ortogonales ya que su producto escalar es nulo.</p>
 </div>
 </div>
 </div>
-<div id="exr-particion-interior-exterior-frontera" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 3.11 </strong></span>Calcular los puntos de adherencia y de acumulación de <span class="math inline">\(\mathbb{Z}\)</span> y también de <span class="math inline">\(\mathbb{Q}\)</span>.</p>
+<div id="exr-plano-normal-trayectoria" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 9.11 </strong></span>Una trayectoria pasa por el punto <span class="math inline">\((3,6,5)\)</span> en el instante <span class="math inline">\(t=0\)</span> con velocidad <span class="math inline">\(\mathbf{i}-\mathbf{k}\)</span>. Hallar la ecuación del plano normal y de la recta tangente en ese instante.</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="false" aria-label="Toggle callout">
@@ -464,13 +534,22 @@ Solución
 </div>
 <div id="callout-11" class="callout-11-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p><span class="math inline">\(\operatorname{Adh}(\mathbb{Z})=\mathbb{Z}\)</span> y <span class="math inline">\(\operatorname{Ac}(\mathbb{Z})=\emptyset\)</span>.<br>
-<span class="math inline">\(\operatorname{Adh}(\mathbb{Q})=\operatorname{Ac}(\mathbb{Q})=\mathbb{R}\)</span>.</p>
+<p>Plano normal: <span class="math inline">\(x-z+2=0\)</span>.</p>
+<p>Recta tangente: <span class="math inline">\((3+t,6,5-t)\)</span>.</p>
 </div>
 </div>
 </div>
-<div id="exr-ejemplo-conjuntos-abiertos-interseccion-no-abierta" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 3.12 </strong></span>Dar un ejemplo de dos conjuntos no abiertos pero cuya intersección es abierta.</p>
+<div id="exr-cinematica-tangente-trayectoria-espacio" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 9.12 </strong></span>Una partícula sigue la trayectoria</p>
+<p><span class="math display">\[
+\begin{cases}
+x=e^t,\\
+y=e^{-t},\\
+z=\cos(t),
+\end{cases}
+\quad t\in \mathbb{R}
+\]</span></p>
+<p>hasta que se sale por la tangente en el instante <span class="math inline">\(t=0\)</span>. ¿Dónde estará en el instante <span class="math inline">\(t=3\)</span>?</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-12-contents" aria-controls="callout-12" aria-expanded="false" aria-label="Toggle callout">
@@ -484,12 +563,20 @@ Solución
 </div>
 <div id="callout-12" class="callout-12-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Si se toma <span class="math inline">\(A=[0,2)\)</span> y <span class="math inline">\(B=(1,3]\)</span>, tanto <span class="math inline">\(A\)</span> como <span class="math inline">\(B\)</span> no son abiertos, pero <span class="math inline">\(A\cap B=(1,2)\)</span> que es un conjunto abierto.</p>
+<p>Recta tangente: <span class="math inline">\((1+t,1-t,1)\)</span>.</p>
+<p>Posición en el instante <span class="math inline">\(t=3\)</span>: <span class="math inline">\((4,-2,1)\)</span>.</p>
 </div>
 </div>
 </div>
-<div id="exr-racionales-no-abierto-cerrado" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 3.13 </strong></span><span class="math inline">\(\star\)</span> Estudiar si el conjunto de los números racionales <span class="math inline">\(\mathbb{Q}\)</span> es abierto o cerrado.</p>
+<div id="exr-cinematica-2" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 9.13 </strong></span>Las coordenadas paramétricas de un punto material lanzado bajo un ángulo respecto al horizonte son</p>
+<p><span class="math display">\[
+\begin{cases}
+x=v_0t, &amp; \\
+y=-\frac{1}{2}gt^2
+\end{cases}
+\]</span></p>
+<p>donde <span class="math inline">\(t\in \mathbb{R}^{+}\)</span> es el tiempo contado a partir del instante en que el punto llega a la posición más alta, <span class="math inline">\(v_0\)</span> es la velocidad horizontal en el instante <span class="math inline">\(t=0\)</span> y <span class="math inline">\(g=9.8\)</span> m<span class="math inline">\(^2\)</span>/s es la aceleración de la gravedad. ¿En qué instante la magnitud de la velocidad horizontal será igual a la de la velocidad vertical? ¿Cuánto debería valer <span class="math inline">\(v_0\)</span> para que en dicho instante el punto haya recorrido 100 m horizontalmente? Calcular la ecuación de la recta tangente en dicho instante con el valor de <span class="math inline">\(v_0\)</span> calculado.</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-13-contents" aria-controls="callout-13" aria-expanded="false" aria-label="Toggle callout">
@@ -503,17 +590,54 @@ Solución
 </div>
 <div id="callout-13" class="callout-13-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p><span class="math inline">\(\mathbb{Q}\)</span> no es abierto ya que como se vio en el <a href="#exr-interior-racionales-irracionales">Ejercicio&nbsp;<span>3.5</span></a> <span class="math inline">\(\operatorname{Int}(\mathbb{Q})=\emptyset\)</span>. En el mismo ejercicio se vio también que <span class="math inline">\(\operatorname{Int}(\overline{\mathbb{Q}})=\operatorname{Int}(\mathbb{R}\setminus \mathbb{Q})=\emptyset\)</span>, por lo que <span class="math inline">\(\mathbb{Q}\)</span> tampoco es cerrado.</p>
+<p>La velocidad horizontal es la derivada del espacio recorrido horizontalmente (componente <span class="math inline">\(x\)</span>) con respecto al tiempo, es decir,</p>
+<p><span class="math display">\[
+\frac{dx}{dt} = \frac{d}{dt}(v_0t)=v_0.
+\]</span></p>
+<p>Del mismo modo, la velocidad vertical es la derivada del espacio recorrido verticalmente (componente <span class="math inline">\(y\)</span>) en relación al tiempo,</p>
+<p><span class="math display">\[
+\frac{dy}{dt} = \frac{d}{dt}(-\frac{1}{2}gt^2)=-gt
+\]</span></p>
+<p>Para ver en qué instante ambas magnitudes serán iguales, las igualamos y resolvemos la ecuación:</p>
+<p><span class="math display">\[
+\left|\frac{dx}{dt}\right|=\left|\frac{dy}{dt}\right| \Leftrightarrow v_0 = gt \Leftrightarrow t=\frac{v_0}{g}=\frac{v_0}{9.8}.
+\]</span></p>
+<p>Para que en dicho instante el punto haya recorrido 100 m horizontalmente, debe cumplirse que <span class="math inline">\(x(v_0/9.8)=100\)</span>, de lo que se deduce:</p>
+<p><span class="math display">\[
+x(v_0/9.8)=v_0\frac{v_0}{9.8} = \frac{v_0^2}{9.8}=100 \Leftrightarrow v_0^2 = 980 \Leftrightarrow v_0 = +\sqrt{980}= 31.3.
+\]</span></p>
+<p>Por tanto, el instance en cuestión es <span class="math inline">\(t=v_0/9.8= 31.3/9.8 = 3.19\)</span>.</p>
+<p>Por último, la ecuación de la recta tangente en dicho instante, para el valor de <span class="math inline">\(v_0\)</span> calculado es:</p>
+<p><span class="math display">\[
+y = y(3.19) + \frac{dy}{dx}(3.19) (x-x(3.19))
+\]</span></p>
+<p>Ya hemos visto que <span class="math inline">\(x(3.19)=100\)</span>, y que en dicho instante la velocidad horizontal y vertical coinciden, de manera que</p>
+<p><span class="math display">\[
+\frac{dy}{dx}(3.19)=\frac{dy/dt}{dx/dt}=-1,
+\]</span></p>
+<p>de modo que sólo nos queda calcular el espacio vertical recorrido en dicho instante, que es</p>
+<p><span class="math display">\[
+y(3.19)=-\frac{1}{2}9.8\cdot 3.19^2= -49.86.
+\]</span></p>
+<p>Sustituyendo en la ecuación anterior llegamos a la recta tangente:</p>
+<p><span class="math display">\[
+y = -49.86-(x-100) \Leftrightarrow y=-x+50.14.
+\]</span></p>
 </div>
 </div>
 </div>
-<div id="exr-union-interseccion-coleccion-abiertos-cerrados" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 3.14 </strong></span>Probar las siguientes propiedades:</p>
+<div id="exr-cinematica-tangente-normal-trayectoria" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 9.14 </strong></span>La cantidad de árboles en un ecosistema, <span class="math inline">\(a\)</span>, depende del tiempo según la expresión</p>
+<p><span class="math display">\[
+a(t)=100\ln(t^2+1),
+\]</span></p>
+<p>y la cantidad de un determinado parásito de los árboles, <span class="math inline">\(p\)</span>, que también depende del tiempo, viene dada por</p>
+<p><span class="math display">\[
+p(t) = \sqrt[3]{{t^2  + 2}}.
+\]</span></p>
 <ol type="a">
-<li>La unión de una colección de conjuntos abiertos es un conjunto abierto.</li>
-<li>La intersección de una colección finita de conjuntos abiertos es un conjunto abierto.</li>
-<li>La intersección de una colección de conjuntos cerrados es cerrada.</li>
-<li>La unión de una colección finita de conjuntos cerrados es un conjunto cerrado.</li>
+<li><p>Calcular el número de parásitos cuando el número de árboles sea 500.</p></li>
+<li><p>La derivada del número de parásitos con respecto al número de árboles cuando el número de parásitos sea 3.</p></li>
 </ol>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
@@ -528,52 +652,7 @@ Solución
 </div>
 <div id="callout-14" class="callout-14-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<ol type="a">
-<li><p>Sea <span class="math inline">\(A_n\)</span> <span class="math inline">\(n\in\mathbb{N}\)</span> una colección arbitraria de conjuntos abiertos y sea <span class="math inline">\(x\in \cup_{n=1}^\infty A_n\)</span>. Entonces existe un <span class="math inline">\(n\in\mathbb{N}\)</span> tal que <span class="math inline">\(x\in A_n\)</span>, y como <span class="math inline">\(A_n\)</span> es abierto, existe un <span class="math inline">\(\varepsilon&gt;0\)</span> tal que el entorno <span class="math inline">\((x-\varepsilon, x+\varepsilon)\subseteq A_n\subseteq\cup_{n=1}^\infty A_n\)</span>, por lo que <span class="math inline">\(x\)</span> es un punto interior de <span class="math inline">\(\cup_{n=1}^\infty A_n\)</span>.</p></li>
-<li><p>Vamos a probarlo por inducción. Sean <span class="math inline">\(A_1\)</span> y <span class="math inline">\(A_2\)</span> dos conjuntos abiertos. Si <span class="math inline">\(A_1\cap A_2=\emptyset\)</span> ya estaría probado. En caso contrario, sea <span class="math inline">\(x\in A_1\cap A_2\)</span>. Entonces, como <span class="math inline">\(x\in A_1\)</span> existe un <span class="math inline">\(\varepsilon_1&gt;0\)</span> tal que el entorno <span class="math inline">\((x-\varepsilon_1, x+\varepsilon_1)\subseteq A_1\)</span>, y como <span class="math inline">\(x\in A_2\)</span> existe un <span class="math inline">\(\varepsilon_2&gt;0\)</span> tal que el entorno <span class="math inline">\((x-\varepsilon_2, x+\varepsilon_2)\subseteq A_2\)</span>. Tomando <span class="math inline">\(\varepsilon=\min\{\varepsilon_1,\varepsilon_2\}\)</span>, se tiene que <span class="math inline">\((x-\varepsilon, x+\varepsilon)\subseteq A_1\)</span> y <span class="math inline">\((x-\varepsilon, x+\varepsilon)\subseteq A_2\)</span>, por lo que <span class="math inline">\((x-\varepsilon, x+\varepsilon)\subseteq A_1\cap A_2\)</span>, y <span class="math inline">\(A_1\cap A_2\)</span> es un conjunto abierto.</p>
-<p>Sea ahora una colección <span class="math inline">\(A_1,\ldots,A_m,A_{m+1}\)</span> una colección de conjuntos abiertos y supongamos que <span class="math inline">\(A=\cap_{n=1}^m A_n\)</span> es un conjunto abierto. Si <span class="math inline">\(A\cap A_{m+1}=\emptyset\)</span> ya estaría probado. En caso contrario, sea <span class="math inline">\(x\in A\cap A_{m+1}\)</span>. Entonces, como <span class="math inline">\(x\in A\)</span> existe un <span class="math inline">\(\varepsilon_1&gt;0\)</span> tal que el entorno <span class="math inline">\((x-\varepsilon_1, x+\varepsilon_1)\subseteq A\)</span>, y como <span class="math inline">\(x\in A_{m+1}\)</span> existe un <span class="math inline">\(\varepsilon_2&gt;0\)</span> tal que el entorno <span class="math inline">\((x-\varepsilon_2, x+\varepsilon_2)\subseteq A_{m+1}\)</span>. Tomando <span class="math inline">\(\varepsilon=\min\{\varepsilon_1,\varepsilon_2\}\)</span>, se tiene que <span class="math inline">\((x-\varepsilon, x+\varepsilon)\subseteq A\)</span> y <span class="math inline">\((x-\varepsilon, x+\varepsilon)\subseteq A_{m+1}\)</span>, por lo que <span class="math inline">\((x-\varepsilon, x+\varepsilon)\subseteq A\cap A_{m+1}\)</span>, y <span class="math inline">\(\cap_{n=1}^{m+1} A_n\)</span> es un conjunto abierto.</p></li>
-<li><p>Sea <span class="math inline">\(A_n\)</span>, <span class="math inline">\(n\in\mathbb{N}\)</span>, una colección arbitraria de conjuntos cerrados. Entonces, aplicando la ley de Morgan, se tiene que <span class="math inline">\(\overline{\cap_{n=1}^\infty A_n}= \cup_{n=1}^\infty \overline{A_n}\)</span>. Como <span class="math inline">\(A_n\)</span> es cerrado, <span class="math inline">\(\overline{A_n}\)</span> es abierto <span class="math inline">\(\forall n\in\mathbb{N}\)</span>, y por el apartado (a), se tiene que <span class="math inline">\(\cup_{n=1}^\infty \overline{A_n}\)</span> es un conjunto abierto, por lo que <span class="math inline">\(\overline{\cap_{n=1}^\infty A_n}\)</span> es abierto y <span class="math inline">\(\cap_{n=1}^\infty A_n\)</span> es cerrado.</p></li>
-<li><p>Sea ahora una colección <span class="math inline">\(A_1,\ldots,A_n\)</span> una colección de conjuntos cerrados. De nuevo, aplicando la ley de Morgan, se tiene que <span class="math inline">\(\overline{\cup_{n=1}^\infty A_n}= \cap_{n=1}^\infty \overline{A_n}\)</span>. Como <span class="math inline">\(A_i\)</span> es cerrado, <span class="math inline">\(\overline{A_i}\)</span> es abierto <span class="math inline">\(\forall i=1, \ldots, n\)</span>, y por el apartado (b), se tiene que <span class="math inline">\(\cap_{n=1}^\infty \overline{A_n}\)</span> es un conjunto abierto, por lo que <span class="math inline">\(\overline{\cup_{n=1}^\infty A_n}\)</span> es abierto y <span class="math inline">\(\cup_{n=1}^\infty A_n\)</span> es cerrado.</p></li>
-</ol>
-</div>
-</div>
-</div>
-<div id="exr-adherencia-cerrada" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 3.15 </strong></span>Demostrar que la adherencia de cualquier conjunto es siempre cerrada.</p>
-</div>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-15-contents" aria-controls="callout-15" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Solución
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-15" class="callout-15-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p>Sea <span class="math inline">\(A\subset \mathbb{R}\)</span>. Para probar que <span class="math inline">\(\operatorname{Adh}(A)\)</span> es un conjunto cerrado, veremos que <span class="math inline">\(\overline{\operatorname{Adh}(A)}\)</span> es abierto. Si <span class="math inline">\(x\in\overline{\operatorname{Adh}(A)}\)</span>, entonces <span class="math inline">\(x\not\in\operatorname{Adh}(A)\)</span>, y existe un <span class="math inline">\(\varepsilon&gt;0\)</span> tal que <span class="math inline">\((x-\varepsilon,x+\varepsilon)\cap A = \emptyset\)</span>. Para cualquier <span class="math inline">\(y\in (x-\varepsilon,x+\varepsilon)\)</span>, se tiene, tomando <span class="math inline">\(\varepsilon'=\min(\{x-\varepsilon-y,x+\varepsilon-y\})\)</span>, que <span class="math inline">\((y-\varepsilon',y+\varepsilon')\subseteq (x-\varepsilon,x+\varepsilon)\)</span> y por tanto <span class="math inline">\((y-\varepsilon',y+\varepsilon')\cap A = \emptyset\)</span>, por lo que <span class="math inline">\(y\not\in\operatorname{Adh}(A)\)</span>. Así pues, <span class="math inline">\((x-\varepsilon,x+\varepsilon)\subseteq \overline{\operatorname{Adh}(A)}\)</span>, y por consiguiente <span class="math inline">\(\overline{\operatorname{Adh}(A)}\)</span> es abierto y <span class="math inline">\(\operatorname{Adh}(A)\)</span> es cerrado.</p>
-</div>
-</div>
-</div>
-<div id="exr-adherencia-cerrada" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 3.16 </strong></span>Demostrar que cualquier conjunto es cerrado si y solo si coincide con su adherencia.</p>
-</div>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-16-contents" aria-controls="callout-16" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Solución
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-16" class="callout-16-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p>Sea <span class="math inline">\(A\)</span> un conjunto cerrado. Ya sabemos que <span class="math inline">\(A\subseteq \operatorname{Adh}(A)\)</span>. Supongamos ahora que existe un punto <span class="math inline">\(x\in \operatorname{Adh}(A)\setminus A\)</span>. Entonces, como <span class="math inline">\(x\)</span> es un punto de adherencia de <span class="math inline">\(A\)</span>, para cualquier <span class="math inline">\(\varepsilon&gt;0\)</span>, <span class="math inline">\((x-\varepsilon,x+\varepsilon)\cap A\neq \emptyset\)</span>, pero como <span class="math inline">\(x\not\in A\)</span>, también se cumple que <span class="math inline">\((x-\varepsilon,x+\varepsilon)\setminus \{x\}\cap A\neq \emptyset\)</span>, por lo que <span class="math inline">\(x\)</span> es un punto de acumulación de <span class="math inline">\(A\)</span>, pero eso contradice que <span class="math inline">\(A\)</span> sea un conjunto cerrado, pues no contiene a todos sus puntos de acumulación (ver <a href="https://aprendeconalf.es/analisis-manual/topologia-reales.html#thm-conjunto-cerrado-puntos-acumulacion">teorema</a>). Así pues, <span class="math inline">\(\operatorname{Adh}(A)=A\)</span>.</p>
-<p>Para probar el otro sentido de la implicación, supongamos que <span class="math inline">\(\operatorname{Adh}(A)=A\)</span>. Entonces, para cualquier <span class="math inline">\(x\in \overline{A}\)</span> existe un <span class="math inline">\(\varepsilon&gt;0\)</span> tal que <span class="math inline">\((x-\varepsilon,x+\varepsilon)\cap A=\emptyset\)</span>, por lo que <span class="math inline">\((x-\varepsilon,x+\varepsilon)\subseteq \overline{A}\)</span> y <span class="math inline">\(\overline{A}\)</span> es abierto, de manera que <span class="math inline">\(A\)</span> es cerrado.</p>
+
 </div>
 </div>
 </div>
@@ -931,14 +1010,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./02-numeros-reales.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Números reales</span></span>
+      <a href="./09-integrales.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Integrales de funciones</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./04-sucesiones.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Sucesiones de números reales</span></span> <i class="bi bi-arrow-right-short"></i>
-      </a>
   </div>
 </nav>
 </div> <!-- /content -->

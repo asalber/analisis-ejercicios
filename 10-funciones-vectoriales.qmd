@@ -1,0 +1,341 @@
+---
+title: Funciones vectoriales
+lang: es
+---
+
+:::{#exr-trayectorias-funciones-vectoriales}
+Emparejar las siguientes funciones vectoriales con las trayectorias de más abajo.
+:::
+
+:::{.callout-tip collapse="true"}
+## Solución
+
+:::  
+
+:::{#exr-trayectoria-interseccion-superficies}
+Determinar la función vectorial cuya trayectoria coincide de la intersección del cilindro $x^2+y^2=2$ y el plano $2x-z=1$.
+:::
+
+:::{.callout-tip collapse="true"}
+## Solución
+Como la proyección del cilindro de ecuación $x^2+y^2=2$ sobre el plano $xy$ es una circunferencia, podemos parametrizarla de la manera habitual haciendo $x=\operatorname{sen}(t)$ e $y=\cos(t)$ con $0\leq t \leq 2\pi$.
+
+Por otro lado, de la ecuación del plano se deduce que $z = 1+2x$, y sustituyendo la parametrización anterior se tiene $z = 1+2\operatorname{sen}(t)$.
+
+Así pues, la función vectorial que resulta es
+
+$$
+\mathbf{f}(t) = \operatorname{sen}(t)\mathbf{i} + \cos(t)\mathbf{j} + (1+2\operatorname{sen}(t)) \quad 0\leq t \leq 2\pi.
+$$
+:::  
+
+:::{#exr-intersección-trayectorias}
+Dos aviones vuelan siguiendo las trayectorias dadas por las funciones vectoriales $\mathbf{f}(t)=t^2\mathbf{i}+(2t+1)\mathbf{j}+t^3\mathbf{j}$ y $\mathbf{g}(t)=t-2\mathbf{i}+\frac{t}{2}\mathbf{j}+3t+10\mathbf{j}$. ¿Se cortan sus trayectorias? ¿Llegarán a chocar en algún momento?
+:::
+
+:::{.callout-tip collapse="true"}
+## Solución
+Para ver si las trayectorias de los dos aviones se cortan deben existir instantes $t_1$ y $t_2$ tales que $f(t_1)=f(t_2)$, es decir, 
+
+\begin{align*}
+t_1^2 &= t_2-2\\
+2t_1+1 &= \frac{t_2}{2}\\
+t_1^3 &= 3t_2+10
+\end{align*}
+
+Despejando $t_2$ en la primera ecuación se tiene $t_2 = t_1^2+2$ y sustituyendo en la segunda llegamos a 
+
+$$
+2t_1 + 1 = \frac{t_1^2+2}{2} \Leftrightarrow \frac{t_1^2}{2}-2t_1 = 0 \Leftrightarrow t_1\left(\frac{t_1}{2}-2\right)=0 \Leftrightarrow t_1 = 0 \mbox{ o } t_1 = 4.
+$$
+
+Para $t_1=0$ se tiene que $t_2 = 0^2+2 = 2$, que no cumplen la tercera ecuación, ya que $0^3=0\neq 3\cdot 2 +10 =16$. Y para $t_1=4$ se tiene que $t_2=4^2+2=18$, que sí cumple la tercera ecuación, ya que $4^3 = 64 = 3\cdot 18 + 10$.
+
+Así pues, para $t_1=4$ y $t_2=18$ se tiene que $\mathbf(f)(4) = (16, 9, 64) = \mathbf{g}(18)$, por lo que las trayectorias de $\mathbf(f)$ y $\mathbf(g)$ se cortan en le punto $(16, 9, 64)$. Sin embargo, los aviones no llegan a colisionar ya que para ello los dos aviones deberían estar en ese punto en el mismo instante. 
+::: 
+
+:::{#exr-algebra-limites-funciones-vectoriales}
+Dadas dos funciones vectoriales $\mathbf{f}$ y $\mathbf{g}$ en $\mathbb{R}^n$, demostrar que si existen su límites cuando $t\to a$, entonces se cumplen las siguientes propiedades:
+
+a. $\displaystyle \lim_{t\to a} \mathbf{f}(t) + \mathbf{g}(t) = \lim_{t\to a} \mathbf{f}(t) + \lim_{t\to a} \mathbf{g}(t)$.
+
+b. $\displaystyle \lim_{t\to a} c\mathbf{f}(t) = c\lim_{t\to a} \mathbf{f}(t)\ \forall c\in\mathbb{R}$.
+
+c. $\displaystyle \lim_{t\to a} \mathbf{f}(t)\cdot \mathbf{g}(t) = \lim_{t\to a} \mathbf{f}(t) \cdot \lim_{t\to a} \mathbf{g}(t)$.
+
+d. $\displaystyle \lim_{t\to a} \mathbf{f}(t) \times \mathbf{g}(t) = \lim_{t\to a} \mathbf{f}(t) \times \lim_{t\to a} \mathbf{g}(t)$.
+:::
+
+:::{.callout-tip collapse="true"}
+## Solución
+
+:::
+
+:::{#exr-limites-funciones-vectoriales}
+Calcular los siguientes límites de funciones vectoriales.
+
+a. $\displaystyle \lim_{t\to 0} \left(t^2e^{-t}, \frac{\operatorname{tg}(t)}{t} \right)$.
+
+b. $\displaystyle \lim_{t\to \infty} \left(\frac{t^2+2t}{2t^2-1}, t\cos(t^{-1}), \frac{\operatorname{sen}(t^2)}{t} \right)$.
+:::
+
+:::{.callout-tip collapse="true"}
+## Solución
+
+:::
+
+:::{#exr-derivadas-funciones-vectoriales}
+Calcular la derivada de las siguientes funciones vectoriales
+
+a. $\displaystyle \mathbf{f}(t)=\left(t^2e^{-t}, \frac{\operatorname{tg}(t)}{t} \right)$.
+
+b. $\displaystyle \mathbf{g}(t)= \left(\frac{t^2+2t}{2t^2-1}, t\cos(t^{-1}), \frac{\operatorname{sen}(t^2)}{t} \right)$.
+:::
+
+:::{.callout-tip collapse="true"}
+## Solución
+
+:::
+
+:::{#exr-cinematica-1}
+Una partícula se mueve a lo largo de una curva $y=\cos(2x+1)$, siendo $x=t^2+1$ y $t$ el tiempo en segundos. ¿Con qué velocidad está desplazándose respecto a las direcciones vertical y horizontal cuando $t=2$ s?
+:::
+
+:::{.callout-tip collapse="true"}
+## Solución
+Velocidad horizontal: $\frac{dx}{dt} = 2t$ y en el instante $t=2$, $\frac{dx}{dt}(t=2)=4$. 
+
+Velocidad vertical: $\frac{dy}{dt}=-\operatorname{sen}(2t^2+3)4t$ y en el instante $t=2$, $\frac{dy}{dt}=-8\operatorname{sen}(11)$.
+:::
+
+:::{#exr-cinematica-tangente-trayectoria}
+Un punto se mueve en el plano siguiendo una trayectoria
+
+$$
+\begin{cases}
+x = \operatorname{tg} t,  \\
+y = t^2-2t+3. \\
+\end{cases}
+$$
+
+a.  Hallar $\frac{\partial y}{\partial x}$ en $t=0$.
+a.  Hallar la tangente a la trayectoria en el punto $(0,3)$.
+:::
+
+:::{.callout-tip collapse="true"}
+## Solución
+Se trata de la ecuación de una trayectoria en coordenadas paramétricas.
+
+a.  Aplicando la regla de la cadena se tiene que
+
+$$
+\dfrac{\partial y}{\partial t} = \dfrac{\partial y}{\partial x}\dfrac{\partial x}{\partial t},
+$$
+
+en consecuencia,
+$$
+\dfrac{\partial y}{\partial x}(t) = \frac{\partial y/\partial t}{\partial x/\partial t}(t)=\frac{2t-2}{1+\operatorname{tg}^2t}.
+$$
+
+En el punto $t=0$ tendremos
+
+$$
+\dfrac{\partial y}{\partial x}(0) = \frac{-2}{1+\operatorname{tg}^20} = -2.
+$$
+
+
+a.  La ecuación de la recta tangente a la trayectoria en el punto $(x(t_0),y(t_0))$ correspondiente al instante $t_0,$ viene dada por la expresión
+
+$$
+y-y(t_0) = \dfrac{\partial y}{\partial x}(t_0)(x-x(t_0)).
+$$
+
+Como el punto $(0,3)$ se alcanza precisamente en el instante $t=0$ tenemos que la ecuación de la recta tangente a la trayectoria en dicho instante es:
+
+$$
+y-y(0) = \dfrac{\partial y}{\partial x}(0)(x-x(0)),
+$$
+
+es decir,
+
+$$
+y-3 = -2(x-0),
+$$
+
+y simplificando obtenemos:
+
+$$
+y = 3-2x.
+$$
+:::
+
+:::{#exr-cinematica-tangente-normal-trayectoria}
+Una partícula se mueve a lo largo de la curva
+
+$$
+\begin{cases}
+x = 2\operatorname{sen}(t), \\
+y = \sqrt{3}\cos(t),
+\end{cases}
+$$
+
+donde $x$ e $y$ están medidos en metros y el tiempo $t$ en segundos.
+
+a.  Hallar la ecuación de la rectas tangente y normal a la trayectoria en el punto $(1,3/2)$.
+
+a.  ¿Con qué velocidad se mueve la partícula respecto a las direcciones vertical y horizontal en dicho punto?
+:::
+
+:::{.callout-tip collapse="true"}
+## Solución
+
+:::
+
+:::{#exr-derivadas-función-modulo-constante}
+Un móvil sigue la trayectoria en el espacio real dada por una función vectorial $\mathbf{f}(t)$ con módulo constante. ¿Cómo es la trayectoria que describe? Demostrar que su vector velocidad es ortogonal al vector posición.
+:::
+
+:::{.callout-tip collapse="true"}
+## Solución
+Supongamos que $|\mathbf{f}(t)|=c$ $\forall t\in \mathbb{R}$. Resulta sencillo ver el tipo de trayectoria que seguirá el móvil si pasamos a coordenadas esféricas. Al ser el módulo constante, independientemente del ángulo, la trayectoria estará inscrita en la esfera centrada en el origen de radio $c$.
+
+Para ver que su vector velocidad es ortogonal al vector de posición, se tiene que
+
+$$
+\mathbf{f}(t)\cdot \mathbf{f}(t) = |\mathbf{f}(t)|^2 = c^2,
+$$
+
+que al ser constante, tendrá derivada nula, y por tanto,
+
+$$
+(\mathbf{f}(t)\cdot \mathbf{f}(t))' = \mathbf{f}(t)'\cdot \mathbf{f}(t) + \mathbf{f}(t)\cdot \mathbf{f}(t) = 2 \mathbf{f}(t)'\cdot \mathbf{f}(t) = 0.
+$$   
+
+Así pues, el vector velocidad $\mathbf{f}(t)$ y el vector posición $\mathbf{f}(t)$ son ortogonales ya que su producto escalar es nulo.
+:::
+
+:::{#exr-plano-normal-trayectoria}
+Una trayectoria pasa por el punto $(3,6,5)$ en el instante $t=0$ con velocidad $\mathbf{i}-\mathbf{k}$.
+Hallar la ecuación del plano normal y de la recta tangente en ese instante.
+:::
+
+:::{.callout-tip collapse="true"}
+## Solución
+Plano normal: $x-z+2=0$.
+
+Recta tangente: $(3+t,6,5-t)$.
+:::
+
+:::{#exr-cinematica-tangente-trayectoria-espacio}
+Una partícula sigue la trayectoria
+
+$$
+\begin{cases}
+x=e^t,\\
+y=e^{-t},\\
+z=\cos(t),
+\end{cases}
+\quad t\in \mathbb{R}
+$$
+
+hasta que se sale por la tangente en el instante $t=0$. ¿Dónde estará en el instante $t=3$?
+:::
+
+:::{.callout-tip collapse="true"}
+## Solución
+Recta tangente: $(1+t,1-t,1)$.
+
+Posición en el instante $t=3$: $(4,-2,1)$.
+:::
+
+:::{#exr-cinematica-2}
+Las coordenadas paramétricas de un punto material lanzado bajo un ángulo respecto al horizonte son
+
+$$
+\begin{cases}
+x=v_0t, & \\
+y=-\frac{1}{2}gt^2
+\end{cases}
+$$
+
+donde $t\in \mathbb{R}^{+}$ es el tiempo contado a partir del instante en que el punto llega a la posición más alta, $v_0$ es la velocidad horizontal en el instante $t=0$ y $g=9.8$ m$^2$/s es la aceleración de la gravedad.
+¿En qué instante la magnitud de la velocidad horizontal será igual a la de la velocidad vertical? ¿Cuánto debería valer $v_0$ para que en dicho instante el punto haya recorrido 100 m horizontalmente?
+Calcular la ecuación de la recta tangente en dicho instante con el valor de $v_0$ calculado.
+:::
+
+:::{.callout-tip collapse="true"}
+## Solución
+La velocidad horizontal es la derivada del espacio recorrido horizontalmente (componente $x$) con respecto al tiempo, es decir,
+
+$$
+\frac{dx}{dt} = \frac{d}{dt}(v_0t)=v_0.
+$$
+
+Del mismo modo, la velocidad vertical es la derivada del espacio recorrido verticalmente (componente $y$) en relación al tiempo,
+
+$$
+\frac{dy}{dt} = \frac{d}{dt}(-\frac{1}{2}gt^2)=-gt
+$$
+
+Para ver en qué instante ambas magnitudes serán iguales, las igualamos y resolvemos la ecuación:
+
+$$
+\left|\frac{dx}{dt}\right|=\left|\frac{dy}{dt}\right| \Leftrightarrow v_0 = gt \Leftrightarrow t=\frac{v_0}{g}=\frac{v_0}{9.8}.
+$$
+
+
+Para que en dicho instante el punto haya recorrido 100 m horizontalmente, debe cumplirse que $x(v_0/9.8)=100$, de lo que se deduce:
+
+$$
+x(v_0/9.8)=v_0\frac{v_0}{9.8} = \frac{v_0^2}{9.8}=100 \Leftrightarrow v_0^2 = 980 \Leftrightarrow v_0 = +\sqrt{980}= 31.3.
+$$
+
+Por tanto, el instance en cuestión es $t=v_0/9.8= 31.3/9.8 = 3.19$.
+
+Por último, la ecuación de la recta tangente en dicho instante, para el valor de $v_0$ calculado es:
+
+$$
+y = y(3.19) + \frac{dy}{dx}(3.19) (x-x(3.19))
+$$
+
+Ya hemos visto que $x(3.19)=100$, y que en dicho instante la velocidad horizontal y vertical coinciden, de manera que
+
+$$
+\frac{dy}{dx}(3.19)=\frac{dy/dt}{dx/dt}=-1,
+$$
+
+de modo que sólo nos queda calcular el espacio vertical recorrido en dicho instante, que es
+
+$$
+y(3.19)=-\frac{1}{2}9.8\cdot 3.19^2= -49.86.
+$$
+
+Sustituyendo en la ecuación anterior llegamos a la recta tangente:
+
+$$
+y = -49.86-(x-100) \Leftrightarrow y=-x+50.14.
+$$
+:::
+
+:::{#exr-cinematica-tangente-normal-trayectoria}
+La cantidad de árboles en un ecosistema, $a$, depende del tiempo según la expresión
+
+$$
+a(t)=100\ln(t^2+1),
+$$
+
+y la cantidad de un determinado parásito de los árboles, $p$, que también depende del tiempo, viene dada por
+
+$$
+p(t) = \sqrt[3]{{t^2  + 2}}.
+$$
+
+a.  Calcular el número de parásitos cuando el número de árboles sea 500.
+
+a.  La derivada del número de parásitos con respecto al número de árboles cuando el número de parásitos sea 3.
+:::
+
+:::{.callout-tip collapse="true"}
+## Solución
+
+:::

@@ -41,6 +41,7 @@ book:
     - 07-derivadas.qmd
     - 08-series.qmd
     - 09-integrales.qmd
+    - 10-funciones-vectoriales.qmd
     
 #bibliography: references.bib
 
