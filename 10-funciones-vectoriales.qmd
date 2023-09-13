@@ -1,15 +1,50 @@
 ---
 title: Funciones vectoriales
 lang: es
+execute: 
+  cache: true
+  freeze: auto
+  daemon: 3600
 ---
 
 :::{#exr-trayectorias-funciones-vectoriales}
 Emparejar las siguientes funciones vectoriales con las trayectorias de más abajo.
+
+
+:::{.content-visible when-format="html"}
+```{julia}
+#| echo: false
+using WGLMakie
+myblue = RGBf(0.067,0.529,0.871)
+fig = Figure()
+t = range(0, 4pi, length=200)
+lines(fig[1,1], t./2 .+ 2, 2t .- 1, t .+ 1; linewidth = 2, color = myblue)
+lines(fig[1,2], sin.(t), cos.(t), t/4; linewidth = 2, color = myblue)
+lines(fig[2,1], t.*cos.(t), t, t.*sin.(t); linewidth = 2, color = myblue)
+lines(fig[2,2], cos.(2t), sin.(t), cos.(t) ; linewidth = 2, color = myblue)
+Label(fig[1, 1, Top()], "A", padding = (0, 0, 5, 0))
+Label(fig[1, 2, Top()], "B", padding = (0, 0, 5, 0))
+Label(fig[2, 1, Top()], "C", padding = (0, 0, 5, 0))
+Label(fig[2, 2, Top()], "D", padding = (0, 0, 5, 0))
+fig
+```
+:::
+
+a. $\mathbf{f}(t) = (\operatorname{sen}(t), \cos(t), t/4)$
+
+a. $\mathbf{g}(t) = \left(\frac{t}{2}+2, 2t-1, t+1\right)$
+
+a. $\mathbf{h}(t) = (\cos(2t), \operatorname{sen}(t), \cos(t))$
+
+a. $\mathbf{i}(t) = (t\cos(t), t, t\operatorname{sen}(t), t/4)$
 :::
 
 :::{.callout-tip collapse="true"}
 ## Solución
-
+La gráfica A corresponde a $\mathbf{g}(t)$.  
+La gráfica B corresponde a $\mathbf{f}(t)$.  
+La gráfica C corresponde a $\mathbf{i}(t)$.  
+La gráfica D corresponde a $\mathbf{h}(t)$.  
 :::  
 
 :::{#exr-trayectoria-interseccion-superficies}
@@ -81,7 +116,21 @@ b. $\displaystyle \lim_{t\to \infty} \left(\frac{t^2+2t}{2t^2-1}, t\cos(t^{-1}),
 
 :::{.callout-tip collapse="true"}
 ## Solución
+a.  
 
+\begin{align*}
+\lim_{t\to 0} \left(t^2e^{-t}, \frac{\operatorname{tg}(t)}{t} \right) 
+&= \left(\lim_{t\to 0} t^2e^{-t}, \lim_{t\to 0}\frac{\operatorname{tg}(t)}{t} \right)
+= (0, 1).
+\end{align*}
+
+b.  
+
+\begin{align*}
+\lim_{t\to \infty} \left(\frac{t^2+2t}{2t^2-1}, t\cos(t^{-1}), \frac{\operatorname{sen}(t^2)}{t} \right)
+&= \left(\lim_{t\to \infty} \frac{t^2+2t}{2t^2-1}, \lim_{t\to\infty} t\cos(t^{-1}), \lim_{t\to\infty} \frac{\operatorname{sen}(t^2)}{t} \right) \\
+&= \left(\frac{1}{2}, \infty, 0\right)
+\end{align*}
 :::
 
 :::{#exr-derivadas-funciones-vectoriales}
@@ -94,7 +143,21 @@ b. $\displaystyle \mathbf{g}(t)= \left(\frac{t^2+2t}{2t^2-1}, t\cos(t^{-1}), \fr
 
 :::{.callout-tip collapse="true"}
 ## Solución
+a.  
 
+\begin{align*}
+\mathbf{f}'(t) 
+&= \left((t^2e^{-t})', \left(\frac{\operatorname{tg}(t)}{t}\right)' \right) 
+= \left(-t^{2}e^{-t} + 2te^{-t}, \frac{\operatorname{tg}(t)^2 + 1}{t} - \frac{\operatorname{tg}(t)}{t^{2}}\right)
+\end{align*}
+
+a. 
+
+\begin{align*}
+\mathbf{g}'(t)
+&= \left(\left(\frac{t^2+2t}{2t^2-1}\right)',( t\cos(t^{-1}))', \left(\frac{\operatorname{sen}(t^2)}{t}\right)' \right) \\
+&= \left(\frac{4t^3+8t^2}{(2t^2-1)^2}, \cos(t^{-1})+\frac{\operatorname{sen}(t^{-1})}{t}, 2\cos(t^2)-\frac{\operatorname{sen}(t^2)}{t^2}\right)
+\end{align*}
 :::
 
 :::{#exr-cinematica-1}
@@ -113,60 +176,60 @@ Un punto se mueve en el plano siguiendo una trayectoria
 
 $$
 \begin{cases}
-x = \operatorname{tg} t,  \\
+x = \operatorname{tg}(t),  \\
 y = t^2-2t+3. \\
 \end{cases}
 $$
 
-a.  Hallar $\frac{\partial y}{\partial x}$ en $t=0$.
+a.  Hallar $\frac{dy}{dx}$ en $t=0$.
 a.  Hallar la tangente a la trayectoria en el punto $(0,3)$.
 :::
 
 :::{.callout-tip collapse="true"}
 ## Solución
-Se trata de la ecuación de una trayectoria en coordenadas paramétricas.
+Se trata de la ecuación paramétrica de una función vectorial en el plano real.
 
 a.  Aplicando la regla de la cadena se tiene que
 
-$$
-\dfrac{\partial y}{\partial t} = \dfrac{\partial y}{\partial x}\dfrac{\partial x}{\partial t},
-$$
+    $$
+    \dfrac{dy}{dt} = \dfrac{dy}{dx}\dfrac{dx}{dt},
+    $$
 
-en consecuencia,
-$$
-\dfrac{\partial y}{\partial x}(t) = \frac{\partial y/\partial t}{\partial x/\partial t}(t)=\frac{2t-2}{1+\operatorname{tg}^2t}.
-$$
+    en consecuencia,
+    $$
+    \dfrac{dy}{dx}(t) = \frac{dy/dt}{dx/dt}(t)=\frac{2t-2}{1+\operatorname{tg}(t)^2}.
+    $$
 
-En el punto $t=0$ tendremos
+    En el punto $t=0$ tendremos
 
-$$
-\dfrac{\partial y}{\partial x}(0) = \frac{-2}{1+\operatorname{tg}^20} = -2.
-$$
+    $$
+    \dfrac{dy}{dx}(0) = \frac{-2}{1+\operatorname{tg}(0)^2} = -2.
+    $$
 
 
 a.  La ecuación de la recta tangente a la trayectoria en el punto $(x(t_0),y(t_0))$ correspondiente al instante $t_0,$ viene dada por la expresión
 
-$$
-y-y(t_0) = \dfrac{\partial y}{\partial x}(t_0)(x-x(t_0)).
-$$
+    $$
+    y-y(t_0) = \dfrac{dy}{dx}(t_0)(x-x(t_0)).
+    $$
 
-Como el punto $(0,3)$ se alcanza precisamente en el instante $t=0$ tenemos que la ecuación de la recta tangente a la trayectoria en dicho instante es:
+    Como el punto $(0,3)$ se alcanza precisamente en el instante $t=0$ tenemos que la ecuación de la recta tangente a la trayectoria en dicho instante es:
 
-$$
-y-y(0) = \dfrac{\partial y}{\partial x}(0)(x-x(0)),
-$$
+    $$
+    y-y(0) = \dfrac{dy}{dx}(0)(x-x(0)),
+    $$
 
-es decir,
+    es decir,
 
-$$
-y-3 = -2(x-0),
-$$
+    $$
+    y-3 = -2(x-0),
+    $$
 
-y simplificando obtenemos:
+    y simplificando obtenemos:
 
-$$
-y = 3-2x.
-$$
+    $$
+    y = 3-2x.
+    $$
 :::
 
 :::{#exr-cinematica-tangente-normal-trayectoria}
@@ -188,30 +251,41 @@ a.  ¿Con qué velocidad se mueve la partícula respecto a las direcciones verti
 
 :::{.callout-tip collapse="true"}
 ## Solución
+Sea $\mathbf{f}(t)=(2\operatorname{sen}(t), \sqrt{3}\cos(t))$. 
 
+a.  La partícula pasa por el punto $(1,3/2)$ en el instante $t=\pi/6$, por lo que hay que calcular la ecuación de las rectas tangente y normal en ese instante. 
+
+    La derivada de la función vectorial es 
+
+    $$
+    \mathbf{f}'(t) = (2\cos(t), -\sqrt{3}\operatorname{sen}(t)),
+    $$
+
+    y en el instante $t=\pi/6$ vale
+
+    $$
+    \mathbf{f}'(\pi/6) = (2\cos(\pi/6), -\sqrt{3}\operatorname{sen}(\pi/6)) = \left(\sqrt{3},-\frac{\sqrt{3}}{2}\right).
+    $$
+
+    Por tanto, la ecuación vectorial de la recta tangente a la trayectoria de $\mathbf{f}$ en ese instante es
+
+    $$
+    \left(1,\frac{3}{2}\right)+ t\left(\sqrt{3},-\frac{\sqrt{3}}{2}\right) 
+    = \left(1+\sqrt{3}t,\frac{3-\sqrt{3}t}{2}\right),
+    $$
+
+    y la de la recta normal
+
+    $$
+    \left(1,\frac{3}{2}\right)+ t\left(\frac{\sqrt{3}}{2},\sqrt{3}\right) 
+    = \left(1+\frac{\sqrt{3}}{2}t,\frac{3}{2}+\sqrt{3}t\right).
+    $$
+
+a.  La velocidad con la que se mueve con respecto a la dirección horizontal es $\frac{dx}{dt} (\pi/6) = x'(\pi/6) = \sqrt{3}$ m/s, y con respecto a la dirección vertical $\frac{dy}{dt} (\pi/6) = y'(\pi/6) = -\frac{\sqrt{3}}{2}$ m/s.
 :::
 
-:::{#exr-derivadas-función-modulo-constante}
-Un móvil sigue la trayectoria en el espacio real dada por una función vectorial $\mathbf{f}(t)$ con módulo constante. ¿Cómo es la trayectoria que describe? Demostrar que su vector velocidad es ortogonal al vector posición.
-:::
-
-:::{.callout-tip collapse="true"}
-## Solución
-Supongamos que $|\mathbf{f}(t)|=c$ $\forall t\in \mathbb{R}$. Resulta sencillo ver el tipo de trayectoria que seguirá el móvil si pasamos a coordenadas esféricas. Al ser el módulo constante, independientemente del ángulo, la trayectoria estará inscrita en la esfera centrada en el origen de radio $c$.
-
-Para ver que su vector velocidad es ortogonal al vector de posición, se tiene que
-
-$$
-\mathbf{f}(t)\cdot \mathbf{f}(t) = |\mathbf{f}(t)|^2 = c^2,
-$$
-
-que al ser constante, tendrá derivada nula, y por tanto,
-
-$$
-(\mathbf{f}(t)\cdot \mathbf{f}(t))' = \mathbf{f}(t)'\cdot \mathbf{f}(t) + \mathbf{f}(t)\cdot \mathbf{f}(t) = 2 \mathbf{f}(t)'\cdot \mathbf{f}(t) = 0.
-$$   
-
-Así pues, el vector velocidad $\mathbf{f}(t)$ y el vector posición $\mathbf{f}(t)$ son ortogonales ya que su producto escalar es nulo.
+:::{#exr-angulo-entre-trayectorias}
+Determinar el ángulo con el que se cortan las trayectorias de las funciones vectoriales $\mathbf{f}(t) = (2t+1, \sqrt{t}, t^2)$ y $\mathbf{g}(t):=\left(\frac{t^2+6}{2}, e^{2t}, \cos(t)\right)$. 
 :::
 
 :::{#exr-plano-normal-trayectoria}
@@ -246,6 +320,47 @@ hasta que se sale por la tangente en el instante $t=0$. ¿Dónde estará en el i
 Recta tangente: $(1+t,1-t,1)$.
 
 Posición en el instante $t=3$: $(4,-2,1)$.
+:::
+
+:::{#exr-derivadas-función-modulo-constante}
+Un móvil sigue la trayectoria en el espacio real dada por una función vectorial $\mathbf{f}(t)$ con módulo constante. ¿Cómo es la trayectoria que describe? Demostrar que su vector velocidad es ortogonal al vector posición.
+:::
+
+:::{.callout-tip collapse="true"}
+## Solución
+Supongamos que $|\mathbf{f}(t)|=c$ $\forall t\in \mathbb{R}$. Resulta sencillo ver el tipo de trayectoria que seguirá el móvil si pasamos a coordenadas esféricas. Al ser el módulo constante, independientemente del ángulo, la trayectoria estará inscrita en la esfera centrada en el origen de radio $c$.
+
+Para ver que su vector velocidad es ortogonal al vector de posición, se tiene que
+
+$$
+\mathbf{f}(t)\cdot \mathbf{f}(t) = |\mathbf{f}(t)|^2 = c^2,
+$$
+
+que al ser constante, tendrá derivada nula, y por tanto,
+
+$$
+(\mathbf{f}(t)\cdot \mathbf{f}(t))' = \mathbf{f}(t)'\cdot \mathbf{f}(t) + \mathbf{f}(t)\cdot \mathbf{f}(t) = 2 \mathbf{f}(t)'\cdot \mathbf{f}(t) = 0.
+$$   
+
+Así pues, el vector velocidad $\mathbf{f}(t)$ y el vector posición $\mathbf{f}(t)$ son ortogonales ya que su producto escalar es nulo.
+:::
+
+:::{#exr-longitud-trayectoria-1}
+Calcular la longitud de las siguientes curvas en los intervalos dados
+
+a. $\mathbf{f}(t) = (t^2, \frac{t^3}{3})$ $t\in[0,1]$.
+
+a. $\mathbf{g}(t) = (2\operatorname{sen}(t), \frac{t}{2}, 2\cos(t))$ $t\in [-1, 1]$.
+
+a. $\mathbf{h}(t) = (\operatorname{sen}(t), \ln(cos(t)), \cos(t))$ $t\in[0,\pi/4]$.
+:::
+
+:::{#exr-longitud-grafica-funcion}
+Demostrar, usando la fórmula de la longitud de una trayectoria, que la longitud de la gráfica de una función real $f(x)$ para $a\leq x\leq b$ es 
+
+$$
+\int_a^b \sqrt{1+f'(x)^2}\, dx.
+$$
 :::
 
 :::{#exr-cinematica-2}
