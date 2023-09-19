@@ -346,13 +346,59 @@ Así pues, el vector velocidad $\mathbf{f}(t)$ y el vector posición $\mathbf{f}
 :::
 
 :::{#exr-longitud-trayectoria-1}
-Calcular la longitud de las siguientes curvas en los intervalos dados
+Calcular la longitud de las trayectorias de las siguientes funciones vectoriales en los intervalos dados.
 
 a. $\mathbf{f}(t) = (t^2, \frac{t^3}{3})$ $t\in[0,1]$.
 
 a. $\mathbf{g}(t) = (2\operatorname{sen}(t), \frac{t}{2}, 2\cos(t))$ $t\in [-1, 1]$.
 
-a. $\mathbf{h}(t) = (\operatorname{sen}(t), \ln(cos(t)), \cos(t))$ $t\in[0,\pi/4]$.
+a. $\mathbf{h}(t) = (\operatorname{sen}(t), \ln(\cos(t)), \cos(t))$ $t\in[0,\pi/4]$.
+:::
+
+:::{.callout-tip collapse="true"}
+## Solución
+a.  $\mathbf{f}'(t) = (2t, t^2)$ y la longitud de la trayectoria de $\mathbf{f}(t)$ para $t\in[0,1]$ es
+
+    \begin{align*}
+    \int_0^1 |\mathbf{f}'(t)|\,dt 
+    &= \int_0^1 \sqrt{(2t)^2+(t^2)^2}\, dt
+    = \int_0^1 \sqrt{t^4+4t^2}\, dt \\
+    &= \int_0^1 \sqrt{t^2(t^2+4)}\, dt
+    = \int_0^1 t\sqrt{t^2+4}\,dt \\
+    &= \int_4^5 \frac{1}{2} \sqrt{u}\, du 
+    = \left[\frac{u^{3/2}}{3}\right]_4^5 \tag{$u=t^2+4$} \\
+    &= \frac{5^{3/2}}{3}-\frac{4^{3/2}}{3}
+    \approx 1.0601.
+    \end{align*}
+
+a.  $\mathbf{g}'(t) = (2\cos(t), \frac{1}{2}, -2\operatorname{sen}(t))$ y la longitud de la trayectoria de $\mathbf{g}(t)$ para $t\in[-1,1]$ es
+
+    \begin{align*}
+    \int_{-1}^1 |\mathbf{g}'(t)|\,dt 
+    &= \int_{-1}^1 \sqrt{(2\cos(t))^2+\left(\frac{1}{2}\right)^2+(-2\operatorname{sen}(t))^2}\, dt \\
+    &= \int_{-1}^1 \sqrt{\frac{1}{4}+4(\cos(t)^2+\operatorname{sen}(t)^2)}\, dt 
+    = \int_{-1}^1 \sqrt{\frac{1}{4}+4}\, dt \\
+    &= \int_{-1}^1 \sqrt{\frac{17}{4}}\, dt 
+    = \left[\frac{\sqrt{17}}{2}t\right]_{-1}^1
+    = \frac{\sqrt{17}}{2}+\frac{\sqrt{17}}{2}
+    = \sqrt{17}.
+    \end{align*}
+
+a.  $\mathbf{h}'(t) = (\cos(t), -\operatorname{tg}(t), -\operatorname{sen}(t))$ y la longitud de la trayectoria de $\mathbf{h}(t)$ para $t\in[0,\pi/4]$ es
+
+    \begin{align*}
+    \int_0^{\pi/4} |\mathbf{h}'(t)|\,dt 
+    &= \int_0^{\pi/4} \sqrt{\cos(t)^2+(-\operatorname{tg}(t))^2+(-\operatorname{sen}(t))^2}\, dt \\
+    &= \int_0^{\pi/4} \sqrt{1+\operatorname{tg}(t)^2}\, dt 
+    = \int_0^{\pi/4} \sqrt{\sec(t)^2}\, dt \\
+    &= \int_0^{\pi/4} \sec(t)\, dt 
+    = \int_0^{\pi/4} \sec(t)\frac{\sec(t)+\operatorname{tg}(t)}{\sec(t)+\operatorname{tg}(t)}\, dt \\
+    &= \int_{1}^{1+\frac{2}{\sqrt{2}}} \frac{1}{u}\, du 
+    = [\ln|u|]_1^{1+\frac{2}{\sqrt{2}}} \tag{1}\\
+    &= \ln\left|\frac{2}{\sqrt{2}+1}\right|-\ln|1|
+    \approx 0.8814.
+    \end{align*}
+    (1) Cambio de variable $u=\sec(t)+\operatorname{tg}(t)$.
 :::
 
 :::{#exr-longitud-grafica-funcion}
@@ -360,6 +406,117 @@ Demostrar, usando la fórmula de la longitud de una trayectoria, que la longitud
 
 $$
 \int_a^b \sqrt{1+f'(x)^2}\, dx.
+$$
+:::
+
+:::{#exr-longitud-espiral}
+Dar una parametrización de una espiral de radio $r$ centrada en el eje $z$, que de $n$ vueltas completas y la distancia entre cada dos vueltas consecutivas sea $h\pi$. Deducir una fórmula para calcular su longitud. Utilizar la fórmula obtenida para calcular la cantidad de alambre necesario para construir la espiral de un cuaderno de 30 cm de altura con radio 1 cm y distancia entre cada dos vueltas consecutivas $\frac{\pi}{4}$.
+:::
+
+:::{.callout-tip collapse="true"}
+## Solución
+Una parametrización de esta espiral viene dada por la función $\mathbf{f}(t) = (r\cos(t),r\operatorname{sen}(t),\frac{h}{2}t)$, con derivada $\mathbf{f}'(t) = (-r\operatorname{sen}(t),r\cos(t), \frac{h}{2})$, por lo que su longitud en el intervalo $t\in[a,b]$ es
+
+\begin{align*}
+\int_a^b |\mathbf{f}'(t)|\,dt 
+&= \int_a^b \sqrt{(-r\operatorname{sen}(t))^2+(r\cos(t))^2+\left(\frac{h}{2}\right)^2}\, dt \\
+&= \int_a^b \sqrt{r^2+\frac{h^2}{4}}\, dt 
+= \left[\frac{\sqrt{h^2+4r^2}}{2}t\right]_a^b
+= \frac{\sqrt{h^2+4r^2}}{2}(b-a).
+\end{align*}
+
+Como la altura del cuaderno viene dada por la componente $z$ de la función vectorial, se tiene que
+
+$$
+\frac{1/4}{2}t = 30 \Leftrightarrow t = 30 * 8 = 240
+$$
+
+por lo que la espiral del cuaderno es la trayectoria recorrida por la función vectorial en el intervalo $t\in [0,240]$, que según la fórmula anterior es
+
+$$
+\frac{\sqrt{\frac{1}{4^2}+4}}{2}(240-0) = \frac{\sqrt{17}}{8}240 \approx 123.6937 \mbox{ cm}. 
+$$
+:::
+
+
+:::{#exr-parametrizacion-longitud-arco}
+Construir la parametrización de la longitud de arco de las trayectorias de las siguientes funciones vectoriales:
+
+a. $\mathbf{f}(t)=(3t+1, 1-2t).$
+
+b. $\mathbf{g}(t)=(e^t\operatorname{sen}(t), e^t\cos(t), 1)$
+:::
+
+:::{#exr-curvatura-1}
+Calcular la curvatura de las trayectorias de las siguientes funciones vectoriales en los puntos dados:
+
+a. $\mathbf{f}(t) = (t^2, \ln(t))$ en $t=1$
+
+b. $\mathbf{g}(t) = (\operatorname{sen}(2t), 3\cos(t), e^t)$ en $t=0$.
+:::
+
+:::{#exr-curvatura-circulo}
+Calcular la curvatura de un círculo de radio $r$.
+:::
+
+:::{.callout-tip collapse="true"}
+## Solución
+Podemos suponer, sin pérdida de generalidad, que el círculo está centrado en el origen de coordenadas, por lo que una parametrización suya es la función vectorial $\mathbf{f}(t) = (r\cos(t),r\operatorname{sen}(t))$.
+
+La derivada de esta función vectorial es $\mathbf{f}'(t)= (-r\operatorname{sen}(t), r\cos(t))$ y el vector tangente unitario
+
+\begin{align*}
+\mathbf{T}(t) 
+&= \frac{\mathbf{f}'(t)}{|\mathbf{f}'(t)|}
+= \frac{(-r\operatorname{sen}(t), r\cos(t))}{\sqrt{(-r\operatorname{sen}(t))^2 +(r\cos(t))^2}} \\
+&= \frac{(-r\operatorname{sen}(t), r\cos(t))}{\sqrt{r^2(\operatorname{sen}(t)^2 +\cos(t)^2)}}
+=\frac{(-r\operatorname{sen}(t), r\cos(t))}{r} \\
+&= (-\operatorname{sen}(t), \cos(t)).
+\end{align*}
+
+Por tanto, aplicando la fórmula de la curvatura de una trayectoria, se tiene
+
+\begin{align*}
+\kappa(t) 
+&= \frac{|\mathbf{T}'(t)|}{|\mathbf{f}'(t)|} 
+= \frac{|(-\cos(t), -\operatorname{sen}(t))|}{|(-r\operatorname{sen}(t), r\cos(t))|} \\
+&= \frac{\sqrt{(-\cos(t))^2+(-\operatorname{sen}(t))^2}}{\sqrt{(-r\operatorname{sen}(t))^2 +(r\cos(t))^2}}
+= \frac{1}{r}.
+\end{align*}
+
+Es decir, la curvatura de un círculo es el inverso de su radio.
+:::
+
+:::{#exr-curvatura-funcion}
+Usar la fórmula de la curvatura de la trayectoria de una función vectorial para obtener una fórmula para calcular la curvatura de la gráfica de una función real $f(x)$.
+:::
+
+:::{.callout-tip collapse="true"}
+## Solución
+Dada una función real $y=f(x)$ podemos representar la trayectoria de su gráfica mediante la función vectorial $\mathbf{f}(t) = (t, f(t), 0)$ en el espacio real. En tal caso, según la [fórmula de la curvatura de una trayectoria en el espacio real](https://aprendeconalf.es/analisis-manual/12-funciones-vectoriales.html#thm-curvatura-trayectoria-espacio-real), su curvatura es
+
+$$
+\kappa(t)= \frac{|\mathbf{f}'(t)\times \mathbf{f}''(t)|}{|\mathbf{f}'(t)|^3}.
+$$
+
+Así pues, necesitamos la primera y la segunda derivada de la función vectorial, que son $\mathbf{f}'(t)=(1,f'(t),0)$ y $\mathbf{f}''(t) = (0, f''(t), 0)$ respectivamente, y su producto vectorial es
+
+$$
+\mathbf{f}'(t)\times \mathbf{f}''(t) 
+= 
+\begin{bmatrix}
+\mathbf{i} & \mathbf{j} & \mathbf{k}\\
+1 & f'(t) & 0\\
+0 & f''(t) & 0 
+\end{bmatrix}
+= f''(t)\mathbf{j}
+$$
+
+Por tanto, 
+
+$$
+\kappa(t)= \frac{|\mathbf{f}'(t)\times \mathbf{f}''(t)|}{|\mathbf{f}'(t)|^3}
+= \frac{|f''(t)|}{(1+f''(t)^2)^{3/2}}.
 $$
 :::
 
