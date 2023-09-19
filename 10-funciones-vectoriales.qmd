@@ -285,7 +285,41 @@ a.  La velocidad con la que se mueve con respecto a la dirección horizontal es 
 :::
 
 :::{#exr-angulo-entre-trayectorias}
-Determinar el ángulo con el que se cortan las trayectorias de las funciones vectoriales $\mathbf{f}(t) = (2t+1, \sqrt{t}, t^2)$ y $\mathbf{g}(t):=\left(\frac{t^2+6}{2}, e^{2t}, \cos(t)\right)$. 
+Determinar el ángulo con el que se cortan las trayectorias de las funciones vectoriales $\mathbf{f}(t) = (2t+1, \sqrt{t}, t^2)$ y $\mathbf{g}(t):=\left(\frac{t^2+6}{2}, e^{2t}, \cos(t)\right)$ en el punto $(3,1,1)$. 
+:::
+
+:::{.callout-tip collapse="true"}
+## Solución
+El ángulo con el que se cortan dos trayectorias es el ángulo que forman sus vectores tangentes en el punto de corte.
+
+La primera función pasa por el punto $(3,1,1)$ en $t=1$, mientras que la segunda pasa por este mismo punto en $t=0$.
+
+El vector tangente de $\mathbf{f}(t)$ es
+
+$$
+\mathbf{f}'(t) = \left((2, \frac{1}{2\sqrt{t}}, 2t\right),
+$$
+
+que en $t=1$ vale $\mathbf{f}'(1) = (2,1/2,2)$.
+
+Por otro lado, el vector tangente de $\mathbf{g}(t)$ es
+
+$$
+\mathbf{g}'(t) = (t, 2e^{2t}, -\operatorname{sen}(t)),
+$$
+
+que en $t=0$ vale $\mathbf{g}'(0) = (0,2,0)$.
+
+Para obtener el ángulo $\theta$ que forman estos dos vectores, de la fórmula del producto escalar tenemos
+
+$$
+\cos(\theta) 
+= \frac{(2,1/2,2)(0,2,0)}{|(2,1/2,2)||(0,2,0)|}
+= \frac{2\cdot 0+\frac{1}{2}\cdot 2+2\cdot 0}{(2^2+\left(\frac{1}{2}\right)^2+2^2)(0^2+2^2+0^2)}
+= \frac{1}{33},
+$$
+
+de donde se deduce que $\theta = \operatorname{arccos}(33) = 1.5405$ rad.
 :::
 
 :::{#exr-plano-normal-trayectoria}
@@ -339,10 +373,10 @@ $$
 que al ser constante, tendrá derivada nula, y por tanto,
 
 $$
-(\mathbf{f}(t)\cdot \mathbf{f}(t))' = \mathbf{f}(t)'\cdot \mathbf{f}(t) + \mathbf{f}(t)\cdot \mathbf{f}(t) = 2 \mathbf{f}(t)'\cdot \mathbf{f}(t) = 0.
+(\mathbf{f}(t)\cdot \mathbf{f}(t))' = \mathbf{f}(t)'\cdot \mathbf{f}(t) + \mathbf{f}(t)\cdot \mathbf{f}'(t) = 2 \mathbf{f}(t)'\cdot \mathbf{f}(t) = 0.
 $$   
 
-Así pues, el vector velocidad $\mathbf{f}(t)$ y el vector posición $\mathbf{f}(t)$ son ortogonales ya que su producto escalar es nulo.
+Así pues, el vector velocidad $\mathbf{f}'(t)$ y el vector posición $\mathbf{f}(t)$ son ortogonales ya que su producto escalar es nulo.
 :::
 
 :::{#exr-longitud-trayectoria-1}
@@ -440,11 +474,32 @@ $$
 
 
 :::{#exr-parametrizacion-longitud-arco}
-Construir la parametrización de la longitud de arco de las trayectorias de las siguientes funciones vectoriales:
+Construir la parametrización de la longitud de arco de las trayectorias de las siguientes funciones vectoriales para $t>0$.
 
 a. $\mathbf{f}(t)=(3t+1, 1-2t).$
 
 b. $\mathbf{g}(t)=(e^t\operatorname{sen}(t), e^t\cos(t), 1)$
+:::
+
+:::{.callout-tip collapse="true"}
+## Solución
+a.  $\mathbf{f}'(t)= (3,-2)$ y su módulo vale $|\mathbf{f}'(t)|=\sqrt{3^2+(-2)^2} =\sqrt{13}$, por lo que su función longitud de arco para $t>0$ es
+
+$$
+s(t) 
+= \int_0^t |\mathbf{f}'(x)|\,dx 
+= \int_0^t \sqrt{13}\,dx 
+= [\sqrt{13}x]_0^t 
+= \sqrt{13}t.
+$$
+
+Tomando la inversa de la función longitud de arco $t=\frac{s}{\sqrt{13}}$ y haciendo el cambio de variable en $\mathbf{f}(t)$, llegamos a la parametrización de longitud de arco
+
+$$
+\tilde{\mathbf{f}}(s) = \left(\frac{3s}{\sqrt{13}}+1,1-\frac{2s}{\sqrt{13}}\right).
+$$
+
+
 :::
 
 :::{#exr-curvatura-1}
