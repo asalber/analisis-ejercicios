@@ -399,7 +399,8 @@ Solución
 <div id="callout-5" class="callout-5-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p><em>Propiedad reflexiva</em>: <span class="math inline">\(\forall a\in\mathbb{Z}\)</span> <span class="math inline">\(a-a=0\)</span> es par, de manera que <span class="math inline">\(aRa\)</span>.<br>
-<em>Propiedad simétrica</em>: <span class="math inline">\(\forall a,b\in\mathbb{Z}\)</span> si <span class="math inline">\(aRb\)</span> entonces <span class="math inline">\(a-b\)</span> es par, es decir, existe <span class="math inline">\(k\in \mathbb{Z}\)</span> tal que <span class="math inline">\(a-b=2k\)</span>. Por tanto, <span class="math inline">\(b-a=2(-k)\)</span> también es par y <span class="math inline">\(bRa\)</span>. <em>Propiedad transitiva</em>: <span class="math inline">\(\forall a,b,c\in\mathbb{Z}\)</span>, si <span class="math inline">\(aRb\)</span> y <span class="math inline">\(bRc\)</span> entonces <span class="math inline">\(a-b\)</span> y <span class="math inline">\(b-c\)</span> son pares, de manera que su suma <span class="math inline">\(a-b+b-c = a-c\)</span> también es par, y <span class="math inline">\(aRc\)</span>.</p>
+<em>Propiedad simétrica</em>: <span class="math inline">\(\forall a,b\in\mathbb{Z}\)</span> si <span class="math inline">\(aRb\)</span> entonces <span class="math inline">\(a-b\)</span> es par, es decir, existe <span class="math inline">\(k\in \mathbb{Z}\)</span> tal que <span class="math inline">\(a-b=2k\)</span>. Por tanto, <span class="math inline">\(b-a=2(-k)\)</span> también es par y <span class="math inline">\(bRa\)</span>.<br>
+<em>Propiedad transitiva</em>: <span class="math inline">\(\forall a,b,c\in\mathbb{Z}\)</span>, si <span class="math inline">\(aRb\)</span> y <span class="math inline">\(bRc\)</span> entonces <span class="math inline">\(a-b\)</span> y <span class="math inline">\(b-c\)</span> son pares, de manera que su suma <span class="math inline">\(a-b+b-c = a-c\)</span> también es par, y <span class="math inline">\(aRc\)</span>.</p>
 </div>
 </div>
 </div>
@@ -484,9 +485,9 @@ Solución
 <div class="callout-body-container callout-body">
 <ol type="a">
 <li><span class="math inline">\(f(x)=2x\)</span></li>
-<li><span class="math inline">\(f(x)=x^3-x\)</span>.</li>
+<li><span class="math inline">\(f(x)=\lfloor x/2\rfloor\)</span>.</li>
 <li><span class="math inline">\(f(x)=x^2\)</span></li>
-<li><span class="math inline">\(f(x)=2x+1\)</span></li>
+<li><span class="math inline">\(f(x)=x+1\)</span></li>
 </ol>
 </div>
 </div>
@@ -556,7 +557,7 @@ Solución
 <div id="callout-11" class="callout-11-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ol type="a">
-<li><p><span class="math inline">\(A\cup B = (A-B) \cup (B-A)\cup (A\cap B)\)</span> con <span class="math inline">\((A-B)\)</span>, <span class="math inline">\(A\cup B\)</span> y <span class="math inline">\(B-A\)</span> disjuntos dos a dos, de manera que <span class="math inline">\(|A\cup B| = |A-B| + |B-A| + |A\cap B|\)</span>.</p>
+<li><p><span class="math inline">\(A\cup B = (A-B) \cup (B-A)\cup (A\cap B)\)</span> con <span class="math inline">\(A-B\)</span>, <span class="math inline">\(A\cup B\)</span> y <span class="math inline">\(B-A\)</span> disjuntos dos a dos, de manera que <span class="math inline">\(|A\cup B| = |A-B| + |B-A| + |A\cap B|\)</span>.</p>
 <p>Por otro lado, <span class="math inline">\(A=(A-B)\cup (A\cap B)\)</span>, y <span class="math inline">\(B=(B-A)\cup (A\cap B)\)</span>, de modo que</p>
 <p><span class="math display">\[\begin{align*}
 |A| + |B| - |A\cap B| &amp;= |A-B| + |A\cap B| + |B-A| + |A\cap B| - |A\cap B| \\
@@ -590,7 +591,7 @@ Solución
 </div>
 </div>
 <div id="exr-numero-funciones-inyectivas" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 1.14 </strong></span>Dados dos conjuntos finitos <span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span> con <span class="math inline">\(|A|=n\)</span> y <span class="math inline">\(|B|=m\)</span>. ¿Cuántas funciones distintas se pueden construir de <span class="math inline">\(A\)</span> a <span class="math inline">\(B\)</span>. ¿Y cuántas funciones inyectivas suponiendo que <span class="math inline">\(n\leq m\)</span>?</p>
+<p><span class="theorem-title"><strong>Ejercicio 1.14 </strong></span>Dados dos conjuntos finitos <span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span> con <span class="math inline">\(|A|=n\)</span> y <span class="math inline">\(|B|=m\)</span>. ¿Cuántas funciones sobreyectivas distintas se pueden construir de <span class="math inline">\(A\)</span> a <span class="math inline">\(B\)</span>. ¿Y cuántas funciones inyectivas suponiendo que <span class="math inline">\(n\leq m\)</span>?</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-13-contents" aria-controls="callout-13" aria-expanded="false" aria-label="Toggle callout">
@@ -662,7 +663,7 @@ Solución
 </div>
 <div id="callout-16" class="callout-16-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Sea <span class="math inline">\(A\)</span> un conjunto. Si <span class="math inline">\(A\)</span> es finito, entonces cualquier subconjunto <span class="math inline">\(B\subset A\)</span> cumple que <span class="math inline">\(|B| &lt; |A|\)</span> por lo que no se puede establecer una biyección entre <span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span>.</p>
+<p>Sea <span class="math inline">\(A\)</span> un conjunto. Si <span class="math inline">\(A\)</span> es finito, entonces cualquier subconjunto <span class="math inline">\(B\subsetneq A\)</span> cumple que <span class="math inline">\(|B| &lt; |A|\)</span> por lo que no se puede establecer una biyección entre <span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span>.</p>
 <p>Si <span class="math inline">\(A\)</span> es infinito, por el ejercicio anterior se tiene que existe un subconjunto numerable <span class="math inline">\(B=\{a_1,a_2,\ldots\}\subseteq A\)</span>. Si tomamos la aplicación <span class="math inline">\(f:B\to B\setminus\{a_1\}\)</span> dada por <span class="math inline">\(f(a_i)=a_{i+1}\)</span>, entonces <span class="math inline">\(f\)</span> es biyectiva, y su extensión <span class="math inline">\(\hat f: A\to A\setminus\{a_1\}\)</span> dada por</p>
 <p><span class="math display">\[
 \hat f(x)=

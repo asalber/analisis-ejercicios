@@ -106,7 +106,7 @@ Demostrar que la relación $R=\{(x,y)\in \mathbb{Z}^2: x-y \mbox{ es par}\}$ es 
 :::{.callout-tip collapse="true"}
 ## Solución
 _Propiedad reflexiva_:  $\forall a\in\mathbb{Z}$ $a-a=0$ es par, de manera que $aRa$.  
-_Propiedad simétrica_: $\forall a,b\in\mathbb{Z}$ si $aRb$ entonces $a-b$ es par, es decir, existe $k\in \mathbb{Z}$ tal que $a-b=2k$. Por tanto, $b-a=2(-k)$ también es par y $bRa$.
+_Propiedad simétrica_: $\forall a,b\in\mathbb{Z}$ si $aRb$ entonces $a-b$ es par, es decir, existe $k\in \mathbb{Z}$ tal que $a-b=2k$. Por tanto, $b-a=2(-k)$ también es par y $bRa$.  
 _Propiedad transitiva_: $\forall a,b,c\in\mathbb{Z}$, si $aRb$ y $bRc$ entonces $a-b$ y $b-c$ son pares, de manera que su suma $a-b+b-c = a-c$ también es par, y $aRc$.
 :::
 
@@ -156,9 +156,9 @@ d. $f$ es biyectiva y distinta de la función identidad.
 :::{.callout-tip collapse="true"}
 ## Solución
 a. $f(x)=2x$
-b. $f(x)=x^3-x$.
+b. $f(x)=\lfloor x/2\rfloor$.
 c. $f(x)=x^2$
-d. $f(x)=2x+1$
+d. $f(x)=x+1$
 :::
 
 :::{#exr-tipos-funciones}
@@ -194,7 +194,7 @@ Dados dos conjuntos finitos $A$ y $B$, demostrar que $|A\cup B| = |A|+|B|-|A\cap
 
 :::{.callout-tip collapse="true"}
 ## Solución
-a. $A\cup B = (A-B) \cup (B-A)\cup (A\cap B)$ con $(A-B)$, $A\cup B$ y $B-A$ disjuntos dos a dos, de manera que $|A\cup B| = |A-B| + |B-A| + |A\cap B|$.
+a. $A\cup B = (A-B) \cup (B-A)\cup (A\cap B)$ con $A-B$, $A\cup B$ y $B-A$ disjuntos dos a dos, de manera que $|A\cup B| = |A-B| + |B-A| + |A\cap B|$.
 
     Por otro lado, $A=(A-B)\cup (A\cap B)$, y $B=(B-A)\cup (A\cap B)$, de modo que 
 
@@ -222,7 +222,7 @@ De lo anterior se deduce que si $f$ es biyectiva, entonces $|A|=|B|$.
 :::
 
 :::{#exr-numero-funciones-inyectivas}
-Dados dos conjuntos finitos $A$ y $B$ con $|A|=n$ y $|B|=m$. ¿Cuántas funciones distintas se pueden construir de $A$ a $B$. ¿Y cuántas funciones inyectivas suponiendo que $n\leq m$?
+Dados dos conjuntos finitos $A$ y $B$ con $|A|=n$ y $|B|=m$. ¿Cuántas funciones sobreyectivas distintas se pueden construir de $A$ a $B$. ¿Y cuántas funciones inyectivas suponiendo que $n\leq m$?
 :::
 
 :::{.callout-tip collapse="true"}
@@ -256,7 +256,7 @@ Demostrar que un conjunto es infinito si y solo si es equipotente a un subconjun
 
 :::{.callout-tip collapse="true"}
 ## Solución
-Sea $A$ un conjunto. Si $A$ es finito, entonces cualquier subconjunto $B\subset A$ cumple que $|B| < |A|$ por lo que no se puede establecer una biyección entre $A$ y $B$. 
+Sea $A$ un conjunto. Si $A$ es finito, entonces cualquier subconjunto $B\subsetneq A$ cumple que $|B| < |A|$ por lo que no se puede establecer una biyección entre $A$ y $B$. 
 
 Si $A$ es infinito, por el ejercicio anterior se tiene que existe un subconjunto numerable $B=\{a_1,a_2,\ldots\}\subseteq A$. Si tomamos la aplicación $f:B\to B\setminus\{a_1\}$ dada por $f(a_i)=a_{i+1}$, entonces $f$ es biyectiva, y su extensión $\hat f: A\to A\setminus\{a_1\}$ dada por 
 
