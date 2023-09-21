@@ -644,7 +644,12 @@ y = -49.86-(x-100) \Leftrightarrow y=-x+50.14.
 $$
 :::
 
-:::{#exr-cinematica-tangente-normal-trayectoria}
+:::{#exr-cinematica-3}
+Una avión parte de la posición $\mathbf{f}(0)=(1, 1, 1)$ con velocidad inicial $\mathbf{v}(0)=(0,1,-2)$ y aceleración $\mathbf{a}(t)=t^2\mathbf{i}-\frac{1}{2}\mathbf{j}+2\mathbf{k}$.
+Determinar el vector velocidad en y el vector posición en cada instante.
+:::
+
+:::{#exr-parasitos}
 La cantidad de árboles en un ecosistema, $a$, depende del tiempo según la expresión
 
 $$

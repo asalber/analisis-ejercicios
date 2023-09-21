@@ -79,12 +79,11 @@ Construir por extensión el conjunto potencia del conjunto de los grupos sanguí
 :::{.callout-tip collapse="true"}
 ## Solución
 \begin{align*}
-\mathcal{P}(S)&=\{\emptyset, \{A\}, \{B\}, \{AB\}, \\
-& \{\emptyset,A\},\{\emptyset,B\}, \{\emptyset,AB\}, \{A,B\}, \{A,AB\}, \{B,AB\}, \{\emptyset,A,B\},\\ 
-& \{\emptyset,A,AB\}, \{\emptyset,B,AB\}, \{A,B,AB\}, \\ 
-& \{\emptyset,A,B,AB\} \}
+\mathcal{P}(S)&=\{\emptyset, \{0\}, \{A\}, \{B\}, \{AB\}, \\
+& \{0,A\},\{0,B\}, \{0,AB\}, \{A,B\}, \{A,AB\}, \{B,AB\}, \{0,A,B\},\\ 
+& \{0,A,AB\}, \{0,B,AB\}, \{A,B,AB\}, \\ 
+& \{0,A,B,AB\} \}
 \end{align*}
-
 :::
 
 :::{#exr-producto-cartesiano-grupos-sanguineos}
