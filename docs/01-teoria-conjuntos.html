@@ -815,23 +815,76 @@ Solución
 </div>
 <div id="callout-22" class="callout-22-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Para cada <span class="math inline">\(n\in\mathbb{N}\)</span> sea <span class="math inline">\(P_n\)</span> el conjunto de los polinomios de grado <span class="math inline">\(n\)</span> con coeficientes enteros <span class="math inline">\(P_n=\{a_0+a_1x+a_2x^2+\cdots+a_nx^n: a_i\in \mathbb{Z}\}\)</span>. Para cada polinomio <span class="math inline">\(a_0+a_1x+a_2x^2+\cdots+a_nx^n\in P_n\)</span> podemos establecer una biyección entre sus coeficientes y la tupla <span class="math inline">\(p_n=(a_0,a_1,\ldots,a_n)\)</span>, con <span class="math inline">\(a_i\in\mathbb{Z}\)</span>. Por tanto, existe una biyección entre <span class="math inline">\(P_n\)</span> y <span class="math inline">\(\mathbb{Z}^n\)</span>, y como <span class="math inline">\(\mathbb{Z}^n\)</span> es numerable, el <span class="math inline">\(P_n\)</span> también lo es.</p>
+<p>Para cada <span class="math inline">\(n\in\mathbb{N}\)</span> sea <span class="math inline">\(P_n\)</span> el conjunto de los polinomios de grado <span class="math inline">\(n\)</span> con coeficientes enteros <span class="math inline">\(P_n=\{a_0+a_1x+a_2x^2+\cdots+a_nx^n: a_i\in \mathbb{Z}\}\)</span>. Para cada polinomio <span class="math inline">\(a_0+a_1x+a_2x^2+\cdots+a_nx^n\in P_n\)</span> podemos establecer una biyección entre sus coeficientes y la tupla <span class="math inline">\(p_n=(a_0,a_1,\ldots,a_n)\)</span>, con <span class="math inline">\(a_i\in\mathbb{Z}\)</span>. Por tanto, existe una biyección entre <span class="math inline">\(P_n\)</span> y <span class="math inline">\(\mathbb{Z}^n\)</span>, y como <span class="math inline">\(\mathbb{Z}^n\)</span> es numerable, <span class="math inline">\(P_n\)</span> también lo es.</p>
 <p>Finalmente, <span class="math inline">\(P=\cup_{i=1}^\infty P_n\)</span> que es la unión numerable de conjuntos numerables, que, como ya se vió en el <a href="#exr-union-numerable-conjuntos-numerables">Ejercicio&nbsp;<span>1.22</span></a>, es numerable.</p>
+<p>Del mismo modo, el conjunto de los polinomios de grado <span class="math inline">\(n\)</span> con coeficientes racionales también es numerable, ya que podemos establecer una biyección entre sus coeficientes y la tupla <span class="math inline">\(p_n=(a_0,a_1,\ldots,a_n)\)</span>, con <span class="math inline">\(a_i\in\mathbb{Q}\)</span>. Por tanto, existe una biyección entre <span class="math inline">\(P_n\)</span> y <span class="math inline">\(\mathbb{Q}^n\)</span>, que es numerable.</p>
 </div>
 </div>
 </div>
 <div id="exr-conjuntos-numerables" class="theorem exercise">
 <p><span class="theorem-title"><strong>Ejercicio 1.24 </strong></span><span class="math inline">\(\star\)</span> ¿Cuáles de los siguientes conjuntos son numerables?</p>
 <ol type="a">
-<li><span class="math inline">\(A=\{3k: k\in \mathbb{Z}\}\)</span></li>
-<li><span class="math inline">\(B=\{x\in \mathbb{Q}: -10 &lt; x &lt; 10\}\)</span></li>
+<li><span class="math inline">\(A = \{3k: k\in \mathbb{Z}\}\)</span></li>
+<li><span class="math inline">\(B = \{x\in \mathbb{Q}: -10 &lt; x &lt; 10\}\)</span></li>
 <li><span class="math inline">\(C = \{x\in \mathbb{R}: 0\leq x\leq 1\}\)</span></li>
-<li><span class="math inline">\(D=\{(x,y): x\in \mathbb{Z}, y\in \mathbb{Q}\}\)</span></li>
-<li><span class="math inline">\(E=\{1/n : n\in \mathbb{N}\}\)</span></li>
+<li><span class="math inline">\(D = \{(x,y): x\in \mathbb{Z}, y\in \mathbb{Q}\}\)</span></li>
+<li><span class="math inline">\(E = \{1/n : n\in \mathbb{N}\}\)</span></li>
 </ol>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-23-contents" aria-controls="callout-23" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-23" class="callout-23-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="a">
+<li><p><span class="math inline">\(A\)</span> es numerable ya que es un subconjunto de <span class="math inline">\(\mathbb{Z}\)</span> y un subconjunto de un conjunto numerable es numerable.</p></li>
+<li><p><span class="math inline">\(B\)</span> es numerable ya que es un subconjunto de <span class="math inline">\(\mathbb{Q}\)</span> y un subconjunto de un conjunto numerable es numerable.</p></li>
+<li><p><span class="math inline">\(C\)</span> no es numerable ya que cualquier intervalo real con más de un número es no numerable. Para probarlo podemos usar el mismo razonamiento que para probar que el conjunto de los números reales es no numerable. El conjunto <span class="math inline">\(C\)</span> está formado por los números decimales de la forma <span class="math inline">\(0.d_1d_2,\ldots\)</span>. Supongamos que existe la siguiente biyección entre <span class="math inline">\(C\)</span> y <span class="math inline">\(\mathbb{N}\)</span>:</p>
+<ol type="1">
+<li><span class="math inline">\(0.d_{1,1},d_{1,2},d_{1,3},\ldots\)</span></li>
+<li><span class="math inline">\(0.d_{2,1},d_{2,2},d_{2,3},\ldots\)</span></li>
+<li><span class="math inline">\(0.d_{3,1},d_{3,2},d_{3,3},\ldots\)</span></li>
+<li></li>
+</ol>
+<p>Entonces es posible construir otro número real <span class="math inline">\(0.c_1c_2c_3,ldots\)</span> tal que <span class="math inline">\(c_i=d_{i,i}+1\)</span> o <span class="math inline">\(c_i=0\)</span> si <span class="math inline">\(d_{i,i}=9\)</span>. Este número real sería diferente de todos los de la enumeración anterior, ya que se diferenciaría de cada uno de ellos en al menos una cifra decimal. Por tanto, habría al menos un número que no estaría emparejado con un número natural mediante la aplicación, por lo que no podría ser una biyección entre <span class="math inline">\(C\)</span> y <span class="math inline">\(\mathbb{N}\)</span>.</p></li>
+<li><p><span class="math inline">\(D\)</span> es numerable al ser el producto cartesiano de dos conjuntos numerables.</p></li>
+<li><p><span class="math inline">\(E\)</span> es numerable ya que se puede establecer la biyección <span class="math inline">\(f(n) = 1/n\)</span> entre <span class="math inline">\(\mathbb{N}\)</span> y <span class="math inline">\(E\)</span>.</p></li>
+</ol>
+</div>
+</div>
 </div>
 <div id="exr-conjunto-secuencias-adn-numerable" class="theorem exercise">
 <p><span class="theorem-title"><strong>Ejercicio 1.25 </strong></span>¿Es el conjunto de todas las secuencias infinitas de ADN numerable?</p>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-24-contents" aria-controls="callout-24" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-24" class="callout-24-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>No es numerable, ya que, al igual que ocurre con los números reales, no es posible hacer una enumeración de sus elementos. Las cadenas de ADN son secuencias de elementos conocidos como <em>bases</em>, que pueden ser A (Adenina), T (Timinia), G (Guanina), C (Citosina). Si existiese una biyección entre el conjunto de estas cadenas infinitas y <span class="math inline">\(\mathbb{N}\)</span>, como por ejemplo, la siguiente,</p>
+<ol type="1">
+<li><span class="math inline">\(A,T,C,\ldots\)</span></li>
+<li><span class="math inline">\(C,G,A\ldots\)</span></li>
+<li><span class="math inline">\(T,C,G,\ldots\)</span></li>
+<li></li>
+</ol>
+<p>podríamos construir una nueva cadena distinta de todas las de esta enumeración, cambiando la base de la posición <span class="math inline">\(i\)</span> por otra distinta de la que tenga en la misma posición la cadena <span class="math inline">\(i\)</span> de la enumeración. De esta manera, la enumeración anterior no sería una biyección, pues habría al menos una cadena que no tendría asociado un número natural.</p>
+</div>
+</div>
 </div>
 
 

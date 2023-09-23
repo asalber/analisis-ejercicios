@@ -363,22 +363,57 @@ Demostrar que el conjunto de todos los polinomios con coeficientes enteros $P=\{
 
 :::{.callout-tip collapse="true"}
 ## Solución
-Para cada $n\in\mathbb{N}$ sea $P_n$ el conjunto de los polinomios de grado $n$ con coeficientes enteros  $P_n=\{a_0+a_1x+a_2x^2+\cdots+a_nx^n: a_i\in \mathbb{Z}\}$. Para cada polinomio $a_0+a_1x+a_2x^2+\cdots+a_nx^n\in P_n$ podemos establecer una biyección entre sus coeficientes y la tupla $p_n=(a_0,a_1,\ldots,a_n)$, con $a_i\in\mathbb{Z}$. Por tanto, existe una biyección entre $P_n$ y $\mathbb{Z}^n$, y como $\mathbb{Z}^n$ es numerable, el $P_n$ también lo es.
+Para cada $n\in\mathbb{N}$ sea $P_n$ el conjunto de los polinomios de grado $n$ con coeficientes enteros  $P_n=\{a_0+a_1x+a_2x^2+\cdots+a_nx^n: a_i\in \mathbb{Z}\}$. Para cada polinomio $a_0+a_1x+a_2x^2+\cdots+a_nx^n\in P_n$ podemos establecer una biyección entre sus coeficientes y la tupla $p_n=(a_0,a_1,\ldots,a_n)$, con $a_i\in\mathbb{Z}$. Por tanto, existe una biyección entre $P_n$ y $\mathbb{Z}^n$, y como $\mathbb{Z}^n$ es numerable, $P_n$ también lo es.
 
 Finalmente, $P=\cup_{i=1}^\infty P_n$ que es la unión numerable de conjuntos numerables, que, como ya se vió en el @exr-union-numerable-conjuntos-numerables, es numerable.
+
+Del mismo modo, el conjunto de los polinomios de grado $n$ con coeficientes racionales también es numerable, ya que podemos establecer una biyección entre sus coeficientes y la tupla $p_n=(a_0,a_1,\ldots,a_n)$, con $a_i\in\mathbb{Q}$. Por tanto, existe una biyección entre $P_n$ y $\mathbb{Q}^n$, que es numerable.
 :::
 
 :::{#exr-conjuntos-numerables}
 $\star$
 ¿Cuáles de los siguientes conjuntos son numerables?
 
-a. $A=\{3k: k\in \mathbb{Z}\}$
-a. $B=\{x\in \mathbb{Q}: -10 < x < 10\}$
+a. $A = \{3k: k\in \mathbb{Z}\}$
+a. $B = \{x\in \mathbb{Q}: -10 < x < 10\}$
 a. $C = \{x\in \mathbb{R}: 0\leq x\leq 1\}$
-a. $D=\{(x,y): x\in \mathbb{Z}, y\in \mathbb{Q}\}$
-a. $E=\{1/n : n\in \mathbb{N}\}$
+a. $D = \{(x,y): x\in \mathbb{Z}, y\in \mathbb{Q}\}$
+a. $E = \{1/n : n\in \mathbb{N}\}$
+:::
+
+:::{.callout-tip collapse="true"}
+## Solución
+a.  $A$ es numerable ya que es un subconjunto de $\mathbb{Z}$ y un subconjunto de un conjunto numerable es numerable.
+
+a.  $B$ es numerable ya que es un subconjunto de $\mathbb{Q}$ y un subconjunto de un conjunto numerable es numerable.
+
+a.  $C$ no es numerable ya que cualquier intervalo real con más de un número es no numerable. Para probarlo podemos usar el mismo razonamiento que para probar que el conjunto de los números reales es no numerable. El conjunto $C$ está formado por los números decimales de la forma $0.d_1d_2,\ldots$. Supongamos que existe la siguiente biyección entre $C$ y $\mathbb{N}$:
+
+    1. $0.d_{1,1},d_{1,2},d_{1,3},\ldots$
+    2. $0.d_{2,1},d_{2,2},d_{2,3},\ldots$
+    3. $0.d_{3,1},d_{3,2},d_{3,3},\ldots$
+    4. \ldots
+
+
+    Entonces es posible construir otro número real $0.c_1c_2c_3,ldots$ tal que $c_i=d_{i,i}+1$ o $c_i=0$ si $d_{i,i}=9$. Este número real sería diferente de todos los de la enumeración anterior, ya que se diferenciaría de cada uno de ellos en al menos una cifra decimal. Por tanto, habría al menos un número que no estaría emparejado con un número natural mediante la aplicación, por lo que no podría ser una biyección entre $C$ y $\mathbb{N}$. 
+
+a.  $D$ es numerable al ser el producto cartesiano de dos conjuntos numerables.
+
+a.  $E$ es numerable ya que se puede establecer la biyección $f(n) = 1/n$ entre $\mathbb{N}$ y $E$.
 :::
 
 :::{#exr-conjunto-secuencias-adn-numerable}
 ¿Es el conjunto de todas las secuencias infinitas de ADN numerable? 
+:::
+
+:::{.callout-tip collapse="true"}
+## Solución
+No es numerable, ya que, al igual que ocurre con los números reales, no es posible hacer una enumeración de sus elementos. Las cadenas de ADN son secuencias de elementos conocidos como _bases_, que pueden ser A (Adenina), T (Timinia), G (Guanina), C (Citosina). Si existiese una biyección entre el conjunto de estas cadenas infinitas y $\mathbb{N}$, como por ejemplo, la siguiente,
+
+1. $A,T,C,\ldots$
+2. $C,G,A\ldots$
+3. $T,C,G,\ldots$
+4. \ldots
+
+podríamos construir una nueva cadena distinta de todas las de esta enumeración, cambiando la base de la posición $i$ por otra distinta de la que tenga en la misma posición la cadena $i$ de la enumeración. De esta manera, la enumeración anterior no sería una biyección, pues habría al menos una cadena que no tendría asociado un número natural.
 :::
