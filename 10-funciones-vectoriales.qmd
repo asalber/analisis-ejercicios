@@ -644,10 +644,168 @@ y = -49.86-(x-100) \Leftrightarrow y=-x+50.14.
 $$
 :::
 
-:::{#exr-cinematica-3}
+:::{#exr-cinematica-avion}
 Una avión parte de la posición $\mathbf{f}(0)=(1, 1, 1)$ con velocidad inicial $\mathbf{v}(0)=(0,1,-2)$ y aceleración $\mathbf{a}(t)=t^2\mathbf{i}-\frac{1}{2}\mathbf{j}+2\mathbf{k}$.
-Determinar el vector velocidad en y el vector posición en cada instante.
+Determinar el vector velocidad y el vector posición en cada instante.
 :::
+
+:::{#exr-cinematica}
+Calcular la rapidez máxima y mínima con la que se mueve una partícula cuya posición viene dada por la función vectorial $\mathbf{f}(t) = \cos(2t)\mathbf{i} + \operatorname{sen}(t)\mathbf{j} + \cos(t))\mathbf{k}$ en el intervalo $[0,\pi)$.
+:::
+
+:::{.callout-tip collapse="true"}
+## Solución
+El vector velocidad vale 
+
+$$
+\mathbf{v}(t)
+= \mathbf{f}'(t) 
+= (-2\operatorname{sen}(2t), \cos(t), -\operatorname{sen}(t)),
+$$
+
+y la rapidez con la que se mueve la partícula es su módulo
+
+$$
+|\mathbf{v}(t)| 
+= \sqrt{(-2\operatorname{sen}(2t))^2 + \cos(t)^2 + (-\operatorname{sen}(t))^2}
+= \sqrt{4\operatorname{sen}(2t)^2+1}.
+$$
+
+Para ver cuándo la rapidez es máxima o mínima tenemos que calcular la derivada de esta función e igualarla a cero para obtener sus puntos críticos.
+
+$$
+|\mathbf{v}(t)|'
+= \frac{8\operatorname{sen}(2t)\cos(2t)}{\sqrt{4\operatorname{sen}(2t)^2+1}} = 0
+\Leftrightarrow
+\operatorname{sen}(2t)\cos(2t) = 0.
+$$
+
+Por tanto la derivada se anula si $\operatorname{sen}(2t)=0$ o $\cos(2t)=0$, que en el intervalo $[0,\pi)$ se cumple para $t=0$, $t=\pi/4$, $t=\pi/2$ y $t=3\pi/4$.
+
+Para ver si en cada uno de estos instantes hay un máximo, mínimo o punto de inflexión, estudiamos el signo de la derivada en instantes próximos anteriores y posteriores.
+
+- En instantes anteriores a $t=0$ $\operatorname{sen}(2t)<0$ y $\cos(2t)>0$ por lo que $|\mathbf{v}(t)|'<0$, y en instantes posteriores  $\operatorname{sen}(2t)>0$ y $\cos(2t)>0$ por lo que $|\mathbf{v}(t)|'>0$, y por tanto, hay un mínimo relativo en $t=0$.
+- En instantes anteriores a $t=\pi/4$ $\operatorname{sen}(2t)>0$ y $\cos(2t)>0$ por lo que $|\mathbf{v}(t)|'>0$, y en instantes posteriores $\operatorname{sen}(2t)>0$ y $\cos(2t)<0$ por lo que $|\mathbf{v}(t)|'<0$, y por tanto, hay un máximo relativo en $t=0$.
+- En instantes anteriores a $t=\pi/2$ $\operatorname{sen}(2t)>0$ y $\cos(2t)<0$ por lo que $|\mathbf{v}(t)|'<0$, y en instantes posteriores  $\operatorname{sen}(2t)<0$ y $\cos(2t)<0$ por lo que $|\mathbf{v}(t)|'>0$, y por tanto, hay un mínimo relativo en $t=0$.
+- En instantes anteriores a $t=3\pi/4$ $\operatorname{sen}(2t)<0$ y $\cos(2t)<0$ por lo que $|\mathbf{v}(t)|'>0$, y en instantes posteriores $\operatorname{sen}(2t)<0$ y $\cos(2t)>0$ por lo que $|\mathbf{v}(t)|'<0$, y por tanto, hay un máximo relativo en $t=0$.
+:::
+
+:::{#exr-cinematica-fuerza-1}
+Calcular la fuerza necesaria para que la partícula de masa $m$ se mueva con posición dada por la función vectorial $g(t) = (3t, \ln(t), t^2)$. ¿Cómo se interpreta este vector?
+:::
+
+:::{.callout-tip collapse="true"}
+## Solución
+El vector velocidad es 
+
+$$
+\mathbf{v}(t)
+= \mathbf{f}'(t) 
+= \left(3, \frac{1}{t}, 2t\right),
+$$
+
+y el vector aceleración es 
+
+$$
+\mathbf{a}(t)
+= \mathbf{f}''(t) 
+= \left(0, \frac{-1}{t^2}, 2\right).
+$$
+
+Por tanto, la fuerza necesaria para imprimir esta aceleración a una partícula de masa $m$ en cada instante $t$ es 
+
+$$
+\mathbf{F}(t) 
+= m \mathbf{a}(t)
+= \left(0, \frac{-m}{t^2}, 2m\right).
+$$
+
+Esto quiere decir que no hay que aplicar fuerza en el sentido del eje $x$, una fuerza inversamente proporcional al cuadrado del tiempo en la dirección opuesta al eje $y$ y una fuerza constante del doble de la masa en la dirección del eje $z$.
+:::
+
+:::{#exr-cinematica-fuerza-2}
+Se aplica una fuerza de $2$ N a una pelota de $100$ g en el sentido de la bisectriz del plano $yz$. Si la pelota parte del origen de coordenadas con una velocidad inicial $\mathbf{v}_0 = 2\mathbf{i}-\mathbf{j}$ m/s, ¿qué posición y con qué rapidez se moverá la pelota en cada instante?
+:::
+
+:::{.callout-tip collapse="true"}
+## Solución
+Un vector con la dirección de la bisectriz del plano $yz$ es $(0,1,1)$, de manera que un vector unitario en esa dirección será $\mathbf{u}=\left(0,\frac{1}{\sqrt{2}},\frac{1}{\sqrt{2}}\right)$, y como la intensidad de la fuerza es 2 N, se tiene que el vector fuerza es 
+
+$$
+\mathbf{F}(t)
+= \left(0,\frac{2}{\sqrt{2}},\frac{2}{\sqrt{2}}\right) 
+= (0, \sqrt{2},\sqrt{2}).
+$$
+
+Como por la segunda ley de Newton $\mathbf{F}(t)=m\mathbf{a}(t)$, se tiene que 
+
+$$
+\mathbf{a}(t)
+= \frac{\mathbf{F}(t)}{m}
+= \frac{(0, \sqrt{2},\sqrt{2})}{0.1} 
+= (0, 10\sqrt{2}, 10\sqrt{2}).
+$$
+
+Integrando el vector aceleración obtenemos el vector velocidad
+
+$$
+\mathbf{v}(t)
+= \int \mathbf{a}(t)\, dt
+= \int (0, 10\sqrt{2}, 10\sqrt{2})\, dt 
+= (0, 10\sqrt{2}t, 10\sqrt{2}t) + C.
+$$
+
+Como en el instante $t=0$ la velocidad es $\mathbf{v}_0$, se tiene que 
+
+$$
+\mathbf{v}(0) 
+= (0, 10\sqrt{2}\cdot 0, 10\sqrt{2}\cdot 0) + C 
+= (0,0,0) + C  
+= C 
+= \mathbf{v}_0,
+$$
+
+por lo que el vector velocidad es
+
+$$
+\mathbf{v}(t)
+= (0, 10\sqrt{2}t, 10\sqrt{2}t) + \mathbf{v}_0
+= (0, 10\sqrt{2}t, 10\sqrt{2}t) + (1, -1, 0)
+= (1, 10\sqrt{2}t-1, 10\sqrt{2}t).
+$$
+
+Ahora integrando el vector velocidad obtenemos el vector de posición de la pelota.
+
+$$
+\mathbf{f}(t)
+= \int \mathbf{v}(t)\,dt 
+= \int (1, 10\sqrt{2}t-1, 10\sqrt{2}t)\, dt 
+= (t, 5\sqrt{2}t^2-t, 5\sqrt{2}t^2) + C
+$$
+
+Como la pelota parte del origen de coordenadas, $f(0)=(0,0,0)$, por lo que 
+
+$$
+\mathbf{f}(0) 
+= (0, 5\sqrt{2}\cdot 0^2-0, 5\sqrt{2}\cdot 0^2) + C 
+= (0, 0, 0) + C 
+= C 
+= (0, 0, 0), 
+$$
+
+por lo que, finalmente, el vector de posición es $\mathbf{f}(t)=(t, 5\sqrt{2}t^2-t, 5\sqrt{2}t^2)$ m, y su rapidez 
+
+$$
+|\mathbf{v}(t)| 
+= \sqrt{1^2 + (10\sqrt{2}t-1)^2 + (10\sqrt{2}t)^2}.
+$$
+:::
+
+:::{#exr-cinematica-jabalina}
+Un atleta lanza la jabalina con un ángulo $\theta$ sobre la horizontal y una velocidad inicial $\mathbf{v}_0$. Suponiendo que la única fuerza que actúa sobre ella es la de la gravedad, ¿qué distancia horizontal alcanzará la jabalina? ¿Qué valor de $\theta$ maximiza la distancia horizontal recorrida?
+:::
+
+
 
 :::{#exr-parasitos}
 La cantidad de árboles en un ecosistema, $a$, depende del tiempo según la expresión

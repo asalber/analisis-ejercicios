@@ -1,7 +1,6 @@
 ---
 lang: es
 ---
-<!-- LTeX: language = es-ES -->
 
 # Teoría de conjuntos 
 
