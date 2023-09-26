@@ -545,7 +545,7 @@ Es decir, la curvatura de un círculo es el inverso de su radio.
 :::{#exr-curvatura-funcion}
 Usar la fórmula de la curvatura de la trayectoria de una función vectorial para obtener una fórmula para calcular la curvatura de la gráfica de una función real $f(x)$.
 :::
-<!-- 
+
 :::{.callout-tip collapse="true"}
 ## Solución
 Dada una función real $y=f(x)$ podemos representar la trayectoria de su gráfica mediante la función vectorial $\mathbf{f}(t) = (t, f(t), 0)$ en el espacio real. En tal caso, según la [fórmula de la curvatura de una trayectoria en el espacio real](https://aprendeconalf.es/analisis-manual/12-funciones-vectoriales.html#thm-curvatura-trayectoria-espacio-real), su curvatura es
@@ -573,7 +573,7 @@ $$
 \kappa(t)= \frac{|\mathbf{f}'(t)\times \mathbf{f}''(t)|}{|\mathbf{f}'(t)|^3}
 = \frac{|f''(t)|}{(1+f''(t)^2)^{3/2}}.
 $$
-::: -->
+:::
 
 :::{#exr-cinematica-2}
 Las coordenadas paramétricas de un punto material lanzado bajo un ángulo respecto al horizonte son
@@ -688,6 +688,13 @@ Para ver si en cada uno de estos instantes hay un máximo, mínimo o punto de in
 - En instantes anteriores a $t=\pi/4$ $\operatorname{sen}(2t)>0$ y $\cos(2t)>0$ por lo que $|\mathbf{v}(t)|'>0$, y en instantes posteriores $\operatorname{sen}(2t)>0$ y $\cos(2t)<0$ por lo que $|\mathbf{v}(t)|'<0$, y por tanto, hay un máximo relativo en $t=0$.
 - En instantes anteriores a $t=\pi/2$ $\operatorname{sen}(2t)>0$ y $\cos(2t)<0$ por lo que $|\mathbf{v}(t)|'<0$, y en instantes posteriores  $\operatorname{sen}(2t)<0$ y $\cos(2t)<0$ por lo que $|\mathbf{v}(t)|'>0$, y por tanto, hay un mínimo relativo en $t=0$.
 - En instantes anteriores a $t=3\pi/4$ $\operatorname{sen}(2t)<0$ y $\cos(2t)<0$ por lo que $|\mathbf{v}(t)|'>0$, y en instantes posteriores $\operatorname{sen}(2t)<0$ y $\cos(2t)>0$ por lo que $|\mathbf{v}(t)|'<0$, y por tanto, hay un máximo relativo en $t=0$.
+:::
+
+:::{#exr-componentes-tangencial-normal}
+Calcular las componentes tangencial y normal del vector aceleración de las siguientes funciones vectoriales.
+
+a.  $f(t) = (2\cos(t), \operatorname{sen}(2t))$.
+b.  $g(t) = (3t^2, 2t^3, \ln(t))$.
 :::
 
 :::{#exr-cinematica-fuerza-1}
