@@ -468,7 +468,7 @@ $$
 por lo que la espiral del cuaderno es la trayectoria recorrida por la función vectorial en el intervalo $t\in [0,240]$, que según la fórmula anterior es
 
 $$
-\frac{\sqrt{\frac{1}{4^2}+4}}{2}(240-0) = \frac{\sqrt{17}}{8}240 \approx 123.6937 \mbox{ cm}. 
+\frac{\sqrt{\frac{1}{4^2}+4}}{2}(240-0) = \frac{\sqrt{65}}{8}240 \approx 241.8677 \mbox{ cm}. 
 $$
 :::
 
