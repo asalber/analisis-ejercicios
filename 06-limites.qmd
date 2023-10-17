@@ -1,8 +1,7 @@
 ---
+title: Límites de funciones
 lang: es
 ---
-
-# Límites de funciones
 
 :::{#exr-funcion-constante}
 Sea $f(x)=c$ una función constante. Demostrar que $\lim_{x\to a}f(x)=c$ $\forall a\in\mathbb{R}$.  

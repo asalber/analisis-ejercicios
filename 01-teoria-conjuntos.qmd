@@ -1,8 +1,7 @@
 ---
+title: Teoría de conjuntos 
 lang: es
 ---
-
-# Teoría de conjuntos 
 
 :::{#exr-operaciones-conjuntos}
 Dado el conjunto universo de los números de un dado $\Omega=\{1, 2, 3, 4, 5, 6\}$ y los subconjuntos correspondientes a sacar par en el lanzamiento de un dado $A=\{2, 4, 6\}$ y sacar menos de 5 en el lanzamiento de un dado $B=\{1, 2, 3, 4\}$, calcular e interpretar los siguientes conjuntos:

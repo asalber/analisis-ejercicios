@@ -1,9 +1,7 @@
 ---
+title: Topología de los números reales
 lang: es
 ---
-<!-- LTeX: language = es-ES -->
-
-# Topología de los números reales
 
 :::{#exr-sucesion-intervalos-anidados}
 Dada la sucesión de intervalos anidados $I_n=[0,\frac{1}{n}]$, $n\in\mathbb{N}$, demostrar que $\cap_{n=1}^\infty I_n= \{0\}$. Demostrar también que si se consideran intervalos abiertos en lugar de cerrados entonces la intersección es vacía.

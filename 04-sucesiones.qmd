@@ -1,9 +1,7 @@
 ---
+title: Sucesiones de números reales
 lang: es
 ---
-<!-- LTeX: language = es-ES -->
-
-# Sucesiones de números reales
 
 :::{#exr-sucesion-constante}
 Una _sucesión constante_ es una sucesión de números reales en la que cada término es igual que el anterior. Demostrar que una sucesión constante siempre converge.

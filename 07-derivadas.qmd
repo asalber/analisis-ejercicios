@@ -1,8 +1,7 @@
 ---
+title: Derivadas de funciones
 lang: es
 ---
-
-# Derivadas de funciones
 
 :::{#exr-derivada-potencia}
 Usando la definición de derivada, demostrar que la derivada de la función $f(x)=x^n$ es $f'(x)=nx^{n-1}$ donde $n\in\mathbb{N}$. 
