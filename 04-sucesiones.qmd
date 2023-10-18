@@ -235,7 +235,7 @@ Luego $\lim_{n\to\infty}\sqrt{x_n}=\sqrt{0}$.
 Supongamos ahora que $x>0$ y $\lim_{n\to\infty}x_n=x$. Dado $\varepsilon>0$ sea $\varepsilon_2=\varepsilon\sqrt{x}>0$, entonces existe $k\in\mathbb{N}$ tal que $|x_n-x|<\varepsilon_2$ $\forall n\geq k$, pero entonces, también se cumple que 
 
 \begin{align*}
-|\sqrt{x_n}-\sqrt{x}| &= \frac{|(\sqrt{x_n}-\sqrt{x})(\sqrt{x_n}+\sqrt{x})}{\sqrt{x_n}+\sqrt{x}} \\ 
+|\sqrt{x_n}-\sqrt{x}| &= \left|\frac{(\sqrt{x_n}-\sqrt{x})(\sqrt{x_n}+\sqrt{x})}{\sqrt{x_n}+\sqrt{x}} \right|\\ 
 &= \frac{|(\sqrt{x_n})^2-(\sqrt{x})^2|}{\sqrt{x_n}+\sqrt{x}} = \frac{|x_n-x|}{\sqrt{x_n}+\sqrt{x}} \\ 
 &\leq \frac{|x_n-x|}{\sqrt{x}} <\frac{\varepsilon_2}{\sqrt{x}} = \frac{\varepsilon\sqrt{x}}{\sqrt{x}} = \varepsilon. 
 \end{align*}
@@ -480,7 +480,7 @@ Una cuenta de ahorro ofrece el primer año un tipo de interés $x_1=0.5\%$ y los
 
 :::{.callout-tip collapse="true"}
 ## Solución
-a. Veamos en primer lugar que la sucesión está acotada. De la definición resulta obvio que $x_n\geq 0$ $\forall n\in\mathbb{N}$ pues todos los términos son positivos. De esto se deduce que, $\frac{3}{x+x_n}\leq \frac{3}{2}$ $\forall n\in\mathbb{N}$. Así pues, $0\leq x_n\leq \frac{3}{2}$ $\forall n\in\mathbb{N}$.
+a. Veamos en primer lugar que la sucesión está acotada. De la definición resulta obvio que $x_n\geq 0$ $\forall n\in\mathbb{N}$ pues todos los términos son positivos. De esto se deduce que, $\frac{3}{2+x_n}\leq \frac{3}{2}$ $\forall n\in\mathbb{N}$. Así pues, $0\leq x_n\leq \frac{3}{2}$ $\forall n\in\mathbb{N}$.
 
     Veamos ahora que la subsucesión de los términos impares $(y_n)_{n=1}^\infty = (x_{2n-1})_{n=1}^\infty$ converge. Para ello veremos que es creciente por inducción. $y_1=0.5<y_2=0.9375$. Supongamos que $y_{n-1}<y_n$. Entonces,
 

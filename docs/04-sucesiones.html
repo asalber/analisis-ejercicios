@@ -212,6 +212,12 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Funciones vectoriales</span></span></a>
   </div>
 </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./11-derivadas-funciones-varias-variables.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Funciones de varias variables</span></span></a>
+  </div>
+</li>
     </ul>
     </div>
 </nav>
@@ -566,7 +572,7 @@ Solución
 <p>Luego <span class="math inline">\(\lim_{n\to\infty}\sqrt{x_n}=\sqrt{0}\)</span>.</p>
 <p>Supongamos ahora que <span class="math inline">\(x&gt;0\)</span> y <span class="math inline">\(\lim_{n\to\infty}x_n=x\)</span>. Dado <span class="math inline">\(\varepsilon&gt;0\)</span> sea <span class="math inline">\(\varepsilon_2=\varepsilon\sqrt{x}&gt;0\)</span>, entonces existe <span class="math inline">\(k\in\mathbb{N}\)</span> tal que <span class="math inline">\(|x_n-x|&lt;\varepsilon_2\)</span> <span class="math inline">\(\forall n\geq k\)</span>, pero entonces, también se cumple que</p>
 <p><span class="math display">\[\begin{align*}
-|\sqrt{x_n}-\sqrt{x}| &amp;= \frac{|(\sqrt{x_n}-\sqrt{x})(\sqrt{x_n}+\sqrt{x})}{\sqrt{x_n}+\sqrt{x}} \\
+|\sqrt{x_n}-\sqrt{x}| &amp;= \left|\frac{(\sqrt{x_n}-\sqrt{x})(\sqrt{x_n}+\sqrt{x})}{\sqrt{x_n}+\sqrt{x}} \right|\\
 &amp;= \frac{|(\sqrt{x_n})^2-(\sqrt{x})^2|}{\sqrt{x_n}+\sqrt{x}} = \frac{|x_n-x|}{\sqrt{x_n}+\sqrt{x}} \\
 &amp;\leq \frac{|x_n-x|}{\sqrt{x}} &lt;\frac{\varepsilon_2}{\sqrt{x}} = \frac{\varepsilon\sqrt{x}}{\sqrt{x}} = \varepsilon.
 \end{align*}\]</span></p>
@@ -817,7 +823,7 @@ Solución
 <div id="callout-18" class="callout-18-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ol type="a">
-<li><p>Veamos en primer lugar que la sucesión está acotada. De la definición resulta obvio que <span class="math inline">\(x_n\geq 0\)</span> <span class="math inline">\(\forall n\in\mathbb{N}\)</span> pues todos los términos son positivos. De esto se deduce que, <span class="math inline">\(\frac{3}{x+x_n}\leq \frac{3}{2}\)</span> <span class="math inline">\(\forall n\in\mathbb{N}\)</span>. Así pues, <span class="math inline">\(0\leq x_n\leq \frac{3}{2}\)</span> <span class="math inline">\(\forall n\in\mathbb{N}\)</span>.</p>
+<li><p>Veamos en primer lugar que la sucesión está acotada. De la definición resulta obvio que <span class="math inline">\(x_n\geq 0\)</span> <span class="math inline">\(\forall n\in\mathbb{N}\)</span> pues todos los términos son positivos. De esto se deduce que, <span class="math inline">\(\frac{3}{2+x_n}\leq \frac{3}{2}\)</span> <span class="math inline">\(\forall n\in\mathbb{N}\)</span>. Así pues, <span class="math inline">\(0\leq x_n\leq \frac{3}{2}\)</span> <span class="math inline">\(\forall n\in\mathbb{N}\)</span>.</p>
 <p>Veamos ahora que la subsucesión de los términos impares <span class="math inline">\((y_n)_{n=1}^\infty = (x_{2n-1})_{n=1}^\infty\)</span> converge. Para ello veremos que es creciente por inducción. <span class="math inline">\(y_1=0.5&lt;y_2=0.9375\)</span>. Supongamos que <span class="math inline">\(y_{n-1}&lt;y_n\)</span>. Entonces,</p>
 <p><span class="math display">\[\begin{align*}
 y_{n+1} &amp;= x_{2(n+1)-1} = x_{2n+1} = \frac{3}{2+x_{2n}} \\

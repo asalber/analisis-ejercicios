@@ -1,0 +1,571 @@
+---
+title: Funciones de varias variables
+lang: es
+execute: 
+  cache: true
+  freeze: auto
+  daemon: 3600
+---
+
+:::{#exr-curvas-nivel}
+Emparejar las siguientes funciones de dos variables con sus curvas de nivel.
+
+```{julia}
+#| echo: false
+using CairoMakie
+myblue = RGBf(0.067,0.529,0.871)
+f(x,y) = 3x^2 + y^2
+xs = ys = range(-2, 2; length=100)
+fig = Figure()
+ax1 = Axis(fig[1,1], aspect = 1)
+contour!(ax1, xs, ys, f.(xs, ys'), labels = true, levels = 0:1:10)
+g(x,y) = x * y
+xs = ys = range(-4, 4; length=100)
+ax2 = Axis(fig[1,2], xticks = -4:1:4, yticks = -4:1:4, aspect = 1)
+contour!(ax2, xs, ys, g.(xs, ys'), labels = true, levels = 0:1:10)
+h(x,y) = cos(x)sin(y)
+xs = ys = range(-pi, pi; length=100)
+ax3 = Axis(fig[2,1], aspect = 1)
+contour!(ax3, xs, ys, h.(xs, ys'), labels = true, levels = -1:0.2:1)
+i(x,y) = 2x+y
+xs = ys = range(-2, 2; length=100)
+ax4 = Axis(fig[2,2], aspect = 1)
+contour!(ax4, xs, ys, i.(xs, ys'), labels = true, levels = -5:1:5)
+Label(fig[1, 1, Top()], "A", padding = (0, 0, 5, 0))
+Label(fig[1, 2, Top()], "B", padding = (0, 0, 5, 0))
+Label(fig[2, 1, Top()], "C", padding = (0, 0, 5, 0))
+Label(fig[2, 2, Top()], "D", padding = (0, 0, 5, 0))
+fig
+```
+
+a. $f(x,y) = \cos(x)\operatorname{sen}(y)$
+
+a. $g(x,y) = xy$
+
+a. $h(x,y) = 2x+y$
+
+a. $i(x,y) = 3x^2 + y^2$
+:::
+
+:::{.callout-tip collapse="true"}
+## Solución
+La gráfica A corresponde a $i(x,y)$.  
+La gráfica B corresponde a $g(x,y)$.  
+La gráfica C corresponde a $f(x,y)$.  
+La gráfica D corresponde a $h(x,y)$.  
+:::
+
+:::{#exr-co2-planta}
+La asimilación de CO$_2$ de una planta depende de la temperatura ambiente (t) y de la intensidad de la luz (l), según la función
+
+$$
+f(t,l) = ctl^2,
+$$
+
+donde $c$ es una constante.
+
+Estudiar cómo evoluciona la asimilación de CO$_2$ para distintas intensidades de luz, cuando se mantiene la temperatura constante.
+Estudiar también cómo evoluciona para distintas temperaturas cuando se mantiene la intensidad de la luz constante.
+:::
+
+:::{.callout-tip collapse="true"}
+## Solución
+$\frac{\partial f}{\partial l}(t,l) = 2ctl$ y $\frac{\partial f}{\partial t}(t,l) = cl^2$.
+:::
+
+:::{#exr-gradiente-1}
+Calcular el gradiente de la función
+
+$$
+f(x,y,z)=\log \frac{\sqrt{x}}{yz}+\operatorname{arcsen}(xz). 
+$$
+:::
+
+:::{.callout-tip collapse="true"}
+## Solución
+$$
+\nabla f(x,y,z) = \left(\frac{z}{\sqrt{1-x^2z^2}}+\frac{1}{2x} ,\frac{-1}{y} , \frac{x}{\sqrt{1-x^2\,z^2}}-\frac{1}{z} \right) 
+$$ 
+:::
+
+:::{#exr-nave-espacial}
+Una nave espacial está en problemas cerca del sol.
+Se encuentra en la posición $(1,1,1)$ y la temperatura de la nave cuando está en la posición $(x,y,z)$ viene dada por
+$T(x,y,z)=e^{-x^2-2y^2-3z^2}$ donde $x,y,z$ se miden en metros.
+¿En qué dirección debe moverse la nave para que la temperatura decrezca lo más rápidamente posible?
+:::
+
+:::{.callout-tip collapse="true"}
+## Solución
+Debe moverse en la dirección $-\nabla f(1,1,1)=e^{-6}(2,4,6)$.
+
+:::
+
+
+:::{#exr-pantano}
+Supongamos que la cantidad de agua almacenada en un pantano al final del año hidrológico, $A$ en hectómetros cúbicos, viene dada por la función
+
+$$
+A(p,t,c) = \sqrt {\frac{{p^3 }}{{t - 1}} - c^2 e^{cpt}}
+$$
+
+donde $p$ es la precipitación en litros/m$^2$ caí­da durante el año hidrológico, $t$ es la temperatura media del año hidrológico en ºC y $c$ el consumo debido a abastecimiento de poblaciones cercanas y riego, en hectómetros cúbicos.
+
+a. Calcular el gradiente de la cantidad de agua almacenada.
+
+a. Suponiendo que hubiese algún año en el que el consumo fuese nulo, ¿qué condición tendría­ que cumplir la temperatura para que la derivada del agua almacenada con respecto a la temperatura fuese igual a la derivada con respecto a la precipitación?
+:::
+
+:::{.callout-tip collapse="true"}
+## Solución
+
+:::
+
+:::{#exr-normal-bidimensional}
+La variable aleatoria bidimensional $(X,Y)$ con función de densidad
+
+$$
+f(x,y) = \frac{1}{\sqrt{2\pi}\, \sigma_x\sigma_y} e^{-\frac{1}{2}\left(\frac{(x-\mu_x)^2}{\sigma_x^2}+\frac{(y-\mu_y)^2}{\sigma_y^2}\right)}
+$$
+
+se conoce como normal bidimensional con $X$ e $Y$ independientes, de parámetros $\mathbf{\mu}=(\mu_x,\mu_y)$ y $\mathbf{\sigma}=(\sigma_x,\sigma_y)$.
+
+Calcular el gradiente de $f$ e interpretarlo. ¿En qué punto se anula el gradiente? ¿Qué conclusiones sacas? ¿Cuál es la tasa de crecimiento de $f$ cuando $x\rightarrow \infty$?
+:::
+
+:::{.callout-tip collapse="true"}
+## Solución
+$$
+\nabla f(x,y) = -\frac{1}{\sqrt{2\pi}\, \sigma_x\sigma_y} e^{-\frac{1}{2}\left(\frac{(x-\mu_x)^2}{\sigma_x^2}+\frac{(y-\mu_y)^2}{\sigma_y^2}\right)} \left(\frac{x-\mu_x}{\sigma_x^2}, \frac{y-\mu_y}{\sigma_y^2}\right).
+$$
+
+El gradiente se anula en $(x=\mu_x, y=\mu_y)$ y $\lim_{x\rightarrow \infty}f(x,y) = 0$.
+:::
+
+:::{#exr-ecuacion-laplace}
+La ecuación diferencial parcial
+
+$$
+\frac{\partial^2 u}{\partial x^2} + \frac{\partial^2 u}{\partial y^2} + \frac{\partial^2 u}{\partial z^2} = 0,
+$$
+
+se conoce como ecuación de Laplace y se aplica a multitud de fenómenos relacionadas con la conducción de calor, el flujo de fluidos o el potencial eléctrico.
+
+a. Comprobar que la función $u(x,y,z)=\dfrac{1}{\sqrt{x^2 + y^2 + z^2}}$ satisface la ecuación de Laplace.
+
+a. ¿Existe algún punto en el que el crecimiento de la función sea nulo?
+
+a. Si fijamos $z=1$, calcular $\frac{\partial^4u}{\partial x^2\partial y^2}$.
+:::
+
+:::{.callout-tip collapse="true"}
+## Solución
+a.  Para comprobar que $u(x,y,z)$ satisface la ecuación de Laplace
+calculamos las tres derivadas parciales segundas que intervienen en
+la ecuación. Comenzando con las derivadas parciales con respecto a
+la variable $x$, obtenemos:
+
+$$
+u(x,y,z) = \frac{1}{{\sqrt {x^2  + y^2  + z^2 } }} = \left( {x^2  +
+y^2  + z^2 } \right)^{ - 1/2}
+$$
+
+$$
+\frac{{\partial u}}{{\partial x}} =  - \frac{1}{2}\left( {x^2  + y^2
++ z^2 } \right)^{ - 3/2} 2x =  - x\left( {x^2  + y^2  + z^2 }
+\right)^{ - 3/2}
+$$
+
+$$
+\frac{{\partial ^2 u}}{{\partial x^2 }} = \frac{\partial }{{\partial
+x}}\left( { - x\left( {x^2  + y^2  + z^2 } \right)^{ - 3/2} }
+\right) =  - \left( {x^2  + y^2  + z^2 } \right)^{ - 3/2}  + 3x^2
+\left( {x^2  + y^2  + z^2 } \right)^{ - 5/2}
+$$
+
+e igualmente para las variables $y$ y $z$, tenemos:
+
+$$
+\frac{{\partial u}}{{\partial y}} =  - y\left( {x^2  + y^2  + z^2 }
+\right)^{ - 3/2}
+$$
+
+$$
+\frac{{\partial ^2 u}}{{\partial y^2 }} =  - \left( {x^2  + y^2  +
+z^2 } \right)^{ - 3/2}  + 3y^2 \left( {x^2  + y^2  + z^2 } \right)^{
+- 5/2}
+$$
+
+$$
+\frac{{\partial u}}{{\partial z}} =  - z\left( {x^2  + y^2  + z^2 }
+\right)^{ - 3/2}
+$$
+
+$$
+\frac{{\partial ^2 u}}{{\partial z^2 }} =  - \left( {x^2  + y^2  +
+z^2 } \right)^{ - 3/2}  + 3z^2 \left( {x^2  + y^2  + z^2 } \right)^{
+- 5/2}
+$$
+
+Por lo tanto:
+$$
+\frac{{\partial ^2 u}}{{\partial x^2 }} + \frac{{\partial ^2
+u}}{{\partial y^2 }} + \frac{{\partial ^2 u}}{{\partial z^2 }} =  -
+3\left( {x^2  + y^2  + z^2 } \right)^{ - 3/2}  + 3\left( {x^2  + y^2
++ z^2 } \right)\left( {x^2  + y^2  + z^2 } \right)^{ - 5/2}  =
+$$
+
+$$
+=- 3\left( {x^2  + y^2  + z^2 } \right)^{ - 3/2}  + 3\left( {x^2  +
+y^2 + z^2 } \right)^{ - 3/2}  = 0
+$$
+
+a.  Una condición necesaria para que el crecimiento de una función de varias variables en un punto sea nulo es que el gradiente en dicho punto se anule, y el gradiente se anula si se anulan sus tres
+componentes:
+
+$$
+\vec \nabla u = \vec 0 \Leftrightarrow \left( {\frac{{\partial
+u}}{{\partial x}},\frac{{\partial u}}{{\partial y}},\frac{{\partial
+u}}{{\partial z}}} \right) = \left( {0,0,0} \right)
+$$
+
+Por lo tanto, tenemos un sistema no lineal de tres ecuaciones con
+tres incógnitas:
+
+$$
+ - x\left( {x^2  + y^2  + z^2 } \right)^{ - 3/2}  = 0
+$$
+
+$$
+ - y\left( {x^2  + y^2  + z^2 } \right)^{ - 3/2}  = 0
+$$
+
+$$
+ - z\left( {x^2  + y^2  + z^2 } \right)^{ - 3/2}  = 0
+$$
+
+Y teniendo en cuenta que el término $(x^2+y^2+z^2)$, por tratarse de
+una suma de cuadrados, únicamente puede ser 0 si $x=y=z=0$; y a
+igual conclusión llegamos si suponemos que es distinto de 0, ya que
+entonces la primera ecuación implica que necesariamente $x=0$, la
+segunda implica que $y=0$, y la tercera implica que $z=0$. Por lo
+tanto, concluimos que el único punto en el que el crecimiento puede
+ser nulo es $(x,y,z)=(0,0,0)$, pero dicho punto no pertenece al
+dominio de definición de la función (tendríamos un cero como
+denominador de una fracción), por lo que no hay ningún punto en el
+que la función presente un crecimiento nulo.
+
+a. Suponiendo $z=1$, la función resultante presenta únicamente
+dos variables:
+
+$$
+u(x,y,1) = \frac{1}{{\sqrt {x^2  + y^2  + 1} }} = \left( {x^2  + y^2
++ 1} \right)^{ - 1/2}
+$$
+
+La derivada propuesta es:
+
+$$
+\frac{{\partial ^4 u}}{{\partial x^2 \partial y^2 }} =
+\frac{\partial }{{\partial x}}\left( {\frac{\partial }{{\partial
+x}}\left( {\frac{\partial }{{\partial y}}\left( {\frac{{\partial
+u}}{{\partial y}}} \right)} \right)} \right)
+$$
+
+en donde, como ya sabemos, se puede cambiar el orden de derivación
+sin que afecte al resultado final, aunque nunca el número total de
+derivadas con respecto a cada variable.
+
+Operando como ya hicimos en los cálculos previos de las derivadas
+segundas, obtenemos:
+
+$$
+\frac{{\partial u}}{{\partial y}} =  - y\left( {x^2  + y^2  + 1}
+\right)^{ - 3/2}
+$$
+
+$$
+\frac{\partial }{{\partial y}}\left( {\frac{{\partial u}}{{\partial
+y}}} \right) = \frac{{\partial ^2 u}}{{\partial y^2 }} =  - \left(
+{x^2  + y^2  + 1} \right)^{ - 3/2}  + 3y^2 \left( {x^2  + y^2  + 1}
+\right)^{ - 5/2}
+$$
+
+$$
+\frac{\partial }{{\partial x}}\left( {\frac{{\partial ^2
+u}}{{\partial y^2 }}} \right) = \frac{{\partial ^3 u}}{{\partial
+x\partial y^2 }} = 3x\left( {x^2  + y^2  + 1} \right)^{ - 5/2}  -
+15y^2 x\left( {x^2  + y^2  + 1} \right)^{ - 7/2}
+$$
+
+$$
+\frac{\partial }{{\partial x}}\left( {\frac{{\partial ^3
+u}}{{\partial x\partial y^2 }}} \right) = \frac{{\partial ^4
+u}}{{\partial x^2 \partial y^2 }} =
+$$
+
+$$
+=3\left( {x^2  + y^2  + 1} \right)^{ - 5/2}  - 15\left( {x^2  + y^2
+} \right)\left( {x^2  + y^2 + 1} \right)^{ - 7/2}  + 105x^2 y\left(
+{x^2  + y^2  + 1} \right)^{ - 9/2}
+$$
+:::
+
+:::{#exr-polea}
+Tenemos dos objetos de masas $m_1$ y $m_2$ unidas por una cuerda que pasa a través de una polea como la de la siguiente figura.
+
+:::{.content-visible when-format="html"}
+![Polea](img/derivadas-funciones-varias-variables/polea.png)
+:::
+
+:::{.content-visible unless-format="html"}
+![Polea](img/derivadas-funciones-varias-variables/polea.pdf)
+:::
+
+Si $m_1\geq m_2$, la aceleración de $m_1$ viene dada por la ecuación
+
+$$
+a=\frac{m_1-m_2}{m_1+m_2}g,
+$$
+
+siendo $g$ la aceleración de la gravedad.
+
+Demostrar que se cumple la ecuación
+
+$$
+m_1\frac{\partial a}{\partial m_1}+m_2\frac{\partial a}{\partial m_2}=0.
+$$
+:::
+
+:::{.callout-tip collapse="true"}
+## Solución
+$\dfrac{\partial a}{\partial m_1} = \dfrac{2gm_2}{(m_1+m_2)^2}$ y $\dfrac{\partial a}{\partial m_2} = \dfrac{-2gm_1}{(m_1+m_2)^2}$.
+:::
+
+:::{#exr-potencial-electrico}
+La relación que modeliza el potencial eléctrico $V$ de un punto del plano en función de su distancia, es $V=\log D$, donde $D=\sqrt{x^2+y^2}$.
+
+a. Calcular el gradiente de $V$.
+
+a. Hallar la dirección de máxima variación del potencial eléctrico en el punto $(x,y)=(\sqrt{3},\sqrt{3})$.
+
+a. Calcular la matriz Hessiana y el Hessiano de $V$ en el punto anterior.
+
+a. Si nos movemos a lo largo de la curva $y=x+1$, cuál será el mínimo potencial alcanzado?
+:::
+
+:::{.callout-tip collapse="true"}
+## Solución
+a. $\nabla V(x,y) = \left( \frac{x}{x^2+y^2},\frac{y}{x^2+y^2}\right)$.
+\item $\nabla V(\sqrt 3, \sqrt 3) = \sqrt 3 /6(1,1)$.
+
+a.  
+
+    $$
+    HV(x,y) = \left(
+    \begin{array}{cc}
+    \frac{y^2-x^2}{y^4+2x^2y^2+x^4} & \frac{-2xy}{y^4+2x^2y^2+x^4} \\
+    \frac{-2xy}{y^4+2x^2y^2+x^4} & \frac{x^2-y^2}{y^4+2x^2y^2+x^4}
+    \end{array}
+    \right),\quad
+    \left(
+    \begin{array}{cc}
+    0 & -1/6 \\
+    -1/6 & 0
+    \end{array}
+    \right),\quad \mbox{y }
+    |H(\sqrt 3,\sqrt 3)| = -1/36.
+    $$
+
+a.  El potencial máximo se alcanza en $(x=-1/2, y=1/2)$ y vale $V(-1/2,1/2) = -\dfrac{\log 2}{2}$.
+:::
+
+:::{#exr-ameba}
+La Quimiotaxis es el movimiento de los organismos dirigido por un gradiente de concentración, es decir, en la dirección
+en la que la concentración aumenta con más rapidez. El moho del cieno Dictyoselium discoideum muestra este comportamiento. En esta caso, las amebas unicelulares de esta especie se mueven según el gradiente de concentración de una sustancia química denominada adenosina monofosfato (AMP cíclico). Si suponemos que la expresión que da la concentración de AMP cíclico en un punto de coordenadas $(x,y,z)$ es:
+
+$$
+C(x,y,z) = \frac{4} {{\sqrt {x^2  + y^2  + z^4  + 1} }}
+$$
+
+y se sitúa una ameba de moho del cieno en el punto $(-1,0,1)$, ¿en qué dirección se moverá la ameba?
+:::
+
+:::{.callout-tip collapse="true"}
+## Solución
+$(4/\sqrt{27}, 0, -8/\sqrt{27})$.
+:::
+
+:::{#exr-}
+Se han diseñado unas cápsulas con forma piramidal con base un rectángulo de lados a=3 cm, b=4 cm, y altura h=6 cm.
+
+a. ¿Cómo deben cambiar las dimensiones de la cápsula para que el volumen aumente lo más rápidamente posible? ¿Cuál sería la tasa de variación del volumen si cambian las dimensiones de la cápsula en la proporciones anteriores?
+
+a. Si se empiezan a cambiar las dimensiones de la cápsula de manera que el lado mayor del rectángulo disminuye la mitad de lo que aumenta el lado menor, y la altura aumenta el doble de lo que aumenta el lado menor, ¿cuál sería la tasa de variación del volumen de la cápsula en las condiciones anteriores?
+:::
+
+:::{.callout-tip collapse="true"}
+## Solución
+a. $\nabla V(3,4,6)=(8,6,4)$ y el volumen aumentará $|\nabla V(3,4,6)|=10.7703$ cm$^3$/s si cambiamos las dimensiones de la cápsula siguiendo esta dirección.
+
+a. Derivada direccional de $V$ en $(3,4,6)$ siguiendo la dirección del vector $\mathbf{u}=(1,-1/2,2)$: $V'_\mathbf{u}(3,4,6)=5.6737$ cm$^3$/s.
+:::
+
+:::{#exr-barra-metal}
+Una barra de metal de un metro de largo se calienta de manera irregular y de forma tal que a $x$ metros de su extremo izquierdo y en el instante $t$ minutos, su temperatura en grados centígrados esta dada por $H(x,t) = 100e^{-0.1t}\operatorname{sen}(\pi xt)$ con $0\leq x \leq 1$.
+
+a. Calcular $\dfrac{\partial H}{\partial x}(0.2, 1)$ y $\dfrac{\partial H}{\partial x}(0.8, 1).$ ¿Cuál es la interpretación práctica (en términos de temperatura) de estas derivadas parciales? Explicar por qué cada una tiene el signo que tiene.
+
+a. Calcular la matriz hessiana de $H$.
+:::
+
+:::{.callout-tip collapse="true"}
+## Solución
+a.  La derivada parcial de $H$ con respecto a $x$ es
+
+    \begin{align*}
+    \frac{\partial H}{\partial x}(x,t) &= 100e^{-0.1t}\cos(\pi xt) \pi t \\
+    \end{align*}
+
+    y en los puntos que nos piden vale
+
+    \begin{align*}
+    \frac{\partial H}{\partial x}(0.2,\, 1) &= 100e^{-0.1}\cos(0.2\pi) \pi =
+    229.9736\\
+    \frac{\partial H}{\partial x}(0.8,\, 1) &= 100e^{-0.1}\cos(0.8\pi) \pi =
+    -229.9736
+    \end{align*}
+
+    La derivada parcial $\dfrac{\partial H}{\partial x}(x_0,t_0)$ indica la variación instantánea que experimenta la temperatura con respecto a la variación de la distancia al extremo izquierdo en el punto. El signo de la derivada parcial indica si la variación de la temperatura es creciente (aumenta la temperatura) o decreciente (disminuye). Así en el punto $(0.2,\, 1)$ la temperatura aumentará a razón de $229.9736$ grados centígrados por cada metro que nos alejemos del extremo izquierdo de la barra de metal, mientras que en el $(0.8,\,1)$ la temperatura disminuirá a razón de $229.9736$ grados centígrados por cada metro que nos alejemos del extremo izquierdo de la barra de metal.
+
+a.  Para calcular la matriz Hessiana necesitamos las derivadas parciales de
+segundo orden:
+
+    \begin{align*}
+    \frac{\partial H}{\partial t} (x,t) &= 100\left(\frac{\partial}{\partial x} e^{-0.1 t} \operatorname{sen} (\pi xt) + e^{-0.1t}\frac{\partial}{\partial x}\operatorname{sen}(\pi xt)\right)=\\
+    &= 100\left(-0.1e^{-0.1t}\operatorname{sen}(\pi xt) +e^{-0.1t}\cos(\pi xt)\pi x\right) =\\
+    &= 100 e^{-0.1t}\left(-0.1 \operatorname{sen}(\pi xt) + \pi x \cos(\pi xt)\right),\\
+    \frac{\partial^2 H}{\partial x^2}(x,t) &= \frac{\partial}{\partial x}\left(100e^{-0.1t}\pi t\cos(\pi xt) \right) = 100e^{-0.1t}\pi t(-\operatorname{sen}(\pi xt) \pi t) =\\
+    &= -100e^{-0.1t}\pi^2 t^2\operatorname{sen}(\pi xt),\\
+    \frac{\partial^2 H}{\partial t\partial x}(x,t) &= \frac{\partial}{\partial t}\left(100e^{-0.1t}\pi t\cos(\pi xt) \right) =\\
+    &= 100\left(\frac{\partial}{\partial t}e^{-0.1t}\pi t\cos(\pi xt) + e^{-0.1t}\left(\frac{\partial}{\partial t}(\pi t)\cos(\pi xt) + \pi t \frac{\partial}{\partial t}\cos(\pi xt)\right) \right) =\\
+    &= 100\left(-0.1e^{-0.1t}\pi t\cos(\pi xt) + e^{-0.1t}\left(\pi \cos(\pi xt) - \pi t \operatorname{sen}(\pi xt)\pi x\right) \right) =\\
+    &= 100e^{-0.1t}\left(-0.1\pi t\cos(\pi xt)+\pi \cos(\pi xt) - \pi^2 xt \operatorname{sen}(\pi xt)\right) = \\
+    &= 100e^{-0.1t}\left((-0.1\pi t+\pi)\cos(\pi xt) - \pi^2 xt \operatorname{sen}(\pi xt)\right),\\
+    \end{align*}
+
+    \begin{align*}
+    \frac{\partial^2 H}{\partial x\partial t}(x,t) &= \frac{\partial^2 H}{\partial t\partial x}(x,t) \quad (\mbox{igualdad de las derivadas cruzadas por el teorema de Schwartz})\\
+    \frac{\partial^2 H}{\partial t^2}(x,t) &= \frac{\partial}{\partial t} \left(100 e^{-0.1t}\left(-0.1 \operatorname{sen}(\pi xt) + \pi x \cos(\pi xt)\right)\right)  =\\
+    &= 100\left(\frac{\partial}{\partial t} e^{-0.1t}\left(-0.1 \operatorname{sen}(\pi xt) + \pi x \cos(\pi xt)\right) +\right.\\
+    &\left. \qquad + e^{0.1t}\left(\frac{\partial}{\partial t}\left(-0.1\operatorname{sen}(\pi xt)\right) + \frac{\partial}{\partial t}\left(\pi x \cos(\pi xt)\right)\right)\right) =\\
+    &= 100\left(-0.1 e^{-0.1t}\left(-0.1 \operatorname{sen}(\pi xt) + \pi x \cos(\pi xt)\right)\right. +\\
+    &\left. \qquad + e^{0.1t}\left(-0.1\cos(\pi xt)\pi x - \pi x \cos(\pi xt)\pi x\right)\right) =\\
+    &= 100e^{-0.1t}\left(0.01\operatorname{sen}(\pi xt) -0.1 \pi x \cos(\pi xt) -0.1\pi x\cos(\pi xt) - \pi^2 x^2 \cos(\pi xt)\right) = \\
+    &= 100e^{-0.1t}\left(0.01\operatorname{sen}(\pi xt) -(0.2+\pi^2x^2) \cos(\pi xt)\right).
+    \end{align*}
+
+    Así pues, la matriz Hessiana es
+    $$
+    \left(
+    \begin{array}{cc}
+    -100e^{-0.1t}\pi^2 t^2\operatorname{sen}(\pi xt) & 100e^{-0.1t}\left((-0.1\pi t+\pi)\cos(\pi xt) - \pi^2 xt \operatorname{sen}(\pi xt)\right) \\
+    100e^{-0.1t}\left((-0.1\pi t+\pi)\cos(\pi xt) - \pi^2 xt \operatorname{sen}(\pi xt)\right) & 100e^{-0.1t}\left(0.01\operatorname{sen}(\pi xt) -(0.2+\pi^2x^2) \cos(\pi xt)\right)
+    \end{array}
+    \right)
+    $$
+:::
+
+
+:::{#exr-derivada-direccional-nula}
+¿En qué direcciones se anulará la derivada direccional de la función
+
+$$
+f(x,y)=\frac{x^2-y^2}{x^2+y^2}
+$$
+
+en el punto $P=(1,1)$?
+:::
+
+:::{.callout-tip collapse="true"}
+## Solución
+En la dirección $(1/\sqrt{2},1/\sqrt{2})$.
+:::
+
+:::{#exr-derivada-direccional}
+¿Existe alguna dirección en la que la derivada direccional en el punto $P=(1,2)$ de la función $f(x,y) = x^2-3xy+4y^2$ valga 14?
+:::
+
+:::{.callout-tip collapse="true"}
+## Solución
+No.
+:::
+
+:::{#exr-derivada-direccional-2}
+La derivada direccional de una función $f$ en un punto $P$ es máxima en la dirección del vector $(1,1,-1)$ y su valor es $2\sqrt{3}$.
+¿Cuánto vale la derivada direccional de $f$ en $P$ en la dirección del vector $(1,1,0)$?
+:::
+
+:::{.callout-tip collapse="true"}
+## Solución
+$2\sqrt{2}$.
+:::
+
+:::{#exr-derivada-direccional-3}
+Dado el campo escalar
+
+$$
+f(x,y,z) = x^2-y^2+xyz^3-zx,
+$$
+
+a. Calcular la derivada direccional de $f$ en $(1,2,3)$ a lo largo del vector unitario $\mathbf{u}=\frac{1}{\sqrt2}(1,-1,0)$.
+
+a. ¿En qué dirección es máxima la derivada direccional de $f$ en el punto anterior? Obtener el valor de dicha derivada direccional.
+:::
+
+:::{.callout-tip collapse="true"}
+## Solución
+a. $15\sqrt{2}$.
+
+a. La derivada direccional es máxima en la dirección del gradiente $(53,23,53)$ y vale $\sqrt{6147}$.
+:::
+
+:::{#exr-ajuste-minimos-cuadrados}
+En el ajuste de regresión de una recta $y=a+bx$, se suele utilizar la técnica de mínimos cuadrados que consisten en buscar los valores de $a$ y $b$ que hacen mínima la función
+
+$$
+f(a,b)= \sum_{i=1}^{n}(y_i-a-bx_i)^2,
+$$
+
+donde el sumatorio abarca a todos los pares de la muestra $(x_i,y_i)$ para $i=1,\ldots, n$, siendo $n$ el tamaño de la muestra.
+
+Demostrar que esta función alcanza el mínimo en el punto
+
+$$
+a=\bar y-b\bar x \quad \mbox{ y } b=\frac{s_{xy}}{s_x^2}.
+$$
+:::
+
+:::{.callout-tip collapse="true"}
+## Solución
+
+:::
+
+:::{#exr-recta-normal-plano-tangente-superficie}
+Obtener la ecuación del plano tangente y de la recta normal a la superficie de ecuación $xyz=8$ en el punto $(4,-2,-1)$.
+:::
+
+:::{.callout-tip collapse="true"}
+## Solución
+Recta normal $l:(4+2t,-2-4t,-1-8t)$.  
+Plano tangente $\pi: 2x-4y-8z+24=0$.
+:::
+
+:::{#exr-}
+
+:::
+
+:::{.callout-tip collapse="true"}
+## Solución
+
+:::

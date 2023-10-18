@@ -55,7 +55,7 @@ a. $\mathbf{g}(t) = \left(\frac{t}{2}+2, 2t-1, t+1\right)$
 
 a. $\mathbf{h}(t) = (\cos(2t), \operatorname{sen}(t), \cos(t))$
 
-a. $\mathbf{i}(t) = (t\cos(t), t, t\operatorname{sen}(t), t/4)$
+a. $\mathbf{i}(t) = (t\cos(t), t, t\operatorname{sen}(t))$
 :::
 
 :::{.callout-tip collapse="true"}

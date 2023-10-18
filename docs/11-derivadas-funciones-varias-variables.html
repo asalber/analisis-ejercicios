@@ -1,0 +1,1252 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.450">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Problemas de Análisis Matemático - 10&nbsp; Funciones de varias variables</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./10-funciones-vectoriales.html" rel="prev">
+<link href="./img/logos/favicon.ico" rel="icon">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "Sin resultados",
+    "search-matching-documents-text": "documentos encontrados",
+    "search-copy-link-title": "Copiar el enlace en la búsqueda",
+    "search-hide-matches-text": "Ocultar resultados adicionales",
+    "search-more-match-text": "resultado adicional en este documento",
+    "search-more-matches-text": "resultados adicionales en este documento",
+    "search-clear-button-title": "Borrar",
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Buscar"
+  }
+}</script>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<meta property="og:title" content="Problemas de Análisis Matemático - 10&nbsp; Funciones de varias variables">
+<meta property="og:image" content="11-derivadas-funciones-varias-variables_files/figure-html/cell-2-output-1.svg">
+<meta property="og:site-name" content="Problemas de Análisis Matemático">
+<meta name="twitter:title" content="Problemas de Análisis Matemático - 10&nbsp; Funciones de varias variables">
+<meta name="twitter:image" content="11-derivadas-funciones-varias-variables_files/figure-html/cell-2-output-1.svg">
+<meta name="twitter:site" content="@aprendeconalf">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./11-derivadas-funciones-varias-variables.html"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Funciones de varias variables</span></a></li></ol></nav>
+      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+      </a>
+      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
+      <a href="./index.html" class="sidebar-logo-link">
+      <img src="./img/logos/aprendeconalf.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      </a>
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Problemas de Análisis Matemático</a> 
+        <div class="sidebar-tools-main tools-wide">
+    <a href="https://aprendeconalf.es" rel="" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-house-fill"></i></a>
+    <div class="dropdown">
+      <a href="" title="Download" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download"><i class="bi bi-download"></i></a>
+      <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-0">
+          <li>
+            <a class="dropdown-item sidebar-tools-main-item" href="./ejercicios-analisis.pdf">
+              <i class="bi bi-bi-file-pdf pe-1"></i>
+            Download PDF
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item sidebar-tools-main-item" href="./ejercicios-analisis.epub">
+              <i class="bi bi-bi-journal pe-1"></i>
+            Download ePub
+            </a>
+          </li>
+      </ul>
+    </div>
+    <div class="dropdown">
+      <a href="" title="Share" id="quarto-navigation-tool-dropdown-1" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Share"><i class="bi bi-share"></i></a>
+      <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-1">
+          <li>
+            <a class="dropdown-item sidebar-tools-main-item" href="https://twitter.com/intent/tweet?url=|url|">
+              <i class="bi bi-bi-twitter pe-1"></i>
+            Twitter
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item sidebar-tools-main-item" href="https://www.linkedin.com/sharing/share-offsite/?url=|url|">
+              <i class="bi bi-bi-linkedin pe-1"></i>
+            LinkedIn
+            </a>
+          </li>
+      </ul>
+    </div>
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Alternar modo oscuro"><i class="bi"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Buscar"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Prefacio</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./01-teoria-conjuntos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Teoría de conjuntos</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./02-numeros-reales.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Números reales</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./03-topologia.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Topología de los números reales</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./04-sucesiones.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Sucesiones de números reales</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./06-limites.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Límites de funciones</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./07-derivadas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Derivadas de funciones</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./08-series.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Series de números reales</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./09-integrales.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Integrales de funciones</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./10-funciones-vectoriales.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Funciones vectoriales</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./11-derivadas-funciones-varias-variables.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Funciones de varias variables</span></span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Funciones de varias variables</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<div id="exr-curvas-nivel" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 10.1 </strong></span>Emparejar las siguientes funciones de dos variables con sus curvas de nivel.</p>
+<div class="cell" data-execution_count="2">
+<div class="cell-output cell-output-display" data-execution_count="108">
+<p><img src="11-derivadas-funciones-varias-variables_files/figure-html/cell-2-output-1.svg" class="img-fluid"></p>
+</div>
+</div>
+<ol type="a">
+<li><p><span class="math inline">\(f(x,y) = \cos(x)\operatorname{sen}(y)\)</span></p></li>
+<li><p><span class="math inline">\(g(x,y) = xy\)</span></p></li>
+<li><p><span class="math inline">\(h(x,y) = 2x+y\)</span></p></li>
+<li><p><span class="math inline">\(i(x,y) = 3x^2 + y^2\)</span></p></li>
+</ol>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>La gráfica A corresponde a <span class="math inline">\(i(x,y)\)</span>.<br>
+La gráfica B corresponde a <span class="math inline">\(g(x,y)\)</span>.<br>
+La gráfica C corresponde a <span class="math inline">\(f(x,y)\)</span>.<br>
+La gráfica D corresponde a <span class="math inline">\(h(x,y)\)</span>.</p>
+</div>
+</div>
+</div>
+<div id="exr-co2-planta" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 10.2 </strong></span>La asimilación de CO<span class="math inline">\(_2\)</span> de una planta depende de la temperatura ambiente (t) y de la intensidad de la luz (l), según la función</p>
+<p><span class="math display">\[
+f(t,l) = ctl^2,
+\]</span></p>
+<p>donde <span class="math inline">\(c\)</span> es una constante.</p>
+<p>Estudiar cómo evoluciona la asimilación de CO<span class="math inline">\(_2\)</span> para distintas intensidades de luz, cuando se mantiene la temperatura constante. Estudiar también cómo evoluciona para distintas temperaturas cuando se mantiene la intensidad de la luz constante.</p>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><span class="math inline">\(\frac{\partial f}{\partial l}(t,l) = 2ctl\)</span> y <span class="math inline">\(\frac{\partial f}{\partial t}(t,l) = cl^2\)</span>.</p>
+</div>
+</div>
+</div>
+<div id="exr-gradiente-1" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 10.3 </strong></span>Calcular el gradiente de la función</p>
+<p><span class="math display">\[
+f(x,y,z)=\log \frac{\sqrt{x}}{yz}+\operatorname{arcsen}(xz).
+\]</span></p>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><span class="math display">\[
+\nabla f(x,y,z) = \left(\frac{z}{\sqrt{1-x^2z^2}}+\frac{1}{2x} ,\frac{-1}{y} , \frac{x}{\sqrt{1-x^2\,z^2}}-\frac{1}{z} \right)
+\]</span></p>
+</div>
+</div>
+</div>
+<div id="exr-nave-espacial" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 10.4 </strong></span>Una nave espacial está en problemas cerca del sol. Se encuentra en la posición <span class="math inline">\((1,1,1)\)</span> y la temperatura de la nave cuando está en la posición <span class="math inline">\((x,y,z)\)</span> viene dada por <span class="math inline">\(T(x,y,z)=e^{-x^2-2y^2-3z^2}\)</span> donde <span class="math inline">\(x,y,z\)</span> se miden en metros. ¿En qué dirección debe moverse la nave para que la temperatura decrezca lo más rápidamente posible?</p>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Debe moverse en la dirección <span class="math inline">\(-\nabla f(1,1,1)=e^{-6}(2,4,6)\)</span>.</p>
+</div>
+</div>
+</div>
+<div id="exr-pantano" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 10.5 </strong></span>Supongamos que la cantidad de agua almacenada en un pantano al final del año hidrológico, <span class="math inline">\(A\)</span> en hectómetros cúbicos, viene dada por la función</p>
+<p><span class="math display">\[
+A(p,t,c) = \sqrt {\frac{{p^3 }}{{t - 1}} - c^2 e^{cpt}}
+\]</span></p>
+<p>donde <span class="math inline">\(p\)</span> es la precipitación en litros/m<span class="math inline">\(^2\)</span> caí­da durante el año hidrológico, <span class="math inline">\(t\)</span> es la temperatura media del año hidrológico en ºC y <span class="math inline">\(c\)</span> el consumo debido a abastecimiento de poblaciones cercanas y riego, en hectómetros cúbicos.</p>
+<ol type="a">
+<li><p>Calcular el gradiente de la cantidad de agua almacenada.</p></li>
+<li><p>Suponiendo que hubiese algún año en el que el consumo fuese nulo, ¿qué condición tendría­ que cumplir la temperatura para que la derivada del agua almacenada con respecto a la temperatura fuese igual a la derivada con respecto a la precipitación?</p></li>
+</ol>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+
+</div>
+</div>
+</div>
+<div id="exr-normal-bidimensional" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 10.6 </strong></span>La variable aleatoria bidimensional <span class="math inline">\((X,Y)\)</span> con función de densidad</p>
+<p><span class="math display">\[
+f(x,y) = \frac{1}{\sqrt{2\pi}\, \sigma_x\sigma_y} e^{-\frac{1}{2}\left(\frac{(x-\mu_x)^2}{\sigma_x^2}+\frac{(y-\mu_y)^2}{\sigma_y^2}\right)}
+\]</span></p>
+<p>se conoce como normal bidimensional con <span class="math inline">\(X\)</span> e <span class="math inline">\(Y\)</span> independientes, de parámetros <span class="math inline">\(\mathbf{\mu}=(\mu_x,\mu_y)\)</span> y <span class="math inline">\(\mathbf{\sigma}=(\sigma_x,\sigma_y)\)</span>.</p>
+<p>Calcular el gradiente de <span class="math inline">\(f\)</span> e interpretarlo. ¿En qué punto se anula el gradiente? ¿Qué conclusiones sacas? ¿Cuál es la tasa de crecimiento de <span class="math inline">\(f\)</span> cuando <span class="math inline">\(x\rightarrow \infty\)</span>?</p>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-6" class="callout-6-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><span class="math display">\[
+\nabla f(x,y) = -\frac{1}{\sqrt{2\pi}\, \sigma_x\sigma_y} e^{-\frac{1}{2}\left(\frac{(x-\mu_x)^2}{\sigma_x^2}+\frac{(y-\mu_y)^2}{\sigma_y^2}\right)} \left(\frac{x-\mu_x}{\sigma_x^2}, \frac{y-\mu_y}{\sigma_y^2}\right).
+\]</span></p>
+<p>El gradiente se anula en <span class="math inline">\((x=\mu_x, y=\mu_y)\)</span> y <span class="math inline">\(\lim_{x\rightarrow \infty}f(x,y) = 0\)</span>.</p>
+</div>
+</div>
+</div>
+<div id="exr-ecuacion-laplace" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 10.7 </strong></span>La ecuación diferencial parcial</p>
+<p><span class="math display">\[
+\frac{\partial^2 u}{\partial x^2} + \frac{\partial^2 u}{\partial y^2} + \frac{\partial^2 u}{\partial z^2} = 0,
+\]</span></p>
+<p>se conoce como ecuación de Laplace y se aplica a multitud de fenómenos relacionadas con la conducción de calor, el flujo de fluidos o el potencial eléctrico.</p>
+<ol type="a">
+<li><p>Comprobar que la función <span class="math inline">\(u(x,y,z)=\dfrac{1}{\sqrt{x^2 + y^2 + z^2}}\)</span> satisface la ecuación de Laplace.</p></li>
+<li><p>¿Existe algún punto en el que el crecimiento de la función sea nulo?</p></li>
+<li><p>Si fijamos <span class="math inline">\(z=1\)</span>, calcular <span class="math inline">\(\frac{\partial^4u}{\partial x^2\partial y^2}\)</span>.</p></li>
+</ol>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-7" class="callout-7-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="a">
+<li>Para comprobar que <span class="math inline">\(u(x,y,z)\)</span> satisface la ecuación de Laplace calculamos las tres derivadas parciales segundas que intervienen en la ecuación. Comenzando con las derivadas parciales con respecto a la variable <span class="math inline">\(x\)</span>, obtenemos:</li>
+</ol>
+<p><span class="math display">\[
+u(x,y,z) = \frac{1}{{\sqrt {x^2  + y^2  + z^2 } }} = \left( {x^2  +
+y^2  + z^2 } \right)^{ - 1/2}
+\]</span></p>
+<p><span class="math display">\[
+\frac{{\partial u}}{{\partial x}} =  - \frac{1}{2}\left( {x^2  + y^2
++ z^2 } \right)^{ - 3/2} 2x =  - x\left( {x^2  + y^2  + z^2 }
+\right)^{ - 3/2}
+\]</span></p>
+<p><span class="math display">\[
+\frac{{\partial ^2 u}}{{\partial x^2 }} = \frac{\partial }{{\partial
+x}}\left( { - x\left( {x^2  + y^2  + z^2 } \right)^{ - 3/2} }
+\right) =  - \left( {x^2  + y^2  + z^2 } \right)^{ - 3/2}  + 3x^2
+\left( {x^2  + y^2  + z^2 } \right)^{ - 5/2}
+\]</span></p>
+<p>e igualmente para las variables <span class="math inline">\(y\)</span> y <span class="math inline">\(z\)</span>, tenemos:</p>
+<p><span class="math display">\[
+\frac{{\partial u}}{{\partial y}} =  - y\left( {x^2  + y^2  + z^2 }
+\right)^{ - 3/2}
+\]</span></p>
+<p><span class="math display">\[
+\frac{{\partial ^2 u}}{{\partial y^2 }} =  - \left( {x^2  + y^2  +
+z^2 } \right)^{ - 3/2}  + 3y^2 \left( {x^2  + y^2  + z^2 } \right)^{
+- 5/2}
+\]</span></p>
+<p><span class="math display">\[
+\frac{{\partial u}}{{\partial z}} =  - z\left( {x^2  + y^2  + z^2 }
+\right)^{ - 3/2}
+\]</span></p>
+<p><span class="math display">\[
+\frac{{\partial ^2 u}}{{\partial z^2 }} =  - \left( {x^2  + y^2  +
+z^2 } \right)^{ - 3/2}  + 3z^2 \left( {x^2  + y^2  + z^2 } \right)^{
+- 5/2}
+\]</span></p>
+<p>Por lo tanto: <span class="math display">\[
+\frac{{\partial ^2 u}}{{\partial x^2 }} + \frac{{\partial ^2
+u}}{{\partial y^2 }} + \frac{{\partial ^2 u}}{{\partial z^2 }} =  -
+3\left( {x^2  + y^2  + z^2 } \right)^{ - 3/2}  + 3\left( {x^2  + y^2
++ z^2 } \right)\left( {x^2  + y^2  + z^2 } \right)^{ - 5/2}  =
+\]</span></p>
+<p><span class="math display">\[
+=- 3\left( {x^2  + y^2  + z^2 } \right)^{ - 3/2}  + 3\left( {x^2  +
+y^2 + z^2 } \right)^{ - 3/2}  = 0
+\]</span></p>
+<ol type="a">
+<li>Una condición necesaria para que el crecimiento de una función de varias variables en un punto sea nulo es que el gradiente en dicho punto se anule, y el gradiente se anula si se anulan sus tres componentes:</li>
+</ol>
+<p><span class="math display">\[
+\vec \nabla u = \vec 0 \Leftrightarrow \left( {\frac{{\partial
+u}}{{\partial x}},\frac{{\partial u}}{{\partial y}},\frac{{\partial
+u}}{{\partial z}}} \right) = \left( {0,0,0} \right)
+\]</span></p>
+<p>Por lo tanto, tenemos un sistema no lineal de tres ecuaciones con tres incógnitas:</p>
+<p><span class="math display">\[
+- x\left( {x^2  + y^2  + z^2 } \right)^{ - 3/2}  = 0
+\]</span></p>
+<p><span class="math display">\[
+- y\left( {x^2  + y^2  + z^2 } \right)^{ - 3/2}  = 0
+\]</span></p>
+<p><span class="math display">\[
+- z\left( {x^2  + y^2  + z^2 } \right)^{ - 3/2}  = 0
+\]</span></p>
+<p>Y teniendo en cuenta que el término <span class="math inline">\((x^2+y^2+z^2)\)</span>, por tratarse de una suma de cuadrados, únicamente puede ser 0 si <span class="math inline">\(x=y=z=0\)</span>; y a igual conclusión llegamos si suponemos que es distinto de 0, ya que entonces la primera ecuación implica que necesariamente <span class="math inline">\(x=0\)</span>, la segunda implica que <span class="math inline">\(y=0\)</span>, y la tercera implica que <span class="math inline">\(z=0\)</span>. Por lo tanto, concluimos que el único punto en el que el crecimiento puede ser nulo es <span class="math inline">\((x,y,z)=(0,0,0)\)</span>, pero dicho punto no pertenece al dominio de definición de la función (tendríamos un cero como denominador de una fracción), por lo que no hay ningún punto en el que la función presente un crecimiento nulo.</p>
+<ol type="a">
+<li>Suponiendo <span class="math inline">\(z=1\)</span>, la función resultante presenta únicamente dos variables:</li>
+</ol>
+<p><span class="math display">\[
+u(x,y,1) = \frac{1}{{\sqrt {x^2  + y^2  + 1} }} = \left( {x^2  + y^2
++ 1} \right)^{ - 1/2}
+\]</span></p>
+<p>La derivada propuesta es:</p>
+<p><span class="math display">\[
+\frac{{\partial ^4 u}}{{\partial x^2 \partial y^2 }} =
+\frac{\partial }{{\partial x}}\left( {\frac{\partial }{{\partial
+x}}\left( {\frac{\partial }{{\partial y}}\left( {\frac{{\partial
+u}}{{\partial y}}} \right)} \right)} \right)
+\]</span></p>
+<p>en donde, como ya sabemos, se puede cambiar el orden de derivación sin que afecte al resultado final, aunque nunca el número total de derivadas con respecto a cada variable.</p>
+<p>Operando como ya hicimos en los cálculos previos de las derivadas segundas, obtenemos:</p>
+<p><span class="math display">\[
+\frac{{\partial u}}{{\partial y}} =  - y\left( {x^2  + y^2  + 1}
+\right)^{ - 3/2}
+\]</span></p>
+<p><span class="math display">\[
+\frac{\partial }{{\partial y}}\left( {\frac{{\partial u}}{{\partial
+y}}} \right) = \frac{{\partial ^2 u}}{{\partial y^2 }} =  - \left(
+{x^2  + y^2  + 1} \right)^{ - 3/2}  + 3y^2 \left( {x^2  + y^2  + 1}
+\right)^{ - 5/2}
+\]</span></p>
+<p><span class="math display">\[
+\frac{\partial }{{\partial x}}\left( {\frac{{\partial ^2
+u}}{{\partial y^2 }}} \right) = \frac{{\partial ^3 u}}{{\partial
+x\partial y^2 }} = 3x\left( {x^2  + y^2  + 1} \right)^{ - 5/2}  -
+15y^2 x\left( {x^2  + y^2  + 1} \right)^{ - 7/2}
+\]</span></p>
+<p><span class="math display">\[
+\frac{\partial }{{\partial x}}\left( {\frac{{\partial ^3
+u}}{{\partial x\partial y^2 }}} \right) = \frac{{\partial ^4
+u}}{{\partial x^2 \partial y^2 }} =
+\]</span></p>
+<p><span class="math display">\[
+=3\left( {x^2  + y^2  + 1} \right)^{ - 5/2}  - 15\left( {x^2  + y^2
+} \right)\left( {x^2  + y^2 + 1} \right)^{ - 7/2}  + 105x^2 y\left(
+{x^2  + y^2  + 1} \right)^{ - 9/2}
+\]</span></p>
+</div>
+</div>
+</div>
+<div id="exr-polea" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 10.8 </strong></span>Tenemos dos objetos de masas <span class="math inline">\(m_1\)</span> y <span class="math inline">\(m_2\)</span> unidas por una cuerda que pasa a través de una polea como la de la siguiente figura.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/derivadas-funciones-varias-variables/polea.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Polea</figcaption>
+</figure>
+</div>
+<p>Si <span class="math inline">\(m_1\geq m_2\)</span>, la aceleración de <span class="math inline">\(m_1\)</span> viene dada por la ecuación</p>
+<p><span class="math display">\[
+a=\frac{m_1-m_2}{m_1+m_2}g,
+\]</span></p>
+<p>siendo <span class="math inline">\(g\)</span> la aceleración de la gravedad.</p>
+<p>Demostrar que se cumple la ecuación</p>
+<p><span class="math display">\[
+m_1\frac{\partial a}{\partial m_1}+m_2\frac{\partial a}{\partial m_2}=0.
+\]</span></p>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-8" class="callout-8-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><span class="math inline">\(\dfrac{\partial a}{\partial m_1} = \dfrac{2gm_2}{(m_1+m_2)^2}\)</span> y <span class="math inline">\(\dfrac{\partial a}{\partial m_2} = \dfrac{-2gm_1}{(m_1+m_2)^2}\)</span>.</p>
+</div>
+</div>
+</div>
+<div id="exr-potencial-electrico" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 10.9 </strong></span>La relación que modeliza el potencial eléctrico <span class="math inline">\(V\)</span> de un punto del plano en función de su distancia, es <span class="math inline">\(V=\log D\)</span>, donde <span class="math inline">\(D=\sqrt{x^2+y^2}\)</span>.</p>
+<ol type="a">
+<li><p>Calcular el gradiente de <span class="math inline">\(V\)</span>.</p></li>
+<li><p>Hallar la dirección de máxima variación del potencial eléctrico en el punto <span class="math inline">\((x,y)=(\sqrt{3},\sqrt{3})\)</span>.</p></li>
+<li><p>Calcular la matriz Hessiana y el Hessiano de <span class="math inline">\(V\)</span> en el punto anterior.</p></li>
+<li><p>Si nos movemos a lo largo de la curva <span class="math inline">\(y=x+1\)</span>, cuál será el mínimo potencial alcanzado?</p></li>
+</ol>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-9" class="callout-9-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="a">
+<li><p><span class="math inline">\(\nabla V(x,y) = \left( \frac{x}{x^2+y^2},\frac{y}{x^2+y^2}\right)\)</span>.</p>
+<p><span class="math inline">\(\nabla V(\sqrt 3, \sqrt 3) = \sqrt 3 /6(1,1)\)</span>.</p></li>
+<li><p><span class="math display">\[
+HV(x,y) = \left(
+\begin{array}{cc}
+\frac{y^2-x^2}{y^4+2x^2y^2+x^4} &amp; \frac{-2xy}{y^4+2x^2y^2+x^4} \\
+\frac{-2xy}{y^4+2x^2y^2+x^4} &amp; \frac{x^2-y^2}{y^4+2x^2y^2+x^4}
+\end{array}
+\right),\quad
+\left(
+\begin{array}{cc}
+0 &amp; -1/6 \\
+-1/6 &amp; 0
+\end{array}
+\right),\quad \mbox{y }
+|H(\sqrt 3,\sqrt 3)| = -1/36.
+\]</span></p></li>
+<li><p>El potencial máximo se alcanza en <span class="math inline">\((x=-1/2, y=1/2)\)</span> y vale <span class="math inline">\(V(-1/2,1/2) = -\dfrac{\log 2}{2}\)</span>.</p></li>
+</ol>
+</div>
+</div>
+</div>
+<div id="exr-ameba" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 10.10 </strong></span>La Quimiotaxis es el movimiento de los organismos dirigido por un gradiente de concentración, es decir, en la dirección en la que la concentración aumenta con más rapidez. El moho del cieno Dictyoselium discoideum muestra este comportamiento. En esta caso, las amebas unicelulares de esta especie se mueven según el gradiente de concentración de una sustancia química denominada adenosina monofosfato (AMP cíclico). Si suponemos que la expresión que da la concentración de AMP cíclico en un punto de coordenadas <span class="math inline">\((x,y,z)\)</span> es:</p>
+<p><span class="math display">\[
+C(x,y,z) = \frac{4} {{\sqrt {x^2  + y^2  + z^4  + 1} }}
+\]</span></p>
+<p>y se sitúa una ameba de moho del cieno en el punto <span class="math inline">\((-1,0,1)\)</span>, ¿en qué dirección se moverá la ameba?</p>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-10" class="callout-10-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><span class="math inline">\((4/\sqrt{27}, 0, -8/\sqrt{27})\)</span>.</p>
+</div>
+</div>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 10.11 </strong></span>Se han diseñado unas cápsulas con forma piramidal con base un rectángulo de lados a=3 cm, b=4 cm, y altura h=6 cm.</p>
+<ol type="a">
+<li><p>¿Cómo deben cambiar las dimensiones de la cápsula para que el volumen aumente lo más rápidamente posible? ¿Cuál sería la tasa de variación del volumen si cambian las dimensiones de la cápsula en la proporciones anteriores?</p></li>
+<li><p>Si se empiezan a cambiar las dimensiones de la cápsula de manera que el lado mayor del rectángulo disminuye la mitad de lo que aumenta el lado menor, y la altura aumenta el doble de lo que aumenta el lado menor, ¿cuál sería la tasa de variación del volumen de la cápsula en las condiciones anteriores?</p></li>
+</ol>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-11" class="callout-11-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="a">
+<li><p><span class="math inline">\(\nabla V(3,4,6)=(8,6,4)\)</span> y el volumen aumentará <span class="math inline">\(|\nabla V(3,4,6)|=10.7703\)</span> cm<span class="math inline">\(^3\)</span>/s si cambiamos las dimensiones de la cápsula siguiendo esta dirección.</p></li>
+<li><p>Derivada direccional de <span class="math inline">\(V\)</span> en <span class="math inline">\((3,4,6)\)</span> siguiendo la dirección del vector <span class="math inline">\(\mathbf{u}=(1,-1/2,2)\)</span>: <span class="math inline">\(V'_\mathbf{u}(3,4,6)=5.6737\)</span> cm<span class="math inline">\(^3\)</span>/s.</p></li>
+</ol>
+</div>
+</div>
+</div>
+<div id="exr-barra-metal" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 10.12 </strong></span>Una barra de metal de un metro de largo se calienta de manera irregular y de forma tal que a <span class="math inline">\(x\)</span> metros de su extremo izquierdo y en el instante <span class="math inline">\(t\)</span> minutos, su temperatura en grados centígrados esta dada por <span class="math inline">\(H(x,t) = 100e^{-0.1t}\operatorname{sen}(\pi xt)\)</span> con <span class="math inline">\(0\leq x \leq 1\)</span>.</p>
+<ol type="a">
+<li><p>Calcular <span class="math inline">\(\dfrac{\partial H}{\partial x}(0.2, 1)\)</span> y <span class="math inline">\(\dfrac{\partial H}{\partial x}(0.8, 1).\)</span> ¿Cuál es la interpretación práctica (en términos de temperatura) de estas derivadas parciales? Explicar por qué cada una tiene el signo que tiene.</p></li>
+<li><p>Calcular la matriz hessiana de <span class="math inline">\(H\)</span>.</p></li>
+</ol>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-12-contents" aria-controls="callout-12" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-12" class="callout-12-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="a">
+<li><p>La derivada parcial de <span class="math inline">\(H\)</span> con respecto a <span class="math inline">\(x\)</span> es</p>
+<p><span class="math display">\[\begin{align*}
+\frac{\partial H}{\partial x}(x,t) &amp;= 100e^{-0.1t}\cos(\pi xt) \pi t \\
+\end{align*}\]</span></p>
+<p>y en los puntos que nos piden vale</p>
+<p><span class="math display">\[\begin{align*}
+\frac{\partial H}{\partial x}(0.2,\, 1) &amp;= 100e^{-0.1}\cos(0.2\pi) \pi =
+229.9736\\
+\frac{\partial H}{\partial x}(0.8,\, 1) &amp;= 100e^{-0.1}\cos(0.8\pi) \pi =
+-229.9736
+\end{align*}\]</span></p>
+<p>La derivada parcial <span class="math inline">\(\dfrac{\partial H}{\partial x}(x_0,t_0)\)</span> indica la variación instantánea que experimenta la temperatura con respecto a la variación de la distancia al extremo izquierdo en el punto. El signo de la derivada parcial indica si la variación de la temperatura es creciente (aumenta la temperatura) o decreciente (disminuye). Así en el punto <span class="math inline">\((0.2,\, 1)\)</span> la temperatura aumentará a razón de <span class="math inline">\(229.9736\)</span> grados centígrados por cada metro que nos alejemos del extremo izquierdo de la barra de metal, mientras que en el <span class="math inline">\((0.8,\,1)\)</span> la temperatura disminuirá a razón de <span class="math inline">\(229.9736\)</span> grados centígrados por cada metro que nos alejemos del extremo izquierdo de la barra de metal.</p></li>
+<li><p>Para calcular la matriz Hessiana necesitamos las derivadas parciales de segundo orden:</p>
+<p><span class="math display">\[\begin{align*}
+\frac{\partial H}{\partial t} (x,t) &amp;= 100\left(\frac{\partial}{\partial x} e^{-0.1 t} \operatorname{sen} (\pi xt) + e^{-0.1t}\frac{\partial}{\partial x}\operatorname{sen}(\pi xt)\right)=\\
+&amp;= 100\left(-0.1e^{-0.1t}\operatorname{sen}(\pi xt) +e^{-0.1t}\cos(\pi xt)\pi x\right) =\\
+&amp;= 100 e^{-0.1t}\left(-0.1 \operatorname{sen}(\pi xt) + \pi x \cos(\pi xt)\right),\\
+\frac{\partial^2 H}{\partial x^2}(x,t) &amp;= \frac{\partial}{\partial x}\left(100e^{-0.1t}\pi t\cos(\pi xt) \right) = 100e^{-0.1t}\pi t(-\operatorname{sen}(\pi xt) \pi t) =\\
+&amp;= -100e^{-0.1t}\pi^2 t^2\operatorname{sen}(\pi xt),\\
+\frac{\partial^2 H}{\partial t\partial x}(x,t) &amp;= \frac{\partial}{\partial t}\left(100e^{-0.1t}\pi t\cos(\pi xt) \right) =\\
+&amp;= 100\left(\frac{\partial}{\partial t}e^{-0.1t}\pi t\cos(\pi xt) + e^{-0.1t}\left(\frac{\partial}{\partial t}(\pi t)\cos(\pi xt) + \pi t \frac{\partial}{\partial t}\cos(\pi xt)\right) \right) =\\
+&amp;= 100\left(-0.1e^{-0.1t}\pi t\cos(\pi xt) + e^{-0.1t}\left(\pi \cos(\pi xt) - \pi t \operatorname{sen}(\pi xt)\pi x\right) \right) =\\
+&amp;= 100e^{-0.1t}\left(-0.1\pi t\cos(\pi xt)+\pi \cos(\pi xt) - \pi^2 xt \operatorname{sen}(\pi xt)\right) = \\
+&amp;= 100e^{-0.1t}\left((-0.1\pi t+\pi)\cos(\pi xt) - \pi^2 xt \operatorname{sen}(\pi xt)\right),\\
+\end{align*}\]</span></p>
+<p><span class="math display">\[\begin{align*}
+\frac{\partial^2 H}{\partial x\partial t}(x,t) &amp;= \frac{\partial^2 H}{\partial t\partial x}(x,t) \quad (\mbox{igualdad de las derivadas cruzadas por el teorema de Schwartz})\\
+\frac{\partial^2 H}{\partial t^2}(x,t) &amp;= \frac{\partial}{\partial t} \left(100 e^{-0.1t}\left(-0.1 \operatorname{sen}(\pi xt) + \pi x \cos(\pi xt)\right)\right)  =\\
+&amp;= 100\left(\frac{\partial}{\partial t} e^{-0.1t}\left(-0.1 \operatorname{sen}(\pi xt) + \pi x \cos(\pi xt)\right) +\right.\\
+&amp;\left. \qquad + e^{0.1t}\left(\frac{\partial}{\partial t}\left(-0.1\operatorname{sen}(\pi xt)\right) + \frac{\partial}{\partial t}\left(\pi x \cos(\pi xt)\right)\right)\right) =\\
+&amp;= 100\left(-0.1 e^{-0.1t}\left(-0.1 \operatorname{sen}(\pi xt) + \pi x \cos(\pi xt)\right)\right. +\\
+&amp;\left. \qquad + e^{0.1t}\left(-0.1\cos(\pi xt)\pi x - \pi x \cos(\pi xt)\pi x\right)\right) =\\
+&amp;= 100e^{-0.1t}\left(0.01\operatorname{sen}(\pi xt) -0.1 \pi x \cos(\pi xt) -0.1\pi x\cos(\pi xt) - \pi^2 x^2 \cos(\pi xt)\right) = \\
+&amp;= 100e^{-0.1t}\left(0.01\operatorname{sen}(\pi xt) -(0.2+\pi^2x^2) \cos(\pi xt)\right).
+\end{align*}\]</span></p>
+<p>Así pues, la matriz Hessiana es <span class="math display">\[
+\left(
+\begin{array}{cc}
+-100e^{-0.1t}\pi^2 t^2\operatorname{sen}(\pi xt) &amp; 100e^{-0.1t}\left((-0.1\pi t+\pi)\cos(\pi xt) - \pi^2 xt \operatorname{sen}(\pi xt)\right) \\
+100e^{-0.1t}\left((-0.1\pi t+\pi)\cos(\pi xt) - \pi^2 xt \operatorname{sen}(\pi xt)\right) &amp; 100e^{-0.1t}\left(0.01\operatorname{sen}(\pi xt) -(0.2+\pi^2x^2) \cos(\pi xt)\right)
+\end{array}
+\right)
+\]</span></p></li>
+</ol>
+</div>
+</div>
+</div>
+<div id="exr-derivada-direccional-nula" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 10.13 </strong></span>¿En qué direcciones se anulará la derivada direccional de la función</p>
+<p><span class="math display">\[
+f(x,y)=\frac{x^2-y^2}{x^2+y^2}
+\]</span></p>
+<p>en el punto <span class="math inline">\(P=(1,1)\)</span>?</p>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-13-contents" aria-controls="callout-13" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-13" class="callout-13-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>En la dirección <span class="math inline">\((1/\sqrt{2},1/\sqrt{2})\)</span>.</p>
+</div>
+</div>
+</div>
+<div id="exr-derivada-direccional" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 10.14 </strong></span>¿Existe alguna dirección en la que la derivada direccional en el punto <span class="math inline">\(P=(1,2)\)</span> de la función <span class="math inline">\(f(x,y) = x^2-3xy+4y^2\)</span> valga 14?</p>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-14-contents" aria-controls="callout-14" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-14" class="callout-14-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>No.</p>
+</div>
+</div>
+</div>
+<div id="exr-derivada-direccional-2" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 10.15 </strong></span>La derivada direccional de una función <span class="math inline">\(f\)</span> en un punto <span class="math inline">\(P\)</span> es máxima en la dirección del vector <span class="math inline">\((1,1,-1)\)</span> y su valor es <span class="math inline">\(2\sqrt{3}\)</span>. ¿Cuánto vale la derivada direccional de <span class="math inline">\(f\)</span> en <span class="math inline">\(P\)</span> en la dirección del vector <span class="math inline">\((1,1,0)\)</span>?</p>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-15-contents" aria-controls="callout-15" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-15" class="callout-15-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><span class="math inline">\(2\sqrt{2}\)</span>.</p>
+</div>
+</div>
+</div>
+<div id="exr-derivada-direccional-3" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 10.16 </strong></span>Dado el campo escalar</p>
+<p><span class="math display">\[
+f(x,y,z) = x^2-y^2+xyz^3-zx,
+\]</span></p>
+<ol type="a">
+<li><p>Calcular la derivada direccional de <span class="math inline">\(f\)</span> en <span class="math inline">\((1,2,3)\)</span> a lo largo del vector unitario <span class="math inline">\(\mathbf{u}=\frac{1}{\sqrt2}(1,-1,0)\)</span>.</p></li>
+<li><p>¿En qué dirección es máxima la derivada direccional de <span class="math inline">\(f\)</span> en el punto anterior? Obtener el valor de dicha derivada direccional.</p></li>
+</ol>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-16-contents" aria-controls="callout-16" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-16" class="callout-16-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="a">
+<li><p><span class="math inline">\(15\sqrt{2}\)</span>.</p></li>
+<li><p>La derivada direccional es máxima en la dirección del gradiente <span class="math inline">\((53,23,53)\)</span> y vale <span class="math inline">\(\sqrt{6147}\)</span>.</p></li>
+</ol>
+</div>
+</div>
+</div>
+<div id="exr-ajuste-minimos-cuadrados" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 10.17 </strong></span>En el ajuste de regresión de una recta <span class="math inline">\(y=a+bx\)</span>, se suele utilizar la técnica de mínimos cuadrados que consisten en buscar los valores de <span class="math inline">\(a\)</span> y <span class="math inline">\(b\)</span> que hacen mínima la función</p>
+<p><span class="math display">\[
+f(a,b)= \sum_{i=1}^{n}(y_i-a-bx_i)^2,
+\]</span></p>
+<p>donde el sumatorio abarca a todos los pares de la muestra <span class="math inline">\((x_i,y_i)\)</span> para <span class="math inline">\(i=1,\ldots, n\)</span>, siendo <span class="math inline">\(n\)</span> el tamaño de la muestra.</p>
+<p>Demostrar que esta función alcanza el mínimo en el punto</p>
+<p><span class="math display">\[
+a=\bar y-b\bar x \quad \mbox{ y } b=\frac{s_{xy}}{s_x^2}.
+\]</span></p>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-17-contents" aria-controls="callout-17" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-17" class="callout-17-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+
+</div>
+</div>
+</div>
+<div id="exr-recta-normal-plano-tangente-superficie" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 10.18 </strong></span>Obtener la ecuación del plano tangente y de la recta normal a la superficie de ecuación <span class="math inline">\(xyz=8\)</span> en el punto <span class="math inline">\((4,-2,-1)\)</span>.</p>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-18-contents" aria-controls="callout-18" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-18" class="callout-18-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Recta normal <span class="math inline">\(l:(4+2t,-2-4t,-1-8t)\)</span>.<br>
+Plano tangente <span class="math inline">\(\pi: 2x-4y-8z+24=0\)</span>.</p>
+</div>
+</div>
+</div>
+<div id="exr-" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 10.19 </strong></span>&nbsp;</p>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-19-contents" aria-controls="callout-19" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-19" class="callout-19-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+
+</div>
+</div>
+</div>
+
+
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  let localAlternateSentinel = 'alternate';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copiado");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copiado");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./10-funciones-vectoriales.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Funciones vectoriales</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+</body></html>
