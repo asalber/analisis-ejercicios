@@ -1,7 +1,8 @@
 ---
 title: Funciones de varias variables
 lang: es
-execute: 
+execute:
+  echo: false
   cache: true
   freeze: auto
   daemon: 3600
@@ -13,7 +14,6 @@ Emparejar las siguientes funciones de dos variables con sus curvas de nivel.
 ```{julia}
 #| echo: false
 using CairoMakie
-myblue = RGBf(0.067,0.529,0.871)
 f(x,y) = 3x^2 + y^2
 xs = ys = range(-2, 2; length=100)
 fig = Figure()
@@ -55,6 +55,41 @@ La gráfica C corresponde a $f(x,y)$.
 La gráfica D corresponde a $h(x,y)$.  
 :::
 
+:::{#exr-derivada-parcial-gases-perfectos}
+La [ecuación de los gases perfectos](https://es.wikipedia.org/wiki/Ley_de_los_gases_ideales) relaciona la presión, el volumen y la temperatura de un gas perfecto. Esta ecuación se suele escribir de la forma
+
+$$
+PV = nRT
+$$
+
+donde $P$ es la presión, $V$ es el volumne, $T$ la temperatura, $R$ es la constante universal de los gases perfectos y $n$ es el número de moles del gas, que también es constante para cada gas. 
+
+a.  ¿Cómo varía la presión de un gas perfecto cuando se aumenta la temperatura, manteniendo constante el volumen?
+
+a.  ¿Cómo varía la presión de un gas perfecto cuando se aumenta el volumen, manteniendo constante la temperatura?
+:::
+
+:::{.callout-tip collapse="true"}
+## Solución
+Podemos expresar la presión en función del volumen y la temperatura del gas perfecto mediante la función $P(V,T) = \dfrac{nRT}{V}$.
+
+a.  La variación de la presión con respecto a la temperatura, manteniendo constante el volumen es la derivada parcial de la presión con respecto a la temperatura, que vale
+
+    $$
+    \frac{\partial P}{\partial T} = \frac{nR}{V}.
+    $$
+
+    Como el volumen siempre es positivo, esto quiere decir que al aumentar la temperatura, manteniendo constante el volumen, la presión aumenta.
+
+a.  La variación de la presión con respecto al volumen, manteniendo constante la temperatura es la derivada parcial de la presión con respecto al volumen, que vale
+
+    $$
+    \frac{\partial P}{\partial V} = \frac{-nRT}{V^2}.
+    $$
+
+    Como el volumen y la temperatura son siempre positivos, esto quiere decir que al aumentar el volumen, manteniendo constante la temperatura, la presión disminuye.
+:::
+
 :::{#exr-co2-planta}
 La asimilación de CO$_2$ de una planta depende de la temperatura ambiente (t) y de la intensidad de la luz (l), según la función
 
@@ -70,7 +105,175 @@ Estudiar también cómo evoluciona para distintas temperaturas cuando se mantien
 
 :::{.callout-tip collapse="true"}
 ## Solución
-$\frac{\partial f}{\partial l}(t,l) = 2ctl$ y $\frac{\partial f}{\partial t}(t,l) = cl^2$.
+La variación de la asimilación de CO$_2$ con respecto a la intensidad de la luz viene dada por la derivada parcial con respeto a $l$, que vale 
+
+$$
+\frac{\partial f}{\partial l}(t,l) = 2ctl,
+$$ 
+
+y la variación de la asimilación de CO$_2$ con respecto a la temperatura viene dada por la derivada parcial con respecto a $t$, que vale 
+
+$$
+\frac{\partial f}{\partial t}(t,l) = cl^2.
+$$
+:::
+
+:::{#exr-produccion-economica}
+La [función de producción de Cobb-Douglas](https://es.wikipedia.org/wiki/Funci%C3%B3n_de_producci%C3%B3n_de_Cobb-Douglas) 
+
+$$p(t,k) = at^\alpha k^{1-\alpha }$$
+
+se utiliza en Econometría para modelizar, de manera simplificada, la producción económica de un país, es decir, el valor monetario de los bienes que se producen en un año, en función de la cantidad de trabajo $t$ y el capital invertido $k$, y donde $a$ es una constante conocida como factor total de productividad y $\alpha$ es otra constante que mide la elasticidad del producto del trabajo y el capital. 
+
+a. Tomando $a=1$ y $\alpha=0.5$, ¿cómo son las curvas de nivel de esta función de producción?
+
+a. ¿Cómo varía la producción cuando aumenta la cantidad de trabajo y se mantiene constante el capital?
+
+a. ¿Cómo varía la producción cuando disminuye el capital?
+:::
+
+:::{.callout-tip collapse="true"}
+## Solución
+a.  Para $a=1$ y $\alpha=0.5$ se tiene la función $p(t,k)=1 \cdot t^{0.5}k^{0.5} = \sqrt{tk}$. Los puntos de la curva de nivel $c$ cumplirán que $\sqrt{tk} = c$, de donde se deduce que $t=\frac{c^2}{k}$ y, por tanto, se trata de una función inversa. En la siguiente gráfica aparecen algunas curvas de nivel de esta función de producción.
+
+    ```{julia}
+    #| echo: false
+    using CairoMakie
+    f(x,y) = x^0.5 * y^0.5
+    xs = ys = range(0, 200; length=200)
+    fig = Figure()
+    ax = Axis(fig[1,1], aspect = 1, xlabel = "Trabajo", ylabel = "Capital")
+    contour!(ax, xs, ys, f.(xs, ys'), labels = true, levels = 0:10:200)
+    fig
+    ```
+
+a.  La variación de la producción con respecto a al trabajo, manteniendo constante el capital, lo da la derivada parcial con respecto al trabajo, que vale
+
+    $$
+    \frac{\partial p}{\partial t} = a\alpha t^{\alpha-1}k^{1-\alpha}.
+    $$
+
+    En el caso particular de $a=1$ y $\alpha=0.5$ se tiene 
+
+    $$
+    \frac{\partial p}{\partial t} = \frac{1}{2}t^{-1/2}k^{1/2} = \frac{1}{2}\sqrt{\frac{k}{t}}.
+    $$
+
+    Esto quiere decir que al aumentar el trabajo la producción económica aumenta a razón de esta cantidad. Se observa que la cantidad de trabajo aparece en el denominador, por lo que cuando la cantidad del trabajo es grande, el incremento de producción es pequeño.
+
+a.  La variación de la producción con respecto a al capital, manteniendo constante el trabajo, lo da la derivada parcial con respecto al capital, que vale
+
+    $$
+    \frac{\partial p}{\partial k} = at^{\alpha}(1-\alpha)k^{1-\alpha-1} = a(1-\alpha)t^{\alpha}k^{-\alpha}.
+    $$
+
+    En el caso particular de $a=1$ y $\alpha=0.5$ se tiene 
+
+    $$
+    \frac{\partial p}{\partial t} = \frac{1}{2}t^{1/2}k^{-1/2} = \frac{1}{2}\sqrt{\frac{t}{k}}.
+    $$
+
+    Esto quiere decir que al aumentar el capital la producción económica aumenta a razón de esta cantidad. Al igual que antes, se observa que el capital aparece en el denominador, por lo que cuando el capital es grande, el incremento de producción es pequeño.
+:::
+
+:::{#exr-variacion-volumen-cilindro}
+Se tiene un cilindro de radio $5$ cm y altura $3$ cm. ¿Es el volumen del cilindro más sensible a una pequeña variación de su radio o de su altura? ¿Cuál debería ser la altura del cilindro para que su volumen fuese igual se sensible a una pequeña variación de su radio que a una pequeña variación de su altura?
+:::
+
+:::{.callout-tip collapse="true"}
+## Solución
+El volumen de un cilindro depende de su radio y de su altura según la función $v(r,h)=\pi r^2h$.
+
+La tasa de variación del volumen con respecto al radio es la derivada parcial del volumen con respecto al radio, es decir,
+
+$$
+\frac{\partial v}{\partial r} = 2\pi rh,
+$$
+
+que para un cilindro de radio $5$ cm y altura $3$ cm es $\frac{\partial v}{\partial r} = 2\pi 5\cdot 3  = 30\pi$.
+
+Del mismo modo, la tasa de variación del volumen con respecto a la altura es la derivada parcial del volumen con respecto a la altura, es decir,
+
+$$
+\frac{\partial v}{\partial h} = \pi r^2,
+$$
+
+que para un cilindro de radio $5$ cm y altura $3$ cm es $\frac{\partial v}{\partial h} = \pi 5^2  = 25\pi$.
+
+Así pues, el volumen de este cilindro es más sensible a una pequeña variación del radio que de la altura.
+
+Para que fuese igualmente sensible a la variación del radio y de la altura, ambas derivadas parciales deberían ser iguales, es decir, 
+
+$$
+\frac{\partial v}{\partial r} = \frac{\partial v}{\partial h}  \Leftrightarrow 2\pi r h = \pi r^2 \Leftrightarrow h = r/2.
+$$
+:::
+
+:::{#exr-coste-marginal}
+Una empresa fabrica helados de tres sabores. El coste total de producción viene dada por la función 
+
+$$
+c(x,y,z)=\frac{1}{10}\sqrt[3]{xyz} + \frac{x}{20} + \frac{y}{40} + \frac{z}{30} + 100,
+$$
+
+donde $x$ es el número de helados de chocolate, $y$ el número de helados de fresa y $z$ el número de helados de vainilla. Calcular el coste marginal para cada uno de los tipos de helados.
+:::
+
+:::{.callout-tip collapse="true"}
+## Solución
+El coste marginal es la derivada parcial del coste total con respecto al número de helados producidos de cada tipo. Así, el coste marginal de los helados de chocolate es
+
+$$
+\frac{\partial c}{\partial x} = \frac{1}{10}yz(xyz)^{-2/3} + \frac{1}{20}.
+$$
+
+El coste marginal de los helados de fresa es 
+
+$$
+\frac{\partial c}{\partial y} = \frac{1}{10}xz(xyz)^{-2/3} + \frac{1}{40}.
+$$
+
+Y el coste marginal de los helados de vainilla es
+
+$$
+\frac{\partial c}{\partial z} = \frac{1}{10}xy(xyz)^{-2/3} + \frac{1}{30}.
+$$
+:::
+
+:::{#exr-interpretacion-derivadas-parciales-superficie}
+La gráfica de una función $f(x,y)$ se muestra a continuación.
+
+```{julia}
+using WGLMakie
+WGLMakie.activate!()
+fig = Figure()
+f(x,y) = x*y
+xs = ys = range(-2, 2; length=100)
+surface(xs, ys, f(xs,ys'))
+```
+
+¿Qué signo tienen las derivadas parciales en el punto $(1,-1)$. ¿Y en el punto (0,0)?
+:::
+
+:::{.callout-tip collapse="true"}
+## Solución
+En el punto $(1,-1)$ derivada parcial con respecto a $x$ es negativa, y la derivada parcial con respecto a $y$ es positiva.
+
+En el punto $(0,0)$ ambas derivadas parciales se anulan.
+:::
+
+:::{#exr-recta-normal-plano-tangente-superficie}
+Obtener la ecuación del plano tangente y de la recta normal las siguientes superficies en los puntos indicados.
+
+a.  $xyz=8$ en el punto $(4,-2,-1)$.
+
+a.  $f(x,y) = y\ln(xy)$ en el punto $(1/2, 2, 0)$.
+:::
+
+:::{.callout-tip collapse="true"}
+## Solución
+a. Recta normal $l:(4+2t,-2-4t,-1-8t)$.  
+Plano tangente $\pi: 2x-4y-8z+24=0$.
 :::
 
 :::{#exr-gradiente-1}
@@ -98,7 +301,6 @@ $T(x,y,z)=e^{-x^2-2y^2-3z^2}$ donde $x,y,z$ se miden en metros.
 :::{.callout-tip collapse="true"}
 ## Solución
 Debe moverse en la dirección $-\nabla f(1,1,1)=e^{-6}(2,4,6)$.
-
 :::
 
 
@@ -551,21 +753,3 @@ $$
 
 :::
 
-:::{#exr-recta-normal-plano-tangente-superficie}
-Obtener la ecuación del plano tangente y de la recta normal a la superficie de ecuación $xyz=8$ en el punto $(4,-2,-1)$.
-:::
-
-:::{.callout-tip collapse="true"}
-## Solución
-Recta normal $l:(4+2t,-2-4t,-1-8t)$.  
-Plano tangente $\pi: 2x-4y-8z+24=0$.
-:::
-
-:::{#exr-}
-
-:::
-
-:::{.callout-tip collapse="true"}
-## Solución
-
-:::
