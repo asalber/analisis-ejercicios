@@ -14,7 +14,7 @@ Emparejar las siguientes funciones vectoriales con las trayectorias de más abaj
 :::{.content-visible when-format="html"}
 ```{julia}
 #| echo: false
-using WGLMakie
+using GLMakie
 myblue = RGBf(0.067,0.529,0.871)
 fig = Figure()
 t = range(0, 4pi, length=200)

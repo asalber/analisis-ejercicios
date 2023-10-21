@@ -244,12 +244,14 @@ $$
 La gráfica de una función $f(x,y)$ se muestra a continuación.
 
 ```{julia}
-using WGLMakie
-WGLMakie.activate!()
+using CairoMakie
 fig = Figure()
 f(x,y) = x*y
 xs = ys = range(-2, 2; length=100)
-surface(xs, ys, f(xs,ys'))
+ax = Axis3(fig[1,1], azimuth = 6.7pi/4, elevation = 0.2)
+surface!(ax, xs, ys, f(xs,ys'))
+scatter!(Point3(1,-1,-1), color=:red)
+fig
 ```
 
 ¿Qué signo tienen las derivadas parciales en el punto $(1,-1)$. ¿Y en el punto (0,0)?
