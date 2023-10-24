@@ -564,6 +564,11 @@ donde $u$ y $v$ son funciones de una variable real.
 
 :::
 
+:::{#exr-variacion-volumen-cilindro}
+Un cilindro metálico de radio 30cm y algura 50cm  se dilata de manera que la tasa de variación de su radio es 1 cm/s y la tasa de variación de su altura es 2 cm/s. ¿Cuál es la tasa de variación de su volumen?
+:::
+
+
 :::{#exr-potencial-electrico}
 La relación que modeliza el potencial eléctrico $V$ de un punto del plano en función de su distancia, es $V=\log D$, donde $D=\sqrt{x^2+y^2}$.
 
