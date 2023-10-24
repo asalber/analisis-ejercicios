@@ -546,6 +546,24 @@ $$
 $\dfrac{\partial a}{\partial m_1} = \dfrac{2gm_2}{(m_1+m_2)^2}$ y $\dfrac{\partial a}{\partial m_2} = \dfrac{-2gm_1}{(m_1+m_2)^2}$.
 :::
 
+:::{#exr-reglas-derivacion}
+Utilizar la regla de la cadena para funciones de varias variables para demostrar las reglas de derivación de funciones de una variable real
+
+\begin{align*}
+(u+v)' &= u' + v'\\
+(u-v)' &= u' - v'\\
+(u\cdot v)' &= u'v + uv'\\
+(u/v)' &= \frac{u'v-uv'}{v^2}
+\end{align*}
+
+donde $u$ y $v$ son funciones de una variable real.
+:::
+
+:::{.callout-tip collapse="true"}
+## Solución
+
+:::
+
 :::{#exr-potencial-electrico}
 La relación que modeliza el potencial eléctrico $V$ de un punto del plano en función de su distancia, es $V=\log D$, donde $D=\sqrt{x^2+y^2}$.
 

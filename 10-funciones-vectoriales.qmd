@@ -16,7 +16,7 @@ Emparejar las siguientes funciones vectoriales con las trayectorias de más abaj
 #| echo: false
 using GLMakie
 myblue = RGBf(0.067,0.529,0.871)
-fig = Figure()
+fig = Figure(backgroundcolor=:transparent)
 t = range(0, 4pi, length=200)
 lines(fig[1,1], t./2 .+ 2, 2t .- 1, t .+ 1; linewidth = 2, color = myblue)
 lines(fig[1,2], sin.(t), cos.(t), t/4; linewidth = 2, color = myblue)
