@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Problemas de Análisis Matemático - 10&nbsp; Funciones de varias variables</title>
+<title>Problemas de Análisis Matemático - 10&nbsp; Derivadas de funciones de varias variables</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -67,10 +67,10 @@ ul.task-list li input[type="checkbox"] {
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<meta property="og:title" content="Problemas de Análisis Matemático - 10&nbsp; Funciones de varias variables">
+<meta property="og:title" content="Problemas de Análisis Matemático - 10&nbsp; Derivadas de funciones de varias variables">
 <meta property="og:image" content="11-derivadas-funciones-varias-variables_files/figure-html/cell-2-output-1.svg">
 <meta property="og:site-name" content="Problemas de Análisis Matemático">
-<meta name="twitter:title" content="Problemas de Análisis Matemático - 10&nbsp; Funciones de varias variables">
+<meta name="twitter:title" content="Problemas de Análisis Matemático - 10&nbsp; Derivadas de funciones de varias variables">
 <meta name="twitter:image" content="11-derivadas-funciones-varias-variables_files/figure-html/cell-2-output-1.svg">
 <meta name="twitter:site" content="@aprendeconalf">
 <meta name="twitter:card" content="summary_large_image">
@@ -85,7 +85,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./11-derivadas-funciones-varias-variables.html"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Funciones de varias variables</span></a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./11-derivadas-funciones-varias-variables.html"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Derivadas de funciones de varias variables</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -214,7 +214,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./11-derivadas-funciones-varias-variables.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Funciones de varias variables</span></span></a>
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Derivadas de funciones de varias variables</span></span></a>
   </div>
 </li>
     </ul>
@@ -230,7 +230,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Funciones de varias variables</span></h1>
+<h1 class="title"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Derivadas de funciones de varias variables</span></h1>
 </div>
 
 
@@ -807,15 +807,27 @@ Solución
 </div>
 <div id="callout-15" class="callout-15-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-
+<p>En un equilibrio químico, la concentración de una sustancia <span class="math inline">\(z\)</span> depende de las concentraciones de otras dos sustancias <span class="math inline">\(x\)</span> e <span class="math inline">\(y\)</span> según la ecuación <span class="math inline">\(\frac{z}{\sqrt{xy}}-\ln\left(\frac{x+y}{y}\right) = 0\)</span>. Usar el diferencial para predecir la variación que experimentará la concentración de <span class="math inline">\(z\)</span> si la concentración de <span class="math inline">\(x\)</span> aumenta <span class="math inline">\(0.1\)</span> mg/mm<span class="math inline">\(^3\)</span> y la de <span class="math inline">\(y\)</span> disminuye <span class="math inline">\(0.2\)</span> mg/<span class="math inline">\(mm^3\)</span> en el instante en que las concentraciones de <span class="math inline">\(x\)</span> e <span class="math inline">\(y\)</span> son 1 mg/mm<span class="math inline">\(^3\)</span>.</p>
 </div>
 </div>
 </div>
 <div id="exr-variacion-volumen-cilindro" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 10.16 </strong></span>Un cilindro metálico de radio 30cm y algura 50cm se dilata de manera que la tasa de variación de su radio es 1 cm/s y la tasa de variación de su altura es 2 cm/s. ¿Cuál es la tasa de variación de su volumen?</p>
+<p><span class="theorem-title"><strong>Ejercicio 10.16 </strong></span>Un cilindro metálico de radio 30cm y altura 50cm se dilata de manera que la tasa de variación de su radio es 1 cm/s y la tasa de variación de su altura es 2 cm/s. ¿Cuál es la tasa de variación de su volumen?</p>
+</div>
+<div id="exr-distancia-planetas" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 10.17 </strong></span>Dos planetas se mueven en un mismo plano describiendo órbitas dadas por las funciones vectoriales <span class="math inline">\(f(t) = (2 \cos(t), \operatorname{sen}(2t))\)</span> y <span class="math inline">\(g(t) = (2\operatorname{sen}(t/2), 3\cos(t))\)</span>. ¿Cómo varía la distancia entre los planetas en el instante <span class="math inline">\(t=\pi/2\)</span>?</p>
+</div>
+<div id="exr-transmision-errores-caudal-fuente" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 10.18 </strong></span>Para calcular el caudal de una fuente se ha llenado un depósito de base cuadrada <span class="math inline">\(30\pm 0.2\)</span> cm y altura <span class="math inline">\(50\pm 0.3\)</span> cm en un tiempo de <span class="math inline">\(20\pm 0.5\)</span> s. Expresar el caudal de la fuente incluyendo error en la medida.</p>
+</div>
+<div id="exr-transmision-errores-potencial-electrico" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 10.19 </strong></span>La potencia eléctrica <span class="math inline">\(P\)</span> en un circuito depende de el voltaje <span class="math inline">\(E\)</span> y la resistencia <span class="math inline">\(R\)</span> según la fórmula <span class="math inline">\(P = E^2/R\)</span>. Si los errores cometidos al medir el voltaje y la resistencia son de un 1% y un 2% respectivamente, ¿cuál será el error relativo en el cálculo de la potencia cuando se aplican 100 voltios a una resistencia de 1500 ohmios?</p>
+</div>
+<div id="exr-vector-gradiente-normal-curvas-nivle" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 10.20 </strong></span>Sea <span class="math inline">\(f(x,y,z)=0\)</span> la ecuación que define una superficie en el espacio real. Demostrar que el vector gradiente de <span class="math inline">\(f\)</span> en cualquier punto <span class="math inline">\((a, b, c)\)</span> es normal a la superficie en ese punto.</p>
 </div>
 <div id="exr-potencial-electrico" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 10.17 </strong></span>La relación que modeliza el potencial eléctrico <span class="math inline">\(V\)</span> de un punto del plano en función de su distancia, es <span class="math inline">\(V=\log D\)</span>, donde <span class="math inline">\(D=\sqrt{x^2+y^2}\)</span>.</p>
+<p><span class="theorem-title"><strong>Ejercicio 10.21 </strong></span>La relación que modeliza el potencial eléctrico <span class="math inline">\(V\)</span> de un punto del plano en función de su distancia, es <span class="math inline">\(V=\log D\)</span>, donde <span class="math inline">\(D=\sqrt{x^2+y^2}\)</span>.</p>
 <ol type="a">
 <li><p>Calcular el gradiente de <span class="math inline">\(V\)</span>.</p></li>
 <li><p>Hallar la dirección de máxima variación del potencial eléctrico en el punto <span class="math inline">\((x,y)=(\sqrt{3},\sqrt{3})\)</span>.</p></li>
@@ -859,7 +871,7 @@ HV(x,y) = \left(
 </div>
 </div>
 <div id="exr-ameba" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 10.18 </strong></span>La Quimiotaxis es el movimiento de los organismos dirigido por un gradiente de concentración, es decir, en la dirección en la que la concentración aumenta con más rapidez. El moho del cieno Dictyoselium discoideum muestra este comportamiento. En esta caso, las amebas unicelulares de esta especie se mueven según el gradiente de concentración de una sustancia química denominada adenosina monofosfato (AMP cíclico). Si suponemos que la expresión que da la concentración de AMP cíclico en un punto de coordenadas <span class="math inline">\((x,y,z)\)</span> es:</p>
+<p><span class="theorem-title"><strong>Ejercicio 10.22 </strong></span>La Quimiotaxis es el movimiento de los organismos dirigido por un gradiente de concentración, es decir, en la dirección en la que la concentración aumenta con más rapidez. El moho del cieno Dictyoselium discoideum muestra este comportamiento. En esta caso, las amebas unicelulares de esta especie se mueven según el gradiente de concentración de una sustancia química denominada adenosina monofosfato (AMP cíclico). Si suponemos que la expresión que da la concentración de AMP cíclico en un punto de coordenadas <span class="math inline">\((x,y,z)\)</span> es:</p>
 <p><span class="math display">\[
 C(x,y,z) = \frac{4} {{\sqrt {x^2  + y^2  + z^4  + 1} }}
 \]</span></p>
@@ -882,7 +894,7 @@ Solución
 </div>
 </div>
 <div id="exr-" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 10.19 </strong></span>Se han diseñado unas cápsulas con forma piramidal con base un rectángulo de lados a=3 cm, b=4 cm, y altura h=6 cm.</p>
+<p><span class="theorem-title"><strong>Ejercicio 10.23 </strong></span>Se han diseñado unas cápsulas con forma piramidal con base un rectángulo de lados a=3 cm, b=4 cm, y altura h=6 cm.</p>
 <ol type="a">
 <li><p>¿Cómo deben cambiar las dimensiones de la cápsula para que el volumen aumente lo más rápidamente posible? ¿Cuál sería la tasa de variación del volumen si cambian las dimensiones de la cápsula en la proporciones anteriores?</p></li>
 <li><p>Si se empiezan a cambiar las dimensiones de la cápsula de manera que el lado mayor del rectángulo disminuye la mitad de lo que aumenta el lado menor, y la altura aumenta el doble de lo que aumenta el lado menor, ¿cuál sería la tasa de variación del volumen de la cápsula en las condiciones anteriores?</p></li>
@@ -908,7 +920,7 @@ Solución
 </div>
 </div>
 <div id="exr-barra-metal" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 10.20 </strong></span>Una barra de metal de un metro de largo se calienta de manera irregular y de forma tal que a <span class="math inline">\(x\)</span> metros de su extremo izquierdo y en el instante <span class="math inline">\(t\)</span> minutos, su temperatura en grados centígrados esta dada por <span class="math inline">\(H(x,t) = 100e^{-0.1t}\operatorname{sen}(\pi xt)\)</span> con <span class="math inline">\(0\leq x \leq 1\)</span>.</p>
+<p><span class="theorem-title"><strong>Ejercicio 10.24 </strong></span>Una barra de metal de un metro de largo se calienta de manera irregular y de forma tal que a <span class="math inline">\(x\)</span> metros de su extremo izquierdo y en el instante <span class="math inline">\(t\)</span> minutos, su temperatura en grados centígrados esta dada por <span class="math inline">\(H(x,t) = 100e^{-0.1t}\operatorname{sen}(\pi xt)\)</span> con <span class="math inline">\(0\leq x \leq 1\)</span>.</p>
 <ol type="a">
 <li><p>Calcular <span class="math inline">\(\dfrac{\partial H}{\partial x}(0.2, 1)\)</span> y <span class="math inline">\(\dfrac{\partial H}{\partial x}(0.8, 1).\)</span> ¿Cuál es la interpretación práctica (en términos de temperatura) de estas derivadas parciales? Explicar por qué cada una tiene el signo que tiene.</p></li>
 <li><p>Calcular la matriz hessiana de <span class="math inline">\(H\)</span>.</p></li>
@@ -975,7 +987,7 @@ Solución
 </div>
 </div>
 <div id="exr-derivada-direccional-nula" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 10.21 </strong></span>¿En qué direcciones se anulará la derivada direccional de la función</p>
+<p><span class="theorem-title"><strong>Ejercicio 10.25 </strong></span>¿En qué direcciones se anulará la derivada direccional de la función</p>
 <p><span class="math display">\[
 f(x,y)=\frac{x^2-y^2}{x^2+y^2}
 \]</span></p>
@@ -998,7 +1010,7 @@ Solución
 </div>
 </div>
 <div id="exr-derivada-direccional" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 10.22 </strong></span>¿Existe alguna dirección en la que la derivada direccional en el punto <span class="math inline">\(P=(1,2)\)</span> de la función <span class="math inline">\(f(x,y) = x^2-3xy+4y^2\)</span> valga 14?</p>
+<p><span class="theorem-title"><strong>Ejercicio 10.26 </strong></span>¿Existe alguna dirección en la que la derivada direccional en el punto <span class="math inline">\(P=(1,2)\)</span> de la función <span class="math inline">\(f(x,y) = x^2-3xy+4y^2\)</span> valga 14?</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-21-contents" aria-controls="callout-21" aria-expanded="false" aria-label="Toggle callout">
@@ -1017,7 +1029,7 @@ Solución
 </div>
 </div>
 <div id="exr-derivada-direccional-2" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 10.23 </strong></span>La derivada direccional de una función <span class="math inline">\(f\)</span> en un punto <span class="math inline">\(P\)</span> es máxima en la dirección del vector <span class="math inline">\((1,1,-1)\)</span> y su valor es <span class="math inline">\(2\sqrt{3}\)</span>. ¿Cuánto vale la derivada direccional de <span class="math inline">\(f\)</span> en <span class="math inline">\(P\)</span> en la dirección del vector <span class="math inline">\((1,1,0)\)</span>?</p>
+<p><span class="theorem-title"><strong>Ejercicio 10.27 </strong></span>La derivada direccional de una función <span class="math inline">\(f\)</span> en un punto <span class="math inline">\(P\)</span> es máxima en la dirección del vector <span class="math inline">\((1,1,-1)\)</span> y su valor es <span class="math inline">\(2\sqrt{3}\)</span>. ¿Cuánto vale la derivada direccional de <span class="math inline">\(f\)</span> en <span class="math inline">\(P\)</span> en la dirección del vector <span class="math inline">\((1,1,0)\)</span>?</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-22-contents" aria-controls="callout-22" aria-expanded="false" aria-label="Toggle callout">
@@ -1036,7 +1048,7 @@ Solución
 </div>
 </div>
 <div id="exr-derivada-direccional-3" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 10.24 </strong></span>Dado el campo escalar</p>
+<p><span class="theorem-title"><strong>Ejercicio 10.28 </strong></span>Dado el campo escalar</p>
 <p><span class="math display">\[
 f(x,y,z) = x^2-y^2+xyz^3-zx,
 \]</span></p>
@@ -1065,7 +1077,7 @@ Solución
 </div>
 </div>
 <div id="exr-ajuste-minimos-cuadrados" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 10.25 </strong></span>En el ajuste de regresión de una recta <span class="math inline">\(y=a+bx\)</span>, se suele utilizar la técnica de mínimos cuadrados que consisten en buscar los valores de <span class="math inline">\(a\)</span> y <span class="math inline">\(b\)</span> que hacen mínima la función</p>
+<p><span class="theorem-title"><strong>Ejercicio 10.29 </strong></span>En el ajuste de regresión de una recta <span class="math inline">\(y=a+bx\)</span>, se suele utilizar la técnica de mínimos cuadrados que consisten en buscar los valores de <span class="math inline">\(a\)</span> y <span class="math inline">\(b\)</span> que hacen mínima la función</p>
 <p><span class="math display">\[
 f(a,b)= \sum_{i=1}^{n}(y_i-a-bx_i)^2,
 \]</span></p>

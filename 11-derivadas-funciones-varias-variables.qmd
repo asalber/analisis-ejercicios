@@ -1,5 +1,5 @@
 ---
-title: Funciones de varias variables
+title: Derivadas de funciones de varias variables
 lang: es
 execute:
   echo: false
@@ -561,11 +561,27 @@ donde $u$ y $v$ son funciones de una variable real.
 
 :::{.callout-tip collapse="true"}
 ## Solución
-
+En un equilibrio químico, la concentración de una sustancia $z$ depende de las concentraciones de otras dos sustancias $x$ e $y$ según la ecuación $\frac{z}{\sqrt{xy}}-\ln\left(\frac{x+y}{y}\right) = 0$. Usar el diferencial para predecir la variación que experimentará la concentración de $z$ si la concentración de $x$ aumenta $0.1$ mg/mm$^3$ y la de $y$ disminuye $0.2$ mg/$mm^3$ en el instante en que las concentraciones de $x$ e $y$ son 1 mg/mm$^3$.
 :::
 
 :::{#exr-variacion-volumen-cilindro}
-Un cilindro metálico de radio 30cm y algura 50cm  se dilata de manera que la tasa de variación de su radio es 1 cm/s y la tasa de variación de su altura es 2 cm/s. ¿Cuál es la tasa de variación de su volumen?
+Un cilindro metálico de radio 30cm y altura 50cm  se dilata de manera que la tasa de variación de su radio es 1 cm/s y la tasa de variación de su altura es 2 cm/s. ¿Cuál es la tasa de variación de su volumen?
+:::
+
+:::{#exr-distancia-planetas}
+Dos planetas se mueven en un mismo plano describiendo órbitas dadas por las funciones vectoriales $f(t) = (2 \cos(t), \operatorname{sen}(2t))$ y $g(t) = (2\operatorname{sen}(t/2), 3\cos(t))$. ¿Cómo varía la distancia entre los planetas en el instante $t=\pi/2$?
+:::
+
+:::{#exr-transmision-errores-caudal-fuente}
+Para calcular el caudal de una fuente se ha llenado un depósito de base cuadrada $30\pm 0.2$ cm y altura $50\pm 0.3$ cm en un tiempo de $20\pm 0.5$ s. Expresar el caudal de la fuente incluyendo error en la medida.
+:::
+
+:::{#exr-transmision-errores-potencial-electrico}
+La potencia eléctrica $P$ en un circuito depende de el voltaje $E$ y la resistencia $R$ según la fórmula $P = E^2/R$. Si los errores cometidos al medir el voltaje y la resistencia son de un 1% y un 2% respectivamente, ¿cuál será el error relativo en el cálculo de la potencia cuando se aplican 100 voltios a una resistencia de 1500 ohmios?
+:::
+
+:::{#exr-vector-gradiente-normal-curvas-nivle}
+Sea $f(x,y,z)=0$ la ecuación que define una superficie en el espacio real.  Demostrar que el vector gradiente de $f$ en cualquier punto $(a, b, c)$ es normal a la superficie en ese punto.
 :::
 
 
