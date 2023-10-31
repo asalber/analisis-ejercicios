@@ -468,7 +468,7 @@ $$
 $$
 por lo que $x_n$ no sería cota superior de $A$, así que, necesariamente $x$ tiene que ser cota superior de $A$.
 
-b. Como $\overline{(a,b)}$ es un conjunto cerrado, para demostrar la proposición basta aplicar este [teorema](https://aprendeconalf.es/analisis-manual/sucesiones.html#thm-sucesiones-conjuntos-cerrados).
+b. Como $\overline{(a,b)}$ es un conjunto cerrado, para demostrar la proposición basta aplicar este [teorema](https://aprendeconalf.es/analisis-manual/04-sucesiones.html#thm-sucesiones-conjuntos-cerrados).
 
 c. Veamos que la proposición es falsa con un contraejemplo. La sucesión $x_1=1$ y $x_{n+1}=\frac{1}{1+x_n}$ $\forall n=2,3,\ldots$ está formada por números racionales, sin embargo, su límite es el número irracional $\varphi=\frac{1+\sqrt{5}}{2}=1.618033988749\ldots$ (ver @exr-numero-aureo).
 :::

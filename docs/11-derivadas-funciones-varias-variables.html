@@ -823,17 +823,15 @@ Solución
 <div id="exr-transmision-errores-potencial-electrico" class="theorem exercise">
 <p><span class="theorem-title"><strong>Ejercicio 10.19 </strong></span>La potencia eléctrica <span class="math inline">\(P\)</span> en un circuito depende de el voltaje <span class="math inline">\(E\)</span> y la resistencia <span class="math inline">\(R\)</span> según la fórmula <span class="math inline">\(P = E^2/R\)</span>. Si los errores cometidos al medir el voltaje y la resistencia son de un 1% y un 2% respectivamente, ¿cuál será el error relativo en el cálculo de la potencia cuando se aplican 100 voltios a una resistencia de 1500 ohmios?</p>
 </div>
-<div id="exr-vector-gradiente-normal-curvas-nivle" class="theorem exercise">
+<div id="exr-vector-gradiente-normal-curvas-nivel" class="theorem exercise">
 <p><span class="theorem-title"><strong>Ejercicio 10.20 </strong></span>Sea <span class="math inline">\(f(x,y,z)=0\)</span> la ecuación que define una superficie en el espacio real. Demostrar que el vector gradiente de <span class="math inline">\(f\)</span> en cualquier punto <span class="math inline">\((a, b, c)\)</span> es normal a la superficie en ese punto.</p>
 </div>
-<div id="exr-potencial-electrico" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 10.21 </strong></span>La relación que modeliza el potencial eléctrico <span class="math inline">\(V\)</span> de un punto del plano en función de su distancia, es <span class="math inline">\(V=\log D\)</span>, donde <span class="math inline">\(D=\sqrt{x^2+y^2}\)</span>.</p>
-<ol type="a">
-<li><p>Calcular el gradiente de <span class="math inline">\(V\)</span>.</p></li>
-<li><p>Hallar la dirección de máxima variación del potencial eléctrico en el punto <span class="math inline">\((x,y)=(\sqrt{3},\sqrt{3})\)</span>.</p></li>
-<li><p>Calcular la matriz Hessiana y el Hessiano de <span class="math inline">\(V\)</span> en el punto anterior.</p></li>
-<li><p>Si nos movemos a lo largo de la curva <span class="math inline">\(y=x+1\)</span>, cuál será el mínimo potencial alcanzado?</p></li>
-</ol>
+<div id="exr-ameba" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 10.21 </strong></span>La Quimiotaxis es el movimiento de los organismos dirigido por un gradiente de concentración, es decir, en la dirección en la que la concentración aumenta con más rapidez. El moho del cieno Dictyoselium discoideum muestra este comportamiento. En esta caso, las amebas unicelulares de esta especie se mueven según el gradiente de concentración de una sustancia química denominada adenosina monofosfato (AMP cíclico). Si suponemos que la expresión que da la concentración de AMP cíclico en un punto de coordenadas <span class="math inline">\((x,y,z)\)</span> es:</p>
+<p><span class="math display">\[
+C(x,y,z) = \frac{4} {{\sqrt {x^2  + y^2  + z^4  + 1} }}
+\]</span></p>
+<p>y se sitúa una ameba de moho del cieno en el punto <span class="math inline">\((-1,0,1)\)</span>, ¿en qué dirección se moverá la ameba?</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-16-contents" aria-controls="callout-16" aria-expanded="false" aria-label="Toggle callout">
@@ -846,6 +844,163 @@ Solución
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
 <div id="callout-16" class="callout-16-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><span class="math inline">\((4/\sqrt{27}, 0, -8/\sqrt{27})\)</span>.</p>
+</div>
+</div>
+</div>
+<div id="exr-derivada-direccional-gas-perfecto" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 10.22 </strong></span>Se sabe que un gas perfecto a una presión de <span class="math inline">\(1\)</span> atmósfera y una temperatura de <span class="math inline">\(273.1\)</span> K ocupa un volumen de <span class="math inline">\(22.4\)</span> litros.</p>
+<ol type="a">
+<li><p>¿En qué dirección deben cambiarse la presión y la temperatura para conseguir el mayor aumento del volumen?</p></li>
+<li><p>¿Cómo varía el volumen si comenzamos a incrementar la temperatura a razón del doble del incremento de la presión?</p></li>
+</ol>
+</div>
+<div id="exr-derivada-direccional-capsulas" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 10.23 </strong></span>Se han diseñado unas cápsulas con forma piramidal con base un rectángulo de lados a=3 cm, b=4 cm, y altura h=6 cm.</p>
+<ol type="a">
+<li><p>¿Cómo deben cambiar las dimensiones de la cápsula para que el volumen aumente lo más rápidamente posible? ¿Cuál sería la tasa de variación del volumen si cambian las dimensiones de la cápsula en la proporciones anteriores?</p></li>
+<li><p>Si se empiezan a cambiar las dimensiones de la cápsula de manera que el lado mayor del rectángulo disminuye la mitad de lo que aumenta el lado menor, y la altura aumenta el doble de lo que aumenta el lado menor, ¿cuál sería la tasa de variación del volumen de la cápsula en las condiciones anteriores?</p></li>
+</ol>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-17-contents" aria-controls="callout-17" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-17" class="callout-17-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="a">
+<li><p><span class="math inline">\(\nabla V(3,4,6)=(8,6,4)\)</span> y el volumen aumentará <span class="math inline">\(|\nabla V(3,4,6)|=10.7703\)</span> cm<span class="math inline">\(^3\)</span>/s si cambiamos las dimensiones de la cápsula siguiendo esta dirección.</p></li>
+<li><p>Derivada direccional de <span class="math inline">\(V\)</span> en <span class="math inline">\((3,4,6)\)</span> siguiendo la dirección del vector <span class="math inline">\(\mathbf{u}=(1,-1/2,2)\)</span>: <span class="math inline">\(V'_\mathbf{u}(3,4,6)=5.6737\)</span> cm<span class="math inline">\(^3\)</span>/s.</p></li>
+</ol>
+</div>
+</div>
+</div>
+<div id="exr-derivada-direccional-nula" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 10.24 </strong></span>¿En qué direcciones se anulará la derivada direccional de la función</p>
+<p><span class="math display">\[
+f(x,y)=\frac{x^2-y^2}{x^2+y^2}
+\]</span></p>
+<p>en el punto <span class="math inline">\(P=(1,1)\)</span>?</p>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-18-contents" aria-controls="callout-18" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-18" class="callout-18-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>En la dirección <span class="math inline">\((1/\sqrt{2},1/\sqrt{2})\)</span>.</p>
+</div>
+</div>
+</div>
+<div id="exr-derivada-direccional" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 10.25 </strong></span>¿Existe alguna dirección en la que la derivada direccional en el punto <span class="math inline">\(P=(1,2)\)</span> de la función <span class="math inline">\(f(x,y) = x^2-3xy+4y^2\)</span> valga 14?</p>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-19-contents" aria-controls="callout-19" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-19" class="callout-19-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>No.</p>
+</div>
+</div>
+</div>
+<div id="exr-derivada-direccional-2" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 10.26 </strong></span>La derivada direccional de una función <span class="math inline">\(f\)</span> en un punto <span class="math inline">\(P\)</span> es máxima en la dirección del vector <span class="math inline">\((1,1,-1)\)</span> y su valor es <span class="math inline">\(2\sqrt{3}\)</span>. ¿Cuánto vale la derivada direccional de <span class="math inline">\(f\)</span> en <span class="math inline">\(P\)</span> en la dirección del vector <span class="math inline">\((1,1,0)\)</span>?</p>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-20-contents" aria-controls="callout-20" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-20" class="callout-20-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><span class="math inline">\(2\sqrt{2}\)</span>.</p>
+</div>
+</div>
+</div>
+<div id="exr-derivada-direccional-3" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 10.27 </strong></span>Dado el campo escalar</p>
+<p><span class="math display">\[
+f(x,y,z) = x^2-y^2+xyz^3-zx,
+\]</span></p>
+<ol type="a">
+<li><p>Calcular la derivada direccional de <span class="math inline">\(f\)</span> en <span class="math inline">\((1,2,3)\)</span> a lo largo del vector unitario <span class="math inline">\(\mathbf{u}=\frac{1}{\sqrt2}(1,-1,0)\)</span>.</p></li>
+<li><p>¿En qué dirección es máxima la derivada direccional de <span class="math inline">\(f\)</span> en el punto anterior? Obtener el valor de dicha derivada direccional.</p></li>
+</ol>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-21-contents" aria-controls="callout-21" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-21" class="callout-21-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="a">
+<li><p><span class="math inline">\(15\sqrt{2}\)</span>.</p></li>
+<li><p>La derivada direccional es máxima en la dirección del gradiente <span class="math inline">\((53,23,53)\)</span> y vale <span class="math inline">\(\sqrt{6147}\)</span>.</p></li>
+</ol>
+</div>
+</div>
+</div>
+<div id="exr-funcion-homogenea" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 10.28 </strong></span>Una función <span class="math inline">\(f(x,y)\)</span> se llama homogénea de grado <span class="math inline">\(n\)</span> si satisface que <span class="math inline">\(f(tx, ty) = t^nf(x,y)\)</span>. Demostrar que si <span class="math inline">\(f\)</span> es homogénea de grado $n4 se cumplen las ecuaciones</p>
+<p><span class="math display">\[
+\begin{gathered}
+x\frac{\partial f}{\partial x} + y \frac{\partial f}{\partial y} = nf(x,y),\\
+x^2\frac{\partial^2 f}{\partial x^2} + 2xy \frac{\partial^2 f}{\partial x \partial y} + y^2 \frac{\partial^2 f}{\partial y^2} = n(n-1)f(x,y).
+\end{gathered}
+\]</span></p>
+</div>
+<div id="exr-potencial-electrico" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 10.29 </strong></span>La relación que modeliza el potencial eléctrico <span class="math inline">\(V\)</span> de un punto del plano en función de su distancia, es <span class="math inline">\(V=\log D\)</span>, donde <span class="math inline">\(D=\sqrt{x^2+y^2}\)</span>.</p>
+<ol type="a">
+<li><p>Calcular el gradiente de <span class="math inline">\(V\)</span>.</p></li>
+<li><p>Hallar la dirección de máxima variación del potencial eléctrico en el punto <span class="math inline">\((x,y)=(\sqrt{3},\sqrt{3})\)</span>.</p></li>
+<li><p>Calcular la matriz Hessiana y el Hessiano de <span class="math inline">\(V\)</span> en el punto anterior.</p></li>
+<li><p>Si nos movemos a lo largo de la curva <span class="math inline">\(y=x+1\)</span>, cuál será el mínimo potencial alcanzado?</p></li>
+</ol>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-22-contents" aria-controls="callout-22" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-22" class="callout-22-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ol type="a">
 <li><p><span class="math inline">\(\nabla V(x,y) = \left( \frac{x}{x^2+y^2},\frac{y}{x^2+y^2}\right)\)</span>.</p>
@@ -870,64 +1025,15 @@ HV(x,y) = \left(
 </div>
 </div>
 </div>
-<div id="exr-ameba" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 10.22 </strong></span>La Quimiotaxis es el movimiento de los organismos dirigido por un gradiente de concentración, es decir, en la dirección en la que la concentración aumenta con más rapidez. El moho del cieno Dictyoselium discoideum muestra este comportamiento. En esta caso, las amebas unicelulares de esta especie se mueven según el gradiente de concentración de una sustancia química denominada adenosina monofosfato (AMP cíclico). Si suponemos que la expresión que da la concentración de AMP cíclico en un punto de coordenadas <span class="math inline">\((x,y,z)\)</span> es:</p>
-<p><span class="math display">\[
-C(x,y,z) = \frac{4} {{\sqrt {x^2  + y^2  + z^4  + 1} }}
-\]</span></p>
-<p>y se sitúa una ameba de moho del cieno en el punto <span class="math inline">\((-1,0,1)\)</span>, ¿en qué dirección se moverá la ameba?</p>
-</div>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-17-contents" aria-controls="callout-17" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Solución
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-17" class="callout-17-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p><span class="math inline">\((4/\sqrt{27}, 0, -8/\sqrt{27})\)</span>.</p>
-</div>
-</div>
-</div>
-<div id="exr-" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 10.23 </strong></span>Se han diseñado unas cápsulas con forma piramidal con base un rectángulo de lados a=3 cm, b=4 cm, y altura h=6 cm.</p>
-<ol type="a">
-<li><p>¿Cómo deben cambiar las dimensiones de la cápsula para que el volumen aumente lo más rápidamente posible? ¿Cuál sería la tasa de variación del volumen si cambian las dimensiones de la cápsula en la proporciones anteriores?</p></li>
-<li><p>Si se empiezan a cambiar las dimensiones de la cápsula de manera que el lado mayor del rectángulo disminuye la mitad de lo que aumenta el lado menor, y la altura aumenta el doble de lo que aumenta el lado menor, ¿cuál sería la tasa de variación del volumen de la cápsula en las condiciones anteriores?</p></li>
-</ol>
-</div>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-18-contents" aria-controls="callout-18" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Solución
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-18" class="callout-18-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<ol type="a">
-<li><p><span class="math inline">\(\nabla V(3,4,6)=(8,6,4)\)</span> y el volumen aumentará <span class="math inline">\(|\nabla V(3,4,6)|=10.7703\)</span> cm<span class="math inline">\(^3\)</span>/s si cambiamos las dimensiones de la cápsula siguiendo esta dirección.</p></li>
-<li><p>Derivada direccional de <span class="math inline">\(V\)</span> en <span class="math inline">\((3,4,6)\)</span> siguiendo la dirección del vector <span class="math inline">\(\mathbf{u}=(1,-1/2,2)\)</span>: <span class="math inline">\(V'_\mathbf{u}(3,4,6)=5.6737\)</span> cm<span class="math inline">\(^3\)</span>/s.</p></li>
-</ol>
-</div>
-</div>
-</div>
 <div id="exr-barra-metal" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 10.24 </strong></span>Una barra de metal de un metro de largo se calienta de manera irregular y de forma tal que a <span class="math inline">\(x\)</span> metros de su extremo izquierdo y en el instante <span class="math inline">\(t\)</span> minutos, su temperatura en grados centígrados esta dada por <span class="math inline">\(H(x,t) = 100e^{-0.1t}\operatorname{sen}(\pi xt)\)</span> con <span class="math inline">\(0\leq x \leq 1\)</span>.</p>
+<p><span class="theorem-title"><strong>Ejercicio 10.30 </strong></span>Una barra de metal de un metro de largo se calienta de manera irregular y de forma tal que a <span class="math inline">\(x\)</span> metros de su extremo izquierdo y en el instante <span class="math inline">\(t\)</span> minutos, su temperatura en grados centígrados esta dada por <span class="math inline">\(H(x,t) = 100e^{-0.1t}\operatorname{sen}(\pi xt)\)</span> con <span class="math inline">\(0\leq x \leq 1\)</span>.</p>
 <ol type="a">
 <li><p>Calcular <span class="math inline">\(\dfrac{\partial H}{\partial x}(0.2, 1)\)</span> y <span class="math inline">\(\dfrac{\partial H}{\partial x}(0.8, 1).\)</span> ¿Cuál es la interpretación práctica (en términos de temperatura) de estas derivadas parciales? Explicar por qué cada una tiene el signo que tiene.</p></li>
 <li><p>Calcular la matriz hessiana de <span class="math inline">\(H\)</span>.</p></li>
 </ol>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-19-contents" aria-controls="callout-19" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-23-contents" aria-controls="callout-23" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -936,7 +1042,7 @@ Solución
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-19" class="callout-19-contents callout-collapse collapse">
+<div id="callout-23" class="callout-23-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ol type="a">
 <li><p>La derivada parcial de <span class="math inline">\(H\)</span> con respecto a <span class="math inline">\(x\)</span> es</p>
@@ -986,98 +1092,8 @@ Solución
 </div>
 </div>
 </div>
-<div id="exr-derivada-direccional-nula" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 10.25 </strong></span>¿En qué direcciones se anulará la derivada direccional de la función</p>
-<p><span class="math display">\[
-f(x,y)=\frac{x^2-y^2}{x^2+y^2}
-\]</span></p>
-<p>en el punto <span class="math inline">\(P=(1,1)\)</span>?</p>
-</div>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-20-contents" aria-controls="callout-20" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Solución
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-20" class="callout-20-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p>En la dirección <span class="math inline">\((1/\sqrt{2},1/\sqrt{2})\)</span>.</p>
-</div>
-</div>
-</div>
-<div id="exr-derivada-direccional" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 10.26 </strong></span>¿Existe alguna dirección en la que la derivada direccional en el punto <span class="math inline">\(P=(1,2)\)</span> de la función <span class="math inline">\(f(x,y) = x^2-3xy+4y^2\)</span> valga 14?</p>
-</div>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-21-contents" aria-controls="callout-21" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Solución
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-21" class="callout-21-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p>No.</p>
-</div>
-</div>
-</div>
-<div id="exr-derivada-direccional-2" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 10.27 </strong></span>La derivada direccional de una función <span class="math inline">\(f\)</span> en un punto <span class="math inline">\(P\)</span> es máxima en la dirección del vector <span class="math inline">\((1,1,-1)\)</span> y su valor es <span class="math inline">\(2\sqrt{3}\)</span>. ¿Cuánto vale la derivada direccional de <span class="math inline">\(f\)</span> en <span class="math inline">\(P\)</span> en la dirección del vector <span class="math inline">\((1,1,0)\)</span>?</p>
-</div>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-22-contents" aria-controls="callout-22" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Solución
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-22" class="callout-22-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p><span class="math inline">\(2\sqrt{2}\)</span>.</p>
-</div>
-</div>
-</div>
-<div id="exr-derivada-direccional-3" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 10.28 </strong></span>Dado el campo escalar</p>
-<p><span class="math display">\[
-f(x,y,z) = x^2-y^2+xyz^3-zx,
-\]</span></p>
-<ol type="a">
-<li><p>Calcular la derivada direccional de <span class="math inline">\(f\)</span> en <span class="math inline">\((1,2,3)\)</span> a lo largo del vector unitario <span class="math inline">\(\mathbf{u}=\frac{1}{\sqrt2}(1,-1,0)\)</span>.</p></li>
-<li><p>¿En qué dirección es máxima la derivada direccional de <span class="math inline">\(f\)</span> en el punto anterior? Obtener el valor de dicha derivada direccional.</p></li>
-</ol>
-</div>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-23-contents" aria-controls="callout-23" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Solución
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-23" class="callout-23-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<ol type="a">
-<li><p><span class="math inline">\(15\sqrt{2}\)</span>.</p></li>
-<li><p>La derivada direccional es máxima en la dirección del gradiente <span class="math inline">\((53,23,53)\)</span> y vale <span class="math inline">\(\sqrt{6147}\)</span>.</p></li>
-</ol>
-</div>
-</div>
-</div>
 <div id="exr-ajuste-minimos-cuadrados" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 10.29 </strong></span>En el ajuste de regresión de una recta <span class="math inline">\(y=a+bx\)</span>, se suele utilizar la técnica de mínimos cuadrados que consisten en buscar los valores de <span class="math inline">\(a\)</span> y <span class="math inline">\(b\)</span> que hacen mínima la función</p>
+<p><span class="theorem-title"><strong>Ejercicio 10.31 </strong></span>En el ajuste de regresión de una recta <span class="math inline">\(y=a+bx\)</span>, se suele utilizar la técnica de mínimos cuadrados que consisten en buscar los valores de <span class="math inline">\(a\)</span> y <span class="math inline">\(b\)</span> que hacen mínima la función</p>
 <p><span class="math display">\[
 f(a,b)= \sum_{i=1}^{n}(y_i-a-bx_i)^2,
 \]</span></p>
