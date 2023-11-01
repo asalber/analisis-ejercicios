@@ -320,11 +320,6 @@ a. Calcular el gradiente de la cantidad de agua almacenada.
 a. Suponiendo que hubiese algún año en el que el consumo fuese nulo, ¿qué condición tendría­ que cumplir la temperatura para que la derivada del agua almacenada con respecto a la temperatura fuese igual a la derivada con respecto a la precipitación?
 :::
 
-:::{.callout-tip collapse="true"}
-## Solución
-
-:::
-
 :::{#exr-normal-bidimensional}
 La variable aleatoria bidimensional $(X,Y)$ con función de densidad
 
@@ -344,175 +339,6 @@ $$
 $$
 
 El gradiente se anula en $(x=\mu_x, y=\mu_y)$ y $\lim_{x\rightarrow \infty}f(x,y) = 0$.
-:::
-
-:::{#exr-ecuacion-laplace}
-La ecuación diferencial parcial
-
-$$
-\frac{\partial^2 u}{\partial x^2} + \frac{\partial^2 u}{\partial y^2} + \frac{\partial^2 u}{\partial z^2} = 0,
-$$
-
-se conoce como ecuación de Laplace y se aplica a multitud de fenómenos relacionadas con la conducción de calor, el flujo de fluidos o el potencial eléctrico.
-
-a. Comprobar que la función $u(x,y,z)=\dfrac{1}{\sqrt{x^2 + y^2 + z^2}}$ satisface la ecuación de Laplace.
-
-a. ¿Existe algún punto en el que el crecimiento de la función sea nulo?
-
-a. Si fijamos $z=1$, calcular $\frac{\partial^4u}{\partial x^2\partial y^2}$.
-:::
-
-:::{.callout-tip collapse="true"}
-## Solución
-a.  Para comprobar que $u(x,y,z)$ satisface la ecuación de Laplace
-calculamos las tres derivadas parciales segundas que intervienen en
-la ecuación. Comenzando con las derivadas parciales con respecto a
-la variable $x$, obtenemos:
-
-$$
-u(x,y,z) = \frac{1}{{\sqrt {x^2  + y^2  + z^2 } }} = \left( {x^2  +
-y^2  + z^2 } \right)^{ - 1/2}
-$$
-
-$$
-\frac{{\partial u}}{{\partial x}} =  - \frac{1}{2}\left( {x^2  + y^2
-+ z^2 } \right)^{ - 3/2} 2x =  - x\left( {x^2  + y^2  + z^2 }
-\right)^{ - 3/2}
-$$
-
-$$
-\frac{{\partial ^2 u}}{{\partial x^2 }} = \frac{\partial }{{\partial
-x}}\left( { - x\left( {x^2  + y^2  + z^2 } \right)^{ - 3/2} }
-\right) =  - \left( {x^2  + y^2  + z^2 } \right)^{ - 3/2}  + 3x^2
-\left( {x^2  + y^2  + z^2 } \right)^{ - 5/2}
-$$
-
-e igualmente para las variables $y$ y $z$, tenemos:
-
-$$
-\frac{{\partial u}}{{\partial y}} =  - y\left( {x^2  + y^2  + z^2 }
-\right)^{ - 3/2}
-$$
-
-$$
-\frac{{\partial ^2 u}}{{\partial y^2 }} =  - \left( {x^2  + y^2  +
-z^2 } \right)^{ - 3/2}  + 3y^2 \left( {x^2  + y^2  + z^2 } \right)^{
-- 5/2}
-$$
-
-$$
-\frac{{\partial u}}{{\partial z}} =  - z\left( {x^2  + y^2  + z^2 }
-\right)^{ - 3/2}
-$$
-
-$$
-\frac{{\partial ^2 u}}{{\partial z^2 }} =  - \left( {x^2  + y^2  +
-z^2 } \right)^{ - 3/2}  + 3z^2 \left( {x^2  + y^2  + z^2 } \right)^{
-- 5/2}
-$$
-
-Por lo tanto:
-$$
-\frac{{\partial ^2 u}}{{\partial x^2 }} + \frac{{\partial ^2
-u}}{{\partial y^2 }} + \frac{{\partial ^2 u}}{{\partial z^2 }} =  -
-3\left( {x^2  + y^2  + z^2 } \right)^{ - 3/2}  + 3\left( {x^2  + y^2
-+ z^2 } \right)\left( {x^2  + y^2  + z^2 } \right)^{ - 5/2}  =
-$$
-
-$$
-=- 3\left( {x^2  + y^2  + z^2 } \right)^{ - 3/2}  + 3\left( {x^2  +
-y^2 + z^2 } \right)^{ - 3/2}  = 0
-$$
-
-a.  Una condición necesaria para que el crecimiento de una función de varias variables en un punto sea nulo es que el gradiente en dicho punto se anule, y el gradiente se anula si se anulan sus tres
-componentes:
-
-$$
-\vec \nabla u = \vec 0 \Leftrightarrow \left( {\frac{{\partial
-u}}{{\partial x}},\frac{{\partial u}}{{\partial y}},\frac{{\partial
-u}}{{\partial z}}} \right) = \left( {0,0,0} \right)
-$$
-
-Por lo tanto, tenemos un sistema no lineal de tres ecuaciones con
-tres incógnitas:
-
-$$
- - x\left( {x^2  + y^2  + z^2 } \right)^{ - 3/2}  = 0
-$$
-
-$$
- - y\left( {x^2  + y^2  + z^2 } \right)^{ - 3/2}  = 0
-$$
-
-$$
- - z\left( {x^2  + y^2  + z^2 } \right)^{ - 3/2}  = 0
-$$
-
-Y teniendo en cuenta que el término $(x^2+y^2+z^2)$, por tratarse de
-una suma de cuadrados, únicamente puede ser 0 si $x=y=z=0$; y a
-igual conclusión llegamos si suponemos que es distinto de 0, ya que
-entonces la primera ecuación implica que necesariamente $x=0$, la
-segunda implica que $y=0$, y la tercera implica que $z=0$. Por lo
-tanto, concluimos que el único punto en el que el crecimiento puede
-ser nulo es $(x,y,z)=(0,0,0)$, pero dicho punto no pertenece al
-dominio de definición de la función (tendríamos un cero como
-denominador de una fracción), por lo que no hay ningún punto en el
-que la función presente un crecimiento nulo.
-
-a. Suponiendo $z=1$, la función resultante presenta únicamente
-dos variables:
-
-$$
-u(x,y,1) = \frac{1}{{\sqrt {x^2  + y^2  + 1} }} = \left( {x^2  + y^2
-+ 1} \right)^{ - 1/2}
-$$
-
-La derivada propuesta es:
-
-$$
-\frac{{\partial ^4 u}}{{\partial x^2 \partial y^2 }} =
-\frac{\partial }{{\partial x}}\left( {\frac{\partial }{{\partial
-x}}\left( {\frac{\partial }{{\partial y}}\left( {\frac{{\partial
-u}}{{\partial y}}} \right)} \right)} \right)
-$$
-
-en donde, como ya sabemos, se puede cambiar el orden de derivación
-sin que afecte al resultado final, aunque nunca el número total de
-derivadas con respecto a cada variable.
-
-Operando como ya hicimos en los cálculos previos de las derivadas
-segundas, obtenemos:
-
-$$
-\frac{{\partial u}}{{\partial y}} =  - y\left( {x^2  + y^2  + 1}
-\right)^{ - 3/2}
-$$
-
-$$
-\frac{\partial }{{\partial y}}\left( {\frac{{\partial u}}{{\partial
-y}}} \right) = \frac{{\partial ^2 u}}{{\partial y^2 }} =  - \left(
-{x^2  + y^2  + 1} \right)^{ - 3/2}  + 3y^2 \left( {x^2  + y^2  + 1}
-\right)^{ - 5/2}
-$$
-
-$$
-\frac{\partial }{{\partial x}}\left( {\frac{{\partial ^2
-u}}{{\partial y^2 }}} \right) = \frac{{\partial ^3 u}}{{\partial
-x\partial y^2 }} = 3x\left( {x^2  + y^2  + 1} \right)^{ - 5/2}  -
-15y^2 x\left( {x^2  + y^2  + 1} \right)^{ - 7/2}
-$$
-
-$$
-\frac{\partial }{{\partial x}}\left( {\frac{{\partial ^3
-u}}{{\partial x\partial y^2 }}} \right) = \frac{{\partial ^4
-u}}{{\partial x^2 \partial y^2 }} =
-$$
-
-$$
-=3\left( {x^2  + y^2  + 1} \right)^{ - 5/2}  - 15\left( {x^2  + y^2
-} \right)\left( {x^2  + y^2 + 1} \right)^{ - 7/2}  + 105x^2 y\left(
-{x^2  + y^2  + 1} \right)^{ - 9/2}
-$$
 :::
 
 :::{#exr-polea}
@@ -569,7 +395,7 @@ Un cilindro metálico de radio 30cm y altura 50cm  se dilata de manera que la ta
 :::
 
 :::{#exr-distancia-planetas}
-Dos planetas se mueven en un mismo plano describiendo órbitas dadas por las funciones vectoriales $f(t) = (2 \cos(t), \operatorname{sen}(2t))$ y $g(t) = (2\operatorname{sen}(t/2), 3\cos(t))$. ¿Cómo varía la distancia entre los planetas en el instante $t=\pi/2$?
+Dos planetas se mueven en un mismo plano describiendo órbitas dadas por las funciones vectoriales $f(t) = (2 \cos(t), \operatorname{sen}(t))$ y $g(t) = (3\operatorname{sen}(t/2), 2\cos(t/2))$. Usar la regla de la cadena para funciones de varias variables para calcular la derivada de la distancia entre los planetas en el instante $t=\pi/2$. ¿Los planetas se están acercando o alejando?
 :::
 
 :::{#exr-transmision-errores-caudal-fuente}
@@ -578,10 +404,6 @@ Para calcular el caudal de una fuente se ha llenado un depósito de base cuadrad
 
 :::{#exr-transmision-errores-potencial-electrico}
 La potencia eléctrica $P$ en un circuito depende de el voltaje $E$ y la resistencia $R$ según la fórmula $P = E^2/R$. Si los errores cometidos al medir el voltaje y la resistencia son de un 1% y un 2% respectivamente, ¿cuál será el error relativo en el cálculo de la potencia cuando se aplican 100 voltios a una resistencia de 1500 ohmios?
-:::
-
-:::{#exr-vector-gradiente-normal-curvas-nivel}
-Sea $f(x,y,z)=0$ la ecuación que define una superficie en el espacio real.  Demostrar que el vector gradiente de $f$ en cualquier punto $(a, b, c)$ es normal a la superficie en ese punto.
 :::
 
 :::{#exr-ameba}
@@ -606,6 +428,8 @@ Se sabe que un gas perfecto a una presión de $1$ atmósfera y una temperatura d
 a.  ¿En qué dirección deben cambiarse la presión y la temperatura para conseguir el mayor aumento del volumen?
 
 a.  ¿Cómo varía el volumen si comenzamos a incrementar la temperatura a razón del doble del incremento de la presión?
+
+a.  ¿Cuánto tendría que aumentar la temperatura por cada atmósfera de presión que se aumente para que el volumen permanezca constante?
 :::
 
 :::{#exr-derivada-direccional-capsulas}
@@ -676,8 +500,195 @@ a. $15\sqrt{2}$.
 a. La derivada direccional es máxima en la dirección del gradiente $(53,23,53)$ y vale $\sqrt{6147}$.
 :::
 
+:::{#exr-vector-gradiente-normal-curvas-nivel}
+Sea $f(x,y,z)=0$ la ecuación que define una superficie en el espacio real.  Demostrar que el vector gradiente de $f$ en cualquier punto $(a, b, c)$ es normal a la superficie en ese punto.
+:::
+
+:::{#exr-derviada-implicita-trayectoria}
+Un cuerpo se mueve en el plano a través de los puntos de coordenadas $(x,y)$ relacionadas mediante la siguiente expresión $2e^{xy} \operatorname{sen}(x) + y\cos(x) = 2$. Calcular las ecuaciones de las rectas tangente y normal a la trayectoria del cuerpo cuando $x=0$.
+:::
+
+:::{.callout-tip collapse="true"}
+## Solución
+Veamos primero cuáles son las coordenadas del punto donde hay que calcular las rectas tangente y normal a la trayectoria. Sustituyendo $x=0$ en la ecuación anterior se tiene
+
+$$
+2e^0 \operatorname{sen} 0 + y \cos 0 = 2 \Rightarrow y  = 2,
+$$
+
+y, por tanto, se trata del punto $(0,2)$.
+
+Sabemos que la ecuación de la recta tangente a la gráfica de la función $f$ en el punto de coordenadas $(a, f(a))$ es:
+
+$$
+y-a=f'(a)(x-a)
+$$
+
+En nuestro caso, no tenemos la expresión explícita de la función $f$, pero sí que tenemos la ecuación 
+
+$$
+F(x,y) = 2e^{xy} \operatorname{sen}(x) + y\cos(x) -2  = 0,
+$$
+
+que define a $y$ como función implícita de $x$. Podemos afirmar que esta función existe en un entorno de $x=0$ ya que se cumplen las condiciones del [teorema de la función implícita](https://aprendeconalf.es/analisis-manual/13-derivadas-funciones-varias-variables.html#thm-funcion-implicita), es decir,
+
+a.  $F(0, 2) = 2e^0 \operatorname{sen}(0) + 2 \cos(0) - 2 = 0$.
+a.  $\frac{\partial F}{\partial x} = 2e^{xy}y \operatorname{sen}(x) + 2e^{xy} \cos(x) - y \operatorname{sen}(x)$.  
+    $\frac{\partial F}{\partial y} = 2e^{xy}x \operatorname{sen}(x) + \cos(x)$.  
+    Son continuas en un entorno de $(0,2)$.
+a.  $\frac{\partial F}{\partial y}(0,2) = 2e^{0\cdot 2}0 \operatorname{sen}(0) + \cos(0) = 1\neq 0$.
+
+Así pues, la derivada de $y$ con respecto a $x$ es
+
+$$
+\frac{dy}{dx} (0,2)
+= -\frac{F'_x(0,2)}{F'_y(0,2)} 
+= -\frac{2e^{0\cdot 2}2 \operatorname{sen}(0) + 2e^{0\cdot 2} \cos(0) - y \operatorname{sen}(0)}{2e^{0\cdot 2}0 \operatorname{sen}(0) + \cos(0)}
+= -\frac{2}{1} 
+= -2.
+$$
+
+Por lo tanto, la ecuación de la recta tangente es
+$$
+y-2 = -2(x-0) \Leftrightarrow y = -2x+2,
+$$
+
+y la ecuación de la recta normal es 
+
+$$
+y-2 = \frac{1}{2}(x-0) \Leftrightarrow y = \frac{1}{2}x+2.
+$$
+
+Podríamos haber llegado al mismo resultado sabiendo que $\nabla F(x,y)$ es normal a la trayectoria $F(x,y)=0$. Como $\nabla F(0,2) = (2,1)$, la ecuación vectorial de la recta normal es 
+
+$$
+(0, 2) + t (2, 1) = (2t, 2+t),
+$$
+
+y la ecuación vectorial de la recta tangente es 
+
+$$
+(0, 2) + t (1, -2) = (t, 2-2t),
+$$
+
+que son las mismas rectas calculadas antes.
+:::
+
+:::{#exr-derivada-implicita-trayectoria-extremos}
+Hallar la ecuación de la recta tangente y normal a la curva $x^2+y^2=3xy-1$ en los puntos en que $x=1$. Calcular también los extremos relativos y decir si son máximos o mínimos.
+:::
+
+:::{.callout-tip collapse="true"}
+## Solución
+Consideremos $y$ como función de $x$. Veamos primero los puntos de la curva en los que $x=1$:
+
+$$
+1^{2}+y^{2} = 3\cdot 1\cdot y-1 \Leftrightarrow y^{2} -3y+2 = 0.
+$$
+
+Resolviendo la ecuación obtenemos dos soluciones $y=1$ e $y=2$, de modo que existen dos puntos para los que $x=1$, que son el $(1,1)$ y el $(1,2)$.
+
+Para calcular las ecuaciones de las rectas tangente y normal en estos puntos, necesitamos calcular la derivada $\frac{dy}{dx}$ en dichos puntos, pero antes hay que asegurarse de que la ecuación 
+
+$$
+F(x,y) = x^2 + y^2 - 3xy + 1 = 0
+$$
+
+define a $y$ con función implícita de $x$ en un entorno de los puntos $(1, 1)$ y $(1, 2)$. Veamos que se cumplen las condiciones del [teorema de la función implícita](https://aprendeconalf.es/analisis-manual/13-derivadas-funciones-varias-variables.html#thm-funcion-implicita).
+
+a. $F(1,1) = 1^2 + 1^2 - 3\cdot 1\cdot 1 + 1 = 0$ y $F(1,2) = 1^2 + 2^4 - 3\cdot 1\cdot 2 -1 =0$.
+a. $\frac{\partial F}{\partial x}=2x-3y$ y $\frac{\partial F}{\partial y}=2y-3x$, que son continuas en todo su dominio, en particular en $(1,1)$ y $(1,2)$.
+a. $\frac{\partial F}{\partial y}(1,1) = 2\cdot 1-3\cdot 1 = -1\neq 0$ y $\frac{\partial F}{\partial y}(1,2) = 2\cdot 2-3\cdot 1 = 1\neq 0$.
+
+Así pues, $F(x,y)=0$ define a $y$ como función implícita de $x$ en un entorno de los puntos $(1,1)$ y $(1,2)$, de modo que la derivada de $y$ con respecto a $x$ en estos puntos es
+
+\begin{align*}
+\frac{dy}{dx}(1,1) 
+&= -\frac{F'_x(1,1)}{F'_y(1,1)} 
+= -\frac{2\cdot 1-3\cdot 1}{2\cdot 1-3\cdot 1} 
+= -\frac{-1}{-1} 
+= -1,\\
+\frac{dy}{dx}(1,2) 
+&= -\frac{F'_x(1,2)}{F'_y(1,2)} 
+= -\frac{2\cdot 1-3\cdot 2}{2\cdot 2-3\cdot 1} 
+= -\frac{-4}{1} 
+= 4.
+\end{align*}
+
+Así pues, la ecuación de la recta tangente en el punto $(1,1)$ es
+
+$$
+y-1 = \frac{dy}{dx}(1,1)(x-1) \Leftrightarrow y= 2-x,
+$$
+
+y la ecuación de la recta normal es
+
+$$
+y-1 = -\frac{1}{dy/dx}(1,1)(x-1) \Leftrightarrow y= x,
+$$
+
+mientras que la ecuación de la recta tangente en el punto $(1,2)$ es 
+
+$$
+y-2 = \frac{dy}{dx}(1,2)(x-1) \Leftrightarrow y= 4x-2,
+$$
+
+y la ecuación de la recta normal es
+
+$$
+y-2 = -\frac{1}{dy/dx}(1,2)(x-1) \Leftrightarrow y=\frac{9-x}{4}.
+$$
+
+Por otro lado, para calcular los extremos relativos, primero calculamos los puntos críticos, que son los que anulan la primera derivada.
+
+$$
+\frac{dy}{dx}=\frac{3y-2x}{2y-3x}=0 \Leftrightarrow 3y-2x=0 \Leftrightarrow y=2x/3.
+$$
+
+Pero además deben pertenecer a la curva de la función, y por tanto deben satisfacer la ecuación de la función.
+
+$$
+x^{2}+(2x/3)^{2}=3x(2x/3)-1 \Leftrightarrow x^{2}+4x^{2}/9 = 2x^{2}-1 \Leftrightarrow x^{2}=9/5 \Leftrightarrow x=\pm 3/\sqrt{5}.
+$$
+
+Así pues, existen dos puntos críticos que son el $(3/\sqrt{5},2/\sqrt{5})$ y $(-3/\sqrt{5},-2/\sqrt{5})$. Para ver si son puntos de máximo o mínimo relativos, necesitamos calcular la segunda derivada en dichos puntos:
+
+$$
+\frac{d^{2}y}{dx^{2}} = \frac{d}{dx}\left(\frac{3y-2x}{2y-3x}\right) = \frac{(3\frac{dy}{dx}-2)(2y-3x)-(2\frac{dy}{dx}-3)(3y-2x)}{(2y-3x)^{2}}.
+$$
+
+En el punto, $(3/\sqrt{5},2/\sqrt{5})$ la segunda derivada vale
+
+$$
+\frac{d^{2}y}{dx^{2}}(3/\sqrt{5},2/\sqrt{5})=
+\frac{(3\cdot 0-2)(2\frac{2}{\sqrt{5}}-3\frac{3}{\sqrt{5}})-(2\cdot 0-3)(3\frac{2}{\sqrt{5}}-2\frac{3}{\sqrt{5}})}{(2\frac{2}{\sqrt{5}}-3\frac{3}{\sqrt{5}})^{2}} = 2\sqrt{5},
+$$
+
+que al ser positiva, indica que el punto $(3/\sqrt{5},2/\sqrt{5})$ es un punto de mínimo relativo.
+
+En el punto, $(-3/\sqrt{5},-2/\sqrt{5})$ la segunda derivada vale
+
+$$
+\frac{d^{2}y}{dx^{2}}(-3/\sqrt{5},-2/\sqrt{5})=
+\frac{(3\cdot 0-2)(2\frac{-2}{\sqrt{5}}-3\frac{-3}{\sqrt{5}})-(2\cdot 0-3)(3\frac{-2}{\sqrt{5}}-2\frac{-3}{\sqrt{5}})}{(2\frac{-2}{\sqrt{5}}-3\frac{--3}{\sqrt{5}})^{2}} = -2\sqrt{5},
+$$
+
+que al ser negativa, indica que el punto $(-3/\sqrt{5},-2/\sqrt{5})$ es un punto de máximo relativo.
+:::
+
+:::{#exr-derivada-implicita-direccional}
+En una reacción química se cumple la ecuación 
+
+$$
+x\ln(y)+\frac{2e^{y^2+z}}{x} - \frac{x}{z^2} = -1
+$$ 
+
+donde $x$, $y$ y $z$ son las concentraciones de tres sustancias. 
+¿Cómo cambia la concentración de $z$ si empezamos a disminuir $x$ al mismo ritmo que se incrementa $y$ en el instante en que $x=2$ e $y=1$ y $z=-1$?
+:::
+
 :::{#exr-funcion-homogenea}
-Una función $f(x,y)$ se llama homogénea de grado $n$ si satisface que $f(tx, ty) = t^nf(x,y)$. Demostrar que si $f$ es homogénea de grado $n4 se cumplen las ecuaciones 
+Una función $f(x,y)$ se llama homogénea de grado $n$ si satisface que $f(tx, ty) = t^nf(x,y)$. Demostrar que si $f$ es homogénea de grado $n$ se cumplen las ecuaciones 
 
 $$
 \begin{gathered}
@@ -701,26 +712,30 @@ a. Si nos movemos a lo largo de la curva $y=x+1$, cuál será el mínimo potenci
 
 :::{.callout-tip collapse="true"}
 ## Solución
-a. $\nabla V(x,y) = \left( \frac{x}{x^2+y^2},\frac{y}{x^2+y^2}\right)$.
-\item $\nabla V(\sqrt 3, \sqrt 3) = \sqrt 3 /6(1,1)$.
+a.  $\nabla V(x,y) = \left( \frac{x}{x^2+y^2},\frac{y}{x^2+y^2}\right)$.
 
-a.  
+a.  $\nabla V(\sqrt 3, \sqrt 3) = \sqrt 3 /6(1,1)$.
 
-    $$
-    HV(x,y) = \left(
+a.  $$
+    \nabla^2V(x,y) = \left(
     \begin{array}{cc}
     \frac{y^2-x^2}{y^4+2x^2y^2+x^4} & \frac{-2xy}{y^4+2x^2y^2+x^4} \\
     \frac{-2xy}{y^4+2x^2y^2+x^4} & \frac{x^2-y^2}{y^4+2x^2y^2+x^4}
     \end{array}
-    \right),\quad
+    \right)
+    $$
+    
+    $$
+    \nabla^2V(\sqrt{3},\sqrt{3}) = 
     \left(
     \begin{array}{cc}
     0 & -1/6 \\
     -1/6 & 0
     \end{array}
-    \right),\quad \mbox{y }
-    |H(\sqrt 3,\sqrt 3)| = -1/36.
+    \right)
     $$
+
+    y $|\nabla^2V(\sqrt 3,\sqrt 3)| = -1/36.$
 
 a.  El potencial máximo se alcanza en $(x=-1/2, y=1/2)$ y vale $V(-1/2,1/2) = -\dfrac{\log 2}{2}$.
 :::
@@ -789,6 +804,139 @@ segundo orden:
     \right)
     $$
 :::
+
+
+:::{#exr-ecuacion-laplace}
+La ecuación diferencial parcial
+
+$$
+\frac{\partial^2 u}{\partial x^2} + \frac{\partial^2 u}{\partial y^2} + \frac{\partial^2 u}{\partial z^2} = 0,
+$$
+
+se conoce como ecuación de Laplace y se aplica a multitud de fenómenos relacionadas con la conducción de calor, el flujo de fluidos o el potencial eléctrico.
+
+a. Comprobar que la función $u(x,y,z)=\dfrac{1}{\sqrt{x^2 + y^2 + z^2}}$ satisface la ecuación de Laplace.
+
+a. ¿Existe algún punto en el que el crecimiento de la función sea nulo?
+
+a. Si fijamos $z=1$, calcular $\frac{\partial^4u}{\partial x^2\partial y^2}$.
+:::
+
+:::{.callout-tip collapse="true"}
+## Solución
+a.  Para comprobar que $u(x,y,z)$ satisface la ecuación de Laplace
+calculamos las tres derivadas parciales segundas que intervienen en
+la ecuación. Comenzando con las derivadas parciales con respecto a
+la variable $x$, obtenemos:
+
+    \begin{align*}
+    \frac{{\partial u}}{{\partial x}} 
+    &=  - \frac{1}{2}\left( {x^2  + y^2 + z^2 } \right)^{ - 3/2} 2x 
+    =  - x\left( {x^2  + y^2  + z^2 }\right)^{ - 3/2} \\
+    \frac{{\partial ^2 u}}{{\partial x^2 }} 
+    &= \frac{\partial }{{\partial x}}\left( { - x\left( {x^2  + y^2  + z^2 } \right)^{ - 3/2} } \right) \\
+    &=  - \left( {x^2  + y^2  + z^2 } \right)^{ - 3/2}  + 3x^2 \left( {x^2  + y^2  + z^2 } \right)^{ - 5/2} \\
+    \frac{{\partial u}}{{\partial y}} 
+    &= - y\left( {x^2  + y^2  + z^2 } \right)^{ - 3/2} \\
+    \frac{{\partial ^2 u}}{{\partial y^2 }} 
+    &=  - \left( {x^2  + y^2  + z^2 } \right)^{ - 3/2}  + 3y^2 \left( {x^2  + y^2  + z^2 } \right)^{- 5/2} \\
+    \frac{{\partial u}}{{\partial z}} 
+    &=  - z\left( {x^2  + y^2  + z^2 } \right)^{ - 3/2} \\
+    \frac{{\partial ^2 u}}{{\partial z^2 }} 
+    &=  - \left( {x^2  + y^2  + z^2 } \right)^{ - 3/2}  + 3z^2 \left( {x^2  + y^2  + z^2 } \right)^{- 5/2}
+    \end{align*}
+
+    Por lo tanto,
+
+    $$
+    \begin{gathered}
+    \frac{{\partial ^2 u}}{{\partial x^2 }} + \frac{{\partial ^2
+    u}}{{\partial y^2 }} + \frac{{\partial ^2 u}}{{\partial z^2 }} \\
+    =  -3\left( {x^2  + y^2  + z^2 } \right)^{ - 3/2}  + 3\left( {x^2  + y^2
+    + z^2 } \right)\left( {x^2  + y^2  + z^2 } \right)^{ - 5/2}  \\
+    =- 3\left( {x^2  + y^2  + z^2 } \right)^{ - 3/2}  + 3\left( {x^2  +
+    y^2 + z^2 } \right)^{ - 3/2}  = 0.
+    \end{gathered}
+    $$
+
+a.  Una condición necesaria para que el crecimiento de una función de varias variables en un punto sea nulo es que el gradiente en dicho punto se anule, y el gradiente se anula si se anulan sus tres
+componentes:
+
+    $$
+    \vec \nabla u = \vec 0 \Leftrightarrow \left( {\frac{{\partial
+    u}}{{\partial x}},\frac{{\partial u}}{{\partial y}},\frac{{\partial
+    u}}{{\partial z}}} \right) = \left( {0,0,0} \right)
+    $$
+
+    Por lo tanto, tenemos un sistema no lineal de tres ecuaciones con
+    tres incógnitas:
+
+    $$
+    - x\left( {x^2  + y^2  + z^2 } \right)^{ - 3/2}  = 0
+    $$
+
+    $$
+    - y\left( {x^2  + y^2  + z^2 } \right)^{ - 3/2}  = 0
+    $$
+
+    $$
+    - z\left( {x^2  + y^2  + z^2 } \right)^{ - 3/2}  = 0
+    $$
+
+    Y teniendo en cuenta que el término $(x^2+y^2+z^2)$, por tratarse de
+    una suma de cuadrados, únicamente puede ser 0 si $x=y=z=0$; y a
+    igual conclusión llegamos si suponemos que es distinto de 0, ya que
+    entonces la primera ecuación implica que necesariamente $x=0$, la
+    segunda implica que $y=0$, y la tercera implica que $z=0$. Por lo
+    tanto, concluimos que el único punto en el que el crecimiento puede
+    ser nulo es $(x,y,z)=(0,0,0)$, pero dicho punto no pertenece al
+    dominio de definición de la función (tendríamos un cero como
+    denominador de una fracción), por lo que no hay ningún punto en el
+    que la función presente un crecimiento nulo.
+
+a. Suponiendo $z=1$, la función resultante presenta únicamente
+dos variables:
+
+    $$
+    u(x,y,1) = \frac{1}{{\sqrt {x^2  + y^2  + 1} }} = \left( {x^2  + y^2
+    + 1} \right)^{ - 1/2}
+    $$
+
+    La derivada propuesta es:
+
+    $$
+    \frac{{\partial ^4 u}}{{\partial x^2 \partial y^2 }} =
+    \frac{\partial }{{\partial x}}\left( {\frac{\partial }{{\partial
+    x}}\left( {\frac{\partial }{{\partial y}}\left( {\frac{{\partial
+    u}}{{\partial y}}} \right)} \right)} \right)
+    $$
+
+    Operando como ya hicimos en los cálculos previos de las derivadas
+    segundas, obtenemos:
+
+    \begin{align*}
+    \frac{{\partial u}}{{\partial y}} 
+    &=  - y\left( {x^2  + y^2  + 1}
+    \right)^{ - 3/2} \\
+    \frac{{\partial ^2 u}}{{\partial y^2 }} 
+    &= \frac{\partial }{{\partial y}}\left( {\frac{{\partial u}}{{\partial
+    y}}} \right) =  - \left(
+    {x^2  + y^2  + 1} \right)^{ - 3/2}  + 3y^2 \left( {x^2  + y^2  + 1}
+    \right)^{ - 5/2} \\
+    \frac{{\partial ^3 u}}{{\partial    x\partial y^2 }} 
+    &= \frac{\partial }{{\partial x}}\left( {\frac{{\partial ^2
+    u}}{{\partial y^2 }}} \right) 
+    = 3x\left( {x^2  + y^2  + 1} \right)^{ - 5/2}  -
+    15y^2 x\left( {x^2  + y^2  + 1} \right)^{ - 7/2} \\
+    \frac{{\partial ^4 u}}{{\partial x^2 \partial y^2 }} 
+    &= \frac{\partial }{{\partial x}}\left( {\frac{{\partial ^3
+    u}}{{\partial x\partial y^2 }}} \right) \\
+    &= 3\left( {x^2  + y^2  + 1} \right)^{ - 5/2}  - 15\left( {x^2  + y^2
+    } \right)\left( {x^2  + y^2 + 1} \right)^{ - 7/2}  \\
+    &= + 105x^2 y\left({x^2  + y^2  + 1} \right)^{ - 9/2}.
+    \end{align*}
+:::
+
 
 :::{#exr-ajuste-minimos-cuadrados}
 En el ajuste de regresión de una recta $y=a+bx$, se suele utilizar la técnica de mínimos cuadrados que consisten en buscar los valores de $a$ y $b$ que hacen mínima la función

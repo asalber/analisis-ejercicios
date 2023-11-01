@@ -573,6 +573,14 @@ A(p,t,c) = \sqrt {\frac{{p^3 }}{{t - 1}} - c^2 e^{cpt}}
 <li><p>Suponiendo que hubiese algún año en el que el consumo fuese nulo, ¿qué condición tendría­ que cumplir la temperatura para que la derivada del agua almacenada con respecto a la temperatura fuese igual a la derivada con respecto a la precipitación?</p></li>
 </ol>
 </div>
+<div id="exr-normal-bidimensional" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 10.12 </strong></span>La variable aleatoria bidimensional <span class="math inline">\((X,Y)\)</span> con función de densidad</p>
+<p><span class="math display">\[
+f(x,y) = \frac{1}{\sqrt{2\pi}\, \sigma_x\sigma_y} e^{-\frac{1}{2}\left(\frac{(x-\mu_x)^2}{\sigma_x^2}+\frac{(y-\mu_y)^2}{\sigma_y^2}\right)}
+\]</span></p>
+<p>se conoce como normal bidimensional con <span class="math inline">\(X\)</span> e <span class="math inline">\(Y\)</span> independientes, de parámetros <span class="math inline">\(\mathbf{\mu}=(\mu_x,\mu_y)\)</span> y <span class="math inline">\(\mathbf{\sigma}=(\sigma_x,\sigma_y)\)</span>.</p>
+<p>Calcular el gradiente de <span class="math inline">\(f\)</span> e interpretarlo. ¿En qué punto se anula el gradiente? ¿Qué conclusiones sacas? ¿Cuál es la tasa de crecimiento de <span class="math inline">\(f\)</span> cuando <span class="math inline">\(x\rightarrow \infty\)</span>?</p>
+</div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -585,30 +593,6 @@ Solución
 </div>
 <div id="callout-11" class="callout-11-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-
-</div>
-</div>
-</div>
-<div id="exr-normal-bidimensional" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 10.12 </strong></span>La variable aleatoria bidimensional <span class="math inline">\((X,Y)\)</span> con función de densidad</p>
-<p><span class="math display">\[
-f(x,y) = \frac{1}{\sqrt{2\pi}\, \sigma_x\sigma_y} e^{-\frac{1}{2}\left(\frac{(x-\mu_x)^2}{\sigma_x^2}+\frac{(y-\mu_y)^2}{\sigma_y^2}\right)}
-\]</span></p>
-<p>se conoce como normal bidimensional con <span class="math inline">\(X\)</span> e <span class="math inline">\(Y\)</span> independientes, de parámetros <span class="math inline">\(\mathbf{\mu}=(\mu_x,\mu_y)\)</span> y <span class="math inline">\(\mathbf{\sigma}=(\sigma_x,\sigma_y)\)</span>.</p>
-<p>Calcular el gradiente de <span class="math inline">\(f\)</span> e interpretarlo. ¿En qué punto se anula el gradiente? ¿Qué conclusiones sacas? ¿Cuál es la tasa de crecimiento de <span class="math inline">\(f\)</span> cuando <span class="math inline">\(x\rightarrow \infty\)</span>?</p>
-</div>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-12-contents" aria-controls="callout-12" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Solución
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-12" class="callout-12-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
 <p><span class="math display">\[
 \nabla f(x,y) = -\frac{1}{\sqrt{2\pi}\, \sigma_x\sigma_y} e^{-\frac{1}{2}\left(\frac{(x-\mu_x)^2}{\sigma_x^2}+\frac{(y-\mu_y)^2}{\sigma_y^2}\right)} \left(\frac{x-\mu_x}{\sigma_x^2}, \frac{y-\mu_y}{\sigma_y^2}\right).
 \]</span></p>
@@ -616,143 +600,8 @@ Solución
 </div>
 </div>
 </div>
-<div id="exr-ecuacion-laplace" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 10.13 </strong></span>La ecuación diferencial parcial</p>
-<p><span class="math display">\[
-\frac{\partial^2 u}{\partial x^2} + \frac{\partial^2 u}{\partial y^2} + \frac{\partial^2 u}{\partial z^2} = 0,
-\]</span></p>
-<p>se conoce como ecuación de Laplace y se aplica a multitud de fenómenos relacionadas con la conducción de calor, el flujo de fluidos o el potencial eléctrico.</p>
-<ol type="a">
-<li><p>Comprobar que la función <span class="math inline">\(u(x,y,z)=\dfrac{1}{\sqrt{x^2 + y^2 + z^2}}\)</span> satisface la ecuación de Laplace.</p></li>
-<li><p>¿Existe algún punto en el que el crecimiento de la función sea nulo?</p></li>
-<li><p>Si fijamos <span class="math inline">\(z=1\)</span>, calcular <span class="math inline">\(\frac{\partial^4u}{\partial x^2\partial y^2}\)</span>.</p></li>
-</ol>
-</div>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-13-contents" aria-controls="callout-13" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Solución
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-13" class="callout-13-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<ol type="a">
-<li>Para comprobar que <span class="math inline">\(u(x,y,z)\)</span> satisface la ecuación de Laplace calculamos las tres derivadas parciales segundas que intervienen en la ecuación. Comenzando con las derivadas parciales con respecto a la variable <span class="math inline">\(x\)</span>, obtenemos:</li>
-</ol>
-<p><span class="math display">\[
-u(x,y,z) = \frac{1}{{\sqrt {x^2  + y^2  + z^2 } }} = \left( {x^2  +
-y^2  + z^2 } \right)^{ - 1/2}
-\]</span></p>
-<p><span class="math display">\[
-\frac{{\partial u}}{{\partial x}} =  - \frac{1}{2}\left( {x^2  + y^2
-+ z^2 } \right)^{ - 3/2} 2x =  - x\left( {x^2  + y^2  + z^2 }
-\right)^{ - 3/2}
-\]</span></p>
-<p><span class="math display">\[
-\frac{{\partial ^2 u}}{{\partial x^2 }} = \frac{\partial }{{\partial
-x}}\left( { - x\left( {x^2  + y^2  + z^2 } \right)^{ - 3/2} }
-\right) =  - \left( {x^2  + y^2  + z^2 } \right)^{ - 3/2}  + 3x^2
-\left( {x^2  + y^2  + z^2 } \right)^{ - 5/2}
-\]</span></p>
-<p>e igualmente para las variables <span class="math inline">\(y\)</span> y <span class="math inline">\(z\)</span>, tenemos:</p>
-<p><span class="math display">\[
-\frac{{\partial u}}{{\partial y}} =  - y\left( {x^2  + y^2  + z^2 }
-\right)^{ - 3/2}
-\]</span></p>
-<p><span class="math display">\[
-\frac{{\partial ^2 u}}{{\partial y^2 }} =  - \left( {x^2  + y^2  +
-z^2 } \right)^{ - 3/2}  + 3y^2 \left( {x^2  + y^2  + z^2 } \right)^{
-- 5/2}
-\]</span></p>
-<p><span class="math display">\[
-\frac{{\partial u}}{{\partial z}} =  - z\left( {x^2  + y^2  + z^2 }
-\right)^{ - 3/2}
-\]</span></p>
-<p><span class="math display">\[
-\frac{{\partial ^2 u}}{{\partial z^2 }} =  - \left( {x^2  + y^2  +
-z^2 } \right)^{ - 3/2}  + 3z^2 \left( {x^2  + y^2  + z^2 } \right)^{
-- 5/2}
-\]</span></p>
-<p>Por lo tanto: <span class="math display">\[
-\frac{{\partial ^2 u}}{{\partial x^2 }} + \frac{{\partial ^2
-u}}{{\partial y^2 }} + \frac{{\partial ^2 u}}{{\partial z^2 }} =  -
-3\left( {x^2  + y^2  + z^2 } \right)^{ - 3/2}  + 3\left( {x^2  + y^2
-+ z^2 } \right)\left( {x^2  + y^2  + z^2 } \right)^{ - 5/2}  =
-\]</span></p>
-<p><span class="math display">\[
-=- 3\left( {x^2  + y^2  + z^2 } \right)^{ - 3/2}  + 3\left( {x^2  +
-y^2 + z^2 } \right)^{ - 3/2}  = 0
-\]</span></p>
-<ol type="a">
-<li>Una condición necesaria para que el crecimiento de una función de varias variables en un punto sea nulo es que el gradiente en dicho punto se anule, y el gradiente se anula si se anulan sus tres componentes:</li>
-</ol>
-<p><span class="math display">\[
-\vec \nabla u = \vec 0 \Leftrightarrow \left( {\frac{{\partial
-u}}{{\partial x}},\frac{{\partial u}}{{\partial y}},\frac{{\partial
-u}}{{\partial z}}} \right) = \left( {0,0,0} \right)
-\]</span></p>
-<p>Por lo tanto, tenemos un sistema no lineal de tres ecuaciones con tres incógnitas:</p>
-<p><span class="math display">\[
-- x\left( {x^2  + y^2  + z^2 } \right)^{ - 3/2}  = 0
-\]</span></p>
-<p><span class="math display">\[
-- y\left( {x^2  + y^2  + z^2 } \right)^{ - 3/2}  = 0
-\]</span></p>
-<p><span class="math display">\[
-- z\left( {x^2  + y^2  + z^2 } \right)^{ - 3/2}  = 0
-\]</span></p>
-<p>Y teniendo en cuenta que el término <span class="math inline">\((x^2+y^2+z^2)\)</span>, por tratarse de una suma de cuadrados, únicamente puede ser 0 si <span class="math inline">\(x=y=z=0\)</span>; y a igual conclusión llegamos si suponemos que es distinto de 0, ya que entonces la primera ecuación implica que necesariamente <span class="math inline">\(x=0\)</span>, la segunda implica que <span class="math inline">\(y=0\)</span>, y la tercera implica que <span class="math inline">\(z=0\)</span>. Por lo tanto, concluimos que el único punto en el que el crecimiento puede ser nulo es <span class="math inline">\((x,y,z)=(0,0,0)\)</span>, pero dicho punto no pertenece al dominio de definición de la función (tendríamos un cero como denominador de una fracción), por lo que no hay ningún punto en el que la función presente un crecimiento nulo.</p>
-<ol type="a">
-<li>Suponiendo <span class="math inline">\(z=1\)</span>, la función resultante presenta únicamente dos variables:</li>
-</ol>
-<p><span class="math display">\[
-u(x,y,1) = \frac{1}{{\sqrt {x^2  + y^2  + 1} }} = \left( {x^2  + y^2
-+ 1} \right)^{ - 1/2}
-\]</span></p>
-<p>La derivada propuesta es:</p>
-<p><span class="math display">\[
-\frac{{\partial ^4 u}}{{\partial x^2 \partial y^2 }} =
-\frac{\partial }{{\partial x}}\left( {\frac{\partial }{{\partial
-x}}\left( {\frac{\partial }{{\partial y}}\left( {\frac{{\partial
-u}}{{\partial y}}} \right)} \right)} \right)
-\]</span></p>
-<p>en donde, como ya sabemos, se puede cambiar el orden de derivación sin que afecte al resultado final, aunque nunca el número total de derivadas con respecto a cada variable.</p>
-<p>Operando como ya hicimos en los cálculos previos de las derivadas segundas, obtenemos:</p>
-<p><span class="math display">\[
-\frac{{\partial u}}{{\partial y}} =  - y\left( {x^2  + y^2  + 1}
-\right)^{ - 3/2}
-\]</span></p>
-<p><span class="math display">\[
-\frac{\partial }{{\partial y}}\left( {\frac{{\partial u}}{{\partial
-y}}} \right) = \frac{{\partial ^2 u}}{{\partial y^2 }} =  - \left(
-{x^2  + y^2  + 1} \right)^{ - 3/2}  + 3y^2 \left( {x^2  + y^2  + 1}
-\right)^{ - 5/2}
-\]</span></p>
-<p><span class="math display">\[
-\frac{\partial }{{\partial x}}\left( {\frac{{\partial ^2
-u}}{{\partial y^2 }}} \right) = \frac{{\partial ^3 u}}{{\partial
-x\partial y^2 }} = 3x\left( {x^2  + y^2  + 1} \right)^{ - 5/2}  -
-15y^2 x\left( {x^2  + y^2  + 1} \right)^{ - 7/2}
-\]</span></p>
-<p><span class="math display">\[
-\frac{\partial }{{\partial x}}\left( {\frac{{\partial ^3
-u}}{{\partial x\partial y^2 }}} \right) = \frac{{\partial ^4
-u}}{{\partial x^2 \partial y^2 }} =
-\]</span></p>
-<p><span class="math display">\[
-=3\left( {x^2  + y^2  + 1} \right)^{ - 5/2}  - 15\left( {x^2  + y^2
-} \right)\left( {x^2  + y^2 + 1} \right)^{ - 7/2}  + 105x^2 y\left(
-{x^2  + y^2  + 1} \right)^{ - 9/2}
-\]</span></p>
-</div>
-</div>
-</div>
 <div id="exr-polea" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 10.14 </strong></span>Tenemos dos objetos de masas <span class="math inline">\(m_1\)</span> y <span class="math inline">\(m_2\)</span> unidas por una cuerda que pasa a través de una polea como la de la siguiente figura.</p>
+<p><span class="theorem-title"><strong>Ejercicio 10.13 </strong></span>Tenemos dos objetos de masas <span class="math inline">\(m_1\)</span> y <span class="math inline">\(m_2\)</span> unidas por una cuerda que pasa a través de una polea como la de la siguiente figura.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="img/derivadas-funciones-varias-variables/polea.png" class="img-fluid figure-img"></p>
@@ -770,6 +619,67 @@ m_1\frac{\partial a}{\partial m_1}+m_2\frac{\partial a}{\partial m_2}=0.
 \]</span></p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-12-contents" aria-controls="callout-12" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-12" class="callout-12-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><span class="math inline">\(\dfrac{\partial a}{\partial m_1} = \dfrac{2gm_2}{(m_1+m_2)^2}\)</span> y <span class="math inline">\(\dfrac{\partial a}{\partial m_2} = \dfrac{-2gm_1}{(m_1+m_2)^2}\)</span>.</p>
+</div>
+</div>
+</div>
+<div id="exr-reglas-derivacion" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 10.14 </strong></span>Utilizar la regla de la cadena para funciones de varias variables para demostrar las reglas de derivación de funciones de una variable real</p>
+<p><span class="math display">\[\begin{align*}
+(u+v)' &amp;= u' + v'\\
+(u-v)' &amp;= u' - v'\\
+(u\cdot v)' &amp;= u'v + uv'\\
+(u/v)' &amp;= \frac{u'v-uv'}{v^2}
+\end{align*}\]</span></p>
+<p>donde <span class="math inline">\(u\)</span> y <span class="math inline">\(v\)</span> son funciones de una variable real.</p>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-13-contents" aria-controls="callout-13" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-13" class="callout-13-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>En un equilibrio químico, la concentración de una sustancia <span class="math inline">\(z\)</span> depende de las concentraciones de otras dos sustancias <span class="math inline">\(x\)</span> e <span class="math inline">\(y\)</span> según la ecuación <span class="math inline">\(\frac{z}{\sqrt{xy}}-\ln\left(\frac{x+y}{y}\right) = 0\)</span>. Usar el diferencial para predecir la variación que experimentará la concentración de <span class="math inline">\(z\)</span> si la concentración de <span class="math inline">\(x\)</span> aumenta <span class="math inline">\(0.1\)</span> mg/mm<span class="math inline">\(^3\)</span> y la de <span class="math inline">\(y\)</span> disminuye <span class="math inline">\(0.2\)</span> mg/<span class="math inline">\(mm^3\)</span> en el instante en que las concentraciones de <span class="math inline">\(x\)</span> e <span class="math inline">\(y\)</span> son 1 mg/mm<span class="math inline">\(^3\)</span>.</p>
+</div>
+</div>
+</div>
+<div id="exr-variacion-volumen-cilindro" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 10.15 </strong></span>Un cilindro metálico de radio 30cm y altura 50cm se dilata de manera que la tasa de variación de su radio es 1 cm/s y la tasa de variación de su altura es 2 cm/s. ¿Cuál es la tasa de variación de su volumen?</p>
+</div>
+<div id="exr-distancia-planetas" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 10.16 </strong></span>Dos planetas se mueven en un mismo plano describiendo órbitas dadas por las funciones vectoriales <span class="math inline">\(f(t) = (2 \cos(t), \operatorname{sen}(t))\)</span> y <span class="math inline">\(g(t) = (3\operatorname{sen}(t/2), 2\cos(t/2))\)</span>. Usar la regla de la cadena para funciones de varias variables para calcular la derivada de la distancia entre los planetas en el instante <span class="math inline">\(t=\pi/2\)</span>. ¿Los planetas se están acercando o alejando?</p>
+</div>
+<div id="exr-transmision-errores-caudal-fuente" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 10.17 </strong></span>Para calcular el caudal de una fuente se ha llenado un depósito de base cuadrada <span class="math inline">\(30\pm 0.2\)</span> cm y altura <span class="math inline">\(50\pm 0.3\)</span> cm en un tiempo de <span class="math inline">\(20\pm 0.5\)</span> s. Expresar el caudal de la fuente incluyendo error en la medida.</p>
+</div>
+<div id="exr-transmision-errores-potencial-electrico" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 10.18 </strong></span>La potencia eléctrica <span class="math inline">\(P\)</span> en un circuito depende de el voltaje <span class="math inline">\(E\)</span> y la resistencia <span class="math inline">\(R\)</span> según la fórmula <span class="math inline">\(P = E^2/R\)</span>. Si los errores cometidos al medir el voltaje y la resistencia son de un 1% y un 2% respectivamente, ¿cuál será el error relativo en el cálculo de la potencia cuando se aplican 100 voltios a una resistencia de 1500 ohmios?</p>
+</div>
+<div id="exr-ameba" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 10.19 </strong></span>La Quimiotaxis es el movimiento de los organismos dirigido por un gradiente de concentración, es decir, en la dirección en la que la concentración aumenta con más rapidez. El moho del cieno Dictyoselium discoideum muestra este comportamiento. En esta caso, las amebas unicelulares de esta especie se mueven según el gradiente de concentración de una sustancia química denominada adenosina monofosfato (AMP cíclico). Si suponemos que la expresión que da la concentración de AMP cíclico en un punto de coordenadas <span class="math inline">\((x,y,z)\)</span> es:</p>
+<p><span class="math display">\[
+C(x,y,z) = \frac{4} {{\sqrt {x^2  + y^2  + z^4  + 1} }}
+\]</span></p>
+<p>y se sitúa una ameba de moho del cieno en el punto <span class="math inline">\((-1,0,1)\)</span>, ¿en qué dirección se moverá la ameba?</p>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-14-contents" aria-controls="callout-14" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
@@ -781,19 +691,24 @@ Solución
 </div>
 <div id="callout-14" class="callout-14-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p><span class="math inline">\(\dfrac{\partial a}{\partial m_1} = \dfrac{2gm_2}{(m_1+m_2)^2}\)</span> y <span class="math inline">\(\dfrac{\partial a}{\partial m_2} = \dfrac{-2gm_1}{(m_1+m_2)^2}\)</span>.</p>
+<p><span class="math inline">\((4/\sqrt{27}, 0, -8/\sqrt{27})\)</span>.</p>
 </div>
 </div>
 </div>
-<div id="exr-reglas-derivacion" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 10.15 </strong></span>Utilizar la regla de la cadena para funciones de varias variables para demostrar las reglas de derivación de funciones de una variable real</p>
-<p><span class="math display">\[\begin{align*}
-(u+v)' &amp;= u' + v'\\
-(u-v)' &amp;= u' - v'\\
-(u\cdot v)' &amp;= u'v + uv'\\
-(u/v)' &amp;= \frac{u'v-uv'}{v^2}
-\end{align*}\]</span></p>
-<p>donde <span class="math inline">\(u\)</span> y <span class="math inline">\(v\)</span> son funciones de una variable real.</p>
+<div id="exr-derivada-direccional-gas-perfecto" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 10.20 </strong></span>Se sabe que un gas perfecto a una presión de <span class="math inline">\(1\)</span> atmósfera y una temperatura de <span class="math inline">\(273.1\)</span> K ocupa un volumen de <span class="math inline">\(22.4\)</span> litros.</p>
+<ol type="a">
+<li><p>¿En qué dirección deben cambiarse la presión y la temperatura para conseguir el mayor aumento del volumen?</p></li>
+<li><p>¿Cómo varía el volumen si comenzamos a incrementar la temperatura a razón del doble del incremento de la presión?</p></li>
+<li><p>¿Cuánto tendría que aumentar la temperatura por cada atmósfera de presión que se aumente para que el volumen permanezca constante?</p></li>
+</ol>
+</div>
+<div id="exr-derivada-direccional-capsulas" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 10.21 </strong></span>Se han diseñado unas cápsulas con forma piramidal con base un rectángulo de lados a=3 cm, b=4 cm, y altura h=6 cm.</p>
+<ol type="a">
+<li><p>¿Cómo deben cambiar las dimensiones de la cápsula para que el volumen aumente lo más rápidamente posible? ¿Cuál sería la tasa de variación del volumen si cambian las dimensiones de la cápsula en la proporciones anteriores?</p></li>
+<li><p>Si se empiezan a cambiar las dimensiones de la cápsula de manera que el lado mayor del rectángulo disminuye la mitad de lo que aumenta el lado menor, y la altura aumenta el doble de lo que aumenta el lado menor, ¿cuál sería la tasa de variación del volumen de la cápsula en las condiciones anteriores?</p></li>
+</ol>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-15-contents" aria-controls="callout-15" aria-expanded="false" aria-label="Toggle callout">
@@ -807,31 +722,19 @@ Solución
 </div>
 <div id="callout-15" class="callout-15-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>En un equilibrio químico, la concentración de una sustancia <span class="math inline">\(z\)</span> depende de las concentraciones de otras dos sustancias <span class="math inline">\(x\)</span> e <span class="math inline">\(y\)</span> según la ecuación <span class="math inline">\(\frac{z}{\sqrt{xy}}-\ln\left(\frac{x+y}{y}\right) = 0\)</span>. Usar el diferencial para predecir la variación que experimentará la concentración de <span class="math inline">\(z\)</span> si la concentración de <span class="math inline">\(x\)</span> aumenta <span class="math inline">\(0.1\)</span> mg/mm<span class="math inline">\(^3\)</span> y la de <span class="math inline">\(y\)</span> disminuye <span class="math inline">\(0.2\)</span> mg/<span class="math inline">\(mm^3\)</span> en el instante en que las concentraciones de <span class="math inline">\(x\)</span> e <span class="math inline">\(y\)</span> son 1 mg/mm<span class="math inline">\(^3\)</span>.</p>
+<ol type="a">
+<li><p><span class="math inline">\(\nabla V(3,4,6)=(8,6,4)\)</span> y el volumen aumentará <span class="math inline">\(|\nabla V(3,4,6)|=10.7703\)</span> cm<span class="math inline">\(^3\)</span>/s si cambiamos las dimensiones de la cápsula siguiendo esta dirección.</p></li>
+<li><p>Derivada direccional de <span class="math inline">\(V\)</span> en <span class="math inline">\((3,4,6)\)</span> siguiendo la dirección del vector <span class="math inline">\(\mathbf{u}=(1,-1/2,2)\)</span>: <span class="math inline">\(V'_\mathbf{u}(3,4,6)=5.6737\)</span> cm<span class="math inline">\(^3\)</span>/s.</p></li>
+</ol>
 </div>
 </div>
 </div>
-<div id="exr-variacion-volumen-cilindro" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 10.16 </strong></span>Un cilindro metálico de radio 30cm y altura 50cm se dilata de manera que la tasa de variación de su radio es 1 cm/s y la tasa de variación de su altura es 2 cm/s. ¿Cuál es la tasa de variación de su volumen?</p>
-</div>
-<div id="exr-distancia-planetas" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 10.17 </strong></span>Dos planetas se mueven en un mismo plano describiendo órbitas dadas por las funciones vectoriales <span class="math inline">\(f(t) = (2 \cos(t), \operatorname{sen}(2t))\)</span> y <span class="math inline">\(g(t) = (2\operatorname{sen}(t/2), 3\cos(t))\)</span>. ¿Cómo varía la distancia entre los planetas en el instante <span class="math inline">\(t=\pi/2\)</span>?</p>
-</div>
-<div id="exr-transmision-errores-caudal-fuente" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 10.18 </strong></span>Para calcular el caudal de una fuente se ha llenado un depósito de base cuadrada <span class="math inline">\(30\pm 0.2\)</span> cm y altura <span class="math inline">\(50\pm 0.3\)</span> cm en un tiempo de <span class="math inline">\(20\pm 0.5\)</span> s. Expresar el caudal de la fuente incluyendo error en la medida.</p>
-</div>
-<div id="exr-transmision-errores-potencial-electrico" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 10.19 </strong></span>La potencia eléctrica <span class="math inline">\(P\)</span> en un circuito depende de el voltaje <span class="math inline">\(E\)</span> y la resistencia <span class="math inline">\(R\)</span> según la fórmula <span class="math inline">\(P = E^2/R\)</span>. Si los errores cometidos al medir el voltaje y la resistencia son de un 1% y un 2% respectivamente, ¿cuál será el error relativo en el cálculo de la potencia cuando se aplican 100 voltios a una resistencia de 1500 ohmios?</p>
-</div>
-<div id="exr-vector-gradiente-normal-curvas-nivel" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 10.20 </strong></span>Sea <span class="math inline">\(f(x,y,z)=0\)</span> la ecuación que define una superficie en el espacio real. Demostrar que el vector gradiente de <span class="math inline">\(f\)</span> en cualquier punto <span class="math inline">\((a, b, c)\)</span> es normal a la superficie en ese punto.</p>
-</div>
-<div id="exr-ameba" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 10.21 </strong></span>La Quimiotaxis es el movimiento de los organismos dirigido por un gradiente de concentración, es decir, en la dirección en la que la concentración aumenta con más rapidez. El moho del cieno Dictyoselium discoideum muestra este comportamiento. En esta caso, las amebas unicelulares de esta especie se mueven según el gradiente de concentración de una sustancia química denominada adenosina monofosfato (AMP cíclico). Si suponemos que la expresión que da la concentración de AMP cíclico en un punto de coordenadas <span class="math inline">\((x,y,z)\)</span> es:</p>
+<div id="exr-derivada-direccional-nula" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 10.22 </strong></span>¿En qué direcciones se anulará la derivada direccional de la función</p>
 <p><span class="math display">\[
-C(x,y,z) = \frac{4} {{\sqrt {x^2  + y^2  + z^4  + 1} }}
+f(x,y)=\frac{x^2-y^2}{x^2+y^2}
 \]</span></p>
-<p>y se sitúa una ameba de moho del cieno en el punto <span class="math inline">\((-1,0,1)\)</span>, ¿en qué dirección se moverá la ameba?</p>
+<p>en el punto <span class="math inline">\(P=(1,1)\)</span>?</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-16-contents" aria-controls="callout-16" aria-expanded="false" aria-label="Toggle callout">
@@ -845,23 +748,12 @@ Solución
 </div>
 <div id="callout-16" class="callout-16-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p><span class="math inline">\((4/\sqrt{27}, 0, -8/\sqrt{27})\)</span>.</p>
+<p>En la dirección <span class="math inline">\((1/\sqrt{2},1/\sqrt{2})\)</span>.</p>
 </div>
 </div>
 </div>
-<div id="exr-derivada-direccional-gas-perfecto" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 10.22 </strong></span>Se sabe que un gas perfecto a una presión de <span class="math inline">\(1\)</span> atmósfera y una temperatura de <span class="math inline">\(273.1\)</span> K ocupa un volumen de <span class="math inline">\(22.4\)</span> litros.</p>
-<ol type="a">
-<li><p>¿En qué dirección deben cambiarse la presión y la temperatura para conseguir el mayor aumento del volumen?</p></li>
-<li><p>¿Cómo varía el volumen si comenzamos a incrementar la temperatura a razón del doble del incremento de la presión?</p></li>
-</ol>
-</div>
-<div id="exr-derivada-direccional-capsulas" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 10.23 </strong></span>Se han diseñado unas cápsulas con forma piramidal con base un rectángulo de lados a=3 cm, b=4 cm, y altura h=6 cm.</p>
-<ol type="a">
-<li><p>¿Cómo deben cambiar las dimensiones de la cápsula para que el volumen aumente lo más rápidamente posible? ¿Cuál sería la tasa de variación del volumen si cambian las dimensiones de la cápsula en la proporciones anteriores?</p></li>
-<li><p>Si se empiezan a cambiar las dimensiones de la cápsula de manera que el lado mayor del rectángulo disminuye la mitad de lo que aumenta el lado menor, y la altura aumenta el doble de lo que aumenta el lado menor, ¿cuál sería la tasa de variación del volumen de la cápsula en las condiciones anteriores?</p></li>
-</ol>
+<div id="exr-derivada-direccional" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 10.23 </strong></span>¿Existe alguna dirección en la que la derivada direccional en el punto <span class="math inline">\(P=(1,2)\)</span> de la función <span class="math inline">\(f(x,y) = x^2-3xy+4y^2\)</span> valga 14?</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-17-contents" aria-controls="callout-17" aria-expanded="false" aria-label="Toggle callout">
@@ -875,19 +767,12 @@ Solución
 </div>
 <div id="callout-17" class="callout-17-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<ol type="a">
-<li><p><span class="math inline">\(\nabla V(3,4,6)=(8,6,4)\)</span> y el volumen aumentará <span class="math inline">\(|\nabla V(3,4,6)|=10.7703\)</span> cm<span class="math inline">\(^3\)</span>/s si cambiamos las dimensiones de la cápsula siguiendo esta dirección.</p></li>
-<li><p>Derivada direccional de <span class="math inline">\(V\)</span> en <span class="math inline">\((3,4,6)\)</span> siguiendo la dirección del vector <span class="math inline">\(\mathbf{u}=(1,-1/2,2)\)</span>: <span class="math inline">\(V'_\mathbf{u}(3,4,6)=5.6737\)</span> cm<span class="math inline">\(^3\)</span>/s.</p></li>
-</ol>
+<p>No.</p>
 </div>
 </div>
 </div>
-<div id="exr-derivada-direccional-nula" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 10.24 </strong></span>¿En qué direcciones se anulará la derivada direccional de la función</p>
-<p><span class="math display">\[
-f(x,y)=\frac{x^2-y^2}{x^2+y^2}
-\]</span></p>
-<p>en el punto <span class="math inline">\(P=(1,1)\)</span>?</p>
+<div id="exr-derivada-direccional-2" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 10.24 </strong></span>La derivada direccional de una función <span class="math inline">\(f\)</span> en un punto <span class="math inline">\(P\)</span> es máxima en la dirección del vector <span class="math inline">\((1,1,-1)\)</span> y su valor es <span class="math inline">\(2\sqrt{3}\)</span>. ¿Cuánto vale la derivada direccional de <span class="math inline">\(f\)</span> en <span class="math inline">\(P\)</span> en la dirección del vector <span class="math inline">\((1,1,0)\)</span>?</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-18-contents" aria-controls="callout-18" aria-expanded="false" aria-label="Toggle callout">
@@ -901,12 +786,19 @@ Solución
 </div>
 <div id="callout-18" class="callout-18-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>En la dirección <span class="math inline">\((1/\sqrt{2},1/\sqrt{2})\)</span>.</p>
+<p><span class="math inline">\(2\sqrt{2}\)</span>.</p>
 </div>
 </div>
 </div>
-<div id="exr-derivada-direccional" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 10.25 </strong></span>¿Existe alguna dirección en la que la derivada direccional en el punto <span class="math inline">\(P=(1,2)\)</span> de la función <span class="math inline">\(f(x,y) = x^2-3xy+4y^2\)</span> valga 14?</p>
+<div id="exr-derivada-direccional-3" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 10.25 </strong></span>Dado el campo escalar</p>
+<p><span class="math display">\[
+f(x,y,z) = x^2-y^2+xyz^3-zx,
+\]</span></p>
+<ol type="a">
+<li><p>Calcular la derivada direccional de <span class="math inline">\(f\)</span> en <span class="math inline">\((1,2,3)\)</span> a lo largo del vector unitario <span class="math inline">\(\mathbf{u}=\frac{1}{\sqrt2}(1,-1,0)\)</span>.</p></li>
+<li><p>¿En qué dirección es máxima la derivada direccional de <span class="math inline">\(f\)</span> en el punto anterior? Obtener el valor de dicha derivada direccional.</p></li>
+</ol>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-19-contents" aria-controls="callout-19" aria-expanded="false" aria-label="Toggle callout">
@@ -920,12 +812,18 @@ Solución
 </div>
 <div id="callout-19" class="callout-19-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>No.</p>
+<ol type="a">
+<li><p><span class="math inline">\(15\sqrt{2}\)</span>.</p></li>
+<li><p>La derivada direccional es máxima en la dirección del gradiente <span class="math inline">\((53,23,53)\)</span> y vale <span class="math inline">\(\sqrt{6147}\)</span>.</p></li>
+</ol>
 </div>
 </div>
 </div>
-<div id="exr-derivada-direccional-2" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 10.26 </strong></span>La derivada direccional de una función <span class="math inline">\(f\)</span> en un punto <span class="math inline">\(P\)</span> es máxima en la dirección del vector <span class="math inline">\((1,1,-1)\)</span> y su valor es <span class="math inline">\(2\sqrt{3}\)</span>. ¿Cuánto vale la derivada direccional de <span class="math inline">\(f\)</span> en <span class="math inline">\(P\)</span> en la dirección del vector <span class="math inline">\((1,1,0)\)</span>?</p>
+<div id="exr-vector-gradiente-normal-curvas-nivel" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 10.26 </strong></span>Sea <span class="math inline">\(f(x,y,z)=0\)</span> la ecuación que define una superficie en el espacio real. Demostrar que el vector gradiente de <span class="math inline">\(f\)</span> en cualquier punto <span class="math inline">\((a, b, c)\)</span> es normal a la superficie en ese punto.</p>
+</div>
+<div id="exr-derviada-implicita-trayectoria" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 10.27 </strong></span>Un cuerpo se mueve en el plano a través de los puntos de coordenadas <span class="math inline">\((x,y)\)</span> relacionadas mediante la siguiente expresión <span class="math inline">\(2e^{xy} \operatorname{sen}(x) + y\cos(x) = 2\)</span>. Calcular las ecuaciones de las rectas tangente y normal a la trayectoria del cuerpo cuando <span class="math inline">\(x=0\)</span>.</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-20-contents" aria-controls="callout-20" aria-expanded="false" aria-label="Toggle callout">
@@ -939,19 +837,56 @@ Solución
 </div>
 <div id="callout-20" class="callout-20-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p><span class="math inline">\(2\sqrt{2}\)</span>.</p>
-</div>
-</div>
-</div>
-<div id="exr-derivada-direccional-3" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 10.27 </strong></span>Dado el campo escalar</p>
+<p>Veamos primero cuáles son las coordenadas del punto donde hay que calcular las rectas tangente y normal a la trayectoria. Sustituyendo <span class="math inline">\(x=0\)</span> en la ecuación anterior se tiene</p>
 <p><span class="math display">\[
-f(x,y,z) = x^2-y^2+xyz^3-zx,
+2e^0 \operatorname{sen} 0 + y \cos 0 = 2 \Rightarrow y  = 2,
 \]</span></p>
+<p>y, por tanto, se trata del punto <span class="math inline">\((0,2)\)</span>.</p>
+<p>Sabemos que la ecuación de la recta tangente a la gráfica de la función <span class="math inline">\(f\)</span> en el punto de coordenadas <span class="math inline">\((a, f(a))\)</span> es:</p>
+<p><span class="math display">\[
+y-a=f'(a)(x-a)
+\]</span></p>
+<p>En nuestro caso, no tenemos la expresión explícita de la función <span class="math inline">\(f\)</span>, pero sí que tenemos la ecuación</p>
+<p><span class="math display">\[
+F(x,y) = 2e^{xy} \operatorname{sen}(x) + y\cos(x) -2  = 0,
+\]</span></p>
+<p>que define a <span class="math inline">\(y\)</span> como función implícita de <span class="math inline">\(x\)</span>. Podemos afirmar que esta función existe en un entorno de <span class="math inline">\(x=0\)</span> ya que se cumplen las condiciones del <a href="https://aprendeconalf.es/analisis-manual/13-derivadas-funciones-varias-variables.html#thm-funcion-implicita">teorema de la función implícita</a>, es decir,</p>
 <ol type="a">
-<li><p>Calcular la derivada direccional de <span class="math inline">\(f\)</span> en <span class="math inline">\((1,2,3)\)</span> a lo largo del vector unitario <span class="math inline">\(\mathbf{u}=\frac{1}{\sqrt2}(1,-1,0)\)</span>.</p></li>
-<li><p>¿En qué dirección es máxima la derivada direccional de <span class="math inline">\(f\)</span> en el punto anterior? Obtener el valor de dicha derivada direccional.</p></li>
+<li><span class="math inline">\(F(0, 2) = 2e^0 \operatorname{sen}(0) + 2 \cos(0) - 2 = 0\)</span>.</li>
+<li><span class="math inline">\(\frac{\partial F}{\partial x} = 2e^{xy}y \operatorname{sen}(x) + 2e^{xy} \cos(x) - y \operatorname{sen}(x)\)</span>.<br>
+<span class="math inline">\(\frac{\partial F}{\partial y} = 2e^{xy}x \operatorname{sen}(x) + \cos(x)\)</span>.<br>
+Son continuas en un entorno de <span class="math inline">\((0,2)\)</span>.</li>
+<li><span class="math inline">\(\frac{\partial F}{\partial y}(0,2) = 2e^{0\cdot 2}0 \operatorname{sen}(0) + \cos(0) = 1\neq 0\)</span>.</li>
 </ol>
+<p>Así pues, la derivada de <span class="math inline">\(y\)</span> con respecto a <span class="math inline">\(x\)</span> es</p>
+<p><span class="math display">\[
+\frac{dy}{dx} (0,2)
+= -\frac{F'_x(0,2)}{F'_y(0,2)}
+= -\frac{2e^{0\cdot 2}2 \operatorname{sen}(0) + 2e^{0\cdot 2} \cos(0) - y \operatorname{sen}(0)}{2e^{0\cdot 2}0 \operatorname{sen}(0) + \cos(0)}
+= -\frac{2}{1}
+= -2.
+\]</span></p>
+<p>Por lo tanto, la ecuación de la recta tangente es <span class="math display">\[
+y-2 = -2(x-0) \Leftrightarrow y = -2x+2,
+\]</span></p>
+<p>y la ecuación de la recta normal es</p>
+<p><span class="math display">\[
+y-2 = \frac{1}{2}(x-0) \Leftrightarrow y = \frac{1}{2}x+2.
+\]</span></p>
+<p>Podríamos haber llegado al mismo resultado sabiendo que <span class="math inline">\(\nabla F(x,y)\)</span> es normal a la trayectoria <span class="math inline">\(F(x,y)=0\)</span>. Como <span class="math inline">\(\nabla F(0,2) = (2,1)\)</span>, la ecuación vectorial de la recta normal es</p>
+<p><span class="math display">\[
+(0, 2) + t (2, 1) = (2t, 2+t),
+\]</span></p>
+<p>y la ecuación vectorial de la recta tangente es</p>
+<p><span class="math display">\[
+(0, 2) + t (1, -2) = (t, 2-2t),
+\]</span></p>
+<p>que son las mismas rectas calculadas antes.</p>
+</div>
+</div>
+</div>
+<div id="exr-derivada-implicita-trayectoria-extremos" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 10.28 </strong></span>Hallar la ecuación de la recta tangente y normal a la curva <span class="math inline">\(x^2+y^2=3xy-1\)</span> en los puntos en que <span class="math inline">\(x=1\)</span>. Calcular también los extremos relativos y decir si son máximos o mínimos.</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-21-contents" aria-controls="callout-21" aria-expanded="false" aria-label="Toggle callout">
@@ -965,15 +900,86 @@ Solución
 </div>
 <div id="callout-21" class="callout-21-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
+<p>Consideremos <span class="math inline">\(y\)</span> como función de <span class="math inline">\(x\)</span>. Veamos primero los puntos de la curva en los que <span class="math inline">\(x=1\)</span>:</p>
+<p><span class="math display">\[
+1^{2}+y^{2} = 3\cdot 1\cdot y-1 \Leftrightarrow y^{2} -3y+2 = 0.
+\]</span></p>
+<p>Resolviendo la ecuación obtenemos dos soluciones <span class="math inline">\(y=1\)</span> e <span class="math inline">\(y=2\)</span>, de modo que existen dos puntos para los que <span class="math inline">\(x=1\)</span>, que son el <span class="math inline">\((1,1)\)</span> y el <span class="math inline">\((1,2)\)</span>.</p>
+<p>Para calcular las ecuaciones de las rectas tangente y normal en estos puntos, necesitamos calcular la derivada <span class="math inline">\(\frac{dy}{dx}\)</span> en dichos puntos, pero antes hay que asegurarse de que la ecuación</p>
+<p><span class="math display">\[
+F(x,y) = x^2 + y^2 - 3xy + 1 = 0
+\]</span></p>
+<p>define a <span class="math inline">\(y\)</span> con función implícita de <span class="math inline">\(x\)</span> en un entorno de los puntos <span class="math inline">\((1, 1)\)</span> y <span class="math inline">\((1, 2)\)</span>. Veamos que se cumplen las condiciones del <a href="https://aprendeconalf.es/analisis-manual/13-derivadas-funciones-varias-variables.html#thm-funcion-implicita">teorema de la función implícita</a>.</p>
 <ol type="a">
-<li><p><span class="math inline">\(15\sqrt{2}\)</span>.</p></li>
-<li><p>La derivada direccional es máxima en la dirección del gradiente <span class="math inline">\((53,23,53)\)</span> y vale <span class="math inline">\(\sqrt{6147}\)</span>.</p></li>
+<li><span class="math inline">\(F(1,1) = 1^2 + 1^2 - 3\cdot 1\cdot 1 + 1 = 0\)</span> y <span class="math inline">\(F(1,2) = 1^2 + 2^4 - 3\cdot 1\cdot 2 -1 =0\)</span>.</li>
+<li><span class="math inline">\(\frac{\partial F}{\partial x}=2x-3y\)</span> y <span class="math inline">\(\frac{\partial F}{\partial y}=2y-3x\)</span>, que son continuas en todo su dominio, en particular en <span class="math inline">\((1,1)\)</span> y <span class="math inline">\((1,2)\)</span>.</li>
+<li><span class="math inline">\(\frac{\partial F}{\partial y}(1,1) = 2\cdot 1-3\cdot 1 = -1\neq 0\)</span> y <span class="math inline">\(\frac{\partial F}{\partial y}(1,2) = 2\cdot 2-3\cdot 1 = 1\neq 0\)</span>.</li>
 </ol>
+<p>Así pues, <span class="math inline">\(F(x,y)=0\)</span> define a <span class="math inline">\(y\)</span> como función implícita de <span class="math inline">\(x\)</span> en un entorno de los puntos <span class="math inline">\((1,1)\)</span> y <span class="math inline">\((1,2)\)</span>, de modo que la derivada de <span class="math inline">\(y\)</span> con respecto a <span class="math inline">\(x\)</span> en estos puntos es</p>
+<p><span class="math display">\[\begin{align*}
+\frac{dy}{dx}(1,1)
+&amp;= -\frac{F'_x(1,1)}{F'_y(1,1)}
+= -\frac{2\cdot 1-3\cdot 1}{2\cdot 1-3\cdot 1}
+= -\frac{-1}{-1}
+= -1,\\
+\frac{dy}{dx}(1,2)
+&amp;= -\frac{F'_x(1,2)}{F'_y(1,2)}
+= -\frac{2\cdot 1-3\cdot 2}{2\cdot 2-3\cdot 1}
+= -\frac{-4}{1}
+= 4.
+\end{align*}\]</span></p>
+<p>Así pues, la ecuación de la recta tangente en el punto <span class="math inline">\((1,1)\)</span> es</p>
+<p><span class="math display">\[
+y-1 = \frac{dy}{dx}(1,1)(x-1) \Leftrightarrow y= 2-x,
+\]</span></p>
+<p>y la ecuación de la recta normal es</p>
+<p><span class="math display">\[
+y-1 = -\frac{1}{dy/dx}(1,1)(x-1) \Leftrightarrow y= x,
+\]</span></p>
+<p>mientras que la ecuación de la recta tangente en el punto <span class="math inline">\((1,2)\)</span> es</p>
+<p><span class="math display">\[
+y-2 = \frac{dy}{dx}(1,2)(x-1) \Leftrightarrow y= 4x-2,
+\]</span></p>
+<p>y la ecuación de la recta normal es</p>
+<p><span class="math display">\[
+y-2 = -\frac{1}{dy/dx}(1,2)(x-1) \Leftrightarrow y=\frac{9-x}{4}.
+\]</span></p>
+<p>Por otro lado, para calcular los extremos relativos, primero calculamos los puntos críticos, que son los que anulan la primera derivada.</p>
+<p><span class="math display">\[
+\frac{dy}{dx}=\frac{3y-2x}{2y-3x}=0 \Leftrightarrow 3y-2x=0 \Leftrightarrow y=2x/3.
+\]</span></p>
+<p>Pero además deben pertenecer a la curva de la función, y por tanto deben satisfacer la ecuación de la función.</p>
+<p><span class="math display">\[
+x^{2}+(2x/3)^{2}=3x(2x/3)-1 \Leftrightarrow x^{2}+4x^{2}/9 = 2x^{2}-1 \Leftrightarrow x^{2}=9/5 \Leftrightarrow x=\pm 3/\sqrt{5}.
+\]</span></p>
+<p>Así pues, existen dos puntos críticos que son el <span class="math inline">\((3/\sqrt{5},2/\sqrt{5})\)</span> y <span class="math inline">\((-3/\sqrt{5},-2/\sqrt{5})\)</span>. Para ver si son puntos de máximo o mínimo relativos, necesitamos calcular la segunda derivada en dichos puntos:</p>
+<p><span class="math display">\[
+\frac{d^{2}y}{dx^{2}} = \frac{d}{dx}\left(\frac{3y-2x}{2y-3x}\right) = \frac{(3\frac{dy}{dx}-2)(2y-3x)-(2\frac{dy}{dx}-3)(3y-2x)}{(2y-3x)^{2}}.
+\]</span></p>
+<p>En el punto, <span class="math inline">\((3/\sqrt{5},2/\sqrt{5})\)</span> la segunda derivada vale</p>
+<p><span class="math display">\[
+\frac{d^{2}y}{dx^{2}}(3/\sqrt{5},2/\sqrt{5})=
+\frac{(3\cdot 0-2)(2\frac{2}{\sqrt{5}}-3\frac{3}{\sqrt{5}})-(2\cdot 0-3)(3\frac{2}{\sqrt{5}}-2\frac{3}{\sqrt{5}})}{(2\frac{2}{\sqrt{5}}-3\frac{3}{\sqrt{5}})^{2}} = 2\sqrt{5},
+\]</span></p>
+<p>que al ser positiva, indica que el punto <span class="math inline">\((3/\sqrt{5},2/\sqrt{5})\)</span> es un punto de mínimo relativo.</p>
+<p>En el punto, <span class="math inline">\((-3/\sqrt{5},-2/\sqrt{5})\)</span> la segunda derivada vale</p>
+<p><span class="math display">\[
+\frac{d^{2}y}{dx^{2}}(-3/\sqrt{5},-2/\sqrt{5})=
+\frac{(3\cdot 0-2)(2\frac{-2}{\sqrt{5}}-3\frac{-3}{\sqrt{5}})-(2\cdot 0-3)(3\frac{-2}{\sqrt{5}}-2\frac{-3}{\sqrt{5}})}{(2\frac{-2}{\sqrt{5}}-3\frac{--3}{\sqrt{5}})^{2}} = -2\sqrt{5},
+\]</span></p>
+<p>que al ser negativa, indica que el punto <span class="math inline">\((-3/\sqrt{5},-2/\sqrt{5})\)</span> es un punto de máximo relativo.</p>
 </div>
 </div>
+</div>
+<div id="exr-derivada-implicita-direccional" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 10.29 </strong></span>En una reacción química se cumple la ecuación</p>
+<p><span class="math display">\[
+x\ln(y)+\frac{2e^{y^2+z}}{x} - \frac{x}{z^2} = -1
+\]</span></p>
+<p>donde <span class="math inline">\(x\)</span>, <span class="math inline">\(y\)</span> y <span class="math inline">\(z\)</span> son las concentraciones de tres sustancias. ¿Cómo cambia la concentración de <span class="math inline">\(z\)</span> si empezamos a disminuir <span class="math inline">\(x\)</span> al mismo ritmo que se incrementa <span class="math inline">\(y\)</span> en el instante en que <span class="math inline">\(x=2\)</span> e <span class="math inline">\(y=1\)</span> y <span class="math inline">\(z=-1\)</span>?</p>
 </div>
 <div id="exr-funcion-homogenea" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 10.28 </strong></span>Una función <span class="math inline">\(f(x,y)\)</span> se llama homogénea de grado <span class="math inline">\(n\)</span> si satisface que <span class="math inline">\(f(tx, ty) = t^nf(x,y)\)</span>. Demostrar que si <span class="math inline">\(f\)</span> es homogénea de grado $n4 se cumplen las ecuaciones</p>
+<p><span class="theorem-title"><strong>Ejercicio 10.30 </strong></span>Una función <span class="math inline">\(f(x,y)\)</span> se llama homogénea de grado <span class="math inline">\(n\)</span> si satisface que <span class="math inline">\(f(tx, ty) = t^nf(x,y)\)</span>. Demostrar que si <span class="math inline">\(f\)</span> es homogénea de grado <span class="math inline">\(n\)</span> se cumplen las ecuaciones</p>
 <p><span class="math display">\[
 \begin{gathered}
 x\frac{\partial f}{\partial x} + y \frac{\partial f}{\partial y} = nf(x,y),\\
@@ -982,7 +988,7 @@ x^2\frac{\partial^2 f}{\partial x^2} + 2xy \frac{\partial^2 f}{\partial x \parti
 \]</span></p>
 </div>
 <div id="exr-potencial-electrico" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 10.29 </strong></span>La relación que modeliza el potencial eléctrico <span class="math inline">\(V\)</span> de un punto del plano en función de su distancia, es <span class="math inline">\(V=\log D\)</span>, donde <span class="math inline">\(D=\sqrt{x^2+y^2}\)</span>.</p>
+<p><span class="theorem-title"><strong>Ejercicio 10.31 </strong></span>La relación que modeliza el potencial eléctrico <span class="math inline">\(V\)</span> de un punto del plano en función de su distancia, es <span class="math inline">\(V=\log D\)</span>, donde <span class="math inline">\(D=\sqrt{x^2+y^2}\)</span>.</p>
 <ol type="a">
 <li><p>Calcular el gradiente de <span class="math inline">\(V\)</span>.</p></li>
 <li><p>Hallar la dirección de máxima variación del potencial eléctrico en el punto <span class="math inline">\((x,y)=(\sqrt{3},\sqrt{3})\)</span>.</p></li>
@@ -1003,30 +1009,33 @@ Solución
 <div id="callout-22" class="callout-22-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ol type="a">
-<li><p><span class="math inline">\(\nabla V(x,y) = \left( \frac{x}{x^2+y^2},\frac{y}{x^2+y^2}\right)\)</span>.</p>
-<p><span class="math inline">\(\nabla V(\sqrt 3, \sqrt 3) = \sqrt 3 /6(1,1)\)</span>.</p></li>
+<li><p><span class="math inline">\(\nabla V(x,y) = \left( \frac{x}{x^2+y^2},\frac{y}{x^2+y^2}\right)\)</span>.</p></li>
+<li><p><span class="math inline">\(\nabla V(\sqrt 3, \sqrt 3) = \sqrt 3 /6(1,1)\)</span>.</p></li>
 <li><p><span class="math display">\[
-HV(x,y) = \left(
+\nabla^2V(x,y) = \left(
 \begin{array}{cc}
 \frac{y^2-x^2}{y^4+2x^2y^2+x^4} &amp; \frac{-2xy}{y^4+2x^2y^2+x^4} \\
 \frac{-2xy}{y^4+2x^2y^2+x^4} &amp; \frac{x^2-y^2}{y^4+2x^2y^2+x^4}
 \end{array}
-\right),\quad
+\right)
+\]</span></p>
+<p><span class="math display">\[
+\nabla^2V(\sqrt{3},\sqrt{3}) =
 \left(
 \begin{array}{cc}
 0 &amp; -1/6 \\
 -1/6 &amp; 0
 \end{array}
-\right),\quad \mbox{y }
-|H(\sqrt 3,\sqrt 3)| = -1/36.
-\]</span></p></li>
+\right)
+\]</span></p>
+<p>y <span class="math inline">\(|\nabla^2V(\sqrt 3,\sqrt 3)| = -1/36.\)</span></p></li>
 <li><p>El potencial máximo se alcanza en <span class="math inline">\((x=-1/2, y=1/2)\)</span> y vale <span class="math inline">\(V(-1/2,1/2) = -\dfrac{\log 2}{2}\)</span>.</p></li>
 </ol>
 </div>
 </div>
 </div>
 <div id="exr-barra-metal" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 10.30 </strong></span>Una barra de metal de un metro de largo se calienta de manera irregular y de forma tal que a <span class="math inline">\(x\)</span> metros de su extremo izquierdo y en el instante <span class="math inline">\(t\)</span> minutos, su temperatura en grados centígrados esta dada por <span class="math inline">\(H(x,t) = 100e^{-0.1t}\operatorname{sen}(\pi xt)\)</span> con <span class="math inline">\(0\leq x \leq 1\)</span>.</p>
+<p><span class="theorem-title"><strong>Ejercicio 10.32 </strong></span>Una barra de metal de un metro de largo se calienta de manera irregular y de forma tal que a <span class="math inline">\(x\)</span> metros de su extremo izquierdo y en el instante <span class="math inline">\(t\)</span> minutos, su temperatura en grados centígrados esta dada por <span class="math inline">\(H(x,t) = 100e^{-0.1t}\operatorname{sen}(\pi xt)\)</span> con <span class="math inline">\(0\leq x \leq 1\)</span>.</p>
 <ol type="a">
 <li><p>Calcular <span class="math inline">\(\dfrac{\partial H}{\partial x}(0.2, 1)\)</span> y <span class="math inline">\(\dfrac{\partial H}{\partial x}(0.8, 1).\)</span> ¿Cuál es la interpretación práctica (en términos de temperatura) de estas derivadas parciales? Explicar por qué cada una tiene el signo que tiene.</p></li>
 <li><p>Calcular la matriz hessiana de <span class="math inline">\(H\)</span>.</p></li>
@@ -1092,16 +1101,17 @@ Solución
 </div>
 </div>
 </div>
-<div id="exr-ajuste-minimos-cuadrados" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 10.31 </strong></span>En el ajuste de regresión de una recta <span class="math inline">\(y=a+bx\)</span>, se suele utilizar la técnica de mínimos cuadrados que consisten en buscar los valores de <span class="math inline">\(a\)</span> y <span class="math inline">\(b\)</span> que hacen mínima la función</p>
+<div id="exr-ecuacion-laplace" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 10.33 </strong></span>La ecuación diferencial parcial</p>
 <p><span class="math display">\[
-f(a,b)= \sum_{i=1}^{n}(y_i-a-bx_i)^2,
+\frac{\partial^2 u}{\partial x^2} + \frac{\partial^2 u}{\partial y^2} + \frac{\partial^2 u}{\partial z^2} = 0,
 \]</span></p>
-<p>donde el sumatorio abarca a todos los pares de la muestra <span class="math inline">\((x_i,y_i)\)</span> para <span class="math inline">\(i=1,\ldots, n\)</span>, siendo <span class="math inline">\(n\)</span> el tamaño de la muestra.</p>
-<p>Demostrar que esta función alcanza el mínimo en el punto</p>
-<p><span class="math display">\[
-a=\bar y-b\bar x \quad \mbox{ y } b=\frac{s_{xy}}{s_x^2}.
-\]</span></p>
+<p>se conoce como ecuación de Laplace y se aplica a multitud de fenómenos relacionadas con la conducción de calor, el flujo de fluidos o el potencial eléctrico.</p>
+<ol type="a">
+<li><p>Comprobar que la función <span class="math inline">\(u(x,y,z)=\dfrac{1}{\sqrt{x^2 + y^2 + z^2}}\)</span> satisface la ecuación de Laplace.</p></li>
+<li><p>¿Existe algún punto en el que el crecimiento de la función sea nulo?</p></li>
+<li><p>Si fijamos <span class="math inline">\(z=1\)</span>, calcular <span class="math inline">\(\frac{\partial^4u}{\partial x^2\partial y^2}\)</span>.</p></li>
+</ol>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-24-contents" aria-controls="callout-24" aria-expanded="false" aria-label="Toggle callout">
@@ -1114,6 +1124,113 @@ Solución
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
 <div id="callout-24" class="callout-24-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="a">
+<li><p>Para comprobar que <span class="math inline">\(u(x,y,z)\)</span> satisface la ecuación de Laplace calculamos las tres derivadas parciales segundas que intervienen en la ecuación. Comenzando con las derivadas parciales con respecto a la variable <span class="math inline">\(x\)</span>, obtenemos:</p>
+<p><span class="math display">\[\begin{align*}
+\frac{{\partial u}}{{\partial x}}
+&amp;=  - \frac{1}{2}\left( {x^2  + y^2 + z^2 } \right)^{ - 3/2} 2x
+=  - x\left( {x^2  + y^2  + z^2 }\right)^{ - 3/2} \\
+\frac{{\partial ^2 u}}{{\partial x^2 }}
+&amp;= \frac{\partial }{{\partial x}}\left( { - x\left( {x^2  + y^2  + z^2 } \right)^{ - 3/2} } \right) \\
+&amp;=  - \left( {x^2  + y^2  + z^2 } \right)^{ - 3/2}  + 3x^2 \left( {x^2  + y^2  + z^2 } \right)^{ - 5/2} \\
+\frac{{\partial u}}{{\partial y}}
+&amp;= - y\left( {x^2  + y^2  + z^2 } \right)^{ - 3/2} \\
+\frac{{\partial ^2 u}}{{\partial y^2 }}
+&amp;=  - \left( {x^2  + y^2  + z^2 } \right)^{ - 3/2}  + 3y^2 \left( {x^2  + y^2  + z^2 } \right)^{- 5/2} \\
+\frac{{\partial u}}{{\partial z}}
+&amp;=  - z\left( {x^2  + y^2  + z^2 } \right)^{ - 3/2} \\
+\frac{{\partial ^2 u}}{{\partial z^2 }}
+&amp;=  - \left( {x^2  + y^2  + z^2 } \right)^{ - 3/2}  + 3z^2 \left( {x^2  + y^2  + z^2 } \right)^{- 5/2}
+\end{align*}\]</span></p>
+<p>Por lo tanto,</p>
+<p><span class="math display">\[
+\begin{gathered}
+\frac{{\partial ^2 u}}{{\partial x^2 }} + \frac{{\partial ^2
+u}}{{\partial y^2 }} + \frac{{\partial ^2 u}}{{\partial z^2 }} \\
+=  -3\left( {x^2  + y^2  + z^2 } \right)^{ - 3/2}  + 3\left( {x^2  + y^2
++ z^2 } \right)\left( {x^2  + y^2  + z^2 } \right)^{ - 5/2}  \\
+=- 3\left( {x^2  + y^2  + z^2 } \right)^{ - 3/2}  + 3\left( {x^2  +
+y^2 + z^2 } \right)^{ - 3/2}  = 0.
+\end{gathered}
+\]</span></p></li>
+<li><p>Una condición necesaria para que el crecimiento de una función de varias variables en un punto sea nulo es que el gradiente en dicho punto se anule, y el gradiente se anula si se anulan sus tres componentes:</p>
+<p><span class="math display">\[
+\vec \nabla u = \vec 0 \Leftrightarrow \left( {\frac{{\partial
+u}}{{\partial x}},\frac{{\partial u}}{{\partial y}},\frac{{\partial
+u}}{{\partial z}}} \right) = \left( {0,0,0} \right)
+\]</span></p>
+<p>Por lo tanto, tenemos un sistema no lineal de tres ecuaciones con tres incógnitas:</p>
+<p><span class="math display">\[
+- x\left( {x^2  + y^2  + z^2 } \right)^{ - 3/2}  = 0
+\]</span></p>
+<p><span class="math display">\[
+- y\left( {x^2  + y^2  + z^2 } \right)^{ - 3/2}  = 0
+\]</span></p>
+<p><span class="math display">\[
+- z\left( {x^2  + y^2  + z^2 } \right)^{ - 3/2}  = 0
+\]</span></p>
+<p>Y teniendo en cuenta que el término <span class="math inline">\((x^2+y^2+z^2)\)</span>, por tratarse de una suma de cuadrados, únicamente puede ser 0 si <span class="math inline">\(x=y=z=0\)</span>; y a igual conclusión llegamos si suponemos que es distinto de 0, ya que entonces la primera ecuación implica que necesariamente <span class="math inline">\(x=0\)</span>, la segunda implica que <span class="math inline">\(y=0\)</span>, y la tercera implica que <span class="math inline">\(z=0\)</span>. Por lo tanto, concluimos que el único punto en el que el crecimiento puede ser nulo es <span class="math inline">\((x,y,z)=(0,0,0)\)</span>, pero dicho punto no pertenece al dominio de definición de la función (tendríamos un cero como denominador de una fracción), por lo que no hay ningún punto en el que la función presente un crecimiento nulo.</p></li>
+<li><p>Suponiendo <span class="math inline">\(z=1\)</span>, la función resultante presenta únicamente dos variables:</p>
+<p><span class="math display">\[
+u(x,y,1) = \frac{1}{{\sqrt {x^2  + y^2  + 1} }} = \left( {x^2  + y^2
++ 1} \right)^{ - 1/2}
+\]</span></p>
+<p>La derivada propuesta es:</p>
+<p><span class="math display">\[
+\frac{{\partial ^4 u}}{{\partial x^2 \partial y^2 }} =
+\frac{\partial }{{\partial x}}\left( {\frac{\partial }{{\partial
+x}}\left( {\frac{\partial }{{\partial y}}\left( {\frac{{\partial
+u}}{{\partial y}}} \right)} \right)} \right)
+\]</span></p>
+<p>Operando como ya hicimos en los cálculos previos de las derivadas segundas, obtenemos:</p>
+<p><span class="math display">\[\begin{align*}
+\frac{{\partial u}}{{\partial y}}
+&amp;=  - y\left( {x^2  + y^2  + 1}
+\right)^{ - 3/2} \\
+\frac{{\partial ^2 u}}{{\partial y^2 }}
+&amp;= \frac{\partial }{{\partial y}}\left( {\frac{{\partial u}}{{\partial
+y}}} \right) =  - \left(
+{x^2  + y^2  + 1} \right)^{ - 3/2}  + 3y^2 \left( {x^2  + y^2  + 1}
+\right)^{ - 5/2} \\
+\frac{{\partial ^3 u}}{{\partial    x\partial y^2 }}
+&amp;= \frac{\partial }{{\partial x}}\left( {\frac{{\partial ^2
+u}}{{\partial y^2 }}} \right)
+= 3x\left( {x^2  + y^2  + 1} \right)^{ - 5/2}  -
+15y^2 x\left( {x^2  + y^2  + 1} \right)^{ - 7/2} \\
+\frac{{\partial ^4 u}}{{\partial x^2 \partial y^2 }}
+&amp;= \frac{\partial }{{\partial x}}\left( {\frac{{\partial ^3
+u}}{{\partial x\partial y^2 }}} \right) \\
+&amp;= 3\left( {x^2  + y^2  + 1} \right)^{ - 5/2}  - 15\left( {x^2  + y^2
+} \right)\left( {x^2  + y^2 + 1} \right)^{ - 7/2}  \\
+&amp;= + 105x^2 y\left({x^2  + y^2  + 1} \right)^{ - 9/2}.
+\end{align*}\]</span></p></li>
+</ol>
+</div>
+</div>
+</div>
+<div id="exr-ajuste-minimos-cuadrados" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 10.34 </strong></span>En el ajuste de regresión de una recta <span class="math inline">\(y=a+bx\)</span>, se suele utilizar la técnica de mínimos cuadrados que consisten en buscar los valores de <span class="math inline">\(a\)</span> y <span class="math inline">\(b\)</span> que hacen mínima la función</p>
+<p><span class="math display">\[
+f(a,b)= \sum_{i=1}^{n}(y_i-a-bx_i)^2,
+\]</span></p>
+<p>donde el sumatorio abarca a todos los pares de la muestra <span class="math inline">\((x_i,y_i)\)</span> para <span class="math inline">\(i=1,\ldots, n\)</span>, siendo <span class="math inline">\(n\)</span> el tamaño de la muestra.</p>
+<p>Demostrar que esta función alcanza el mínimo en el punto</p>
+<p><span class="math display">\[
+a=\bar y-b\bar x \quad \mbox{ y } b=\frac{s_{xy}}{s_x^2}.
+\]</span></p>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-25-contents" aria-controls="callout-25" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-25" class="callout-25-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 
 </div>
