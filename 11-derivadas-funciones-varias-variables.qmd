@@ -687,6 +687,9 @@ donde $x$, $y$ y $z$ son las concentraciones de tres sustancias.
 ¿Cómo cambia la concentración de $z$ si empezamos a disminuir $x$ al mismo ritmo que se incrementa $y$ en el instante en que $x=2$ e $y=1$ y $z=-1$?
 :::
 
+:::{#exr-regla-cadena-coordenadas-polares}
+
+
 :::{#exr-funcion-homogenea}
 Una función $f(x,y)$ se llama homogénea de grado $n$ si satisface que $f(tx, ty) = t^nf(x,y)$. Demostrar que si $f$ es homogénea de grado $n$ se cumplen las ecuaciones 
 
@@ -698,6 +701,10 @@ x^2\frac{\partial^2 f}{\partial x^2} + 2xy \frac{\partial^2 f}{\partial x \parti
 $$
 :::
 
+:::{#exr-regla-cadena-coordenadas-polares}
+Dado un campo escalar $f(x,y)$, donde $(x,y)$ son las coordenadas cartesianas de un punto en el plano, calcular $\frac{\partial f}{\partial r}$ y $\frac{\partial f}{\partial \theta}$, donde $r$ y $\theta$ son las coordenadas polares del punto. 
+:::
+
 :::{#exr-potencial-electrico}
 La relación que modeliza el potencial eléctrico $V$ de un punto del plano en función de su distancia, es $V=\log D$, donde $D=\sqrt{x^2+y^2}$.
 
@@ -706,6 +713,8 @@ a. Calcular el gradiente de $V$.
 a. Hallar la dirección de máxima variación del potencial eléctrico en el punto $(x,y)=(\sqrt{3},\sqrt{3})$.
 
 a. Calcular la matriz Hessiana y el Hessiano de $V$ en el punto anterior.
+
+a. Aplicar el ejercicio anterior para calcular el gradiente y el Hessiano en coordenadas polares.
 
 a. Si nos movemos a lo largo de la curva $y=x+1$, cuál será el mínimo potencial alcanzado?
 :::
@@ -804,7 +813,6 @@ segundo orden:
     \right)
     $$
 :::
-
 
 :::{#exr-ecuacion-laplace}
 La ecuación diferencial parcial
@@ -937,6 +945,37 @@ dos variables:
     \end{align*}
 :::
 
+:::{#exr-extremos-1}
+Hallar los extremos relativos y los puntos de silla de la función $f(x,y) = (x^2+y^2)^2-2a^2(x^2-y^2)$ con $a\neq 0$.
+:::
+
+:::{.callout-tip collapse="true"}
+## Solución
+No tiene máximos relativos.  
+Mínimos relativos en $(-a,0)$ y $(a,0)$.  
+Punto de silla en $(0,0)$.
+:::
+
+:::{#exr-extremos-2}
+Determinar los extremos relativos y los puntos de silla del campo escalar $h(x,y) = xy+\dfrac{xy^2}{2}-2x^2$.
+:::
+
+:::{.callout-tip collapse="true"}
+## Solución
+Máximo relativo en $(-1/8,-1)$.  
+No tiene mínimos relativos.  
+Puntos de silla en $(0,0)$ y $(0,-2)$.
+:::
+
+:::{#exr-extremos-cosecha}
+El rendimiento de una cosecha, $R$, depende de las concentraciones de nitrógeno, $n$, y fósforo, $p$, presentes en el suelo según la función $R(n,p) = npe^{-(n+p)}$. ¿Cuáles deben ser las concentraciones de nitrógeno y fósforo para que el rendimiento de la cosecha sea máximo?
+:::
+
+:::{.callout-tip collapse="true"}
+## Solución
+El rendimiento de la cosecha será máximo para $n=p=1$.
+:::
+
 
 :::{#exr-ajuste-minimos-cuadrados}
 En el ajuste de regresión de una recta $y=a+bx$, se suele utilizar la técnica de mínimos cuadrados que consisten en buscar los valores de $a$ y $b$ que hacen mínima la función
@@ -953,9 +992,3 @@ $$
 a=\bar y-b\bar x \quad \mbox{ y } b=\frac{s_{xy}}{s_x^2}.
 $$
 :::
-
-:::{.callout-tip collapse="true"}
-## Solución
-
-:::
-

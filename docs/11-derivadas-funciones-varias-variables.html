@@ -68,9 +68,11 @@ ul.task-list li input[type="checkbox"] {
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <meta property="og:title" content="Problemas de Análisis Matemático - 10&nbsp; Derivadas de funciones de varias variables">
+<meta property="og:description" content="">
 <meta property="og:image" content="11-derivadas-funciones-varias-variables_files/figure-html/cell-2-output-1.svg">
 <meta property="og:site-name" content="Problemas de Análisis Matemático">
 <meta name="twitter:title" content="Problemas de Análisis Matemático - 10&nbsp; Derivadas de funciones de varias variables">
+<meta name="twitter:description" content="">
 <meta name="twitter:image" content="11-derivadas-funciones-varias-variables_files/figure-html/cell-2-output-1.svg">
 <meta name="twitter:site" content="@aprendeconalf">
 <meta name="twitter:card" content="summary_large_image">
@@ -978,6 +980,7 @@ x\ln(y)+\frac{2e^{y^2+z}}{x} - \frac{x}{z^2} = -1
 \]</span></p>
 <p>donde <span class="math inline">\(x\)</span>, <span class="math inline">\(y\)</span> y <span class="math inline">\(z\)</span> son las concentraciones de tres sustancias. ¿Cómo cambia la concentración de <span class="math inline">\(z\)</span> si empezamos a disminuir <span class="math inline">\(x\)</span> al mismo ritmo que se incrementa <span class="math inline">\(y\)</span> en el instante en que <span class="math inline">\(x=2\)</span> e <span class="math inline">\(y=1\)</span> y <span class="math inline">\(z=-1\)</span>?</p>
 </div>
+<p>:::{#exr-regla-cadena-coordenadas-polares}</p>
 <div id="exr-funcion-homogenea" class="theorem exercise">
 <p><span class="theorem-title"><strong>Ejercicio 10.30 </strong></span>Una función <span class="math inline">\(f(x,y)\)</span> se llama homogénea de grado <span class="math inline">\(n\)</span> si satisface que <span class="math inline">\(f(tx, ty) = t^nf(x,y)\)</span>. Demostrar que si <span class="math inline">\(f\)</span> es homogénea de grado <span class="math inline">\(n\)</span> se cumplen las ecuaciones</p>
 <p><span class="math display">\[
@@ -987,12 +990,16 @@ x^2\frac{\partial^2 f}{\partial x^2} + 2xy \frac{\partial^2 f}{\partial x \parti
 \end{gathered}
 \]</span></p>
 </div>
+<div id="exr-regla-cadena-coordenadas-polares" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 10.31 </strong></span>Dado un campo escalar <span class="math inline">\(f(x,y)\)</span>, donde <span class="math inline">\((x,y)\)</span> son las coordenadas cartesianas de un punto en el plano, calcular <span class="math inline">\(\frac{\partial f}{\partial r}\)</span> y <span class="math inline">\(\frac{\partial f}{\partial \theta}\)</span>, donde <span class="math inline">\(r\)</span> y <span class="math inline">\(\theta\)</span> son las coordenadas polares del punto.</p>
+</div>
 <div id="exr-potencial-electrico" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 10.31 </strong></span>La relación que modeliza el potencial eléctrico <span class="math inline">\(V\)</span> de un punto del plano en función de su distancia, es <span class="math inline">\(V=\log D\)</span>, donde <span class="math inline">\(D=\sqrt{x^2+y^2}\)</span>.</p>
+<p><span class="theorem-title"><strong>Ejercicio 10.32 </strong></span>La relación que modeliza el potencial eléctrico <span class="math inline">\(V\)</span> de un punto del plano en función de su distancia, es <span class="math inline">\(V=\log D\)</span>, donde <span class="math inline">\(D=\sqrt{x^2+y^2}\)</span>.</p>
 <ol type="a">
 <li><p>Calcular el gradiente de <span class="math inline">\(V\)</span>.</p></li>
 <li><p>Hallar la dirección de máxima variación del potencial eléctrico en el punto <span class="math inline">\((x,y)=(\sqrt{3},\sqrt{3})\)</span>.</p></li>
 <li><p>Calcular la matriz Hessiana y el Hessiano de <span class="math inline">\(V\)</span> en el punto anterior.</p></li>
+<li><p>Aplicar el ejercicio anterior para calcular el gradiente y el Hessiano en coordenadas polares.</p></li>
 <li><p>Si nos movemos a lo largo de la curva <span class="math inline">\(y=x+1\)</span>, cuál será el mínimo potencial alcanzado?</p></li>
 </ol>
 </div>
@@ -1035,7 +1042,7 @@ Solución
 </div>
 </div>
 <div id="exr-barra-metal" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 10.32 </strong></span>Una barra de metal de un metro de largo se calienta de manera irregular y de forma tal que a <span class="math inline">\(x\)</span> metros de su extremo izquierdo y en el instante <span class="math inline">\(t\)</span> minutos, su temperatura en grados centígrados esta dada por <span class="math inline">\(H(x,t) = 100e^{-0.1t}\operatorname{sen}(\pi xt)\)</span> con <span class="math inline">\(0\leq x \leq 1\)</span>.</p>
+<p><span class="theorem-title"><strong>Ejercicio 10.33 </strong></span>Una barra de metal de un metro de largo se calienta de manera irregular y de forma tal que a <span class="math inline">\(x\)</span> metros de su extremo izquierdo y en el instante <span class="math inline">\(t\)</span> minutos, su temperatura en grados centígrados esta dada por <span class="math inline">\(H(x,t) = 100e^{-0.1t}\operatorname{sen}(\pi xt)\)</span> con <span class="math inline">\(0\leq x \leq 1\)</span>.</p>
 <ol type="a">
 <li><p>Calcular <span class="math inline">\(\dfrac{\partial H}{\partial x}(0.2, 1)\)</span> y <span class="math inline">\(\dfrac{\partial H}{\partial x}(0.8, 1).\)</span> ¿Cuál es la interpretación práctica (en términos de temperatura) de estas derivadas parciales? Explicar por qué cada una tiene el signo que tiene.</p></li>
 <li><p>Calcular la matriz hessiana de <span class="math inline">\(H\)</span>.</p></li>
@@ -1102,7 +1109,7 @@ Solución
 </div>
 </div>
 <div id="exr-ecuacion-laplace" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 10.33 </strong></span>La ecuación diferencial parcial</p>
+<p><span class="theorem-title"><strong>Ejercicio 10.34 </strong></span>La ecuación diferencial parcial</p>
 <p><span class="math display">\[
 \frac{\partial^2 u}{\partial x^2} + \frac{\partial^2 u}{\partial y^2} + \frac{\partial^2 u}{\partial z^2} = 0,
 \]</span></p>
@@ -1209,16 +1216,8 @@ u}}{{\partial x\partial y^2 }}} \right) \\
 </div>
 </div>
 </div>
-<div id="exr-ajuste-minimos-cuadrados" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 10.34 </strong></span>En el ajuste de regresión de una recta <span class="math inline">\(y=a+bx\)</span>, se suele utilizar la técnica de mínimos cuadrados que consisten en buscar los valores de <span class="math inline">\(a\)</span> y <span class="math inline">\(b\)</span> que hacen mínima la función</p>
-<p><span class="math display">\[
-f(a,b)= \sum_{i=1}^{n}(y_i-a-bx_i)^2,
-\]</span></p>
-<p>donde el sumatorio abarca a todos los pares de la muestra <span class="math inline">\((x_i,y_i)\)</span> para <span class="math inline">\(i=1,\ldots, n\)</span>, siendo <span class="math inline">\(n\)</span> el tamaño de la muestra.</p>
-<p>Demostrar que esta función alcanza el mínimo en el punto</p>
-<p><span class="math display">\[
-a=\bar y-b\bar x \quad \mbox{ y } b=\frac{s_{xy}}{s_x^2}.
-\]</span></p>
+<div id="exr-extremos-1" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 10.35 </strong></span>Hallar los extremos relativos y los puntos de silla de la función <span class="math inline">\(f(x,y) = (x^2+y^2)^2-2a^2(x^2-y^2)\)</span> con <span class="math inline">\(a\neq 0\)</span>.</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-25-contents" aria-controls="callout-25" aria-expanded="false" aria-label="Toggle callout">
@@ -1232,9 +1231,62 @@ Solución
 </div>
 <div id="callout-25" class="callout-25-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-
+<p>No tiene máximos relativos.<br>
+Mínimos relativos en <span class="math inline">\((-a,0)\)</span> y <span class="math inline">\((a,0)\)</span>.<br>
+Punto de silla en <span class="math inline">\((0,0)\)</span>.</p>
 </div>
 </div>
+</div>
+<div id="exr-extremos-2" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 10.36 </strong></span>Determinar los extremos relativos y los puntos de silla del campo escalar <span class="math inline">\(h(x,y) = xy+\dfrac{xy^2}{2}-2x^2\)</span>.</p>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-26-contents" aria-controls="callout-26" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-26" class="callout-26-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Máximo relativo en <span class="math inline">\((-1/8,-1)\)</span>.<br>
+No tiene mínimos relativos.<br>
+Puntos de silla en <span class="math inline">\((0,0)\)</span> y <span class="math inline">\((0,-2)\)</span>.</p>
+</div>
+</div>
+</div>
+<div id="exr-extremos-cosecha" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 10.37 </strong></span>El rendimiento de una cosecha, <span class="math inline">\(R\)</span>, depende de las concentraciones de nitrógeno, <span class="math inline">\(n\)</span>, y fósforo, <span class="math inline">\(p\)</span>, presentes en el suelo según la función <span class="math inline">\(R(n,p) = npe^{-(n+p)}\)</span>. ¿Cuáles deben ser las concentraciones de nitrógeno y fósforo para que el rendimiento de la cosecha sea máximo?</p>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-27-contents" aria-controls="callout-27" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-27" class="callout-27-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>El rendimiento de la cosecha será máximo para <span class="math inline">\(n=p=1\)</span>.</p>
+</div>
+</div>
+</div>
+<div id="exr-ajuste-minimos-cuadrados" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 10.38 </strong></span>En el ajuste de regresión de una recta <span class="math inline">\(y=a+bx\)</span>, se suele utilizar la técnica de mínimos cuadrados que consisten en buscar los valores de <span class="math inline">\(a\)</span> y <span class="math inline">\(b\)</span> que hacen mínima la función</p>
+<p><span class="math display">\[
+f(a,b)= \sum_{i=1}^{n}(y_i-a-bx_i)^2,
+\]</span></p>
+<p>donde el sumatorio abarca a todos los pares de la muestra <span class="math inline">\((x_i,y_i)\)</span> para <span class="math inline">\(i=1,\ldots, n\)</span>, siendo <span class="math inline">\(n\)</span> el tamaño de la muestra.</p>
+<p>Demostrar que esta función alcanza el mínimo en el punto</p>
+<p><span class="math display">\[
+a=\bar y-b\bar x \quad \mbox{ y } b=\frac{s_{xy}}{s_x^2}.
+\]</span></p>
 </div>
 
 
