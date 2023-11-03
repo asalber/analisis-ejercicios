@@ -687,9 +687,6 @@ donde $x$, $y$ y $z$ son las concentraciones de tres sustancias.
 ¿Cómo cambia la concentración de $z$ si empezamos a disminuir $x$ al mismo ritmo que se incrementa $y$ en el instante en que $x=2$ e $y=1$ y $z=-1$?
 :::
 
-:::{#exr-regla-cadena-coordenadas-polares}
-
-
 :::{#exr-funcion-homogenea}
 Una función $f(x,y)$ se llama homogénea de grado $n$ si satisface que $f(tx, ty) = t^nf(x,y)$. Demostrar que si $f$ es homogénea de grado $n$ se cumplen las ecuaciones 
 
@@ -702,7 +699,16 @@ $$
 :::
 
 :::{#exr-regla-cadena-coordenadas-polares}
-Dado un campo escalar $f(x,y)$, donde $(x,y)$ son las coordenadas cartesianas de un punto en el plano, calcular $\frac{\partial f}{\partial r}$ y $\frac{\partial f}{\partial \theta}$, donde $r$ y $\theta$ son las coordenadas polares del punto. 
+Demostrar que si $f(x,y)$ es una función de varias variables tal que $x$ e $y$ dependen, a su vez, de otras dos variables, $u$ y $v$, es decir, $x=x(u,v)$ e $y=y(u,v)$, entonces 
+
+\begin{align*}
+\frac{\partial f}{\partial u} 
+&= \frac{\partial f}{\partial x} \frac{\partial x}{\partial u} + \frac{\partial f}{\partial y} \frac{\partial y}{\partial u} \\
+\frac{\partial f}{\partial v} 
+&= \frac{\partial f}{\partial x} \frac{\partial x}{\partial v} + \frac{\partial f}{\partial y} \frac{\partial y}{\partial v} 
+\end{align*}
+
+Dado un campo escalar $f(x,y)$, donde $(x,y)$ son las coordenadas cartesianas de un punto en el plano, usar el resultado anterior para calcular $\frac{\partial f}{\partial r}$ y $\frac{\partial f}{\partial \theta}$, donde $r$ y $\theta$ son las coordenadas polares del punto. 
 :::
 
 :::{#exr-potencial-electrico}
@@ -973,9 +979,55 @@ El rendimiento de una cosecha, $R$, depende de las concentraciones de nitrógeno
 
 :::{.callout-tip collapse="true"}
 ## Solución
-El rendimiento de la cosecha será máximo para $n=p=1$.
+Se trata de un problema de optimización, así que, primero calculamos los puntos donde se anula el gradiente
+
+\begin{align*}
+\frac{\partial R}{\partial n} 
+&= e^{-(n+p)}p(1-n) = 0 \Leftrightarrow n=1 \mbox{ o } p=0.\\
+\frac{\partial R}{\partial p} 
+&= e^{-(n+p)}n(1-p) = 0 \Leftrightarrow n=0 \mbox{ o } p=1.
+\end{align*}
+
+Así pues, existen dos puntos críticos, que son $(0,0)$ y $(1, 1)$. Para ver en cuál de ellos hay un máximo relativo, calculamos el hessiano en cada uno de ellos. La matriz hessiana vale
+
+$$
+\nabla^2 R(n,p) =
+\begin{pmatrix}
+e^{-(n+p)}p(n-2) & e^{-(n+p)}(np-n-p+1)\\
+e^{-(n+p)}(np-n-p+1) & e^{-(n+p)}n(p-2)
+\end{pmatrix}
+$$
+
+El hessiano en el punto $(0,0)$ vale
+
+$$
+|\nabla^2 R(0,0)| =
+\begin{vmatrix}
+0 & 1\\
+1 & 0
+\end{vmatrix}
+= -1 < 0,
+$$
+
+por lo que en el punto $(0,0)$ hay un punto de silla.
+
+El hessiano en el punto $(1,1)$ vale
+
+$$
+|\nabla^2 R(0,0)| =
+\begin{vmatrix}
+-e^{-2} & 0\\
+0 & -e^{-2}
+\end{vmatrix}
+= e^{-4} > 0,
+$$
+
+por lo que en el punto $(1,1)$ hay un extremo relativo, y como $\frac{\partial^2 R}{\partial n^2}=-e^{-2} <0$ se trata de un máximo relativo. Por tanto, el rendimiento de la cosecha será máximo para $n=p=1$.
 :::
 
+:::{#exr-maximizacion-beneficio}
+Una empresa fabrica ordenadores portátiles y de sobremesa. El precio de los ordenadores portátiles es de 1200€ y el de los de sobremesa 800€. Si el coste de producir $x$ ordenadores portátiles e $y$ ordenadores de sobremesa semanales viene dado por la función $C(x,y)=2x^2+y^2+10000\ln(xy)$ en euros, ¿qué cantidad de ordenadores de cada tipo deberá producir semanalmente para maximizar el beneficio?
+:::
 
 :::{#exr-ajuste-minimos-cuadrados}
 En el ajuste de regresión de una recta $y=a+bx$, se suele utilizar la técnica de mínimos cuadrados que consisten en buscar los valores de $a$ y $b$ que hacen mínima la función
@@ -992,3 +1044,8 @@ $$
 a=\bar y-b\bar x \quad \mbox{ y } b=\frac{s_{xy}}{s_x^2}.
 $$
 :::
+
+:::{#exr-maximizacion-fuerza-prisma-triangular}
+La fuerza de una varilla metálica tiene forma de prisma triangular viene dada por la función $f(x,y,z) = \frac{xy}{z²}$, donde $x$ e $y$ son la base y la altura del triángulo de la sección de la varilla, y $z$ la longitud de la varilla. Si se quieren fabricar varillas con un volumen de 100 cm$^3$, ¿cuáles deberían ser las dimensiones de la varilla para conseguir la mayor fuerza posible?
+:::
+

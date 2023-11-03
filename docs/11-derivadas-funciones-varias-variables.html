@@ -68,11 +68,9 @@ ul.task-list li input[type="checkbox"] {
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <meta property="og:title" content="Problemas de Análisis Matemático - 10&nbsp; Derivadas de funciones de varias variables">
-<meta property="og:description" content="">
 <meta property="og:image" content="11-derivadas-funciones-varias-variables_files/figure-html/cell-2-output-1.svg">
 <meta property="og:site-name" content="Problemas de Análisis Matemático">
 <meta name="twitter:title" content="Problemas de Análisis Matemático - 10&nbsp; Derivadas de funciones de varias variables">
-<meta name="twitter:description" content="">
 <meta name="twitter:image" content="11-derivadas-funciones-varias-variables_files/figure-html/cell-2-output-1.svg">
 <meta name="twitter:site" content="@aprendeconalf">
 <meta name="twitter:card" content="summary_large_image">
@@ -980,7 +978,6 @@ x\ln(y)+\frac{2e^{y^2+z}}{x} - \frac{x}{z^2} = -1
 \]</span></p>
 <p>donde <span class="math inline">\(x\)</span>, <span class="math inline">\(y\)</span> y <span class="math inline">\(z\)</span> son las concentraciones de tres sustancias. ¿Cómo cambia la concentración de <span class="math inline">\(z\)</span> si empezamos a disminuir <span class="math inline">\(x\)</span> al mismo ritmo que se incrementa <span class="math inline">\(y\)</span> en el instante en que <span class="math inline">\(x=2\)</span> e <span class="math inline">\(y=1\)</span> y <span class="math inline">\(z=-1\)</span>?</p>
 </div>
-<p>:::{#exr-regla-cadena-coordenadas-polares}</p>
 <div id="exr-funcion-homogenea" class="theorem exercise">
 <p><span class="theorem-title"><strong>Ejercicio 10.30 </strong></span>Una función <span class="math inline">\(f(x,y)\)</span> se llama homogénea de grado <span class="math inline">\(n\)</span> si satisface que <span class="math inline">\(f(tx, ty) = t^nf(x,y)\)</span>. Demostrar que si <span class="math inline">\(f\)</span> es homogénea de grado <span class="math inline">\(n\)</span> se cumplen las ecuaciones</p>
 <p><span class="math display">\[
@@ -991,7 +988,14 @@ x^2\frac{\partial^2 f}{\partial x^2} + 2xy \frac{\partial^2 f}{\partial x \parti
 \]</span></p>
 </div>
 <div id="exr-regla-cadena-coordenadas-polares" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 10.31 </strong></span>Dado un campo escalar <span class="math inline">\(f(x,y)\)</span>, donde <span class="math inline">\((x,y)\)</span> son las coordenadas cartesianas de un punto en el plano, calcular <span class="math inline">\(\frac{\partial f}{\partial r}\)</span> y <span class="math inline">\(\frac{\partial f}{\partial \theta}\)</span>, donde <span class="math inline">\(r\)</span> y <span class="math inline">\(\theta\)</span> son las coordenadas polares del punto.</p>
+<p><span class="theorem-title"><strong>Ejercicio 10.31 </strong></span>Demostrar que si <span class="math inline">\(f(x,y)\)</span> es una función de varias variables tal que <span class="math inline">\(x\)</span> e <span class="math inline">\(y\)</span> dependen, a su vez, de otras dos variables, <span class="math inline">\(u\)</span> y <span class="math inline">\(v\)</span>, es decir, <span class="math inline">\(x=x(u,v)\)</span> e <span class="math inline">\(y=y(u,v)\)</span>, entonces</p>
+<p><span class="math display">\[\begin{align*}
+\frac{\partial f}{\partial u}
+&amp;= \frac{\partial f}{\partial x} \frac{\partial x}{\partial u} + \frac{\partial f}{\partial y} \frac{\partial y}{\partial u} \\
+\frac{\partial f}{\partial v}
+&amp;= \frac{\partial f}{\partial x} \frac{\partial x}{\partial v} + \frac{\partial f}{\partial y} \frac{\partial y}{\partial v}
+\end{align*}\]</span></p>
+<p>Dado un campo escalar <span class="math inline">\(f(x,y)\)</span>, donde <span class="math inline">\((x,y)\)</span> son las coordenadas cartesianas de un punto en el plano, usar el resultado anterior para calcular <span class="math inline">\(\frac{\partial f}{\partial r}\)</span> y <span class="math inline">\(\frac{\partial f}{\partial \theta}\)</span>, donde <span class="math inline">\(r\)</span> y <span class="math inline">\(\theta\)</span> son las coordenadas polares del punto.</p>
 </div>
 <div id="exr-potencial-electrico" class="theorem exercise">
 <p><span class="theorem-title"><strong>Ejercicio 10.32 </strong></span>La relación que modeliza el potencial eléctrico <span class="math inline">\(V\)</span> de un punto del plano en función de su distancia, es <span class="math inline">\(V=\log D\)</span>, donde <span class="math inline">\(D=\sqrt{x^2+y^2}\)</span>.</p>
@@ -1273,12 +1277,49 @@ Solución
 </div>
 <div id="callout-27" class="callout-27-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>El rendimiento de la cosecha será máximo para <span class="math inline">\(n=p=1\)</span>.</p>
+<p>Se trata de un problema de optimización, así que, primero calculamos los puntos donde se anula el gradiente</p>
+<p><span class="math display">\[\begin{align*}
+\frac{\partial R}{\partial n}
+&amp;= e^{-(n+p)}p(1-n) = 0 \Leftrightarrow n=1 \mbox{ o } p=0.\\
+\frac{\partial R}{\partial p}
+&amp;= e^{-(n+p)}n(1-p) = 0 \Leftrightarrow n=0 \mbox{ o } p=1.
+\end{align*}\]</span></p>
+<p>Así pues, existen dos puntos críticos, que son <span class="math inline">\((0,0)\)</span> y <span class="math inline">\((1, 1)\)</span>. Para ver en cuál de ellos hay un máximo relativo, calculamos el hessiano en cada uno de ellos. La matriz hessiana vale</p>
+<p><span class="math display">\[
+\nabla^2 R(n,p) =
+\begin{pmatrix}
+e^{-(n+p)}p(n-2) &amp; e^{-(n+p)}(np-n-p+1)\\
+e^{-(n+p)}(np-n-p+1) &amp; e^{-(n+p)}n(p-2)
+\end{pmatrix}
+\]</span></p>
+<p>El hessiano en el punto <span class="math inline">\((0,0)\)</span> vale</p>
+<p><span class="math display">\[
+|\nabla^2 R(0,0)| =
+\begin{vmatrix}
+0 &amp; 1\\
+1 &amp; 0
+\end{vmatrix}
+= -1 &lt; 0,
+\]</span></p>
+<p>por lo que en el punto <span class="math inline">\((0,0)\)</span> hay un punto de silla.</p>
+<p>El hessiano en el punto <span class="math inline">\((1,1)\)</span> vale</p>
+<p><span class="math display">\[
+|\nabla^2 R(0,0)| =
+\begin{vmatrix}
+-e^{-2} &amp; 0\\
+0 &amp; -e^{-2}
+\end{vmatrix}
+= e^{-4} &gt; 0,
+\]</span></p>
+<p>por lo que en el punto <span class="math inline">\((1,1)\)</span> hay un extremo relativo, y como <span class="math inline">\(\frac{\partial^2 R}{\partial n^2}=-e^{-2} &lt;0\)</span> se trata de un máximo relativo. Por tanto, el rendimiento de la cosecha será máximo para <span class="math inline">\(n=p=1\)</span>.</p>
 </div>
 </div>
+</div>
+<div id="exr-maximizacion-beneficio" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 10.38 </strong></span>Una empresa fabrica ordenadores portátiles y de sobremesa. El precio de los ordenadores portátiles es de 1200€ y el de los de sobremesa 800€. Si el coste de producir <span class="math inline">\(x\)</span> ordenadores portátiles e <span class="math inline">\(y\)</span> ordenadores de sobremesa semanales viene dado por la función <span class="math inline">\(C(x,y)=2x^2+y^2+10000\ln(xy)\)</span> en euros, ¿qué cantidad de ordenadores de cada tipo deberá producir semanalmente para maximizar el beneficio?</p>
 </div>
 <div id="exr-ajuste-minimos-cuadrados" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 10.38 </strong></span>En el ajuste de regresión de una recta <span class="math inline">\(y=a+bx\)</span>, se suele utilizar la técnica de mínimos cuadrados que consisten en buscar los valores de <span class="math inline">\(a\)</span> y <span class="math inline">\(b\)</span> que hacen mínima la función</p>
+<p><span class="theorem-title"><strong>Ejercicio 10.39 </strong></span>En el ajuste de regresión de una recta <span class="math inline">\(y=a+bx\)</span>, se suele utilizar la técnica de mínimos cuadrados que consisten en buscar los valores de <span class="math inline">\(a\)</span> y <span class="math inline">\(b\)</span> que hacen mínima la función</p>
 <p><span class="math display">\[
 f(a,b)= \sum_{i=1}^{n}(y_i-a-bx_i)^2,
 \]</span></p>
@@ -1287,6 +1328,9 @@ f(a,b)= \sum_{i=1}^{n}(y_i-a-bx_i)^2,
 <p><span class="math display">\[
 a=\bar y-b\bar x \quad \mbox{ y } b=\frac{s_{xy}}{s_x^2}.
 \]</span></p>
+</div>
+<div id="exr-maximizacion-fuerza-prisma-triangular" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 10.40 </strong></span>La fuerza de una varilla metálica tiene forma de prisma triangular viene dada por la función <span class="math inline">\(f(x,y,z) = \frac{xy}{z²}\)</span>, donde <span class="math inline">\(x\)</span> e <span class="math inline">\(y\)</span> son la base y la altura del triángulo de la sección de la varilla, y <span class="math inline">\(z\)</span> la longitud de la varilla. Si se quieren fabricar varillas con un volumen de 100 cm<span class="math inline">\(^3\)</span>, ¿cuáles deberían ser las dimensiones de la varilla para conseguir la mayor fuerza posible?</p>
 </div>
 
 
