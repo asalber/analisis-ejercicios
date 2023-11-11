@@ -937,16 +937,6 @@ g'(\pi) &amp;= \left(\frac{2}{2}\cos(\pi/2), -\frac{3}{2}\operatorname{sen}(\pi/
 <div id="exr-transmision-errores-caudal-fuente" class="theorem exercise">
 <p><span class="theorem-title"><strong>Ejercicio 10.18 </strong></span>Para calcular el caudal de una fuente se ha llenado un depósito de base cuadrada <span class="math inline">\(30\pm 0.2\)</span> cm y altura <span class="math inline">\(50\pm 0.3\)</span> cm en un tiempo de <span class="math inline">\(20\pm 0.5\)</span> s. Expresar el caudal de la fuente incluyendo error en la medida.</p>
 </div>
-<div id="exr-transmision-errores-potencial-electrico" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 10.19 </strong></span>La potencia eléctrica <span class="math inline">\(P\)</span> en un circuito depende de el voltaje <span class="math inline">\(E\)</span> y la resistencia <span class="math inline">\(R\)</span> según la fórmula <span class="math inline">\(P = E^2/R\)</span>. Si los errores cometidos al medir el voltaje y la resistencia son de un 1% y un 2% respectivamente, ¿cuál será el error relativo en el cálculo de la potencia cuando se aplican 100 voltios a una resistencia de 1500 ohmios?</p>
-</div>
-<div id="exr-ameba" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 10.20 </strong></span>La Quimiotaxis es el movimiento de los organismos dirigido por un gradiente de concentración, es decir, en la dirección en la que la concentración aumenta con más rapidez. El moho del cieno Dictyoselium discoideum muestra este comportamiento. En esta caso, las amebas unicelulares de esta especie se mueven según el gradiente de concentración de una sustancia química denominada adenosina monofosfato (AMP cíclico). Si suponemos que la expresión que da la concentración de AMP cíclico en un punto de coordenadas <span class="math inline">\((x,y,z)\)</span> es:</p>
-<p><span class="math display">\[
-C(x,y,z) = \frac{4}{\sqrt{x^2+y^2+z^4+1}}
-\]</span></p>
-<p>y se sitúa una ameba de moho del cieno en el punto <span class="math inline">\((-1,0,1)\)</span>, ¿en qué dirección se moverá la ameba?</p>
-</div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-18-contents" aria-controls="callout-18" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -959,24 +949,31 @@ Solución
 </div>
 <div id="callout-18" class="callout-18-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p><span class="math inline">\((4/\sqrt{27}, 0, -8/\sqrt{27})\)</span>.</p>
+<p>El caudal de la fuente es el volumen dividido por el tiempo, pero el volumen del depósito depende de sus dimensiones, la función que da el caudal de la fuente es <span class="math inline">\(c(x,y,t) = \frac{x^2y}{t}\)</span>, donde <span class="math inline">\(x\)</span> es el lado de la base, <span class="math inline">\(y\)</span> es la altura y <span class="math inline">\(t\)</span> es el tiempo, y su gradiente vale</p>
+<p><span class="math display">\[
+\nabla c(x,y,t)
+= \left(\frac{2xy}{t}, \frac{x^2}{t}, \frac{-x^2y}{t^2}\right).
+\]</span></p>
+<p>Para calcular el error en la medición del caudal de manera aproximada usando el diferencial del caudal,</p>
+<p><span class="math display">\[\begin{align*}
+dc
+&amp;= \nabla c(30, 50, 20)(dx, dy, dt) \\
+&amp;= (150, 45, -112.5)(dx, dy, dz) \\
+&amp;= 150dx+45dy-112.5dz,
+\end{align*}\]</span></p>
+<p>que para unos errores <span class="math inline">\(dx=\pm 0.2\)</span>, <span class="math inline">\(dy=\pm 0.3\)</span> y <span class="math inline">\(dt=\pm 0.5\)</span> se tiene</p>
+<p><span class="math display">\[
+dc = 150(\pm 0.2) + 45(\pm 0.3) - 112.5(\pm 0.5) = \pm 99.75.
+\]</span></p>
+<p>Así pues, la expresión del caudal, incluyendo el error en la medida, es</p>
+<p><span class="math display">\[
+c(30,50,20) \pm dc = 2250 \pm 99.75 \mbox{ cm$^3$/s}.
+\]</span></p>
 </div>
 </div>
 </div>
-<div id="exr-derivada-direccional-gas-perfecto" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 10.21 </strong></span>Se sabe que un gas perfecto a una presión de <span class="math inline">\(1\)</span> atmósfera y una temperatura de <span class="math inline">\(273.1\)</span> K ocupa un volumen de <span class="math inline">\(22.4\)</span> litros.</p>
-<ol type="a">
-<li><p>¿En qué dirección deben cambiarse la presión y la temperatura para conseguir el mayor aumento del volumen?</p></li>
-<li><p>¿Cómo varía el volumen si comenzamos a incrementar la temperatura a razón del doble del incremento de la presión?</p></li>
-<li><p>¿Cuánto tendría que aumentar la temperatura por cada atmósfera de presión que se aumente para que el volumen permanezca constante?</p></li>
-</ol>
-</div>
-<div id="exr-derivada-direccional-capsulas" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 10.22 </strong></span>Se han diseñado unas cápsulas con forma piramidal con base un rectángulo de lados a=3 cm, b=4 cm, y altura h=6 cm.</p>
-<ol type="a">
-<li><p>¿Cómo deben cambiar las dimensiones de la cápsula para que el volumen aumente lo más rápidamente posible? ¿Cuál sería la tasa de variación del volumen si cambian las dimensiones de la cápsula en la proporciones anteriores?</p></li>
-<li><p>Si se empiezan a cambiar las dimensiones de la cápsula de manera que el lado mayor del rectángulo disminuye la mitad de lo que aumenta el lado menor, y la altura aumenta el doble de lo que aumenta el lado menor, ¿cuál sería la tasa de variación del volumen de la cápsula en las condiciones anteriores?</p></li>
-</ol>
+<div id="exr-transmision-errores-potencial-electrico" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 10.19 </strong></span>La potencia eléctrica <span class="math inline">\(P\)</span> en un circuito depende de el voltaje <span class="math inline">\(E\)</span> y la resistencia <span class="math inline">\(R\)</span> según la fórmula <span class="math inline">\(P = E^2/R\)</span>. Si los errores cometidos al medir el voltaje y la resistencia son de un <span class="math inline">\(1\)</span>% y un <span class="math inline">\(2\)</span>% respectivamente, ¿cuál será el error relativo en el cálculo de la potencia eléctrica?</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-19-contents" aria-controls="callout-19" aria-expanded="false" aria-label="Toggle callout">
@@ -990,19 +987,28 @@ Solución
 </div>
 <div id="callout-19" class="callout-19-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<ol type="a">
-<li><p><span class="math inline">\(\nabla V(3,4,6)=(8,6,4)\)</span> y el volumen aumentará <span class="math inline">\(|\nabla V(3,4,6)|=10.7703\)</span> cm<span class="math inline">\(^3\)</span>/s si cambiamos las dimensiones de la cápsula siguiendo esta dirección.</p></li>
-<li><p>Derivada direccional de <span class="math inline">\(V\)</span> en <span class="math inline">\((3,4,6)\)</span> siguiendo la dirección del vector <span class="math inline">\(\mathbf{u}=(1,-1/2,2)\)</span>: <span class="math inline">\(V'_\mathbf{u}(3,4,6)=5.6737\)</span> cm<span class="math inline">\(^3\)</span>/s.</p></li>
-</ol>
-</div>
-</div>
-</div>
-<div id="exr-derivada-direccional-nula" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 10.23 </strong></span>¿En qué direcciones se anulará la derivada direccional de la función</p>
+<p>Usando el diferencial como una aproximación del error en la medición de las magnitudes, se tiene que el error relativo en la medición del potencial es</p>
+<p><span class="math display">\[\begin{align*}
+\frac{dP}{P}
+&amp;= \frac{\nabla P (dE, dR)}{E^2/R}
+= \frac{\left(\frac{2E}{R}, \frac{-E^2}{R^2}\right)(dE, dR)}{E^2/R} \\
+&amp;= \frac{R\left(\frac{2E}{R}dE - \frac{E^2}{R^2}dR\right)}{E^2}
+= 2\frac{dE}{E} - \frac{dR}{R}.
+\end{align*}\]</span></p>
+<p>Y como <span class="math inline">\(\frac{dE}{E}\)</span> y <span class="math inline">\(\frac{dR}{R}\)</span> son los errores relativos en las mediciones del voltaje y la resistencia, respectivamente, se tiene que el error relativo en la medición del potencial es</p>
 <p><span class="math display">\[
-f(x,y)=\frac{x^2-y^2}{x^2+y^2}
+\frac{dP}{P} = 2\cdot (\pm 0.01) - (\pm 0.02) = \pm 0.04,
 \]</span></p>
-<p>en el punto <span class="math inline">\(P=(1,1)\)</span>?</p>
+<p>es decir, un <span class="math inline">\(4\)</span>%.</p>
+</div>
+</div>
+</div>
+<div id="exr-ameba" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 10.20 </strong></span>La Quimiotaxis es el movimiento de los organismos dirigido por un gradiente de concentración, es decir, en la dirección en la que la concentración aumenta con más rapidez. El moho del cieno Dictyoselium discoideum muestra este comportamiento. En esta caso, las amebas unicelulares de esta especie se mueven según el gradiente de concentración de una sustancia química denominada adenosina monofosfato (AMP cíclico). Si suponemos que la expresión que da la concentración de AMP cíclico en un punto de coordenadas <span class="math inline">\((x,y,z)\)</span> es:</p>
+<p><span class="math display">\[
+C(x,y,z) = \frac{4}{\sqrt{x^2+y^2+z^4+1}}
+\]</span></p>
+<p>y se sitúa una ameba de moho del cieno en el punto <span class="math inline">\((-1,0,1)\)</span>, ¿en qué dirección se moverá la ameba?</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-20-contents" aria-controls="callout-20" aria-expanded="false" aria-label="Toggle callout">
@@ -1016,12 +1022,25 @@ Solución
 </div>
 <div id="callout-20" class="callout-20-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>En la dirección <span class="math inline">\((1/\sqrt{2},1/\sqrt{2})\)</span>.</p>
+<p>La dirección en la que más rápidamente aumenta la concentración de AMP es la dirección del gradiente de <span class="math inline">\(C\)</span>, que vale</p>
+<p><span class="math display">\[\begin{align*}
+\nabla C(x,y,z)
+&amp;= \left(4\frac{-1}{2}(x^2+y^2+z^4+1)^{-3/2}2x\right., \\
+&amp; 4\frac{-1}{2}(x^2+y^2+z^4+1)^{-3/2}2y, \\
+&amp; \left. 4\frac{-1}{2}(x^2+y^2+z^4+1)^{-3/2}4z^3\right) \\
+&amp;= -4(x^2+y^2+z^4+1)^{-3/2}(x, y, 2z^3),
+\end{align*}\]</span></p>
+<p>y en el punto <span class="math inline">\((-1, 0, 1)\)</span> vale <span class="math inline">\((4/\sqrt{27}, 0, -8/\sqrt{27})\)</span>.</p>
 </div>
 </div>
 </div>
-<div id="exr-derivada-direccional" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 10.24 </strong></span>¿Existe alguna dirección en la que la derivada direccional en el punto <span class="math inline">\(P=(1,2)\)</span> de la función <span class="math inline">\(f(x,y) = x^2-3xy+4y^2\)</span> valga 14?</p>
+<div id="exr-derivada-direccional-gas-perfecto" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 10.21 </strong></span>Se sabe que un gas perfecto a una presión de <span class="math inline">\(1\)</span> atmósfera y una temperatura de <span class="math inline">\(273.1\)</span> K ocupa un volumen de <span class="math inline">\(22.4\)</span> litros.</p>
+<ol type="a">
+<li><p>¿En qué dirección deben cambiarse la presión y la temperatura para conseguir el mayor aumento del volumen?</p></li>
+<li><p>¿Cómo varía el volumen si comenzamos a incrementar la temperatura a razón del doble del incremento de la presión?</p></li>
+<li><p>¿Cuánto tendría que aumentar la temperatura por cada atmósfera de presión que se aumente para que el volumen permanezca constante?</p></li>
+</ol>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-21-contents" aria-controls="callout-21" aria-expanded="false" aria-label="Toggle callout">
@@ -1035,12 +1054,57 @@ Solución
 </div>
 <div id="callout-21" class="callout-21-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>No.</p>
+<p>La ecuación de los gases perfectos es <span class="math inline">\(PV = cT\)</span>, donde <span class="math inline">\(c\)</span> es una constante que depende del gas. En el caso particular del gas del ejercicio se tiene</p>
+<p><span class="math display">\[
+c = \frac{PV}{T} = \frac{1\cdot 2.4}{273.1} \approx 0.082 \mbox{ atm$\cdot$ l$/$K}.
+\]</span></p>
+<p>Si de la ecuación de los gases perfectos despejamos el volumen, se tiene la función de dos variables <span class="math inline">\(V(P,T) = \frac{cT}{P}\)</span>.</p>
+<ol type="a">
+<li><p>La dirección en la que hay que cambiar la temperatura y la presión para que el volumen aumente lo más rápidamente posible, es la dirección el vector gradiente,</p>
+<p><span class="math display">\[
+\nabla V(P,T)
+= \left(\frac{-cT}{P^2}, \frac{c}{P}\right),
+\]</span></p>
+<p>que para la temperatura y la presión dadas vale</p>
+<p><span class="math display">\[
+\nabla V(1, 273.1)
+= \left(\frac{-0.082\cdot 273.1}{1^2}, \frac{0.082}{1}\right)
+= (-22.4, 0.082).
+\]</span></p></li>
+<li><p>Para incrementar la temperatura a razón del doble del incremento de la presión, debemos cambiar la presión y la temperatura en la dirección del vector <span class="math inline">\(\mathbf{u}=(1,2)\)</span>, y la variación que experimenta el volumen en esta dirección viene dado por la derivada direccional del volumen en la dirección de <span class="math inline">\(\mathbf{u}\)</span>, que vale</p>
+<p><span class="math display">\[\begin{align*}
+V'_{\mathbf{u}}(1,273.1)
+&amp;= \nabla V(1, 273.1) \frac{\mathbf{u}}{|\mathbf{u}|}
+= (-22.4, 0.082)\frac{(1,2)}{\sqrt{5}} \\
+&amp;= \frac{-22.4\cdot 1 + 0.082\cdot 2}{\sqrt{5}}
+\approx -9.9442 \mbox{ l}.
+\end{align*}\]</span></p></li>
+<li><p>Tomemos un vector unitario cualquiera <span class="math inline">\(\mathbf{u}=(u_x,u_y)\)</span>. Como <span class="math inline">\(\mathbf{u}\)</span> es unitario, se cumple que <span class="math inline">\(u_x^2+u_y^2=1\)</span>, por lo que, <span class="math inline">\(u_y=\sqrt{1-x^2}\)</span>, y el vector tiene componentes <span class="math inline">\(\mathbf{u}=(u_x,\sqrt{1-u_x^2})\)</span>. Para que el volumen permanezca constante, al cambiar la presión y la temperatura en la dirección de <span class="math inline">\(\mathbf{u}\)</span>, la derivada direccional del volumen en esa dirección debe ser nula, es decir,</p>
+<p><span class="math display">\[\begin{align*}
+V'_{\mathbf{u}}(1,273.1)
+&amp;= \nabla V(1, 273.1) \mathbf{u}
+= (-22.4, 0.082)(u_x,\sqrt{1-u_x^2}) \\
+&amp;= -22.4 u_x + 0.082 \sqrt{1-u_x^2}
+= 0 \\
+&amp;\Leftrightarrow 22.4 u_x = 0.082\sqrt{1-u_x^2}
+\Leftrightarrow 273.1 u_x = \sqrt{1-u_x^2} \\
+&amp;\Leftrightarrow 273.1^2 u_x^2 = 1-u_x^2
+\Leftrightarrow 273.1^2 u_x^2 + u_x^2 = 1 \\
+&amp;\Leftrightarrow u_x^2 = \frac{1}{273.1^2+1}
+\Leftrightarrow u_x = \pm \sqrt{\frac{1}{273.1^2+1}}
+\approx \pm 0.0037.
+\end{align*}\]</span></p></li>
+</ol>
+<p>Por tanto, habrá que cambiar la presión y la temperatura en la dirección del vector <span class="math inline">\(\mathbf{u}=(0.0037, \sqrt{1-0.0037^2}) = (0.0037, 0.9999)\)</span>.</p>
 </div>
 </div>
 </div>
-<div id="exr-derivada-direccional-2" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 10.25 </strong></span>La derivada direccional de una función <span class="math inline">\(f\)</span> en un punto <span class="math inline">\(P\)</span> es máxima en la dirección del vector <span class="math inline">\((1,1,-1)\)</span> y su valor es <span class="math inline">\(2\sqrt{3}\)</span>. ¿Cuánto vale la derivada direccional de <span class="math inline">\(f\)</span> en <span class="math inline">\(P\)</span> en la dirección del vector <span class="math inline">\((1,1,0)\)</span>?</p>
+<div id="exr-derivada-direccional-capsulas" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 10.22 </strong></span>Se han diseñado unas cápsulas con forma piramidal con base un rectángulo de lados a=3 cm, b=4 cm, y altura h=6 cm.</p>
+<ol type="a">
+<li><p>¿Cómo deben cambiar las dimensiones de la cápsula para que el volumen aumente lo más rápidamente posible? ¿Cuál sería la tasa de variación del volumen si cambian las dimensiones de la cápsula en la proporciones anteriores?</p></li>
+<li><p>Si se empiezan a cambiar las dimensiones de la cápsula de manera que el lado mayor del rectángulo disminuye la mitad de lo que aumenta el lado menor, y la altura aumenta el doble de lo que aumenta el lado menor, ¿cuál sería la tasa de variación del volumen de la cápsula en las condiciones anteriores?</p></li>
+</ol>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-22-contents" aria-controls="callout-22" aria-expanded="false" aria-label="Toggle callout">
@@ -1054,7 +1118,137 @@ Solución
 </div>
 <div id="callout-22" class="callout-22-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p><span class="math inline">\(2\sqrt{2}\)</span>.</p>
+<p>El volumen de la cápsula viene dado por la función <span class="math inline">\(V(a, b, c) = \frac{1}{3}abc\)</span>.</p>
+<ol type="a">
+<li><p>La dirección de máximo crecimiento del volumen es la dirección del vector gradiente,</p>
+<p><span class="math display">\[
+\nabla V(a,b,c) = \frac{1}{3}(bc, ac, ab).
+\]</span></p>
+<p>que en el punto <span class="math inline">\((3, 4, 6)\)</span> vale <span class="math inline">\(\nabla V(3,4,6) = (8,6,4)\)</span>. La tasa de variación del volumen si se cambian sus dimensiones en la dirección del vector gradiente es</p>
+<p><span class="math display">\[
+|\nabla V(3,4,6)| = |(8,6,4)| = \sqrt{8^2+6^2+4^2} = 10.7703 \mbox{ cm$^3$/s}.
+\]</span></p></li>
+<li><p>La derivada direccional de <span class="math inline">\(V\)</span> en <span class="math inline">\((3,4,6)\)</span> siguiendo la dirección del vector <span class="math inline">\(\mathbf{u}=(1,-1/2,2)\)</span> es</p></li>
+</ol>
+<p><span class="math display">\[\begin{align*}
+V'_\mathbf{u}(3,4,6)
+&amp;= \nabla V(3,4,6) \frac{\mathbf{u}}{|\mathbf{u}|}
+= (8,6,4)\frac{(1,-1/2,2)}{\sqrt{1^2+(-1/2)^2+2^2}} \\
+&amp;= \frac{8\cdot 1 - 6 \cdot (1/2) + 4\cdot 2}{\sqrt{5.25}}
+\approx 5.6737 \mbox{ cm$^3$/s}.
+\end{align*}\]</span></p>
+</div>
+</div>
+</div>
+<div id="exr-derivada-direccional-nula" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 10.23 </strong></span>¿En qué direcciones se anulará la derivada direccional de la función</p>
+<p><span class="math display">\[
+f(x,y)=\frac{x^2-y^2}{x^2+y^2}
+\]</span></p>
+<p>en el punto <span class="math inline">\(P=(1,1)\)</span>?</p>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-23-contents" aria-controls="callout-23" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-23" class="callout-23-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Tomemos un vector unitario cualquiera <span class="math inline">\(\mathbf{u}=(u_x,u_y)\)</span>. Como <span class="math inline">\(\mathbf{u}\)</span> es unitario, se cumple que <span class="math inline">\(u_x^2+u_y^2=1\)</span>, por lo que, <span class="math inline">\(u_y=\sqrt{1-x^2}\)</span>, y el vector tiene componentes <span class="math inline">\(\mathbf{u}=(u_x,\sqrt{1-u_x^2})\)</span>. Para calcular la derivada direccional de <span class="math inline">\(f\)</span> en la dirección del vector <span class="math inline">\(\mathbf{u}\)</span>, primero necesitamos el gradiente de <span class="math inline">\(f\)</span>,</p>
+<p><span class="math display">\[\begin{align*}
+\nabla f(x,y)
+&amp;= \left(\frac{2x(x^2+y^2)-(x^2-y^2)2x}{(x^2+y^2)^2}, \frac{-2y(x^2+y^2)-(x^2-y^2)2y}{(x^2+y^2)^2}\right) \\
+&amp;=  \left(\frac{4xy^2}{(x^2+y^2)^2}, \frac{-4x^2y}{(x^2+y^2)^2}\right),
+\end{align*}\]</span></p>
+<p>que en el punto <span class="math inline">\((1,1)\)</span> vale</p>
+<p><span class="math display">\[
+\nabla f(1,1) = \left(\frac{4\cdot 1\cdot 1^2}{(1^2+1^2)^2}, \frac{-4\cdot 1^2\cdot 1}{(1^2+1^2)^2}\right) = (1,-1).
+\]</span></p>
+<p>Así pues, la derivada direccional de <span class="math inline">\(f\)</span> en la dirección de <span class="math inline">\(\mathbf{u}\)</span> es</p>
+<p><span class="math display">\[\begin{align*}
+f'_{\mathbf{u}}(1,1)
+&amp;= \nabla{f}(1,1)\mathbf{u}
+= (1, -1)(u_x, \sqrt{1-u_x^2}) = 0 \\
+&amp;\Leftrightarrow u_x - \sqrt{1-u_x^2} = 0
+\Leftrightarrow u_x = \sqrt{1-u_x^2} \\
+&amp;\Leftrightarrow u_x^2 = 1-u_x^2
+\Leftrightarrow u_x^2 = 1/2
+\Leftrightarrow u_x = \pm\frac{1}{\sqrt{2}}.
+\end{align*}\]</span></p>
+<p>Por tanto, la derivada direccional será nula en la dirección del vector <span class="math inline">\((1/\sqrt{2}, 1/\sqrt{2})\)</span>.</p>
+</div>
+</div>
+</div>
+<div id="exr-derivada-direccional" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 10.24 </strong></span>¿Existe alguna dirección en la que la derivada direccional en el punto <span class="math inline">\(P=(1,2)\)</span> de la función <span class="math inline">\(f(x,y) = x^2-3xy+4y^2\)</span> valga 14?</p>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-24-contents" aria-controls="callout-24" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-24" class="callout-24-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>El gradiente de <span class="math inline">\(f\)</span> es</p>
+<p><span class="math display">\[
+\nabla f(x,y) = (2x-3y, -3x+8y),
+\]</span></p>
+<p>que en el punto <span class="math inline">\((1,2)\)</span> vale</p>
+<p><span class="math display">\[
+\nabla f(1,2)
+= (2\cdot 1 -3\cdot 2, -3\cdot 1 + 8\cdot 2)
+= (-4, 13)
+\]</span></p>
+<p>Como el máximo crecimiento de una función se da en la dirección del vector gradiente, se tiene que el máximo crecimiento de <span class="math inline">\(f\)</span> es</p>
+<p><span class="math display">\[
+|\nabla f(1,2)|
+= |(-4, 13)|
+= \sqrt{(-4)^2+13^2}
+\approx 13.6015.
+\]</span></p>
+<p>Por tanto, no existe ninguna dirección en la que la derivada direccional de <span class="math inline">\(f\)</span> sea <span class="math inline">\(14\)</span>.</p>
+</div>
+</div>
+</div>
+<div id="exr-derivada-direccional-2" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 10.25 </strong></span>La derivada direccional de una función <span class="math inline">\(f\)</span> en un punto <span class="math inline">\(P\)</span> es máxima en la dirección del vector <span class="math inline">\((1,1,-1)\)</span> y su valor es <span class="math inline">\(2\sqrt{3}\)</span>. ¿Cuánto vale la derivada direccional de <span class="math inline">\(f\)</span> en <span class="math inline">\(P\)</span> en la dirección del vector <span class="math inline">\((1,1,0)\)</span>?</p>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-25-contents" aria-controls="callout-25" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-25" class="callout-25-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>La derivada direccional de una función es máxima en la dirección del vector gradiente, por lo que el vector <span class="math inline">\((1, 1, -1)\)</span> tiene la misma dirección del vector gradiente, es decir, <span class="math inline">\(\nabla f(P) = k(1, 1, -1)\)</span>. Como además, su módulo debe ser <span class="math inline">\(2\sqrt{3}\)</span> se tiene</p>
+<p><span class="math display">\[
+|\nabla f(P)| = |k(1,1,-1)| = k\sqrt{1^2+1^2+(-1)^2}
+= k\sqrt{3} = 2\sqrt{3},
+\]</span></p>
+<p>de donde se deduce que <span class="math inline">\(k=2\)</span>, y por tanto, el vector gradiente es <span class="math inline">\(\nabla f(P) = (2, 2, -2)\)</span>.</p>
+<p>Así pues, la derivada direccional de <span class="math inline">\(f\)</span> en la dirección del vector <span class="math inline">\(\mathbf{u}=(1,1,0)\)</span> es</p>
+<p><span class="math display">\[\begin{align*}
+f'_{\mathbf{u}}(P)
+&amp;= \nabla f(P)\frac{\mathbf{u}}{|\mathbf{u}|}
+= (2, 2, -2)\frac{(1, 1, 0)}{\sqrt{2}} \\
+&amp;= \frac{2 + 2}{\sqrt{2}}
+= 2\sqrt{2}.
+\end{align*}\]</span></p>
 </div>
 </div>
 </div>
@@ -1069,7 +1263,7 @@ f(x,y,z) = x^2-y^2+xyz^3-zx,
 </ol>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-23-contents" aria-controls="callout-23" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-26-contents" aria-controls="callout-26" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1078,11 +1272,29 @@ Solución
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-23" class="callout-23-contents callout-collapse collapse">
+<div id="callout-26" class="callout-26-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ol type="a">
-<li><p><span class="math inline">\(15\sqrt{2}\)</span>.</p></li>
-<li><p>La derivada direccional es máxima en la dirección del gradiente <span class="math inline">\((53,23,53)\)</span> y vale <span class="math inline">\(\sqrt{6147}\)</span>.</p></li>
+<li><p>El gradiente de <span class="math inline">\(f\)</span> es</p>
+<p><span class="math display">\[
+\nabla f(x,y,z) = (2x+yz^3-z, -2y+xz^3, 3xyz^2-x),
+\]</span></p>
+<p>que en el punto <span class="math inline">\((1, 2, 3)\)</span> vale</p>
+<p><span class="math display">\[\begin{align*}
+\nabla f(1,2,3)
+&amp;= (2\cdot 1+2\cdot 3^3-3, -2\cdot 2+1\cdot 3^3, 3\cdot 1\cdot 2\cdot 3^2-1) \\
+&amp;= (53, 23, 53).
+\end{align*}\]</span></p>
+<p>Por tanto, la derivada direccional de <span class="math inline">\(f\)</span> en la dirección del vector <span class="math inline">\(\mathbf{u}\)</span> es</p>
+<p><span class="math display">\[\begin{align*}
+f'_{\mathbf{u}}(1,2,3)
+&amp;= \nabla{f}(1,2,3)\mathbf{u}
+= (53,23,53)\frac{(1,-1,0)}{\sqrt{2}} \\
+&amp;= \frac{53-23}{\sqrt{2}}
+= \frac{30}{\sqrt{2}}
+= 15\sqrt{2}.
+\end{align*}\]</span></p></li>
+<li><p>La derivada direccional es máxima en la dirección del gradiente <span class="math inline">\((53,23,53)\)</span> y vale <span class="math inline">\(|\nabla f(1,2,3)| = \sqrt{6147}\)</span>.</p></li>
 </ol>
 </div>
 </div>
@@ -1090,11 +1302,8 @@ Solución
 <div id="exr-vector-gradiente-normal-curvas-nivel" class="theorem exercise">
 <p><span class="theorem-title"><strong>Ejercicio 10.27 </strong></span>Sea <span class="math inline">\(f(x,y,z)=0\)</span> la ecuación que define una superficie en el espacio real. Demostrar que el vector gradiente de <span class="math inline">\(f\)</span> en cualquier punto <span class="math inline">\((a, b, c)\)</span> es normal a la superficie en ese punto.</p>
 </div>
-<div id="exr-derviada-implicita-trayectoria" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 10.28 </strong></span>Un cuerpo se mueve en el plano a través de los puntos de coordenadas <span class="math inline">\((x,y)\)</span> relacionadas mediante la siguiente expresión <span class="math inline">\(2e^{xy} \operatorname{sen}(x) + y\cos(x) = 2\)</span>. Calcular las ecuaciones de las rectas tangente y normal a la trayectoria del cuerpo cuando <span class="math inline">\(x=0\)</span>.</p>
-</div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-24-contents" aria-controls="callout-24" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-27-contents" aria-controls="callout-27" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1103,7 +1312,38 @@ Solución
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-24" class="callout-24-contents callout-collapse collapse">
+<div id="callout-27" class="callout-27-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Consideremos una función vectorial <span class="math inline">\(g(t)\)</span> cuya trayectoria circule sobre la superficie <span class="math inline">\(f(x,y,z)=0\)</span> y tal que <span class="math inline">\(g(0)=(a,b,c)\)</span>. Entonces, como los puntos de <span class="math inline">\(g\)</span> están en la superficie, cumplirán la ecuación <span class="math inline">\(f(g(t)) = 0\)</span>, de manera que si calculamos su derivada se tiene</p>
+<p><span class="math display">\[
+f(g(t))'
+= \nabla f(g(t))g'(t)
+= 0.
+\]</span></p>
+<p>En particular en <span class="math inline">\(t=0\)</span> se tiene</p>
+<p><span class="math display">\[
+\nabla f(g(0))g'(0)
+= \nabla f(a,b,c)g'(0)
+= 0,
+\]</span></p>
+<p>de donde se deduce que los vectores <span class="math inline">\(\nabla f(a,b,c)\)</span> y <span class="math inline">\(g'(0)\)</span> son normales. Pero como <span class="math inline">\(g'(0)\)</span> es el vector tangente a la trayectoria de <span class="math inline">\(g\)</span> en el punto <span class="math inline">\((a,b,c)\)</span> y esto ocurre para cualquier trayectoria inscrita en la superficie que pase por <span class="math inline">\((a,b,c)\)</span> en <span class="math inline">\(t=0\)</span>, se concluye que <span class="math inline">\(\nabla f(a,b,c)\)</span> es normal a la superficie en <span class="math inline">\((a,b,c)\)</span>.</p>
+</div>
+</div>
+</div>
+<div id="exr-derviada-implicita-trayectoria" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 10.28 </strong></span>Un cuerpo se mueve en el plano a través de los puntos de coordenadas <span class="math inline">\((x,y)\)</span> relacionadas mediante la siguiente expresión <span class="math inline">\(2e^{xy} \operatorname{sen}(x) + y\cos(x) = 2\)</span>. Calcular las ecuaciones de las rectas tangente y normal a la trayectoria del cuerpo cuando <span class="math inline">\(x=0\)</span>.</p>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-28-contents" aria-controls="callout-28" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-28" class="callout-28-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Veamos primero cuáles son las coordenadas del punto donde hay que calcular las rectas tangente y normal a la trayectoria. Sustituyendo <span class="math inline">\(x=0\)</span> en la ecuación anterior se tiene</p>
 <p><span class="math display">\[
@@ -1157,7 +1397,7 @@ y-2 = \frac{1}{2}(x-0) \Leftrightarrow y = \frac{1}{2}x+2.
 <p><span class="theorem-title"><strong>Ejercicio 10.29 </strong></span>Hallar la ecuación de la recta tangente y normal a la curva <span class="math inline">\(x^2+y^2=3xy-1\)</span> en los puntos en que <span class="math inline">\(x=1\)</span>. Calcular también los extremos relativos y decir si son máximos o mínimos.</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-25-contents" aria-controls="callout-25" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-29-contents" aria-controls="callout-29" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1166,7 +1406,7 @@ Solución
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-25" class="callout-25-contents callout-collapse collapse">
+<div id="callout-29" class="callout-29-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Consideremos <span class="math inline">\(y\)</span> como función de <span class="math inline">\(x\)</span>. Veamos primero los puntos de la curva en los que <span class="math inline">\(x=1\)</span>:</p>
 <p><span class="math display">\[
@@ -1276,7 +1516,7 @@ x^2\frac{\partial^2 f}{\partial x^2} + 2xy \frac{\partial^2 f}{\partial x \parti
 </ol>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-26-contents" aria-controls="callout-26" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-30-contents" aria-controls="callout-30" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1285,7 +1525,7 @@ Solución
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-26" class="callout-26-contents callout-collapse collapse">
+<div id="callout-30" class="callout-30-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ol type="a">
 <li><p><span class="math inline">\(\nabla V(x,y) = \left( \frac{x}{x^2+y^2},\frac{y}{x^2+y^2}\right)\)</span>.</p></li>
@@ -1321,7 +1561,7 @@ Solución
 </ol>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-27-contents" aria-controls="callout-27" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-31-contents" aria-controls="callout-31" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1330,7 +1570,7 @@ Solución
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-27" class="callout-27-contents callout-collapse collapse">
+<div id="callout-31" class="callout-31-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ol type="a">
 <li><p>La derivada parcial de <span class="math inline">\(H\)</span> con respecto a <span class="math inline">\(x\)</span> es</p>
@@ -1393,7 +1633,7 @@ Solución
 </ol>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-28-contents" aria-controls="callout-28" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-32-contents" aria-controls="callout-32" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1402,7 +1642,7 @@ Solución
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-28" class="callout-28-contents callout-collapse collapse">
+<div id="callout-32" class="callout-32-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ol type="a">
 <li><p>Para comprobar que <span class="math inline">\(u(x,y,z)\)</span> satisface la ecuación de Laplace calculamos las tres derivadas parciales segundas que intervienen en la ecuación. Comenzando con las derivadas parciales con respecto a la variable <span class="math inline">\(x\)</span>, obtenemos:</p>
@@ -1492,7 +1732,7 @@ u}}{{\partial x\partial y^2 }}} \right) \\
 <p><span class="theorem-title"><strong>Ejercicio 10.36 </strong></span>Hallar los extremos relativos y los puntos de silla de la función <span class="math inline">\(f(x,y) = (x^2+y^2)^2-2a^2(x^2-y^2)\)</span> con <span class="math inline">\(a\neq 0\)</span>.</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-29-contents" aria-controls="callout-29" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-33-contents" aria-controls="callout-33" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1501,7 +1741,7 @@ Solución
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-29" class="callout-29-contents callout-collapse collapse">
+<div id="callout-33" class="callout-33-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>No tiene máximos relativos.<br>
 Mínimos relativos en <span class="math inline">\((-a,0)\)</span> y <span class="math inline">\((a,0)\)</span>.<br>
@@ -1513,7 +1753,7 @@ Punto de silla en <span class="math inline">\((0,0)\)</span>.</p>
 <p><span class="theorem-title"><strong>Ejercicio 10.37 </strong></span>Determinar los extremos relativos y los puntos de silla del campo escalar <span class="math inline">\(h(x,y) = xy+\dfrac{xy^2}{2}-2x^2\)</span>.</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-30-contents" aria-controls="callout-30" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-34-contents" aria-controls="callout-34" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1522,7 +1762,7 @@ Solución
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-30" class="callout-30-contents callout-collapse collapse">
+<div id="callout-34" class="callout-34-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Máximo relativo en <span class="math inline">\((-1/8,-1)\)</span>.<br>
 No tiene mínimos relativos.<br>
@@ -1534,7 +1774,7 @@ Puntos de silla en <span class="math inline">\((0,0)\)</span> y <span class="mat
 <p><span class="theorem-title"><strong>Ejercicio 10.38 </strong></span>El rendimiento de una cosecha, <span class="math inline">\(R\)</span>, depende de las concentraciones de nitrógeno, <span class="math inline">\(n\)</span>, y fósforo, <span class="math inline">\(p\)</span>, presentes en el suelo según la función <span class="math inline">\(R(n,p) = npe^{-(n+p)}\)</span>. ¿Cuáles deben ser las concentraciones de nitrógeno y fósforo para que el rendimiento de la cosecha sea máximo?</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-31-contents" aria-controls="callout-31" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-35-contents" aria-controls="callout-35" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1543,7 +1783,7 @@ Solución
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-31" class="callout-31-contents callout-collapse collapse">
+<div id="callout-35" class="callout-35-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Se trata de un problema de optimización, así que, primero calculamos los puntos donde se anula el gradiente</p>
 <p><span class="math display">\[\begin{align*}

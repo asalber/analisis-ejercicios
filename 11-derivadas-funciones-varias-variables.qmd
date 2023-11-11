@@ -671,18 +671,69 @@ Como la derivada es nula, en el instante $t=\pi$ los planetas ni se están acerc
 :::
 :::
 
-
 :::{#exr-transmision-errores-caudal-fuente}
 Para calcular el caudal de una fuente se ha llenado un depósito de base cuadrada $30\pm 0.2$ cm y altura $50\pm 0.3$ cm en un tiempo de $20\pm 0.5$ s. Expresar el caudal de la fuente incluyendo error en la medida.
 :::
 
-:::{#exr-transmision-errores-potencial-electrico}
-La potencia eléctrica $P$ en un circuito depende de el voltaje $E$ y la resistencia $R$ según la fórmula $P = E^2/R$. Si los errores cometidos al medir el voltaje y la resistencia son de un 1% y un 2% respectivamente, ¿cuál será el error relativo en el cálculo de la potencia cuando se aplican 100 voltios a una resistencia de 1500 ohmios?
+:::{.callout-tip collapse="true"}
+## Solución
+El caudal de la fuente es el volumen dividido por el tiempo, pero el volumen del depósito depende de sus dimensiones, la función que da el caudal de la fuente es $c(x,y,t) = \frac{x^2y}{t}$, donde $x$ es el lado de la base, $y$ es la altura y $t$ es el tiempo, y su gradiente vale
+
+$$
+\nabla c(x,y,t)
+= \left(\frac{2xy}{t}, \frac{x^2}{t}, \frac{-x^2y}{t^2}\right).
+$$
+
+Para calcular el error en la medición del caudal de manera aproximada usando el diferencial del caudal,
+
+\begin{align*}
+dc 
+&= \nabla c(30, 50, 20)(dx, dy, dt) \\
+&= (150, 45, -112.5)(dx, dy, dz) \\
+&= 150dx+45dy-112.5dz,
+\end{align*}
+
+que para unos errores $dx=\pm 0.2$, $dy=\pm 0.3$ y $dt=\pm 0.5$ se tiene
+
+$$
+dc = 150(\pm 0.2) + 45(\pm 0.3) - 112.5(\pm 0.5) = \pm 99.75.
+$$
+
+Así pues, la expresión del caudal, incluyendo el error en la medida, es
+
+$$
+c(30,50,20) \pm dc = 2250 \pm 99.75 \mbox{ cm$^3$/s}.
+$$
 :::
 
+:::{#exr-transmision-errores-potencial-electrico}
+La potencia eléctrica $P$ en un circuito depende de el voltaje $E$ y la resistencia $R$ según la fórmula $P = E^2/R$. Si los errores cometidos al medir el voltaje y la resistencia son de un $1$% y un $2$% respectivamente, ¿cuál será el error relativo en el cálculo de la potencia eléctrica?
+:::
+
+:::{.callout-tip collapse="true"}
+## Solución
+Usando el diferencial como una aproximación del error en la medición de las magnitudes, se tiene que el error relativo en la medición del potencial es
+
+\begin{align*}
+\frac{dP}{P}
+&= \frac{\nabla P (dE, dR)}{E^2/R}
+= \frac{\left(\frac{2E}{R}, \frac{-E^2}{R^2}\right)(dE, dR)}{E^2/R} \\
+&= \frac{R\left(\frac{2E}{R}dE - \frac{E^2}{R^2}dR\right)}{E^2} 
+= 2\frac{dE}{E} - \frac{dR}{R}.
+\end{align*}
+
+Y como $\frac{dE}{E}$ y $\frac{dR}{R}$ son los errores relativos en las mediciones del voltaje y la resistencia, respectivamente, se tiene que el error relativo en la medición del potencial es
+
+$$
+\frac{dP}{P} = 2\cdot (\pm 0.01) - (\pm 0.02) = \pm 0.04,
+$$
+
+es decir, un $4$%.
+:::
+
+
 :::{#exr-ameba}
-La Quimiotaxis es el movimiento de los organismos dirigido por un gradiente de concentración, es decir, en la dirección
-en la que la concentración aumenta con más rapidez. El moho del cieno Dictyoselium discoideum muestra este comportamiento. En esta caso, las amebas unicelulares de esta especie se mueven según el gradiente de concentración de una sustancia química denominada adenosina monofosfato (AMP cíclico). Si suponemos que la expresión que da la concentración de AMP cíclico en un punto de coordenadas $(x,y,z)$ es:
+La Quimiotaxis es el movimiento de los organismos dirigido por un gradiente de concentración, es decir, en la dirección en la que la concentración aumenta con más rapidez. El moho del cieno Dictyoselium discoideum muestra este comportamiento. En esta caso, las amebas unicelulares de esta especie se mueven según el gradiente de concentración de una sustancia química denominada adenosina monofosfato (AMP cíclico). Si suponemos que la expresión que da la concentración de AMP cíclico en un punto de coordenadas $(x,y,z)$ es:
 
 $$
 C(x,y,z) = \frac{4}{\sqrt{x^2+y^2+z^4+1}}
@@ -693,7 +744,17 @@ y se sitúa una ameba de moho del cieno en el punto $(-1,0,1)$, ¿en qué direcc
 
 :::{.callout-tip collapse="true"}
 ## Solución
-$(4/\sqrt{27}, 0, -8/\sqrt{27})$.
+La dirección en la que más rápidamente aumenta la concentración de AMP es la dirección del gradiente de $C$, que vale
+
+\begin{align*}
+\nabla C(x,y,z) 
+&= \left(4\frac{-1}{2}(x^2+y^2+z^4+1)^{-3/2}2x\right., \\
+& 4\frac{-1}{2}(x^2+y^2+z^4+1)^{-3/2}2y, \\
+& \left. 4\frac{-1}{2}(x^2+y^2+z^4+1)^{-3/2}4z^3\right) \\
+&= -4(x^2+y^2+z^4+1)^{-3/2}(x, y, 2z^3),
+\end{align*}
+
+y en el punto $(-1, 0, 1)$ vale $(4/\sqrt{27}, 0, -8/\sqrt{27})$.
 :::
 
 :::{#exr-derivada-direccional-gas-perfecto}
@@ -706,6 +767,61 @@ a.  ¿Cómo varía el volumen si comenzamos a incrementar la temperatura a razó
 a.  ¿Cuánto tendría que aumentar la temperatura por cada atmósfera de presión que se aumente para que el volumen permanezca constante?
 :::
 
+:::{.callout-tip collapse="true"}
+## Solución
+La ecuación de los gases perfectos es $PV = cT$, donde $c$ es una constante que depende del gas. En el caso particular del gas del ejercicio se tiene 
+
+$$
+c = \frac{PV}{T} = \frac{1\cdot 2.4}{273.1} \approx 0.082 \mbox{ atm$\cdot$ l$/$K}.
+$$
+
+Si de la ecuación de los gases perfectos despejamos el volumen, se tiene la función de dos variables $V(P,T) = \frac{cT}{P}$.
+
+a.  La dirección en la que hay que cambiar la temperatura y la presión para que el volumen aumente lo más rápidamente posible, es la dirección el vector gradiente,
+
+    $$
+    \nabla V(P,T) 
+    = \left(\frac{-cT}{P^2}, \frac{c}{P}\right),
+    $$
+
+    que para la temperatura y la presión dadas vale
+
+    $$
+    \nabla V(1, 273.1) 
+    = \left(\frac{-0.082\cdot 273.1}{1^2}, \frac{0.082}{1}\right)
+    = (-22.4, 0.082).
+    $$
+
+a.  Para incrementar la temperatura a razón del doble del incremento de la presión, debemos cambiar la presión y la temperatura en la dirección del vector $\mathbf{u}=(1,2)$, y la variación que experimenta el volumen en esta dirección viene dado por la derivada direccional del volumen en la dirección de $\mathbf{u}$, que vale
+
+    \begin{align*}
+    V'_{\mathbf{u}}(1,273.1) 
+    &= \nabla V(1, 273.1) \frac{\mathbf{u}}{|\mathbf{u}|} 
+    = (-22.4, 0.082)\frac{(1,2)}{\sqrt{5}} \\ 
+    &= \frac{-22.4\cdot 1 + 0.082\cdot 2}{\sqrt{5}}
+    \approx -9.9442 \mbox{ l}.
+    \end{align*}
+
+a.  Tomemos un vector unitario cualquiera $\mathbf{u}=(u_x,u_y)$. Como $\mathbf{u}$ es unitario, se cumple que $u_x^2+u_y^2=1$, por lo que, $u_y=\sqrt{1-x^2}$, y el vector tiene componentes $\mathbf{u}=(u_x,\sqrt{1-u_x^2})$. Para que el volumen permanezca constante, al cambiar la presión y la temperatura en la dirección de $\mathbf{u}$, la derivada direccional del volumen en esa dirección debe ser nula, es decir,
+
+    \begin{align*}
+    V'_{\mathbf{u}}(1,273.1) 
+    &= \nabla V(1, 273.1) \mathbf{u}
+    = (-22.4, 0.082)(u_x,\sqrt{1-u_x^2}) \\ 
+    &= -22.4 u_x + 0.082 \sqrt{1-u_x^2}
+    = 0 \\
+    &\Leftrightarrow 22.4 u_x = 0.082\sqrt{1-u_x^2}
+    \Leftrightarrow 273.1 u_x = \sqrt{1-u_x^2} \\
+    &\Leftrightarrow 273.1^2 u_x^2 = 1-u_x^2 
+    \Leftrightarrow 273.1^2 u_x^2 + u_x^2 = 1 \\ 
+    &\Leftrightarrow u_x^2 = \frac{1}{273.1^2+1}
+    \Leftrightarrow u_x = \pm \sqrt{\frac{1}{273.1^2+1}}
+    \approx \pm 0.0037.
+    \end{align*}
+
+Por tanto, habrá que cambiar la presión y la temperatura en la dirección del vector $\mathbf{u}=(0.0037, \sqrt{1-0.0037^2}) = (0.0037, 0.9999)$.
+:::
+
 :::{#exr-derivada-direccional-capsulas}
 Se han diseñado unas cápsulas con forma piramidal con base un rectángulo de lados a=3 cm, b=4 cm, y altura h=6 cm.
 
@@ -716,9 +832,29 @@ a. Si se empiezan a cambiar las dimensiones de la cápsula de manera que el lado
 
 :::{.callout-tip collapse="true"}
 ## Solución
-a. $\nabla V(3,4,6)=(8,6,4)$ y el volumen aumentará $|\nabla V(3,4,6)|=10.7703$ cm$^3$/s si cambiamos las dimensiones de la cápsula siguiendo esta dirección.
+El volumen de la cápsula viene dado por la función $V(a, b, c) = \frac{1}{3}abc$.
 
-a. Derivada direccional de $V$ en $(3,4,6)$ siguiendo la dirección del vector $\mathbf{u}=(1,-1/2,2)$: $V'_\mathbf{u}(3,4,6)=5.6737$ cm$^3$/s.
+a. La dirección de máximo crecimiento del volumen es la dirección del vector gradiente, 
+
+    $$
+    \nabla V(a,b,c) = \frac{1}{3}(bc, ac, ab).
+    $$
+
+    que en el punto $(3, 4, 6)$ vale $\nabla V(3,4,6) = (8,6,4)$. La tasa de variación del volumen si se cambian sus dimensiones en la dirección del vector gradiente es 
+    
+    $$
+    |\nabla V(3,4,6)| = |(8,6,4)| = \sqrt{8^2+6^2+4^2} = 10.7703 \mbox{ cm$^3$/s}.
+    $$
+
+a.  La derivada direccional de $V$ en $(3,4,6)$ siguiendo la dirección del vector $\mathbf{u}=(1,-1/2,2)$ es 
+
+\begin{align*}
+V'_\mathbf{u}(3,4,6)
+&= \nabla V(3,4,6) \frac{\mathbf{u}}{|\mathbf{u}|}
+= (8,6,4)\frac{(1,-1/2,2)}{\sqrt{1^2+(-1/2)^2+2^2}} \\
+&= \frac{8\cdot 1 - 6 \cdot (1/2) + 4\cdot 2}{\sqrt{5.25}}
+\approx 5.6737 \mbox{ cm$^3$/s}.
+\end{align*}
 :::
 
 :::{#exr-derivada-direccional-nula}
@@ -733,7 +869,34 @@ en el punto $P=(1,1)$?
 
 :::{.callout-tip collapse="true"}
 ## Solución
-En la dirección $(1/\sqrt{2},1/\sqrt{2})$.
+Tomemos un vector unitario cualquiera $\mathbf{u}=(u_x,u_y)$. Como $\mathbf{u}$ es unitario, se cumple que $u_x^2+u_y^2=1$, por lo que, $u_y=\sqrt{1-x^2}$, y el vector tiene componentes $\mathbf{u}=(u_x,\sqrt{1-u_x^2})$. Para calcular la derivada direccional de $f$ en la dirección del vector $\mathbf{u}$, primero necesitamos el gradiente de $f$,
+
+\begin{align*}
+\nabla f(x,y)
+&= \left(\frac{2x(x^2+y^2)-(x^2-y^2)2x}{(x^2+y^2)^2}, \frac{-2y(x^2+y^2)-(x^2-y^2)2y}{(x^2+y^2)^2}\right) \\
+&=  \left(\frac{4xy^2}{(x^2+y^2)^2}, \frac{-4x^2y}{(x^2+y^2)^2}\right),
+\end{align*}
+
+que en el punto $(1,1)$ vale
+
+$$
+\nabla f(1,1) = \left(\frac{4\cdot 1\cdot 1^2}{(1^2+1^2)^2}, \frac{-4\cdot 1^2\cdot 1}{(1^2+1^2)^2}\right) = (1,-1).
+$$
+
+Así pues, la derivada direccional de $f$ en la dirección de $\mathbf{u}$ es
+
+\begin{align*}
+f'_{\mathbf{u}}(1,1) 
+&= \nabla{f}(1,1)\mathbf{u} 
+= (1, -1)(u_x, \sqrt{1-u_x^2}) = 0 \\
+&\Leftrightarrow u_x - \sqrt{1-u_x^2} = 0 
+\Leftrightarrow u_x = \sqrt{1-u_x^2} \\
+&\Leftrightarrow u_x^2 = 1-u_x^2 
+\Leftrightarrow u_x^2 = 1/2
+\Leftrightarrow u_x = \pm\frac{1}{\sqrt{2}}. 
+\end{align*}
+
+Por tanto, la derivada direccional será nula en la dirección del vector $(1/\sqrt{2}, 1/\sqrt{2})$.
 :::
 
 :::{#exr-derivada-direccional}
@@ -742,7 +905,30 @@ En la dirección $(1/\sqrt{2},1/\sqrt{2})$.
 
 :::{.callout-tip collapse="true"}
 ## Solución
-No.
+El gradiente de $f$ es
+
+$$
+\nabla f(x,y) = (2x-3y, -3x+8y),
+$$
+
+que en el punto $(1,2)$ vale
+
+$$
+\nabla f(1,2) 
+= (2\cdot 1 -3\cdot 2, -3\cdot 1 + 8\cdot 2) 
+= (-4, 13)
+$$
+
+Como el máximo crecimiento de una función se da en la dirección del vector gradiente, se tiene que el máximo crecimiento de $f$ es 
+
+$$
+|\nabla f(1,2)| 
+= |(-4, 13)| 
+= \sqrt{(-4)^2+13^2} 
+\approx 13.6015.
+$$
+
+Por tanto, no existe ninguna dirección en la que la derivada direccional de $f$ sea $14$.
 :::
 
 :::{#exr-derivada-direccional-2}
@@ -752,7 +938,24 @@ La derivada direccional de una función $f$ en un punto $P$ es máxima en la dir
 
 :::{.callout-tip collapse="true"}
 ## Solución
-$2\sqrt{2}$.
+La derivada direccional de una función es máxima en la dirección del vector gradiente, por lo que el vector $(1, 1, -1)$ tiene la misma dirección del vector gradiente, es decir, $\nabla f(P) = k(1, 1, -1)$. Como además, su módulo debe ser $2\sqrt{3}$ se tiene
+
+$$
+|\nabla f(P)| = |k(1,1,-1)| = k\sqrt{1^2+1^2+(-1)^2} 
+= k\sqrt{3} = 2\sqrt{3},
+$$
+
+de donde se deduce que $k=2$, y por tanto, el vector gradiente es $\nabla f(P) = (2, 2, -2)$.
+
+Así pues, la derivada direccional de $f$ en la dirección del vector $\mathbf{u}=(1,1,0)$ es
+
+\begin{align*}
+f'_{\mathbf{u}}(P)
+&= \nabla f(P)\frac{\mathbf{u}}{|\mathbf{u}|}
+= (2, 2, -2)\frac{(1, 1, 0)}{\sqrt{2}} \\
+&= \frac{2 + 2}{\sqrt{2}}
+= 2\sqrt{2}.
+\end{align*}
 :::
 
 :::{#exr-derivada-direccional-3}
@@ -769,13 +972,57 @@ a. ¿En qué dirección es máxima la derivada direccional de $f$ en el punto an
 
 :::{.callout-tip collapse="true"}
 ## Solución
-a. $15\sqrt{2}$.
+a.  El gradiente de $f$ es
 
-a. La derivada direccional es máxima en la dirección del gradiente $(53,23,53)$ y vale $\sqrt{6147}$.
+    $$
+    \nabla f(x,y,z) = (2x+yz^3-z, -2y+xz^3, 3xyz^2-x),
+    $$
+
+    que en el punto $(1, 2, 3)$ vale
+
+    \begin{align*}
+    \nabla f(1,2,3) 
+    &= (2\cdot 1+2\cdot 3^3-3, -2\cdot 2+1\cdot 3^3, 3\cdot 1\cdot 2\cdot 3^2-1) \\
+    &= (53, 23, 53).
+    \end{align*}
+
+    Por tanto, la derivada direccional de $f$ en la dirección del vector $\mathbf{u}$ es
+
+    \begin{align*}
+    f'_{\mathbf{u}}(1,2,3) 
+    &= \nabla{f}(1,2,3)\mathbf{u} 
+    = (53,23,53)\frac{(1,-1,0)}{\sqrt{2}} \\
+    &= \frac{53-23}{\sqrt{2}} 
+    = \frac{30}{\sqrt{2}}
+    = 15\sqrt{2}.
+    \end{align*}
+
+a.  La derivada direccional es máxima en la dirección del gradiente $(53,23,53)$ y vale $|\nabla f(1,2,3)| = \sqrt{6147}$.
 :::
 
 :::{#exr-vector-gradiente-normal-curvas-nivel}
 Sea $f(x,y,z)=0$ la ecuación que define una superficie en el espacio real.  Demostrar que el vector gradiente de $f$ en cualquier punto $(a, b, c)$ es normal a la superficie en ese punto.
+:::
+
+:::{.callout-tip collapse="true"}
+## Solución
+Consideremos una función vectorial $g(t)$ cuya trayectoria circule sobre la superficie $f(x,y,z)=0$ y tal que $g(0)=(a,b,c)$. Entonces, como los puntos de $g$ están en la superficie, cumplirán la ecuación $f(g(t)) = 0$, de manera que si calculamos su derivada se tiene
+
+$$
+f(g(t))' 
+= \nabla f(g(t))g'(t)
+= 0.
+$$
+
+En particular en $t=0$ se tiene 
+
+$$
+\nabla f(g(0))g'(0) 
+= \nabla f(a,b,c)g'(0) 
+= 0,
+$$
+
+de donde se deduce que los vectores $\nabla f(a,b,c)$ y $g'(0)$ son normales. Pero como $g'(0)$ es el vector tangente a la trayectoria de $g$ en el punto $(a,b,c)$ y esto ocurre para cualquier trayectoria inscrita en la superficie que pase por $(a,b,c)$ en $t=0$, se concluye que $\nabla f(a,b,c)$ es normal a la superficie en $(a,b,c)$.
 :::
 
 :::{#exr-derviada-implicita-trayectoria}
