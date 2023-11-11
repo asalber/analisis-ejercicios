@@ -11,32 +11,13 @@ execute:
 :::{#exr-curvas-nivel}
 Emparejar las siguientes funciones de dos variables con sus curvas de nivel.
 
-```{julia}
-#| echo: false
-using CairoMakie
-f(x,y) = 3x^2 + y^2
-xs = ys = range(-2, 2; length=100)
-fig = Figure()
-ax1 = Axis(fig[1,1], aspect = 1)
-contour!(ax1, xs, ys, f.(xs, ys'), labels = true, levels = 0:1:10)
-g(x,y) = x * y
-xs = ys = range(-4, 4; length=100)
-ax2 = Axis(fig[1,2], xticks = -4:1:4, yticks = -4:1:4, aspect = 1)
-contour!(ax2, xs, ys, g.(xs, ys'), labels = true, levels = 0:1:10)
-h(x,y) = cos(x)sin(y)
-xs = ys = range(-pi, pi; length=100)
-ax3 = Axis(fig[2,1], aspect = 1)
-contour!(ax3, xs, ys, h.(xs, ys'), labels = true, levels = -1:0.2:1)
-i(x,y) = 2x+y
-xs = ys = range(-2, 2; length=100)
-ax4 = Axis(fig[2,2], aspect = 1)
-contour!(ax4, xs, ys, i.(xs, ys'), labels = true, levels = -5:1:5)
-Label(fig[1, 1, Top()], "A", padding = (0, 0, 5, 0))
-Label(fig[1, 2, Top()], "B", padding = (0, 0, 5, 0))
-Label(fig[2, 1, Top()], "C", padding = (0, 0, 5, 0))
-Label(fig[2, 2, Top()], "D", padding = (0, 0, 5, 0))
-fig
-```
+:::{.content-visible when-format="html"}
+![](img/derivadas-funciones-varias-variables/curvas-nivel.svg)
+:::
+
+:::{.content-visible unless-format="html"}
+![](img/derivadas-funciones-varias-variables/curvas-nivel.pdf)
+:::
 
 a. $f(x,y) = \cos(x)\operatorname{sen}(y)$
 
@@ -136,16 +117,13 @@ a. ¿Cómo varía la producción cuando disminuye el capital?
 ## Solución
 a.  Para $a=1$ y $\alpha=0.5$ se tiene la función $p(t,k)=1 \cdot t^{0.5}k^{0.5} = \sqrt{tk}$. Los puntos de la curva de nivel $c$ cumplirán que $\sqrt{tk} = c$, de donde se deduce que $t=\frac{c^2}{k}$ y, por tanto, se trata de una función inversa. En la siguiente gráfica aparecen algunas curvas de nivel de esta función de producción.
 
-    ```{julia}
-    #| echo: false
-    using CairoMakie
-    f(x,y) = x^0.5 * y^0.5
-    xs = ys = range(0, 200; length=200)
-    fig = Figure()
-    ax = Axis(fig[1,1], aspect = 1, xlabel = "Trabajo", ylabel = "Capital")
-    contour!(ax, xs, ys, f.(xs, ys'), labels = true, levels = 0:10:200)
-    fig
-    ```
+    :::{.content-visible when-format="html"}
+    ![](img/derivadas-funciones-varias-variables/produccion-economica.svg)
+    :::
+
+    :::{.content-visible unless-format="html"}
+    ![](img/derivadas-funciones-varias-variables/produccion-economica.pdf)
+    :::
 
 a.  La variación de la producción con respecto a al trabajo, manteniendo constante el capital, lo da la derivada parcial con respecto al trabajo, que vale
 
@@ -243,16 +221,13 @@ $$
 :::{#exr-interpretacion-derivadas-parciales-superficie}
 La gráfica de una función $f(x,y)$ se muestra a continuación.
 
-```{julia}
-using CairoMakie
-fig = Figure()
-f(x,y) = x*y
-xs = ys = range(-2, 2; length=100)
-ax = Axis3(fig[1,1], azimuth = 6.7pi/4, elevation = 0.2)
-surface!(ax, xs, ys, f(xs,ys'))
-scatter!(Point3(1,-1,-1), color=:red)
-fig
-```
+:::{.content-visible when-format="html"}
+![](img/derivadas-funciones-varias-variables/interpretacion-derivadas-parciales-superficie.svg)
+:::
+
+:::{.content-visible unless-format="html"}
+![](img/derivadas-funciones-varias-variables/interpretacion-derivadas-parciales-superficie.pdf)
+:::
 
 ¿Qué signo tienen las derivadas parciales en el punto $(1,-1)$. ¿Y en el punto (0,0)?
 :::
@@ -274,8 +249,73 @@ a.  $f(x,y) = y\ln(xy)$ en el punto $(1/2, 2, 0)$.
 
 :::{.callout-tip collapse="true"}
 ## Solución
-a. Recta normal $l:(4+2t,-2-4t,-1-8t)$.  
-Plano tangente $\pi: 2x-4y-8z+24=0$.
+a. Tomando la función $f(x,y,z)=xyz-8$, se trata de calcular la ecuación de la recta normal y el plano tangente a la superficie de nivel $f(x,y,z)=0$ en el punto $P=(4, -2, -1)$. Por este [teorema](https://aprendeconalf.es/analisis-manual/13-derivadas-funciones-varias-variables.html#thm-gradiente-normal-curvas-nivel) sabemos que el vector gradiente $\nabla f(4,-2,-1)$ es perpendicular a la superficie de nivel en el punto $(4,-2,-1)$ por lo que basta tomar este vector como vector director de la recta normal.
+
+    $$
+    \nabla f(x,y,z) 
+    = \left(\frac{\partial f}{\partial x}, \frac{\partial f}{\partial y}, \frac{\partial f}{\partial z}\right)
+    = (yz, xz, xy),
+    $$
+
+    y en el punto $(4,-2,-1)$ vale 
+    
+    $$
+    \nabla f(4, -2, -1) = ((-2)\cdot (-1), 4\cdot (-1), 4\cdot (-2)) = (2, -4, -8).
+    $$
+
+    Así pues, la ecuación vectorial de la recta normal es
+
+    $$
+    P + t\nabla f(P) = (4, -2, -1) + t(2, -4, -8) = (4+2t,-2-4t,-1-8t).
+    $$
+
+    Y la ecuación del plano tangente
+
+    $$
+    ((x,y,z)-P)\nabla f(P) = ((x, y, z) - (4, -2, -1))(2, -4, -8) = 2x-4y-8z+24=0.
+    $$
+
+b.  La ecuación de la recta tangente a la superficie de $f(x,y)$ en el punto $(a, b, f(a,b))$ es
+
+    $$
+    \left(a+t\frac{\partial f}{\partial x}(a,b), b + t\frac{\partial f}{\partial y}(a,b), f(a,b)-t\right).
+    $$
+
+    Las derivadas parciales de $f$ son
+
+    \begin{align*}
+    \frac{\partial f}{\partial x} 
+    &= y\frac{1}{xy}y = \frac{y}{x}, \\
+    \frac{\partial f}{\partial y} 
+    &= \ln(xy) + y\frac{1}{xy}x = \ln(xy) + 1,
+    \end{align*}
+
+    y en el punto $(1/2, 2)$ valen
+
+    \begin{align*}
+    \frac{\partial f}{\partial x}(1/2, 2) 
+    &= \frac{2}{1/2}
+    = 4, \\
+    \frac{\partial f}{\partial y}(1/2, 2) 
+    &= \ln\left(\frac{1}{2}2\right) + 1
+    = 1.
+    \end{align*}
+
+    Así pues, sustituyendo en la ecuación de la recta tangente a $f(x,y)$ en $(1/2, 2, 0)$ se tiene
+
+    $$
+    \left(\frac{1}{2}+4t, 2 + t, -t\right).
+    $$
+
+    Y la ecuación del plano normal es
+
+    \begin{align*}
+    z &= 
+    \frac{\partial f}{\partial x}(1/2,2)\left(x-\frac{1}{2}\right) + \frac{\partial f}{\partial y}(1/2, 2)(y-2) + f(1/2, 2) \\
+    &= 4 \left(x-\frac{1}{2}\right) + (y-2) + 0  
+    = 4x + y - 4
+    = 0.
+    \end{align*}
 :::
 
 :::{#exr-gradiente-1}
@@ -302,7 +342,16 @@ $T(x,y,z)=e^{-x^2-2y^2-3z^2}$ donde $x,y,z$ se miden en metros.
 
 :::{.callout-tip collapse="true"}
 ## Solución
-Debe moverse en la dirección $-\nabla f(1,1,1)=e^{-6}(2,4,6)$.
+Para que la temperatura decrezca lo más rápidamente posible la nave debe moverse en la dirección opuesta al vector gradiente.
+
+Como el gradiente de $f$ vale
+
+$$
+\nabla f(x,y,z) 
+= (-2xe^{-x^2-2y^2-3z^2}, -4ye^{-x^2-2y^2-3z^2}, -6ze^{-x^2-2y^2-3z^2}),
+$$
+
+en el punto $(1, 1, 1)$ se tiene $-\nabla f(1,1,1) = e^{-6}(2,4,6)$.
 :::
 
 
@@ -318,6 +367,47 @@ donde $p$ es la precipitación en litros/m$^2$ caí­da durante el año hidroló
 a. Calcular el gradiente de la cantidad de agua almacenada.
 
 a. Suponiendo que hubiese algún año en el que el consumo fuese nulo, ¿qué condición tendría­ que cumplir la temperatura para que la derivada del agua almacenada con respecto a la temperatura fuese igual a la derivada con respecto a la precipitación?
+:::
+
+:::{.callout-tip collapse="true"}
+## Solución
+
+a.  Las derivadas parciales de la función $A$ son
+
+\begin{align*}
+\frac{\partial A}{\partial p}(p,t,c)
+&= \frac{1}{2}\left(\frac{{p^3 }}{{t - 1}} - c^2 e^{cpt}\right)^{-1/2} \frac{3p^2}{t-1}-c^2e^{cpt}ct\\
+\frac{\partial A}{\partial t}(p,t,c)
+&= \frac{1}{2}\left(\frac{{p^3 }}{{t - 1}} - c^2 e^{cpt}\right)^{-1/2} \frac{-p^3}{(t-1)^2}-c^2e^{cpt}cp\\
+\frac{\partial A}{\partial c}(p,t,c)
+&= \frac{1}{2}\left(\frac{{p^3 }}{{t - 1}} - c^2 e^{cpt}\right)^{-1/2} -2ce^{cpt}-c^2e^{cpt}pt
+\end{align*}
+
+Así pues, el gradiente de $A$ es
+
+$$
+\nabla A(c,p,t) = \frac{1}{2}\left(\frac{{p^3 }}{{t - 1}} - c^2 e^{cpt}\right)^{-1/2} \left(\frac{3p^2}{t-1}-c^2e^{cpt}ct, \frac{-p^3}{(t-1)^2}-c^2e^{cpt}cp,  -e^{cpt}(2c+c^2pt)\right)
+$$
+
+b.  Suponiendo $c=0$ las derivadas parciales con respecto a la precipitación y la temperatura valen
+
+\begin{align*}
+\frac{\partial A}{\partial p}(p,t,0)
+&= \frac{1}{2}\left(\frac{{p^3 }}{{t - 1}}\right)^{-1/2} \frac{3p^2}{t-1}\\
+\frac{\partial A}{\partial t}(p,t,0)
+&= \frac{1}{2}\left(\frac{{p^3 }}{{t - 1}} \right)^{-1/2} \frac{-p^3}{(t-1)^2}
+\end{align*}
+
+Así pues, 
+
+$$
+\begin{gathered}
+\frac{\partial A}{\partial p}(p,t,0) = \frac{\partial A}{\partial t}(p,t,0) 
+\Leftrightarrow \frac{3p^2}{t-1} = \frac{-p^3}{(t-1)^2} \\
+\Leftrightarrow 3 = \frac{-p}{t-1} 
+\Leftrightarrow t = \frac{-p}{3}+1.
+\end{gathered}
+$$
 :::
 
 :::{#exr-normal-bidimensional}
@@ -338,7 +428,18 @@ $$
 \nabla f(x,y) = -\frac{1}{\sqrt{2\pi}\, \sigma_x\sigma_y} e^{-\frac{1}{2}\left(\frac{(x-\mu_x)^2}{\sigma_x^2}+\frac{(y-\mu_y)^2}{\sigma_y^2}\right)} \left(\frac{x-\mu_x}{\sigma_x^2}, \frac{y-\mu_y}{\sigma_y^2}\right).
 $$
 
-El gradiente se anula en $(x=\mu_x, y=\mu_y)$ y $\lim_{x\rightarrow \infty}f(x,y) = 0$.
+El gradiente $\nabla f(a,b)$ es un vector que indica la dirección en la que hay que moverse desde un punto $(a,b)$ para que el valor de la función crezca lo más rápidamente posible. Como la función exponencial es siempre positiva y las desviaciones típicas también, la dirección del vector gradiente será la misma que la del vector $(\frac{\mu_x-x}{\sigma x^2}, \frac{\mu_y-y}{\sigma y^2})$, lo que indica que habría que moverse hacia el punto de medias.
+
+Por otro lado, este vector se anula cuando $(\mu_x-x, \mu_y-y)=(0,0)$, es decir, en el punto de medias $(x=\mu_x, y=\mu_y)$. 
+
+Finalmente, si fijamos $y$ como constante, como la exponencial tiene exponente negativo, se tiene
+
+$$
+\lim_{x\to \infty} |\nabla f(x,y)| 
+= -\frac{\left(\frac{(x-\mu_x)^2}{\sigma_x^4} + \frac{(y-\mu_y)^2}{\sigma_y^4}\right)}{\sqrt{2\pi}\, \sigma_x\sigma_y e^{\frac{1}{2}\left(\frac{(x-\mu_x)^2}{\sigma_x^2}+\frac{(y-\mu_y)^2}{\sigma_y^2}\right)}}.
+$$
+
+Como en el numerador tenemos un polinomio en $x$ y en el denominador una función exponencial, cuando $x\to \infty$ la función exponencial crece mucho más rápidamente que cualquier polinomio, y por tanto, $\lim_{x\to \infty} |\nabla f(x,y)| = 0$. 
 :::
 
 :::{#exr-polea}
@@ -352,7 +453,7 @@ Tenemos dos objetos de masas $m_1$ y $m_2$ unidas por una cuerda que pasa a trav
 ![Polea](img/derivadas-funciones-varias-variables/polea.pdf)
 :::
 
-Si $m_1\geq m_2$, la aceleración de $m_1$ viene dada por la ecuación
+Si $m_1\geq m_2$, la aceleración del objeto de masa $m_1$ viene dada por la ecuación
 
 $$
 a=\frac{m_1-m_2}{m_1+m_2}g,
@@ -365,11 +466,45 @@ Demostrar que se cumple la ecuación
 $$
 m_1\frac{\partial a}{\partial m_1}+m_2\frac{\partial a}{\partial m_2}=0.
 $$
+
+¿Qué ecuación cumplirán las fuerzas que se aplican sobre estos objetos?
 :::
 
 :::{.callout-tip collapse="true"}
 ## Solución
-$\dfrac{\partial a}{\partial m_1} = \dfrac{2gm_2}{(m_1+m_2)^2}$ y $\dfrac{\partial a}{\partial m_2} = \dfrac{-2gm_1}{(m_1+m_2)^2}$.
+Calculamos las derivadas parciales de la aceleración con respecto a las masas
+
+\begin{align*}
+\frac{\partial a}{\partial m_1} 
+&= \frac{2gm_2}{(m_1+m_2)^2}, \\
+\frac{\partial a}{\partial m_2} 
+&= \frac{-2gm_1}{(m_1+m_2)^2}.
+\end{align*}
+
+Sustituyendo ahora en la ecuación es inmediato ver que se cumple,
+
+$$
+m_1\frac{\partial a}{\partial m_1}+m_2\frac{\partial a}{\partial m_2}
+= \frac{2gm_1m_2}{(m_1+m_2)^2} + \frac{-2gm_1m_2}{(m_1+m_2)^2}
+=0.
+$$
+
+Por el funcionamiento de la polea, si $a$ es la aceleración que experimenta el primer objeto, la aceleración del segundo objeto será de la misma magnitud pero opuesta, es decir $-a$. Por tanto, las fuerzas que deben actuar sobre los objetos para producir estas aceleraciones son $f_1 = m_1 a$ y $f_2 = -m_2a$, respectivamente. Si calculamos la derivadas parciales de estas fuerzas con respecto a $m_1$ y $m_2$ respectivamente, se tiene
+
+\begin{align*}
+\frac{\partial f_1}{\partial m_1} 
+&= a + m_1\frac{\partial a}{\partial m_1}, \\
+\frac{\partial f_2}{\partial m_2} 
+&= -a - m_2\frac{\partial a}{\partial m_2}.
+\end{align*}
+
+Por tanto la ecuación que relaciona las fuerzas es
+
+$$
+\frac{\partial f_1}{\partial m_1} - \frac{\partial f_2}{\partial m_1}
+= a + m_1\frac{\partial a}{\partial m_1} + a + m_2\frac{\partial a}{\partial m_2}
+= 2a.
+$$
 :::
 
 :::{#exr-reglas-derivacion}
@@ -387,16 +522,155 @@ donde $u$ y $v$ son funciones de una variable real.
 
 :::{.callout-tip collapse="true"}
 ## Solución
-En un equilibrio químico, la concentración de una sustancia $z$ depende de las concentraciones de otras dos sustancias $x$ e $y$ según la ecuación $\frac{z}{\sqrt{xy}}-\ln\left(\frac{x+y}{y}\right) = 0$. Usar el diferencial para predecir la variación que experimentará la concentración de $z$ si la concentración de $x$ aumenta $0.1$ mg/mm$^3$ y la de $y$ disminuye $0.2$ mg/$mm^3$ en el instante en que las concentraciones de $x$ e $y$ son 1 mg/mm$^3$.
+Sean $u(t)$ y $v(t)$ dos funciones de una variable. Si tomamos la función de dos variables $f(x+y) = x+y$ y la función vectorial $g(t) = (u(t), v(t))$, entonces, aplicando la regla de la cadena se tiene
+
+$$
+(u + v)' 
+= f(g(t))' 
+= \nabla f(g(t)) g'(t) 
+= (1, 1)(u', v') = u' + v'.
+$$
+
+Aplicando el mismo procedimiento, si se toma $f(x,y) = x-y$ se tiene
+
+$$
+(u - v)' 
+= f(g(t))' 
+= \nabla f(g(t)) g'(t) 
+= (1, -1)(u', v') = u' - v'.
+$$
+
+Del igual modo, si se toma $f(x,y) = xy$ se tiene
+
+$$
+(u - v)' 
+= f(g(t))' 
+= \nabla f(g(t)) g'(t) 
+= (v, u)(u', v') = u'v + uv'.
+$$
+
+Y finalmente, si se toma $f(x,y) = \frac{x}{y}$ se tiene
+
+$$
+(u - v)' 
+= f(g(t))' 
+= \nabla f(g(t)) g'(t) 
+= \left(\frac{1}{v}, -\frac{u}{v^2}\right)(u', v') = \frac{u'v-uv'}{v^2}.
+$$
+:::
+
+:::{#exr-aproximacion-variabicon-concentraciones-equilibrio-quimico}
+En un equilibrio químico, la concentración de una sustancia $z$ depende de las concentraciones de otras dos sustancias $x$ e $y$ según la ecuación $\frac{z}{\sqrt{xy}}-\ln\left(\frac{x+y}{y}\right) = 0$. Usar el diferencial para predecir la variación que experimentará la concentración de $z$ si la concentración de $x$ aumenta $0.1$ mg/mm$^3$ y la de $y$ disminuye $0.2$ mg/mm$^3$ en el instante en que las concentraciones de $x$ e $y$ son 1 mg/mm$^3$.
+:::
+
+:::{.callout-tip collapse="true"}
+## Solución
+Despejando $z$ de la ecuación se tiene la función de dos variables
+
+$$
+z = f(x,y) = \ln\left(\frac{x+y}{y}\right)(xy)^{1/2}.
+$$
+
+Las derivadas parciales de $f$ son
+
+\begin{align*}
+\frac{\partial f}{\partial x} 
+&= \frac{y}{x+y}\frac{1}{y}\frac{1}{2}(xy)^{-1/2}y 
+= \frac{y}{2(x+y)\sqrt{xy}}, \\
+\frac{\partial f}{\partial y} 
+&= \frac{y}{x+y}\frac{y-(x+y)}{y^2}\frac{1}{2}(xy)^{-1/2}x 
+= -\frac{x^2y}{2(x+y)y^2\sqrt{xy}}.
+\end{align*}
+
+Estas funciones son continuas en un entorno del punto $(1,1)$, por lo que la función $f$ es diferenciable en $(1,1)$ y podemos utilizar el diferencial total para aproximar la variación de $z$,
+
+$$
+dz 
+= \nabla f(1,1)(dx,dy)
+= \left(\frac{1}{4}, \frac{-1}{4}\right)(dx, dy)
+= \frac{dx}{4}-\frac{dy}{4}.
+$$
+
+Así pues, para variaciones de las concentraciones $\Delta x=0.1$ y $\Delta y = -0.2$ mg/mm$^3$, respectivamente, se tiene que la variación de $z$ es
+
+$$
+\Delta z \approx \frac{0.1}{4} + \frac{0.2}{4} 
+= \frac{0.3}{4} \mbox{ mg/mm}^3.
+$$ 
 :::
 
 :::{#exr-variacion-volumen-cilindro}
 Un cilindro metálico de radio 30cm y altura 50cm  se dilata de manera que la tasa de variación de su radio es 1 cm/s y la tasa de variación de su altura es 2 cm/s. ¿Cuál es la tasa de variación de su volumen?
 :::
 
-:::{#exr-distancia-planetas}
-Dos planetas se mueven en un mismo plano describiendo órbitas dadas por las funciones vectoriales $f(t) = (2 \cos(t), \operatorname{sen}(t))$ y $g(t) = (3\operatorname{sen}(t/2), 2\cos(t/2))$. Usar la regla de la cadena para funciones de varias variables para calcular la derivada de la distancia entre los planetas en el instante $t=\pi/2$. ¿Los planetas se están acercando o alejando?
+:::{.callout-tip collapse="true"}
+## Solución
+La fórmula del volumen de un cilindro de radio $r$ y altura $h$ es la función de dos variables $V(r,h) = \pi r^2h$, pero como tanto el radio como la altura dependen del tiempo debido al proceso de dilatación, en realidad se tiene que el volumen depende del tiempo según la fórmula $V(t) = \pi r(t)^2 h(t)$. Así pues, podemos calcular la derivada del volumen aplicando la regla de la cadena.
+
+$$
+\frac{dV}{dt}
+= \frac{\partial V}{\partial r}\frac{dr}{dt} + \frac{\partial V}{\partial h}\frac{dh}{dt}
+= 2\pi rh \frac{dr}{dt} + \pi r^2 \frac{dh}{dt}.
+$$
+
+Y en el instante en que $r=30$ y $h=50$ y empezamos a cambiar el radio con una tasa de variación $\frac{dr}{dt}=1$ cm/s y la altura con una tasa de variación $\frac{dh}{dt}=2$ cm/s, la tasa de variación del volumen es
+
+$$
+\frac{dV}{dt}
+= 2\pi 30\cdot 50\cdot 1 + \pi 30^2 \cdot 2 
+= 2100 \pi \mbox{ cm$^3$/s}.
+$$ 
 :::
+
+:::{#exr-distancia-planetas}
+Dos planetas se mueven en un mismo plano describiendo órbitas dadas por las funciones vectoriales $f(t) = (3 \cos(t), \operatorname{sen}(t))$ y $g(t) = (2\operatorname{sen}(t/2), 3\cos(t/2))$. Usar la regla de la cadena para funciones de varias variables para calcular la derivada de la distancia entre los planetas en el instante $t=\pi$. ¿Los planetas se están acercando o alejando?
+:::
+
+:::{.callout-tip collapse="true"}
+## Solución
+La distancia euclídea entre dos puntos $(x_1, y_1)$ y $(x_2,y_2)$ del plano euclídeo es $D(x,y) = \sqrt{(x_2-x_1)^2 + (y_2-y_1)^2}$. Suponiendo que estos puntos son las posiciones de los planteas, que dependen del tiempo según las funciones vectoriales $f(t)$ y $g(t)$, aplicando la regla de la cadena, la derivada de la distancia entre los planetas es
+
+\begin{align*}
+\frac{dD}{dt}
+&= \frac{\partial D}{\partial x_1}\frac{dx_1}{dt} + 
+\frac{\partial D}{\partial x_2}\frac{dx_2}{dt} +
+\frac{\partial D}{\partial y_1}\frac{dy_1}{dt} +
+\frac{\partial D}{\partial y_2}\frac{dy_2}{dt} \\
+&= \frac{1}{2}((x_2-x_1)^2 + (y_2-y_1)^2)^{-1/2}(-2)(x_2-x_1) \frac{dx_1}{dt} \\
+&+ \frac{1}{2}((x_2-x_1)^2 + (y_2-y_1)^2)^{-1/2}2(x_2-x_1) \frac{dx_2}{dt} \\
+&+ \frac{1}{2}((x_2-x_1)^2 + (y_2-y_1)^2)^{-1/2}(-2)(y_2-y_1) \frac{dy_1}{dt} \\
+&+ \frac{1}{2}((x_2-x_1)^2 + (y_2-y_1)^2)^{-1/2}2(y_2-y_1) \frac{dy_2}{dt}\\
+&= \frac{(-x_2 + x_1)\frac{dx_1}{dt} + (x_2 -x_1)\frac{dx_2}{dt} + (-y_2 + y_1)\frac{dy_1}{dt} + (y_2-y_1)\frac{dy_2}{dt}}{\sqrt{(x_2-x_1)^2 + (y_2-y_1)^2}}.
+\end{align*}
+
+Como en el instante $t=\pi$ tenemos 
+
+\begin{align*}
+f(\pi) &= (3 \cos(\pi), \operatorname{sen}(\pi)) = (-3,0),\\
+g(\pi) &= (2\operatorname{sen}(\pi/2), 3\cos(\pi/2))= (2,0),\\
+f'(\pi) &= (-3\operatorname{sen}(\pi), \cos(\pi)) = (0,1),\\
+g'(\pi) &= \left(\frac{2}{2}\cos(\pi/2), -\frac{3}{2}\operatorname{sen}(\pi/2) \right) = (0, -3/2),
+\end{align*}
+
+sustituyendo en la expresión anterior se tiene
+
+$$
+\frac{dD}{dt} 
+= \frac{(-2-3)0 + (2+3)0 + (-0+0)1 + (0-0)(-3/2)}{\sqrt{(2+3)^2 + (0-0)^2}}
+= 0.
+$$
+
+Como la derivada es nula, en el instante $t=\pi$ los planetas ni se están acercando ni alejando. De hecho, en ese instante la distancia entre los planetas es máxima, tal y como puede apreciarse en la siguiente gráfica.
+
+:::{.content-visible when-format="html"}
+![Orbitas de los planetas.](img/derivadas-funciones-varias-variables/planetas.svg)
+:::
+
+:::{.content-visible unless-format="html"}
+![Orbitas de los planetas.](img/derivadas-funciones-varias-variables/planetas.pdf)
+:::
+:::
+
 
 :::{#exr-transmision-errores-caudal-fuente}
 Para calcular el caudal de una fuente se ha llenado un depósito de base cuadrada $30\pm 0.2$ cm y altura $50\pm 0.3$ cm en un tiempo de $20\pm 0.5$ s. Expresar el caudal de la fuente incluyendo error en la medida.
@@ -411,7 +685,7 @@ La Quimiotaxis es el movimiento de los organismos dirigido por un gradiente de c
 en la que la concentración aumenta con más rapidez. El moho del cieno Dictyoselium discoideum muestra este comportamiento. En esta caso, las amebas unicelulares de esta especie se mueven según el gradiente de concentración de una sustancia química denominada adenosina monofosfato (AMP cíclico). Si suponemos que la expresión que da la concentración de AMP cíclico en un punto de coordenadas $(x,y,z)$ es:
 
 $$
-C(x,y,z) = \frac{4} {{\sqrt {x^2  + y^2  + z^4  + 1} }}
+C(x,y,z) = \frac{4}{\sqrt{x^2+y^2+z^4+1}}
 $$
 
 y se sitúa una ameba de moho del cieno en el punto $(-1,0,1)$, ¿en qué dirección se moverá la ameba?
