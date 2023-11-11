@@ -1205,7 +1205,54 @@ x\ln(y)+\frac{2e^{y^2+z}}{x} - \frac{x}{z^2} = -1
 $$ 
 
 donde $x$, $y$ y $z$ son las concentraciones de tres sustancias. 
-¿Cómo cambia la concentración de $z$ si empezamos a disminuir $x$ al mismo ritmo que se incrementa $y$ en el instante en que $x=2$ e $y=1$ y $z=-1$?
+¿Cómo cambia la concentración de $z$ si empezamos a disminuir $x$ al mismo ritmo que se incrementa $y$ en el instante en que $x=2$, $y=1$ y $z=-1$?
+:::
+
+:::{.callout-tip collapse="true"}
+## Solución
+Consideremos la función $F(x,y,z) = x\ln(y)+\frac{2e^{y^2+z}}{x} - \frac{x}{z^2} + 1$ y veamos si se cumplen las condiciones del [teorema de la función implícita](https://aprendeconalf.es/analisis-manual/13-derivadas-funciones-varias-variables.html#thm-funcion-implicita) en un entorno del punto $(2,1,-1)$.
+
+a.  $F(2,1,-1) = 2\ln(1)+\frac{2e^{1^2-1}}{2}-\frac{2}{(-1)^2}+1 = 0$.
+
+a.  Las derivadas parciales de $F$ son 
+
+    \begin{align*}
+    \frac{\partial F}{\partial x} 
+    &= \ln(y) - \frac{2e^{y^2+z}}{x^2} - \frac{1}{z^2}, \\
+    \frac{\partial F}{\partial y} 
+    &= \frac{x}{y} - \frac{4ye^{y^2+z}}{x}, \\
+    \frac{\partial F}{\partial z} 
+    &= \frac{2e^{y^2+z}}{x} + \frac{2x}{z^3},  
+    \end{align*}
+
+    que son continuas en un entorno del punto $(2,1,-1)$.
+
+a.  $\frac{\partial F}{\partial z}(2,1,-1) = \frac{2e^{1^2-1}}{2} + \frac{2\cdot 2}{(-1)^3} = -3 \neq 0$.
+
+Así pues, se cumplen la condiciones del teorema de la función implícita y $F(x,y,z)=0$ define a $z$ como función implícita $z=f(x,y)$ en un entorno de $(2,1,-1)$.
+
+Las derivadas parciales de $z$ son 
+
+\begin{align*}
+\frac{\partial f}{\partial x} (2,1,-1)
+&= -\frac{F_x(2,1,-1)}{F_z(2,1,-1)} = -\frac{-3/2}{-3} = -\frac{1}{2},\\
+\frac{\partial f}{\partial y} (2,1,-1)
+&= -\frac{F_y(2,1,-1)}{F_z(2,1,-1)} = -\frac{4}{-3} = \frac{4}{3},
+\end{align*}
+
+por lo que el vector gradiente de $f$ es $\nabla f(2,1) = \left(-\frac{1}{2}, \frac{4}{3}\right)$.
+
+Finalmente, la derivada parcial de $f$ en la dirección del vector $\mathbf{u}=(-1,1)$ es
+
+\begin{align*}
+f'_{\mathbf{u}}(2,1) 
+&= \nabla f(2,1)\frac{\mathbf{u}}{|\mathbf{u}|} 
+= \left(-\frac{1}{2}, \frac{4}{3}\right)\frac{(-1,1)}{|(-1,1)|} \\
+&= \frac{\frac{1}{2}+\frac{4}{3}}{\sqrt{2}}
+= \frac{11}{6\sqrt{2}},
+\end{align*}
+
+lo que quiere decir que por cada unidad que cambiemos las concentraciones de $x$ e $y$ en la dirección del vector $(-1,1)$, la concentración de $z$ aumentará $\frac{11}{6\sqrt{2}}$ unidades.
 :::
 
 :::{#exr-funcion-homogenea}
@@ -1217,6 +1264,35 @@ x\frac{\partial f}{\partial x} + y \frac{\partial f}{\partial y} = nf(x,y),\\
 x^2\frac{\partial^2 f}{\partial x^2} + 2xy \frac{\partial^2 f}{\partial x \partial y} + y^2 \frac{\partial^2 f}{\partial y^2} = n(n-1)f(x,y).
 \end{gathered}
 $$
+:::
+
+:::{.callout-tip collapse="true"}
+## Solución
+En primer lugar, veamos que una función homogénea de grado $n$ cumple que sus derivadas parciales son homogéneas de grado $n-1$. Derivando ambos lados de la igualdad $f(tx, ty) = t^nf(x,y)$ con respecto a $x$ se tiene
+
+$$
+\begin{gathered}
+\frac{\partial f(tx,ty)}{\partial x} = \frac{\partial t^nf(x,y)}{\partial x} \\
+\Leftrightarrow \frac{\partial f(tx,ty)}\partial{tx} \frac{d(tx)}{dx} = t^n  \frac{\partial f(x,y)}{\partial x} \\
+\Leftrightarrow \frac{\partial f(tx, ty)}{\partial x} t = t^n \frac{\partial f(x,y)}{\partial x} \\
+\Leftrightarrow \frac{\partial f(tx, ty)}{\partial x} = t^{n-1} \frac{\partial f(x,y)}{\partial x}, 
+\end{gathered}
+$$
+
+por lo que $\frac{\partial f}{\partial x}$ es homogénea de grado $n-1$, y del mismo modo se prueba que $\frac{\partial f}{\partial y}$ también lo es.
+
+Veamos ahora que se cumple la primera ecuación. Consideremos la función vectorial $g(t)=(tx, ty)$, entonces $f(g(t)) = f(tx,ty) = t^n f(x,y)$ y derivando con respecto a $t$ ambos lados de la ecuación se tiene
+
+$$
+\begin{gathered}
+\frac{d f(tx,ty)}{dt} = \frac{d (t^nf(x,y))}{dt} \\
+\Leftrightarrow \frac{\partial f(tx,ty)}{\partial tx}\frac{d(tx)}{dt} + \frac{\partial f(tx,ty)}{\partial ty}\frac{d(ty)}{dt} = nt^{n-1}f(x,y) \\
+\Leftrightarrow t^{n-1}\frac{\partial f(x,y)}{\partial x}x + t^{n-1}\frac{\partial f(x,y)}{\partial y}y =  nt^{n-1}f(x,y) \\
+\Leftrightarrow \frac{\partial f(x,y)}{\partial x}x + \frac{\partial f(x,y)}{\partial y}y =  nf(x,y).
+\end{gathered}
+$$
+
+La segunda ecuación se prueba de forma análoga.
 :::
 
 :::{#exr-regla-cadena-coordenadas-polares}

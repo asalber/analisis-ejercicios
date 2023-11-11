@@ -1484,7 +1484,55 @@ x^{2}+(2x/3)^{2}=3x(2x/3)-1 \Leftrightarrow x^{2}+4x^{2}/9 = 2x^{2}-1 \Leftright
 <p><span class="math display">\[
 x\ln(y)+\frac{2e^{y^2+z}}{x} - \frac{x}{z^2} = -1
 \]</span></p>
-<p>donde <span class="math inline">\(x\)</span>, <span class="math inline">\(y\)</span> y <span class="math inline">\(z\)</span> son las concentraciones de tres sustancias. ¿Cómo cambia la concentración de <span class="math inline">\(z\)</span> si empezamos a disminuir <span class="math inline">\(x\)</span> al mismo ritmo que se incrementa <span class="math inline">\(y\)</span> en el instante en que <span class="math inline">\(x=2\)</span> e <span class="math inline">\(y=1\)</span> y <span class="math inline">\(z=-1\)</span>?</p>
+<p>donde <span class="math inline">\(x\)</span>, <span class="math inline">\(y\)</span> y <span class="math inline">\(z\)</span> son las concentraciones de tres sustancias. ¿Cómo cambia la concentración de <span class="math inline">\(z\)</span> si empezamos a disminuir <span class="math inline">\(x\)</span> al mismo ritmo que se incrementa <span class="math inline">\(y\)</span> en el instante en que <span class="math inline">\(x=2\)</span>, <span class="math inline">\(y=1\)</span> y <span class="math inline">\(z=-1\)</span>?</p>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-30-contents" aria-controls="callout-30" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-30" class="callout-30-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Consideremos la función <span class="math inline">\(F(x,y,z) = x\ln(y)+\frac{2e^{y^2+z}}{x} - \frac{x}{z^2} + 1\)</span> y veamos si se cumplen las condiciones del <a href="https://aprendeconalf.es/analisis-manual/13-derivadas-funciones-varias-variables.html#thm-funcion-implicita">teorema de la función implícita</a> en un entorno del punto <span class="math inline">\((2,1,-1)\)</span>.</p>
+<ol type="a">
+<li><p><span class="math inline">\(F(2,1,-1) = 2\ln(1)+\frac{2e^{1^2-1}}{2}-\frac{2}{(-1)^2}+1 = 0\)</span>.</p></li>
+<li><p>Las derivadas parciales de <span class="math inline">\(F\)</span> son</p>
+<p><span class="math display">\[\begin{align*}
+\frac{\partial F}{\partial x}
+&amp;= \ln(y) - \frac{2e^{y^2+z}}{x^2} - \frac{1}{z^2}, \\
+\frac{\partial F}{\partial y}
+&amp;= \frac{x}{y} - \frac{4ye^{y^2+z}}{x}, \\
+\frac{\partial F}{\partial z}
+&amp;= \frac{2e^{y^2+z}}{x} + \frac{2x}{z^3},  
+\end{align*}\]</span></p>
+<p>que son continuas en un entorno del punto <span class="math inline">\((2,1,-1)\)</span>.</p></li>
+<li><p><span class="math inline">\(\frac{\partial F}{\partial z}(2,1,-1) = \frac{2e^{1^2-1}}{2} + \frac{2\cdot 2}{(-1)^3} = -3 \neq 0\)</span>.</p></li>
+</ol>
+<p>Así pues, se cumplen la condiciones del teorema de la función implícita y <span class="math inline">\(F(x,y,z)=0\)</span> define a <span class="math inline">\(z\)</span> como función implícita <span class="math inline">\(z=f(x,y)\)</span> en un entorno de <span class="math inline">\((2,1,-1)\)</span>.</p>
+<p>Las derivadas parciales de <span class="math inline">\(z\)</span> son</p>
+<p><span class="math display">\[\begin{align*}
+\frac{\partial f}{\partial x} (2,1,-1)
+&amp;= -\frac{F_x(2,1,-1)}{F_z(2,1,-1)} = -\frac{-3/2}{-3} = -\frac{1}{2},\\
+\frac{\partial f}{\partial y} (2,1,-1)
+&amp;= -\frac{F_y(2,1,-1)}{F_z(2,1,-1)} = -\frac{4}{-3} = \frac{4}{3},
+\end{align*}\]</span></p>
+<p>por lo que el vector gradiente de <span class="math inline">\(f\)</span> es <span class="math inline">\(\nabla f(2,1) = \left(-\frac{1}{2}, \frac{4}{3}\right)\)</span>.</p>
+<p>Finalmente, la derivada parcial de <span class="math inline">\(f\)</span> en la dirección del vector <span class="math inline">\(\mathbf{u}=(-1,1)\)</span> es</p>
+<p><span class="math display">\[\begin{align*}
+f'_{\mathbf{u}}(2,1)
+&amp;= \nabla f(2,1)\frac{\mathbf{u}}{|\mathbf{u}|}
+= \left(-\frac{1}{2}, \frac{4}{3}\right)\frac{(-1,1)}{|(-1,1)|} \\
+&amp;= \frac{\frac{1}{2}+\frac{4}{3}}{\sqrt{2}}
+= \frac{11}{6\sqrt{2}},
+\end{align*}\]</span></p>
+<p>lo que quiere decir que por cada unidad que cambiemos las concentraciones de <span class="math inline">\(x\)</span> e <span class="math inline">\(y\)</span> en la dirección del vector <span class="math inline">\((-1,1)\)</span>, la concentración de <span class="math inline">\(z\)</span> aumentará <span class="math inline">\(\frac{11}{6\sqrt{2}}\)</span> unidades.</p>
+</div>
+</div>
 </div>
 <div id="exr-funcion-homogenea" class="theorem exercise">
 <p><span class="theorem-title"><strong>Ejercicio 10.31 </strong></span>Una función <span class="math inline">\(f(x,y)\)</span> se llama homogénea de grado <span class="math inline">\(n\)</span> si satisface que <span class="math inline">\(f(tx, ty) = t^nf(x,y)\)</span>. Demostrar que si <span class="math inline">\(f\)</span> es homogénea de grado <span class="math inline">\(n\)</span> se cumplen las ecuaciones</p>
@@ -1494,6 +1542,41 @@ x\frac{\partial f}{\partial x} + y \frac{\partial f}{\partial y} = nf(x,y),\\
 x^2\frac{\partial^2 f}{\partial x^2} + 2xy \frac{\partial^2 f}{\partial x \partial y} + y^2 \frac{\partial^2 f}{\partial y^2} = n(n-1)f(x,y).
 \end{gathered}
 \]</span></p>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-31-contents" aria-controls="callout-31" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-31" class="callout-31-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>En primer lugar, veamos que una función homogénea de grado <span class="math inline">\(n\)</span> cumple que sus derivadas parciales son homogéneas de grado <span class="math inline">\(n-1\)</span>. Derivando ambos lados de la igualdad <span class="math inline">\(f(tx, ty) = t^nf(x,y)\)</span> con respecto a <span class="math inline">\(x\)</span> se tiene</p>
+<p><span class="math display">\[
+\begin{gathered}
+\frac{\partial f(tx,ty)}{\partial x} = \frac{\partial t^nf(x,y)}{\partial x} \\
+\Leftrightarrow \frac{\partial f(tx,ty)}\partial{tx} \frac{d(tx)}{dx} = t^n  \frac{\partial f(x,y)}{\partial x} \\
+\Leftrightarrow \frac{\partial f(tx, ty)}{\partial x} t = t^n \frac{\partial f(x,y)}{\partial x} \\
+\Leftrightarrow \frac{\partial f(tx, ty)}{\partial x} = t^{n-1} \frac{\partial f(x,y)}{\partial x},
+\end{gathered}
+\]</span></p>
+<p>por lo que <span class="math inline">\(\frac{\partial f}{\partial x}\)</span> es homogénea de grado <span class="math inline">\(n-1\)</span>, y del mismo modo se prueba que <span class="math inline">\(\frac{\partial f}{\partial y}\)</span> también lo es.</p>
+<p>Veamos ahora que se cumple la primera ecuación. Consideremos la función vectorial <span class="math inline">\(g(t)=(tx, ty)\)</span>, entonces <span class="math inline">\(f(g(t)) = f(tx,ty) = t^n f(x,y)\)</span> y derivando con respecto a <span class="math inline">\(t\)</span> ambos lados de la ecuación se tiene</p>
+<p><span class="math display">\[
+\begin{gathered}
+\frac{d f(tx,ty)}{dt} = \frac{d (t^nf(x,y))}{dt} \\
+\Leftrightarrow \frac{\partial f(tx,ty)}{\partial tx}\frac{d(tx)}{dt} + \frac{\partial f(tx,ty)}{\partial ty}\frac{d(ty)}{dt} = nt^{n-1}f(x,y) \\
+\Leftrightarrow t^{n-1}\frac{\partial f(x,y)}{\partial x}x + t^{n-1}\frac{\partial f(x,y)}{\partial y}y =  nt^{n-1}f(x,y) \\
+\Leftrightarrow \frac{\partial f(x,y)}{\partial x}x + \frac{\partial f(x,y)}{\partial y}y =  nf(x,y).
+\end{gathered}
+\]</span></p>
+<p>La segunda ecuación se prueba de forma análoga.</p>
+</div>
+</div>
 </div>
 <div id="exr-regla-cadena-coordenadas-polares" class="theorem exercise">
 <p><span class="theorem-title"><strong>Ejercicio 10.32 </strong></span>Demostrar que si <span class="math inline">\(f(x,y)\)</span> es una función de varias variables tal que <span class="math inline">\(x\)</span> e <span class="math inline">\(y\)</span> dependen, a su vez, de otras dos variables, <span class="math inline">\(u\)</span> y <span class="math inline">\(v\)</span>, es decir, <span class="math inline">\(x=x(u,v)\)</span> e <span class="math inline">\(y=y(u,v)\)</span>, entonces</p>
@@ -1516,7 +1599,7 @@ x^2\frac{\partial^2 f}{\partial x^2} + 2xy \frac{\partial^2 f}{\partial x \parti
 </ol>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-30-contents" aria-controls="callout-30" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-32-contents" aria-controls="callout-32" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1525,7 +1608,7 @@ Solución
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-30" class="callout-30-contents callout-collapse collapse">
+<div id="callout-32" class="callout-32-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ol type="a">
 <li><p><span class="math inline">\(\nabla V(x,y) = \left( \frac{x}{x^2+y^2},\frac{y}{x^2+y^2}\right)\)</span>.</p></li>
@@ -1561,7 +1644,7 @@ Solución
 </ol>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-31-contents" aria-controls="callout-31" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-33-contents" aria-controls="callout-33" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1570,7 +1653,7 @@ Solución
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-31" class="callout-31-contents callout-collapse collapse">
+<div id="callout-33" class="callout-33-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ol type="a">
 <li><p>La derivada parcial de <span class="math inline">\(H\)</span> con respecto a <span class="math inline">\(x\)</span> es</p>
@@ -1633,7 +1716,7 @@ Solución
 </ol>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-32-contents" aria-controls="callout-32" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-34-contents" aria-controls="callout-34" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1642,7 +1725,7 @@ Solución
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-32" class="callout-32-contents callout-collapse collapse">
+<div id="callout-34" class="callout-34-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ol type="a">
 <li><p>Para comprobar que <span class="math inline">\(u(x,y,z)\)</span> satisface la ecuación de Laplace calculamos las tres derivadas parciales segundas que intervienen en la ecuación. Comenzando con las derivadas parciales con respecto a la variable <span class="math inline">\(x\)</span>, obtenemos:</p>
@@ -1732,7 +1815,7 @@ u}}{{\partial x\partial y^2 }}} \right) \\
 <p><span class="theorem-title"><strong>Ejercicio 10.36 </strong></span>Hallar los extremos relativos y los puntos de silla de la función <span class="math inline">\(f(x,y) = (x^2+y^2)^2-2a^2(x^2-y^2)\)</span> con <span class="math inline">\(a\neq 0\)</span>.</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-33-contents" aria-controls="callout-33" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-35-contents" aria-controls="callout-35" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1741,7 +1824,7 @@ Solución
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-33" class="callout-33-contents callout-collapse collapse">
+<div id="callout-35" class="callout-35-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>No tiene máximos relativos.<br>
 Mínimos relativos en <span class="math inline">\((-a,0)\)</span> y <span class="math inline">\((a,0)\)</span>.<br>
@@ -1753,7 +1836,7 @@ Punto de silla en <span class="math inline">\((0,0)\)</span>.</p>
 <p><span class="theorem-title"><strong>Ejercicio 10.37 </strong></span>Determinar los extremos relativos y los puntos de silla del campo escalar <span class="math inline">\(h(x,y) = xy+\dfrac{xy^2}{2}-2x^2\)</span>.</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-34-contents" aria-controls="callout-34" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-36-contents" aria-controls="callout-36" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1762,7 +1845,7 @@ Solución
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-34" class="callout-34-contents callout-collapse collapse">
+<div id="callout-36" class="callout-36-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Máximo relativo en <span class="math inline">\((-1/8,-1)\)</span>.<br>
 No tiene mínimos relativos.<br>
@@ -1774,7 +1857,7 @@ Puntos de silla en <span class="math inline">\((0,0)\)</span> y <span class="mat
 <p><span class="theorem-title"><strong>Ejercicio 10.38 </strong></span>El rendimiento de una cosecha, <span class="math inline">\(R\)</span>, depende de las concentraciones de nitrógeno, <span class="math inline">\(n\)</span>, y fósforo, <span class="math inline">\(p\)</span>, presentes en el suelo según la función <span class="math inline">\(R(n,p) = npe^{-(n+p)}\)</span>. ¿Cuáles deben ser las concentraciones de nitrógeno y fósforo para que el rendimiento de la cosecha sea máximo?</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-35-contents" aria-controls="callout-35" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-37-contents" aria-controls="callout-37" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1783,7 +1866,7 @@ Solución
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-35" class="callout-35-contents callout-collapse collapse">
+<div id="callout-37" class="callout-37-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Se trata de un problema de optimización, así que, primero calculamos los puntos donde se anula el gradiente</p>
 <p><span class="math display">\[\begin{align*}
