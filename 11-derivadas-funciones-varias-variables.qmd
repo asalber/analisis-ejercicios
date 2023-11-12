@@ -1286,26 +1286,68 @@ Veamos ahora que se cumple la primera ecuación. Consideremos la función vector
 $$
 \begin{gathered}
 \frac{d f(tx,ty)}{dt} = \frac{d (t^nf(x,y))}{dt} \\
-\Leftrightarrow \frac{\partial f(tx,ty)}{\partial tx}\frac{d(tx)}{dt} + \frac{\partial f(tx,ty)}{\partial ty}\frac{d(ty)}{dt} = nt^{n-1}f(x,y) \\
-\Leftrightarrow t^{n-1}\frac{\partial f(x,y)}{\partial x}x + t^{n-1}\frac{\partial f(x,y)}{\partial y}y =  nt^{n-1}f(x,y) \\
-\Leftrightarrow \frac{\partial f(x,y)}{\partial x}x + \frac{\partial f(x,y)}{\partial y}y =  nf(x,y).
+\Leftrightarrow \frac{\partial f(tx,ty)}{\partial tx}\frac{d(tx)}{dt} + \frac{\partial f(tx,ty)}{\partial ty}\frac{d(ty)}{dt} = nt^{n-1}f(x,y)\\
+\Leftrightarrow t^{n-1}\frac{\partial f(x,y)}{\partial tx}x + t^{n-1}\frac{\partial f(x,y)}{\partial ty}y =  nt^{n-1}f(x,y) \\
+\Leftrightarrow \frac{\partial f(x,y)}{\partial tx}x + \frac{\partial f(x,y)}{\partial ty}y =  nf(x,y).
 \end{gathered}
+$$
+
+Como esto es cierto para cualquier $t$, en particular, tomando $t=1$ se concluye
+
+$$
+\frac{\partial f(x,y)}{\partial x}x + \frac{\partial f(x,y)}{\partial y}y =  nf(x,y).
 $$
 
 La segunda ecuación se prueba de forma análoga.
 :::
 
 :::{#exr-regla-cadena-coordenadas-polares}
-Demostrar que si $f(x,y)$ es una función de varias variables tal que $x$ e $y$ dependen, a su vez, de otras dos variables, $u$ y $v$, es decir, $x=x(u,v)$ e $y=y(u,v)$, entonces 
+Demostrar que si $f(x,y)$ es una función de varias variables tal que $x$ e $y$ dependen, a su vez, de otras dos variables, $s$ y $t$, es decir, $x=g(s,t)$ e $y=h(s,t)$, entonces 
 
 \begin{align*}
-\frac{\partial f}{\partial u} 
-&= \frac{\partial f}{\partial x} \frac{\partial x}{\partial u} + \frac{\partial f}{\partial y} \frac{\partial y}{\partial u} \\
-\frac{\partial f}{\partial v} 
-&= \frac{\partial f}{\partial x} \frac{\partial x}{\partial v} + \frac{\partial f}{\partial y} \frac{\partial y}{\partial v} 
+\frac{\partial f}{\partial s} 
+&= \frac{\partial f}{\partial x} \frac{\partial x}{\partial s} + \frac{\partial f}{\partial y} \frac{\partial y}{\partial s} \\
+\frac{\partial f}{\partial t} 
+&= \frac{\partial f}{\partial x} \frac{\partial x}{\partial t} + \frac{\partial f}{\partial y} \frac{\partial y}{\partial t} 
 \end{align*}
 
 Dado un campo escalar $f(x,y)$, donde $(x,y)$ son las coordenadas cartesianas de un punto en el plano, usar el resultado anterior para calcular $\frac{\partial f}{\partial r}$ y $\frac{\partial f}{\partial \theta}$, donde $r$ y $\theta$ son las coordenadas polares del punto. 
+:::
+
+:::{.callout-tip collapse="true"}
+## Solución
+Para calcular $\frac{\partial f}{\partial t}$ suponemos $s$ constante, de manera que las funciones $f(s,t)$ y $g(s,t)$ son funciones de una variable $t$. Aplicando la [regla de la cadena](https://aprendeconalf.es/analisis-manual/13-derivadas-funciones-varias-variables.html#regla-de-la-cadena) para una función de dos variables, se tiene
+
+$$
+\frac{\partial f}{\partial t} 
+= \frac{\partial f}{\partial x}\frac{dx}{dt} + \frac{\partial f}{\partial y}\frac{dy}{dt} 
+= \frac{\partial f}{\partial x}\frac{\partial x}{\partial t} + \frac{\partial f}{\partial y}\frac{\partial y}{\partial t}
+$$
+
+Del mismo modo, para calcular $\frac{\partial f}{\partial s}$ suponemos $t$ constante, de manera que las funciones $f(s,t)$ y $g(s,t)$ son funciones de una variable $s$, y aplicando de nuevo la para una función de dos variables, se tiene
+
+$$
+\frac{\partial f}{\partial s} 
+= \frac{\partial f}{\partial x}\frac{dx}{ds} + \frac{\partial f}{\partial y}\frac{dy}{ds} 
+= \frac{\partial f}{\partial x}\frac{\partial x}{\partial s} + \frac{\partial f}{\partial y}\frac{\partial y}{\partial s}
+$$ 
+
+Supongamos ahora que $f(x,y)$ es un campo escalar donde $x$ e $y$ son las coordenadas cartesianas de un punto en el plano euclídeo. Como el cambio de coordenadas polares a cartesianas viene dado por las funciones
+
+$$
+x = g(r,\theta) = r\cos(\theta) \quad y = h(r,\theta) = r\operatorname{sen}(\theta),
+$$ 
+
+aplicando el resultado anterior se tiene
+
+\begin{align*}
+\frac{\partial f}{\partial r} 
+&= \frac{\partial f}{\partial x}\frac{\partial x}{\partial r} + \frac{\partial f}{\partial y}\frac{\partial y}{\partial r} \\
+&= \frac{\partial f}{\partial x}\cos(\theta) + \frac{\partial f}{\partial y}\operatorname{sen}(\theta), \\
+\frac{\partial f}{\partial \theta} 
+&= \frac{\partial f}{\partial x}\frac{\partial x}{\partial \theta} + \frac{\partial f}{\partial y}\frac{\partial y}{\partial \theta} \\
+&= \frac{\partial f}{\partial x}(-r\operatorname{sen}(\theta)) + \frac{\partial f}{\partial y}r\cos(\theta).
+\end{align*}
 :::
 
 :::{#exr-potencial-electrico}
@@ -1349,7 +1391,50 @@ a.  $$
 
     y $|\nabla^2V(\sqrt 3,\sqrt 3)| = -1/36.$
 
-a.  El potencial máximo se alcanza en $(x=-1/2, y=1/2)$ y vale $V(-1/2,1/2) = -\dfrac{\log 2}{2}$.
+a.  Tomando las funciones de cambio a coordenadas polares $x=r\cos(\theta)$ e $y=r\operatorname{sen}(\theta)$, por el ejercicio anterior se tiene
+
+    \begin{align*}
+    \frac{\partial V}{\partial r} 
+    &= \frac{\partial V}{\partial x}\cos(\theta) + \frac{\partial V}{\partial y}\operatorname{sen}(\theta) \\
+    &= \frac{x}{x^2+y^2} \cos(\theta) + \frac{y}{x^2+y^2}\operatorname{sen}(\theta) \\
+    &= \frac{r \cos(\theta)^2}{r^2} + \frac{r \operatorname{sen}(\theta)^2}{r^2} 
+    = \frac{1}{r} \\
+    \frac{\partial V}{\partial \theta} 
+    &= \frac{\partial V}{\partial x}(-r\operatorname{sen}(\theta)) + \frac{\partial V}{\partial y}r\cos(\theta) \\
+    &= \frac{x}{x^2+y^2} (-r\operatorname{sen}(\theta)) + \frac{y}{x^2+y^2}r\cos(\theta) \\
+    &= \frac{-r \operatorname{sen}(\theta)\cos(\theta)}{r^2} + \frac{r \operatorname{sen}(\theta)\cos(\theta)}{r^2}
+    = 0 \\
+    \end{align*}
+
+    Podríamos haber llegado a este mismo resultado haciendo el cambio a coordenadas polares directamente en la función del potencial ya que $V(r,\theta) = \ln(r)$.
+
+    A partir de aquí, obtener la matriz hessiana resulta más sencillo.
+
+    $$
+    \nabla ^2 V(r,\theta) = 
+    \begin{pmatrix}
+    \frac{-1}{r^2} & 0 \\
+    0 & 0 
+    \end{pmatrix}
+    $$
+
+a.  Sustituyendo $y=x+1$ en la función del potencial se tiene que 
+
+    $$
+    V(x,y) 
+    = \ln(\sqrt{x^2+(x+1)^2}) 
+    = \ln(\sqrt{2x^2 + 2x + 1}),
+    $$
+
+    que en realidad es una función de una variable. Si calculamos su derivada se tiene 
+
+    $$
+    \frac{dV}{dx} 
+    = \frac{1}{\sqrt{2x^2 + 2x + 1}}\frac{4x+2}{2\sqrt{2x^2 + 2x + 1}} 
+    = \frac{2x+1}{2x^2+2x+1}.
+    $$
+
+    por lo que el único punto crítico está en $x=-1/2$. Estudiando el signo de la derivada a la izquierda y la derecha de este punto se observa fácilmente que se trata de un máximo relativo, por lo que el potencial máximo vale $V(-1/2)= -\frac{\log 2}{2}$.
 :::
 
 :::{#exr-barra-metal}
@@ -1624,6 +1709,45 @@ por lo que en el punto $(1,1)$ hay un extremo relativo, y como $\frac{\partial^2
 
 :::{#exr-maximizacion-beneficio}
 Una empresa fabrica ordenadores portátiles y de sobremesa. El precio de los ordenadores portátiles es de 1200€ y el de los de sobremesa 800€. Si el coste de producir $x$ ordenadores portátiles e $y$ ordenadores de sobremesa semanales viene dado por la función $C(x,y)=2x^2+y^2+10000\ln(xy)$ en euros, ¿qué cantidad de ordenadores de cada tipo deberá producir semanalmente para maximizar el beneficio?
+:::
+
+:::{.callout-tip collapse="true"}
+## Solución
+Los ingresos obtenidos por la venta de $x$ ordenadores portátiles es $1200x$ y por la venta de $y$ ordenadores de sobremesa es $800y$, de modo que la función de beneficio es
+
+$$
+B(x,y) = 1200x + 800y - 2x^2 - y^2 - 10000\ln(xy).
+$$
+
+Para obtener el máximo de esta función primero calculamos los puntos críticos. 
+
+$$
+\nabla B(x,y) 
+= \left(1200-4x-\frac{10000}{x}, 800-2y-\frac{10000}{y}\right) = (0,0).
+$$
+
+Resolviendo la primera ecuación se tiene $x=8.58$ o $x=291.42$, y resolviendo la segunda $y=12.92$ o $y=387.08$, por lo que hay 4 puntos críticos $(8.58, 12.92)$, $(8.58, 387.08)$, $(291.42, 12.92)$ y $(291.42, 387.08)$.
+
+A continuación calculamos el hessiano en cada uno de ellos.
+
+$$
+|\nabla^2B(x,y)|=
+\begin{vmatrix}
+\frac{-4x^2+10000}{x^2} & 0 \\
+0 & \frac{-2y^2+10000}{y^2}
+\end{vmatrix}
+= \frac{(-4x^2+10000)(-2y^2+10000)}{x^2y^2}
+$$
+
+En el punto $(8.58, 12.92)$ se tiene $|\nabla^2B(8.58, 12.92)| = 7634.37 >0$ y $\frac{\partial ^2 B}{\partial x^2}(8.58, 12.92)= 131.8393>0$, por lo que en se trata de un mínimo relativo.
+
+En el punto $(8.58, 387.08)$ se tiene $|\nabla^2B(8.58, 387.08)| = -254.88 <0$, por lo que se trata de un punto de silla.
+
+En el punto $(291.42, 12.92)$ se tiene $|\nabla^2B(291.42, 12.92)| = -224.81 <0$, por lo que se trata de otro punto de silla.
+
+En el punto $(291.42, 387.08)$ se tiene $|\nabla^2B(291.42, 387.08)| = 7.51 >0$ y $\frac{\partial ^2 B}{\partial x^2}(291.42, 387.08)= 3.88<0$, por lo que en se trata de un máximo relativo.
+
+Así pues, para maximizar el beneficio deben fabricarse semanalmente $291.42$ ordenadores portátiles y $387$ ordenadores de sobremesa.
 :::
 
 :::{#exr-ajuste-minimos-cuadrados}

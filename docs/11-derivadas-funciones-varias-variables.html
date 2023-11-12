@@ -1569,34 +1569,28 @@ Solución
 <p><span class="math display">\[
 \begin{gathered}
 \frac{d f(tx,ty)}{dt} = \frac{d (t^nf(x,y))}{dt} \\
-\Leftrightarrow \frac{\partial f(tx,ty)}{\partial tx}\frac{d(tx)}{dt} + \frac{\partial f(tx,ty)}{\partial ty}\frac{d(ty)}{dt} = nt^{n-1}f(x,y) \\
-\Leftrightarrow t^{n-1}\frac{\partial f(x,y)}{\partial x}x + t^{n-1}\frac{\partial f(x,y)}{\partial y}y =  nt^{n-1}f(x,y) \\
-\Leftrightarrow \frac{\partial f(x,y)}{\partial x}x + \frac{\partial f(x,y)}{\partial y}y =  nf(x,y).
+\Leftrightarrow \frac{\partial f(tx,ty)}{\partial tx}\frac{d(tx)}{dt} + \frac{\partial f(tx,ty)}{\partial ty}\frac{d(ty)}{dt} = nt^{n-1}f(x,y)\\
+\Leftrightarrow t^{n-1}\frac{\partial f(x,y)}{\partial tx}x + t^{n-1}\frac{\partial f(x,y)}{\partial ty}y =  nt^{n-1}f(x,y) \\
+\Leftrightarrow \frac{\partial f(x,y)}{\partial tx}x + \frac{\partial f(x,y)}{\partial ty}y =  nf(x,y).
 \end{gathered}
+\]</span></p>
+<p>Como esto es cierto para cualquier <span class="math inline">\(t\)</span>, en particular, tomando <span class="math inline">\(t=1\)</span> se concluye</p>
+<p><span class="math display">\[
+\frac{\partial f(x,y)}{\partial x}x + \frac{\partial f(x,y)}{\partial y}y =  nf(x,y).
 \]</span></p>
 <p>La segunda ecuación se prueba de forma análoga.</p>
 </div>
 </div>
 </div>
 <div id="exr-regla-cadena-coordenadas-polares" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 10.32 </strong></span>Demostrar que si <span class="math inline">\(f(x,y)\)</span> es una función de varias variables tal que <span class="math inline">\(x\)</span> e <span class="math inline">\(y\)</span> dependen, a su vez, de otras dos variables, <span class="math inline">\(u\)</span> y <span class="math inline">\(v\)</span>, es decir, <span class="math inline">\(x=x(u,v)\)</span> e <span class="math inline">\(y=y(u,v)\)</span>, entonces</p>
+<p><span class="theorem-title"><strong>Ejercicio 10.32 </strong></span>Demostrar que si <span class="math inline">\(f(x,y)\)</span> es una función de varias variables tal que <span class="math inline">\(x\)</span> e <span class="math inline">\(y\)</span> dependen, a su vez, de otras dos variables, <span class="math inline">\(s\)</span> y <span class="math inline">\(t\)</span>, es decir, <span class="math inline">\(x=g(s,t)\)</span> e <span class="math inline">\(y=h(s,t)\)</span>, entonces</p>
 <p><span class="math display">\[\begin{align*}
-\frac{\partial f}{\partial u}
-&amp;= \frac{\partial f}{\partial x} \frac{\partial x}{\partial u} + \frac{\partial f}{\partial y} \frac{\partial y}{\partial u} \\
-\frac{\partial f}{\partial v}
-&amp;= \frac{\partial f}{\partial x} \frac{\partial x}{\partial v} + \frac{\partial f}{\partial y} \frac{\partial y}{\partial v}
+\frac{\partial f}{\partial s}
+&amp;= \frac{\partial f}{\partial x} \frac{\partial x}{\partial s} + \frac{\partial f}{\partial y} \frac{\partial y}{\partial s} \\
+\frac{\partial f}{\partial t}
+&amp;= \frac{\partial f}{\partial x} \frac{\partial x}{\partial t} + \frac{\partial f}{\partial y} \frac{\partial y}{\partial t}
 \end{align*}\]</span></p>
 <p>Dado un campo escalar <span class="math inline">\(f(x,y)\)</span>, donde <span class="math inline">\((x,y)\)</span> son las coordenadas cartesianas de un punto en el plano, usar el resultado anterior para calcular <span class="math inline">\(\frac{\partial f}{\partial r}\)</span> y <span class="math inline">\(\frac{\partial f}{\partial \theta}\)</span>, donde <span class="math inline">\(r\)</span> y <span class="math inline">\(\theta\)</span> son las coordenadas polares del punto.</p>
-</div>
-<div id="exr-potencial-electrico" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 10.33 </strong></span>La relación que modeliza el potencial eléctrico <span class="math inline">\(V\)</span> de un punto del plano en función de su distancia, es <span class="math inline">\(V=\log D\)</span>, donde <span class="math inline">\(D=\sqrt{x^2+y^2}\)</span>.</p>
-<ol type="a">
-<li><p>Calcular el gradiente de <span class="math inline">\(V\)</span>.</p></li>
-<li><p>Hallar la dirección de máxima variación del potencial eléctrico en el punto <span class="math inline">\((x,y)=(\sqrt{3},\sqrt{3})\)</span>.</p></li>
-<li><p>Calcular la matriz Hessiana y el Hessiano de <span class="math inline">\(V\)</span> en el punto anterior.</p></li>
-<li><p>Aplicar el ejercicio anterior para calcular el gradiente y el Hessiano en coordenadas polares.</p></li>
-<li><p>Si nos movemos a lo largo de la curva <span class="math inline">\(y=x+1\)</span>, cuál será el mínimo potencial alcanzado?</p></li>
-</ol>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-32-contents" aria-controls="callout-32" aria-expanded="false" aria-label="Toggle callout">
@@ -1609,6 +1603,56 @@ Solución
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
 <div id="callout-32" class="callout-32-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Para calcular <span class="math inline">\(\frac{\partial f}{\partial t}\)</span> suponemos <span class="math inline">\(s\)</span> constante, de manera que las funciones <span class="math inline">\(f(s,t)\)</span> y <span class="math inline">\(g(s,t)\)</span> son funciones de una variable <span class="math inline">\(t\)</span>. Aplicando la <a href="https://aprendeconalf.es/analisis-manual/13-derivadas-funciones-varias-variables.html#regla-de-la-cadena">regla de la cadena</a> para una función de dos variables, se tiene</p>
+<p><span class="math display">\[
+\frac{\partial f}{\partial t}
+= \frac{\partial f}{\partial x}\frac{dx}{dt} + \frac{\partial f}{\partial y}\frac{dy}{dt}
+= \frac{\partial f}{\partial x}\frac{\partial x}{\partial t} + \frac{\partial f}{\partial y}\frac{\partial y}{\partial t}
+\]</span></p>
+<p>Del mismo modo, para calcular <span class="math inline">\(\frac{\partial f}{\partial s}\)</span> suponemos <span class="math inline">\(t\)</span> constante, de manera que las funciones <span class="math inline">\(f(s,t)\)</span> y <span class="math inline">\(g(s,t)\)</span> son funciones de una variable <span class="math inline">\(s\)</span>, y aplicando de nuevo la para una función de dos variables, se tiene</p>
+<p><span class="math display">\[
+\frac{\partial f}{\partial s}
+= \frac{\partial f}{\partial x}\frac{dx}{ds} + \frac{\partial f}{\partial y}\frac{dy}{ds}
+= \frac{\partial f}{\partial x}\frac{\partial x}{\partial s} + \frac{\partial f}{\partial y}\frac{\partial y}{\partial s}
+\]</span></p>
+<p>Supongamos ahora que <span class="math inline">\(f(x,y)\)</span> es un campo escalar donde <span class="math inline">\(x\)</span> e <span class="math inline">\(y\)</span> son las coordenadas cartesianas de un punto en el plano euclídeo. Como el cambio de coordenadas polares a cartesianas viene dado por las funciones</p>
+<p><span class="math display">\[
+x = g(r,\theta) = r\cos(\theta) \quad y = h(r,\theta) = r\operatorname{sen}(\theta),
+\]</span></p>
+<p>aplicando el resultado anterior se tiene</p>
+<p><span class="math display">\[\begin{align*}
+\frac{\partial f}{\partial r}
+&amp;= \frac{\partial f}{\partial x}\frac{\partial x}{\partial r} + \frac{\partial f}{\partial y}\frac{\partial y}{\partial r} \\
+&amp;= \frac{\partial f}{\partial x}\cos(\theta) + \frac{\partial f}{\partial y}\operatorname{sen}(\theta), \\
+\frac{\partial f}{\partial \theta}
+&amp;= \frac{\partial f}{\partial x}\frac{\partial x}{\partial \theta} + \frac{\partial f}{\partial y}\frac{\partial y}{\partial \theta} \\
+&amp;= \frac{\partial f}{\partial x}(-r\operatorname{sen}(\theta)) + \frac{\partial f}{\partial y}r\cos(\theta).
+\end{align*}\]</span></p>
+</div>
+</div>
+</div>
+<div id="exr-potencial-electrico" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 10.33 </strong></span>La relación que modeliza el potencial eléctrico <span class="math inline">\(V\)</span> de un punto del plano en función de su distancia, es <span class="math inline">\(V=\log D\)</span>, donde <span class="math inline">\(D=\sqrt{x^2+y^2}\)</span>.</p>
+<ol type="a">
+<li><p>Calcular el gradiente de <span class="math inline">\(V\)</span>.</p></li>
+<li><p>Hallar la dirección de máxima variación del potencial eléctrico en el punto <span class="math inline">\((x,y)=(\sqrt{3},\sqrt{3})\)</span>.</p></li>
+<li><p>Calcular la matriz Hessiana y el Hessiano de <span class="math inline">\(V\)</span> en el punto anterior.</p></li>
+<li><p>Aplicar el ejercicio anterior para calcular el gradiente y el Hessiano en coordenadas polares.</p></li>
+<li><p>Si nos movemos a lo largo de la curva <span class="math inline">\(y=x+1\)</span>, cuál será el mínimo potencial alcanzado?</p></li>
+</ol>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-33-contents" aria-controls="callout-33" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-33" class="callout-33-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ol type="a">
 <li><p><span class="math inline">\(\nabla V(x,y) = \left( \frac{x}{x^2+y^2},\frac{y}{x^2+y^2}\right)\)</span>.</p></li>
@@ -1631,7 +1675,41 @@ Solución
 \right)
 \]</span></p>
 <p>y <span class="math inline">\(|\nabla^2V(\sqrt 3,\sqrt 3)| = -1/36.\)</span></p></li>
-<li><p>El potencial máximo se alcanza en <span class="math inline">\((x=-1/2, y=1/2)\)</span> y vale <span class="math inline">\(V(-1/2,1/2) = -\dfrac{\log 2}{2}\)</span>.</p></li>
+<li><p>Tomando las funciones de cambio a coordenadas polares <span class="math inline">\(x=r\cos(\theta)\)</span> e <span class="math inline">\(y=r\operatorname{sen}(\theta)\)</span>, por el ejercicio anterior se tiene</p>
+<p><span class="math display">\[\begin{align*}
+\frac{\partial V}{\partial r}
+&amp;= \frac{\partial V}{\partial x}\cos(\theta) + \frac{\partial V}{\partial y}\operatorname{sen}(\theta) \\
+&amp;= \frac{x}{x^2+y^2} \cos(\theta) + \frac{y}{x^2+y^2}\operatorname{sen}(\theta) \\
+&amp;= \frac{r \cos(\theta)^2}{r^2} + \frac{r \operatorname{sen}(\theta)^2}{r^2}
+= \frac{1}{r} \\
+\frac{\partial V}{\partial \theta}
+&amp;= \frac{\partial V}{\partial x}(-r\operatorname{sen}(\theta)) + \frac{\partial V}{\partial y}r\cos(\theta) \\
+&amp;= \frac{x}{x^2+y^2} (-r\operatorname{sen}(\theta)) + \frac{y}{x^2+y^2}r\cos(\theta) \\
+&amp;= \frac{-r \operatorname{sen}(\theta)\cos(\theta)}{r^2} + \frac{r \operatorname{sen}(\theta)\cos(\theta)}{r^2}
+= 0 \\
+\end{align*}\]</span></p>
+<p>Podríamos haber llegado a este mismo resultado haciendo el cambio a coordenadas polares directamente en la función del potencial ya que <span class="math inline">\(V(r,\theta) = \ln(r)\)</span>.</p>
+<p>A partir de aquí, obtener la matriz hessiana resulta más sencillo.</p>
+<p><span class="math display">\[
+\nabla ^2 V(r,\theta) =
+\begin{pmatrix}
+\frac{-1}{r^2} &amp; 0 \\
+0 &amp; 0
+\end{pmatrix}
+\]</span></p></li>
+<li><p>Sustituyendo <span class="math inline">\(y=x+1\)</span> en la función del potencial se tiene que</p>
+<p><span class="math display">\[
+V(x,y)
+= \ln(\sqrt{x^2+(x+1)^2})
+= \ln(\sqrt{2x^2 + 2x + 1}),
+\]</span></p>
+<p>que en realidad es una función de una variable. Si calculamos su derivada se tiene</p>
+<p><span class="math display">\[
+\frac{dV}{dx}
+= \frac{1}{\sqrt{2x^2 + 2x + 1}}\frac{4x+2}{2\sqrt{2x^2 + 2x + 1}}
+= \frac{2x+1}{2x^2+2x+1}.
+\]</span></p>
+<p>por lo que el único punto crítico está en <span class="math inline">\(x=-1/2\)</span>. Estudiando el signo de la derivada a la izquierda y la derecha de este punto se observa fácilmente que se trata de un máximo relativo, por lo que el potencial máximo vale <span class="math inline">\(V(-1/2)= -\frac{\log 2}{2}\)</span>.</p></li>
 </ol>
 </div>
 </div>
@@ -1644,7 +1722,7 @@ Solución
 </ol>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-33-contents" aria-controls="callout-33" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-34-contents" aria-controls="callout-34" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1653,7 +1731,7 @@ Solución
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-33" class="callout-33-contents callout-collapse collapse">
+<div id="callout-34" class="callout-34-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ol type="a">
 <li><p>La derivada parcial de <span class="math inline">\(H\)</span> con respecto a <span class="math inline">\(x\)</span> es</p>
@@ -1716,7 +1794,7 @@ Solución
 </ol>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-34-contents" aria-controls="callout-34" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-35-contents" aria-controls="callout-35" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1725,7 +1803,7 @@ Solución
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-34" class="callout-34-contents callout-collapse collapse">
+<div id="callout-35" class="callout-35-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ol type="a">
 <li><p>Para comprobar que <span class="math inline">\(u(x,y,z)\)</span> satisface la ecuación de Laplace calculamos las tres derivadas parciales segundas que intervienen en la ecuación. Comenzando con las derivadas parciales con respecto a la variable <span class="math inline">\(x\)</span>, obtenemos:</p>
@@ -1815,27 +1893,6 @@ u}}{{\partial x\partial y^2 }}} \right) \\
 <p><span class="theorem-title"><strong>Ejercicio 10.36 </strong></span>Hallar los extremos relativos y los puntos de silla de la función <span class="math inline">\(f(x,y) = (x^2+y^2)^2-2a^2(x^2-y^2)\)</span> con <span class="math inline">\(a\neq 0\)</span>.</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-35-contents" aria-controls="callout-35" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Solución
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-35" class="callout-35-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p>No tiene máximos relativos.<br>
-Mínimos relativos en <span class="math inline">\((-a,0)\)</span> y <span class="math inline">\((a,0)\)</span>.<br>
-Punto de silla en <span class="math inline">\((0,0)\)</span>.</p>
-</div>
-</div>
-</div>
-<div id="exr-extremos-2" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 10.37 </strong></span>Determinar los extremos relativos y los puntos de silla del campo escalar <span class="math inline">\(h(x,y) = xy+\dfrac{xy^2}{2}-2x^2\)</span>.</p>
-</div>
-<div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-36-contents" aria-controls="callout-36" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
@@ -1847,14 +1904,14 @@ Solución
 </div>
 <div id="callout-36" class="callout-36-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Máximo relativo en <span class="math inline">\((-1/8,-1)\)</span>.<br>
-No tiene mínimos relativos.<br>
-Puntos de silla en <span class="math inline">\((0,0)\)</span> y <span class="math inline">\((0,-2)\)</span>.</p>
+<p>No tiene máximos relativos.<br>
+Mínimos relativos en <span class="math inline">\((-a,0)\)</span> y <span class="math inline">\((a,0)\)</span>.<br>
+Punto de silla en <span class="math inline">\((0,0)\)</span>.</p>
 </div>
 </div>
 </div>
-<div id="exr-extremos-cosecha" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 10.38 </strong></span>El rendimiento de una cosecha, <span class="math inline">\(R\)</span>, depende de las concentraciones de nitrógeno, <span class="math inline">\(n\)</span>, y fósforo, <span class="math inline">\(p\)</span>, presentes en el suelo según la función <span class="math inline">\(R(n,p) = npe^{-(n+p)}\)</span>. ¿Cuáles deben ser las concentraciones de nitrógeno y fósforo para que el rendimiento de la cosecha sea máximo?</p>
+<div id="exr-extremos-2" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 10.37 </strong></span>Determinar los extremos relativos y los puntos de silla del campo escalar <span class="math inline">\(h(x,y) = xy+\dfrac{xy^2}{2}-2x^2\)</span>.</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-37-contents" aria-controls="callout-37" aria-expanded="false" aria-label="Toggle callout">
@@ -1867,6 +1924,27 @@ Solución
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
 <div id="callout-37" class="callout-37-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Máximo relativo en <span class="math inline">\((-1/8,-1)\)</span>.<br>
+No tiene mínimos relativos.<br>
+Puntos de silla en <span class="math inline">\((0,0)\)</span> y <span class="math inline">\((0,-2)\)</span>.</p>
+</div>
+</div>
+</div>
+<div id="exr-extremos-cosecha" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 10.38 </strong></span>El rendimiento de una cosecha, <span class="math inline">\(R\)</span>, depende de las concentraciones de nitrógeno, <span class="math inline">\(n\)</span>, y fósforo, <span class="math inline">\(p\)</span>, presentes en el suelo según la función <span class="math inline">\(R(n,p) = npe^{-(n+p)}\)</span>. ¿Cuáles deben ser las concentraciones de nitrógeno y fósforo para que el rendimiento de la cosecha sea máximo?</p>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-38-contents" aria-controls="callout-38" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-38" class="callout-38-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Se trata de un problema de optimización, así que, primero calculamos los puntos donde se anula el gradiente</p>
 <p><span class="math display">\[\begin{align*}
@@ -1908,6 +1986,45 @@ e^{-(n+p)}(np-n-p+1) &amp; e^{-(n+p)}n(p-2)
 </div>
 <div id="exr-maximizacion-beneficio" class="theorem exercise">
 <p><span class="theorem-title"><strong>Ejercicio 10.39 </strong></span>Una empresa fabrica ordenadores portátiles y de sobremesa. El precio de los ordenadores portátiles es de 1200€ y el de los de sobremesa 800€. Si el coste de producir <span class="math inline">\(x\)</span> ordenadores portátiles e <span class="math inline">\(y\)</span> ordenadores de sobremesa semanales viene dado por la función <span class="math inline">\(C(x,y)=2x^2+y^2+10000\ln(xy)\)</span> en euros, ¿qué cantidad de ordenadores de cada tipo deberá producir semanalmente para maximizar el beneficio?</p>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-39-contents" aria-controls="callout-39" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-39" class="callout-39-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Los ingresos obtenidos por la venta de <span class="math inline">\(x\)</span> ordenadores portátiles es <span class="math inline">\(1200x\)</span> y por la venta de <span class="math inline">\(y\)</span> ordenadores de sobremesa es <span class="math inline">\(800y\)</span>, de modo que la función de beneficio es</p>
+<p><span class="math display">\[
+B(x,y) = 1200x + 800y - 2x^2 - y^2 - 10000\ln(xy).
+\]</span></p>
+<p>Para obtener el máximo de esta función primero calculamos los puntos críticos.</p>
+<p><span class="math display">\[
+\nabla B(x,y)
+= \left(1200-4x-\frac{10000}{x}, 800-2y-\frac{10000}{y}\right) = (0,0).
+\]</span></p>
+<p>Resolviendo la primera ecuación se tiene <span class="math inline">\(x=8.58\)</span> o <span class="math inline">\(x=291.42\)</span>, y resolviendo la segunda <span class="math inline">\(y=12.92\)</span> o <span class="math inline">\(y=387.08\)</span>, por lo que hay 4 puntos críticos <span class="math inline">\((8.58, 12.92)\)</span>, <span class="math inline">\((8.58, 387.08)\)</span>, <span class="math inline">\((291.42, 12.92)\)</span> y <span class="math inline">\((291.42, 387.08)\)</span>.</p>
+<p>A continuación calculamos el hessiano en cada uno de ellos.</p>
+<p><span class="math display">\[
+|\nabla^2B(x,y)|=
+\begin{vmatrix}
+\frac{-4x^2+10000}{x^2} &amp; 0 \\
+0 &amp; \frac{-2y^2+10000}{y^2}
+\end{vmatrix}
+= \frac{(-4x^2+10000)(-2y^2+10000)}{x^2y^2}
+\]</span></p>
+<p>En el punto <span class="math inline">\((8.58, 12.92)\)</span> se tiene <span class="math inline">\(|\nabla^2B(8.58, 12.92)| = 7634.37 &gt;0\)</span> y <span class="math inline">\(\frac{\partial ^2 B}{\partial x^2}(8.58, 12.92)= 131.8393&gt;0\)</span>, por lo que en se trata de un mínimo relativo.</p>
+<p>En el punto <span class="math inline">\((8.58, 387.08)\)</span> se tiene <span class="math inline">\(|\nabla^2B(8.58, 387.08)| = -254.88 &lt;0\)</span>, por lo que se trata de un punto de silla.</p>
+<p>En el punto <span class="math inline">\((291.42, 12.92)\)</span> se tiene <span class="math inline">\(|\nabla^2B(291.42, 12.92)| = -224.81 &lt;0\)</span>, por lo que se trata de otro punto de silla.</p>
+<p>En el punto <span class="math inline">\((291.42, 387.08)\)</span> se tiene <span class="math inline">\(|\nabla^2B(291.42, 387.08)| = 7.51 &gt;0\)</span> y <span class="math inline">\(\frac{\partial ^2 B}{\partial x^2}(291.42, 387.08)= 3.88&lt;0\)</span>, por lo que en se trata de un máximo relativo.</p>
+<p>Así pues, para maximizar el beneficio deben fabricarse semanalmente <span class="math inline">\(291.42\)</span> ordenadores portátiles y <span class="math inline">\(387\)</span> ordenadores de sobremesa.</p>
+</div>
+</div>
 </div>
 <div id="exr-ajuste-minimos-cuadrados" class="theorem exercise">
 <p><span class="theorem-title"><strong>Ejercicio 10.40 </strong></span>En el ajuste de regresión de una recta <span class="math inline">\(y=a+bx\)</span>, se suele utilizar la técnica de mínimos cuadrados que consisten en buscar los valores de <span class="math inline">\(a\)</span> y <span class="math inline">\(b\)</span> que hacen mínima la función</p>
