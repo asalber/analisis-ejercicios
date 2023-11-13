@@ -202,19 +202,19 @@ donde $x$ es el número de helados de chocolate, $y$ el número de helados de fr
 El coste marginal es la derivada parcial del coste total con respecto al número de helados producidos de cada tipo. Así, el coste marginal de los helados de chocolate es
 
 $$
-\frac{\partial c}{\partial x} = \frac{1}{10}yz(xyz)^{-2/3} + \frac{1}{20}.
+\frac{\partial c}{\partial x} = \frac{1}{30}yz(xyz)^{-2/3} + \frac{1}{20}.
 $$
 
 El coste marginal de los helados de fresa es 
 
 $$
-\frac{\partial c}{\partial y} = \frac{1}{10}xz(xyz)^{-2/3} + \frac{1}{40}.
+\frac{\partial c}{\partial y} = \frac{1}{30}xz(xyz)^{-2/3} + \frac{1}{40}.
 $$
 
 Y el coste marginal de los helados de vainilla es
 
 $$
-\frac{\partial c}{\partial z} = \frac{1}{10}xy(xyz)^{-2/3} + \frac{1}{30}.
+\frac{\partial c}{\partial z} = \frac{1}{30}xy(xyz)^{-2/3} + \frac{1}{30}.
 $$
 :::
 
@@ -568,18 +568,17 @@ En un equilibrio químico, la concentración de una sustancia $z$ depende de las
 Despejando $z$ de la ecuación se tiene la función de dos variables
 
 $$
-z = f(x,y) = \ln\left(\frac{x+y}{y}\right)(xy)^{1/2}.
+z = f(x,y) = \ln\left(\frac{x+y}{y}\right)(xy)^{1/2} 
+= (\ln(x+y)-\ln(y))(xy)^{1/2}.
 $$
 
 Las derivadas parciales de $f$ son
 
 \begin{align*}
 \frac{\partial f}{\partial x} 
-&= \frac{y}{x+y}\frac{1}{y}\frac{1}{2}(xy)^{-1/2}y 
-= \frac{y}{2(x+y)\sqrt{xy}}, \\
+&= \frac{1}{x+y}(xy)^{1/2} + \ln\left(\frac{x+y}{y}\right)\frac{1}{2}(xy)^{-1/2}y, \\
 \frac{\partial f}{\partial y} 
-&= \frac{y}{x+y}\frac{y-(x+y)}{y^2}\frac{1}{2}(xy)^{-1/2}x 
-= -\frac{x^2y}{2(x+y)y^2\sqrt{xy}}.
+&= \left(\frac{1}{x+y}-\frac{1}{y}\right)(xy)^{1/2} + \ln\left(\frac{x+y}{y}\right)\frac{1}{2}(xy)^{-1/2}x.
 \end{align*}
 
 Estas funciones son continuas en un entorno del punto $(1,1)$, por lo que la función $f$ es diferenciable en $(1,1)$ y podemos utilizar el diferencial total para aproximar la variación de $z$,
@@ -587,15 +586,15 @@ Estas funciones son continuas en un entorno del punto $(1,1)$, por lo que la fun
 $$
 dz 
 = \nabla f(1,1)(dx,dy)
-= \left(\frac{1}{4}, \frac{-1}{4}\right)(dx, dy)
-= \frac{dx}{4}-\frac{dy}{4}.
+= \left(\frac{\ln(2)+1}{2}, \frac{\ln(2)-1}{2}\right)(dx, dy)
+= \frac{(\ln(2)+1)dx}{2}+\frac{(\ln(2)-1)dy}{2}.
 $$
 
 Así pues, para variaciones de las concentraciones $\Delta x=0.1$ y $\Delta y = -0.2$ mg/mm$^3$, respectivamente, se tiene que la variación de $z$ es
 
 $$
-\Delta z \approx \frac{0.1}{4} + \frac{0.2}{4} 
-= \frac{0.3}{4} \mbox{ mg/mm}^3.
+\Delta z \approx \frac{(\ln(2)+1)0.1}{2}+\frac{(\ln(2)-1)(-0.2)}{2} 
+\approx 0.1153 \mbox{ mg/mm}^3.
 $$ 
 :::
 
@@ -1361,7 +1360,7 @@ a. Calcular la matriz Hessiana y el Hessiano de $V$ en el punto anterior.
 
 a. Aplicar el ejercicio anterior para calcular el gradiente y el Hessiano en coordenadas polares.
 
-a. Si nos movemos a lo largo de la curva $y=x+1$, cuál será el mínimo potencial alcanzado?
+a. Si nos movemos a lo largo de la curva $y=x+1$, cuál será el máximo potencial alcanzado?
 :::
 
 :::{.callout-tip collapse="true"}

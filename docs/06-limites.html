@@ -458,10 +458,10 @@ Solución
 <li><p><span class="math inline">\(\displaystyle \lim_{x\to 0}\left(1+x\right)^{1/x}\)</span></p></li>
 <li><p><span class="math inline">\(\displaystyle \lim_{x\to \infty} \sqrt[x]{x^2}\)</span></p></li>
 <li><p><span class="math inline">\(\displaystyle \lim_{x\to 0^+}\left(\dfrac{1}{x}\right)^{\operatorname{tg}(x)}\)</span></p></li>
-<li><p><span class="math inline">\(\displaystyle \lim_{x\to 0}(\cos x)^{1/\operatorname{sen}(x)}\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle \lim_{x\to 0}\cos(x)^{1/\operatorname{sen}(x)}\)</span></p></li>
 <li><p><span class="math inline">\(\displaystyle \lim_{x\to 0}\dfrac{6}{4+e^{-1/x}}\)</span></p></li>
 <li><p><span class="math inline">\(\displaystyle \lim_{x\to \infty}\left(\sqrt{x^2+x+1}-\sqrt{x^2-2x-1}\right)\)</span>.</p></li>
-<li><p><span class="math inline">\(\displaystyle \lim_{x\to \pi/2}\sec x-\operatorname{tg}(x)\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle \lim_{x\to \pi/2}\sec(x)-\operatorname{tg}(x)\)</span></p></li>
 </ol>
 </div>
 </div>
@@ -489,9 +489,9 @@ Solución
 \lim_{x\to 0}\frac{\operatorname{sen}(x+a)-\operatorname{sen}(a)}{x} &amp;= \lim_{x\to 0}\frac{\operatorname{sen}(x)\cos(a)+\cos(x)\operatorname{sen}(a)-\operatorname{sen}(a)}{x} \\
 &amp;= \lim_{x\to 0}\frac{\operatorname{sen}(x)\cos(a)-\operatorname{sen}(a)(1-\cos(x))}{x} \\
 &amp;= \cos(a)\lim_{x\to 0}\frac{\operatorname{sen}(x)}{x}-\operatorname{sen}(a)\lim_{x\to 0}\frac{1-\cos(x)}{x}\\
-&amp;= \cos(a)\lim_{x\to 0}\frac{x}{x}-\operatorname{sen}(a)\lim_{x\to 0}\frac{x^2/2}{x} \tag{$\operatorname{sen}(x)\approx x$ y $\cos(x)\approx x^2/2$}\\
+&amp;= \cos(a)\lim_{x\to 0}\frac{x}{x}-\operatorname{sen}(a)\lim_{x\to 0}\frac{x^2/2}{x} \tag{1}\\
 &amp; = \cos(a)\cdot 1-\operatorname{sen}(a)\cdot 0= \cos(a).
-\end{align*}\]</span></p></li>
+\end{align*}\]</span> (1)<span class="math inline">\(\operatorname{sen}(x)\approx x\)</span> y <span class="math inline">\(\cos(x)\approx x^2/2\)</span>.</p></li>
 <li><p>Como <span class="math inline">\(x&lt;e^x\)</span> <span class="math inline">\(\forall x&gt;0\)</span>, se tiene que</p>
 <p><span class="math display">\[
 0&lt;\frac{x}{2}&lt;e^{x/2} \Rightarrow 0&lt; x &lt; 2e^{x/2} \Rightarrow  0&lt; \frac{x}{e^{2x}} &lt; \frac{2e^{x/2}}{e^{2x}} = \frac{2}{e^{3x/2}},\]</span></p>
@@ -540,11 +540,62 @@ Solución
 &amp;= \lim_{x\to \infty} x^{2/x} = \lim_{x\to \infty} e^{\ln(x^{2/x})}\\
 &amp; = e^{\lim_{x\to \infty} \frac{2\ln(x)}{x}} = e^{\lim_{x\to \infty} \frac{\frac{2}{x}}{1}} = 1.
 \end{align*}\]</span></p></li>
-<li><p><span class="math inline">\(\displaystyle \lim_{x\to 0}\left(\dfrac{1}{x}\right)^{\operatorname{tg}(x)}\)</span></p></li>
-<li><p><span class="math inline">\(\displaystyle \lim_{x\to 0}(\cos x)^{1/\operatorname{sen}(x)}\)</span></p></li>
-<li><p><span class="math inline">\(\displaystyle \lim_{x\to 0}\dfrac{6}{4+e^{-1/x}}\)</span></p></li>
-<li><p><span class="math inline">\(\displaystyle \lim_{x\to \infty}\left(\sqrt{x^2+x+1}-\sqrt{x^2-2x-1}\right)\)</span>.</p></li>
-<li><p><span class="math inline">\(\displaystyle \lim_{x\to \pi/2}\sec x-\operatorname{tg}(x)\)</span></p></li>
+<li><p>Cuando <span class="math inline">\(x\to 0\)</span> <span class="math inline">\(\operatorname{tg}(x)\approx x\)</span>, de manera que</p>
+<p><span class="math display">\[
+\lim_{x\to 0}\left(\dfrac{1}{x}\right)^{\operatorname{tg}(x)}
+= lim_{x\to 0}\left(\dfrac{1}{x}\right)^x
+= \infty^0,
+\]</span></p>
+<p>que es una indeterminación de tipo potencia. Para convertirla en una de tipo cociente aplicamos el logaritmo y su inversa, la función exponencial.</p>
+<p><span class="math display">\[\begin{align*}
+\lim_{x\to 0}\left(\dfrac{1}{x}\right)^x
+&amp;= \lim_{x\to 0}e^{\ln\left(\left(\frac{1}{x}\right)^x\right)}
+= e^{\lim_{x\to 0} x\ln\left(\frac{1}{x}\right)} \\
+&amp;= e^{\lim_{x\to 0} \frac{\ln\left(\frac{1}{x}\right)}{\frac{1}{x}}}
+= e^{\lim_{x\to 0} \frac{x\frac{-1}{x^2}}{\frac{-1}{x^2}}} \tag{L'Hôpital} \\
+&amp;= e^{\lim_{x\to 0} x}
+= e^0
+= 1.
+\end{align*}\]</span></p></li>
+<li><p><span class="math inline">\(\lim_{x\to 0}\cos(x)^{1/\operatorname{sen}(x)} = 1^\infty\)</span>, que es una indeterminación de tipo potencia. Para convertirla en una de tipo cociente aplicamos el logaritmo y su inversa, la función exponencial.</p>
+<p><span class="math display">\[\begin{align*}
+\lim_{x\to 0}\cos (x)^{1/\operatorname{sen}(x)}
+&amp;= \lim_{x\to 0}e^{\ln\left(\cos(x)^{1/\operatorname{sen}(x)}\right)}  
+=  e^{\lim_{x\to 0}1/\operatorname{sen}(x)\ln(\cos(x))} \\
+&amp;= e^{\lim_{x\to 0}\frac{\ln(\cos(x))}{\operatorname{sen}(x)}}
+= e^{\lim_{x\to 0}\frac{\frac{1}{\cos(x)}(-\operatorname{sen}(x))}{\cos(x)}} \tag{L'Hôpital} \\
+&amp;= e^{\lim_{x\to 0}\frac{-\operatorname{sen}(x)}{\cos(x)^2}}
+= e^0
+= 1.
+\end{align*}\]</span></p></li>
+<li><p>Como el signo del exponente de la función exponencial <span class="math inline">\(1/x\)</span> depende de si <span class="math inline">\(x\)</span> se aproxima a <span class="math inline">\(0\)</span> por la izquierda o por la derecha, en este caso estudiamos los límites laterales.</p>
+<p>Como <span class="math inline">\(\lim_{x\to 0^-}\frac{-1}{x} = \infty\)</span> se tiene que</p>
+<p><span class="math display">\[
+\lim_{x\to 0^-}\frac{6}{4+e^{-1/x}} = \frac{6}{4+e^\infty} = 0.
+\]</span></p>
+<p>Y como <span class="math inline">\(\lim_{x\to 0^+}\frac{-1}{x} = -\infty\)</span> se tiene que</p>
+<p><span class="math display">\[
+\lim_{x\to 0^-}\frac{6}{4+e^{-1/x}} = \frac{6}{4+e^{-\infty}} = \frac{6}{4}.
+\]</span></p>
+<p>Como los límites laterales son distintos, no existe el límite global.</p></li>
+<li><p><span class="math inline">\(\lim_{x\to \infty} \sqrt{x^2+x+1}-\sqrt{x^2-2x-1} = \infty-\infty\)</span>, que es una indeterminación de tipo diferencia. Para transformarla en una indeterminación de tipo cociente multiplicamos y dividimos por el conjugado.</p>
+<p><span class="math display">\[\begin{align*}
+\lim_{x\to \infty} \sqrt{x^2+x+1}-\sqrt{x^2-2x-1}
+&amp;= \lim_{x \to \infty} \frac{(\sqrt{x^2+x+1} - \sqrt{x^2-2x-1})(\sqrt{x^2+x+1} + \sqrt{x^2-2x-1})}{\sqrt{x^2+x+1} + \sqrt{x^2-2x-1}} \\
+&amp;= \lim_{x \to \infty} \frac{x^2+x+1 - (x^2-2x-1)}{\sqrt{x^2+x+1} + \sqrt{x^2-2x-1}} \\
+&amp;= \lim_{x \to \infty} \frac{3x}{\sqrt{x^2+x+1} + \sqrt{x^2-2x-1}} \\
+&amp;= \lim_{x \to \infty} \frac{3x}{x\left(\sqrt{1+\frac{1}{x}+\frac{1}{x^2}}\right) + x\left(\sqrt{1-\frac{2}{x}-\frac{1}{x^2}}\right)} \\
+&amp;= \lim_{x \to \infty} \frac{3}{\sqrt{1+\frac{1}{x}+\frac{1}{x^2}} + \sqrt{1-\frac{2}{x}-\frac{1}{x^2}}}
+= \frac{3}{2}.
+\end{align*}\]</span></p></li>
+<li><p><span class="math inline">\(\lim_{x\to \pi/2}\sec(x)-\operatorname{tg}(x) = \infty-\infty\)</span>, que es una indeterminación del tipo diferencia. Ahora bien, en este caso si escribimos la secante en función del coseno y la tangente en función de seno y el coseno, la indeterminación se transforma en otra de tipo cociente.</p>
+<p><span class="math display">\[\begin{align*}
+\lim_{x\to \pi/2}\sec(x)-\operatorname{tg}(x)
+&amp;= \lim_{x\to \pi/2}\frac{1}{\cos(x)}-\frac{\operatorname{sen}(x)}{\cos(x)}
+= \lim_{x\to \pi/2}\frac{1-\operatorname{sen}(x)}{\cos(x)} \\
+&amp;= \lim_{x\to \pi/2}\frac{-\cos(x)}{-\operatorname{sen}(x)}
+= 0.
+\end{align*}\]</span></p></li>
 </ol>
 </div>
 </div>

@@ -446,15 +446,15 @@ Solución
 <div class="callout-body-container callout-body">
 <p>El coste marginal es la derivada parcial del coste total con respecto al número de helados producidos de cada tipo. Así, el coste marginal de los helados de chocolate es</p>
 <p><span class="math display">\[
-\frac{\partial c}{\partial x} = \frac{1}{10}yz(xyz)^{-2/3} + \frac{1}{20}.
+\frac{\partial c}{\partial x} = \frac{1}{30}yz(xyz)^{-2/3} + \frac{1}{20}.
 \]</span></p>
 <p>El coste marginal de los helados de fresa es</p>
 <p><span class="math display">\[
-\frac{\partial c}{\partial y} = \frac{1}{10}xz(xyz)^{-2/3} + \frac{1}{40}.
+\frac{\partial c}{\partial y} = \frac{1}{30}xz(xyz)^{-2/3} + \frac{1}{40}.
 \]</span></p>
 <p>Y el coste marginal de los helados de vainilla es</p>
 <p><span class="math display">\[
-\frac{\partial c}{\partial z} = \frac{1}{10}xy(xyz)^{-2/3} + \frac{1}{30}.
+\frac{\partial c}{\partial z} = \frac{1}{30}xy(xyz)^{-2/3} + \frac{1}{30}.
 \]</span></p>
 </div>
 </div>
@@ -827,28 +827,27 @@ Solución
 <div class="callout-body-container callout-body">
 <p>Despejando <span class="math inline">\(z\)</span> de la ecuación se tiene la función de dos variables</p>
 <p><span class="math display">\[
-z = f(x,y) = \ln\left(\frac{x+y}{y}\right)(xy)^{1/2}.
+z = f(x,y) = \ln\left(\frac{x+y}{y}\right)(xy)^{1/2}
+= (\ln(x+y)-\ln(y))(xy)^{1/2}.
 \]</span></p>
 <p>Las derivadas parciales de <span class="math inline">\(f\)</span> son</p>
 <p><span class="math display">\[\begin{align*}
 \frac{\partial f}{\partial x}
-&amp;= \frac{y}{x+y}\frac{1}{y}\frac{1}{2}(xy)^{-1/2}y
-= \frac{y}{2(x+y)\sqrt{xy}}, \\
+&amp;= \frac{1}{x+y}(xy)^{1/2} + \ln\left(\frac{x+y}{y}\right)\frac{1}{2}(xy)^{-1/2}y, \\
 \frac{\partial f}{\partial y}
-&amp;= \frac{y}{x+y}\frac{y-(x+y)}{y^2}\frac{1}{2}(xy)^{-1/2}x
-= -\frac{x^2y}{2(x+y)y^2\sqrt{xy}}.
+&amp;= \left(\frac{1}{x+y}-\frac{1}{y}\right)(xy)^{1/2} + \ln\left(\frac{x+y}{y}\right)\frac{1}{2}(xy)^{-1/2}x.
 \end{align*}\]</span></p>
 <p>Estas funciones son continuas en un entorno del punto <span class="math inline">\((1,1)\)</span>, por lo que la función <span class="math inline">\(f\)</span> es diferenciable en <span class="math inline">\((1,1)\)</span> y podemos utilizar el diferencial total para aproximar la variación de <span class="math inline">\(z\)</span>,</p>
 <p><span class="math display">\[
 dz
 = \nabla f(1,1)(dx,dy)
-= \left(\frac{1}{4}, \frac{-1}{4}\right)(dx, dy)
-= \frac{dx}{4}-\frac{dy}{4}.
+= \left(\frac{\ln(2)+1}{2}, \frac{\ln(2)-1}{2}\right)(dx, dy)
+= \frac{(\ln(2)+1)dx}{2}+\frac{(\ln(2)-1)dy}{2}.
 \]</span></p>
 <p>Así pues, para variaciones de las concentraciones <span class="math inline">\(\Delta x=0.1\)</span> y <span class="math inline">\(\Delta y = -0.2\)</span> mg/mm<span class="math inline">\(^3\)</span>, respectivamente, se tiene que la variación de <span class="math inline">\(z\)</span> es</p>
 <p><span class="math display">\[
-\Delta z \approx \frac{0.1}{4} + \frac{0.2}{4}
-= \frac{0.3}{4} \mbox{ mg/mm}^3.
+\Delta z \approx \frac{(\ln(2)+1)0.1}{2}+\frac{(\ln(2)-1)(-0.2)}{2}
+\approx 0.1153 \mbox{ mg/mm}^3.
 \]</span></p>
 </div>
 </div>
@@ -1639,7 +1638,7 @@ x = g(r,\theta) = r\cos(\theta) \quad y = h(r,\theta) = r\operatorname{sen}(\the
 <li><p>Hallar la dirección de máxima variación del potencial eléctrico en el punto <span class="math inline">\((x,y)=(\sqrt{3},\sqrt{3})\)</span>.</p></li>
 <li><p>Calcular la matriz Hessiana y el Hessiano de <span class="math inline">\(V\)</span> en el punto anterior.</p></li>
 <li><p>Aplicar el ejercicio anterior para calcular el gradiente y el Hessiano en coordenadas polares.</p></li>
-<li><p>Si nos movemos a lo largo de la curva <span class="math inline">\(y=x+1\)</span>, cuál será el mínimo potencial alcanzado?</p></li>
+<li><p>Si nos movemos a lo largo de la curva <span class="math inline">\(y=x+1\)</span>, cuál será el máximo potencial alcanzado?</p></li>
 </ol>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">

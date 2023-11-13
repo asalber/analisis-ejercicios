@@ -796,8 +796,8 @@ por lo que el vector velocidad es
 $$
 \mathbf{v}(t)
 = (0, 10\sqrt{2}t, 10\sqrt{2}t) + \mathbf{v}_0
-= (0, 10\sqrt{2}t, 10\sqrt{2}t) + (1, -1, 0)
-= (1, 10\sqrt{2}t-1, 10\sqrt{2}t).
+= (0, 10\sqrt{2}t, 10\sqrt{2}t) + (2, -1, 0)
+= (2, 10\sqrt{2}t-1, 10\sqrt{2}t).
 $$
 
 Ahora integrando el vector velocidad obtenemos el vector de posición de la pelota.
@@ -805,8 +805,8 @@ Ahora integrando el vector velocidad obtenemos el vector de posición de la pelo
 $$
 \mathbf{f}(t)
 = \int \mathbf{v}(t)\,dt 
-= \int (1, 10\sqrt{2}t-1, 10\sqrt{2}t)\, dt 
-= (t, 5\sqrt{2}t^2-t, 5\sqrt{2}t^2) + C
+= \int (2, 10\sqrt{2}t-1, 10\sqrt{2}t)\, dt 
+= (2t, 5\sqrt{2}t^2-t, 5\sqrt{2}t^2) + C
 $$
 
 Como la pelota parte del origen de coordenadas, $f(0)=(0,0,0)$, por lo que 
@@ -819,11 +819,11 @@ $$
 = (0, 0, 0), 
 $$
 
-por lo que, finalmente, el vector de posición es $\mathbf{f}(t)=(t, 5\sqrt{2}t^2-t, 5\sqrt{2}t^2)$ m, y su rapidez 
+por lo que, finalmente, el vector de posición es $\mathbf{f}(t)=(2t, 5\sqrt{2}t^2-t, 5\sqrt{2}t^2)$ m, y su rapidez 
 
 $$
 |\mathbf{v}(t)| 
-= \sqrt{1^2 + (10\sqrt{2}t-1)^2 + (10\sqrt{2}t)^2}.
+= \sqrt{2^2 + (10\sqrt{2}t-1)^2 + (10\sqrt{2}t)^2}.
 $$
 :::
 
