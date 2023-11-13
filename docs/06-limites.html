@@ -457,7 +457,7 @@ Solución
 <li><p><span class="math inline">\(\displaystyle \lim_{x\to 0}x^2e^{1/x^2}\)</span></p></li>
 <li><p><span class="math inline">\(\displaystyle \lim_{x\to 0}\left(1+x\right)^{1/x}\)</span></p></li>
 <li><p><span class="math inline">\(\displaystyle \lim_{x\to \infty} \sqrt[x]{x^2}\)</span></p></li>
-<li><p><span class="math inline">\(\displaystyle \lim_{x\to 0}\left(\dfrac{1}{x}\right)^{\operatorname{tg}(x)}\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle \lim_{x\to 0^+}\left(\dfrac{1}{x}\right)^{\operatorname{tg}(x)}\)</span></p></li>
 <li><p><span class="math inline">\(\displaystyle \lim_{x\to 0}(\cos x)^{1/\operatorname{sen}(x)}\)</span></p></li>
 <li><p><span class="math inline">\(\displaystyle \lim_{x\to 0}\dfrac{6}{4+e^{-1/x}}\)</span></p></li>
 <li><p><span class="math inline">\(\displaystyle \lim_{x\to \infty}\left(\sqrt{x^2+x+1}-\sqrt{x^2-2x-1}\right)\)</span>.</p></li>
@@ -489,6 +489,7 @@ Solución
 \lim_{x\to 0}\frac{\operatorname{sen}(x+a)-\operatorname{sen}(a)}{x} &amp;= \lim_{x\to 0}\frac{\operatorname{sen}(x)\cos(a)+\cos(x)\operatorname{sen}(a)-\operatorname{sen}(a)}{x} \\
 &amp;= \lim_{x\to 0}\frac{\operatorname{sen}(x)\cos(a)-\operatorname{sen}(a)(1-\cos(x))}{x} \\
 &amp;= \cos(a)\lim_{x\to 0}\frac{\operatorname{sen}(x)}{x}-\operatorname{sen}(a)\lim_{x\to 0}\frac{1-\cos(x)}{x}\\
+&amp;= \cos(a)\lim_{x\to 0}\frac{x}{x}-\operatorname{sen}(a)\lim_{x\to 0}\frac{x^2/2}{x} \tag{$\operatorname{sen}(x)\approx x$ y $\cos(x)\approx x^2/2$}\\
 &amp; = \cos(a)\cdot 1-\operatorname{sen}(a)\cdot 0= \cos(a).
 \end{align*}\]</span></p></li>
 <li><p>Como <span class="math inline">\(x&lt;e^x\)</span> <span class="math inline">\(\forall x&gt;0\)</span>, se tiene que</p>
@@ -505,7 +506,7 @@ Solución
 <li><p><span class="math inline">\(\displaystyle \lim_{x\to 1}\frac{\log(1/x)}{\operatorname{tg}(x+\frac{\pi}{2})} = \frac{\lim_{x\to 1}\log(1/x)}{\lim_{x\to 1}\operatorname{tg}(x+\frac{\pi}{2})} = \frac{\log(1)}{\operatorname{tg}(1+\frac{\pi}{2})}=0\)</span></p></li>
 <li><p><span class="math inline">\(x^n-a^n = (x-a)(x^{n-1}+ax^{n-2}+a^2x^{n-3}+\cdots + a^{n-2}x+a^{n-1}\)</span> <span class="math inline">\(\forall n\in\mathbb{N}\)</span>, <span class="math inline">\(n\geq 2\)</span>. Así pues,</p>
 <p><span class="math display">\[\begin{align*}
-\lim_{x\to a}\dfrac{x^n-a^n}{x-a} &amp;= \lim_{x\to a}\frac{(x-a)(x^{n-1}+ax^{n-2}+\cdots + a^{n-2}x+a^{n-1}}{x-a} \\
+\lim_{x\to a}\dfrac{x^n-a^n}{x-a} &amp;= \lim_{x\to a}\frac{(x-a)(x^{n-1}+ax^{n-2}+\cdots + a^{n-2}x+a^{n-1})}{x-a} \\
 &amp;= \lim_{x\to a} x^{n-1}+ax^{n-2}+\cdots + a^{n-2}x+a^{n-1}\\  
 &amp;= a^{n-1}+\stackrel{n}{\dots}+a^{n-1} = na^{n-1}
 \end{align*}\]</span></p></li>
@@ -520,8 +521,8 @@ Solución
 \]</span></p></li>
 <li><p>Aplicando propiedades trigonométricas se tiene</p>
 <p><span class="math display">\[\begin{align*}
-\lim_{x\to \pi/4}\frac{\operatorname{sen}(x)-\cos(x)}{1-\operatorname{tg}(x)} &amp;= \lim_{x\to \pi/4}\frac{\operatorname{sen}(x)-\cos x}{1-\frac{\operatorname{sen}(x)}{\cos(x)}}\\
-&amp; = \lim_{x\to \pi/4}\frac{\operatorname{sen}(x)-\cos x}{\frac{\cos(x)-\operatorname{sen}(x)}{\cos(x)}}\\
+\lim_{x\to \pi/4}\frac{\operatorname{sen}(x)-\cos(x)}{1-\operatorname{tg}(x)} &amp;= \lim_{x\to \pi/4}\frac{\operatorname{sen}(x)-\cos(x)}{1-\frac{\operatorname{sen}(x)}{\cos(x)}}\\
+&amp; = \lim_{x\to \pi/4}\frac{\operatorname{sen}(x)-\cos(x)}{\frac{\cos(x)-\operatorname{sen}(x)}{\cos(x)}}\\
 &amp; = \lim_{x\to \pi/4} -\cos(x) = \frac{-\sqrt{2}}{2}.
 \end{align*}\]</span></p></li>
 <li><p>Cuando <span class="math inline">\(x\to 0\)</span>, <span class="math inline">\(x^2e^{1/x^2}\to 0\cdot \infty\)</span>, que es indeterminado. Transformando la indeterminación en una de tipo cociente y aplicando la regla de L’Hôpital se tiene</p>

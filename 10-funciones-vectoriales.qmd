@@ -105,7 +105,7 @@ $$
 
 Para $t_1=0$ se tiene que $t_2 = 0^2+2 = 2$, que no cumplen la tercera ecuación, ya que $0^3=0\neq 3\cdot 2 +10 =16$. Y para $t_1=4$ se tiene que $t_2=4^2+2=18$, que sí cumple la tercera ecuación, ya que $4^3 = 64 = 3\cdot 18 + 10$.
 
-Así pues, para $t_1=4$ y $t_2=18$ se tiene que $\mathbf(f)(4) = (16, 9, 64) = \mathbf{g}(18)$, por lo que las trayectorias de $\mathbf(f)$ y $\mathbf(g)$ se cortan en le punto $(16, 9, 64)$. Sin embargo, los aviones no llegan a colisionar ya que para ello los dos aviones deberían estar en ese punto en el mismo instante. 
+Así pues, para $t_1=4$ y $t_2=18$ se tiene que $\mathbf{f}(4) = (16, 9, 64) = \mathbf{g}(18)$, por lo que las trayectorias de $\mathbf{f}$ y $\mathbf{g}$ se cortan en le punto $(16, 9, 64)$. Sin embargo, los aviones no llegan a colisionar ya que para ello los dos aviones deberían estar en ese punto en el mismo instante. 
 ::: 
 
 :::{#exr-algebra-limites-funciones-vectoriales}
@@ -122,7 +122,7 @@ d. $\displaystyle \lim_{t\to a} \mathbf{f}(t) \times \mathbf{g}(t) = \lim_{t\to 
 
 :::{.callout-tip collapse="true"}
 ## Solución
-
+ 
 :::
 
 :::{#exr-limites-funciones-vectoriales}
