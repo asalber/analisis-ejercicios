@@ -739,12 +739,12 @@ Solución
 <li><p><span class="math inline">\(f\)</span> está definida en <span class="math inline">\(\mathbb{R}\)</span>, así que no tiene asíntotas verticales.</p>
 <p>Para ver si <span class="math inline">\(f\)</span> tiene asíntotas horizontales estudiamos los límites en el infinito. Cuando <span class="math inline">\(x\to -\infty\)</span> <span class="math inline">\((1-x)e^x\to -\infty\cdot 0\)</span> que es indeterminado. Transformando la indeterminación en una de tipo cociente</p>
 <p><span class="math display">\[\begin{align*}
-\lim_{x\to -\infty}(1-x)e^x &amp;= \lim_{x\to -\infty}\frac{1-x}{e^-x} = \lim_{x\to -\infty}\frac{1}{e^{-x}}- \lim_{x\to -\infty} \frac{-x}{e^{-x}}\\
+\lim_{x\to -\infty}(1-x)e^x &amp;= \lim_{x\to -\infty}\frac{1-x}{e^{-x}} = \lim_{x\to -\infty}\frac{1}{e^{-x}}- \lim_{x\to -\infty} \frac{-x}{e^{-x}}\\
 &amp;= 0 -\lim_{x\to -\infty}\frac{-x}{e^{-x}}.
 \end{align*}\]</span></p>
-<p>Por otro lado <span class="math inline">\(\forall x&lt;0\)</span> se cumple que <span class="math inline">\(e^{-x}\geq x^2\)</span> <span class="math inline">\(0\leq \frac{-x}{e^{-x}}\leq \frac{-x}{x^2}=\frac{1}{x}\)</span>, y como <span class="math inline">\(\lim_{x\to -\infty}\frac{-1}{x}=0\)</span>, por el teorema de compresión de funciones se tiene que <span class="math inline">\(\lim_{x\to -\infty}\frac{-x}{e^{-x}} = 0\)</span>.</p>
+<p>Por otro lado <span class="math inline">\(\forall x&lt;0\)</span> se cumple que <span class="math inline">\(e^{-x}\geq x^2\)</span>, por lo que <span class="math inline">\(0\leq \frac{-x}{e^{-x}}\leq \frac{-x}{x^2}=\frac{1}{x}\)</span>, y como <span class="math inline">\(\lim_{x\to -\infty}\frac{-1}{x}=0\)</span>, por el teorema de compresión de funciones se tiene que <span class="math inline">\(\lim_{x\to -\infty}\frac{-x}{e^{-x}} = 0\)</span>.</p>
 <p>Así pues, <span class="math inline">\(y=0\)</span> es una asíntota horizontal en <span class="math inline">\(-\infty\)</span>.</p>
-<p>Por otro lado, <span class="math inline">\(\lim_{x\to \infty}(1-x)e^x = -\infty*\infty = -\infty\)</span>, de modo que no hay asíntota horizontal en <span class="math inline">\(\infty\)</span>.</p>
+<p>Por otro lado, <span class="math inline">\(\lim_{x\to \infty}(1-x)e^x = -\infty\cdot \infty = -\infty\)</span>, de modo que no hay asíntota horizontal en <span class="math inline">\(\infty\)</span>.</p>
 <p>Finalmente para ver si <span class="math inline">\(f\)</span> tiene asíntotas oblicuas, estudiamos estudiamos el límite de <span class="math inline">\(f(x)/x\)</span> en <span class="math inline">\(\infty\)</span> (en <span class="math inline">\(-\infty\)</span> no puede haber asíntota oblicua porque existe una horizontal).</p>
 <p><span class="math display">\[
 \lim_{x\to \infty}\frac{(1-x)e^x}{x} = \lim_{x\to \infty} \frac{1-x}{x}\lim_{x\to \infty}e^x = -1\cdot \infty = -\infty.
@@ -752,15 +752,15 @@ Solución
 <p>Por tanto, tampoco existe asíntota oblicua en <span class="math inline">\(\infty\)</span>.</p></li>
 <li><p><span class="math inline">\(g\)</span> está definida en <span class="math inline">\(\mathbb{R}\setminus \{0\}\)</span>, así que, el único punto donde pueden existir asíntotas verticales es <span class="math inline">\(x=0\)</span>. Calculando los límites laterales se tiene</p>
 <p><span class="math display">\[\begin{align*}
-\lim_{x\to 0^-} xe^{1/x} &amp;= \lim_{x\to 0^-}x \lim_{x\to 0^-}e^{1/x} = 0\cdot e^-\infty = 0\cdot 0 = 0.\\
+\lim_{x\to 0^-} xe^{1/x} &amp;= \lim_{x\to 0^-}x \lim_{x\to 0^-}e^{1/x} = 0\cdot e^{-\infty} = 0\cdot 0 = 0.\\
 \lim_{x\to 0^+} xe^{1/x} &amp;= \lim_{x\to 0^+}\frac{e^{1/x}}{1/x} = \lim_{x\to 0^+}\frac{(e^{1/x})'}{(1/x)'} \tag{\small L'Hôpital}\\
 &amp;= \lim_{x\to 0^+}\frac{e^{1/x}(1/x)'}{(1/x)'} = \lim_{x\to 0^+}e^{1/x} = \infty.
 \end{align*}\]</span></p>
 <p>Por tanto, <span class="math inline">\(g\)</span> tiene asíntota vertical <span class="math inline">\(x=0\)</span> por la derecha, pero no por la izquierda.</p>
 <p>Para ver si <span class="math inline">\(g\)</span> tiene asíntotas horizontales estudiamos los límites en el infinito.</p>
 <p><span class="math display">\[\begin{align*}
-\lim_{x\to -\infty}xe^{1/x} &amp;= \lim_{x\to -\infty}x \lim_{x\to -\infty}e^{1/x} = \infty * 1 = \infty.\\
-\lim_{x\to \infty}xe^{1/x} &amp;= \lim_{x\to \infty}x \lim_{x\to \infty}e^{1/x} = \infty * 1 = \infty.
+\lim_{x\to -\infty}xe^{1/x} &amp;= \lim_{x\to -\infty}x \lim_{x\to -\infty}e^{1/x} = \infty \cdot 1 = \infty.\\
+\lim_{x\to \infty}xe^{1/x} &amp;= \lim_{x\to \infty}x \lim_{x\to \infty}e^{1/x} = \infty \cdot 1 = \infty.
 \end{align*}\]</span></p>
 <p>Así pues, ambos límites no existen y, por tanto, <span class="math inline">\(g\)</span> no tiene asíntotas horizontales.</p>
 <p>Finalmente para ver si <span class="math inline">\(f\)</span> tiene asíntotas oblicuas, estudiamos estudiamos el límite de <span class="math inline">\(f(x)/x\)</span> en <span class="math inline">\(\pm\infty\)</span>.</p>
@@ -818,7 +818,7 @@ Solución
 <div class="callout-body-container callout-body">
 <p>Cuando $t<span class="math inline">\(\frac{\sqrt{t}}{e^t}\to \frac{\infty}{\infty}\)</span> que es indeterminado. Aplicando la regla de L’Hôpital se tiene</p>
 <p><span class="math display">\[
-\lim_{t\to \infty} 10 + \frac{\sqrt{t}}{e^t} = 10 + \lim_{t\to \infty} \frac{\sqrt{t}}{e^t} = \\lim_{t\to \infty}\frac{1}{2\sqrt(t)e^t} = 10.
+\lim_{t\to \infty} 10 + \frac{\sqrt{t}}{e^t} = 10 + \lim_{t\to \infty} \frac{\sqrt{t}}{e^t} = \lim_{t\to \infty}\frac{1}{2\sqrt(t)e^t} = 10.
 \]</span></p>
 <p>Por tanto el volumen del lato tiende asintóticamente a 10 millones de metros cúbicos.</p>
 </div>
@@ -967,7 +967,7 @@ x-1 &amp;= 0\Leftrightarrow x=1 \\
 \lim_{x\rightarrow 1^{-}}f(x) &amp;= \lim_{x\rightarrow 1^{-}}e^{\frac{1}{x-1}}=e^{-\infty }=0, \\
 \lim_{x\rightarrow 1^{+}}f(x) &amp;= \lim_{x\rightarrow 1^{+}}e^{\frac{1}{x-1}}=e^\infty = \infty.\\
 \end{align*}\]</span></p>
-<p>Como el límite lateral por la derecha no existe, en <span class="math inline">\(x=1\)</span> hay una discontinuidad de segunda especie.</p></li>
+<p>Como el límite lateral por la derecha no existe, en <span class="math inline">\(x=1\)</span> hay una discontinuidad de salto infinito.</p></li>
 </ol>
 </div>
 </div>
