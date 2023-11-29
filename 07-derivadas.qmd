@@ -576,7 +576,7 @@ de la célula?
 ## Solución
 La superficie de una esfera depende del radio según la función $S(r) =4\pi r^2$. 
 
-Como $S'(r) = \frac{dS}{dr}$ se deduce que $dS=S'(r)dr$, de manera que si se interpreta la variación del radio $dr$ como el error en su medición, y la variación de la superficie $dS$ como el error en su medición, el error en la medición del radio se transmite a la medición de la superficie multiplicando por la derivada de la superficie. Como $S'(r)=8\pi r$, para un radio de $5\ \mu\mbox{m}$ se tiene $S'(5) = 8\pi 5\ \mu\mbox{m} = 40\pi \ \mu\mbox{m}. Por tanto, una error en la medición del radio de $dt=0.2\ \mu\mbox{m}$, producirá un error en la medición de la superficie de $dS = 40\pi \ \mu\mbox{m} \cdot 0.2 \ \mu\mbox{m} = 8\pi \ \mu\mbox{m}^2.$
+Como $S'(r) = \frac{dS}{dr}$ se deduce que $dS=S'(r)dr$, de manera que si se interpreta la variación del radio $dr$ como el error en su medición, y la variación de la superficie $dS$ como el error en su medición, el error en la medición del radio se transmite a la medición de la superficie multiplicando por la derivada de la superficie. Como $S'(r)=8\pi r$, para un radio de $5\ \mu\mbox{m}$ se tiene $S'(5) = 8\pi 5\ \mu\mbox{m} = 40\pi \ \mu\mbox{m}$. Por tanto, un error en la medición del radio de $dt=0.2\ \mu\mbox{m}$, producirá un error en la medición de la superficie de $dS = 40\pi \ \mu\mbox{m} \cdot 0.2 \ \mu\mbox{m} = 8\pi \ \mu\mbox{m}^2.$
 
 Para la segunda parte del problema, hay que tener en cuenta que si $dr$ se interpreta como el error absoluto del radio, $\frac{dr}{r}$ es el error relativo en la medición del radio, y $\frac{dS}{S}$ es el error relativo en la medición de la superficie. Así pues, se tiene
 

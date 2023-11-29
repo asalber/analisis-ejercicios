@@ -1,0 +1,27 @@
+---
+title: Derivadas de funciones de varias variables
+lang: es
+execute:
+  echo: false
+  cache: true
+  freeze: auto
+  daemon: 3600
+---
+
+:::{#exr-sumas-riemann-n-dimensional}
+Calcular la suma inferior y superior de Riemann de la función $f(x,y)=12-x^2-2y^2$ en el intervalo $I=[0,2]\times[0,2]$ tomando $4$ subintervalos de igual tamaño. 
+:::
+
+:::{.callout-tip collapse="true"}
+## Solución
+:::
+
+:::{#exr-integral-inferior-superior-riemann-n-dimensional}
+Calcular la integral inferior y superior de Riemann de la función $f(x,y)=12-x^2-2y^2$ en el intervalo $I=[0,2]\times[0,2]$. ¿Es $f$ integrable Riemann en el intervalo $I$? ¿Cuánto vale la integral?
+:::
+
+:::{#exr-integrales-dobles}
+Calcular las siguientes integrales dobles
+
+a. 
+:::
