@@ -1,5 +1,5 @@
 ---
-title: Derivadas de funciones de varias variables
+title: Integrales de funciones de varias variables
 lang: es
 execute:
   echo: false
@@ -9,7 +9,7 @@ execute:
 ---
 
 :::{#exr-sumas-riemann-n-dimensional}
-Calcular la suma inferior y superior de Riemann de la función $f(x,y)=12-x^2-2y^2$ en el intervalo $I=[0,2]\times[0,2]$ tomando $4$ subintervalos de igual tamaño. 
+Calcular la suma inferior y superior de Riemann de la función $f(x,y)=12-x^2-2y$ en el intervalo $I=[0,2]\times[0,2]$ tomando $4$ subintervalos de igual tamaño. 
 :::
 
 :::{.callout-tip collapse="true"}
@@ -20,8 +20,214 @@ Calcular la suma inferior y superior de Riemann de la función $f(x,y)=12-x^2-2y
 Calcular la integral inferior y superior de Riemann de la función $f(x,y)=12-x^2-2y^2$ en el intervalo $I=[0,2]\times[0,2]$. ¿Es $f$ integrable Riemann en el intervalo $I$? ¿Cuánto vale la integral?
 :::
 
+:::{.callout-tip collapse="true"}
+## Solución
+Consideremos la partición $P_n = \left\{\frac{2i}{n}: i=1,\ldots,n\right\}$ que divide el intervalo $[0,2]$ en $n$ subintervalos iguales, y la partición $P=P_n\times P_n$ del intervalo $I=[0,2]\times[0,2]$.
+
+La suma inferior de Riemann de $f$ es 
+
+$$
+s(f,P) = \sum_{i=1}^n\sum_{j=1}^n m_{i,j} (x_i-x_{i-1})(y_j-y_{j-1}).
+$$
+
+Como los subintervalos de $P_n$ tienen todos amplitud $2/n$, se tiene que $(x_i-x_{i-1}) = (y_j-y_{j-1}) = 2/n$. Y como la función es decreciente tanto en $x$ como en $y$ en el intervalo $I$, el mínimo de la función en el intervalo $[x_i,x_{i-1}]\times[y_j,y_{j-1}]$ se alcanzará en el punto $(x_i,y_j)$, por lo que la suma inferior de Riemann puede escribirse
+
+\begin{align*}
+s(f,P) 
+&= sum_{i=1}^n\sum_{j=1}^n f(x_i,y_j) \frac{4}{n^2}.
+\end{align*}
+:::
+
 :::{#exr-integrales-dobles}
 Calcular las siguientes integrales dobles
 
-a. 
+a. $\int_I x\cos(xy)\,dA$, con $I=[0,\pi/2]\times[0,1]$.
+
+a. $\int_I \frac{x^2y}{y^2+1}\,dA$, con $I=[-1,1]\times[0,2]$.
+
+a. $\int_I \frac{\ln(y)}{xy}\,dA$, con $I=[1,e]\times[1,e]$.
+
+a. $\int_I \frac{xy}{x^2+y^2}\,dA$, con $I=[0,1]]\times[0,1]$.
 :::
+
+:::{.callout-tip collapse="true"}
+## Solución
+a. 
+
+    \begin{align*}
+    \int_I x\cos(xy)\,dA
+    &= \int_0^{\pi/2}\int_0^{1}x\cos(xy)\,dy\,dx
+    = \int_0^{\pi/2}[\operatorname{sen}(xy)]_0^1\,dx \\
+    &= \int_0^{\pi/2}\operatorname{sen}(x)\,dx 
+    = [-\cos(x)]_0^{\pi/2}
+    = 1.
+    \end{align*}
+
+a.  
+
+    \begin{align*}
+    \int_I \frac{x^2y}{y^2+1}\,dA
+    &= \int_0^2\int_{-1}^1 \frac{x^2y}{y^2+1}\,dx\,dy
+    = \int_0^2 \left[\frac{x^3y}{3(y^2+1)}\right]_{-1}^1,dy \\
+    &= \int_0^2 \frac{2y}{3y^2+3},dy 
+    = \left[\frac{\ln(y^2+1)}{3}\right]_0^2 
+    = \frac{\ln(5)}{3}.
+    \end{align*}
+
+a.  
+
+    \begin{align*}
+    \int_I \frac{\ln(y)}{xy}\,dA
+    &= \int_1^e\int_1^e \frac{\ln(y)}{xy}\,dx\,dy
+    = \int_1^e \left[\frac{\ln(x)\ln(y)}{y}\right]_1^e,dy \\
+    &= \int_0^e \frac{\ln(y)}{y},dy 
+    = \left[\frac{1}{2}\ln(y)^2\right]_1^e 
+    = \frac{1}{2}.
+    \end{align*}
+
+a.  
+
+    \begin{align*}
+    \int_I \frac{xy}{x^2+y^2}\,dA
+    &= \int_0^1\int_0^1 \frac{xy}{x^2+y^2}\,dx\,dy
+    = \int_1^1 \left[\frac{1}{2}y\ln(x^2+y^2)\right]_0^1\,dy \\
+    &= \int_0^1 \frac{1}{2}(-y\ln(y^2)+y\ln(y^2+1))\,dy  \\
+    &= \left[\frac{1}{4}(-y^2\ln(y^2)+y^2+y^2\ln(y^2+1)-y^2+\ln(y^2+1)) \right]_0^1 \\
+    &= \frac{\ln(2)}{2}.
+    \end{align*}
+:::
+
+:::{#exr-volumne-funcion-positiva-negativa}
+Calcular el volumen de la región encerrada por la función $f(x,y)=x^3y$ en el intervalo $[-1,1]\times[-1,1]$.
+:::
+
+:::{.callout-tip collapse="true"}
+## Solución
+A la hora de calcular el volumen hay que tener en cuenta que la función $f(x,y)=x^3y$ es positiva para los puntos $(x,y)$ del primer y tercer cuadrantes, y negativa en el segundo y cuarto cuadrantes. Así pues, descompondremos el intervalo de integración en los cuatro subintervalos $[-1,0]\times[-1,0]$, $[-1,0]\times[0,1]$, $[0,1]\times[-1,0]$ y $[0,1]\times[0,1]$. Las integrales dobles en estos subinvervalos valen
+
+\begin{align*}
+\int_{-1}^0\int_{-1}^0 f(x,y)\,dx\,dy
+& = \int_{-1}^0x^3\,dx \int_{-1}^0 y\,dy 
+= \left[\frac{x^4}{4}\right]_{-1}^0 \left[\frac{y^2}{2}\right]_{-1}^0 \\
+&= \frac{-1}{4}\frac{-1}{2}
+= \frac{1}{8}.
+\end{align*}
+
+\begin{align*}
+\int_{-1}^0\int_{0}^1 -f(x,y)\,dx\,dy
+& = \int_{-1}^0 -x^3\,dx \int_{0}^1 y\,dy 
+= \left[\frac{-x^4}{4}\right]_{-1}^0 \left[\frac{y^2}{2}\right]_{0}^1 \\
+&= \frac{1}{4}\frac{1}{2}
+= \frac{1}{8}.
+\end{align*}
+
+\begin{align*}
+\int_{0}^1\int_{-1}^0 -f(x,y)\,dx\,dy
+& = \int_{0}^1 x^3\,dx \int_{-1}^0 y\,dy 
+= \left[\frac{-x^4}{4}\right]_{0}^1 \left[\frac{y^2}{2}\right]_{-1}^0 \\
+&= \frac{-1}{4}\frac{-1}{2}
+= \frac{1}{8}.
+\end{align*}
+
+\begin{align*}
+\int_{0}^1\int_{0}^1 f(x,y)\,dx\,dy
+& = \int_{0}^1 x^3\,dx \int_{0}^1 y\,dy 
+= \left[\frac{x^4}{4}\right]_{0}^1 \left[\frac{y^2}{2}\right]_{0}^1 \\
+&= \frac{1}{4}\frac{1}{2}
+= \frac{1}{8}.
+\end{align*}
+
+Por tanto, el volumen total será la suma de los volúmenes correspondientes a los subintervalos, es decir $\frac{1}{8} + \frac{1}{8} + \frac{1}{8} + \frac{1}{8} = \frac{1}{2}$.
+:::
+
+:::{#exr-integrales-dobles-regiones-irregulares}
+Calcular las siguientes integrales dobles sobre las regiones irregulares dadas.
+
+a.  $\int_R \frac{y}{x}\,dA$, con $R=\left\{(x,y): 0\leq x\leq 2, 0\leq y\leq x^2\right\}$
+:::
+
+:::{.callout-tip collapse="true"}
+## Solución
+a.  
+
+  \begin{align*}
+  \int_R \frac{y}{x}\,dA 
+  &= \int_0^2 \int_0^{x^2} \frac{y}{x}\,dy\,dx
+  = \int_0^2 \left[\frac{y^2}{2x}\right]_0^{x^2} \\
+  &= \int_0^2 \frac{x^3}{2}\,dx
+  = \left[\frac{x^4}{8}\right]_0^2
+  = 2.
+  \end{align*}
+:::
+
+:::{#exr-volumen-piramide}
+Calcular el volumen de una pirámide de base cuadrada con lado $l$ centrada en el origen de coordenadas y altura $h$, usando una integral doble. ¿Cuál es la altura media de la pirámide?
+:::
+
+:::{.callout-tip collapse="true"}
+## Solución
+Por simetría, podemos reducir el problema a calcular el volumen que queda por debajo de cada una de las caras de la pirámide. 
+
+Si nos fijamos en la cara que cae el semiplano con $x$ positiva, tenemos que la ecuación del plano que contiene esa cara es $f(x,y) = h\left(1 - \frac{2x}{a}\right)$, por lo que para obtener el volumen por debajo de esta cara hay que integrar esta función en el intervalo $I=[0, a/2]\times[-x,x]$.
+
+\begin{align*}
+\int_I f(x,y) \,dA 
+&= \int_0^{a/2} \int_{-x}^x h\left(1 - \frac{2x}{a}\right)\,dy\,dx 
+\end{align*}
+:::
+
+:::{#exr-integral-doble-valor-medio}
+Calcular el valor medio de la función $f(x,y)=\sqrt{xy}$ en la región del primer cuadrante delimitada por las funciones $y=x$ e $y=x^2$.
+:::
+
+:::{.callout-tip collapse="true"}
+## Solución
+Como las funciones $y=x$ e $y=x^2$ se cortan en los puntos $(0,0)$ y $(1,1)$, la región de integración es $R=\{(x,y): 0\leq x\leq 1, x^2\leq y \leq x\}$. 
+El valor medio de la función en esta región es el valor de la integral doble de $f$ sobre la región, dividida por el área de la región. 
+
+Calculamos primero la integral doble de $f$ sobre $R$.
+
+\begin{align*}
+\int_R f(x,y)\,dA 
+&= \int_0^1\int_{x^2}^x \sqrt{xy}\,dy\,dx
+= \int_0^1 \left[\frac{(xy)^{3/2}}{\frac{3}{2}x}\right]_{x^2}^x\,dx \\
+&= \int_0^1 \frac{2 (x^2)^{3/2}}{3x}- \frac{2(x^3)^{3/2}}{3x}
+= \left[\frac{2(x^2)^{3/2}}{9} - \frac{4(x^3)^{3/2}}{27} \right]_0^1
+= \frac{2}{27}.
+\end{align*}
+
+Y ahora calculamos el area de la región $R$.
+
+$$
+\int_0^1 x-x^2\,dx 
+= \left[\frac{x^2}{2}-\frac{x^3}{3}\right]_0^1
+= \frac{1}{2}-\frac{1}{3}
+= \frac{1}{6}.
+$$
+
+Por lo tanto, el valor medio de $f$ en la región $R$ es $\frac{2/27}{1/6} = \frac{12}{27}$.
+:::
+
+:::{#exr-volumen-piscina}
+Una piscina con forma elíptica de ecuación $x^2+2y^2 = 16$ tiene una profundidad de 1 m en el extremo izquierdo y de 2 m en el extremo derecho, y su profundidad crece de izquierda a derecha de forma constante. Calcular la cantidad de agua que hay en la piscina.
+:::
+
+:::{.callout-tip collapse="true"}
+## Solución
+La ecuación $x^2+y^2=16$ define una elipse centrada en el origen de coordenadas y cuyos extremos en el eje $x$ están en $x=-4$ y $x=4$, por lo que la región que define la elipse en el plano $xy$ es 
+
+$$
+R = \{(x,y): -4\leq x\leq 4, -\sqrt{16-x^2}\leq y\leq \sqrt{16-x^2}\}.
+$$
+
+Supongamos que el plano $xy$ es el nivel del agua. Entonces el fondo de la piscina estará contenido en el plano paralelo al eje $y$ que contenga los puntos $(-4,-1)$, $(4,1)$, que tiene ecuación $f(x,y) = -1-\frac{1}{2}(x+4) = 1-\frac{x}{2}$. Por tanto se trata de calcular el volumen encerrado entre este plano y el plano $xy$ en la región $R$, que viene dado por la integral doble
+
+\begin{align*}
+\int_R -f(x,y)\,dA
+&= \int_{-4}^4 \int_{-\sqrt{16-x^2}}^{\sqrt{16-x^2}}1-\frac{x}{2}\,dy\,dx
+\end{align*}
+
+
+
+:::
+

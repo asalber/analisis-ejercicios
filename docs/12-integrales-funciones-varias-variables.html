@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Problemas de Análisis Matemático - 11&nbsp; Derivadas de funciones de varias variables</title>
+<title>Problemas de Análisis Matemático - 11&nbsp; Integrales de funciones de varias variables</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -67,9 +67,9 @@ ul.task-list li input[type="checkbox"] {
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<meta property="og:title" content="Problemas de Análisis Matemático - 11&nbsp; Derivadas de funciones de varias variables">
+<meta property="og:title" content="Problemas de Análisis Matemático - 11&nbsp; Integrales de funciones de varias variables">
 <meta property="og:site-name" content="Problemas de Análisis Matemático">
-<meta name="twitter:title" content="Problemas de Análisis Matemático - 11&nbsp; Derivadas de funciones de varias variables">
+<meta name="twitter:title" content="Problemas de Análisis Matemático - 11&nbsp; Integrales de funciones de varias variables">
 <meta name="twitter:site" content="@aprendeconalf">
 <meta name="twitter:card" content="summary">
 </head>
@@ -83,7 +83,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./12-integrales-funciones-varias-variables.html"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Derivadas de funciones de varias variables</span></a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./12-integrales-funciones-varias-variables.html"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Integrales de funciones de varias variables</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -218,7 +218,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./12-integrales-funciones-varias-variables.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Derivadas de funciones de varias variables</span></span></a>
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Integrales de funciones de varias variables</span></span></a>
   </div>
 </li>
     </ul>
@@ -234,7 +234,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Derivadas de funciones de varias variables</span></h1>
+<h1 class="title"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Integrales de funciones de varias variables</span></h1>
 </div>
 
 
@@ -250,7 +250,7 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 <div id="exr-sumas-riemann-n-dimensional" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 11.1 </strong></span>Calcular la suma inferior y superior de Riemann de la función <span class="math inline">\(f(x,y)=12-x^2-2y^2\)</span> en el intervalo <span class="math inline">\(I=[0,2]\times[0,2]\)</span> tomando <span class="math inline">\(4\)</span> subintervalos de igual tamaño.</p>
+<p><span class="theorem-title"><strong>Ejercicio 11.1 </strong></span>Calcular la suma inferior y superior de Riemann de la función <span class="math inline">\(f(x,y)=12-x^2-2y\)</span> en el intervalo <span class="math inline">\(I=[0,2]\times[0,2]\)</span> tomando <span class="math inline">\(4\)</span> subintervalos de igual tamaño.</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
@@ -271,11 +271,255 @@ Solución
 <div id="exr-integral-inferior-superior-riemann-n-dimensional" class="theorem exercise">
 <p><span class="theorem-title"><strong>Ejercicio 11.2 </strong></span>Calcular la integral inferior y superior de Riemann de la función <span class="math inline">\(f(x,y)=12-x^2-2y^2\)</span> en el intervalo <span class="math inline">\(I=[0,2]\times[0,2]\)</span>. ¿Es <span class="math inline">\(f\)</span> integrable Riemann en el intervalo <span class="math inline">\(I\)</span>? ¿Cuánto vale la integral?</p>
 </div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Consideremos la partición <span class="math inline">\(P_n = \left\{\frac{2i}{n}: i=1,\ldots,n\right\}\)</span> que divide el intervalo <span class="math inline">\([0,2]\)</span> en <span class="math inline">\(n\)</span> subintervalos iguales, y la partición <span class="math inline">\(P=P_n\times P_n\)</span> del intervalo <span class="math inline">\(I=[0,2]\times[0,2]\)</span>.</p>
+<p>La suma inferior de Riemann de <span class="math inline">\(f\)</span> es</p>
+<p><span class="math display">\[
+s(f,P) = \sum_{i=1}^n\sum_{j=1}^n m_{i,j} (x_i-x_{i-1})(y_j-y_{j-1}).
+\]</span></p>
+<p>Como los subintervalos de <span class="math inline">\(P_n\)</span> tienen todos amplitud <span class="math inline">\(2/n\)</span>, se tiene que <span class="math inline">\((x_i-x_{i-1}) = (y_j-y_{j-1}) = 2/n\)</span>. Y como la función es decreciente tanto en <span class="math inline">\(x\)</span> como en <span class="math inline">\(y\)</span> en el intervalo <span class="math inline">\(I\)</span>, el mínimo de la función en el intervalo <span class="math inline">\([x_i,x_{i-1}]\times[y_j,y_{j-1}]\)</span> se alcanzará en el punto <span class="math inline">\((x_i,y_j)\)</span>, por lo que la suma inferior de Riemann puede escribirse</p>
+<p><span class="math display">\[\begin{align*}
+s(f,P)
+&amp;= sum_{i=1}^n\sum_{j=1}^n f(x_i,y_j) \frac{4}{n^2}.
+\end{align*}\]</span></p>
+</div>
+</div>
+</div>
 <div id="exr-integrales-dobles" class="theorem exercise">
 <p><span class="theorem-title"><strong>Ejercicio 11.3 </strong></span>Calcular las siguientes integrales dobles</p>
 <ol type="a">
+<li><p><span class="math inline">\(\int_I x\cos(xy)\,dA\)</span>, con <span class="math inline">\(I=[0,\pi/2]\times[0,1]\)</span>.</p></li>
+<li><p><span class="math inline">\(\int_I \frac{x^2y}{y^2+1}\,dA\)</span>, con <span class="math inline">\(I=[-1,1]\times[0,2]\)</span>.</p></li>
+<li><p><span class="math inline">\(\int_I \frac{\ln(y)}{xy}\,dA\)</span>, con <span class="math inline">\(I=[1,e]\times[1,e]\)</span>.</p></li>
+<li><p><span class="math inline">\(\int_I \frac{xy}{x^2+y^2}\,dA\)</span>, con <span class="math inline">\(I=[0,1]]\times[0,1]\)</span>.</p></li>
+</ol>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="a">
+<li><p><span class="math display">\[\begin{align*}
+\int_I x\cos(xy)\,dA
+&amp;= \int_0^{\pi/2}\int_0^{1}x\cos(xy)\,dy\,dx
+= \int_0^{\pi/2}[\operatorname{sen}(xy)]_0^1\,dx \\
+&amp;= \int_0^{\pi/2}\operatorname{sen}(x)\,dx
+= [-\cos(x)]_0^{\pi/2}
+= 1.
+\end{align*}\]</span></p></li>
+<li><p><span class="math display">\[\begin{align*}
+\int_I \frac{x^2y}{y^2+1}\,dA
+&amp;= \int_0^2\int_{-1}^1 \frac{x^2y}{y^2+1}\,dx\,dy
+= \int_0^2 \left[\frac{x^3y}{3(y^2+1)}\right]_{-1}^1,dy \\
+&amp;= \int_0^2 \frac{2y}{3y^2+3},dy
+= \left[\frac{\ln(y^2+1)}{3}\right]_0^2
+= \frac{\ln(5)}{3}.
+\end{align*}\]</span></p></li>
+<li><p><span class="math display">\[\begin{align*}
+\int_I \frac{\ln(y)}{xy}\,dA
+&amp;= \int_1^e\int_1^e \frac{\ln(y)}{xy}\,dx\,dy
+= \int_1^e \left[\frac{\ln(x)\ln(y)}{y}\right]_1^e,dy \\
+&amp;= \int_0^e \frac{\ln(y)}{y},dy
+= \left[\frac{1}{2}\ln(y)^2\right]_1^e
+= \frac{1}{2}.
+\end{align*}\]</span></p></li>
+<li><p><span class="math display">\[\begin{align*}
+\int_I \frac{xy}{x^2+y^2}\,dA
+&amp;= \int_0^1\int_0^1 \frac{xy}{x^2+y^2}\,dx\,dy
+= \int_1^1 \left[\frac{1}{2}y\ln(x^2+y^2)\right]_0^1\,dy \\
+&amp;= \int_0^1 \frac{1}{2}(-y\ln(y^2)+y\ln(y^2+1))\,dy  \\
+&amp;= \left[\frac{1}{4}(-y^2\ln(y^2)+y^2+y^2\ln(y^2+1)-y^2+\ln(y^2+1)) \right]_0^1 \\
+&amp;= \frac{\ln(2)}{2}.
+\end{align*}\]</span></p></li>
+</ol>
+</div>
+</div>
+</div>
+<div id="exr-volumne-funcion-positiva-negativa" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 11.4 </strong></span>Calcular el volumen de la región encerrada por la función <span class="math inline">\(f(x,y)=x^3y\)</span> en el intervalo <span class="math inline">\([-1,1]\times[-1,1]\)</span>.</p>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>A la hora de calcular el volumen hay que tener en cuenta que la función <span class="math inline">\(f(x,y)=x^3y\)</span> es positiva para los puntos <span class="math inline">\((x,y)\)</span> del primer y tercer cuadrantes, y negativa en el segundo y cuarto cuadrantes. Así pues, descompondremos el intervalo de integración en los cuatro subintervalos <span class="math inline">\([-1,0]\times[-1,0]\)</span>, <span class="math inline">\([-1,0]\times[0,1]\)</span>, <span class="math inline">\([0,1]\times[-1,0]\)</span> y <span class="math inline">\([0,1]\times[0,1]\)</span>. Las integrales dobles en estos subinvervalos valen</p>
+<p><span class="math display">\[\begin{align*}
+\int_{-1}^0\int_{-1}^0 f(x,y)\,dx\,dy
+&amp; = \int_{-1}^0x^3\,dx \int_{-1}^0 y\,dy
+= \left[\frac{x^4}{4}\right]_{-1}^0 \left[\frac{y^2}{2}\right]_{-1}^0 \\
+&amp;= \frac{-1}{4}\frac{-1}{2}
+= \frac{1}{8}.
+\end{align*}\]</span></p>
+<p><span class="math display">\[\begin{align*}
+\int_{-1}^0\int_{0}^1 -f(x,y)\,dx\,dy
+&amp; = \int_{-1}^0 -x^3\,dx \int_{0}^1 y\,dy
+= \left[\frac{-x^4}{4}\right]_{-1}^0 \left[\frac{y^2}{2}\right]_{0}^1 \\
+&amp;= \frac{1}{4}\frac{1}{2}
+= \frac{1}{8}.
+\end{align*}\]</span></p>
+<p><span class="math display">\[\begin{align*}
+\int_{0}^1\int_{-1}^0 -f(x,y)\,dx\,dy
+&amp; = \int_{0}^1 x^3\,dx \int_{-1}^0 y\,dy
+= \left[\frac{-x^4}{4}\right]_{0}^1 \left[\frac{y^2}{2}\right]_{-1}^0 \\
+&amp;= \frac{-1}{4}\frac{-1}{2}
+= \frac{1}{8}.
+\end{align*}\]</span></p>
+<p><span class="math display">\[\begin{align*}
+\int_{0}^1\int_{0}^1 f(x,y)\,dx\,dy
+&amp; = \int_{0}^1 x^3\,dx \int_{0}^1 y\,dy
+= \left[\frac{x^4}{4}\right]_{0}^1 \left[\frac{y^2}{2}\right]_{0}^1 \\
+&amp;= \frac{1}{4}\frac{1}{2}
+= \frac{1}{8}.
+\end{align*}\]</span></p>
+<p>Por tanto, el volumen total será la suma de los volúmenes correspondientes a los subintervalos, es decir <span class="math inline">\(\frac{1}{8} + \frac{1}{8} + \frac{1}{8} + \frac{1}{8} = \frac{1}{2}\)</span>.</p>
+</div>
+</div>
+</div>
+<div id="exr-integrales-dobles-regiones-irregulares" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 11.5 </strong></span>Calcular las siguientes integrales dobles sobre las regiones irregulares dadas.</p>
+<ol type="a">
+<li><span class="math inline">\(\int_R \frac{y}{x}\,dA\)</span>, con <span class="math inline">\(R=\left\{(x,y): 0\leq x\leq 2, 0\leq y\leq x^2\right\}\)</span></li>
+</ol>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="a">
 <li></li>
 </ol>
+<p><span class="math display">\[\begin{align*}
+  \int_R \frac{y}{x}\,dA
+  &amp;= \int_0^2 \int_0^{x^2} \frac{y}{x}\,dy\,dx
+  = \int_0^2 \left[\frac{y^2}{2x}\right]_0^{x^2} \\
+  &amp;= \int_0^2 \frac{x^3}{2}\,dx
+  = \left[\frac{x^4}{8}\right]_0^2
+  = 2.
+  \end{align*}\]</span></p>
+</div>
+</div>
+</div>
+<div id="exr-volumen-piramide" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 11.6 </strong></span>Calcular el volumen de una pirámide de base cuadrada con lado <span class="math inline">\(l\)</span> centrada en el origen de coordenadas y altura <span class="math inline">\(h\)</span>, usando una integral doble. ¿Cuál es la altura media de la pirámide?</p>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-6" class="callout-6-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Por simetría, podemos reducir el problema a calcular el volumen que queda por debajo de cada una de las caras de la pirámide.</p>
+<p>Si nos fijamos en la cara que cae el semiplano con <span class="math inline">\(x\)</span> positiva, tenemos que la ecuación del plano que contiene esa cara es <span class="math inline">\(f(x,y) = h\left(1 - \frac{2x}{a}\right)\)</span>, por lo que para obtener el volumen por debajo de esta cara hay que integrar esta función en el intervalo <span class="math inline">\(I=[0, a/2]\times[-x,x]\)</span>.</p>
+<p><span class="math display">\[\begin{align*}
+\int_I f(x,y) \,dA
+&amp;= \int_0^{a/2} \int_{-x}^x h\left(1 - \frac{2x}{a}\right)\,dy\,dx
+\end{align*}\]</span></p>
+</div>
+</div>
+</div>
+<div id="exr-integral-doble-valor-medio" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 11.7 </strong></span>Calcular el valor medio de la función <span class="math inline">\(f(x,y)=\sqrt{xy}\)</span> en la región del primer cuadrante delimitada por las funciones <span class="math inline">\(y=x\)</span> e <span class="math inline">\(y=x^2\)</span>.</p>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-7" class="callout-7-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Como las funciones <span class="math inline">\(y=x\)</span> e <span class="math inline">\(y=x^2\)</span> se cortan en los puntos <span class="math inline">\((0,0)\)</span> y <span class="math inline">\((1,1)\)</span>, la región de integración es <span class="math inline">\(R=\{(x,y): 0\leq x\leq 1, x^2\leq y \leq x\}\)</span>. El valor medio de la función en esta región es el valor de la integral doble de <span class="math inline">\(f\)</span> sobre la región, dividida por el área de la región.</p>
+<p>Calculamos primero la integral doble de <span class="math inline">\(f\)</span> sobre <span class="math inline">\(R\)</span>.</p>
+<p><span class="math display">\[\begin{align*}
+\int_R f(x,y)\,dA
+&amp;= \int_0^1\int_{x^2}^x \sqrt{xy}\,dy\,dx
+= \int_0^1 \left[\frac{(xy)^{3/2}}{\frac{3}{2}x}\right]_{x^2}^x\,dx \\
+&amp;= \int_0^1 \frac{2 (x^2)^{3/2}}{3x}- \frac{2(x^3)^{3/2}}{3x}
+= \left[\frac{2(x^2)^{3/2}}{9} - \frac{4(x^3)^{3/2}}{27} \right]_0^1
+= \frac{2}{27}.
+\end{align*}\]</span></p>
+<p>Y ahora calculamos el area de la región <span class="math inline">\(R\)</span>.</p>
+<p><span class="math display">\[
+\int_0^1 x-x^2\,dx
+= \left[\frac{x^2}{2}-\frac{x^3}{3}\right]_0^1
+= \frac{1}{2}-\frac{1}{3}
+= \frac{1}{6}.
+\]</span></p>
+<p>Por lo tanto, el valor medio de <span class="math inline">\(f\)</span> en la región <span class="math inline">\(R\)</span> es <span class="math inline">\(\frac{2/27}{1/6} = \frac{12}{27}\)</span>.</p>
+</div>
+</div>
+</div>
+<div id="exr-volumen-piscina" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 11.8 </strong></span>Una piscina con forma elíptica de ecuación <span class="math inline">\(x^2+2y^2 = 16\)</span> tiene una profundidad de 1 m en el extremo izquierdo y de 2 m en el extremo derecho, y su profundidad crece de izquierda a derecha de forma constante. Calcular la cantidad de agua que hay en la piscina.</p>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-8" class="callout-8-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>La ecuación <span class="math inline">\(x^2+y^2=16\)</span> define una elipse centrada en el origen de coordenadas y cuyos extremos en el eje <span class="math inline">\(x\)</span> están en <span class="math inline">\(x=-4\)</span> y <span class="math inline">\(x=4\)</span>, por lo que la región que define la elipse en el plano <span class="math inline">\(xy\)</span> es</p>
+<p><span class="math display">\[
+R = \{(x,y): -4\leq x\leq 4, -\sqrt{16-x^2}\leq y\leq \sqrt{16-x^2}\}.
+\]</span></p>
+<p>Supongamos que el plano <span class="math inline">\(xy\)</span> es el nivel del agua. Entonces el fondo de la piscina estará contenido en el plano paralelo al eje <span class="math inline">\(y\)</span> que contenga los puntos <span class="math inline">\((-4,-1)\)</span>, <span class="math inline">\((4,1)\)</span>, que tiene ecuación <span class="math inline">\(f(x,y) = -1-\frac{1}{2}(x+4) = 1-\frac{x}{2}\)</span>. Por tanto se trata de calcular el volumen encerrado entre este plano y el plano <span class="math inline">\(xy\)</span> en la región <span class="math inline">\(R\)</span>, que viene dado por la integral doble</p>
+<p><span class="math display">\[\begin{align*}
+\int_R -f(x,y)\,dA
+&amp;= \int_{-4}^4 \int_{-\sqrt{16-x^2}}^{\sqrt{16-x^2}}1-\frac{x}{2}\,dy\,dx
+\end{align*}\]</span></p>
+</div>
+</div>
 </div>
 
 
