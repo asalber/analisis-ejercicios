@@ -405,7 +405,10 @@ Solución
 <div id="exr-integrales-dobles-regiones-irregulares" class="theorem exercise">
 <p><span class="theorem-title"><strong>Ejercicio 11.5 </strong></span>Calcular las siguientes integrales dobles sobre las regiones irregulares dadas.</p>
 <ol type="a">
-<li><span class="math inline">\(\int_R \frac{y}{x}\,dA\)</span>, con <span class="math inline">\(R=\left\{(x,y): 0\leq x\leq 2, 0\leq y\leq x^2\right\}\)</span></li>
+<li><p><span class="math inline">\(\int_R \frac{y}{x}\,dA\)</span>, con <span class="math inline">\(R=\left\{(x,y)\in\mathbb{R}^2: 0\leq x\leq 2, 0\leq y\leq x^2\right\}\)</span></p></li>
+<li><p><span class="math inline">\(\int_R xy^2\,dA\)</span>, con <span class="math inline">\(R=\{(x,y)\in\mathbb{R}^2: 0\leq x\leq \sqrt{1-y^2}, -1\leq y\leq 1\}\)</span>.</p></li>
+<li><p><span class="math inline">\(\int_R \operatorname {sen}{y^2}\,dA\)</span>, con <span class="math inline">\(R=\{(x,y)\in\mathbb{R}^2: 0\leq x\leq \sqrt{\pi}, x\leq y\leq 1\}\)</span>.</p></li>
+<li><p><span class="math inline">\(\int_R e^{-x^2}\,dA\)</span>, con <span class="math inline">\(R=\{(x,y)\in\mathbb{R}^2: y\leq x\leq 1, 0\leq y\leq 1\}\)</span>.</p></li>
 </ol>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
@@ -421,16 +424,44 @@ Solución
 <div id="callout-5" class="callout-5-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ol type="a">
-<li></li>
+<li><p><span class="math display">\[\begin{align*}
+\int_R \frac{y}{x}\,dA
+&amp;= \int_0^2 \int_0^{x^2} \frac{y}{x}\,dy\,dx
+= \int_0^2 \left[\frac{y^2}{2x}\right]_0^{x^2} \\
+&amp;= \int_0^2 \frac{x^3}{2}\,dx
+= \left[\frac{x^4}{8}\right]_0^2
+= 2.
+\end{align*}\]</span></p></li>
+<li><p><span class="math display">\[\begin{align*}
+\int_R xy^2\,dA
+&amp;= \int_{-1}^1 \int_0^{\sqrt{1-y^2}} xy^2\,dx\,dy
+= \int_{-1}^1 \left[\frac{x^2}{2}y^2\right]_0^{\sqrt{1-y^2}} \,dy \\
+&amp;= \int_{-1}^1 \frac{1}{2}(1-y^2)y^2\,dy
+= \frac{1}{2}\left[\left(\frac{y^3}{3}-\frac{y^5}{5}\right)\right]_{-1}^1 \\
+&amp;= \frac{1}{2}\left(\frac{2}{3}-\frac{2}{5}\right)
+= \frac{2}{15}.
+\end{align*}\]</span></p></li>
+<li><p><span class="math display">\[\begin{align*}
+\int_R \operatorname{sen}(y^2)\,dA  
+&amp;= \int_0^{\sqrt{\pi}} \int_x^1 \operatorname{sen}(y^2)\,dy\,dx
+= \int_0^{\sqrt{\pi}}\int_0^y \operatorname{sen}(y^2)\,dx\,dy \\
+&amp;= \int_0^{\sqrt{\pi}} [x\operatorname{sen}(y^2)]_0^y\,dy
+= \int_0^{\sqrt{\pi}} y\operatorname{sen}(y^2)\,dy \\
+&amp;= \left[-\frac{1}{2}\cos(y^2)\right]_0^{\sqrt{\pi}}
+= -\frac{1}{2}(-1+1)
+= 0
+\end{align*}\]</span></p></li>
+<li><p><span class="math display">\[\begin{align*}
+\int_R e^{-x^2}\,dA  
+&amp;= \int_0^1 \int_y^1 e^{-x^2}\,dx\,dy
+= \int_0^1\int_0^x e^{-x^2}\,dy\,dx \\
+&amp;= \int_0^1 [ye^{-x^2}]_0^x\,dx
+= \int_0^1 xe^{-x^2}\,dx \\
+&amp;= \left[-\frac{1}{2}e^{-x^2}\right]_0^1
+= -\frac{1}{2}\left(\frac{1}{e}-1\right)
+= \frac{e-1}{2e}.
+\end{align*}\]</span></p></li>
 </ol>
-<p><span class="math display">\[\begin{align*}
-  \int_R \frac{y}{x}\,dA
-  &amp;= \int_0^2 \int_0^{x^2} \frac{y}{x}\,dy\,dx
-  = \int_0^2 \left[\frac{y^2}{2x}\right]_0^{x^2} \\
-  &amp;= \int_0^2 \frac{x^3}{2}\,dx
-  = \left[\frac{x^4}{8}\right]_0^2
-  = 2.
-  \end{align*}\]</span></p>
 </div>
 </div>
 </div>
@@ -458,8 +489,8 @@ Solución
 </div>
 </div>
 </div>
-<div id="exr-integral-doble-valor-medio" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 11.7 </strong></span>Calcular el valor medio de la función <span class="math inline">\(f(x,y)=\sqrt{xy}\)</span> en la región del primer cuadrante delimitada por las funciones <span class="math inline">\(y=x\)</span> e <span class="math inline">\(y=x^2\)</span>.</p>
+<div id="exr-volumen-piscina" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 11.7 </strong></span>Una piscina con forma elíptica de ecuación <span class="math inline">\(x^2+2y^2 = 16\)</span> tiene una profundidad de 1 m en el extremo izquierdo y de 2 m en el extremo derecho, y su profundidad crece de izquierda a derecha de forma constante. Calcular la cantidad de agua que hay en la piscina.</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
@@ -473,7 +504,37 @@ Solución
 </div>
 <div id="callout-7" class="callout-7-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Como las funciones <span class="math inline">\(y=x\)</span> e <span class="math inline">\(y=x^2\)</span> se cortan en los puntos <span class="math inline">\((0,0)\)</span> y <span class="math inline">\((1,1)\)</span>, la región de integración es <span class="math inline">\(R=\{(x,y): 0\leq x\leq 1, x^2\leq y \leq x\}\)</span>. El valor medio de la función en esta región es el valor de la integral doble de <span class="math inline">\(f\)</span> sobre la región, dividida por el área de la región.</p>
+<p>La ecuación <span class="math inline">\(x^2+y^2=16\)</span> define una elipse centrada en el origen de coordenadas y cuyos extremos en el eje <span class="math inline">\(x\)</span> están en <span class="math inline">\(x=-4\)</span> y <span class="math inline">\(x=4\)</span>, por lo que la región que define la elipse en el plano <span class="math inline">\(xy\)</span> es</p>
+<p><span class="math display">\[
+R = \{(x,y)\in\mathbb{R}^2: -4\leq x\leq 4, -\sqrt{16-x^2}\leq y\leq \sqrt{16-x^2}\}.
+\]</span></p>
+<p>Supongamos que el plano <span class="math inline">\(xy\)</span> es el nivel del agua. Entonces el fondo de la piscina estará contenido en el plano paralelo al eje <span class="math inline">\(y\)</span> que contenga los puntos <span class="math inline">\((-4,-1)\)</span>, <span class="math inline">\((4,1)\)</span>, que tiene ecuación <span class="math inline">\(f(x,y) = -1-\frac{1}{2}(x+4) = 1-\frac{x}{2}\)</span>. Por tanto se trata de calcular el volumen encerrado entre este plano y el plano <span class="math inline">\(xy\)</span> en la región <span class="math inline">\(R\)</span>, que viene dado por la integral doble</p>
+<p><span class="math display">\[\begin{align*}
+\int_R -f(x,y)\,dA
+&amp;= \int_{-4}^4 \int_{-\sqrt{16-x^2}}^{\sqrt{16-x^2}}1-\frac{x}{2}\,dy\,dx
+\end{align*}\]</span></p>
+</div>
+</div>
+</div>
+<div id="exr-volumen-entre-dos-superficies" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 11.8 </strong></span>Calcular el volumen encerrado por las superficies <span class="math inline">\(z=1-x^2-y^2\)</span> y <span class="math inline">\(z=1-x\)</span>.</p>
+</div>
+<div id="exr-integral-doble-valor-medio" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 11.9 </strong></span>Calcular el valor medio de la función <span class="math inline">\(f(x,y)=\sqrt{xy}\)</span> en la región del primer cuadrante delimitada por las funciones <span class="math inline">\(y=x\)</span> e <span class="math inline">\(y=x^2\)</span>.</p>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-8" class="callout-8-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Como las funciones <span class="math inline">\(y=x\)</span> e <span class="math inline">\(y=x^2\)</span> se cortan en los puntos <span class="math inline">\((0,0)\)</span> y <span class="math inline">\((1,1)\)</span>, la región de integración es <span class="math inline">\(R=\{(x,y)\in\mathbb{R}^2: 0\leq x\leq 1, x^2\leq y \leq x\}\)</span>. El valor medio de la función en esta región es el valor de la integral doble de <span class="math inline">\(f\)</span> sobre la región, dividida por el área de la región.</p>
 <p>Calculamos primero la integral doble de <span class="math inline">\(f\)</span> sobre <span class="math inline">\(R\)</span>.</p>
 <p><span class="math display">\[\begin{align*}
 \int_R f(x,y)\,dA
@@ -494,32 +555,8 @@ Solución
 </div>
 </div>
 </div>
-<div id="exr-volumen-piscina" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 11.8 </strong></span>Una piscina con forma elíptica de ecuación <span class="math inline">\(x^2+2y^2 = 16\)</span> tiene una profundidad de 1 m en el extremo izquierdo y de 2 m en el extremo derecho, y su profundidad crece de izquierda a derecha de forma constante. Calcular la cantidad de agua que hay en la piscina.</p>
-</div>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Solución
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-8" class="callout-8-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p>La ecuación <span class="math inline">\(x^2+y^2=16\)</span> define una elipse centrada en el origen de coordenadas y cuyos extremos en el eje <span class="math inline">\(x\)</span> están en <span class="math inline">\(x=-4\)</span> y <span class="math inline">\(x=4\)</span>, por lo que la región que define la elipse en el plano <span class="math inline">\(xy\)</span> es</p>
-<p><span class="math display">\[
-R = \{(x,y): -4\leq x\leq 4, -\sqrt{16-x^2}\leq y\leq \sqrt{16-x^2}\}.
-\]</span></p>
-<p>Supongamos que el plano <span class="math inline">\(xy\)</span> es el nivel del agua. Entonces el fondo de la piscina estará contenido en el plano paralelo al eje <span class="math inline">\(y\)</span> que contenga los puntos <span class="math inline">\((-4,-1)\)</span>, <span class="math inline">\((4,1)\)</span>, que tiene ecuación <span class="math inline">\(f(x,y) = -1-\frac{1}{2}(x+4) = 1-\frac{x}{2}\)</span>. Por tanto se trata de calcular el volumen encerrado entre este plano y el plano <span class="math inline">\(xy\)</span> en la región <span class="math inline">\(R\)</span>, que viene dado por la integral doble</p>
-<p><span class="math display">\[\begin{align*}
-\int_R -f(x,y)\,dA
-&amp;= \int_{-4}^4 \int_{-\sqrt{16-x^2}}^{\sqrt{16-x^2}}1-\frac{x}{2}\,dy\,dx
-\end{align*}\]</span></p>
-</div>
-</div>
+<div id="exr-masa-lamina-chapa" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 11.10 </strong></span>Una lámina de chapa metálica tiene la forma de la forma de triángulo con vértices <span class="math inline">\((0,0)\)</span>, <span class="math inline">\((1,1)\)</span> y <span class="math inline">\((2,0)\)</span>. Si la densidad de la chapa en cada punto viene dada por la función <span class="math inline">\(d(x,y)=xy\)</span> gr/cm<span class="math inline">\(^2\)</span>, calcular la masa de la chapa y su centro de masas.</p>
 </div>
 
 
