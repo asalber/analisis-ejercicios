@@ -1765,7 +1765,32 @@ a=\bar y-b\bar x \quad \mbox{ y } b=\frac{s_{xy}}{s_x^2}.
 $$
 :::
 
-:::{#exr-maximizacion-fuerza-prisma-triangular}
-La fuerza de una varilla metálica tiene forma de prisma triangular viene dada por la función $f(x,y,z) = \frac{xy}{z²}$, donde $x$ e $y$ son la base y la altura del triángulo de la sección de la varilla, y $z$ la longitud de la varilla. Si se quieren fabricar varillas con un volumen de 100 cm$^3$, ¿cuáles deberían ser las dimensiones de la varilla para conseguir la mayor fuerza posible?
+:::{#exr-minimización-material-caja}
+Una empresa que fabrica cajas de cartón quiere construir una caja rectangular sin tapa con un volumen de 25 litros. ¿Qué dimensiones debe tener la caja para emplear la menor cantidad de cartón posible?
 :::
 
+:::{#exr-minimización-distancia-parabola}
+Un cometa sigue la órbita dada por la función $y=9-x^2$, donde el origen de coordenadas es la posición del sol. Si una nave espacial se mantiene fija en la posición $(4,0)$, ¿en qué punto de su trayectoria el cometa estará más cerca del nave?
+:::
+
+:::{#exr-minimizacion-coste-production}
+La función de producción de un determinado producto es $f(k,l)= kl^3$ donde $k$ son las unidades de capital y $l$ las unidades de mano de obra. Si el coste por unidad de capital es 7€ y el coste por unidad de mano de obra es 6€, determinar la cantidad de capital y mano de obra que minimiza el coste si deben producirse 290 unidades del producto.
+:::
+
+:::{#exr-polinomios-maclaurin-dos-variables}
+Calcular los polinomios de Maclaurin de segundo grado para las siguientes funciones.
+
+a.  $f(x,y) = \ln(x+y+1)$.
+a.  $g(x,y) = e^{x+y}$.
+a.  $h(x,y) = \operatorname{sen}(x)\operatorname{sen}(y)$.
+:::
+
+:::{#exr-polinomio-taylor-modelo-ecologico}
+Un modelo ecológico explica el número de individuos de una población mediante la función
+
+$$f(x,t)=\dfrac{e^t}{x},$$
+
+donde $t$ es el tiempo y $x$ el número de predadores en la región.
+
+Calcular el número aproximado de individuos en la población para $t=0.1$ y $x=0.9$ utilizando el polinomio de Taylor de segundo grado de la función en el punto $(1,0)$.
+:::
