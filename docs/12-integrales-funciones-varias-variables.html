@@ -574,8 +574,18 @@ R = \{(x,y)\in\mathbb{R}^2: -\sqrt{8}\leq y\leq \sqrt{8}, \sqrt{16-2y^2}\leq x\l
 <div id="exr-volumen-entre-dos-superficies" class="theorem exercise">
 <p><span class="theorem-title"><strong>Ejercicio 11.8 </strong></span>Calcular el volumen encerrado por las superficies <span class="math inline">\(z=1-x^2-y^2\)</span> y <span class="math inline">\(z=1-x\)</span>.</p>
 </div>
+<div id="exr-integral-doble-area-superficies" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 11.9 </strong></span>Calcular el area de las superficies de las siguientes funciones en las regiones indicadas.</p>
+<ol type="a">
+<li><span class="math inline">\(f(x,y)=xy^2\)</span> en <span class="math inline">\(R=\{(x,y)\in \mathbb{R}^2: 0\leq x\leq 2, -x\leq y\leq x\}\)</span>.</li>
+<li><span class="math inline">\(g(x,y)=\ln(\sec(x))\)</span> en <span class="math inline">\(R=\{(x,y)\in \mathbb{R}^2: 0\leq x\leq \pi/4, 0\leq y\leq \operatorname{tg}(x)\}\)</span>.</li>
+</ol>
+</div>
+<div id="exr-area-superficie-chimenea" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 11.10 </strong></span>Una tolva tiene forma cónica dada por la función <span class="math inline">\(f(x,y)=2\sqrt{x^2+y^2}\)</span> con altura 4 m. Calcular el volumen de la tolva y la cantidad de chapa necesaria para construirla.</p>
+</div>
 <div id="exr-integral-doble-valor-medio" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 11.9 </strong></span>Calcular el valor medio de la función <span class="math inline">\(f(x,y)=\sqrt{xy}\)</span> en la región del primer cuadrante delimitada por las funciones <span class="math inline">\(y=x\)</span> e <span class="math inline">\(y=x^2\)</span>.</p>
+<p><span class="theorem-title"><strong>Ejercicio 11.11 </strong></span>Calcular el valor medio de la función <span class="math inline">\(f(x,y)=\sqrt{xy}\)</span> en la región del primer cuadrante delimitada por las funciones <span class="math inline">\(y=x\)</span> e <span class="math inline">\(y=x^2\)</span>.</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
@@ -611,10 +621,31 @@ Solución
 </div>
 </div>
 <div id="exr-integral-polar-petalo" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 11.10 </strong></span>Un escudo contiene una flor dada por la función <span class="math inline">\(r(\theta) = \cos(2\theta)\)</span>. Calcular la cantidad de tela necesaria para construir la flor del escudo.</p>
+<p><span class="theorem-title"><strong>Ejercicio 11.12 </strong></span>Un escudo contiene una flor dada por la función <span class="math inline">\(r(\theta) = \cos(2\theta)\)</span>. Calcular la cantidad de tela necesaria para construir la flor del escudo.</p>
 </div>
 <div id="exr-masa-lamina-chapa" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 11.11 </strong></span>Una lámina de chapa metálica tiene la forma de la forma de triángulo con vértices <span class="math inline">\((0,0)\)</span>, <span class="math inline">\((1,1)\)</span> y <span class="math inline">\((2,0)\)</span>. Si la densidad de la chapa en cada punto viene dada por la función <span class="math inline">\(d(x,y)=e^{x+y}\)</span> gr/cm<span class="math inline">\(^2\)</span>, calcular la masa de la chapa y su centro de masas.</p>
+<p><span class="theorem-title"><strong>Ejercicio 11.13 </strong></span>Una lámina de chapa metálica tiene la forma de la forma de triángulo con vértices <span class="math inline">\((0,0)\)</span>, <span class="math inline">\((1,1)\)</span> y <span class="math inline">\((2,0)\)</span>. Si la densidad de la chapa en cada punto viene dada por la función <span class="math inline">\(d(x,y)=e^{x+y}\)</span> gr/cm<span class="math inline">\(^2\)</span>, calcular la masa de la chapa y su centro de masas.</p>
+</div>
+<div id="exr-presion-ala-avión" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 11.14 </strong></span>El perfil de la sección transversal del ala de un avión viene dada por las funciones <span class="math inline">\(\frac{(-1+x^2)}{10}\)</span> y <span class="math inline">\(\frac{1-x^4}{10}\)</span> en metros.</p>
+<ol type="a">
+<li><p>Calcular la superficie de un ala de 10 m de longitud.</p></li>
+<li><p>Si la presión que soporta la parte inferior del ala viene dada por la función <span class="math inline">\(P(x,y)=P(x,y)=ye^{-x^2}\)</span>, calcular la presión total que soporta el ala y la presión media.</p></li>
+</ol>
+</div>
+<div id="exr-funcion-densidad-exponencial-exponencial" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 11.15 </strong></span>La función de densidad de probabilidad de una variable aleatoria bidimensional es</p>
+<p><span class="math display">\[
+f(x,y) =
+\begin{cases}
+ke^{-(x+y)/2} &amp; x\geq 0, y\geq 0\\
+0 &amp; \mbox{en caso contrario}
+\end{cases}
+\]</span></p>
+<ol type="a">
+<li><p>¿Qué valor debe tener <span class="math inline">\(k\)</span> para que <span class="math inline">\(f\)</span> sea una función de densidad?</p></li>
+<li><p>Calcular la media de la variable bidimensional.</p></li>
+</ol>
 </div>
 
 

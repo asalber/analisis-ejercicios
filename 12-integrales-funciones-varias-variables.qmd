@@ -312,6 +312,16 @@ Supongamos que el plano $xy$ es el nivel del agua. Entonces el fondo de la pisci
 Calcular el volumen encerrado por las superficies $z=1-x^2-y^2$ y $z=1-x$.
 :::
 
+:::{#exr-integral-doble-area-superficies}
+Calcular el area de las superficies de las siguientes funciones en las regiones indicadas.
+
+a.  $f(x,y)=xy^2$ en $R=\{(x,y)\in \mathbb{R}^2: 0\leq x\leq 2, -x\leq y\leq x\}$.
+a.  $g(x,y)=\ln(\sec(x))$ en $R=\{(x,y)\in \mathbb{R}^2: 0\leq x\leq \pi/4, 0\leq y\leq \operatorname{tg}(x)\}$.
+:::
+
+:::{#exr-area-superficie-chimenea}
+Una tolva tiene forma cónica dada por la función $f(x,y)=2\sqrt{x^2+y^2}$ con altura 4 m. Calcular el volumen de la tolva y la cantidad de chapa necesaria para construirla.
+:::
 
 :::{#exr-integral-doble-valor-medio}
 Calcular el valor medio de la función $f(x,y)=\sqrt{xy}$ en la región del primer cuadrante delimitada por las funciones $y=x$ e $y=x^2$.
@@ -352,5 +362,30 @@ Un escudo contiene una flor dada por la función $r(\theta) = \cos(2\theta)$. Ca
 :::{#exr-masa-lamina-chapa}
 Una lámina de chapa metálica tiene la forma de la forma de triángulo con vértices $(0,0)$, $(1,1)$ y $(2,0)$. Si la densidad de la chapa en cada punto viene dada por la función $d(x,y)=e^{x+y}$ gr/cm$^2$, calcular la masa de la chapa y su centro de masas.
 :::
+
+:::{#exr-presion-ala-avión}
+El perfil de la sección transversal del ala de un avión viene dada por las funciones $\frac{(-1+x^2)}{10}$ y $\frac{1-x^4}{10}$ en metros.
+
+a.  Calcular la superficie de un ala de 10 m de longitud.  
+
+a.  Si la presión que soporta la parte inferior del ala viene dada por la función $P(x,y)=P(x,y)=ye^{-x^2}$, calcular la presión total que soporta el ala y la presión media.
+:::
+
+:::{#exr-funcion-densidad-exponencial-exponencial}
+La función de densidad de probabilidad de una variable aleatoria bidimensional es
+
+$$
+f(x,y) = 
+\begin{cases}
+ke^{-(x+y)/2} & x\geq 0, y\geq 0\\
+0 & \mbox{en caso contrario}
+\end{cases}
+$$
+
+a.  ¿Qué valor debe tener $k$ para que $f$ sea una función de densidad?
+
+b.  Calcular la media de la variable bidimensional.
+:::
+
 
 
