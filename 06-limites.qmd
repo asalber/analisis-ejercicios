@@ -583,15 +583,60 @@ a. Si $f$ está acotada superiormente, entonces existe $\lim_{x\to b^-}f(x)$.
 b. Si $f$ no está acotada superiormente, entonces $\lim_{x\to b^-}f(x)=\infty$.
 :::
 
+:::{.callout-tip collapse="true"}
+## Solución
+
+:::
+
 :::{#exr-continuidad-coseno}
 Demostrar que la función $f(x)=\cos(x)$ es continua en todo $\mathbb{R}$.
 :::
 
+:::{.callout-tip collapse="true"}
+## Solución
+Sea $a\in\mathbb{R}$. Usando propiedades trigonométricas se tiene
+
+\begin{align*}
+|\cos(x)-\cos(a)|
+&=|-2\operatorname{sen}\left(\frac{x+a}{2}\right)\operatorname{sen}\left(\frac{x-a}{2}\right)| \\
+&= 2|\operatorname{sen}\left(\frac{x+a}{2}\right)||\operatorname{sen}\left(\frac{x-a}{2}\right)| \\
+&\leq 2\frac{|x-a|}{2}=|x-a|,
+\end{align*}
+
+ya que $\operatorname{sen}(x)\leq x$ $\forall x\in\mathbb{R}^+$ y $\operatorname{sen}(x)\leq 1$ $\forall x\in\mathbb{R}$.
+
+Así pues, para cualquier $\varepsilon>0$ existe $\delta=\varepsilon>0$ tal que si $|x-a|<\delta=\varepsilon$, entonces $|\cos(x)-\cos(a)|<|x-a|=\varepsilon$,
+y por tanto, $\lim_{x\to a}\cos(x) = \cos(a)$, lo que demuestra que la función coseno es continua en todo su dominio.
+:::
+
 :::{#exr-discontinuidad-evitable}
+$\star$
 ¿Qué tipo de discontinuidad presenta la función $f(x)=x\cos\left(\frac{1}{x}\right)$ en $x=0$? Redefinir la función para que sea continua en dicho punto.
 :::
 
+:::{.callout-tip collapse="true"}
+## Solución
+La función no está definida en $x=0$ por lo que es discontinua en este punto. Para ver el tipo de discontinuidad estudiamos los límites laterales en el punto. Como $-1\leq \cos\left(\frac{1}{x}\right)\leq 1$ $\forall x\neq 0$, podemos encajar $f$ entre las siguientes funciones 
+
+$$
+-x \leq x\cos\left(\frac{1}{x}\right) \leq x,
+$$
+
+y como $\lim_{x\to 0^-} -x = \lim_{x\to 0^-} x=0$, por el teorema de compresión de límites se tiene que $\lim_{x\to 0^-} f(x) =0$. Y del mismo modo, como $\lim_{x\to 0^+} -x = \lim_{x\to 0^+} x=0$, por lo que $\lim_{x\to 0^+} f(x) =0$.
+
+Así pues, el límite existe y la discontinuidad es de tipo evitable. Para conseguir que la función sea continua en $x=0$ basta con definir la función en este punto como el valor de su límite, es decir, 
+
+$$
+f(x) =
+\begin{cases}
+x\cos\left(\frac{1}{x}\right) & \mbox{si $x\neq 0$,}\\
+0 & \mbox{si $x=0$.}
+\end{cases}
+$$
+:::
+
 :::{#exr-clasificacion-dicontinuidades}
+$\star$
 Estudiar la continuidad de las siguientes funciones en los puntos que se indican:
 
 a. $f(x)=\dfrac{e^x-1}{e^x+1}$, en el punto $x=0$.
@@ -610,7 +655,7 @@ a.
 $$
 h(x)=
 \begin{cases}
-x\operatorname{sen}\frac{\pi}{x} & \mbox{si $x\neq 0$,} \\
+x\operatorname{sen}\left(\frac{\pi}{x}\right) & \mbox{si $x\neq 0$,} \\
 0 & \mbox{si $x=0$,}
 \end{cases}
 $$
@@ -625,6 +670,54 @@ i(x)=
 \end{cases}
 $$
 en el punto $x=0$.
+:::
+
+:::{.callout-tip collapse="true"}
+## Solución
+a.  La función no está definida en $x=0$ que para este valor se anula el denominador, por lo que la función es discontinua enb ese punto. Para ver qué tipo de discontinuidad presenta en el punto estudiamos los límites laterales de $f$ en $x=0$.
+
+    \begin{align*}
+    \lim_{x\to 0^-} \frac{e^x-1}{e^x+1}
+    &= \frac{1-1}{1+1} = 0, \\
+    \lim_{x\to 0^+} \frac{e^x-1}{e^x+1}
+    &= \frac{1-1}{1+1} = 0.
+    \end{align*}
+
+    Por tanto, $f$ tiene una discontinuidad evitable en $x=0$.
+
+a.  Estudiamos los límites laterales de $g$ en $x=0$.
+
+    \begin{align*}
+    \lim_{x\to 0^-} \frac{1+e^{1/x}}{1-e^{1/x}} 
+    &= \frac{1+e^{-\infty}}{1-e^{-\infty}}
+    = \frac{1}{1} = 1, \\
+    \lim_{x\to 0^+} \frac{1+e^{1/x}}{1-e^{1/x}} 
+    &= \lim_{x\to 0^+} \frac{e^{1/x}\frac{-1}{x^2}}{-e^{1/x}\frac{-1}{x^2}} \tag{L'Hôpital} \\
+    &= \frac{-1}{1} = -1.
+    \end{align*}
+
+    Como ambos límites existen pero son distintos, $g$ tiene una discontinuidad de salto finito en $x=0$.
+
+a.  Como $-1\leq \operatorname{sen}\left(\frac{\pi}{x}\right)\leq 1$  $\forall x\neq 0$, podemos encajar $h$ entre las siguientes funciones
+
+    $$
+    -x \leq x\operatorname{sen}\left(\frac{\pi}{x}\right) \leq x,
+    $$
+
+    y como $\lim_{x\to 0} -x = \lim_{x\to 0} x = 0$, se tiene que $\lim_{x\to 0} h(x) = 0 = h(0)$, por lo que la función es continua en $x=0$.    
+
+a.  Estudiamos los límites laterales de $i$ en $x=0$.
+
+    \begin{align*}
+    \lim_{x\to 0^-} \frac{1}{2^{1/x}}
+    &= \frac{1}{2^{-\infty}} 
+    = \infty, \\
+    \lim_{x\to 0^+} \frac{1}{2^{1/x}}
+    &= \frac{1}{2^{\infty}} 
+    = 0.
+    \end{align*}
+
+    Como $\lim_{x\to 0^-} i(x)=\infty$, $i$ tiene una discontinuidad de salto infinito en $x=0$.
 :::
 
 :::{#exr-clasificacion-dicontinuidades-2}
@@ -718,16 +811,51 @@ b. La función $\frac{\operatorname{sen}(x)}{x}$ es continua en $\mathbb{R}\setm
 :::
 
 :::{#exr-bolzano}
+$\star$
 Calcular una raíz de la función $f(x)=x^5-x+1$ con una aproximación de 2 decimales. 
+:::
+
+:::{.callout-tip collapse="true"}
+## Solución
+Como la función $f$ es un polinomio, que es continua en todo $\mathbb{R}$, utilizaremos el [teorema de Bolzano](https://aprendeconalf.es/analisis-manual/06-limites.html#thm-bolzano) para aproximar la raíz. Para ello, basta con encontrar un intervalo $[a,b]$ en el que $f(a)$ tenga signo distinto que $f(b)$. Podemos tomar el intervalo $[-2,-1]$ ya que $f(-2)=-29$ y $f(-1)=1$. 
+
+Si tomamos el centro del intervalo, $f\left(\frac{(-2)+(-1)}{2}\right)=f(-1.5)= -5.0937<0$, por lo que podemos repetir el procedimiento para el intervalo $[-1.5,-1]$. 
+
+Tomamos ahora centro del intervalo, $f\left(\frac{(-1.5)+(-1)}{2}\right)=f(-1.25)= -0.8018<0$, por lo que podemos repetir el procedimiento para el intervalo $[-1.25,-1]$. 
+
+Tomamos de nuevo centro del intervalo, $f\left(\frac{(-1.25)+(-1)}{2}\right)=f(-1.125)= 0.323>0$, por lo que podemos repetir el procedimiento para el intervalo $[-1.25,-1.125]$.
+
+Tomamos otra vez el centro del intervalo, $f\left(\frac{(-1.25)+(-1.125)}{2}\right)=f(-1.1875)= -0.1739<0$, por lo que podemos repetir el procedimiento para el intervalo $[-1.1875,-1.125]$. 
+
+Tomamos una vez más el centro del intervalo, $f\left(\frac{(-1.1875)+(-1.125)}{2}\right)=f(-1.15625)= 0.0897>0$, por lo que podemos repetir el procedimiento para el intervalo $[-1.1875,-1.15625]$.
+
+Tomamos de nuevo el centro del intervalo, $f\left(\frac{(-1.1875)+(-1.15625)}{2}\right)=f(-1.171815)= -0.0382<0$, por lo que podemos repetir el procedimiento para el intervalo $[-1.171875,-1.15625]$.
+
+Tomamos otra vez centro del intervalo, $f\left(\frac{(-1.171875)+(-1.15625)}{2}\right)=f(-1.1640625)= 0.02668>0$, por lo que podemos repetir el procedimiento para el intervalo $[-1.171875,-1.1640625]$.
+
+Tomamos una última vez centro del intervalo, $f\left(\frac{(-1.171875)+(-1.1640625)}{2}\right)=f(-1.16796875)= -0.0055<0$, por lo que la raíz está en el intervalo $[-1.16796875,-1.1640625]$, por lo que podemos concluir que la raíz será aproximadamente $-1.16$.
 :::
 
 :::{#exr-valor-intermedio}
 Dadas dos funciones $f,g:[a,b]\to\mathbb{R}$ continuas en $[a,b]$ con $f(a)<g(a)$ y $f(b)>g(b)$, demostrar que existe $c\in(a,b)$ tal que $f(c)=g(c)$.
 :::
 
+:::{.callout-tip collapse="true"}
+## Solución
+Tomemos la función $h(x)=f(x)-g(x)$. Como $f$ y $g$ son continuas en $[a,b]$, $h$ también lo es. Además, se cumple que $h(a)=f(a)-g(a)<0$ y $h(b)=f(b)-g(b)>0$, por lo que podemos aplicar el [teorema de Bolzano](https://aprendeconalf.es/analisis-manual/06-limites.html#thm-bolzano) a $h$ y se tiene que existe $c\in(a,b)$ tal que $h(c)=f(c)-g(c)=0$, de donde se deduce que $f(c)=g(c)$.
+:::
+
 :::{#exr-valor-intermedio-2}
+$\star$
 Demostrar que las siguientes ecuaciones tienen al menos una solución real.
 
 a. $\cos(x)=x$.
 b. $e^x = -x$.
+:::
+
+:::{.callout-tip collapse="true"}
+## Solución
+a.  Si tomamos la función $f(x)=\cos(x)-x$, se trata de encontrar al menos una raíz de la función. Como se trata de una función continua en todo $\mathbb{R}$, basta con aplicar el [teorema de Bolzano](https://aprendeconalf.es/analisis-manual/06-limites.html#thm-bolzano) en un intervalo $[a,b]$ que cumpla que $f(a)$ tiene distinto signo que $f(b)$. Como $f(0)=\cos(0)-0=1>0$ y $f(\pi/2)=\cos(\pi/2)-\pi/2 = -\pi/2<0$, $f$ tiene al menos una raíz en el intervalo $[0,\pi/2]$ y la ecuación tiene solución en ese intervalo.
+
+a.  Si tomamos la función $g(x)=e^x+x$, se trata de nuevo de encontrar al menos una raíz de la función. Al igual que antes, como se trata de una función continua en todo $\mathbb{R}$, basta con aplicar el [teorema de Bolzano](https://aprendeconalf.es/analisis-manual/06-limites.html#thm-bolzano) en un intervalo $[a,b]$ que cumpla que $f(a)$ tiene distinto signo que $f(b)$. Como $g(-1)=e^{-1}(-1)<0$ y $g(0)=e^0+0=1>0$, $g$ tiene al menos una raíz en el intervalo $[-e^{-1},0]$ y la ecuación tiene solución en ese intervalo.
 :::

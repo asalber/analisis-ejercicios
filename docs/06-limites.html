@@ -859,14 +859,82 @@ Solución
 <li>Si <span class="math inline">\(f\)</span> no está acotada superiormente, entonces <span class="math inline">\(\lim_{x\to b^-}f(x)=\infty\)</span>.</li>
 </ol>
 </div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-17-contents" aria-controls="callout-17" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-17" class="callout-17-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+
+</div>
+</div>
+</div>
 <div id="exr-continuidad-coseno" class="theorem exercise">
 <p><span class="theorem-title"><strong>Ejercicio 5.18 </strong></span>Demostrar que la función <span class="math inline">\(f(x)=\cos(x)\)</span> es continua en todo <span class="math inline">\(\mathbb{R}\)</span>.</p>
 </div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-18-contents" aria-controls="callout-18" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-18" class="callout-18-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Sea <span class="math inline">\(a\in\mathbb{R}\)</span>. Usando propiedades trigonométricas se tiene</p>
+<p><span class="math display">\[\begin{align*}
+|\cos(x)-\cos(a)|
+&amp;=|-2\operatorname{sen}\left(\frac{x+a}{2}\right)\operatorname{sen}\left(\frac{x-a}{2}\right)| \\
+&amp;= 2|\operatorname{sen}\left(\frac{x+a}{2}\right)||\operatorname{sen}\left(\frac{x-a}{2}\right)| \\
+&amp;\leq 2\frac{|x-a|}{2}=|x-a|,
+\end{align*}\]</span></p>
+<p>ya que <span class="math inline">\(\operatorname{sen}(x)\leq x\)</span> <span class="math inline">\(\forall x\in\mathbb{R}^+\)</span> y <span class="math inline">\(\operatorname{sen}(x)\leq 1\)</span> <span class="math inline">\(\forall x\in\mathbb{R}\)</span>.</p>
+<p>Así pues, para cualquier <span class="math inline">\(\varepsilon&gt;0\)</span> existe <span class="math inline">\(\delta=\varepsilon&gt;0\)</span> tal que si <span class="math inline">\(|x-a|&lt;\delta=\varepsilon\)</span>, entonces <span class="math inline">\(|\cos(x)-\cos(a)|&lt;|x-a|=\varepsilon\)</span>, y por tanto, <span class="math inline">\(\lim_{x\to a}\cos(x) = \cos(a)\)</span>, lo que demuestra que la función coseno es continua en todo su dominio.</p>
+</div>
+</div>
+</div>
 <div id="exr-discontinuidad-evitable" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 5.19 </strong></span>¿Qué tipo de discontinuidad presenta la función <span class="math inline">\(f(x)=x\cos\left(\frac{1}{x}\right)\)</span> en <span class="math inline">\(x=0\)</span>? Redefinir la función para que sea continua en dicho punto.</p>
+<p><span class="theorem-title"><strong>Ejercicio 5.19 </strong></span><span class="math inline">\(\star\)</span> ¿Qué tipo de discontinuidad presenta la función <span class="math inline">\(f(x)=x\cos\left(\frac{1}{x}\right)\)</span> en <span class="math inline">\(x=0\)</span>? Redefinir la función para que sea continua en dicho punto.</p>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-19-contents" aria-controls="callout-19" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-19" class="callout-19-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>La función no está definida en <span class="math inline">\(x=0\)</span> por lo que es discontinua en este punto. Para ver el tipo de discontinuidad estudiamos los límites laterales en el punto. Como <span class="math inline">\(-1\leq \cos\left(\frac{1}{x}\right)\leq 1\)</span> <span class="math inline">\(\forall x\neq 0\)</span>, podemos encajar <span class="math inline">\(f\)</span> entre las siguientes funciones</p>
+<p><span class="math display">\[
+-x \leq x\cos\left(\frac{1}{x}\right) \leq x,
+\]</span></p>
+<p>y como <span class="math inline">\(\lim_{x\to 0^-} -x = \lim_{x\to 0^-} x=0\)</span>, por el teorema de compresión de límites se tiene que <span class="math inline">\(\lim_{x\to 0^-} f(x) =0\)</span>. Y del mismo modo, como <span class="math inline">\(\lim_{x\to 0^+} -x = \lim_{x\to 0^+} x=0\)</span>, por lo que <span class="math inline">\(\lim_{x\to 0^+} f(x) =0\)</span>.</p>
+<p>Así pues, el límite existe y la discontinuidad es de tipo evitable. Para conseguir que la función sea continua en <span class="math inline">\(x=0\)</span> basta con definir la función en este punto como el valor de su límite, es decir,</p>
+<p><span class="math display">\[
+f(x) =
+\begin{cases}
+x\cos\left(\frac{1}{x}\right) &amp; \mbox{si $x\neq 0$,}\\
+0 &amp; \mbox{si $x=0$.}
+\end{cases}
+\]</span></p>
+</div>
+</div>
 </div>
 <div id="exr-clasificacion-dicontinuidades" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 5.20 </strong></span>Estudiar la continuidad de las siguientes funciones en los puntos que se indican:</p>
+<p><span class="theorem-title"><strong>Ejercicio 5.20 </strong></span><span class="math inline">\(\star\)</span> Estudiar la continuidad de las siguientes funciones en los puntos que se indican:</p>
 <ol type="a">
 <li><p><span class="math inline">\(f(x)=\dfrac{e^x-1}{e^x+1}\)</span>, en el punto <span class="math inline">\(x=0\)</span>.</p></li>
 <li><p><span class="math display">\[
@@ -879,7 +947,7 @@ g(x)=
 <li><p><span class="math display">\[
 h(x)=
 \begin{cases}
-x\operatorname{sen}\frac{\pi}{x} &amp; \mbox{si $x\neq 0$,} \\
+x\operatorname{sen}\left(\frac{\pi}{x}\right) &amp; \mbox{si $x\neq 0$,} \\
 0 &amp; \mbox{si $x=0$,}
 \end{cases}
 \]</span> en el punto <span class="math inline">\(x=0\)</span>.</p></li>
@@ -891,6 +959,56 @@ i(x)=
 \end{cases}
 \]</span> en el punto <span class="math inline">\(x=0\)</span>.</p></li>
 </ol>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-20-contents" aria-controls="callout-20" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-20" class="callout-20-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="a">
+<li><p>La función no está definida en <span class="math inline">\(x=0\)</span> que para este valor se anula el denominador, por lo que la función es discontinua enb ese punto. Para ver qué tipo de discontinuidad presenta en el punto estudiamos los límites laterales de <span class="math inline">\(f\)</span> en <span class="math inline">\(x=0\)</span>.</p>
+<p><span class="math display">\[\begin{align*}
+\lim_{x\to 0^-} \frac{e^x-1}{e^x+1}
+&amp;= \frac{1-1}{1+1} = 0, \\
+\lim_{x\to 0^+} \frac{e^x-1}{e^x+1}
+&amp;= \frac{1-1}{1+1} = 0.
+\end{align*}\]</span></p>
+<p>Por tanto, <span class="math inline">\(f\)</span> tiene una discontinuidad evitable en <span class="math inline">\(x=0\)</span>.</p></li>
+<li><p>Estudiamos los límites laterales de <span class="math inline">\(g\)</span> en <span class="math inline">\(x=0\)</span>.</p>
+<p><span class="math display">\[\begin{align*}
+\lim_{x\to 0^-} \frac{1+e^{1/x}}{1-e^{1/x}}
+&amp;= \frac{1+e^{-\infty}}{1-e^{-\infty}}
+= \frac{1}{1} = 1, \\
+\lim_{x\to 0^+} \frac{1+e^{1/x}}{1-e^{1/x}}
+&amp;= \lim_{x\to 0^+} \frac{e^{1/x}\frac{-1}{x^2}}{-e^{1/x}\frac{-1}{x^2}} \tag{L'Hôpital} \\
+&amp;= \frac{-1}{1} = -1.
+\end{align*}\]</span></p>
+<p>Como ambos límites existen pero son distintos, <span class="math inline">\(g\)</span> tiene una discontinuidad de salto finito en <span class="math inline">\(x=0\)</span>.</p></li>
+<li><p>Como <span class="math inline">\(-1\leq \operatorname{sen}\left(\frac{\pi}{x}\right)\leq 1\)</span> <span class="math inline">\(\forall x\neq 0\)</span>, podemos encajar <span class="math inline">\(h\)</span> entre las siguientes funciones</p>
+<p><span class="math display">\[
+-x \leq x\operatorname{sen}\left(\frac{\pi}{x}\right) \leq x,
+\]</span></p>
+<p>y como <span class="math inline">\(\lim_{x\to 0} -x = \lim_{x\to 0} x = 0\)</span>, se tiene que <span class="math inline">\(\lim_{x\to 0} h(x) = 0 = h(0)\)</span>, por lo que la función es continua en <span class="math inline">\(x=0\)</span>.</p></li>
+<li><p>Estudiamos los límites laterales de <span class="math inline">\(i\)</span> en <span class="math inline">\(x=0\)</span>.</p>
+<p><span class="math display">\[\begin{align*}
+\lim_{x\to 0^-} \frac{1}{2^{1/x}}
+&amp;= \frac{1}{2^{-\infty}}
+= \infty, \\
+\lim_{x\to 0^+} \frac{1}{2^{1/x}}
+&amp;= \frac{1}{2^{\infty}}
+= 0.
+\end{align*}\]</span></p>
+<p>Como <span class="math inline">\(\lim_{x\to 0^-} i(x)=\infty\)</span>, <span class="math inline">\(i\)</span> tiene una discontinuidad de salto infinito en <span class="math inline">\(x=0\)</span>.</p></li>
+</ol>
+</div>
+</div>
 </div>
 <div id="exr-clasificacion-dicontinuidades-2" class="theorem exercise">
 <p><span class="theorem-title"><strong>Ejercicio 5.21 </strong></span>Clasificar las discontinuidades de las siguientes funciones</p>
@@ -908,7 +1026,7 @@ e^{\frac{1}{x-1}} &amp; \text{si $x\geq 0$.}
 </ol>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-17-contents" aria-controls="callout-17" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-21-contents" aria-controls="callout-21" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -917,7 +1035,7 @@ Solución
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-17" class="callout-17-contents callout-collapse collapse">
+<div id="callout-21" class="callout-21-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ol type="a">
 <li><p>A simple vista, podemos ver que se trata de una función racional y estará definida en todo <span class="math inline">\(\mathbb{R}\)</span> salvo en los puntos que anulen alguno de los denominadores. Dichos puntos son fáciles de obtener igualando a 0 los denominadores:</p>
@@ -979,17 +1097,76 @@ x-1 &amp;= 0\Leftrightarrow x=1 \\
 </div>
 </div>
 <div id="exr-bolzano" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 5.22 </strong></span>Calcular una raíz de la función <span class="math inline">\(f(x)=x^5-x+1\)</span> con una aproximación de 2 decimales.</p>
+<p><span class="theorem-title"><strong>Ejercicio 5.22 </strong></span><span class="math inline">\(\star\)</span> Calcular una raíz de la función <span class="math inline">\(f(x)=x^5-x+1\)</span> con una aproximación de 2 decimales.</p>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-22-contents" aria-controls="callout-22" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-22" class="callout-22-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Como la función <span class="math inline">\(f\)</span> es un polinomio, que es continua en todo <span class="math inline">\(\mathbb{R}\)</span>, utilizaremos el <a href="https://aprendeconalf.es/analisis-manual/06-limites.html#thm-bolzano">teorema de Bolzano</a> para aproximar la raíz. Para ello, basta con encontrar un intervalo <span class="math inline">\([a,b]\)</span> en el que <span class="math inline">\(f(a)\)</span> tenga signo distinto que <span class="math inline">\(f(b)\)</span>. Podemos tomar el intervalo <span class="math inline">\([-2,-1]\)</span> ya que <span class="math inline">\(f(-2)=-29\)</span> y <span class="math inline">\(f(-1)=1\)</span>.</p>
+<p>Si tomamos el centro del intervalo, <span class="math inline">\(f\left(\frac{(-2)+(-1)}{2}\right)=f(-1.5)= -5.0937&lt;0\)</span>, por lo que podemos repetir el procedimiento para el intervalo <span class="math inline">\([-1.5,-1]\)</span>.</p>
+<p>Tomamos ahora centro del intervalo, <span class="math inline">\(f\left(\frac{(-1.5)+(-1)}{2}\right)=f(-1.25)= -0.8018&lt;0\)</span>, por lo que podemos repetir el procedimiento para el intervalo <span class="math inline">\([-1.25,-1]\)</span>.</p>
+<p>Tomamos de nuevo centro del intervalo, <span class="math inline">\(f\left(\frac{(-1.25)+(-1)}{2}\right)=f(-1.125)= 0.323&gt;0\)</span>, por lo que podemos repetir el procedimiento para el intervalo <span class="math inline">\([-1.25,-1.125]\)</span>.</p>
+<p>Tomamos otra vez el centro del intervalo, <span class="math inline">\(f\left(\frac{(-1.25)+(-1.125)}{2}\right)=f(-1.1875)= -0.1739&lt;0\)</span>, por lo que podemos repetir el procedimiento para el intervalo <span class="math inline">\([-1.1875,-1.125]\)</span>.</p>
+<p>Tomamos una vez más el centro del intervalo, <span class="math inline">\(f\left(\frac{(-1.1875)+(-1.125)}{2}\right)=f(-1.15625)= 0.0897&gt;0\)</span>, por lo que podemos repetir el procedimiento para el intervalo <span class="math inline">\([-1.1875,-1.15625]\)</span>.</p>
+<p>Tomamos de nuevo el centro del intervalo, <span class="math inline">\(f\left(\frac{(-1.1875)+(-1.15625)}{2}\right)=f(-1.171815)= -0.0382&lt;0\)</span>, por lo que podemos repetir el procedimiento para el intervalo <span class="math inline">\([-1.171875,-1.15625]\)</span>.</p>
+<p>Tomamos otra vez centro del intervalo, <span class="math inline">\(f\left(\frac{(-1.171875)+(-1.15625)}{2}\right)=f(-1.1640625)= 0.02668&gt;0\)</span>, por lo que podemos repetir el procedimiento para el intervalo <span class="math inline">\([-1.171875,-1.1640625]\)</span>.</p>
+<p>Tomamos una última vez centro del intervalo, <span class="math inline">\(f\left(\frac{(-1.171875)+(-1.1640625)}{2}\right)=f(-1.16796875)= -0.0055&lt;0\)</span>, por lo que la raíz está en el intervalo <span class="math inline">\([-1.16796875,-1.1640625]\)</span>, por lo que podemos concluir que la raíz será aproximadamente <span class="math inline">\(-1.16\)</span>.</p>
+</div>
+</div>
 </div>
 <div id="exr-valor-intermedio" class="theorem exercise">
 <p><span class="theorem-title"><strong>Ejercicio 5.23 </strong></span>Dadas dos funciones <span class="math inline">\(f,g:[a,b]\to\mathbb{R}\)</span> continuas en <span class="math inline">\([a,b]\)</span> con <span class="math inline">\(f(a)&lt;g(a)\)</span> y <span class="math inline">\(f(b)&gt;g(b)\)</span>, demostrar que existe <span class="math inline">\(c\in(a,b)\)</span> tal que <span class="math inline">\(f(c)=g(c)\)</span>.</p>
 </div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-23-contents" aria-controls="callout-23" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-23" class="callout-23-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Tomemos la función <span class="math inline">\(h(x)=f(x)-g(x)\)</span>. Como <span class="math inline">\(f\)</span> y <span class="math inline">\(g\)</span> son continuas en <span class="math inline">\([a,b]\)</span>, <span class="math inline">\(h\)</span> también lo es. Además, se cumple que <span class="math inline">\(h(a)=f(a)-g(a)&lt;0\)</span> y <span class="math inline">\(h(b)=f(b)-g(b)&gt;0\)</span>, por lo que podemos aplicar el <a href="https://aprendeconalf.es/analisis-manual/06-limites.html#thm-bolzano">teorema de Bolzano</a> a <span class="math inline">\(h\)</span> y se tiene que existe <span class="math inline">\(c\in(a,b)\)</span> tal que <span class="math inline">\(h(c)=f(c)-g(c)=0\)</span>, de donde se deduce que <span class="math inline">\(f(c)=g(c)\)</span>.</p>
+</div>
+</div>
+</div>
 <div id="exr-valor-intermedio-2" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 5.24 </strong></span>Demostrar que las siguientes ecuaciones tienen al menos una solución real.</p>
+<p><span class="theorem-title"><strong>Ejercicio 5.24 </strong></span><span class="math inline">\(\star\)</span> Demostrar que las siguientes ecuaciones tienen al menos una solución real.</p>
 <ol type="a">
 <li><span class="math inline">\(\cos(x)=x\)</span>.</li>
 <li><span class="math inline">\(e^x = -x\)</span>.</li>
 </ol>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-24-contents" aria-controls="callout-24" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-24" class="callout-24-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="a">
+<li><p>Si tomamos la función <span class="math inline">\(f(x)=\cos(x)-x\)</span>, se trata de encontrar al menos una raíz de la función. Como se trata de una función continua en todo <span class="math inline">\(\mathbb{R}\)</span>, basta con aplicar el <a href="https://aprendeconalf.es/analisis-manual/06-limites.html#thm-bolzano">teorema de Bolzano</a> en un intervalo <span class="math inline">\([a,b]\)</span> que cumpla que <span class="math inline">\(f(a)\)</span> tiene distinto signo que <span class="math inline">\(f(b)\)</span>. Como <span class="math inline">\(f(0)=\cos(0)-0=1&gt;0\)</span> y <span class="math inline">\(f(\pi/2)=\cos(\pi/2)-\pi/2 = -\pi/2&lt;0\)</span>, <span class="math inline">\(f\)</span> tiene al menos una raíz en el intervalo <span class="math inline">\([0,\pi/2]\)</span> y la ecuación tiene solución en ese intervalo.</p></li>
+<li><p>Si tomamos la función <span class="math inline">\(g(x)=e^x+x\)</span>, se trata de nuevo de encontrar al menos una raíz de la función. Al igual que antes, como se trata de una función continua en todo <span class="math inline">\(\mathbb{R}\)</span>, basta con aplicar el <a href="https://aprendeconalf.es/analisis-manual/06-limites.html#thm-bolzano">teorema de Bolzano</a> en un intervalo <span class="math inline">\([a,b]\)</span> que cumpla que <span class="math inline">\(f(a)\)</span> tiene distinto signo que <span class="math inline">\(f(b)\)</span>. Como <span class="math inline">\(g(-1)=e^{-1}(-1)&lt;0\)</span> y <span class="math inline">\(g(0)=e^0+0=1&gt;0\)</span>, <span class="math inline">\(g\)</span> tiene al menos una raíz en el intervalo <span class="math inline">\([-e^{-1},0]\)</span> y la ecuación tiene solución en ese intervalo.</p></li>
+</ol>
+</div>
+</div>
 </div>
 
 
