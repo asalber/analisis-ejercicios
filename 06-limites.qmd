@@ -585,7 +585,7 @@ b. Si $f$ no está acotada superiormente, entonces $\lim_{x\to b^-}f(x)=\infty$.
 
 :::{.callout-tip collapse="true"}
 ## Solución
-
+a.  Supongamos que $f$ está acotada, entonces, por el axioma de completitud de los números reales existe el supremo $c$ de las imágenes de $(a,b)$ mediante $f$. Veamos que $\lim_{x\to b^-} f(x) = c$. 
 :::
 
 :::{#exr-continuidad-coseno}

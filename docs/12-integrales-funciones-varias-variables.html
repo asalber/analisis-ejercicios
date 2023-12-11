@@ -560,32 +560,28 @@ R = \left\{(x,y)\in\mathbb{R}^2: -4\leq x\leq 4, -\sqrt{\frac{16-x^2}{2}}\leq y\
 \]</span></p>
 <p>o bien</p>
 <p><span class="math display">\[
-R = \{(x,y)\in\mathbb{R}^2: -\sqrt{8}\leq y\leq \sqrt{8}, \sqrt{16-2y^2}\leq x\leq \sqrt{16-2y^2}\}.
+R = \{(x,y)\in\mathbb{R}^2: -\sqrt{8}\leq y\leq \sqrt{8}, -\sqrt{16-2y^2}\leq x\leq \sqrt{16-2y^2}\}.
 \]</span></p>
-<p>Supongamos que el plano <span class="math inline">\(xy\)</span> es el nivel del agua. Entonces el fondo de la piscina estará contenido en el plano paralelo al eje <span class="math inline">\(y\)</span> que contenga los puntos <span class="math inline">\((-4,-1)\)</span>, <span class="math inline">\((4,2)\)</span>, que tiene ecuación <span class="math inline">\(f(x,y) = -1-\frac{1}{8}(x+4) = -\frac{3}{2}-\frac{x}{8}\)</span>. Por tanto se trata de calcular el volumen encerrado entre este plano y el plano <span class="math inline">\(xy\)</span> en la región <span class="math inline">\(R\)</span>, que viene dado por la integral doble</p>
+<p>Supongamos que el plano <span class="math inline">\(xy\)</span> es el nivel del agua. Entonces el fondo de la piscina estará contenido en el plano paralelo al eje <span class="math inline">\(y\)</span> que contenga los puntos <span class="math inline">\((-4,-1)\)</span>, <span class="math inline">\((4,-2)\)</span>, que tiene ecuación <span class="math inline">\(f(x,y) = -1-\frac{1}{8}(x+4) = -\frac{3}{2}-\frac{x}{8}\)</span>. Por tanto se trata de calcular el volumen encerrado entre este plano y el plano <span class="math inline">\(xy\)</span> en la región <span class="math inline">\(R\)</span>, que viene dado por la integral doble</p>
 <p><span class="math display">\[\begin{align*}
 \int_R -f(x,y)\,dA
 &amp;= \int_{-\sqrt{8}}^{\sqrt{8}} \int_{-\sqrt{16-2y^2}}^{\sqrt{16-2y^2}} \frac{3}{2}+\frac{x}{8}\,dx\,dy \\
-&amp;= 12\sqrt{2}\pi.
-\end{align*}\]</span></p>
+&amp;= \int_{-\sqrt{8}}^{\sqrt{8}} \left[\frac{3x}{2}-\frac{x^2}{16}\right]_{-\sqrt{16-2y^2}}^{\sqrt{16-2y^2}}\,dy \\
+&amp;= \int_{-\sqrt{8}}^{\sqrt{8}} \left(\frac{3}{2}(\sqrt{16-2y^2}+ \sqrt{16-2y^2})\right. \\
+&amp;+ \left.\frac{1}{16}((\sqrt{16-2y^2})^2-(-\sqrt{16-2y^2})^2)\right)\,dy \\
+&amp;= \int_{-\sqrt{8}}^{\sqrt{8}} 3\sqrt{16-2y^2} \,dy
+= 3\int_{\pi}^0 \frac{-16}{\sqrt{2}}\operatorname{sen}(\theta)^2\,d\theta \tag{1} \\
+&amp;= \frac{-48}{\sqrt{2}}\int_{\pi}^0 \frac{1-\cos(2\theta)}{2}\,d\theta
+= \frac{-24}{\sqrt{2}} \left[\theta-\frac{\operatorname{sen}(2\theta)}{2}\right]_{\pi}^0 \\
+&amp;= \frac{-24}{\sqrt{2}} \left(0-\frac{\operatorname{sen}(2\cdot 0)}{2}-\pi+\frac{\operatorname{sen}(2\pi)}{2}\right)
+= 12\sqrt{2}\pi.
+\end{align*}\]</span> (1) Cambio de variable <span class="math inline">\(\sqrt{2}y=4\cos(\theta)\)</span>.</p>
+<p>Así pues, la piscina tiene <span class="math inline">\(12\sqrt{2}\pi\approx 53.3146\)</span> m<span class="math inline">\(^3\)</span> de agua.</p>
 </div>
 </div>
 </div>
 <div id="exr-volumen-entre-dos-superficies" class="theorem exercise">
 <p><span class="theorem-title"><strong>Ejercicio 11.8 </strong></span>Calcular el volumen encerrado por las superficies <span class="math inline">\(z=1-x^2-y^2\)</span> y <span class="math inline">\(z=1-x\)</span>.</p>
-</div>
-<div id="exr-integral-doble-area-superficies" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 11.9 </strong></span>Calcular el area de las superficies de las siguientes funciones en las regiones indicadas.</p>
-<ol type="a">
-<li><span class="math inline">\(f(x,y)=xy^2\)</span> en <span class="math inline">\(R=\{(x,y)\in \mathbb{R}^2: 0\leq x\leq 2, -x\leq y\leq x\}\)</span>.</li>
-<li><span class="math inline">\(g(x,y)=\ln(\sec(x))\)</span> en <span class="math inline">\(R=\{(x,y)\in \mathbb{R}^2: 0\leq x\leq \pi/4, 0\leq y\leq \operatorname{tg}(x)\}\)</span>.</li>
-</ol>
-</div>
-<div id="exr-area-superficie-chimenea" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 11.10 </strong></span>Una tolva tiene forma cónica dada por la función <span class="math inline">\(f(x,y)=2\sqrt{x^2+y^2}\)</span> con altura 4 m. Calcular el volumen de la tolva y la cantidad de chapa necesaria para construirla.</p>
-</div>
-<div id="exr-integral-doble-valor-medio" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 11.11 </strong></span>Calcular el valor medio de la función <span class="math inline">\(f(x,y)=\sqrt{xy}\)</span> en la región del primer cuadrante delimitada por las funciones <span class="math inline">\(y=x\)</span> e <span class="math inline">\(y=x^2\)</span>.</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
@@ -598,6 +594,123 @@ Solución
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
 <div id="callout-8" class="callout-8-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Sea <span class="math inline">\(f(x,y)=1-x^2-y^2\)</span> y <span class="math inline">\(g(x,y)=1-x\)</span>. Veamos primero en qué región se cortan las dos superficies.</p>
+<p><span class="math display">\[
+1-x^2-y^2 = 1 -x \Leftrightarrow y^2 = -x^2+x \Leftrightarrow y=\pm\sqrt{-x^2+x},
+\]</span></p>
+<p>por lo que la región sobre la que se cortan las dos gráficas es <span class="math inline">\(R=\{(x,y)\in\mathbb{R}^2: 0\leq x\leq 1, -\sqrt{-x^2+x}\leq y\leq \sqrt{x^2+x}\}\)</span>, que es la circunferencia de radio <span class="math inline">\(1/2\)</span> centrada en el punto <span class="math inline">\((0.5,0)\)</span>.</p>
+<p>En este caso resulta más sencillo, trabajar en coordenadas polares. Si resolvemos la ecuación anterior en coordenadas polares, se tiene</p>
+<p><span class="math display">\[
+\begin{gathered}
+1-(r\cos(\theta))^2-(r\operatorname{sen}(\theta))^2 = 1-r\cos(\theta)
+\Leftrightarrow 1-r^2 = 1-r\cos(\theta) \\
+\Leftrightarrow r^2 = r\cos(\theta)
+\Leftrightarrow r=0 \mbox{ o } r=\cos(\theta),
+\end{gathered}
+\]</span></p>
+<p>por lo que la región de integración en coordenadas polares es <span class="math inline">\(R=\{(r,\theta)\in \mathbb{R}^+\times \mathbb{R}: -\pi/2\leq \theta\leq \pi/2, 0\leq r\leq \cos(\theta)\}\)</span>, y la integral que da el volumen comprendido entre las dos superficies es</p>
+<p><span class="math display">\[\begin{align*}
+\int_{R} f(x,y)-g(x,y)\,dA
+&amp;= \int_{-\pi/2}^{\pi/2} \int_0^{\cos(\theta)} (1-r^2 - (1-r\cos(\theta)))r\,dr\,d\theta \\
+&amp;= \int_{-\pi/2}^{\pi/2} \int_0^{\cos(\theta)} -r^3+r^2\cos(\theta))\,dr\,d\theta \\
+&amp;= \int_{-\pi/2}^{\pi/2} \left[-\frac{r^4}{4}+\frac{r^3}{3}\cos(\theta)\right]_0^{\cos(\theta)} \,d\theta \\
+&amp;= \int_{-\pi/2}^{\pi/2} \frac{-\cos(\theta)^4}{4}+\frac{\cos(\theta)^3}{3}\cos(\theta) \,d\theta \\
+&amp;= \int_{-\pi/2}^{\pi/2} \frac{1}{12}\cos(\theta)^4 \,d\theta \\
+&amp;= \frac{1}{12}\int_{-\pi/2}^{\pi/2} \left(\frac{1+\cos(2\theta)}{2}\right)^2 \,d\theta \\
+&amp;= \frac{1}{48}\int_{-\pi/2}^{\pi/2} 1+2\cos(2\theta)+\cos(2\theta)^2\,d\theta \\
+&amp;= \frac{1}{48}\int_{-\pi/2}^{\pi/2} 1+2\cos(2\theta)+\frac{1+\cos(4\theta)}{2}\,d\theta \\
+&amp;= \frac{1}{48}\left[\theta+\operatorname{sen}(2\theta)+\frac{\theta}{2}+\frac{\operatorname{sen}(4\theta)}{8}\right]_{-\pi/2}^{\pi/2} \\
+&amp;= \frac{1}{48}\left(\frac{\pi}{2}+\operatorname{sen}(2\pi/2)+\frac{\pi/2}{2}+\frac{\operatorname{sen}(4\pi/2)}{8}\right. \\
+&amp;\left.- \frac{-\pi}{2} - \operatorname{sen}(-2\pi/2)-\frac{-\pi/2}{2}-\frac{\operatorname{sen}(-4\pi/2)}{8}\right) \\
+&amp;= \frac{\pi}{32}.
+\end{align*}\]</span></p>
+</div>
+</div>
+</div>
+<div id="exr-integral-polar-petalo" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 11.9 </strong></span>Un escudo contiene una flor dada por la función <span class="math inline">\(r(\theta) = \cos(2\theta)\)</span>. Calcular la cantidad de tela necesaria para construir la flor del escudo.</p>
+</div>
+<div id="exr-integral-doble-area-superficies" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 11.10 </strong></span>Calcular el area de las superficies de las siguientes funciones en las regiones indicadas.</p>
+<ol type="a">
+<li><span class="math inline">\(f(x,y)=xy\)</span> en <span class="math inline">\(R=\{(x,y)\in \mathbb{R}^2: x^2+y^2\leq 1\}\)</span>.</li>
+<li><span class="math inline">\(g(x,y)=\ln(\sec(x))\)</span> en <span class="math inline">\(R=\{(x,y)\in \mathbb{R}^2: 0\leq x\leq \pi/4, 0\leq y\leq \operatorname{tg}(x)\}\)</span>.</li>
+</ol>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-9" class="callout-9-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="a">
+<li><p>Calculamos primero las derivadas parciales de <span class="math inline">\(f\)</span>.</p>
+<p><span class="math display">\[\begin{align*}
+f'_x(x,y) &amp;= y,\\
+f'_y(x,y) &amp;= x.
+\end{align*}\]</span></p>
+<p>Por tanto, la integral que da la superficie es</p>
+<p><span class="math display">\[
+\int_R \sqrt{f'_x(x,y)^2+f'_y(x,y)^2+1}\,dA
+= \int_{-1}^1 \int_{-\sqrt{1-x^2}}^{\sqrt{1-x^2}} \sqrt{y^2+x^2+1}\,dy\,dx.
+\]</span></p>
+<p>Esta integral resulta más sencilla si hacemos el cambio a coordenadas polares.</p>
+<p><span class="math display">\[\begin{align*}
+\int_R \sqrt{f'_x(x,y)^2+f'_y(x,y)^2+1}\,dA
+&amp;= \int_0^{2\pi} \int_0^1 \sqrt{(r\cos(\theta))^2+(r\operatorname{sen}(\theta))^2+1}r\,dr\,d\theta \\
+&amp;= \int_0^{2\pi} \int_0^1 \sqrt{r^2+1}r\,dr\,d\theta \\
+&amp;= \frac{1}{2} \int_0^{2\pi} \left[\frac{(r^2+1)^{3/2}}{3/2}\right]_0^1\,d\theta \\
+&amp;= \frac{1}{3} \int_0^{2\pi} (1^2+1)^{3/2}-(0^2+1)^{3/2}\,d\theta \\
+&amp;= \frac{1}{3} \int_0^{2\pi} (\sqrt{8}-1)\,d\theta \\
+&amp;= \frac{\sqrt{8}-1}{3} [\theta]_0^{2\pi}
+= \frac{\sqrt{8}-1}{3}2\pi.
+\end{align*}\]</span></p></li>
+<li><p>Calculamos primero las derivadas parciales de <span class="math inline">\(f\)</span>.</p>
+<p><span class="math display">\[\begin{align*}
+f'_x(x,y) &amp;= \frac{1}{\sec(x)}\sec(x)\operatorname{tg}(x) = \operatorname{tg}(x),\\
+f'_y(x,y) &amp;= 0.
+\end{align*}\]</span></p>
+<p>Por tanto, la integral que da la superficie es</p>
+<p><span class="math display">\[\begin{align*}
+\int_R \sqrt{f'_x(x,y)^2+f'_y(x,y)^2+1}\,dA
+&amp;= \int_{0}^{\pi/4} \int_{0}^{\operatorname{tg}(x)} \sqrt{\operatorname{tg}(x)^2+1}\,dy\,dx \\
+&amp;= \int_{0}^{\pi/4} \sqrt{\operatorname{tg}(x)^2+1}[y]_0^{\operatorname{tg}(x)}\,dx \\
+&amp;= \int_{0}^{\pi/4} \sqrt{\operatorname{tg}(x)^2+1}\operatorname{tg}(x)\,dx \\
+&amp;= \int_1^2 \frac{u^{-1/2}}{2}\,du \tag{1}\\
+&amp;= [\sqrt{u}]_1^2
+= \sqrt{2}-1.
+\end{align*}\]</span></p>
+<ol type="1">
+<li>Cambio <span class="math inline">\(u=\operatorname{tg}(x)^2+1\)</span>.</li>
+</ol></li>
+</ol>
+</div>
+</div>
+</div>
+<div id="exr-area-superficie-chimenea" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 11.11 </strong></span>Una tolva tiene forma cónica dada por la función <span class="math inline">\(f(x,y)=2\sqrt{x^2+y^2}\)</span> con altura 4 m. Calcular el volumen de la tolva y la cantidad de chapa necesaria para construirla.</p>
+</div>
+<div id="exr-integral-doble-valor-medio" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 11.12 </strong></span>Calcular el valor medio de la función <span class="math inline">\(f(x,y)=\sqrt{xy}\)</span> en la región del primer cuadrante delimitada por las funciones <span class="math inline">\(y=x\)</span> e <span class="math inline">\(y=x^2\)</span>.</p>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-10" class="callout-10-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Como las funciones <span class="math inline">\(y=x\)</span> e <span class="math inline">\(y=x^2\)</span> se cortan en los puntos <span class="math inline">\((0,0)\)</span> y <span class="math inline">\((1,1)\)</span>, la región de integración es <span class="math inline">\(R=\{(x,y)\in\mathbb{R}^2: 0\leq x\leq 1, x^2\leq y \leq x\}\)</span>. El valor medio de la función en esta región es el valor de la integral doble de <span class="math inline">\(f\)</span> sobre la región, dividida por el área de la región.</p>
 <p>Calculamos primero la integral doble de <span class="math inline">\(f\)</span> sobre <span class="math inline">\(R\)</span>.</p>
@@ -619,9 +732,6 @@ Solución
 <p>Por lo tanto, el valor medio de <span class="math inline">\(f\)</span> en la región <span class="math inline">\(R\)</span> es <span class="math inline">\(\frac{2/27}{1/6} = \frac{12}{27}\)</span>.</p>
 </div>
 </div>
-</div>
-<div id="exr-integral-polar-petalo" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 11.12 </strong></span>Un escudo contiene una flor dada por la función <span class="math inline">\(r(\theta) = \cos(2\theta)\)</span>. Calcular la cantidad de tela necesaria para construir la flor del escudo.</p>
 </div>
 <div id="exr-masa-lamina-chapa" class="theorem exercise">
 <p><span class="theorem-title"><strong>Ejercicio 11.13 </strong></span>Una lámina de chapa metálica tiene la forma de la forma de triángulo con vértices <span class="math inline">\((0,0)\)</span>, <span class="math inline">\((1,1)\)</span> y <span class="math inline">\((2,0)\)</span>. Si la densidad de la chapa en cada punto viene dada por la función <span class="math inline">\(d(x,y)=e^{x+y}\)</span> gr/cm<span class="math inline">\(^2\)</span>, calcular la masa de la chapa y su centro de masas.</p>

@@ -708,7 +708,7 @@ Para que la función tenga un punto de inflexión en $x=3$ debe ser $f''(3)=0$, 
 
 Para que la función tenga un máximo en $x=1$ debe ser $f'(1)=0$, es decir, $f'(1)=3\cdot 1^2-2\cdot 9\cdot 1+c = 3-18+c = -15+c=0$, de donde se deduce que $c=15$.
 
-Finalmente, para que pase por el punto $(1,0$)$ debe ser $f(1)=0$, es decir, $f(1) = 1^3-9\cdot 1^2+15\cdot 1+d = 1-9+15+d = 7+d=0$, de donde se deduce que $d=-7$.
+Finalmente, para que pase por el punto $(1,0)$ debe ser $f(1)=0$, es decir, $f(1) = 1^3-9\cdot 1^2+15\cdot 1+d = 1-9+15+d = 7+d=0$, de donde se deduce que $d=-7$.
 :::
 
 :::{#exr-extremos-3}
@@ -729,9 +729,13 @@ $$
 C'(n)= \frac{(n)'(1+n^2)-n(1+n^2)'}{(1+n^2)^2} = \frac{(1+n^2)-n(2n)}{(1+n^2)^2} = \frac{1-n^2}{(1+n^2)^2}
 $$
 
-$C'(x)=0 \Leftrightarrow 1-n^2 = 0 \Leftrightarrow n^2 =1 \Leftrightarrow n=\pm 1$. 
+$$
+C'(n)=0 \Leftrightarrow 1-n^2 = 0 \Leftrightarrow n^2 =1 \Leftrightarrow n=\pm 1.
+$$
 
-Como no tienen sentido cantidades de nitrógeno negativas, el único punto crítico está en $n=1$. Para ver si se trata de un máximo, estudiamos ahora el signo de la primera derivada a la izquierda y a la derecha de este punto. Tomando, por ejemplo $n=0$, se tiene $C'(0) = \frac{1-0^2}{(1+0^2)^2} = 1>0$, por lo que la función es creciente a la izquierda de $n=1$. Y tomando, por ejemplo $n=2$, se tiene $C'(2) = \frac{1-2^2}{(1+2^2)^2}=-3/25<0$, por lo que la función es decreciente a la derecha de $n=1$. Por tanto, en $n=1$ existe un máximo relativo, que además, es único. Como la función es continua en todo $\mathbb{R}$ al ser una función racional y no anularse nunca su denominador, se tiene que el máximo absoluto coincide con el relativo, de manera que el nivel de nitrógeno para el que la cosecha será máxima es $n=1$.
+Como no tienen sentido cantidades de nitrógeno negativas, el único punto crítico está en $n=1$. Para ver si se trata de un máximo, estudiamos ahora el signo de la primera derivada a la izquierda y a la derecha de este punto. Tomando, por ejemplo $n=0$, se tiene $C'(0) = \frac{1-0^2}{(1+0^2)^2} = 1>0$, por lo que la función es creciente a la izquierda de $n=1$. Y tomando, por ejemplo $n=2$, se tiene $C'(2) = \frac{1-2^2}{(1+2^2)^2}=-3/25<0$, por lo que la función es decreciente a la derecha de $n=1$. Por tanto, en $n=1$ existe un máximo relativo, que además, es único. 
+
+Como la función es continua en todo $\mathbb{R}$ al ser una función racional y no anularse nunca su denominador, se tiene que el máximo absoluto coincide con el relativo, de manera que el nivel de nitrógeno para el que la cosecha será máxima es $n=1$.
 :::
 
 :::{#exr-extremos-4}
@@ -745,7 +749,7 @@ $$
 
 :::{.callout-tip collapse="true"}
 ## Solución
-Veremos primero si hay algún máximo relativo. Para ello calculamos los puntos críticos de $v(x)=4(3-x)(5-x)=4x^2-32x+60
+Veremos primero si hay algún máximo relativo. Para ello calculamos los puntos críticos de $v(x)=4(3-x)(5-x)=4x^2-32x+60$.
 
 $$
 v'(x) = 8x-32 = 0 \Leftrightarrow x = 4.
@@ -762,19 +766,19 @@ Un naufrago se encuentra en una isla situada en un plano con coordenadas $(2,0)$
 
 :::{.callout-tip collapse="true"}
 ## Solución
-El ferry pasará por todos los puntos $(x,f(x))$, por lo que se trata de averiguar el valor de $x$ que hace mínima la distancia del punto $(2,0)$ a $(x,f(x))$, o lo que es lo mismo, minimizar el módulo del vector $(x,f(x))-(2,0) = $(x-2, f(x))$, que vale 
+El ferry pasará por todos los puntos $(x,f(x))$, por lo que se trata de averiguar el valor de $x$ que hace mínima la distancia del punto $(2,0)$ a $(x,f(x))$, o lo que es lo mismo, minimizar el módulo del vector $(x,f(x))-(2,0) = (x-2, f(x))$, que vale 
 
 $$
-|(x-2,f(x))|=\sqrt{(x-2)^2+(\sqrt{x})^2} = \sqrt{x^2-2x+4-x} = \sqrt{x^2-x+4}.
+|(x-2,f(x))|=\sqrt{(x-2)^2+(\sqrt{x+1})^2} = \sqrt{x^2-4x+4+x+1} = \sqrt{x^2-3x+5}.
 $$
 
-Se trata, por tanto, de calcular el mínimo de la función $m(x)=\sqrt{x^2-x+4}$. Calculamos los puntos críticos.
+Se trata, por tanto, de calcular el mínimo de la función $d(x)=\sqrt{x^2-3x+5}$. Calculamos los puntos críticos.
 
 $$
-m'(x) = \frac{2x-1}{2\sqrt{x^2-x+4}} = 0 \Leftrightarrow 2x-1 = 0 \Leftrightarrow x=1/2.
+d'(x) = \frac{2x-3}{2\sqrt{x^2-3x+5}} = 0 \Leftrightarrow 2x-3 = 0 \Leftrightarrow x=3/2.
 $$
 
-Para ver si se trata de un mínimo relativo, estudiamos el signo de la derivada a la izquierda y a la derecha del punto crítico. Tomando, por ejemplo, $x=0$, se tiene $m'(0) = \frac{2\cdot 0-1}{2\sqrt{0^2-0+4}} = -1/4<0$, de manera que el módulo decrece a la izquierda de $x=1/2$. Y tomando, por ejemplo, $x=1$, se tiene que $m'(1)=\frac{2\cdot 1-1}{2\sqrt{1^2-1+4}}=1/4>0$, de manera que el módulo crece a la derecha de $x=1/2$. Por tanto, la función del módulo tiene un mínimo relativo en $x=1/2$, que además es único, y como $m$ es continua en todo $\mathbb{R}$, el mínimo relativo es también mínimo absoluto, y por tanto, el naufrago debe nadar hacia el punto $(1/2, \sqrt{1/2})$.
+Para ver si se trata de un mínimo relativo, estudiamos el signo de la derivada a la izquierda y a la derecha del punto crítico. Tomando, por ejemplo, $x=1$, se tiene $d'(1) = \frac{2\cdot 1-3}{2\sqrt{1^2-3\cdot 1+5}} = -\sqrt{3}/6<0$, de manera que la distancia decrece a la izquierda de $x=3/2$. Y tomando, por ejemplo, $x=2$, se tiene que $m'(1)=\frac{2\cdot 2-3}{2\sqrt{1^2-3\cdot 2+5}}=\sqrt{3}/6>0$, de manera que la distancia crece a la derecha de $x=3/2$. Por tanto, la función de la distancia tiene un mínimo relativo en $x=3/2$, que además es único, y como $d$ es continua en todo $\mathbb{R}$, el mínimo relativo es también mínimo absoluto, y por tanto, el naufrago debe nadar hacia el punto $(3/2, \sqrt{3/2})$.
 :::
 
 :::{#exr-extremos-6}
@@ -783,7 +787,12 @@ Un hotel alquila habitaciones por un precio entre 40€ y 100€ diarios. Se ha 
 
 :::{.callout-tip collapse="true"}
 ## Solución
-Los ingresos vienen dados por la función $f(x) = xh(x)=x(300-3x) = 300x-3x^2$.
+Los ingresos vienen dados por la función 
+
+$$
+f(x) = xh(x)=x(300-3x) = 300x-3x^2.
+$$
+
 Se trata de calcular el máximo absoluto de esta función. Para ello veremos primero si tiene algún máximo relativo. Calculamos los puntos críticos.
 
 $$
@@ -830,24 +839,26 @@ Un lata de refresco cilíndrica contiene $33$ cl. Hallar las dimensiones de la l
 :::
 
 :::{#exr-extremos-9}
-La distancia en kilómetros que recorre un coche de alquiler con 1 litro de gasolina depende de la velocidad a la que circule según la función $d(x)=120-x$ para $x\in(50,120)$. Si el coste de la gasolina es de $2$ €/l y el coste del alquiler es de $10$ €/h, ¿a qué velocidad debe circular para que el coste del trayecto sea mínimo? ¿Cuál será el coste por kilómetro si circula a esa velocidad?
+La distancia en kilómetros que recorre un coche de alquiler con 1 litro de gasolina depende de la velocidad a la que circule según la función $d(x)=18-\frac{x}{20}$ para $x\in(50,200)$. Si el coste de la gasolina es de $2$ €/l y el coste del alquiler es de $5$ €/h, ¿a qué velocidad debe circular para que el coste del trayecto sea mínimo? ¿Cuál será el coste por kilómetro si circula a esa velocidad?
 :::
 
 :::{.callout-tip collapse="true"}
 ## Solución
-Como la distancia recorrida a una velocidad $x$ es $d(x)=120-x$ y, como la velocidad es $x=\frac{d(x)}{t}$, el tiempo necesario para recorrer esa distancia es $\frac{d(x)}{x}$, de manera que el coste del alquiler para recorrer esa distancia es $\frac{d(x)}{x}10$. A esto hay que sumar el precio del litro de gasolina necesario para recorrer esa distancia, de manera que el coste de recorrer esa distancia es $\frac{d(x)}{x}10+2$. Por tanto, el coste por kilómetro para una velocidad $x$ viene dado por la función 
+Como la distancia recorrida a una velocidad $x$ es $d(x)=18-\frac{x}{20}$ y, como la velocidad es $x=\frac{d(x)}{t}$, el tiempo necesario para recorrer esa distancia es $\frac{d(x)}{x}$, de manera que el coste del alquiler para recorrer esa distancia es $\frac{d(x)}{x}10$. A esto hay que sumar el precio del litro de gasolina necesario para recorrer esa distancia, de manera que el coste de recorrer esa distancia es $\frac{d(x)}{x}10+2$. Por tanto, el coste por kilómetro para una velocidad $x$ viene dado por la función 
 
 $$
-c(x)=\frac{\frac{d(x)}{x}10+2}{120-x} = \frac{8x-1200}{x^2-120x}
+c(x)=\frac{\frac{d(x)}{x}5+2}{d(x)} = \frac{-35x-1800}{x^2-360x}
 $$
 
 Para determinar el mínimo de la función calculamos los puntos críticos. La derivada vale
 
 $$
-c'(x)=\frac{-8x^2+2400x-144000}{x^4-240x^3+14400 x^2}
+c'(x)
+=\frac{-35(x^2-360x)-(-35x-1800)(2x-360)}{(x^2-360x)^2}
+=\frac{35x^2+3600x-648000}{(x^2-360x)^2}
 $$
 
-y resolviendo la ecuación $-8x^2+2400x-144000=0$ se obtienen los puntos críticos $x=82.92$ y $x=217.08$. Como el segundo punto crítico queda fuera del rango de velocidades de 50 a 120, estudiaremos solo el primero. Usando el criterio de la primera derivada, estudiamos el signo de la primera derivada a la izquierda y a la derecha del punto crítico, por ejemplo $c'(80)=-1/3200<0$ y $c'(83)=88/9431041>0$, por lo que $c$ tiene un mínimo en $x=82.92$, es decir, la velocidad a la que debe viajar para que el coste sea mínimo es $82.92$ km/h, y el precio por kilómetro a esa velocidad será $0.17$ €/l.
+y resolviendo la ecuación $35x^2+3600x-648000=0$ se obtienen los puntos críticos $x=94.0334$ y $x=-196.8905$. Como el segundo punto crítico queda fuera del rango de velocidades de $50$ a $200$, estudiaremos solo el primero. Usando el criterio de la primera derivada, estudiamos el signo de la primera derivada a la izquierda y a la derecha del punto crítico, por ejemplo $c'(90)=-1/14580<0$ y $c'(100)=31/338000>0$, por lo que $c$ tiene un mínimo en $x=94.0334$, es decir, la velocidad a la que debe viajar para que el coste sea mínimo es $94.0334$ km/h, y el precio por kilómetro a esa velocidad será $c(94.0334)=0.2036$ €/km.
 :::
 
 :::{#exr-teorema-valor-medio}
