@@ -364,14 +364,31 @@ por lo que la región de integración en coordenadas polares es $R=\{(r,\theta)\
 :::
 
 :::{#exr-integral-polar-petalo}
-Un escudo contiene una flor dada por la función $r(\theta) = \cos(2\theta)$. Calcular la cantidad de tela necesaria para construir la flor del escudo.
+Un escudo contiene una flor dada por la función $r(\theta) = \cos(2\theta)$. Calcular la cantidad de tela necesaria (en metros) para construir la flor del escudo.
+:::
+
+:::{.callout-tip collapse="true"}
+## Solución
+La región de integración es $R=\{(r,\theta)\in \mathbb{R}^+\times\mathbb{R}: 0\leq \theta\leq 2\pi, 0\leq r\leq \cos(2\theta)\}$, y como queremos calcular el area de esta región, basta con integrar la función $f(r,\theta)=1$ sobre la región de integración en coordenadas polares, es decir,
+
+\begin{align*}
+\int_0^{2\pi} \int_0^{\cos(2\theta)} r\,dr\,d\theta
+&= \int_0^{2\pi} \left[\frac{r^2}{2}\right]_0^{\cos(2\theta)} \,d\theta
+= \int_0^{2\pi} \frac{1}{2}\cos(2\theta)^2 \,d\theta \\
+&= \frac{1}{2}\int_0^{2\pi} \frac{1+\cos(4\theta)}{2} \,d\theta 
+= \frac{1}{4} \left[\theta + \frac{\operatorname{sen}(4\theta)}{4}\right]_0^{2\pi}\\
+&= \frac{1}{4}\left(2\pi + \frac{\operatorname{sen}(8\pi)}{4}-0-\frac{\operatorname{sen}(0)}{4}\right)
+=\pi/2.
+\end{align*}
+
+Así pues, se necesitarán $\pi/2\approx 1.5708$ m$^2$ de tela.
 :::
 
 :::{#exr-integral-doble-area-superficies}
 Calcular el area de las superficies de las siguientes funciones en las regiones indicadas.
 
-a.  $f(x,y)=xy$ en $R=\{(x,y)\in \mathbb{R}^2: x^2+y^2\leq 1\}$.
-a.  $g(x,y)=\ln(\sec(x))$ en $R=\{(x,y)\in \mathbb{R}^2: 0\leq x\leq \pi/4, 0\leq y\leq \operatorname{tg}(x)\}$.
+a.  $f(x,y)=xy$, en $R=\{(x,y)\in \mathbb{R}^2: x^2+y^2\leq 1\}$.
+a.  $g(x,y)=\ln(\sec(x))$, en $R=\{(x,y)\in \mathbb{R}^2: 0\leq x\leq \pi/4, 0\leq y\leq \operatorname{tg}(x)\}$.
 :::
 
 :::{.callout-tip collapse="true"}

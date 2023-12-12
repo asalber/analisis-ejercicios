@@ -629,14 +629,7 @@ Solución
 </div>
 </div>
 <div id="exr-integral-polar-petalo" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 11.9 </strong></span>Un escudo contiene una flor dada por la función <span class="math inline">\(r(\theta) = \cos(2\theta)\)</span>. Calcular la cantidad de tela necesaria para construir la flor del escudo.</p>
-</div>
-<div id="exr-integral-doble-area-superficies" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 11.10 </strong></span>Calcular el area de las superficies de las siguientes funciones en las regiones indicadas.</p>
-<ol type="a">
-<li><span class="math inline">\(f(x,y)=xy\)</span> en <span class="math inline">\(R=\{(x,y)\in \mathbb{R}^2: x^2+y^2\leq 1\}\)</span>.</li>
-<li><span class="math inline">\(g(x,y)=\ln(\sec(x))\)</span> en <span class="math inline">\(R=\{(x,y)\in \mathbb{R}^2: 0\leq x\leq \pi/4, 0\leq y\leq \operatorname{tg}(x)\}\)</span>.</li>
-</ol>
+<p><span class="theorem-title"><strong>Ejercicio 11.9 </strong></span>Un escudo contiene una flor dada por la función <span class="math inline">\(r(\theta) = \cos(2\theta)\)</span>. Calcular la cantidad de tela necesaria (en metros) para construir la flor del escudo.</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
@@ -649,6 +642,39 @@ Solución
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
 <div id="callout-9" class="callout-9-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>La región de integración es <span class="math inline">\(R=\{(r,\theta)\in \mathbb{R}^+\times\mathbb{R}: 0\leq \theta\leq 2\pi, 0\leq r\leq \cos(2\theta)\}\)</span>, y como queremos calcular el area de esta región, basta con integrar la función <span class="math inline">\(f(r,\theta)=1\)</span> sobre la región de integración en coordenadas polares, es decir,</p>
+<p><span class="math display">\[\begin{align*}
+\int_0^{2\pi} \int_0^{\cos(2\theta)} r\,dr\,d\theta
+&amp;= \int_0^{2\pi} \left[\frac{r^2}{2}\right]_0^{\cos(2\theta)} \,d\theta
+= \int_0^{2\pi} \frac{1}{2}\cos(2\theta)^2 \,d\theta \\
+&amp;= \frac{1}{2}\int_0^{2\pi} \frac{1+\cos(4\theta)}{2} \,d\theta
+= \frac{1}{4} \left[\theta + \frac{\operatorname{sen}(4\theta)}{4}\right]_0^{2\pi}\\
+&amp;= \frac{1}{4}\left(2\pi + \frac{\operatorname{sen}(8\pi)}{4}-0-\frac{\operatorname{sen}(0)}{4}\right)
+=\pi/2.
+\end{align*}\]</span></p>
+<p>Así pues, se necesitarán <span class="math inline">\(\pi/2\approx 1.5708\)</span> m<span class="math inline">\(^2\)</span> de tela.</p>
+</div>
+</div>
+</div>
+<div id="exr-integral-doble-area-superficies" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 11.10 </strong></span>Calcular el area de las superficies de las siguientes funciones en las regiones indicadas.</p>
+<ol type="a">
+<li><span class="math inline">\(f(x,y)=xy\)</span>, en <span class="math inline">\(R=\{(x,y)\in \mathbb{R}^2: x^2+y^2\leq 1\}\)</span>.</li>
+<li><span class="math inline">\(g(x,y)=\ln(\sec(x))\)</span>, en <span class="math inline">\(R=\{(x,y)\in \mathbb{R}^2: 0\leq x\leq \pi/4, 0\leq y\leq \operatorname{tg}(x)\}\)</span>.</li>
+</ol>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-10" class="callout-10-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ol type="a">
 <li><p>Calculamos primero las derivadas parciales de <span class="math inline">\(f\)</span>.</p>
@@ -701,7 +727,7 @@ f'_y(x,y) &amp;= 0.
 <p><span class="theorem-title"><strong>Ejercicio 11.12 </strong></span>Calcular el valor medio de la función <span class="math inline">\(f(x,y)=\sqrt{xy}\)</span> en la región del primer cuadrante delimitada por las funciones <span class="math inline">\(y=x\)</span> e <span class="math inline">\(y=x^2\)</span>.</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -710,7 +736,7 @@ Solución
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-10" class="callout-10-contents callout-collapse collapse">
+<div id="callout-11" class="callout-11-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Como las funciones <span class="math inline">\(y=x\)</span> e <span class="math inline">\(y=x^2\)</span> se cortan en los puntos <span class="math inline">\((0,0)\)</span> y <span class="math inline">\((1,1)\)</span>, la región de integración es <span class="math inline">\(R=\{(x,y)\in\mathbb{R}^2: 0\leq x\leq 1, x^2\leq y \leq x\}\)</span>. El valor medio de la función en esta región es el valor de la integral doble de <span class="math inline">\(f\)</span> sobre la región, dividida por el área de la región.</p>
 <p>Calculamos primero la integral doble de <span class="math inline">\(f\)</span> sobre <span class="math inline">\(R\)</span>.</p>
