@@ -1769,12 +1769,155 @@ $$
 Una empresa que fabrica cajas de cartón quiere construir una caja rectangular sin tapa con un volumen de 25 litros. ¿Qué dimensiones debe tener la caja para emplear la menor cantidad de cartón posible?
 :::
 
+:::{.callout-tip collapse="true"}
+## Solución
+El volumen de una caja de base rectangular se obtiene multiplicando sus dimensiones $V(x, y, z)=xyz$, donde $x$ e $y$ son las dimensiones del rectángulo de la base y $z$ la altura.
+
+Por otro lado, el area de su superficie es $S(x, y, z) = xy + 2xz + 2yz$. Así pues, en el punto donde se maximize esta función debe cumplirse, por el método de los [multiplicadores de Lagrange](https://aprendeconalf.es/analisis-manual/13-derivadas-funciones-varias-variables.html#multiplicadores-de-lagrange), las siguientes condiciones:
+
+$$
+\begin{gathered}
+V(x, y, z) = 25000 \mbox{ cm}^3\\
+\nabla S(x,y,z) = k \nabla V(x,y,z)
+\end{gathered}
+$$
+
+Si calculamos los gradientes de $V$ y $S$ se tiene
+
+\begin{align*}
+\nabla S(x,y,z) &= (y+2z, x+2z, 2x+2y) \\
+\nabla V(x,y,z) &= (yz, xz, xy),
+\end{align*}
+
+de manera que se deben cumplir las ecuaciones 
+
+$$
+\begin{gathered}
+y+2z = kyz
+x+2z = kxz
+2x+2y = kxy
+\end{gathered}
+$$
+
+Para resolver el sistema, multiplicamos la primera ecuación por $x$, la segunda por $y$ y la tercera por $z$, para que las tres ecuaciones tengan el mismo lado derecho, de donde se deduce que 
+
+$$
+xy + 2xz = xy + 2yz = 2xz + 2yz.
+$$
+
+De la primera ecuación se deduce fácilmente que $x=y$, y sustituyendo en la segunda, se tiene que $x^2 = 2xz$, que tiene solución $x=0$ o $z = x/2$. Como la primera opción daría un volumen nulo, no puede ser, así que solo tendría sentido la segunda. Finalmente como el volumen debe ser $25000$ cm$^3$, sustituyendo las soluciones en la fórmula del volumen se tiene 
+
+$$
+V(x,y,z) = 25000 \Leftrightarrow xx\frac{x}{2} = 25000 \frac{x^3}= 50000 \Leftrightarrow x \approx 36.8403,
+$$
+
+por lo que las dimensiones de la caja son $x=y=36.8403$ cm y $z=36.8403/2 = 18.4201$ cm.
+:::
+
 :::{#exr-minimización-distancia-parabola}
-Un cometa sigue la órbita dada por la función $y=9-x^2$, donde el origen de coordenadas es la posición del sol. Si una nave espacial se mantiene fija en la posición $(4,0)$, ¿en qué punto de su trayectoria el cometa estará más cerca del nave?
+Un cometa sigue la órbita dada por la función $3x^2+y^2=9$, donde el origen de coordenadas es la posición del sol. Si una nave espacial se mantiene fija en la posición $(4,1)$, ¿en qué punto de su trayectoria el cometa estará más cerca del nave?
+:::
+
+:::{.callout-tip collapse="true"}
+## Solución
+La distancia del cualquier punto $(x, y)$ de la trayectoria del cometa a la posición de la nave $(4,2)$ es 
+$f(x, y) = \sqrt{(x-4)^2+(y-2)^2}$, y si llamamos $g(x,y)=3x+y^2$, por el método de los multiplicadores de Lagrange, se tienen que cumplir las ecuaciones 
+
+$$
+\begin{gathered}
+g(x,y) = 9\\
+\nabla f(x,y) = k\nabla g(x,y)
+\end{gathered}
+$$
+
+Calculando los gradientes de $f$ y $g$, 
+
+\begin{align*}
+\nabla f(x,y) &= \left(\frac{(x-4)}{\sqrt{(x-4)^2+(y-2)^2}}, \frac{(y-2)}{\sqrt{(x-4)^2+(y-2)^2}}\right) \\
+\nabla g(x,y) &= (3, 2y),
+\end{align*}
+
+se tienen que cumplir las ecuaciones 
+
+$$
+\begin{gathered}
+\frac{(x-4)}{\sqrt{(x-4)^2+(y-2)^2}} = k3 \\
+\frac{(y-2)}{\sqrt{(x-4)^2+(y-2)^2}} = k2y,
+\end{gathered}
+$$
+
+de donde se deduce que 
+
+$$
+\begin{gathered}
+\frac{(x-4)}{3\sqrt{(x-4)^2+(y-2)^2}} = \frac{(y-2)}{2y\sqrt{(x-4)^2+(y-2)^2}} \\
+\Leftrightarrow \frac{(x-4)}{3} = \frac{(y-2)}{2y} \\
+\Leftrightarrow x = \frac{11}{2}-\frac{3}{y}.
+\end{gathered}
+$$
+
+Como además tiene que cumplirse la ecuación de la trayectoria del cometa, se tiene que 
+
+$$
+\begin{gathered}
+g\left(\frac{11}{2}-\frac{3}{y},y\right) = 9 
+\Leftrightarrow \frac{33}{2}-\frac{9}{y}+y^2 = 9
+\Leftrightarrow y^3+15y-18 = 0 
+\Leftrightarrow y \approx 1.047,
+\end{gathered}
+$$
+
+y, por tanto, $x\approx \frac{11}{2}-\frac{3}{1.047}= 2.6347.$
 :::
 
 :::{#exr-minimizacion-coste-production}
 La función de producción de un determinado producto es $f(k,l)= kl^3$ donde $k$ son las unidades de capital y $l$ las unidades de mano de obra. Si el coste por unidad de capital es 7€ y el coste por unidad de mano de obra es 6€, determinar la cantidad de capital y mano de obra que minimiza el coste si deben producirse 290 unidades del producto.
+:::
+
+:::{.callout-tip collapse="true"}
+## Solución
+La función de coste, para $k$ unidades de capital y $l$ unidades de mano de obra es $c(k,l) = 7k+6l$, así que se trata de minimizar esta función con la restricción $f(k,l)=290$. Aplicando el método de los multiplicadores de Lagrange, debe cumplirse
+
+$$
+\begin{gathered}
+f(k,l) = 290 \\
+\nabla c(k,l) = \lambda\nabla f(k,l)
+\end{gathered}
+$$
+
+Si calculamos los gradientes de $f$ y $g$ se tiene
+
+\begin{align*}
+\nabla f(k,l) &= (l^3, 3kl^2)\\
+\nabla c(k,l) &= (7, 6),
+\end{align*}
+
+de manera que deben cumplirse las ecuaciones
+
+$$
+\begin{gathered}
+l^3 = 7\lambda \\
+3kl^2 = 6\lambda,
+\end{gathered}
+$$
+
+de donde se deduce que
+
+$$
+\frac{l^3}{7} = \frac{3kl^2}{6} 
+\leftrightarrow k = \frac{2l}{7}.
+$$
+
+Finalmente, sustituyendo en la restricción se tiene
+
+$$
+f\left(\frac{2l}{7}, l\right) = 290
+\leftrightarrow \frac{2l}{7}l^3 = 290
+\leftrightarrow l^4 = 1015
+\leftrightarrow l = \sqrt[4]{1015} \approx 5.6444,
+$$
+
+y $k \approx \frac{2\cdot 5.6444}{7} = 1.6127.$
 :::
 
 :::{#exr-polinomios-maclaurin-dos-variables}
@@ -1784,6 +1927,16 @@ a.  $f(x,y) = \ln(x+y+1)$.
 a.  $g(x,y) = e^{x+y}$.
 a.  $h(x,y) = \operatorname{sen}(x)\operatorname{sen}(y)$.
 :::
+
+:::{.callout-tip collapse="true"}
+## Solución
+a.  $p^2_{f,(0,0)}(x,y) = x + y -\frac{x^2}{2} - xy -\frac{y^2}{2}$.
+
+a.  $p^2_{g,(0,0)}(x,y) = 1 + x + y +\frac{x^2}{2} + xy +\frac{y^2}{2}$.
+
+a.  $p^2_{h,(0,0)}(x,y) = xy$.
+:::
+
 
 :::{#exr-polinomio-taylor-modelo-ecologico}
 Un modelo ecológico explica el número de individuos de una población mediante la función

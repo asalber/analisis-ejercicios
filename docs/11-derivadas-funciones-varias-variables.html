@@ -2046,11 +2046,155 @@ a=\bar y-b\bar x \quad \mbox{ y } b=\frac{s_{xy}}{s_x^2}.
 <div id="exr-minimización-material-caja" class="theorem exercise">
 <p><span class="theorem-title"><strong>Ejercicio 10.41 </strong></span>Una empresa que fabrica cajas de cartón quiere construir una caja rectangular sin tapa con un volumen de 25 litros. ¿Qué dimensiones debe tener la caja para emplear la menor cantidad de cartón posible?</p>
 </div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-40-contents" aria-controls="callout-40" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-40" class="callout-40-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>El volumen de una caja de base rectangular se obtiene multiplicando sus dimensiones <span class="math inline">\(V(x, y, z)=xyz\)</span>, donde <span class="math inline">\(x\)</span> e <span class="math inline">\(y\)</span> son las dimensiones del rectángulo de la base y <span class="math inline">\(z\)</span> la altura.</p>
+<p>Por otro lado, el area de su superficie es <span class="math inline">\(S(x, y, z) = xy + 2xz + 2yz\)</span>. Así pues, en el punto donde se maximize esta función debe cumplirse, por el método de los <a href="https://aprendeconalf.es/analisis-manual/13-derivadas-funciones-varias-variables.html#multiplicadores-de-lagrange">multiplicadores de Lagrange</a>, las siguientes condiciones:</p>
+<p><span class="math display">\[
+\begin{gathered}
+V(x, y, z) = 25000 \mbox{ cm}^3\\
+\nabla S(x,y,z) = k \nabla V(x,y,z)
+\end{gathered}
+\]</span></p>
+<p>Si calculamos los gradientes de <span class="math inline">\(V\)</span> y <span class="math inline">\(S\)</span> se tiene</p>
+<p><span class="math display">\[\begin{align*}
+\nabla S(x,y,z) &amp;= (y+2z, x+2z, 2x+2y) \\
+\nabla V(x,y,z) &amp;= (yz, xz, xy),
+\end{align*}\]</span></p>
+<p>de manera que se deben cumplir las ecuaciones</p>
+<p><span class="math display">\[
+\begin{gathered}
+y+2z = kyz
+x+2z = kxz
+2x+2y = kxy
+\end{gathered}
+\]</span></p>
+<p>Para resolver el sistema, multiplicamos la primera ecuación por <span class="math inline">\(x\)</span>, la segunda por <span class="math inline">\(y\)</span> y la tercera por <span class="math inline">\(z\)</span>, para que las tres ecuaciones tengan el mismo lado derecho, de donde se deduce que</p>
+<p><span class="math display">\[
+xy + 2xz = xy + 2yz = 2xz + 2yz.
+\]</span></p>
+<p>De la primera ecuación se deduce fácilmente que <span class="math inline">\(x=y\)</span>, y sustituyendo en la segunda, se tiene que <span class="math inline">\(x^2 = 2xz\)</span>, que tiene solución <span class="math inline">\(x=0\)</span> o <span class="math inline">\(z = x/2\)</span>. Como la primera opción daría un volumen nulo, no puede ser, así que solo tendría sentido la segunda. Finalmente como el volumen debe ser <span class="math inline">\(25000\)</span> cm<span class="math inline">\(^3\)</span>, sustituyendo las soluciones en la fórmula del volumen se tiene</p>
+<p><span class="math display">\[
+V(x,y,z) = 25000 \Leftrightarrow xx\frac{x}{2} = 25000 \frac{x^3}= 50000 \Leftrightarrow x \approx 36.8403,
+\]</span></p>
+<p>por lo que las dimensiones de la caja son <span class="math inline">\(x=y=36.8403\)</span> cm y <span class="math inline">\(z=36.8403/2 = 18.4201\)</span> cm.</p>
+</div>
+</div>
+</div>
 <div id="exr-minimización-distancia-parabola" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 10.42 </strong></span>Un cometa sigue la órbita dada por la función <span class="math inline">\(y=9-x^2\)</span>, donde el origen de coordenadas es la posición del sol. Si una nave espacial se mantiene fija en la posición <span class="math inline">\((4,0)\)</span>, ¿en qué punto de su trayectoria el cometa estará más cerca del nave?</p>
+<p><span class="theorem-title"><strong>Ejercicio 10.42 </strong></span>Un cometa sigue la órbita dada por la función <span class="math inline">\(3x^2+y^2=9\)</span>, donde el origen de coordenadas es la posición del sol. Si una nave espacial se mantiene fija en la posición <span class="math inline">\((4,1)\)</span>, ¿en qué punto de su trayectoria el cometa estará más cerca del nave?</p>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-41-contents" aria-controls="callout-41" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-41" class="callout-41-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>La distancia del cualquier punto <span class="math inline">\((x, y)\)</span> de la trayectoria del cometa a la posición de la nave <span class="math inline">\((4,2)\)</span> es <span class="math inline">\(f(x, y) = \sqrt{(x-4)^2+(y-2)^2}\)</span>, y si llamamos <span class="math inline">\(g(x,y)=3x+y^2\)</span>, por el método de los multiplicadores de Lagrange, se tienen que cumplir las ecuaciones</p>
+<p><span class="math display">\[
+\begin{gathered}
+g(x,y) = 9\\
+\nabla f(x,y) = k\nabla g(x,y)
+\end{gathered}
+\]</span></p>
+<p>Calculando los gradientes de <span class="math inline">\(f\)</span> y <span class="math inline">\(g\)</span>,</p>
+<p><span class="math display">\[\begin{align*}
+\nabla f(x,y) &amp;= \left(\frac{(x-4)}{\sqrt{(x-4)^2+(y-2)^2}}, \frac{(y-2)}{\sqrt{(x-4)^2+(y-2)^2}}\right) \\
+\nabla g(x,y) &amp;= (3, 2y),
+\end{align*}\]</span></p>
+<p>se tienen que cumplir las ecuaciones</p>
+<p><span class="math display">\[
+\begin{gathered}
+\frac{(x-4)}{\sqrt{(x-4)^2+(y-2)^2}} = k3 \\
+\frac{(y-2)}{\sqrt{(x-4)^2+(y-2)^2}} = k2y,
+\end{gathered}
+\]</span></p>
+<p>de donde se deduce que</p>
+<p><span class="math display">\[
+\begin{gathered}
+\frac{(x-4)}{3\sqrt{(x-4)^2+(y-2)^2}} = \frac{(y-2)}{2y\sqrt{(x-4)^2+(y-2)^2}} \\
+\Leftrightarrow \frac{(x-4)}{3} = \frac{(y-2)}{2y} \\
+\Leftrightarrow x = \frac{11}{2}-\frac{3}{y}.
+\end{gathered}
+\]</span></p>
+<p>Como además tiene que cumplirse la ecuación de la trayectoria del cometa, se tiene que</p>
+<p><span class="math display">\[
+\begin{gathered}
+g\left(\frac{11}{2}-\frac{3}{y},y\right) = 9
+\Leftrightarrow \frac{33}{2}-\frac{9}{y}+y^2 = 9
+\Leftrightarrow y^3+15y-18 = 0
+\Leftrightarrow y \approx 1.047,
+\end{gathered}
+\]</span></p>
+<p>y, por tanto, <span class="math inline">\(x\approx \frac{11}{2}-\frac{3}{1.047}= 2.6347.\)</span></p>
+</div>
+</div>
 </div>
 <div id="exr-minimizacion-coste-production" class="theorem exercise">
 <p><span class="theorem-title"><strong>Ejercicio 10.43 </strong></span>La función de producción de un determinado producto es <span class="math inline">\(f(k,l)= kl^3\)</span> donde <span class="math inline">\(k\)</span> son las unidades de capital y <span class="math inline">\(l\)</span> las unidades de mano de obra. Si el coste por unidad de capital es 7€ y el coste por unidad de mano de obra es 6€, determinar la cantidad de capital y mano de obra que minimiza el coste si deben producirse 290 unidades del producto.</p>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-42-contents" aria-controls="callout-42" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-42" class="callout-42-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>La función de coste, para <span class="math inline">\(k\)</span> unidades de capital y <span class="math inline">\(l\)</span> unidades de mano de obra es <span class="math inline">\(c(k,l) = 7k+6l\)</span>, así que se trata de minimizar esta función con la restricción <span class="math inline">\(f(k,l)=290\)</span>. Aplicando el método de los multiplicadores de Lagrange, debe cumplirse</p>
+<p><span class="math display">\[
+\begin{gathered}
+f(k,l) = 290 \\
+\nabla c(k,l) = \lambda\nabla f(k,l)
+\end{gathered}
+\]</span></p>
+<p>Si calculamos los gradientes de <span class="math inline">\(f\)</span> y <span class="math inline">\(g\)</span> se tiene</p>
+<p><span class="math display">\[\begin{align*}
+\nabla f(k,l) &amp;= (l^3, 3kl^2)\\
+\nabla c(k,l) &amp;= (7, 6),
+\end{align*}\]</span></p>
+<p>de manera que deben cumplirse las ecuaciones</p>
+<p><span class="math display">\[
+\begin{gathered}
+l^3 = 7\lambda \\
+3kl^2 = 6\lambda,
+\end{gathered}
+\]</span></p>
+<p>de donde se deduce que</p>
+<p><span class="math display">\[
+\frac{l^3}{7} = \frac{3kl^2}{6}
+\leftrightarrow k = \frac{2l}{7}.
+\]</span></p>
+<p>Finalmente, sustituyendo en la restricción se tiene</p>
+<p><span class="math display">\[
+f\left(\frac{2l}{7}, l\right) = 290
+\leftrightarrow \frac{2l}{7}l^3 = 290
+\leftrightarrow l^4 = 1015
+\leftrightarrow l = \sqrt[4]{1015} \approx 5.6444,
+\]</span></p>
+<p>y <span class="math inline">\(k \approx \frac{2\cdot 5.6444}{7} = 1.6127.\)</span></p>
+</div>
+</div>
 </div>
 <div id="exr-polinomios-maclaurin-dos-variables" class="theorem exercise">
 <p><span class="theorem-title"><strong>Ejercicio 10.44 </strong></span>Calcular los polinomios de Maclaurin de segundo grado para las siguientes funciones.</p>
@@ -2059,6 +2203,26 @@ a=\bar y-b\bar x \quad \mbox{ y } b=\frac{s_{xy}}{s_x^2}.
 <li><span class="math inline">\(g(x,y) = e^{x+y}\)</span>.</li>
 <li><span class="math inline">\(h(x,y) = \operatorname{sen}(x)\operatorname{sen}(y)\)</span>.</li>
 </ol>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-43-contents" aria-controls="callout-43" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-43" class="callout-43-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="a">
+<li><p><span class="math inline">\(p^2_{f,(0,0)}(x,y) = x + y -\frac{x^2}{2} - xy -\frac{y^2}{2}\)</span>.</p></li>
+<li><p><span class="math inline">\(p^2_{g,(0,0)}(x,y) = 1 + x + y +\frac{x^2}{2} + xy +\frac{y^2}{2}\)</span>.</p></li>
+<li><p><span class="math inline">\(p^2_{h,(0,0)}(x,y) = xy\)</span>.</p></li>
+</ol>
+</div>
+</div>
 </div>
 <div id="exr-polinomio-taylor-modelo-ecologico" class="theorem exercise">
 <p><span class="theorem-title"><strong>Ejercicio 10.45 </strong></span>Un modelo ecológico explica el número de individuos de una población mediante la función</p>
