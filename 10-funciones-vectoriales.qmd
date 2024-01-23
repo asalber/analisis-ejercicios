@@ -10,43 +10,12 @@ execute:
 :::{#exr-trayectorias-funciones-vectoriales}
 Emparejar las siguientes funciones vectoriales con las trayectorias de más abajo.
 
-
 :::{.content-visible when-format="html"}
-```{julia}
-#| echo: false
-using GLMakie
-myblue = RGBf(0.067,0.529,0.871)
-fig = Figure(backgroundcolor=:transparent)
-t = range(0, 4pi, length=200)
-lines(fig[1,1], t./2 .+ 2, 2t .- 1, t .+ 1; linewidth = 2, color = myblue)
-lines(fig[1,2], sin.(t), cos.(t), t/4; linewidth = 2, color = myblue)
-lines(fig[2,1], t.*cos.(t), t, t.*sin.(t); linewidth = 2, color = myblue)
-lines(fig[2,2], cos.(2t), sin.(t), cos.(t) ; linewidth = 2, color = myblue)
-Label(fig[1, 1, Top()], "A", padding = (0, 0, 5, 0))
-Label(fig[1, 2, Top()], "B", padding = (0, 0, 5, 0))
-Label(fig[2, 1, Top()], "C", padding = (0, 0, 5, 0))
-Label(fig[2, 2, Top()], "D", padding = (0, 0, 5, 0))
-fig
-```
+![](img/funciones-vectoriales/trayectorias-espacio.svg)
 :::
 
 :::{.content-visible unless-format="html"}
-```{julia}
-#| echo: false
-using CairoMakie
-myblue = RGBf(0.067,0.529,0.871)
-fig = Figure()
-t = range(0, 4pi, length=200)
-lines(fig[1,1], t./2 .+ 2, 2t .- 1, t .+ 1; linewidth = 2, color = myblue)
-lines(fig[1,2], sin.(t), cos.(t), t/4; linewidth = 2, color = myblue)
-lines(fig[2,1], t.*cos.(t), t, t.*sin.(t); linewidth = 2, color = myblue)
-lines(fig[2,2], cos.(2t), sin.(t), cos.(t) ; linewidth = 2, color = myblue)
-Label(fig[1, 1, Top()], "A", padding = (0, 0, 5, 0))
-Label(fig[1, 2, Top()], "B", padding = (0, 0, 5, 0))
-Label(fig[2, 1, Top()], "C", padding = (0, 0, 5, 0))
-Label(fig[2, 2, Top()], "D", padding = (0, 0, 5, 0))
-fig
-```
+![](img/funciones-vectoriales/trayectorias-espacio.pdf)
 :::
 
 a. $\mathbf{f}(t) = (\operatorname{sen}(t), \cos(t), t/4)$
@@ -518,7 +487,41 @@ $$
 \tilde{\mathbf{f}}(s) = \left(\frac{3s}{\sqrt{13}}+1,1-\frac{2s}{\sqrt{13}}\right).
 $$
 
+a.  $\mathbf{g}'(t)= (e^t(\operatorname{sen}(t)+\cos(t)), e^t(\cos(t)-\operatorname{sen}(t)), 0)$ y su módulo vale 
 
+    \begin{align*}
+    |\mathbf{g}'(t)| 
+    &= \sqrt{(e^t(\operatorname{sen}(t)+\cos(t)))^2 + (e^t(\cos(t)-\operatorname{sen}(t)))^2 + 0^2} \\
+    &= e^t\sqrt{\operatorname{sen}(t)^2+\cos(t)^2+2\operatorname{sen}(t)\cos(t) + \operatorname{sen}(t)^2+\cos(t)^2-2\operatorname{sen}(t)\cos(t)} \\
+    &= e^t\sqrt{2},
+    \end{align*}
+
+    por lo que su función longitud de arco para $t>0$ es
+
+    $$
+    s(t) 
+    = \int_0^t |\mathbf{g}'(x)|\,dx 
+    = \int_0^t \sqrt{2}e^t\,dx 
+    = [\sqrt{2}e^t]_0^t 
+    = \sqrt{2}e^t-\sqrt{2}.
+    $$
+
+    Tomando la inversa de la función longitud de arco 
+
+    $$
+    s = \sqrt{2}e^t-\sqrt{2}
+    \Leftrightarrow \sqrt{2}e^t = x+\sqrt{2}
+    \Leftrightarrow e^t = \frac{x+\sqrt{2}}{\sqrt{2}}
+    \Leftrightarrow t = \ln\left(\frac{x+\sqrt{2}}{\sqrt{2}}\right)
+    $$ 
+
+    y haciendo el cambio de variable en $\mathbf{g}(t)$, llegamos a la parametrización de longitud de arco
+
+    \begin{align*}
+    \tilde{\mathbf{g}}(s) 
+    &= \left(e^{\ln\left(\frac{x+\sqrt{2}}{\sqrt{2}}\right)}\operatorname{sen}\left(\ln\left(\frac{x+\sqrt{2}}{\sqrt{2}}\right)\right) + e^{\ln\left(\frac{x+\sqrt{2}}{\sqrt{2}}\right)}\cos\left(\ln\left(\frac{x+\sqrt{2}}{\sqrt{2}}\right)\right), 1 \right) \\
+    &= \left(\frac{x+\sqrt{2}}{\sqrt{2}}\operatorname{sen}\left(\ln\left(\frac{x+\sqrt{2}}{\sqrt{2}}\right)\right) + \frac{x+\sqrt{2}}{\sqrt{2}}\cos\left(\ln\left(\frac{x+\sqrt{2}}{\sqrt{2}}\right)\right), 1 \right).
+    \end{align*}
 :::
 
 :::{#exr-curvatura-1}
