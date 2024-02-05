@@ -39,8 +39,8 @@ book:
     - 04-sucesiones.qmd
     - 06-limites.qmd
     - 07-derivadas.qmd
-    - 08-series.qmd
-    - 09-integrales.qmd
+    - 08-integrales.qmd
+    - 09-series.qmd
     - 10-funciones-vectoriales.qmd
     - 11-derivadas-funciones-varias-variables.qmd
     - 12-integrales-funciones-varias-variables.qmd
