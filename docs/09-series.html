@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-99.9.9">
+<meta name="generator" content="quarto-1.4.550">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -50,7 +50,13 @@ ul.task-list li input[type="checkbox"] {
   "collapse-after": 3,
   "panel-placement": "start",
   "type": "textbox",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "Sin resultados",
     "search-matching-documents-text": "documentos encontrados",
@@ -59,6 +65,7 @@ ul.task-list li input[type="checkbox"] {
     "search-more-match-text": "resultado adicional en este documento",
     "search-more-matches-text": "resultados adicionales en este documento",
     "search-clear-button-title": "Borrar",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancelar",
     "search-submit-button-title": "Enviar",
     "search-label": "Buscar"
@@ -68,11 +75,40 @@ ul.task-list li input[type="checkbox"] {
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
 <meta property="og:title" content="Problemas de Análisis Matemático - 8&nbsp; Series de números reales">
-<meta property="og:site-name" content="Problemas de Análisis Matemático">
+<meta property="og:image" content="img/logos/sticker.png">
+<meta property="og:site_name" content="Problemas de Análisis Matemático">
 <meta name="twitter:title" content="Problemas de Análisis Matemático - 8&nbsp; Series de números reales">
+<meta name="twitter:image" content="img/logos/sticker.png">
 <meta name="twitter:site" content="@aprendeconalf">
-<meta name="twitter:card" content="summary">
+<meta name="twitter:card" content="summary_large_image">
 </head>
 
 <body class="nav-sidebar floating">
@@ -81,12 +117,12 @@ ul.task-list li input[type="checkbox"] {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./09-series.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Series de números reales</span></a></li></ol></nav>
-      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-      </a>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./09-series.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Series de números reales</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
@@ -96,7 +132,7 @@ ul.task-list li input[type="checkbox"] {
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
       <a href="./index.html" class="sidebar-logo-link">
       <img src="./img/logos/aprendeconalf.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
@@ -104,7 +140,7 @@ ul.task-list li input[type="checkbox"] {
     <div class="sidebar-title mb-0 py-0">
       <a href="./">Problemas de Análisis Matemático</a> 
         <div class="sidebar-tools-main tools-wide">
-    <a href="https://aprendeconalf.es" rel="" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-house-fill"></i></a>
+    <a href="https://aprendeconalf.es" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-house-fill"></i></a>
     <div class="dropdown">
       <a href="" title="Download" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download"><i class="bi bi-download"></i></a>
       <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-0">
@@ -225,7 +261,7 @@ ul.task-list li input[type="checkbox"] {
     </ul>
     </div>
 </nav>
-<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         
@@ -248,10 +284,12 @@ ul.task-list li input[type="checkbox"] {
   </div>
   
 
+
 </header>
 
+
 <div id="exr-conversion-sucesiones-series" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 8.1 </strong></span>Demostrar que cualquier sucesión puede expresarse como una serie.</p>
+<p><span class="theorem-title"><strong>Ejercicio 8.1</strong></span> Demostrar que cualquier sucesión puede expresarse como una serie.</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
@@ -277,7 +315,7 @@ d_{n+1}&amp;=a_{n+1}-a_n
 </div>
 </div>
 <div id="exr-números-decimales-series" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 8.2 </strong></span>Demostrar que la serie <span class="math inline">\(\sum \frac{9}{10^n}\)</span> converge y calcular su límite.</p>
+<p><span class="theorem-title"><strong>Ejercicio 8.2</strong></span> Demostrar que la serie <span class="math inline">\(\sum \frac{9}{10^n}\)</span> converge y calcular su límite.</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
@@ -303,7 +341,7 @@ Solución
 </div>
 </div>
 <div id="exr-sumas-parciales" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 8.3 </strong></span>Si <span class="math inline">\(\sum_{i=1}^n a_n=\frac{n-1}{n+1}\)</span>, ¿cuál es el término general de la sucesión <span class="math inline">\(a_n\)</span>? Calcular <span class="math inline">\(\sum_{n=1}^\infty a_n\)</span>.</p>
+<p><span class="theorem-title"><strong>Ejercicio 8.3</strong></span> Si <span class="math inline">\(\sum_{i=1}^n a_n=\frac{n-1}{n+1}\)</span>, ¿cuál es el término general de la sucesión <span class="math inline">\(a_n\)</span>? Calcular <span class="math inline">\(\sum_{n=1}^\infty a_n\)</span>.</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
@@ -324,7 +362,7 @@ Solución
 </div>
 </div>
 <div id="exr-series-geometricas" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 8.4 </strong></span>Demostrar que una serie geométrica <span class="math inline">\(\sum ar^n\)</span> converge si y solo si <span class="math inline">\(|x|&lt;1\)</span>.</p>
+<p><span class="theorem-title"><strong>Ejercicio 8.4</strong></span> Demostrar que una serie geométrica <span class="math inline">\(\sum ar^n\)</span> converge si y solo si <span class="math inline">\(|x|&lt;1\)</span>.</p>
 </div>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
@@ -368,7 +406,7 @@ Solución
 </div>
 </div>
 <div id="exr-serie-geometrica-farmaco" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 8.5 </strong></span>Un enfermo crónico toma cada día una pastilla con 200 mg de un principio activo. Su cuerpo es capaz de metabolizar diariamente el 90% de la cantidad de principio activo presente. ¿Qué cantidad de principio activo quedará en el cuerpo del enfermo tras <span class="math inline">\(n\)</span> días tomando la pastilla? ¿Qué cantidad de principio activo quedará en el cuerpo del enfermo a largo plazo?</p>
+<p><span class="theorem-title"><strong>Ejercicio 8.5</strong></span> Un enfermo crónico toma cada día una pastilla con 200 mg de un principio activo. Su cuerpo es capaz de metabolizar diariamente el 90% de la cantidad de principio activo presente. ¿Qué cantidad de principio activo quedará en el cuerpo del enfermo tras <span class="math inline">\(n\)</span> días tomando la pastilla? ¿Qué cantidad de principio activo quedará en el cuerpo del enfermo a largo plazo?</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
@@ -395,7 +433,7 @@ A_n &amp;= A_{n-1} + 0.1^n \cdot 200 \mbox{ mg}
 </div>
 </div>
 <div id="exr-propensiones-marginales-gasto-ahorro" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 8.6 </strong></span>Cuando una persona gasta una cantidad de dinero en un bien o servicio, la persona que recibe el dinero directa o indirectamente, también gasta un porcentaje <span class="math inline">\(k\)</span> de esa cantidad en otros bienes y servicios, mientras que ahorra el resto. En Economía, el valor <span class="math inline">\(\frac{k}{100}\)</span> se conoce como <em>propensión marginal al consumo</em> mientras que <span class="math inline">\(1-\frac{k}{100}\)</span> se conoce como <em>propensión marginal al ahorro</em>. Si una persona inicia el proceso gastando una cantidad <span class="math inline">\(x\)</span>, qué cantidad total se habrá gastado después de <span class="math inline">\(n\)</span> transacciones? ¿Hacia dónde converge el gasto cuando se realiza un número infinito de transacciones? ¿A largo plazo, cuál es el efecto multiplicador sobre el gasto inicial de una propensión marginal al consumo de <span class="math inline">\(0.6\)</span>?</p>
+<p><span class="theorem-title"><strong>Ejercicio 8.6</strong></span> Cuando una persona gasta una cantidad de dinero en un bien o servicio, la persona que recibe el dinero directa o indirectamente, también gasta un porcentaje <span class="math inline">\(k\)</span> de esa cantidad en otros bienes y servicios, mientras que ahorra el resto. En Economía, el valor <span class="math inline">\(\frac{k}{100}\)</span> se conoce como <em>propensión marginal al consumo</em> mientras que <span class="math inline">\(1-\frac{k}{100}\)</span> se conoce como <em>propensión marginal al ahorro</em>. Si una persona inicia el proceso gastando una cantidad <span class="math inline">\(x\)</span>, qué cantidad total se habrá gastado después de <span class="math inline">\(n\)</span> transacciones? ¿Hacia dónde converge el gasto cuando se realiza un número infinito de transacciones? ¿A largo plazo, cuál es el efecto multiplicador sobre el gasto inicial de una propensión marginal al consumo de <span class="math inline">\(0.6\)</span>?</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
@@ -417,7 +455,7 @@ a_2 &amp;= x\left(\frac{k}{100}\right)^2\\
 \vdots\\
 a_n &amp;= x\left(\frac{k}{100}\right)^n
 \end{align*}\]</span></p>
-<p>Por tanto, el dinero total gastado tras <span class="math inline">\(n\)</span> transacciones será <span class="math inline">\(\sum_{i=0}^n x\left(\frac{k}{100}\right)^i\)</span>, y como se trata de una serie geométrica, tal y como se ha visto en el <a href="#exr-series-geometricas">Ejercicio&nbsp;<span>8.4</span></a>, la suma vale</p>
+<p>Por tanto, el dinero total gastado tras <span class="math inline">\(n\)</span> transacciones será <span class="math inline">\(\sum_{i=0}^n x\left(\frac{k}{100}\right)^i\)</span>, y como se trata de una serie geométrica, tal y como se ha visto en el <a href="#exr-series-geometricas" class="quarto-xref">Ejercicio&nbsp;<span>8.4</span></a>, la suma vale</p>
 <p><span class="math display">\[
 \sum_{i=0}^n x\left(\frac{k}{100}\right)^i = x\frac{1-\left(\frac{k}{100}\right)^{n+1}}{1-\frac{k}{100}}.
 \]</span></p>
@@ -430,7 +468,7 @@ a_n &amp;= x\left(\frac{k}{100}\right)^n
 </div>
 </div>
 <div id="exr-cuenta-ahorro" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 8.7 </strong></span>Una cuenta de ahorro ofrece un <span class="math inline">\(5\)</span>% de interés anual. Una persona abre la cuenta de ahorro con un depósito de <span class="math inline">\(2000\)</span>€ y cada año que pasa hace un depósito de <span class="math inline">\(1000\)</span>€. Calcular la cantidad de dinero que habrá en la cuenta después de <span class="math inline">\(n\)</span> años de forma cerrada. ¿Converge la serie asociada?</p>
+<p><span class="theorem-title"><strong>Ejercicio 8.7</strong></span> Una cuenta de ahorro ofrece un <span class="math inline">\(5\)</span>% de interés anual. Una persona abre la cuenta de ahorro con un depósito de <span class="math inline">\(2000\)</span>€ y cada año que pasa hace un depósito de <span class="math inline">\(1000\)</span>€. Calcular la cantidad de dinero que habrá en la cuenta después de <span class="math inline">\(n\)</span> años de forma cerrada. ¿Converge la serie asociada?</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
@@ -456,7 +494,7 @@ A_3 &amp;= ((2000\cdot 1.05^2 + 1000\cdot 1.05)+1000)1.05\mbox{€}\\
 <p><span class="math display">\[
 A_n = 2000\cdot 1.05^n + \sum_{i=1}^{n-1} 1000\cdot 1.05^i\mbox{€}.
 \]</span></p>
-<p>Como se trata de una serie geométrica, haciendo uso de la pista del <a href="#exr-series-geometricas">Ejercicio&nbsp;<span>8.4</span></a>, se puede concluir que</p>
+<p>Como se trata de una serie geométrica, haciendo uso de la pista del <a href="#exr-series-geometricas" class="quarto-xref">Ejercicio&nbsp;<span>8.4</span></a>, se puede concluir que</p>
 <p><span class="math display">\[\begin{align*}
 A_n &amp;= 2000\cdot 1.05^n + 1000\frac{1.05^n-1}{1.05-1} - 1000\\
 &amp;= 2000\cdot 1.05^n + 20000 (1.05^n-1) - 1000\\
@@ -466,7 +504,7 @@ A_n &amp;= 2000\cdot 1.05^n + 1000\frac{1.05^n-1}{1.05-1} - 1000\\
 </div>
 </div>
 <div id="exr-distribucion-hipergeometrica" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 8.8 </strong></span>Supongamos un experimento aleatorio que consiste en repetir una prueba con dos posibles resultados (éxito y fracaso) hasta que se obtiene el primer éxito (por ejemplo tirar una moneda hasta que sale la primera cara). La distribución de la variable aleatoria que mide el número de repeticiones hasta obtener el primer éxito se conoce como <a href="https://es.wikipedia.org/wiki/Distribuci%C3%B3n_hipergeom%C3%A9trica"><em>distribución hipergeométrica</em></a> y su función de probabilidad es</p>
+<p><span class="theorem-title"><strong>Ejercicio 8.8</strong></span> Supongamos un experimento aleatorio que consiste en repetir una prueba con dos posibles resultados (éxito y fracaso) hasta que se obtiene el primer éxito (por ejemplo tirar una moneda hasta que sale la primera cara). La distribución de la variable aleatoria que mide el número de repeticiones hasta obtener el primer éxito se conoce como <a href="https://es.wikipedia.org/wiki/Distribuci%C3%B3n_hipergeom%C3%A9trica"><em>distribución hipergeométrica</em></a> y su función de probabilidad es</p>
 <p><span class="math display">\[
 P(X=n)=(1-p)^{n-1}p,
 \]</span></p>
@@ -485,7 +523,7 @@ Solución
 </div>
 <div id="callout-9" class="callout-9-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>El conjunto de posibles valores que puede tomar la variable aleatoria <span class="math inline">\(X\)</span> es <span class="math inline">\(\mathbb{N}\)</span>. Si consideramos la suma de las probabilidades de todos los posibles valores de la variable se tiene <span class="math inline">\(\sum_{n=1}^\infty P(n) = \sum_{n=1}^\infty (1-p)^{n-1}p = \sum_{n=0}^\infty (1-p)^n p\)</span>, que, al tratarse de una serie geométrica de razón <span class="math inline">\((1-p)&lt;1\)</span>, converge, y como se ha visto en el <a href="#exr-series-geometricas">Ejercicio&nbsp;<span>8.4</span></a>, la suma vale</p>
+<p>El conjunto de posibles valores que puede tomar la variable aleatoria <span class="math inline">\(X\)</span> es <span class="math inline">\(\mathbb{N}\)</span>. Si consideramos la suma de las probabilidades de todos los posibles valores de la variable se tiene <span class="math inline">\(\sum_{n=1}^\infty P(n) = \sum_{n=1}^\infty (1-p)^{n-1}p = \sum_{n=0}^\infty (1-p)^n p\)</span>, que, al tratarse de una serie geométrica de razón <span class="math inline">\((1-p)&lt;1\)</span>, converge, y como se ha visto en el <a href="#exr-series-geometricas" class="quarto-xref">Ejercicio&nbsp;<span>8.4</span></a>, la suma vale</p>
 <p><span class="math display">\[
 \sum_{n=1}^\infty (1-p)^n p = \frac{p}{1-(1-p)}= 1.
 \]</span></p>
@@ -494,7 +532,7 @@ Solución
 </div>
 </div>
 <div id="exr-serie-conjunto-cantor" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 8.9 </strong></span>El <a href="https://es.wikipedia.org/wiki/Conjunto_de_Cantor">conjunto de cantor</a> es un subconjunto fractal del intervalo <span class="math inline">\([0,1]\)</span> que se construye de manera recursiva eliminando en cada paso el tercio central de los intervalos que van resultando. El procedimiento sería el siguiente:</p>
+<p><span class="theorem-title"><strong>Ejercicio 8.9</strong></span> El <a href="https://es.wikipedia.org/wiki/Conjunto_de_Cantor">conjunto de cantor</a> es un subconjunto fractal del intervalo <span class="math inline">\([0,1]\)</span> que se construye de manera recursiva eliminando en cada paso el tercio central de los intervalos que van resultando. El procedimiento sería el siguiente:</p>
 <ol type="1">
 <li>Quitar del intervalo <span class="math inline">\([0,1]\)</span> el intervalo abierto <span class="math inline">\(\left(\frac{1}{3},\frac{2}{3}\right)\)</span>.</li>
 <li>Quitar de los intervalos restantes, los intervalos <span class="math inline">\(\left(\frac{1}{9},\frac{2}{9}\right)\)</span> y <span class="math inline">\(\left(\frac{7}{9},\frac{8}{9}\right)\)</span>.</li>
@@ -520,7 +558,7 @@ Solución
 <p>En la segunda etapa se quitan los intervalos <span class="math inline">\(\left(\frac{1}{9},\frac{2}{9}\right)\)</span> y <span class="math inline">\(\left(\frac{7}{9},\frac{8}{9}\right)\)</span>, y por tanto, <span class="math inline">\(a_n = 2\frac{1}{9}\)</span>.</p>
 <p>En la tercera etapa se quitan los intervalos <span class="math inline">\(\left(\frac{1}{27},\frac{2}{27}\right)\)</span>, <span class="math inline">\(\left(\frac{7}{27},\frac{8}{27}\right)\)</span>, <span class="math inline">\(\left(\frac{19}{27},\frac{20}{27}\right)\)</span> y <span class="math inline">\(\left(\frac{25}{27},\frac{26}{27}\right)\)</span>, y por tanto, <span class="math inline">\(a_3=4\frac{1}{27}\)</span>.</p>
 <p>En consecuencia, se deduce que <span class="math inline">\(a_n=\frac{2^{n-1}}{3^n}\)</span>.</p>
-<p>Así pues, la suma de las longitudes de los intervalos quitados es <span class="math inline">\(\sum_{n=1}^\infty \frac{2^{n-1}}{3^n} = \frac{1}{3}\sum_{n=1}^\infty \left(\frac{2}{3}\right)^{n-1} = \frac{1}{3}\sum_{n=0}^\infty \left(\frac{2}{3}\right)^n\)</span>, que, al ser una serie geométrica con razón <span class="math inline">\(\frac{2}{3}&lt;1\)</span>, converge, y como se ha visto en el <a href="#exr-series-geometricas">Ejercicio&nbsp;<span>8.4</span></a>, su suma vale</p>
+<p>Así pues, la suma de las longitudes de los intervalos quitados es <span class="math inline">\(\sum_{n=1}^\infty \frac{2^{n-1}}{3^n} = \frac{1}{3}\sum_{n=1}^\infty \left(\frac{2}{3}\right)^{n-1} = \frac{1}{3}\sum_{n=0}^\infty \left(\frac{2}{3}\right)^n\)</span>, que, al ser una serie geométrica con razón <span class="math inline">\(\frac{2}{3}&lt;1\)</span>, converge, y como se ha visto en el <a href="#exr-series-geometricas" class="quarto-xref">Ejercicio&nbsp;<span>8.4</span></a>, su suma vale</p>
 <p><span class="math display">\[
 \frac{1}{3}\sum_{n=0}^\infty \left(\frac{2}{3}\right)^n = \frac{1}{3}\frac{1}{1-\frac{2}{3}} = 1.
 \]</span></p>
@@ -529,7 +567,7 @@ Solución
 </div>
 </div>
 <div id="exr-serie-armonica-alternada" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 8.10 </strong></span>Haciendo uso del polinomio de Taylor del logaritmo, demostrar que una serie armónica alternada <span class="math inline">\(\sum \frac{(-1)^{n+1}}{n}\)</span> converge y calcular su suma.</p>
+<p><span class="theorem-title"><strong>Ejercicio 8.10</strong></span> Haciendo uso del polinomio de Taylor del logaritmo, demostrar que una serie armónica alternada <span class="math inline">\(\sum \frac{(-1)^{n+1}}{n}\)</span> converge y calcular su suma.</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="false" aria-label="Toggle callout">
@@ -557,7 +595,7 @@ P^n_{f,1}(2) = 1 -\frac{1}{2} + \frac{1}{3} - \frac{1}{4} + \cdots + (-1)^{n+1}\
 </div>
 </div>
 <div id="exr-serie-exponencial" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 8.11 </strong></span>Haciendo uso del polinomio de Maclaurin de la función exponencial, demostrar que una serie <span class="math inline">\(\sum \frac{1}{n!}\)</span> converge y calcular su suma.</p>
+<p><span class="theorem-title"><strong>Ejercicio 8.11</strong></span> Haciendo uso del polinomio de Maclaurin de la función exponencial, demostrar que una serie <span class="math inline">\(\sum \frac{1}{n!}\)</span> converge y calcular su suma.</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-12-contents" aria-controls="callout-12" aria-expanded="false" aria-label="Toggle callout">
@@ -584,7 +622,7 @@ P^n_{f,0}(1) = 1 + 1 + \frac{1}{2!} + \frac{1}{3!} + \cdots + \frac{1}{n!}\\
 </div>
 </div>
 <div id="exr-series-divergentes" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 8.12 </strong></span>Demostrar que las siguientes series divergen.</p>
+<p><span class="theorem-title"><strong>Ejercicio 8.12</strong></span> Demostrar que las siguientes series divergen.</p>
 <ol type="a">
 <li><p><span class="math inline">\(\sum \frac{n^2}{n+1}\)</span></p></li>
 <li><p><span class="math inline">\(\sum \cos\left(\frac{1}{n}\right)\)</span></p></li>
@@ -606,15 +644,15 @@ Solución
 <div class="callout-body-container callout-body">
 <ol type="a">
 <li><p>Como <span class="math inline">\(\lim_{n\to\infty} \frac{n^2}{n+1} = \infty\)</span>, por la <a href="https://aprendeconalf.es/analisis-manual/08-series.html#thm-condicion-convergencia-series">condición de convergencia</a>, la serie <span class="math inline">\(\sum \frac{n^2}{n+1}\)</span> diverge.</p></li>
-<li><p>Como <span class="math inline">\(\lim_{n\to\infty} \cos\left(\frac{1}{n}\right)=1\neq 0\)</span>, por la <a href="https://aprendeconalf.es/analisis-manual/08-series.html#thm-condicion-convergencia-series">condición de convergencia</a>, la serie <span class="math inline">\(\sum \cos\left(\frac{1}{n}\right)\)</span> diverge.</p></li>
-<li><p>Como <span class="math inline">\(\lim_{n\to\infty} n\operatorname{sen}\left(\frac{1}{n}\right)=1\neq 0\)</span>, por la <a href="https://aprendeconalf.es/analisis-manual/08-series.html#thm-condicion-convergencia-series">condición de convergencia</a>, la serie <span class="math inline">\(\sum n\operatorname{sen}\left(\frac{1}{n}\right)\)</span> diverge.</p></li>
+<li><p>Como <span class="math inline">\(\lim_{n\to\infty}  \cos\left(\frac{1}{n}\right)=1\neq 0\)</span>, por la <a href="https://aprendeconalf.es/analisis-manual/08-series.html#thm-condicion-convergencia-series">condición de convergencia</a>, la serie <span class="math inline">\(\sum \cos\left(\frac{1}{n}\right)\)</span> diverge.</p></li>
+<li><p>Como <span class="math inline">\(\lim_{n\to\infty}  n\operatorname{sen}\left(\frac{1}{n}\right)=1\neq 0\)</span>, por la <a href="https://aprendeconalf.es/analisis-manual/08-series.html#thm-condicion-convergencia-series">condición de convergencia</a>, la serie <span class="math inline">\(\sum n\operatorname{sen}\left(\frac{1}{n}\right)\)</span> diverge.</p></li>
 <li><p><span class="math inline">\(\sum \frac{1}{2n} = \frac{1}{2}\sum \frac{1}{n}\)</span> y como la serie armónica <span class="math inline">\(\sum \frac{1}{n}\)</span> diverge, la serie <span class="math inline">\(\sum \frac{1}{2n}\)</span> también.</p></li>
 </ol>
 </div>
 </div>
 </div>
 <div id="exr-serie-telescopica-convergente" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 8.13 </strong></span>Demostrar que <span class="math inline">\(\sum_{n=1}^\infty \frac{1}{n(n+1)} = 1\)</span>.</p>
+<p><span class="theorem-title"><strong>Ejercicio 8.13</strong></span> Demostrar que <span class="math inline">\(\sum_{n=1}^\infty \frac{1}{n(n+1)} = 1\)</span>.</p>
 </div>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-14-contents" aria-controls="callout-14" aria-expanded="false" aria-label="Toggle callout">
@@ -656,7 +694,7 @@ A_n &amp;= \left(1-\frac{1}{2}\right)+\left(\frac{1}{2}-\frac{1}{3}\right)+\left
 </div>
 </div>
 <div id="exr-series-telescopicas" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 8.14 </strong></span>Estudiar la convergencia de las siguientes series telescópicas.</p>
+<p><span class="theorem-title"><strong>Ejercicio 8.14</strong></span> Estudiar la convergencia de las siguientes series telescópicas.</p>
 <ol type="a">
 <li><p><span class="math inline">\(\sum \cos(n^2)-\cos((n+1)^2)\)</span></p></li>
 <li><p><span class="math inline">\(\sum \operatorname{sen}\left(\frac{1}{n}\right)-\operatorname{sen}\left(\frac{1}{n+1}\right)\)</span></p></li>
@@ -728,7 +766,7 @@ A_n &amp;= \sum_{i=2}^n \frac{1}{i-1}-\frac{1}{i+1} \\
 </div>
 </div>
 <div id="exr-comparacion-series" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 8.15 </strong></span>Estudiar la convergencia de las siguientes series comparándolas con otras conocidas.</p>
+<p><span class="theorem-title"><strong>Ejercicio 8.15</strong></span> Estudiar la convergencia de las siguientes series comparándolas con otras conocidas.</p>
 <div class="columns">
 <div class="column">
 <ol type="a">
@@ -782,7 +820,7 @@ Solución
 <p><span class="math display">\[
 \sum \frac{n+1}{n!} = \sum \frac{n}{n!}+\frac{1}{n!} = \sum \frac{1}{{n-1}!}+\sum \frac{1}{n!},
 \]</span></p>
-<p>y como se ha visto en el <a href="#exr-serie-exponencial">Ejercicio&nbsp;<span>8.11</span></a>, tanto <span class="math inline">\(\sum \frac{1}{(n-1)!}\)</span> como <span class="math inline">\(\sum \frac{1}{n!}\)</span> convergen, por lo que <span class="math inline">\(\sum \frac{n+1}{n!}\)</span> también converge.</p></li>
+<p>y como se ha visto en el <a href="#exr-serie-exponencial" class="quarto-xref">Ejercicio&nbsp;<span>8.11</span></a>, tanto <span class="math inline">\(\sum \frac{1}{(n-1)!}\)</span> como <span class="math inline">\(\sum \frac{1}{n!}\)</span> convergen, por lo que <span class="math inline">\(\sum \frac{n+1}{n!}\)</span> también converge.</p></li>
 <li><p><span class="math inline">\(\frac{n^n}{n!}&gt;0\)</span> <span class="math inline">\(\forall n\in\mathbb{N}\)</span> por lo que se trata de una serie de términos positivos. Por otro lado, se tiene</p>
 <p><span class="math display">\[ \frac{n^n}{n!} = \frac{n}{n} \frac{n}{n-1} \frac{n}{n-2} \cdots \frac{n}{1}\geq n \ \forall n\in \mathbb{N}.
 \]</span></p>
@@ -792,7 +830,7 @@ Solución
 </div>
 </div>
 <div id="exr-criterio-cociente" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 8.16 </strong></span>Demostrar que si <span class="math inline">\(\sum a_n\)</span> y <span class="math inline">\(\sum b_n\)</span> son dos series de términos positivos entonces se cumple que</p>
+<p><span class="theorem-title"><strong>Ejercicio 8.16</strong></span> Demostrar que si <span class="math inline">\(\sum a_n\)</span> y <span class="math inline">\(\sum b_n\)</span> son dos series de términos positivos entonces se cumple que</p>
 <ol type="a">
 <li><p>Si <span class="math inline">\(\lim_{n\to\infty} \frac{a_n}{b_n} = 0\)</span> y <span class="math inline">\(\sum b_n\)</span> converge, entonces <span class="math inline">\(\sum a_n\)</span> también converge.</p></li>
 <li><p>Si <span class="math inline">\(\lim_{n\to\infty} \frac{a_n}{b_n} = \infty\)</span> y <span class="math inline">\(\sum b_n\)</span> diverge, entonces <span class="math inline">\(\sum a_n\)</span> también diverge.</p></li>
@@ -818,7 +856,7 @@ Solución
 </div>
 </div>
 <div id="exr-series-positivas-convergentes" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 8.17 </strong></span>Dada una serie de términos positivos <span class="math inline">\(\sum a_n\)</span> convergente, estudiar si las siguientes series convergen.</p>
+<p><span class="theorem-title"><strong>Ejercicio 8.17</strong></span> Dada una serie de términos positivos <span class="math inline">\(\sum a_n\)</span> convergente, estudiar si las siguientes series convergen.</p>
 <ol type="a">
 <li><p><span class="math inline">\(\sum a_n^2\)</span></p></li>
 <li><p><span class="math inline">\(\sum \frac{1}{a_n^3}\)</span></p></li>
@@ -839,8 +877,8 @@ Solución
 <div id="callout-19" class="callout-19-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ol type="a">
-<li><p>Por el criterio de divergencia, como <span class="math inline">\(\sum a_n\)</span> converge, se tiene que <span class="math inline">\(\lim_{n\to\infty} a_n = 0\)</span>. Por otro lado, <span class="math inline">\(\lim_{n\to\infty}\frac{a_n^2}{a_n} = \lim_{n\to\infty} a_n = 0\)</span>, y por lo visto en el <a href="#exr-criterio-cociente">Ejercicio&nbsp;<span>8.16</span></a>, como <span class="math inline">\(\sum a_n\)</span> converge, <span class="math inline">\(\sum a_n^2\)</span> también.</p></li>
-<li><p><span class="math inline">\(\lim_{n\to\infty}\frac{a_n^3}{a_n} = \lim_{n\to\infty} a_n^2 = 0\)</span>, ya que, según el apartado anterior <span class="math inline">\(\sum a_n^2\)</span> converge, y por lo visto en el <a href="#exr-criterio-cociente">Ejercicio&nbsp;<span>8.16</span></a>, como <span class="math inline">\(\sum a_n\)</span> converge, <span class="math inline">\(\sum a_n^3\)</span> también. Finalmente, como <span class="math inline">\(\sum a_n^3\)</span> converge, la serie de los inversos <span class="math inline">\(\sum a_n^{-3}\)</span> diverge.</p></li>
+<li><p>Por el criterio de divergencia, como <span class="math inline">\(\sum a_n\)</span> converge, se tiene que <span class="math inline">\(\lim_{n\to\infty} a_n = 0\)</span>. Por otro lado, <span class="math inline">\(\lim_{n\to\infty}\frac{a_n^2}{a_n} = \lim_{n\to\infty} a_n = 0\)</span>, y por lo visto en el <a href="#exr-criterio-cociente" class="quarto-xref">Ejercicio&nbsp;<span>8.16</span></a>, como <span class="math inline">\(\sum a_n\)</span> converge, <span class="math inline">\(\sum a_n^2\)</span> también.</p></li>
+<li><p><span class="math inline">\(\lim_{n\to\infty}\frac{a_n^3}{a_n} = \lim_{n\to\infty} a_n^2 = 0\)</span>, ya que, según el apartado anterior <span class="math inline">\(\sum a_n^2\)</span> converge, y por lo visto en el <a href="#exr-criterio-cociente" class="quarto-xref">Ejercicio&nbsp;<span>8.16</span></a>, como <span class="math inline">\(\sum a_n\)</span> converge, <span class="math inline">\(\sum a_n^3\)</span> también. Finalmente, como <span class="math inline">\(\sum a_n^3\)</span> converge, la serie de los inversos <span class="math inline">\(\sum a_n^{-3}\)</span> diverge.</p></li>
 <li><p>Por el criterio de divergencia, como <span class="math inline">\(\sum a_n\)</span> converge, se tiene que <span class="math inline">\(\lim_{n\to\infty} a_n = 0\)</span>, y haciendo el cambio de variable <span class="math inline">\(x=a_n\)</span>, se tiene</p>
 <p><span class="math display">\[
 \lim_{n\to\infty} \frac{\ln(1+a_n)}{a_n} = \lim_{x\to 0}\frac{\ln(1+x)}{x} = 1,
@@ -856,7 +894,7 @@ Solución
 </div>
 </div>
 <div id="exr-series-alternadas" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 8.18 </strong></span>Estudiar la convergencia de las siguientes series alternadas.</p>
+<p><span class="theorem-title"><strong>Ejercicio 8.18</strong></span> Estudiar la convergencia de las siguientes series alternadas.</p>
 <ol type="a">
 <li><p><span class="math inline">\(\sum \frac{(-1)^{n-1}}{2n-1}\)</span></p></li>
 <li><p><span class="math inline">\(\sum (-1)^ne^{-n}\)</span></p></li>
@@ -895,7 +933,7 @@ A_n &amp;= 1 + 2\sum_{i=1}^n \frac{(-1)^n}{\sqrt{n}}
 </div>
 </div>
 <div id="exr-muelle-amortiguado" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 8.19 </strong></span>El movimiento de un <a href="https://upload.wikimedia.org/wikipedia/commons/f/fa/Spring-mass_under-damped.gif">muelle amortiguado</a> con un peso colgado de él es oscilante. Si la posición que ocupa el peso en cada periodo de oscilación <span class="math inline">\(n\)</span> viene dado por la serie <span class="math inline">\(\sum (-1)^{n-1}e^{-n/2}\)</span>, ¿llegará a estabilizarse en una posición de equilibrio a largo plazo?</p>
+<p><span class="theorem-title"><strong>Ejercicio 8.19</strong></span> El movimiento de un <a href="https://upload.wikimedia.org/wikipedia/commons/f/fa/Spring-mass_under-damped.gif">muelle amortiguado</a> con un peso colgado de él es oscilante. Si la posición que ocupa el peso en cada periodo de oscilación <span class="math inline">\(n\)</span> viene dado por la serie <span class="math inline">\(\sum (-1)^{n-1}e^{-n/2}\)</span>, ¿llegará a estabilizarse en una posición de equilibrio a largo plazo?</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-21-contents" aria-controls="callout-21" aria-expanded="false" aria-label="Toggle callout">
@@ -914,7 +952,7 @@ Solución
 </div>
 </div>
 <div id="exr-convergencia-absoluta" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 8.20 </strong></span>Estudiar la convergencia absoluta de las siguientes series.</p>
+<p><span class="theorem-title"><strong>Ejercicio 8.20</strong></span> Estudiar la convergencia absoluta de las siguientes series.</p>
 <div class="columns">
 <div class="column">
 <ol type="a">
@@ -972,7 +1010,7 @@ Solución
 </div>
 </div>
 <div id="exr-radio-convergencia-raiz-razon" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 8.21 </strong></span>Demostrar que el radio de convergencia de una serie de potencias <span class="math inline">\(\sum c_nx^n\)</span> se puede calcular mediante las siguientes fórmulas</p>
+<p><span class="theorem-title"><strong>Ejercicio 8.21</strong></span> Demostrar que el radio de convergencia de una serie de potencias <span class="math inline">\(\sum c_nx^n\)</span> se puede calcular mediante las siguientes fórmulas</p>
 <p><span class="math display">\[
 R = \frac{1}{\lim_{n\to\infty} \sqrt[n]{|c_n|}} \quad \mbox{o}\quad R = \lim_{n\to\infty} \left|\frac{c_n}{c_{n+1}}\right|.
 \]</span></p>
@@ -1001,7 +1039,7 @@ Solución
 </div>
 </div>
 <div id="exr-radio-convergencia" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 8.22 </strong></span>Calcular el radio de convergencia y el dominio de convergencia puntual de las siguientes series de potencias.</p>
+<p><span class="theorem-title"><strong>Ejercicio 8.22</strong></span> Calcular el radio de convergencia y el dominio de convergencia puntual de las siguientes series de potencias.</p>
 <div class="columns">
 <div class="column">
 <ol type="a">
@@ -1035,7 +1073,8 @@ Solución
 <p><span class="math display">\[
 R = \lim_{n\to\infty} \left|\frac{n}{n+1}\right| = 1.
 \]</span></p>
-<p>Para <span class="math inline">\(x=1\)</span> se tiene la serie <span class="math inline">\(\sum n\)</span>, que diverge, y para <span class="math inline">\(x=-1\)</span> se tiene la serie <span class="math inline">\(\sum (-1^n)n\)</span>, que es una serie alternada pero también diverge ya que <span class="math inline">\(\lim_{n\to\infty} n  =\infty\)</span>. Por tanto, el dominio de convergencia de la serie de potencias es <span class="math inline">\((-1,1)\)</span>.</p></li>
+<p>Para <span class="math inline">\(x=1\)</span> se tiene la serie <span class="math inline">\(\sum n\)</span>, que diverge, y para <span class="math inline">\(x=-1\)</span> se tiene la serie <span class="math inline">\(\sum (-1^n)n\)</span>, que es una serie alternada pero también diverge ya que <span class="math inline">\(\lim_{n\to\infty} n
+=\infty\)</span>. Por tanto, el dominio de convergencia de la serie de potencias es <span class="math inline">\((-1,1)\)</span>.</p></li>
 <li><p>Aplicando el <a href="https://aprendeconalf.es/analisis-manual/08-series.html#thm-radio-convergencia-raiz">criterio de la razón</a> se tiene que el radio de convergencia es</p>
 <p><span class="math display">\[
 R = \lim_{n\to\infty} \left|\frac{\frac{(-1)^n}{\sqrt{n}}}{\frac{(-1)^{n+1}}{\sqrt{n+1}}}\right| = \lim_{n\to\infty} \frac{\sqrt{n+1}}{\sqrt{n}} = 1.
@@ -1064,13 +1103,13 @@ R &amp;= \lim_{n\to\infty} \left|\frac{\operatorname{sen}\left(\frac{1}{n}\right
 &amp; = \lim_{n\to\infty} \frac{(n+1)^2}{n^2}
 = 1
 \end{align*}\]</span></p>
-<p>Por tanto, la serie de potencias converge para <span class="math inline">\(|x+1|&lt;1\)</span>, es decir, en <span class="math inline">\((-2,0)\)</span>. Para <span class="math inline">\(x=0\)</span> se tiene la serie <span class="math inline">\(\sum \operatorname{sen}\left(\frac{1}{n}\right)\)</span> que diverge según se vio en el <a href="#exr-comparacion-series">Ejercicio&nbsp;<span>8.15</span></a>, y para <span class="math inline">\(x=-2\)</span> se tiene la serie <span class="math inline">\(\sum (-1)^n\operatorname{sen}\left(\frac{1}{n}\right)\)</span>, que es una serie alternada que converge al ser <span class="math inline">\(\lim_{n\to\infty} \operatorname{sen}\left(\frac{1}{n}\right)=0\)</span>. Por tanto, el dominio de convergencia de la serie de potencias es <span class="math inline">\([-2,0)\)</span>.</p></li>
+<p>Por tanto, la serie de potencias converge para <span class="math inline">\(|x+1|&lt;1\)</span>, es decir, en <span class="math inline">\((-2,0)\)</span>. Para <span class="math inline">\(x=0\)</span> se tiene la serie <span class="math inline">\(\sum \operatorname{sen}\left(\frac{1}{n}\right)\)</span> que diverge según se vio en el <a href="#exr-comparacion-series" class="quarto-xref">Ejercicio&nbsp;<span>8.15</span></a>, y para <span class="math inline">\(x=-2\)</span> se tiene la serie <span class="math inline">\(\sum (-1)^n\operatorname{sen}\left(\frac{1}{n}\right)\)</span>, que es una serie alternada que converge al ser <span class="math inline">\(\lim_{n\to\infty} \operatorname{sen}\left(\frac{1}{n}\right)=0\)</span>. Por tanto, el dominio de convergencia de la serie de potencias es <span class="math inline">\([-2,0)\)</span>.</p></li>
 </ol>
 </div>
 </div>
 </div>
 <div id="exr-suma-serie-potencias-exponencial" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 8.23 </strong></span>Demostrar que la serie de potencias <span class="math inline">\(\sum \frac{x^n}{n!}\)</span> es absolutamente convergente para cualquier <span class="math inline">\(x\in\mathbb{R}\)</span>.</p>
+<p><span class="theorem-title"><strong>Ejercicio 8.23</strong></span> Demostrar que la serie de potencias <span class="math inline">\(\sum \frac{x^n}{n!}\)</span> es absolutamente convergente para cualquier <span class="math inline">\(x\in\mathbb{R}\)</span>.</p>
 <p>Demostrar también que la función <span class="math inline">\(f(x)=\sum_{n=0}^\infty \frac{x^n}{n!}\)</span> cumple la ecuación diferencial <span class="math inline">\(f'(x)=f(x)\)</span>. ¿Qué otras funciones conoces que la cumplen?</p>
 <p>Demostrar finalmente que <span class="math inline">\(f(x)=e^x\)</span>.</p>
 </div>
@@ -1113,7 +1152,7 @@ f'(x) = \lim_{n\to\infty} A_n'(x) = \lim_{n\to\infty} A_{n-1}(x) = \lim_{n\to\in
 </div>
 </div>
 <div id="exr-suma-serie-potencias" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 8.24 </strong></span>Usar el resultado del ejercicio anterior para calcular la suma de la serie de potencias <span class="math inline">\(\sum \frac{(x+2)^n}{(n+1)!}\)</span>.</p>
+<p><span class="theorem-title"><strong>Ejercicio 8.24</strong></span> Usar el resultado del ejercicio anterior para calcular la suma de la serie de potencias <span class="math inline">\(\sum \frac{(x+2)^n}{(n+1)!}\)</span>.</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-26-contents" aria-controls="callout-26" aria-expanded="false" aria-label="Toggle callout">
@@ -1134,7 +1173,7 @@ Solución
 </div>
 </div>
 <div id="exr-serie-poisson" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 8.25 </strong></span>La <a href="https://es.wikipedia.org/wiki/Distribuci%C3%B3n_de_Poisson"><em>distribución de Poisson</em></a> es una de las distribuciones de probabilidad más importantes, ya que explica la probabilidad de que ocurra un número determinado de fenómenos puntuales en un soporte continuo (como por ejemplo el número de llamadas telefónicas que llegan a un servicio de atención al cliente en un intervalo de tiempo). Su función de probabilidad es</p>
+<p><span class="theorem-title"><strong>Ejercicio 8.25</strong></span> La <a href="https://es.wikipedia.org/wiki/Distribuci%C3%B3n_de_Poisson"><em>distribución de Poisson</em></a> es una de las distribuciones de probabilidad más importantes, ya que explica la probabilidad de que ocurra un número determinado de fenómenos puntuales en un soporte continuo (como por ejemplo el número de llamadas telefónicas que llegan a un servicio de atención al cliente en un intervalo de tiempo). Su función de probabilidad es</p>
 <p><span class="math display">\[
 P(n)= e^{-\lambda}\frac{\lambda^n}{n!}\ \forall n\in \mathbb{N},
 \]</span></p>
@@ -1157,7 +1196,7 @@ Solución
 <p><span class="math display">\[
 \sum_{n=0}^\infty P(n) = \sum_{n=0}^\infty e^{-\lambda}\frac{\lambda^n}{n!} = e^{-\lambda}\sum_{n=0}^\infty \frac{\lambda^n}{n!}.
 \]</span></p>
-<p>Como se ha visto en el <a href="#exr-suma-serie-potencias-exponencial">Ejercicio&nbsp;<span>8.23</span></a>, <span class="math inline">\(\sum_{n=0}^\infty \frac{x^n}{n!}=e^x\)</span> <span class="math inline">\(\forall x\in\mathbb{R}\)</span>, en particular se tiene que <span class="math inline">\(\sum_{n=0}^\infty \frac{\lambda^n}{n!}=e^\lambda\)</span>, por lo que finalmente se tiene</p>
+<p>Como se ha visto en el <a href="#exr-suma-serie-potencias-exponencial" class="quarto-xref">Ejercicio&nbsp;<span>8.23</span></a>, <span class="math inline">\(\sum_{n=0}^\infty \frac{x^n}{n!}=e^x\)</span> <span class="math inline">\(\forall x\in\mathbb{R}\)</span>, en particular se tiene que <span class="math inline">\(\sum_{n=0}^\infty \frac{\lambda^n}{n!}=e^\lambda\)</span>, por lo que finalmente se tiene</p>
 <p><span class="math display">\[
 \sum_{n=0}^\infty P(n) = e^{-\lambda}e^{\lambda} = 1,
 \]</span></p>
@@ -1166,7 +1205,7 @@ Solución
 </div>
 </div>
 <div id="exr-serie-taylor" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 8.26 </strong></span>Calcular la serie de Taylor de las siguientes funciones en los puntos dados.</p>
+<p><span class="theorem-title"><strong>Ejercicio 8.26</strong></span> Calcular la serie de Taylor de las siguientes funciones en los puntos dados.</p>
 <ol type="a">
 <li><p><span class="math inline">\(f(x)=\cos(x)\)</span> en <span class="math inline">\(a=\pi\)</span>.</p></li>
 <li><p><span class="math inline">\(g(x)=\ln(x+1)\)</span> en <span class="math inline">\(a=0\)</span>.</p></li>
@@ -1242,7 +1281,7 @@ h^{(n)}(1) = (-1)^n\frac{\prod_{i=1}^n(2i-1)}{2^n},
 </div>
 </div>
 <div id="exr-serie-binomial" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 8.27 </strong></span>Construir la serie de Maclaurin de la función <span class="math inline">\(f(x)= (1+x)^k\)</span> para cualquier <span class="math inline">\(k\in\mathbb{R}\)</span> y estudiar su dominio de convergencia. ¿Qué serie se obtiene cuando <span class="math inline">\(k\in\mathbb{N}\)</span>?</p>
+<p><span class="theorem-title"><strong>Ejercicio 8.27</strong></span> Construir la serie de Maclaurin de la función <span class="math inline">\(f(x)= (1+x)^k\)</span> para cualquier <span class="math inline">\(k\in\mathbb{R}\)</span> y estudiar su dominio de convergencia. ¿Qué serie se obtiene cuando <span class="math inline">\(k\in\mathbb{N}\)</span>?</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-29-contents" aria-controls="callout-29" aria-expanded="false" aria-label="Toggle callout">
@@ -1284,7 +1323,7 @@ f^{k}(x) = k(k-1)\cdots (k-k+1)(1+x)^{k-k} = k!
 </div>
 </div>
 <div id="exr-serie-arcotangente" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 8.28 </strong></span>Calcular la serie de Maclaurin de la función <span class="math inline">\(f(x)=\operatorname{arctg}(x)\)</span> y utilizarla para obtener una serie cuya suma sea <span class="math inline">\(\pi\)</span>.</p>
+<p><span class="theorem-title"><strong>Ejercicio 8.28</strong></span> Calcular la serie de Maclaurin de la función <span class="math inline">\(f(x)=\operatorname{arctg}(x)\)</span> y utilizarla para obtener una serie cuya suma sea <span class="math inline">\(\pi\)</span>.</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-30-contents" aria-controls="callout-30" aria-expanded="false" aria-label="Toggle callout">
@@ -1331,7 +1370,7 @@ f^{(n)}(0) =
 </div>
 </div>
 <div id="exr-limites-taylor" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 8.29 </strong></span>Usando desarrollos de Taylor, calcular los siguientes límites.</p>
+<p><span class="theorem-title"><strong>Ejercicio 8.29</strong></span> Usando desarrollos de Taylor, calcular los siguientes límites.</p>
 <ol type="a">
 <li><p><span class="math inline">\(\lim_{x\to 0}\frac{\ln(1+x)-x}{x^2}\)</span></p></li>
 <li><p><span class="math inline">\(\lim_{x\to 0}\frac{\operatorname{arctg}(x)-x}{x^3}\)</span></p></li>
@@ -1414,6 +1453,33 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       }
     }
   }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
+    }
+  }
   const toggleColorMode = (alternate) => {
     // Switch the stylesheets
     const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
@@ -1480,13 +1546,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return localAlternateSentinel;
     }
   }
-  let localAlternateSentinel = 'alternate';
+  const darkModeDefault = true;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
   // Dark / light mode switch
   window.quartoToggleColorScheme = () => {
     // Read the current dark / light value 
     let toAlternate = !hasAlternateSentinel();
     toggleColorMode(toAlternate);
     setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
   };
   // Ensure there is a toggle, if there isn't float one in the top right
   if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
@@ -1565,10 +1633,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
-  function tippyHover(el, contentFn) {
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -1578,8 +1645,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -1592,6 +1668,125 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
       return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
     });
   }
       let selectedAnnoteEl;
@@ -1635,6 +1830,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
+            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -1660,6 +1856,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -1721,17 +1943,18 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./08-integrales.html" class="pagination-link">
+      <a href="./08-integrales.html" class="pagination-link" aria-label="Integrales de funciones">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Integrales de funciones</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./10-funciones-vectoriales.html" class="pagination-link">
+      <a href="./10-funciones-vectoriales.html" class="pagination-link" aria-label="Funciones vectoriales">
         <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Funciones vectoriales</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
 </div> <!-- /content -->
+
 
 
 
