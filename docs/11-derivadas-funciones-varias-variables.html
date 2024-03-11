@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.550">
+<meta name="generator" content="quarto-1.3.450">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -50,13 +50,7 @@ ul.task-list li input[type="checkbox"] {
   "collapse-after": 3,
   "panel-placement": "start",
   "type": "textbox",
-  "limit": 50,
-  "keyboard-shortcut": [
-    "f",
-    "/",
-    "s"
-  ],
-  "show-item-context": false,
+  "limit": 20,
   "language": {
     "search-no-results-text": "Sin resultados",
     "search-matching-documents-text": "documentos encontrados",
@@ -65,7 +59,6 @@ ul.task-list li input[type="checkbox"] {
     "search-more-match-text": "resultado adicional en este documento",
     "search-more-matches-text": "resultados adicionales en este documento",
     "search-clear-button-title": "Borrar",
-    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancelar",
     "search-submit-button-title": "Enviar",
     "search-label": "Buscar"
@@ -75,38 +68,11 @@ ul.task-list li input[type="checkbox"] {
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
 <meta property="og:title" content="Problemas de Análisis Matemático - 10&nbsp; Derivadas de funciones de varias variables">
-<meta property="og:image" content="img/logos/sticker.png">
-<meta property="og:site_name" content="Problemas de Análisis Matemático">
+<meta property="og:image" content="img/derivadas-funciones-varias-variables/curvas-nivel.svg">
+<meta property="og:site-name" content="Problemas de Análisis Matemático">
 <meta name="twitter:title" content="Problemas de Análisis Matemático - 10&nbsp; Derivadas de funciones de varias variables">
-<meta name="twitter:image" content="img/logos/sticker.png">
+<meta name="twitter:image" content="img/derivadas-funciones-varias-variables/curvas-nivel.svg">
 <meta name="twitter:site" content="@aprendeconalf">
 <meta name="twitter:card" content="summary_large_image">
 </head>
@@ -117,12 +83,12 @@ window.Quarto = {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./11-derivadas-funciones-varias-variables.html"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Derivadas de funciones de varias variables</span></a></li></ol></nav>
-        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-        </a>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./11-derivadas-funciones-varias-variables.html"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Derivadas de funciones de varias variables</span></a></li></ol></nav>
+      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+      </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
@@ -132,7 +98,7 @@ window.Quarto = {
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
       <a href="./index.html" class="sidebar-logo-link">
       <img src="./img/logos/aprendeconalf.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
@@ -140,7 +106,7 @@ window.Quarto = {
     <div class="sidebar-title mb-0 py-0">
       <a href="./">Problemas de Análisis Matemático</a> 
         <div class="sidebar-tools-main tools-wide">
-    <a href="https://aprendeconalf.es" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-house-fill"></i></a>
+    <a href="https://aprendeconalf.es" rel="" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-house-fill"></i></a>
     <div class="dropdown">
       <a href="" title="Download" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download"><i class="bi bi-download"></i></a>
       <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-0">
@@ -261,7 +227,7 @@ window.Quarto = {
     </ul>
     </div>
 </nav>
-<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         
@@ -284,12 +250,10 @@ window.Quarto = {
   </div>
   
 
-
 </header>
 
-
 <div id="exr-curvas-nivel" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 10.1</strong></span> Emparejar las siguientes funciones de dos variables con sus curvas de nivel.</p>
+<p><span class="theorem-title"><strong>Ejercicio 10.1 </strong></span>Emparejar las siguientes funciones de dos variables con sus curvas de nivel.</p>
 <p><img src="img/derivadas-funciones-varias-variables/curvas-nivel.svg" class="img-fluid"></p>
 <ol type="a">
 <li><p><span class="math inline">\(f(x,y) = \cos(x)\operatorname{sen}(y)\)</span></p></li>
@@ -318,7 +282,7 @@ La gráfica D corresponde a <span class="math inline">\(h(x,y)\)</span>.</p>
 </div>
 </div>
 <div id="exr-derivada-parcial-gases-perfectos" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 10.2</strong></span> La <a href="https://es.wikipedia.org/wiki/Ley_de_los_gases_ideales">ecuación de los gases perfectos</a> relaciona la presión, el volumen y la temperatura de un gas perfecto. Esta ecuación se suele escribir de la forma</p>
+<p><span class="theorem-title"><strong>Ejercicio 10.2 </strong></span>La <a href="https://es.wikipedia.org/wiki/Ley_de_los_gases_ideales">ecuación de los gases perfectos</a> relaciona la presión, el volumen y la temperatura de un gas perfecto. Esta ecuación se suele escribir de la forma</p>
 <p><span class="math display">\[
 PV = nRT
 \]</span></p>
@@ -357,7 +321,7 @@ Solución
 </div>
 </div>
 <div id="exr-co2-planta" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 10.3</strong></span> La asimilación de CO<span class="math inline">\(_2\)</span> de una planta depende de la temperatura ambiente (t) y de la intensidad de la luz (l), según la función</p>
+<p><span class="theorem-title"><strong>Ejercicio 10.3 </strong></span>La asimilación de CO<span class="math inline">\(_2\)</span> de una planta depende de la temperatura ambiente (t) y de la intensidad de la luz (l), según la función</p>
 <p><span class="math display">\[
 f(t,l) = ctl^2,
 \]</span></p>
@@ -388,7 +352,7 @@ Solución
 </div>
 </div>
 <div id="exr-produccion-economica" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 10.4</strong></span> La <a href="https://es.wikipedia.org/wiki/Funci%C3%B3n_de_producci%C3%B3n_de_Cobb-Douglas">función de producción de Cobb-Douglas</a></p>
+<p><span class="theorem-title"><strong>Ejercicio 10.4 </strong></span>La <a href="https://es.wikipedia.org/wiki/Funci%C3%B3n_de_producci%C3%B3n_de_Cobb-Douglas">función de producción de Cobb-Douglas</a></p>
 <p><span class="math display">\[p(t,k) = at^\alpha k^{1-\alpha }\]</span></p>
 <p>se utiliza en Econometría para modelizar, de manera simplificada, la producción económica de un país, es decir, el valor monetario de los bienes que se producen en un año, en función de la cantidad de trabajo <span class="math inline">\(t\)</span> y el capital invertido <span class="math inline">\(k\)</span>, y donde <span class="math inline">\(a\)</span> es una constante conocida como factor total de productividad y <span class="math inline">\(\alpha\)</span> es otra constante que mide la elasticidad del producto del trabajo y el capital.</p>
 <ol type="a">
@@ -435,7 +399,7 @@ Solución
 </div>
 </div>
 <div id="exr-variacion-volumen-cilindro" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 10.5</strong></span> Se tiene un cilindro de radio <span class="math inline">\(5\)</span> cm y altura <span class="math inline">\(3\)</span> cm. ¿Es el volumen del cilindro más sensible a una pequeña variación de su radio o de su altura? ¿Cuál debería ser la altura del cilindro para que su volumen fuese igual se sensible a una pequeña variación de su radio que a una pequeña variación de su altura?</p>
+<p><span class="theorem-title"><strong>Ejercicio 10.5 </strong></span>Se tiene un cilindro de radio <span class="math inline">\(5\)</span> cm y altura <span class="math inline">\(3\)</span> cm. ¿Es el volumen del cilindro más sensible a una pequeña variación de su radio o de su altura? ¿Cuál debería ser la altura del cilindro para que su volumen fuese igual se sensible a una pequeña variación de su radio que a una pequeña variación de su altura?</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
@@ -454,12 +418,12 @@ Solución
 <p><span class="math display">\[
 \frac{\partial v}{\partial r} = 2\pi rh,
 \]</span></p>
-<p>que para un cilindro de radio <span class="math inline">\(5\)</span> cm y altura <span class="math inline">\(3\)</span> cm es <span class="math inline">\(\frac{\partial v}{\partial r} = 2\pi 5\cdot 3  = 30\pi\)</span>.</p>
+<p>que para un cilindro de radio <span class="math inline">\(5\)</span> cm y altura <span class="math inline">\(3\)</span> cm es <span class="math inline">\(\frac{\partial v}{\partial r} = 2\pi 5\cdot 3 = 30\pi\)</span>.</p>
 <p>Del mismo modo, la tasa de variación del volumen con respecto a la altura es la derivada parcial del volumen con respecto a la altura, es decir,</p>
 <p><span class="math display">\[
 \frac{\partial v}{\partial h} = \pi r^2,
 \]</span></p>
-<p>que para un cilindro de radio <span class="math inline">\(5\)</span> cm y altura <span class="math inline">\(3\)</span> cm es <span class="math inline">\(\frac{\partial v}{\partial h} = \pi 5^2  = 25\pi\)</span>.</p>
+<p>que para un cilindro de radio <span class="math inline">\(5\)</span> cm y altura <span class="math inline">\(3\)</span> cm es <span class="math inline">\(\frac{\partial v}{\partial h} = \pi 5^2 = 25\pi\)</span>.</p>
 <p>Así pues, el volumen de este cilindro es más sensible a una pequeña variación del radio que de la altura.</p>
 <p>Para que fuese igualmente sensible a la variación del radio y de la altura, ambas derivadas parciales deberían ser iguales, es decir,</p>
 <p><span class="math display">\[
@@ -469,7 +433,7 @@ Solución
 </div>
 </div>
 <div id="exr-coste-marginal" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 10.6</strong></span> Una empresa fabrica helados de tres sabores. El coste total de producción viene dada por la función</p>
+<p><span class="theorem-title"><strong>Ejercicio 10.6 </strong></span>Una empresa fabrica helados de tres sabores. El coste total de producción viene dada por la función</p>
 <p><span class="math display">\[
 c(x,y,z)=\frac{1}{10}\sqrt[3]{xyz} + \frac{x}{20} + \frac{y}{40} + \frac{z}{30} + 100,
 \]</span></p>
@@ -503,7 +467,7 @@ Solución
 </div>
 </div>
 <div id="exr-interpretacion-derivadas-parciales-superficie" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 10.7</strong></span> La gráfica de una función <span class="math inline">\(f(x,y)\)</span> se muestra a continuación.</p>
+<p><span class="theorem-title"><strong>Ejercicio 10.7 </strong></span>La gráfica de una función <span class="math inline">\(f(x,y)\)</span> se muestra a continuación.</p>
 <p><img src="img/derivadas-funciones-varias-variables/interpretacion-derivadas-parciales-superficie.svg" class="img-fluid"></p>
 <p>¿Qué signo tienen las derivadas parciales en el punto <span class="math inline">\((1,-1)\)</span>. ¿Y en el punto (0,0)?</p>
 </div>
@@ -525,7 +489,7 @@ Solución
 </div>
 </div>
 <div id="exr-recta-normal-plano-tangente-superficie" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 10.8</strong></span> Obtener la ecuación del plano tangente y de la recta normal las siguientes superficies en los puntos indicados.</p>
+<p><span class="theorem-title"><strong>Ejercicio 10.8 </strong></span>Obtener la ecuación del plano tangente y de la recta normal las siguientes superficies en los puntos indicados.</p>
 <ol type="a">
 <li><p><span class="math inline">\(xyz=8\)</span> en el punto <span class="math inline">\((4,-2,-1)\)</span>.</p></li>
 <li><p><span class="math inline">\(f(x,y) = y\ln(xy)\)</span> en el punto <span class="math inline">\((1/2, 2, 0)\)</span>.</p></li>
@@ -599,7 +563,7 @@ z &amp;=
 </div>
 </div>
 <div id="exr-gradiente-1" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 10.9</strong></span> Calcular el gradiente de la función</p>
+<p><span class="theorem-title"><strong>Ejercicio 10.9 </strong></span>Calcular el gradiente de la función</p>
 <p><span class="math display">\[
 f(x,y,z)=\log \frac{\sqrt{x}}{yz}+\operatorname{arcsen}(xz).
 \]</span></p>
@@ -623,7 +587,7 @@ Solución
 </div>
 </div>
 <div id="exr-nave-espacial" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 10.10</strong></span> Una nave espacial está en problemas cerca del sol. Se encuentra en la posición <span class="math inline">\((1,1,1)\)</span> y la temperatura de la nave cuando está en la posición <span class="math inline">\((x,y,z)\)</span> viene dada por <span class="math inline">\(T(x,y,z)=e^{-x^2-2y^2-3z^2}\)</span> donde <span class="math inline">\(x,y,z\)</span> se miden en metros. ¿En qué dirección debe moverse la nave para que la temperatura decrezca lo más rápidamente posible?</p>
+<p><span class="theorem-title"><strong>Ejercicio 10.10 </strong></span>Una nave espacial está en problemas cerca del sol. Se encuentra en la posición <span class="math inline">\((1,1,1)\)</span> y la temperatura de la nave cuando está en la posición <span class="math inline">\((x,y,z)\)</span> viene dada por <span class="math inline">\(T(x,y,z)=e^{-x^2-2y^2-3z^2}\)</span> donde <span class="math inline">\(x,y,z\)</span> se miden en metros. ¿En qué dirección debe moverse la nave para que la temperatura decrezca lo más rápidamente posible?</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="false" aria-label="Toggle callout">
@@ -648,7 +612,7 @@ Solución
 </div>
 </div>
 <div id="exr-pantano" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 10.11</strong></span> Supongamos que la cantidad de agua almacenada en un pantano al final del año hidrológico, <span class="math inline">\(A\)</span> en hectómetros cúbicos, viene dada por la función</p>
+<p><span class="theorem-title"><strong>Ejercicio 10.11 </strong></span>Supongamos que la cantidad de agua almacenada en un pantano al final del año hidrológico, <span class="math inline">\(A\)</span> en hectómetros cúbicos, viene dada por la función</p>
 <p><span class="math display">\[
 A(p,t,c) = \sqrt {\frac{{p^3 }}{{t - 1}} - c^2 e^{cpt}}
 \]</span></p>
@@ -707,7 +671,7 @@ Solución
 </div>
 </div>
 <div id="exr-normal-bidimensional" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 10.12</strong></span> La variable aleatoria bidimensional <span class="math inline">\((X,Y)\)</span> con función de densidad</p>
+<p><span class="theorem-title"><strong>Ejercicio 10.12 </strong></span>La variable aleatoria bidimensional <span class="math inline">\((X,Y)\)</span> con función de densidad</p>
 <p><span class="math display">\[
 f(x,y) = \frac{1}{\sqrt{2\pi}\, \sigma_x\sigma_y} e^{-\frac{1}{2}\left(\frac{(x-\mu_x)^2}{\sigma_x^2}+\frac{(y-\mu_y)^2}{\sigma_y^2}\right)}
 \]</span></p>
@@ -741,11 +705,11 @@ Solución
 </div>
 </div>
 <div id="exr-polea" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 10.13</strong></span> Tenemos dos objetos de masas <span class="math inline">\(m_1\)</span> y <span class="math inline">\(m_2\)</span> unidas por una cuerda que pasa a través de una polea como la de la siguiente figura.</p>
+<p><span class="theorem-title"><strong>Ejercicio 10.13 </strong></span>Tenemos dos objetos de masas <span class="math inline">\(m_1\)</span> y <span class="math inline">\(m_2\)</span> unidas por una cuerda que pasa a través de una polea como la de la siguiente figura.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="img/derivadas-funciones-varias-variables/polea.png" class="img-fluid figure-img"></p>
-<figcaption>Polea</figcaption>
+<figcaption class="figure-caption">Polea</figcaption>
 </figure>
 </div>
 <p>Si <span class="math inline">\(m_1\geq m_2\)</span>, la aceleración del objeto de masa <span class="math inline">\(m_1\)</span> viene dada por la ecuación</p>
@@ -801,7 +765,7 @@ m_1\frac{\partial a}{\partial m_1}+m_2\frac{\partial a}{\partial m_2}
 </div>
 </div>
 <div id="exr-reglas-derivacion" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 10.14</strong></span> Utilizar la regla de la cadena para funciones de varias variables para demostrar las reglas de derivación de funciones de una variable real</p>
+<p><span class="theorem-title"><strong>Ejercicio 10.14 </strong></span>Utilizar la regla de la cadena para funciones de varias variables para demostrar las reglas de derivación de funciones de una variable real</p>
 <p><span class="math display">\[\begin{align*}
 (u+v)' &amp;= u' + v'\\
 (u-v)' &amp;= u' - v'\\
@@ -854,7 +818,7 @@ Solución
 </div>
 </div>
 <div id="exr-aproximacion-variabicon-concentraciones-equilibrio-quimico" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 10.15</strong></span> En un equilibrio químico, la concentración de una sustancia <span class="math inline">\(z\)</span> depende de las concentraciones de otras dos sustancias <span class="math inline">\(x\)</span> e <span class="math inline">\(y\)</span> según la ecuación <span class="math inline">\(\frac{z}{\sqrt{xy}}-\ln\left(\frac{x+y}{y}\right) = 0\)</span>. Usar el diferencial para predecir la variación que experimentará la concentración de <span class="math inline">\(z\)</span> si la concentración de <span class="math inline">\(x\)</span> aumenta <span class="math inline">\(0.1\)</span> mg/mm<span class="math inline">\(^3\)</span> y la de <span class="math inline">\(y\)</span> disminuye <span class="math inline">\(0.2\)</span> mg/mm<span class="math inline">\(^3\)</span> en el instante en que las concentraciones de <span class="math inline">\(x\)</span> e <span class="math inline">\(y\)</span> son 1 mg/mm<span class="math inline">\(^3\)</span>.</p>
+<p><span class="theorem-title"><strong>Ejercicio 10.15 </strong></span>En un equilibrio químico, la concentración de una sustancia <span class="math inline">\(z\)</span> depende de las concentraciones de otras dos sustancias <span class="math inline">\(x\)</span> e <span class="math inline">\(y\)</span> según la ecuación <span class="math inline">\(\frac{z}{\sqrt{xy}}-\ln\left(\frac{x+y}{y}\right) = 0\)</span>. Usar el diferencial para predecir la variación que experimentará la concentración de <span class="math inline">\(z\)</span> si la concentración de <span class="math inline">\(x\)</span> aumenta <span class="math inline">\(0.1\)</span> mg/mm<span class="math inline">\(^3\)</span> y la de <span class="math inline">\(y\)</span> disminuye <span class="math inline">\(0.2\)</span> mg/mm<span class="math inline">\(^3\)</span> en el instante en que las concentraciones de <span class="math inline">\(x\)</span> e <span class="math inline">\(y\)</span> son 1 mg/mm<span class="math inline">\(^3\)</span>.</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-15-contents" aria-controls="callout-15" aria-expanded="false" aria-label="Toggle callout">
@@ -896,7 +860,7 @@ dz
 </div>
 </div>
 <div id="exr-variacion-volumen-cilindro" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 10.16</strong></span> Un cilindro metálico de radio 30cm y altura 50cm se dilata de manera que la tasa de variación de su radio es 1 cm/s y la tasa de variación de su altura es 2 cm/s. ¿Cuál es la tasa de variación de su volumen?</p>
+<p><span class="theorem-title"><strong>Ejercicio 10.16 </strong></span>Un cilindro metálico de radio 30cm y altura 50cm se dilata de manera que la tasa de variación de su radio es 1 cm/s y la tasa de variación de su altura es 2 cm/s. ¿Cuál es la tasa de variación de su volumen?</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-16-contents" aria-controls="callout-16" aria-expanded="false" aria-label="Toggle callout">
@@ -926,7 +890,7 @@ Solución
 </div>
 </div>
 <div id="exr-distancia-planetas" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 10.17</strong></span> Dos planetas se mueven en un mismo plano describiendo órbitas dadas por las funciones vectoriales <span class="math inline">\(f(t) = (3 \cos(t), \operatorname{sen}(t))\)</span> y <span class="math inline">\(g(t) = (2\operatorname{sen}(t/2), 3\cos(t/2))\)</span>. Usar la regla de la cadena para funciones de varias variables para calcular la derivada de la distancia entre los planetas en el instante <span class="math inline">\(t=\pi\)</span>. ¿Los planetas se están acercando o alejando?</p>
+<p><span class="theorem-title"><strong>Ejercicio 10.17 </strong></span>Dos planetas se mueven en un mismo plano describiendo órbitas dadas por las funciones vectoriales <span class="math inline">\(f(t) = (3 \cos(t), \operatorname{sen}(t))\)</span> y <span class="math inline">\(g(t) = (2\operatorname{sen}(t/2), 3\cos(t/2))\)</span>. Usar la regla de la cadena para funciones de varias variables para calcular la derivada de la distancia entre los planetas en el instante <span class="math inline">\(t=\pi\)</span>. ¿Los planetas se están acercando o alejando?</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-17-contents" aria-controls="callout-17" aria-expanded="false" aria-label="Toggle callout">
@@ -970,14 +934,14 @@ g'(\pi) &amp;= \left(\frac{2}{2}\cos(\pi/2), -\frac{3}{2}\operatorname{sen}(\pi/
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="img/derivadas-funciones-varias-variables/planetas.svg" class="img-fluid figure-img"></p>
-<figcaption>Orbitas de los planetas.</figcaption>
+<figcaption class="figure-caption">Orbitas de los planetas.</figcaption>
 </figure>
 </div>
 </div>
 </div>
 </div>
 <div id="exr-transmision-errores-caudal-fuente" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 10.18</strong></span> Para calcular el caudal de una fuente se ha llenado un depósito de base cuadrada <span class="math inline">\(30\pm 0.2\)</span> cm y altura <span class="math inline">\(50\pm 0.3\)</span> cm en un tiempo de <span class="math inline">\(20\pm 0.5\)</span> s. Expresar el caudal de la fuente incluyendo error en la medida.</p>
+<p><span class="theorem-title"><strong>Ejercicio 10.18 </strong></span>Para calcular el caudal de una fuente se ha llenado un depósito de base cuadrada <span class="math inline">\(30\pm 0.2\)</span> cm y altura <span class="math inline">\(50\pm 0.3\)</span> cm en un tiempo de <span class="math inline">\(20\pm 0.5\)</span> s. Expresar el caudal de la fuente incluyendo error en la medida.</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-18-contents" aria-controls="callout-18" aria-expanded="false" aria-label="Toggle callout">
@@ -1015,7 +979,7 @@ c(30,50,20) \pm dc = 2250 \pm 99.75 \mbox{ cm$^3$/s}.
 </div>
 </div>
 <div id="exr-transmision-errores-potencial-electrico" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 10.19</strong></span> La potencia eléctrica <span class="math inline">\(P\)</span> en un circuito depende de el voltaje <span class="math inline">\(E\)</span> y la resistencia <span class="math inline">\(R\)</span> según la fórmula <span class="math inline">\(P = E^2/R\)</span>. Si los errores cometidos al medir el voltaje y la resistencia son de un <span class="math inline">\(1\)</span>% y un <span class="math inline">\(2\)</span>% respectivamente, ¿cuál será el error relativo en el cálculo de la potencia eléctrica?</p>
+<p><span class="theorem-title"><strong>Ejercicio 10.19 </strong></span>La potencia eléctrica <span class="math inline">\(P\)</span> en un circuito depende de el voltaje <span class="math inline">\(E\)</span> y la resistencia <span class="math inline">\(R\)</span> según la fórmula <span class="math inline">\(P = E^2/R\)</span>. Si los errores cometidos al medir el voltaje y la resistencia son de un <span class="math inline">\(1\)</span>% y un <span class="math inline">\(2\)</span>% respectivamente, ¿cuál será el error relativo en el cálculo de la potencia eléctrica?</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-19-contents" aria-controls="callout-19" aria-expanded="false" aria-label="Toggle callout">
@@ -1046,7 +1010,7 @@ Solución
 </div>
 </div>
 <div id="exr-ameba" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 10.20</strong></span> La Quimiotaxis es el movimiento de los organismos dirigido por un gradiente de concentración, es decir, en la dirección en la que la concentración aumenta con más rapidez. El moho del cieno Dictyoselium discoideum muestra este comportamiento. En esta caso, las amebas unicelulares de esta especie se mueven según el gradiente de concentración de una sustancia química denominada adenosina monofosfato (AMP cíclico). Si suponemos que la expresión que da la concentración de AMP cíclico en un punto de coordenadas <span class="math inline">\((x,y,z)\)</span> es:</p>
+<p><span class="theorem-title"><strong>Ejercicio 10.20 </strong></span>La Quimiotaxis es el movimiento de los organismos dirigido por un gradiente de concentración, es decir, en la dirección en la que la concentración aumenta con más rapidez. El moho del cieno Dictyoselium discoideum muestra este comportamiento. En esta caso, las amebas unicelulares de esta especie se mueven según el gradiente de concentración de una sustancia química denominada adenosina monofosfato (AMP cíclico). Si suponemos que la expresión que da la concentración de AMP cíclico en un punto de coordenadas <span class="math inline">\((x,y,z)\)</span> es:</p>
 <p><span class="math display">\[
 C(x,y,z) = \frac{4}{\sqrt{x^2+y^2+z^4+1}}
 \]</span></p>
@@ -1077,7 +1041,7 @@ Solución
 </div>
 </div>
 <div id="exr-derivada-direccional-gas-perfecto" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 10.21</strong></span> Se sabe que un gas perfecto a una presión de <span class="math inline">\(1\)</span> atmósfera y una temperatura de <span class="math inline">\(273.1\)</span> K ocupa un volumen de <span class="math inline">\(22.4\)</span> litros.</p>
+<p><span class="theorem-title"><strong>Ejercicio 10.21 </strong></span>Se sabe que un gas perfecto a una presión de <span class="math inline">\(1\)</span> atmósfera y una temperatura de <span class="math inline">\(273.1\)</span> K ocupa un volumen de <span class="math inline">\(22.4\)</span> litros.</p>
 <ol type="a">
 <li><p>¿En qué dirección deben cambiarse la presión y la temperatura para conseguir el mayor aumento del volumen?</p></li>
 <li><p>¿Cómo varía el volumen si comenzamos a incrementar la temperatura a razón del doble del incremento de la presión?</p></li>
@@ -1142,7 +1106,7 @@ V'_{\mathbf{u}}(1,273.1)
 </div>
 </div>
 <div id="exr-derivada-direccional-capsulas" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 10.22</strong></span> Se han diseñado unas cápsulas con forma piramidal con base un rectángulo de lados a=3 cm, b=4 cm, y altura h=6 cm.</p>
+<p><span class="theorem-title"><strong>Ejercicio 10.22 </strong></span>Se han diseñado unas cápsulas con forma piramidal con base un rectángulo de lados a=3 cm, b=4 cm, y altura h=6 cm.</p>
 <ol type="a">
 <li><p>¿Cómo deben cambiar las dimensiones de la cápsula para que el volumen aumente lo más rápidamente posible? ¿Cuál sería la tasa de variación del volumen si cambian las dimensiones de la cápsula en la proporciones anteriores?</p></li>
 <li><p>Si se empiezan a cambiar las dimensiones de la cápsula de manera que el lado mayor del rectángulo disminuye la mitad de lo que aumenta el lado menor, y la altura aumenta el doble de lo que aumenta el lado menor, ¿cuál sería la tasa de variación del volumen de la cápsula en las condiciones anteriores?</p></li>
@@ -1183,7 +1147,7 @@ V'_\mathbf{u}(3,4,6)
 </div>
 </div>
 <div id="exr-derivada-direccional-nula" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 10.23</strong></span> ¿En qué direcciones se anulará la derivada direccional de la función</p>
+<p><span class="theorem-title"><strong>Ejercicio 10.23 </strong></span>¿En qué direcciones se anulará la derivada direccional de la función</p>
 <p><span class="math display">\[
 f(x,y)=\frac{x^2-y^2}{x^2+y^2}
 \]</span></p>
@@ -1227,7 +1191,7 @@ f'_{\mathbf{u}}(1,1)
 </div>
 </div>
 <div id="exr-derivada-direccional" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 10.24</strong></span> ¿Existe alguna dirección en la que la derivada direccional en el punto <span class="math inline">\(P=(1,2)\)</span> de la función <span class="math inline">\(f(x,y) = x^2-3xy+4y^2\)</span> valga 14?</p>
+<p><span class="theorem-title"><strong>Ejercicio 10.24 </strong></span>¿Existe alguna dirección en la que la derivada direccional en el punto <span class="math inline">\(P=(1,2)\)</span> de la función <span class="math inline">\(f(x,y) = x^2-3xy+4y^2\)</span> valga 14?</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-24-contents" aria-controls="callout-24" aria-expanded="false" aria-label="Toggle callout">
@@ -1263,7 +1227,7 @@ Solución
 </div>
 </div>
 <div id="exr-derivada-direccional-2" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 10.25</strong></span> La derivada direccional de una función <span class="math inline">\(f\)</span> en un punto <span class="math inline">\(P\)</span> es máxima en la dirección del vector <span class="math inline">\((1,1,-1)\)</span> y su valor es <span class="math inline">\(2\sqrt{3}\)</span>. ¿Cuánto vale la derivada direccional de <span class="math inline">\(f\)</span> en <span class="math inline">\(P\)</span> en la dirección del vector <span class="math inline">\((1,1,0)\)</span>?</p>
+<p><span class="theorem-title"><strong>Ejercicio 10.25 </strong></span>La derivada direccional de una función <span class="math inline">\(f\)</span> en un punto <span class="math inline">\(P\)</span> es máxima en la dirección del vector <span class="math inline">\((1,1,-1)\)</span> y su valor es <span class="math inline">\(2\sqrt{3}\)</span>. ¿Cuánto vale la derivada direccional de <span class="math inline">\(f\)</span> en <span class="math inline">\(P\)</span> en la dirección del vector <span class="math inline">\((1,1,0)\)</span>?</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-25-contents" aria-controls="callout-25" aria-expanded="false" aria-label="Toggle callout">
@@ -1295,7 +1259,7 @@ f'_{\mathbf{u}}(P)
 </div>
 </div>
 <div id="exr-derivada-direccional-3" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 10.26</strong></span> Dado el campo escalar</p>
+<p><span class="theorem-title"><strong>Ejercicio 10.26 </strong></span>Dado el campo escalar</p>
 <p><span class="math display">\[
 f(x,y,z) = x^2-y^2+xyz^3-zx,
 \]</span></p>
@@ -1342,7 +1306,7 @@ f'_{\mathbf{u}}(1,2,3)
 </div>
 </div>
 <div id="exr-vector-gradiente-normal-curvas-nivel" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 10.27</strong></span> Sea <span class="math inline">\(f(x,y,z)=0\)</span> la ecuación que define una superficie en el espacio real. Demostrar que el vector gradiente de <span class="math inline">\(f\)</span> en cualquier punto <span class="math inline">\((a, b, c)\)</span> es normal a la superficie en ese punto.</p>
+<p><span class="theorem-title"><strong>Ejercicio 10.27 </strong></span>Sea <span class="math inline">\(f(x,y,z)=0\)</span> la ecuación que define una superficie en el espacio real. Demostrar que el vector gradiente de <span class="math inline">\(f\)</span> en cualquier punto <span class="math inline">\((a, b, c)\)</span> es normal a la superficie en ese punto.</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-27-contents" aria-controls="callout-27" aria-expanded="false" aria-label="Toggle callout">
@@ -1373,7 +1337,7 @@ f(g(t))'
 </div>
 </div>
 <div id="exr-derviada-implicita-trayectoria" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 10.28</strong></span> Un cuerpo se mueve en el plano a través de los puntos de coordenadas <span class="math inline">\((x,y)\)</span> relacionadas mediante la siguiente expresión <span class="math inline">\(2e^{xy} \operatorname{sen}(x) + y\cos(x) = 2\)</span>. Calcular las ecuaciones de las rectas tangente y normal a la trayectoria del cuerpo cuando <span class="math inline">\(x=0\)</span>.</p>
+<p><span class="theorem-title"><strong>Ejercicio 10.28 </strong></span>Un cuerpo se mueve en el plano a través de los puntos de coordenadas <span class="math inline">\((x,y)\)</span> relacionadas mediante la siguiente expresión <span class="math inline">\(2e^{xy} \operatorname{sen}(x) + y\cos(x) = 2\)</span>. Calcular las ecuaciones de las rectas tangente y normal a la trayectoria del cuerpo cuando <span class="math inline">\(x=0\)</span>.</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-28-contents" aria-controls="callout-28" aria-expanded="false" aria-label="Toggle callout">
@@ -1436,7 +1400,7 @@ y-2 = \frac{1}{2}(x-0) \Leftrightarrow y = \frac{1}{2}x+2.
 </div>
 </div>
 <div id="exr-derivada-implicita-trayectoria-extremos" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 10.29</strong></span> Hallar la ecuación de la recta tangente y normal a la curva <span class="math inline">\(x^2+y^2=3xy-1\)</span> en los puntos en que <span class="math inline">\(x=1\)</span>. Calcular también los extremos relativos y decir si son máximos o mínimos.</p>
+<p><span class="theorem-title"><strong>Ejercicio 10.29 </strong></span>Hallar la ecuación de la recta tangente y normal a la curva <span class="math inline">\(x^2+y^2=3xy-1\)</span> en los puntos en que <span class="math inline">\(x=1\)</span>. Calcular también los extremos relativos y decir si son máximos o mínimos.</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-29-contents" aria-controls="callout-29" aria-expanded="false" aria-label="Toggle callout">
@@ -1522,7 +1486,7 @@ x^{2}+(2x/3)^{2}=3x(2x/3)-1 \Leftrightarrow x^{2}+4x^{2}/9 = 2x^{2}-1 \Leftright
 </div>
 </div>
 <div id="exr-derivada-implicita-direccional" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 10.30</strong></span> En una reacción química se cumple la ecuación</p>
+<p><span class="theorem-title"><strong>Ejercicio 10.30 </strong></span>En una reacción química se cumple la ecuación</p>
 <p><span class="math display">\[
 x\ln(y)+\frac{2e^{y^2+z}}{x} - \frac{x}{z^2} = -1
 \]</span></p>
@@ -1577,7 +1541,7 @@ f'_{\mathbf{u}}(2,1)
 </div>
 </div>
 <div id="exr-funcion-homogenea" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 10.31</strong></span> Una función <span class="math inline">\(f(x,y)\)</span> se llama homogénea de grado <span class="math inline">\(n\)</span> si satisface que <span class="math inline">\(f(tx, ty) = t^nf(x,y)\)</span>. Demostrar que si <span class="math inline">\(f\)</span> es homogénea de grado <span class="math inline">\(n\)</span> se cumplen las ecuaciones</p>
+<p><span class="theorem-title"><strong>Ejercicio 10.31 </strong></span>Una función <span class="math inline">\(f(x,y)\)</span> se llama homogénea de grado <span class="math inline">\(n\)</span> si satisface que <span class="math inline">\(f(tx, ty) = t^nf(x,y)\)</span>. Demostrar que si <span class="math inline">\(f\)</span> es homogénea de grado <span class="math inline">\(n\)</span> se cumplen las ecuaciones</p>
 <p><span class="math display">\[
 \begin{gathered}
 x\frac{\partial f}{\partial x} + y \frac{\partial f}{\partial y} = nf(x,y),\\
@@ -1625,7 +1589,7 @@ Solución
 </div>
 </div>
 <div id="exr-regla-cadena-coordenadas-polares" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 10.32</strong></span> Demostrar que si <span class="math inline">\(f(x,y)\)</span> es una función de varias variables tal que <span class="math inline">\(x\)</span> e <span class="math inline">\(y\)</span> dependen, a su vez, de otras dos variables, <span class="math inline">\(s\)</span> y <span class="math inline">\(t\)</span>, es decir, <span class="math inline">\(x=g(s,t)\)</span> e <span class="math inline">\(y=h(s,t)\)</span>, entonces</p>
+<p><span class="theorem-title"><strong>Ejercicio 10.32 </strong></span>Demostrar que si <span class="math inline">\(f(x,y)\)</span> es una función de varias variables tal que <span class="math inline">\(x\)</span> e <span class="math inline">\(y\)</span> dependen, a su vez, de otras dos variables, <span class="math inline">\(s\)</span> y <span class="math inline">\(t\)</span>, es decir, <span class="math inline">\(x=g(s,t)\)</span> e <span class="math inline">\(y=h(s,t)\)</span>, entonces</p>
 <p><span class="math display">\[\begin{align*}
 \frac{\partial f}{\partial s}
 &amp;= \frac{\partial f}{\partial x} \frac{\partial x}{\partial s} + \frac{\partial f}{\partial y} \frac{\partial y}{\partial s} \\
@@ -1675,7 +1639,7 @@ x = g(r,\theta) = r\cos(\theta) \quad y = h(r,\theta) = r\operatorname{sen}(\the
 </div>
 </div>
 <div id="exr-potencial-electrico" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 10.33</strong></span> La relación que modeliza el potencial eléctrico <span class="math inline">\(V\)</span> de un punto del plano en función de su distancia, es <span class="math inline">\(V=\log D\)</span>, donde <span class="math inline">\(D=\sqrt{x^2+y^2}\)</span>.</p>
+<p><span class="theorem-title"><strong>Ejercicio 10.33 </strong></span>La relación que modeliza el potencial eléctrico <span class="math inline">\(V\)</span> de un punto del plano en función de su distancia, es <span class="math inline">\(V=\log D\)</span>, donde <span class="math inline">\(D=\sqrt{x^2+y^2}\)</span>.</p>
 <ol type="a">
 <li><p>Calcular el gradiente de <span class="math inline">\(V\)</span>.</p></li>
 <li><p>Hallar la dirección de máxima variación del potencial eléctrico en el punto <span class="math inline">\((x,y)=(\sqrt{3},\sqrt{3})\)</span>.</p></li>
@@ -1757,7 +1721,7 @@ V(x,y)
 </div>
 </div>
 <div id="exr-barra-metal" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 10.34</strong></span> Una barra de metal de un metro de largo se calienta de manera irregular y de forma tal que a <span class="math inline">\(x\)</span> metros de su extremo izquierdo y en el instante <span class="math inline">\(t\)</span> minutos, su temperatura en grados centígrados esta dada por <span class="math inline">\(H(x,t) = 100e^{-0.1t}\operatorname{sen}(\pi xt)\)</span> con <span class="math inline">\(0\leq x \leq 1\)</span>.</p>
+<p><span class="theorem-title"><strong>Ejercicio 10.34 </strong></span>Una barra de metal de un metro de largo se calienta de manera irregular y de forma tal que a <span class="math inline">\(x\)</span> metros de su extremo izquierdo y en el instante <span class="math inline">\(t\)</span> minutos, su temperatura en grados centígrados esta dada por <span class="math inline">\(H(x,t) = 100e^{-0.1t}\operatorname{sen}(\pi xt)\)</span> con <span class="math inline">\(0\leq x \leq 1\)</span>.</p>
 <ol type="a">
 <li><p>Calcular <span class="math inline">\(\dfrac{\partial H}{\partial x}(0.2, 1)\)</span> y <span class="math inline">\(\dfrac{\partial H}{\partial x}(0.8, 1).\)</span> ¿Cuál es la interpretación práctica (en términos de temperatura) de estas derivadas parciales? Explicar por qué cada una tiene el signo que tiene.</p></li>
 <li><p>Calcular la matriz hessiana de <span class="math inline">\(H\)</span>.</p></li>
@@ -1824,7 +1788,7 @@ Solución
 </div>
 </div>
 <div id="exr-ecuacion-laplace" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 10.35</strong></span> La ecuación diferencial parcial</p>
+<p><span class="theorem-title"><strong>Ejercicio 10.35 </strong></span>La ecuación diferencial parcial</p>
 <p><span class="math display">\[
 \frac{\partial^2 u}{\partial x^2} + \frac{\partial^2 u}{\partial y^2} + \frac{\partial^2 u}{\partial z^2} = 0,
 \]</span></p>
@@ -1932,7 +1896,7 @@ u}}{{\partial x\partial y^2 }}} \right) \\
 </div>
 </div>
 <div id="exr-extremos-1" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 10.36</strong></span> Hallar los extremos relativos y los puntos de silla de la función <span class="math inline">\(f(x,y) = (x^2+y^2)^2-2a^2(x^2-y^2)\)</span> con <span class="math inline">\(a\neq 0\)</span>.</p>
+<p><span class="theorem-title"><strong>Ejercicio 10.36 </strong></span>Hallar los extremos relativos y los puntos de silla de la función <span class="math inline">\(f(x,y) = (x^2+y^2)^2-2a^2(x^2-y^2)\)</span> con <span class="math inline">\(a\neq 0\)</span>.</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-36-contents" aria-controls="callout-36" aria-expanded="false" aria-label="Toggle callout">
@@ -1953,7 +1917,7 @@ Punto de silla en <span class="math inline">\((0,0)\)</span>.</p>
 </div>
 </div>
 <div id="exr-extremos-2" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 10.37</strong></span> Determinar los extremos relativos y los puntos de silla del campo escalar <span class="math inline">\(h(x,y) = xy+\dfrac{xy^2}{2}-2x^2\)</span>.</p>
+<p><span class="theorem-title"><strong>Ejercicio 10.37 </strong></span>Determinar los extremos relativos y los puntos de silla del campo escalar <span class="math inline">\(h(x,y) = xy+\dfrac{xy^2}{2}-2x^2\)</span>.</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-37-contents" aria-controls="callout-37" aria-expanded="false" aria-label="Toggle callout">
@@ -1974,7 +1938,7 @@ Puntos de silla en <span class="math inline">\((0,0)\)</span> y <span class="mat
 </div>
 </div>
 <div id="exr-extremos-cosecha" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 10.38</strong></span> El rendimiento de una cosecha, <span class="math inline">\(R\)</span>, depende de las concentraciones de nitrógeno, <span class="math inline">\(n\)</span>, y fósforo, <span class="math inline">\(p\)</span>, presentes en el suelo según la función <span class="math inline">\(R(n,p) = npe^{-(n+p)}\)</span>. ¿Cuáles deben ser las concentraciones de nitrógeno y fósforo para que el rendimiento de la cosecha sea máximo?</p>
+<p><span class="theorem-title"><strong>Ejercicio 10.38 </strong></span>El rendimiento de una cosecha, <span class="math inline">\(R\)</span>, depende de las concentraciones de nitrógeno, <span class="math inline">\(n\)</span>, y fósforo, <span class="math inline">\(p\)</span>, presentes en el suelo según la función <span class="math inline">\(R(n,p) = npe^{-(n+p)}\)</span>. ¿Cuáles deben ser las concentraciones de nitrógeno y fósforo para que el rendimiento de la cosecha sea máximo?</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-38-contents" aria-controls="callout-38" aria-expanded="false" aria-label="Toggle callout">
@@ -2027,7 +1991,7 @@ e^{-(n+p)}(np-n-p+1) &amp; e^{-(n+p)}n(p-2)
 </div>
 </div>
 <div id="exr-maximizacion-beneficio" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 10.39</strong></span> Una empresa fabrica ordenadores portátiles y de sobremesa. El precio de los ordenadores portátiles es de 1200€ y el de los de sobremesa 800€. Si el coste de producir <span class="math inline">\(x\)</span> ordenadores portátiles e <span class="math inline">\(y\)</span> ordenadores de sobremesa semanales viene dado por la función <span class="math inline">\(C(x,y)=2x^2+y^2+10000\ln(xy)\)</span> en euros, ¿qué cantidad de ordenadores de cada tipo deberá producir semanalmente para maximizar el beneficio?</p>
+<p><span class="theorem-title"><strong>Ejercicio 10.39 </strong></span>Una empresa fabrica ordenadores portátiles y de sobremesa. El precio de los ordenadores portátiles es de 1200€ y el de los de sobremesa 800€. Si el coste de producir <span class="math inline">\(x\)</span> ordenadores portátiles e <span class="math inline">\(y\)</span> ordenadores de sobremesa semanales viene dado por la función <span class="math inline">\(C(x,y)=2x^2+y^2+10000\ln(xy)\)</span> en euros, ¿qué cantidad de ordenadores de cada tipo deberá producir semanalmente para maximizar el beneficio?</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-39-contents" aria-controls="callout-39" aria-expanded="false" aria-label="Toggle callout">
@@ -2069,7 +2033,7 @@ B(x,y) = 1200x + 800y - 2x^2 - y^2 - 10000\ln(xy).
 </div>
 </div>
 <div id="exr-ajuste-minimos-cuadrados" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 10.40</strong></span> En el ajuste de regresión de una recta <span class="math inline">\(y=a+bx\)</span>, se suele utilizar la técnica de mínimos cuadrados que consisten en buscar los valores de <span class="math inline">\(a\)</span> y <span class="math inline">\(b\)</span> que hacen mínima la función</p>
+<p><span class="theorem-title"><strong>Ejercicio 10.40 </strong></span>En el ajuste de regresión de una recta <span class="math inline">\(y=a+bx\)</span>, se suele utilizar la técnica de mínimos cuadrados que consisten en buscar los valores de <span class="math inline">\(a\)</span> y <span class="math inline">\(b\)</span> que hacen mínima la función</p>
 <p><span class="math display">\[
 f(a,b)= \sum_{i=1}^{n}(y_i-a-bx_i)^2,
 \]</span></p>
@@ -2080,7 +2044,7 @@ a=\bar y-b\bar x \quad \mbox{ y } b=\frac{s_{xy}}{s_x^2}.
 \]</span></p>
 </div>
 <div id="exr-minimización-material-caja" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 10.41</strong></span> Una empresa que fabrica cajas de cartón quiere construir una caja rectangular sin tapa con un volumen de 25 litros. ¿Qué dimensiones debe tener la caja para emplear la menor cantidad de cartón posible?</p>
+<p><span class="theorem-title"><strong>Ejercicio 10.41 </strong></span>Una empresa que fabrica cajas de cartón quiere construir una caja rectangular sin tapa con un volumen de 25 litros. ¿Qué dimensiones debe tener la caja para emplear la menor cantidad de cartón posible?</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-40-contents" aria-controls="callout-40" aria-expanded="false" aria-label="Toggle callout">
@@ -2128,7 +2092,7 @@ V(x,y,z) = 25000 \Leftrightarrow xx\frac{x}{2} = 25000 \frac{x^3}= 50000 \Leftri
 </div>
 </div>
 <div id="exr-minimización-distancia-parabola" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 10.42</strong></span> Un cometa sigue la órbita dada por la función <span class="math inline">\(3x^2+y^2=9\)</span>, donde el origen de coordenadas es la posición del sol. Si una nave espacial se mantiene fija en la posición <span class="math inline">\((4,1)\)</span>, ¿en qué punto de su trayectoria el cometa estará más cerca del nave?</p>
+<p><span class="theorem-title"><strong>Ejercicio 10.42 </strong></span>Un cometa sigue la órbita dada por la función <span class="math inline">\(3x^2+y^2=9\)</span>, donde el origen de coordenadas es la posición del sol. Si una nave espacial se mantiene fija en la posición <span class="math inline">\((4,1)\)</span>, ¿en qué punto de su trayectoria el cometa estará más cerca del nave?</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-41-contents" aria-controls="callout-41" aria-expanded="false" aria-label="Toggle callout">
@@ -2183,7 +2147,7 @@ g\left(\frac{11}{2}-\frac{3}{y},y\right) = 9
 </div>
 </div>
 <div id="exr-minimizacion-coste-production" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 10.43</strong></span> La función de producción de un determinado producto es <span class="math inline">\(f(k,l)= kl^3\)</span> donde <span class="math inline">\(k\)</span> son las unidades de capital y <span class="math inline">\(l\)</span> las unidades de mano de obra. Si el coste por unidad de capital es 7€ y el coste por unidad de mano de obra es 6€, determinar la cantidad de capital y mano de obra que minimiza el coste si deben producirse 290 unidades del producto.</p>
+<p><span class="theorem-title"><strong>Ejercicio 10.43 </strong></span>La función de producción de un determinado producto es <span class="math inline">\(f(k,l)= kl^3\)</span> donde <span class="math inline">\(k\)</span> son las unidades de capital y <span class="math inline">\(l\)</span> las unidades de mano de obra. Si el coste por unidad de capital es 7€ y el coste por unidad de mano de obra es 6€, determinar la cantidad de capital y mano de obra que minimiza el coste si deben producirse 290 unidades del producto.</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-42-contents" aria-controls="callout-42" aria-expanded="false" aria-label="Toggle callout">
@@ -2233,7 +2197,7 @@ f\left(\frac{2l}{7}, l\right) = 290
 </div>
 </div>
 <div id="exr-polinomios-maclaurin-dos-variables" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 10.44</strong></span> Calcular los polinomios de Maclaurin de segundo grado para las siguientes funciones.</p>
+<p><span class="theorem-title"><strong>Ejercicio 10.44 </strong></span>Calcular los polinomios de Maclaurin de segundo grado para las siguientes funciones.</p>
 <ol type="a">
 <li><span class="math inline">\(f(x,y) = \ln(x+y+1)\)</span>.</li>
 <li><span class="math inline">\(g(x,y) = e^{x+y}\)</span>.</li>
@@ -2261,7 +2225,7 @@ Solución
 </div>
 </div>
 <div id="exr-polinomio-taylor-modelo-ecologico" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 10.45</strong></span> Un modelo ecológico explica el número de individuos de una población mediante la función</p>
+<p><span class="theorem-title"><strong>Ejercicio 10.45 </strong></span>Un modelo ecológico explica el número de individuos de una población mediante la función</p>
 <p><span class="math display">\[f(x,t)=\dfrac{e^t}{x},\]</span></p>
 <p>donde <span class="math inline">\(t\)</span> es el tiempo y <span class="math inline">\(x\)</span> el número de predadores en la región.</p>
 <p>Calcular el número aproximado de individuos en la población para <span class="math inline">\(t=0.1\)</span> y <span class="math inline">\(x=0.9\)</span> utilizando el polinomio de Taylor de segundo grado de la función en el punto <span class="math inline">\((1,0)\)</span>.</p>
@@ -2311,33 +2275,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       } else {
         el.classList.add('notransition');
       }
-    }
-  }
-  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
-    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
-    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
-    let newTheme = '';
-    if(darkModeDefault) {
-      newTheme = isAlternate ? baseTheme : alternateTheme;
-    } else {
-      newTheme = isAlternate ? alternateTheme : baseTheme;
-    }
-    const changeGiscusTheme = () => {
-      // From: https://github.com/giscus/giscus/issues/336
-      const sendMessage = (message) => {
-        const iframe = document.querySelector('iframe.giscus-frame');
-        if (!iframe) return;
-        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
-      }
-      sendMessage({
-        setConfig: {
-          theme: newTheme
-        }
-      });
-    }
-    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
-    if (isGiscussLoaded) {
-      changeGiscusTheme();
     }
   }
   const toggleColorMode = (alternate) => {
@@ -2406,15 +2343,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return localAlternateSentinel;
     }
   }
-  const darkModeDefault = true;
-  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+  let localAlternateSentinel = 'alternate';
   // Dark / light mode switch
   window.quartoToggleColorScheme = () => {
     // Read the current dark / light value 
     let toAlternate = !hasAlternateSentinel();
     toggleColorMode(toAlternate);
     setStyleSentinel(toAlternate);
-    toggleGiscusIfUsed(toAlternate, darkModeDefault);
   };
   // Ensure there is a toggle, if there isn't float one in the top right
   if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
@@ -2493,9 +2428,10 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
-  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+  function tippyHover(el, contentFn) {
     const config = {
       allowHTML: true,
+      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -2505,17 +2441,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start',
+      placement: 'bottom-start'
     };
-    if (contentFn) {
-      config.content = contentFn;
-    }
-    if (onTriggerFn) {
-      config.onTrigger = onTriggerFn;
-    }
-    if (onUntriggerFn) {
-      config.onUntrigger = onUntriggerFn;
-    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -2528,125 +2455,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
       return note.innerHTML;
-    });
-  }
-  const xrefs = window.document.querySelectorAll('a.quarto-xref');
-  const processXRef = (id, note) => {
-    // Strip column container classes
-    const stripColumnClz = (el) => {
-      el.classList.remove("page-full", "page-columns");
-      if (el.children) {
-        for (const child of el.children) {
-          stripColumnClz(child);
-        }
-      }
-    }
-    stripColumnClz(note)
-    if (id === null || id.startsWith('sec-')) {
-      // Special case sections, only their first couple elements
-      const container = document.createElement("div");
-      if (note.children && note.children.length > 2) {
-        container.appendChild(note.children[0].cloneNode(true));
-        for (let i = 1; i < note.children.length; i++) {
-          const child = note.children[i];
-          if (child.tagName === "P" && child.innerText === "") {
-            continue;
-          } else {
-            container.appendChild(child.cloneNode(true));
-            break;
-          }
-        }
-        if (window.Quarto?.typesetMath) {
-          window.Quarto.typesetMath(container);
-        }
-        return container.innerHTML
-      } else {
-        if (window.Quarto?.typesetMath) {
-          window.Quarto.typesetMath(note);
-        }
-        return note.innerHTML;
-      }
-    } else {
-      // Remove any anchor links if they are present
-      const anchorLink = note.querySelector('a.anchorjs-link');
-      if (anchorLink) {
-        anchorLink.remove();
-      }
-      if (window.Quarto?.typesetMath) {
-        window.Quarto.typesetMath(note);
-      }
-      // TODO in 1.5, we should make sure this works without a callout special case
-      if (note.classList.contains("callout")) {
-        return note.outerHTML;
-      } else {
-        return note.innerHTML;
-      }
-    }
-  }
-  for (var i=0; i<xrefs.length; i++) {
-    const xref = xrefs[i];
-    tippyHover(xref, undefined, function(instance) {
-      instance.disable();
-      let url = xref.getAttribute('href');
-      let hash = undefined; 
-      if (url.startsWith('#')) {
-        hash = url;
-      } else {
-        try { hash = new URL(url).hash; } catch {}
-      }
-      if (hash) {
-        const id = hash.replace(/^#\/?/, "");
-        const note = window.document.getElementById(id);
-        if (note !== null) {
-          try {
-            const html = processXRef(id, note.cloneNode(true));
-            instance.setContent(html);
-          } finally {
-            instance.enable();
-            instance.show();
-          }
-        } else {
-          // See if we can fetch this
-          fetch(url.split('#')[0])
-          .then(res => res.text())
-          .then(html => {
-            const parser = new DOMParser();
-            const htmlDoc = parser.parseFromString(html, "text/html");
-            const note = htmlDoc.getElementById(id);
-            if (note !== null) {
-              const html = processXRef(id, note);
-              instance.setContent(html);
-            } 
-          }).finally(() => {
-            instance.enable();
-            instance.show();
-          });
-        }
-      } else {
-        // See if we can fetch a full url (with no hash to target)
-        // This is a special case and we should probably do some content thinning / targeting
-        fetch(url)
-        .then(res => res.text())
-        .then(html => {
-          const parser = new DOMParser();
-          const htmlDoc = parser.parseFromString(html, "text/html");
-          const note = htmlDoc.querySelector('main.content');
-          if (note !== null) {
-            // This should only happen for chapter cross references
-            // (since there is no id in the URL)
-            // remove the first header
-            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
-              note.children[0].remove();
-            }
-            const html = processXRef(null, note);
-            instance.setContent(html);
-          } 
-        }).finally(() => {
-          instance.enable();
-          instance.show();
-        });
-      }
-    }, function(instance) {
     });
   }
       let selectedAnnoteEl;
@@ -2690,7 +2498,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
-            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -2716,32 +2523,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
-        // Handle positioning of the toggle
-    window.addEventListener(
-      "resize",
-      throttle(() => {
-        elRect = undefined;
-        if (selectedAnnoteEl) {
-          selectCodeLines(selectedAnnoteEl);
-        }
-      }, 10)
-    );
-    function throttle(fn, ms) {
-    let throttle = false;
-    let timer;
-      return (...args) => {
-        if(!throttle) { // first call gets through
-            fn.apply(this, args);
-            throttle = true;
-        } else { // all the others get throttled
-            if(timer) clearTimeout(timer); // cancel #2
-            timer = setTimeout(() => {
-              fn.apply(this, args);
-              timer = throttle = false;
-            }, ms);
-        }
-      };
-    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -2803,18 +2584,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./10-funciones-vectoriales.html" class="pagination-link" aria-label="Funciones vectoriales">
+      <a href="./10-funciones-vectoriales.html" class="pagination-link">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Funciones vectoriales</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./12-integrales-funciones-varias-variables.html" class="pagination-link" aria-label="Integrales de funciones de varias variables">
+      <a href="./12-integrales-funciones-varias-variables.html" class="pagination-link">
         <span class="nav-page-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Integrales de funciones de varias variables</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
 </div> <!-- /content -->
-
 
 
 

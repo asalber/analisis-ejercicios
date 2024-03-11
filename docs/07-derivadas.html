@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.550">
+<meta name="generator" content="quarto-1.3.450">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -50,13 +50,7 @@ ul.task-list li input[type="checkbox"] {
   "collapse-after": 3,
   "panel-placement": "start",
   "type": "textbox",
-  "limit": 50,
-  "keyboard-shortcut": [
-    "f",
-    "/",
-    "s"
-  ],
-  "show-item-context": false,
+  "limit": 20,
   "language": {
     "search-no-results-text": "Sin resultados",
     "search-matching-documents-text": "documentos encontrados",
@@ -65,7 +59,6 @@ ul.task-list li input[type="checkbox"] {
     "search-more-match-text": "resultado adicional en este documento",
     "search-more-matches-text": "resultados adicionales en este documento",
     "search-clear-button-title": "Borrar",
-    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancelar",
     "search-submit-button-title": "Enviar",
     "search-label": "Buscar"
@@ -75,38 +68,11 @@ ul.task-list li input[type="checkbox"] {
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
 <meta property="og:title" content="Problemas de Análisis Matemático - 6&nbsp; Derivadas de funciones">
-<meta property="og:image" content="img/logos/sticker.png">
-<meta property="og:site_name" content="Problemas de Análisis Matemático">
+<meta property="og:image" content="./img/derivadas/grafica-ext-1.png">
+<meta property="og:site-name" content="Problemas de Análisis Matemático">
 <meta name="twitter:title" content="Problemas de Análisis Matemático - 6&nbsp; Derivadas de funciones">
-<meta name="twitter:image" content="img/logos/sticker.png">
+<meta name="twitter:image" content="./img/derivadas/grafica-ext-1.png">
 <meta name="twitter:site" content="@aprendeconalf">
 <meta name="twitter:card" content="summary_large_image">
 </head>
@@ -117,12 +83,12 @@ window.Quarto = {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./07-derivadas.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Derivadas de funciones</span></a></li></ol></nav>
-        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-        </a>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./07-derivadas.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Derivadas de funciones</span></a></li></ol></nav>
+      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+      </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
@@ -132,7 +98,7 @@ window.Quarto = {
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
       <a href="./index.html" class="sidebar-logo-link">
       <img src="./img/logos/aprendeconalf.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
@@ -140,7 +106,7 @@ window.Quarto = {
     <div class="sidebar-title mb-0 py-0">
       <a href="./">Problemas de Análisis Matemático</a> 
         <div class="sidebar-tools-main tools-wide">
-    <a href="https://aprendeconalf.es" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-house-fill"></i></a>
+    <a href="https://aprendeconalf.es" rel="" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-house-fill"></i></a>
     <div class="dropdown">
       <a href="" title="Download" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download"><i class="bi bi-download"></i></a>
       <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-0">
@@ -261,7 +227,7 @@ window.Quarto = {
     </ul>
     </div>
 </nav>
-<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         
@@ -284,12 +250,10 @@ window.Quarto = {
   </div>
   
 
-
 </header>
 
-
 <div id="exr-derivada-potencia" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 6.1</strong></span> Usando la definición de derivada, demostrar que la derivada de la función <span class="math inline">\(f(x)=x^n\)</span> es <span class="math inline">\(f'(x)=nx^{n-1}\)</span> donde <span class="math inline">\(n\in\mathbb{N}\)</span>.</p>
+<p><span class="theorem-title"><strong>Ejercicio 6.1 </strong></span>Usando la definición de derivada, demostrar que la derivada de la función <span class="math inline">\(f(x)=x^n\)</span> es <span class="math inline">\(f'(x)=nx^{n-1}\)</span> donde <span class="math inline">\(n\in\mathbb{N}\)</span>.</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
@@ -303,12 +267,12 @@ Solución
 </div>
 <div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Ver <a href="06-limites.html#exr-limites-1" class="quarto-xref">Ejercicio&nbsp;<span>5.9</span></a> apartado (g).</p>
+<p>Ver <a href="06-limites.html#exr-limites-1">Ejercicio&nbsp;<span>5.9</span></a> apartado (g).</p>
 </div>
 </div>
 </div>
 <div id="exr-estudio-derivabilidad-1" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 6.2</strong></span> Demostrar que la función <span class="math inline">\(f(x)=|x-1|\)</span> es continua en <span class="math inline">\(x=1\)</span> pero no es derivable en dicho punto.</p>
+<p><span class="theorem-title"><strong>Ejercicio 6.2 </strong></span>Demostrar que la función <span class="math inline">\(f(x)=|x-1|\)</span> es continua en <span class="math inline">\(x=1\)</span> pero no es derivable en dicho punto.</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
@@ -331,7 +295,7 @@ Solución
 </div>
 </div>
 <div id="exr-estudio-derivabilidad-2" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 6.3</strong></span> Estudiar si es derivable la función <span class="math inline">\(f(x)=\sqrt[3]{x-1}\)</span> en el punto <span class="math inline">\(x=1\)</span>.</p>
+<p><span class="theorem-title"><strong>Ejercicio 6.3 </strong></span>Estudiar si es derivable la función <span class="math inline">\(f(x)=\sqrt[3]{x-1}\)</span> en el punto <span class="math inline">\(x=1\)</span>.</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
@@ -356,7 +320,7 @@ Solución
 </div>
 </div>
 <div id="exr-derivabilidad-funcion-trozos-1" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 6.4</strong></span> Estudiar la derivabilidad de <span class="math inline">\(f\)</span> en los puntos <span class="math inline">\(x=-1\)</span>, <span class="math inline">\(x=2\)</span> y <span class="math inline">\(x=3\)</span> siendo</p>
+<p><span class="theorem-title"><strong>Ejercicio 6.4 </strong></span>Estudiar la derivabilidad de <span class="math inline">\(f\)</span> en los puntos <span class="math inline">\(x=-1\)</span>, <span class="math inline">\(x=2\)</span> y <span class="math inline">\(x=3\)</span> siendo</p>
 <p><span class="math display">\[
 f(x)=
 \begin{cases}
@@ -402,7 +366,7 @@ f'^+(3) &amp;= 0
 </div>
 </div>
 <div id="exr-derivabilidad-funcion-trozos-2" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 6.5</strong></span> Estudiar la derivabilidad de las siguientes funciones y hallar la función derivada correspondiente en los puntos donde exista.</p>
+<p><span class="theorem-title"><strong>Ejercicio 6.5 </strong></span>Estudiar la derivabilidad de las siguientes funciones y hallar la función derivada correspondiente en los puntos donde exista.</p>
 <ol type="a">
 <li><p><span class="math display">\[f(x)=
 \begin{cases}
@@ -486,7 +450,7 @@ g'(x)=
 </div>
 </div>
 <div id="exr-derivabilidad-funcion-trozos-3" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 6.6</strong></span> Dada la función</p>
+<p><span class="theorem-title"><strong>Ejercicio 6.6 </strong></span>Dada la función</p>
 <p><span class="math display">\[
 f(x)=
 \begin{cases}
@@ -567,7 +531,7 @@ c &amp;= e^{1/2}.
 </div>
 </div>
 <div id="exr-tangente-normal-1" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 6.7</strong></span> Para cada una de las siguientes curvas, hallar las ecuaciones de las rectas tangente y normal en el punto <span class="math inline">\(a\)</span> indicado.</p>
+<p><span class="theorem-title"><strong>Ejercicio 6.7 </strong></span>Para cada una de las siguientes curvas, hallar las ecuaciones de las rectas tangente y normal en el punto <span class="math inline">\(a\)</span> indicado.</p>
 <ol type="a">
 <li><span class="math inline">\(y=x^{\operatorname{sen}(x)},\quad a=\pi/2\)</span>.</li>
 <li><span class="math inline">\(y=\ln\sqrt{\frac{1+x}{1-x}}, \quad a=0\)</span>.</li>
@@ -601,7 +565,7 @@ y'&amp;=\left(\ln\sqrt{\frac{1+x}{1-x}}\right)' = \left(\frac{1}{2}(\ln(1+x)-\ln
 </div>
 </div>
 <div id="exr-tangente-normal-2" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 6.8</strong></span> Dadas las funciones <span class="math inline">\(f(x)=\ln\left(\frac{x^2}{2}\right)\)</span> y <span class="math inline">\(g(x)=x^3+2\)</span>, ¿existe algún valor de <span class="math inline">\(x\)</span> en el que la recta normal a <span class="math inline">\(f\)</span> y la recta tangente a <span class="math inline">\(g\)</span> en dicho punto sean paralelas?</p>
+<p><span class="theorem-title"><strong>Ejercicio 6.8 </strong></span>Dadas las funciones <span class="math inline">\(f(x)=\ln\left(\frac{x^2}{2}\right)\)</span> y <span class="math inline">\(g(x)=x^3+2\)</span>, ¿existe algún valor de <span class="math inline">\(x\)</span> en el que la recta normal a <span class="math inline">\(f\)</span> y la recta tangente a <span class="math inline">\(g\)</span> en dicho punto sean paralelas?</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
@@ -629,7 +593,7 @@ g'(x) &amp;= 3x^2
 </div>
 </div>
 <div id="exr-derivada-funcion-polinomica" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 6.9</strong></span> Demostrar que cualquier función polinómica <span class="math inline">\(f(x)=c_0+c_1x+c_2x^2+\cdots+c_nx^n\)</span> con <span class="math inline">\(n\in\mathbb{N}\)</span> es derivable en todo <span class="math inline">\(\mathbb{R}\)</span>.</p>
+<p><span class="theorem-title"><strong>Ejercicio 6.9 </strong></span>Demostrar que cualquier función polinómica <span class="math inline">\(f(x)=c_0+c_1x+c_2x^2+\cdots+c_nx^n\)</span> con <span class="math inline">\(n\in\mathbb{N}\)</span> es derivable en todo <span class="math inline">\(\mathbb{R}\)</span>.</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
@@ -654,7 +618,7 @@ f'(x) &amp;= (c_0+c_1x+c_2x^2+\cdots+c_nx^n)' \\
 </div>
 </div>
 <div id="exr-derivada-funcion-racional" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 6.10</strong></span> Demostrar que cualquier función racional <span class="math inline">\(h(x)=\dfrac{f(x)}{g(x)}\)</span>, con <span class="math inline">\(f(x)\)</span> y <span class="math inline">\(g(x)\)</span> funciones polinómicas, es derivable en todo <span class="math inline">\(x\in\mathbb{R}\)</span> tal que <span class="math inline">\(g(x)\neq 0\)</span>.</p>
+<p><span class="theorem-title"><strong>Ejercicio 6.10 </strong></span>Demostrar que cualquier función racional <span class="math inline">\(h(x)=\dfrac{f(x)}{g(x)}\)</span>, con <span class="math inline">\(f(x)\)</span> y <span class="math inline">\(g(x)\)</span> funciones polinómicas, es derivable en todo <span class="math inline">\(x\in\mathbb{R}\)</span> tal que <span class="math inline">\(g(x)\neq 0\)</span>.</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="false" aria-label="Toggle callout">
@@ -676,7 +640,7 @@ h'(x) = \left(\frac{f(x)}{g(x)}\right)' = \frac{f'(x)g(x)-f(x)g'(x)}{g(x)^2}.
 </div>
 </div>
 <div id="exr-derivadas-orden-n" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 6.11</strong></span> Hallar la expresión de la derivada <span class="math inline">\(n\)</span>-ésima de las siguientes funciones:</p>
+<p><span class="theorem-title"><strong>Ejercicio 6.11 </strong></span>Hallar la expresión de la derivada <span class="math inline">\(n\)</span>-ésima de las siguientes funciones:</p>
 <ol type="a">
 <li><span class="math inline">\(f(x)=a^x\ln(a)\)</span>.</li>
 <li><span class="math inline">\(g(x)=\dfrac{\operatorname{sen}(x)+\cos(x)}{2}\)</span>.</li>
@@ -748,7 +712,7 @@ j^{(n}(x) &amp;= \frac{(-1)^n \prod_{i=1}^{n}2i-1}{2^n}(1+x)^{-\frac{2n+1}{2}}
 </div>
 </div>
 <div id="exr-regla-cadena-1" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 6.12</strong></span> Se sabe que la demanda de un producto, en decenas de miles de unidades, depende de su precio según la función <span class="math inline">\(D(x)=\ln(10/x)\)</span>. Si el precio mensual evoluciona según la función <span class="math inline">\(x(t)=2+\frac{t}{10}\)</span>, ¿cuál será la tasa de variación de la demanda en el instante <span class="math inline">\(t=5\)</span>? Según esta tasa de variación de la demanda, ¿qué demanda aproximada se espera tener un mes después?</p>
+<p><span class="theorem-title"><strong>Ejercicio 6.12 </strong></span>Se sabe que la demanda de un producto, en decenas de miles de unidades, depende de su precio según la función <span class="math inline">\(D(x)=\ln(10/x)\)</span>. Si el precio mensual evoluciona según la función <span class="math inline">\(x(t)=2+\frac{t}{10}\)</span>, ¿cuál será la tasa de variación de la demanda en el instante <span class="math inline">\(t=5\)</span>? Según esta tasa de variación de la demanda, ¿qué demanda aproximada se espera tener un mes después?</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-12-contents" aria-controls="callout-12" aria-expanded="false" aria-label="Toggle callout">
@@ -780,7 +744,7 @@ y = D(5)+D'(5)(t-5) = \ln\left(\frac{10}{2+\frac{5}{10}}\right) -\frac{1}{25}(t-
 </div>
 </div>
 <div id="exr-regla-cadena-2" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 6.13</strong></span> Un balón relleno de aire tiene radio 10 cm cuando se empieza a introducir más aire, de manera que el radio se incrementa con una velocidad de 2 cm/s. ¿Con qué velocidad varía el volumen en ese instante?</p>
+<p><span class="theorem-title"><strong>Ejercicio 6.13 </strong></span>Un balón relleno de aire tiene radio 10 cm cuando se empieza a introducir más aire, de manera que el radio se incrementa con una velocidad de 2 cm/s. ¿Con qué velocidad varía el volumen en ese instante?</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-13-contents" aria-controls="callout-13" aria-expanded="false" aria-label="Toggle callout">
@@ -804,7 +768,7 @@ V(r(t_0))' &amp;= \frac{dV}{dr}(r(t_0))\frac{dr}{dt}(t_0) = \frac{4}{3}\pi 3 r(t
 </div>
 </div>
 <div id="exr-regla-cadena-3" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 6.14</strong></span> Una pipeta cilíndrica de radio 5 mm almacena una solución. Si la pipeta empieza a vaciarse a razón de <span class="math inline">\(0.5\)</span> ml por segundo, ¿a qué velocidad disminuye el nivel de la pipeta?</p>
+<p><span class="theorem-title"><strong>Ejercicio 6.14 </strong></span>Una pipeta cilíndrica de radio 5 mm almacena una solución. Si la pipeta empieza a vaciarse a razón de <span class="math inline">\(0.5\)</span> ml por segundo, ¿a qué velocidad disminuye el nivel de la pipeta?</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-14-contents" aria-controls="callout-14" aria-expanded="false" aria-label="Toggle callout">
@@ -829,7 +793,7 @@ V(h(t_0))' = \frac{dV}{dh}(h(t_0))\frac{dh}{dt}(t_0) = 25\pi \mbox{ mm}^2 h'(t_0
 </div>
 </div>
 <div id="exr-regla-cadena-4" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 6.15</strong></span> Un cilindro de 4 cm de radio (<span class="math inline">\(r\)</span>) y 3 cm de altura (<span class="math inline">\(h\)</span>) se somete a un proceso de calentamiento con el que varían sus dimensiones de tal forma que <span class="math inline">\(\frac{dr}{dt}=\frac{dh}{dt}= 1\)</span> cm/s. Hallar de forma aproximada la variación de su volumen a los 5 segundos y a los 10 segundos.</p>
+<p><span class="theorem-title"><strong>Ejercicio 6.15 </strong></span>Un cilindro de 4 cm de radio (<span class="math inline">\(r\)</span>) y 3 cm de altura (<span class="math inline">\(h\)</span>) se somete a un proceso de calentamiento con el que varían sus dimensiones de tal forma que <span class="math inline">\(\frac{dr}{dt}=\frac{dh}{dt}= 1\)</span> cm/s. Hallar de forma aproximada la variación de su volumen a los 5 segundos y a los 10 segundos.</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-15-contents" aria-controls="callout-15" aria-expanded="false" aria-label="Toggle callout">
@@ -857,7 +821,7 @@ V(r(t_0),h(t_0))' = \pi(2\cdot 4 \mbox{ cm }\cdot 1 \mbox{ cm/s } \cdot 3 \mbox{
 </div>
 </div>
 <div id="exr-regla-cadena-5" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 6.16</strong></span> La ventas mensuales de bicicletas en una ciudad depende del precio de las bicicletas <span class="math inline">\(x\)</span>, en euros, y el precio del combustible <span class="math inline">\(y\)</span>, en céntimos de euro, según la función <span class="math inline">\(v(x,y)=200-10\sqrt{x}+(\frac{y}{10}+20)^{3/2}\)</span>. Si en un determinado instante el precio de las bicicletas es de 200 € y el precio del combustible es de 1€, y el precio de las bicicletas comienza a subir a razón de 1€ al mes, mientras que el precio del combustible empieza a subir a razón de 5 céntimos al mes. ¿Qué tasa de variación experimentarán las ventas de bicicletas en ese instante? Según esta tasa de variación, ¿qué ventas aproximadas se espera tener el próximo mes?</p>
+<p><span class="theorem-title"><strong>Ejercicio 6.16 </strong></span>La ventas mensuales de bicicletas en una ciudad depende del precio de las bicicletas <span class="math inline">\(x\)</span>, en euros, y el precio del combustible <span class="math inline">\(y\)</span>, en céntimos de euro, según la función <span class="math inline">\(v(x,y)=200-10\sqrt{x}+(\frac{y}{10}+20)^{3/2}\)</span>. Si en un determinado instante el precio de las bicicletas es de 200 € y el precio del combustible es de 1€, y el precio de las bicicletas comienza a subir a razón de 1€ al mes, mientras que el precio del combustible empieza a subir a razón de 5 céntimos al mes. ¿Qué tasa de variación experimentarán las ventas de bicicletas en ese instante? Según esta tasa de variación, ¿qué ventas aproximadas se espera tener el próximo mes?</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-16-contents" aria-controls="callout-16" aria-expanded="false" aria-label="Toggle callout">
@@ -893,7 +857,7 @@ y &amp;= v(t_0) + v'(t_0) (t-t_0) \\
 </div>
 </div>
 <div id="exr-inversa-seno" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 6.17</strong></span> Dada la función <span class="math inline">\(f:[-\pi/2, \pi/2]\to \mathbb{R}\)</span>, tal que <span class="math inline">\(f(x)=\operatorname{sen}(x)\)</span>, calcular la derivada de su función inversa <span class="math inline">\(f^{-1}(x) = \operatorname{arcsen}(x)\)</span> <span class="math inline">\(\forall x\in (-1,1)\)</span>.</p>
+<p><span class="theorem-title"><strong>Ejercicio 6.17 </strong></span>Dada la función <span class="math inline">\(f:[-\pi/2, \pi/2]\to \mathbb{R}\)</span>, tal que <span class="math inline">\(f(x)=\operatorname{sen}(x)\)</span>, calcular la derivada de su función inversa <span class="math inline">\(f^{-1}(x) = \operatorname{arcsen}(x)\)</span> <span class="math inline">\(\forall x\in (-1,1)\)</span>.</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-17-contents" aria-controls="callout-17" aria-expanded="false" aria-label="Toggle callout">
@@ -919,7 +883,7 @@ Solución
 </div>
 </div>
 <div id="exr-transmision-errores-1" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 6.18</strong></span> Se desea medir la superficie de una célula esférica y para ello se ha medido el radio de una célula de 5 <span class="math inline">\(\mu\)</span>m con un error de <span class="math inline">\(0.2\)</span> <span class="math inline">\(\mu\)</span>m. ¿Cuál será el error aproximado cometido en el cálculo de la superficie de la célula? En general, si al medir el radio se comete siempre un error relativo del 2%? ¿Cómo afecta esto al error de la medida de la superficie de la célula?</p>
+<p><span class="theorem-title"><strong>Ejercicio 6.18 </strong></span>Se desea medir la superficie de una célula esférica y para ello se ha medido el radio de una célula de 5 <span class="math inline">\(\mu\)</span>m con un error de <span class="math inline">\(0.2\)</span> <span class="math inline">\(\mu\)</span>m. ¿Cuál será el error aproximado cometido en el cálculo de la superficie de la célula? En general, si al medir el radio se comete siempre un error relativo del 2%? ¿Cómo afecta esto al error de la medida de la superficie de la célula?</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-18-contents" aria-controls="callout-18" aria-expanded="false" aria-label="Toggle callout">
@@ -948,7 +912,7 @@ Solución
 </div>
 </div>
 <div id="exr-transmision-errores-2" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 6.19</strong></span> La velocidad de la sangre que fluye por una arteria está dada por la ley de Poiseuille <span class="math display">\[
+<p><span class="theorem-title"><strong>Ejercicio 6.19 </strong></span>La velocidad de la sangre que fluye por una arteria está dada por la ley de Poiseuille <span class="math display">\[
 v(r) = cr^2,
 \]</span> donde <span class="math inline">\(v\)</span> es la velocidad de la sangre, <span class="math inline">\(r\)</span> es el radio de la arteria y <span class="math inline">\(c\)</span> es una constante. Si se puede medir el radio de la arteria con una precisión del 5%, ¿qué precisión tendrá el cálculo de la velocidad?</p>
 </div>
@@ -977,7 +941,7 @@ Solución
 </div>
 </div>
 <div id="exr-crecimiento-1" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 6.20</strong></span> En muchos vertebrados existe una relación entre la longitud del cráneo y la longitud de la espina dorsal que puede expresarse mediante la ecuación <span class="math display">\[
+<p><span class="theorem-title"><strong>Ejercicio 6.20 </strong></span>En muchos vertebrados existe una relación entre la longitud del cráneo y la longitud de la espina dorsal que puede expresarse mediante la ecuación <span class="math display">\[
 C(t) = a E(t)^b
 \]</span> donde <span class="math inline">\(a&gt;0\)</span> y <span class="math inline">\(b\)</span> son constantes y <span class="math inline">\(t\)</span> es el tiempo. Esta ecuación se conoce como <em>ecuación alométrica</em>. ¿Cómo se relaciona la tasa de crecimiento de la espina dorsal con la del cráneo? ¿Para qué valores de <span class="math inline">\(b\)</span> es la función <span class="math inline">\(C\)</span> creciente, pero de forma que la relación <span class="math inline">\(C/E\)</span> disminuye al aumentar <span class="math inline">\(E\)</span>? ¿En qué estado de desarrollo tienen los vertebrados cráneos mayores en relación con la longitud de sus cuerpos?</p>
 </div>
@@ -1012,7 +976,7 @@ C'(t) = a b E(t)^{b-1}E'(t)
 </div>
 </div>
 <div id="exr-extremos-1" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 6.21</strong></span> La siguiente figura muestra la gráfica de la derivada de una función <span class="math inline">\(f\)</span>. Estudiar el comportamiento de la función (crecimiento, decrecimiento, extremos, concavidad y puntos de inflexión).</p>
+<p><span class="theorem-title"><strong>Ejercicio 6.21 </strong></span>La siguiente figura muestra la gráfica de la derivada de una función <span class="math inline">\(f\)</span>. Estudiar el comportamiento de la función (crecimiento, decrecimiento, extremos, concavidad y puntos de inflexión).</p>
 <div style="text-align:center;">
 <p><img src="./img/derivadas/grafica-ext-1.png" class="img-fluid"></p>
 </div>
@@ -1047,7 +1011,7 @@ Solución
 </div>
 </div>
 <div id="exr-extremos-2" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 6.22</strong></span> Hallar <span class="math inline">\(a\)</span>, <span class="math inline">\(b\)</span> y <span class="math inline">\(c\)</span> en la función <span class="math inline">\(f(x)=x^3+bx^2+cx+d\)</span> para que tenga un punto de inflexión en <span class="math inline">\(x=3\)</span>, pase por el punto <span class="math inline">\((1,0)\)</span> y alcance un máximo en <span class="math inline">\(x=1\)</span>.</p>
+<p><span class="theorem-title"><strong>Ejercicio 6.22 </strong></span>Hallar <span class="math inline">\(a\)</span>, <span class="math inline">\(b\)</span> y <span class="math inline">\(c\)</span> en la función <span class="math inline">\(f(x)=x^3+bx^2+cx+d\)</span> para que tenga un punto de inflexión en <span class="math inline">\(x=3\)</span>, pase por el punto <span class="math inline">\((1,0)\)</span> y alcance un máximo en <span class="math inline">\(x=1\)</span>.</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-22-contents" aria-controls="callout-22" aria-expanded="false" aria-label="Toggle callout">
@@ -1073,7 +1037,7 @@ f''(x) &amp;= 6x-2b
 </div>
 </div>
 <div id="exr-extremos-3" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 6.23</strong></span> La cantidad de trigo en una cosecha <span class="math inline">\(C\)</span> depende del nivel de nitrógeno en el suelo <span class="math inline">\(n\)</span> según la ecuación</p>
+<p><span class="theorem-title"><strong>Ejercicio 6.23 </strong></span>La cantidad de trigo en una cosecha <span class="math inline">\(C\)</span> depende del nivel de nitrógeno en el suelo <span class="math inline">\(n\)</span> según la ecuación</p>
 <p><span class="math display">\[
 C(n) = \frac{n}{1+n^2},\quad n\geq 0.
 \]</span></p>
@@ -1104,7 +1068,7 @@ C'(n)=0 \Leftrightarrow 1-n^2 = 0 \Leftrightarrow n^2 =1 \Leftrightarrow n=\pm 1
 </div>
 </div>
 <div id="exr-extremos-4" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 6.24</strong></span> La velocidad <span class="math inline">\(v\)</span> de una reacción irreversible <span class="math inline">\(A+B\rightarrow AB\)</span> es función de la concentración <span class="math inline">\(x\)</span> del producto <span class="math inline">\(AB\)</span> y puede expresarse según la ecuación</p>
+<p><span class="theorem-title"><strong>Ejercicio 6.24 </strong></span>La velocidad <span class="math inline">\(v\)</span> de una reacción irreversible <span class="math inline">\(A+B\rightarrow AB\)</span> es función de la concentración <span class="math inline">\(x\)</span> del producto <span class="math inline">\(AB\)</span> y puede expresarse según la ecuación</p>
 <p><span class="math display">\[
 v(x) = 4(3-x)(5-x).
 \]</span> ¿Qué valor de <span class="math inline">\(x\)</span> maximiza la velocidad de reacción?</p>
@@ -1131,7 +1095,7 @@ v'(x) = 8x-32 = 0 \Leftrightarrow x = 4.
 </div>
 </div>
 <div id="exr-extremos-5" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 6.25</strong></span> Un naufrago se encuentra en una isla situada en un plano con coordenadas <span class="math inline">\((2,0)\)</span>. Se sabe que un ferry hace siempre la trayectoria dada por la función <span class="math inline">\(f(x)=\sqrt{x+1}\)</span>. ¿Hacia qué punto de la trayectoria del ferry debe nadar el naufrago para recorrer la menor distancia posible? ¿Qué distancia recorrerá si nada hacia ese punto?</p>
+<p><span class="theorem-title"><strong>Ejercicio 6.25 </strong></span>Un naufrago se encuentra en una isla situada en un plano con coordenadas <span class="math inline">\((2,0)\)</span>. Se sabe que un ferry hace siempre la trayectoria dada por la función <span class="math inline">\(f(x)=\sqrt{x+1}\)</span>. ¿Hacia qué punto de la trayectoria del ferry debe nadar el naufrago para recorrer la menor distancia posible? ¿Qué distancia recorrerá si nada hacia ese punto?</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-25-contents" aria-controls="callout-25" aria-expanded="false" aria-label="Toggle callout">
@@ -1158,7 +1122,7 @@ d'(x) = \frac{2x-3}{2\sqrt{x^2-3x+5}} = 0 \Leftrightarrow 2x-3 = 0 \Leftrightarr
 </div>
 </div>
 <div id="exr-extremos-6" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 6.26</strong></span> Un hotel alquila habitaciones por un precio entre 40€ y 100€ diarios. Se ha observado que el número de habitaciones que alquilan depende del precio <span class="math inline">\(x\)</span> según la función <span class="math inline">\(h(x)=300-3x\)</span>. ¿Qué precio se debe cobrar por habitación para obtener los máximos ingresos?</p>
+<p><span class="theorem-title"><strong>Ejercicio 6.26 </strong></span>Un hotel alquila habitaciones por un precio entre 40€ y 100€ diarios. Se ha observado que el número de habitaciones que alquilan depende del precio <span class="math inline">\(x\)</span> según la función <span class="math inline">\(h(x)=300-3x\)</span>. ¿Qué precio se debe cobrar por habitación para obtener los máximos ingresos?</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-26-contents" aria-controls="callout-26" aria-expanded="false" aria-label="Toggle callout">
@@ -1185,7 +1149,7 @@ f'(x) = 300-6x = 0 \Leftrightarrow x=50.
 </div>
 </div>
 <div id="exr-extremos-7" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 6.27</strong></span> Existen organismos que se reproducen una sola vez en su vida como por ejemplo los salmones. En este tipo de especies, la velocidad de incremento per cápita <span class="math inline">\(v\)</span>, que mide la capacidad reproductiva, depende de la edad <span class="math inline">\(x\)</span> según la ecuación</p>
+<p><span class="theorem-title"><strong>Ejercicio 6.27 </strong></span>Existen organismos que se reproducen una sola vez en su vida como por ejemplo los salmones. En este tipo de especies, la velocidad de incremento per cápita <span class="math inline">\(v\)</span>, que mide la capacidad reproductiva, depende de la edad <span class="math inline">\(x\)</span> según la ecuación</p>
 <p><span class="math display">\[
 v(x) = \frac{\ln(p(x)h(x))}{x},
 \]</span></p>
@@ -1219,10 +1183,10 @@ v'(x) = \frac{(x)'(\ln(4)+0.9\ln(x))-x(\ln(4)+0.9\ln(x))'}{x^2}\\ = \frac{\ln(4)
 </div>
 </div>
 <div id="exr-extremos-8" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 6.28</strong></span> Un lata de refresco cilíndrica contiene <span class="math inline">\(33\)</span> cl. Hallar las dimensiones de la lata para que la cantidad de aluminio utilizada en su creación sea mínima.</p>
+<p><span class="theorem-title"><strong>Ejercicio 6.28 </strong></span>Un lata de refresco cilíndrica contiene <span class="math inline">\(33\)</span> cl. Hallar las dimensiones de la lata para que la cantidad de aluminio utilizada en su creación sea mínima.</p>
 </div>
 <div id="exr-extremos-9" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 6.29</strong></span> La distancia en kilómetros que recorre un coche de alquiler con 1 litro de gasolina depende de la velocidad a la que circule según la función <span class="math inline">\(d(x)=18-\frac{x}{20}\)</span> para <span class="math inline">\(x\in(50,200)\)</span>. Si el coste de la gasolina es de <span class="math inline">\(2\)</span> €/l y el coste del alquiler es de <span class="math inline">\(5\)</span> €/h, ¿a qué velocidad debe circular para que el coste del trayecto sea mínimo? ¿Cuál será el coste por kilómetro si circula a esa velocidad?</p>
+<p><span class="theorem-title"><strong>Ejercicio 6.29 </strong></span>La distancia en kilómetros que recorre un coche de alquiler con 1 litro de gasolina depende de la velocidad a la que circule según la función <span class="math inline">\(d(x)=18-\frac{x}{20}\)</span> para <span class="math inline">\(x\in(50,200)\)</span>. Si el coste de la gasolina es de <span class="math inline">\(2\)</span> €/l y el coste del alquiler es de <span class="math inline">\(5\)</span> €/h, ¿a qué velocidad debe circular para que el coste del trayecto sea mínimo? ¿Cuál será el coste por kilómetro si circula a esa velocidad?</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-28-contents" aria-controls="callout-28" aria-expanded="false" aria-label="Toggle callout">
@@ -1251,7 +1215,7 @@ c'(x)
 </div>
 </div>
 <div id="exr-teorema-valor-medio" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 6.30</strong></span> En un tramo de carretera limitado a una velocidad máxima de <span class="math inline">\(70\)</span> km/h existe un semáforo de tramo. Según el registro del semáforo, un vehículo pasa por el comienzo del tramo, situado en el kilómetro 12 a las 8:00 y pasa por el final del tramo, situado en el kilómetro <span class="math inline">\(14\)</span>, un minuto y medio después. ¿Será sancionado el vehículo por exceso de velocidad?</p>
+<p><span class="theorem-title"><strong>Ejercicio 6.30 </strong></span>En un tramo de carretera limitado a una velocidad máxima de <span class="math inline">\(70\)</span> km/h existe un semáforo de tramo. Según el registro del semáforo, un vehículo pasa por el comienzo del tramo, situado en el kilómetro 12 a las 8:00 y pasa por el final del tramo, situado en el kilómetro <span class="math inline">\(14\)</span>, un minuto y medio después. ¿Será sancionado el vehículo por exceso de velocidad?</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-29-contents" aria-controls="callout-29" aria-expanded="false" aria-label="Toggle callout">
@@ -1274,7 +1238,7 @@ f'(c) = \frac{14-12}{8.025-8} = \frac{2}{0.025}I= 80 \mbox{ km/h}.
 </div>
 </div>
 <div id="exr-cinematica-1" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 6.31</strong></span> La posición que ocupa un coche que se mueve en línea recta, puede expresarse en función del tiempo según la ecuación <span class="math display">\[
+<p><span class="theorem-title"><strong>Ejercicio 6.31 </strong></span>La posición que ocupa un coche que se mueve en línea recta, puede expresarse en función del tiempo según la ecuación <span class="math display">\[
 e(t) = 4t^3 -2t +1.
 \]</span> Calcular su velocidad y aceleración en cualquier instante.<br>
 Nota: La aceleración es la tasa de variación instantánea de la velocidad.</p>
@@ -1297,7 +1261,7 @@ Solución
 </div>
 </div>
 <div id="exr-cinematica-2" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 6.32</strong></span> El espacio recorrido por un objeto que se lanza verticalmente hacia arriba, sin tener en cuenta la resistencia del aire, viene dado por la ecuación <span class="math display">\[
+<p><span class="theorem-title"><strong>Ejercicio 6.32 </strong></span>El espacio recorrido por un objeto que se lanza verticalmente hacia arriba, sin tener en cuenta la resistencia del aire, viene dado por la ecuación <span class="math display">\[
 e(t) =v_0t-\frac{1}{2}gt^2
 \]</span> donde <span class="math inline">\(v_0\)</span> es la velocidad inicial con que se lanza el objeto, <span class="math inline">\(g=9.81\)</span> m/s<span class="math inline">\(^2\)</span> es la aceleración de la gravedad en la superfice terrrestre y <span class="math inline">\(t\)</span> es el tiempo transcurrido desde que el objeto se lanza.</p>
 <ol type="a">
@@ -1335,7 +1299,7 @@ e(t)=50t-\frac{1}{2}9.81t^2 =0 \Leftrightarrow t(50-4.905t) = 0 \Leftrightarrow 
 </div>
 </div>
 <div id="exr-trayectorias-1" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 6.33</strong></span> Una partícula se mueve a lo largo de la curva</p>
+<p><span class="theorem-title"><strong>Ejercicio 6.33 </strong></span>Una partícula se mueve a lo largo de la curva</p>
 <p><span class="math display">\[
 \begin{cases}
 x = \operatorname{tg}(t),  \\
@@ -1394,7 +1358,7 @@ y = 3-2x.
 </div>
 </div>
 <div id="exr-trayectorias-2" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 6.34</strong></span> Las coordenadas paramétricas de un punto material lanzado bajo un ángulo respecto al horizonte son</p>
+<p><span class="theorem-title"><strong>Ejercicio 6.34 </strong></span>Las coordenadas paramétricas de un punto material lanzado bajo un ángulo respecto al horizonte son</p>
 <p><span class="math display">\[
 \begin{cases}
 x=v_0t, &amp; \\
@@ -1451,7 +1415,7 @@ y = -49.91-(x-100) \Leftrightarrow y=-x+50.09.
 </div>
 </div>
 <div id="exr-derivadas-parametricas-1" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 6.35</strong></span> La cantidad de árboles en un ecosistema depende del tiempo según la función <span class="math inline">\(a(t)=100\ln(t^2+1)\)</span>, y la cantidad de un determinado parásito de los árboles, también depende del tiempo según la función <span class="math inline">\(p(t) = \sqrt[3]{t^2+ 2}\)</span>. Calcular la tasa de variación instantánea del número de parásitos en relación al número de árboles, en el instante en que el número de parásitos es <span class="math inline">\(3\)</span>.</p>
+<p><span class="theorem-title"><strong>Ejercicio 6.35 </strong></span>La cantidad de árboles en un ecosistema depende del tiempo según la función <span class="math inline">\(a(t)=100\ln(t^2+1)\)</span>, y la cantidad de un determinado parásito de los árboles, también depende del tiempo según la función <span class="math inline">\(p(t) = \sqrt[3]{t^2+ 2}\)</span>. Calcular la tasa de variación instantánea del número de parásitos en relación al número de árboles, en el instante en que el número de parásitos es <span class="math inline">\(3\)</span>.</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-34-contents" aria-controls="callout-34" aria-expanded="false" aria-label="Toggle callout">
@@ -1480,7 +1444,7 @@ p(t)=\sqrt[3]{t^2+2} = 3 \Leftrightarrow t^2+2 = 27 \Leftrightarrow t^2=25 \Left
 </div>
 </div>
 <div id="exr-derivada-implicita-1" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 6.36</strong></span> Dada la función <span class="math inline">\(xy+e^x-\log y=0\)</span>, calcular las ecuaciones de las rectas tangente y normal a ella en <span class="math inline">\(x=0\)</span>.</p>
+<p><span class="theorem-title"><strong>Ejercicio 6.36 </strong></span>Dada la función <span class="math inline">\(xy+e^x-\log y=0\)</span>, calcular las ecuaciones de las rectas tangente y normal a ella en <span class="math inline">\(x=0\)</span>.</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-35-contents" aria-controls="callout-35" aria-expanded="false" aria-label="Toggle callout">
@@ -1517,7 +1481,7 @@ Solución
 </div>
 </div>
 <div id="exr-derivada-implicita-2" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 6.37</strong></span> Suponiendo que la temperatura, <span class="math inline">\(T\)</span> en grados centígrados, y el volumen, <span class="math inline">\(V\)</span> en metros cúbicos, de un gas real encerrado en un contenedor de volumen variable están relacionados mediante la siguiente ecuación:</p>
+<p><span class="theorem-title"><strong>Ejercicio 6.37 </strong></span>Suponiendo que la temperatura, <span class="math inline">\(T\)</span> en grados centígrados, y el volumen, <span class="math inline">\(V\)</span> en metros cúbicos, de un gas real encerrado en un contenedor de volumen variable están relacionados mediante la siguiente ecuación:</p>
 <p><span class="math display">\[
 T^2(V^2-\pi^2)-V\cos(TV) = 0.
 \]</span></p>
@@ -1547,7 +1511,7 @@ Solución
 </div>
 </div>
 <div id="exr-derivada-implicita-3" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 6.38</strong></span> Un cuerpo se mueve en el plano a través de los puntos de coordenadas <span class="math inline">\((x,y)\)</span> relacionadas mediante la siguiente expresión: <span class="math display">\[
+<p><span class="theorem-title"><strong>Ejercicio 6.38 </strong></span>Un cuerpo se mueve en el plano a través de los puntos de coordenadas <span class="math inline">\((x,y)\)</span> relacionadas mediante la siguiente expresión: <span class="math display">\[
 2e^{xy} \operatorname{sen}(x) + y\cos(x) = 2.
 \]</span></p>
 <ol type="a">
@@ -1598,7 +1562,7 @@ y-2=-2(x-0)\Leftrightarrow y=-2x+2.
 </div>
 </div>
 <div id="exr-derivada-implicita-4" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 6.39</strong></span> Hallar la ecuación de la recta tangente y normal a la curva <span class="math inline">\(x^2+y^2=3xy-1\)</span> en los puntos en que <span class="math inline">\(x=1\)</span>. Calcular también los extremos relativos y decir si son máximos o mínimos.</p>
+<p><span class="theorem-title"><strong>Ejercicio 6.39 </strong></span>Hallar la ecuación de la recta tangente y normal a la curva <span class="math inline">\(x^2+y^2=3xy-1\)</span> en los puntos en que <span class="math inline">\(x=1\)</span>. Calcular también los extremos relativos y decir si son máximos o mínimos.</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-38-contents" aria-controls="callout-38" aria-expanded="false" aria-label="Toggle callout">
@@ -1681,7 +1645,7 @@ x^{2}+(2x/3)^{2}=3x(2x/3)-1 \Leftrightarrow x^{2}+4x^{2}/9 = 2x^{2}-1\\  \Leftri
 </div>
 </div>
 <div id="exr-derivada-implicita-5" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 6.40</strong></span> Dada la curva <span class="math inline">\(x^2-xy+y^2=3\)</span>,</p>
+<p><span class="theorem-title"><strong>Ejercicio 6.40 </strong></span>Dada la curva <span class="math inline">\(x^2-xy+y^2=3\)</span>,</p>
 <ol type="a">
 <li>Calcular los posibles extremos relativos de <span class="math inline">\(y\)</span>, considerando <span class="math inline">\(y\)</span> como función implícita de <span class="math inline">\(x\)</span>. ¿En qué puntos se alcanzan dichos valores?</li>
 <li>Analizar si lo puntos anteriores son máximos o mínimos haciendo uso de la derivada segunda.</li>
@@ -1745,7 +1709,7 @@ x^2-x\cdot 2x+(2x)^2=3 \Leftrightarrow x^2-2x^2+4x^2=3 \Leftrightarrow 3x^2=3 \L
 </div>
 </div>
 <div id="exr-taylor-1" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 6.41</strong></span> Dada la función <span class="math inline">\(f(x)=\operatorname{sen}(x)\)</span>, se pide:</p>
+<p><span class="theorem-title"><strong>Ejercicio 6.41 </strong></span>Dada la función <span class="math inline">\(f(x)=\operatorname{sen}(x)\)</span>, se pide:</p>
 <ol type="a">
 <li>Obtener el polinomio de Taylor de tercer grado de <span class="math inline">\(f\)</span> en el punto <span class="math inline">\(a=\pi/6\)</span> y usarlo para aproximar <span class="math inline">\(\operatorname{sen}(1/2)\)</span> dando una cota del error cometido.</li>
 <li>Dar una aproximación de <span class="math inline">\(\operatorname{sen}(1/2)\)</span> usando un el polinomio de Taylor de quinto grado en el punto <span class="math inline">\(a=0\)</span>, acotando el error cometido.</li>
@@ -1803,7 +1767,7 @@ P^5_{f,0}(x) = x -\frac{1}{6} x^3 + \frac{1}{120}x^5.
 </div>
 </div>
 <div id="exr-taylor-2" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 6.42</strong></span> Calcular el polinomio de Maclaurin de tercer grado para la función <span class="math inline">\(f(x)=\operatorname{arcsen}(x)\)</span>.</p>
+<p><span class="theorem-title"><strong>Ejercicio 6.42 </strong></span>Calcular el polinomio de Maclaurin de tercer grado para la función <span class="math inline">\(f(x)=\operatorname{arcsen}(x)\)</span>.</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-41-contents" aria-controls="callout-41" aria-expanded="false" aria-label="Toggle callout">
@@ -1838,7 +1802,7 @@ P^3_{f,0}(x) = x+\frac{1}{6}x^3.
 </div>
 </div>
 <div id="exr-taylor-3" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 6.43</strong></span> Calcular <span class="math inline">\(\cos(1)\)</span> con un error menor que <span class="math inline">\(10^{-7}\)</span> usando aproximaciones de Taylor.</p>
+<p><span class="theorem-title"><strong>Ejercicio 6.43 </strong></span>Calcular <span class="math inline">\(\cos(1)\)</span> con un error menor que <span class="math inline">\(10^{-7}\)</span> usando aproximaciones de Taylor.</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-42-contents" aria-controls="callout-42" aria-expanded="false" aria-label="Toggle callout">
@@ -1865,7 +1829,7 @@ R^n_{f,0}(t) = \frac{f^{(n+1}(t)}{(n+1)!}1^{n+1} = \frac{f^{(n+1}(t)}{(n+1)!} \m
 \end{cases},
 k\in\mathbb{N}
 \]</span></p>
-<p>se tiene que <span class="math inline">\(||f^{(n+1}(t)| \leq 1\)</span> <span class="math inline">\(\forall t\in\mathbb{R}\)</span>, por lo que una cota del resto es <span class="math inline">\(R^n_{f,0}(t)\leq  1/(n+1)!\)</span>. Probando con sucesivos valores de <span class="math inline">\(n\)</span>, el primer valor que cumple que <span class="math inline">\(R^n_{f,0}(t)\leq  1/(n+1)!\leq 10^{-7}\)</span> es <span class="math inline">\(n=10\)</span>, por lo que necesitamos calcular el polinomio de de Maclaurin de orden 10, que vale</p>
+<p>se tiene que <span class="math inline">\(||f^{(n+1}(t)| \leq 1\)</span> <span class="math inline">\(\forall t\in\mathbb{R}\)</span>, por lo que una cota del resto es <span class="math inline">\(R^n_{f,0}(t)\leq 1/(n+1)!\)</span>. Probando con sucesivos valores de <span class="math inline">\(n\)</span>, el primer valor que cumple que <span class="math inline">\(R^n_{f,0}(t)\leq 1/(n+1)!\leq 10^{-7}\)</span> es <span class="math inline">\(n=10\)</span>, por lo que necesitamos calcular el polinomio de de Maclaurin de orden 10, que vale</p>
 <p><span class="math display">\[
 P^{10}_{f,0}(x)= 1-\frac{x^2}{2!}+\frac{x^4}{4!}-\frac{x^6}{6!}+\frac{x^8}{8!}-\frac{x^{10}}{10!},
 \]</span></p>
@@ -1877,7 +1841,7 @@ P^{10}_{f,0}(1)= 1-\frac{1^2}{2!}+\frac{1^4}{4!}-\frac{1^6}{6!}+\frac{1^8}{8!}-\
 </div>
 </div>
 <div id="exr-taylor-4" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 6.44</strong></span> Obtener polinomio de Maclaurin de grado 3 de las funciones <span class="math inline">\(\operatorname{sen}(x)\)</span> y <span class="math inline">\(\operatorname{tg}(x)\)</span>, y utilizar los polinomios anteriores para calcular <span class="math display">\[
+<p><span class="theorem-title"><strong>Ejercicio 6.44 </strong></span>Obtener polinomio de Maclaurin de grado 3 de las funciones <span class="math inline">\(\operatorname{sen}(x)\)</span> y <span class="math inline">\(\operatorname{tg}(x)\)</span>, y utilizar los polinomios anteriores para calcular <span class="math display">\[
 \lim_{x\rightarrow 0}\frac{\operatorname{tg}(x)-x}{x-\operatorname{sen}(x)}
 \]</span></p>
 </div>
@@ -1923,7 +1887,7 @@ Q_{0}^{3}(x)=0+1\cdot x+\frac{0}{2!}x^{2}+\frac{2}{3!}x^{3}=x+\frac{x^{3}}{3}
 </div>
 </div>
 <div id="exr-taylor-5" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 6.45</strong></span> La función <span class="math inline">\(C(t)\)</span> da la concentración (en mg/dl) de un fármaco en el torrente sanguíneo en función del tiempo (en horas): <span class="math display">\[
+<p><span class="theorem-title"><strong>Ejercicio 6.45 </strong></span>La función <span class="math inline">\(C(t)\)</span> da la concentración (en mg/dl) de un fármaco en el torrente sanguíneo en función del tiempo (en horas): <span class="math display">\[
 C(t) = \frac{1}{{1 + e^{-2t}}}
 \]</span></p>
 <ol type="a">
@@ -2034,33 +1998,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       }
     }
   }
-  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
-    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
-    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
-    let newTheme = '';
-    if(darkModeDefault) {
-      newTheme = isAlternate ? baseTheme : alternateTheme;
-    } else {
-      newTheme = isAlternate ? alternateTheme : baseTheme;
-    }
-    const changeGiscusTheme = () => {
-      // From: https://github.com/giscus/giscus/issues/336
-      const sendMessage = (message) => {
-        const iframe = document.querySelector('iframe.giscus-frame');
-        if (!iframe) return;
-        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
-      }
-      sendMessage({
-        setConfig: {
-          theme: newTheme
-        }
-      });
-    }
-    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
-    if (isGiscussLoaded) {
-      changeGiscusTheme();
-    }
-  }
   const toggleColorMode = (alternate) => {
     // Switch the stylesheets
     const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
@@ -2127,15 +2064,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return localAlternateSentinel;
     }
   }
-  const darkModeDefault = true;
-  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+  let localAlternateSentinel = 'alternate';
   // Dark / light mode switch
   window.quartoToggleColorScheme = () => {
     // Read the current dark / light value 
     let toAlternate = !hasAlternateSentinel();
     toggleColorMode(toAlternate);
     setStyleSentinel(toAlternate);
-    toggleGiscusIfUsed(toAlternate, darkModeDefault);
   };
   // Ensure there is a toggle, if there isn't float one in the top right
   if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
@@ -2214,9 +2149,10 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
-  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+  function tippyHover(el, contentFn) {
     const config = {
       allowHTML: true,
+      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -2226,17 +2162,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start',
+      placement: 'bottom-start'
     };
-    if (contentFn) {
-      config.content = contentFn;
-    }
-    if (onTriggerFn) {
-      config.onTrigger = onTriggerFn;
-    }
-    if (onUntriggerFn) {
-      config.onUntrigger = onUntriggerFn;
-    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -2249,125 +2176,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
       return note.innerHTML;
-    });
-  }
-  const xrefs = window.document.querySelectorAll('a.quarto-xref');
-  const processXRef = (id, note) => {
-    // Strip column container classes
-    const stripColumnClz = (el) => {
-      el.classList.remove("page-full", "page-columns");
-      if (el.children) {
-        for (const child of el.children) {
-          stripColumnClz(child);
-        }
-      }
-    }
-    stripColumnClz(note)
-    if (id === null || id.startsWith('sec-')) {
-      // Special case sections, only their first couple elements
-      const container = document.createElement("div");
-      if (note.children && note.children.length > 2) {
-        container.appendChild(note.children[0].cloneNode(true));
-        for (let i = 1; i < note.children.length; i++) {
-          const child = note.children[i];
-          if (child.tagName === "P" && child.innerText === "") {
-            continue;
-          } else {
-            container.appendChild(child.cloneNode(true));
-            break;
-          }
-        }
-        if (window.Quarto?.typesetMath) {
-          window.Quarto.typesetMath(container);
-        }
-        return container.innerHTML
-      } else {
-        if (window.Quarto?.typesetMath) {
-          window.Quarto.typesetMath(note);
-        }
-        return note.innerHTML;
-      }
-    } else {
-      // Remove any anchor links if they are present
-      const anchorLink = note.querySelector('a.anchorjs-link');
-      if (anchorLink) {
-        anchorLink.remove();
-      }
-      if (window.Quarto?.typesetMath) {
-        window.Quarto.typesetMath(note);
-      }
-      // TODO in 1.5, we should make sure this works without a callout special case
-      if (note.classList.contains("callout")) {
-        return note.outerHTML;
-      } else {
-        return note.innerHTML;
-      }
-    }
-  }
-  for (var i=0; i<xrefs.length; i++) {
-    const xref = xrefs[i];
-    tippyHover(xref, undefined, function(instance) {
-      instance.disable();
-      let url = xref.getAttribute('href');
-      let hash = undefined; 
-      if (url.startsWith('#')) {
-        hash = url;
-      } else {
-        try { hash = new URL(url).hash; } catch {}
-      }
-      if (hash) {
-        const id = hash.replace(/^#\/?/, "");
-        const note = window.document.getElementById(id);
-        if (note !== null) {
-          try {
-            const html = processXRef(id, note.cloneNode(true));
-            instance.setContent(html);
-          } finally {
-            instance.enable();
-            instance.show();
-          }
-        } else {
-          // See if we can fetch this
-          fetch(url.split('#')[0])
-          .then(res => res.text())
-          .then(html => {
-            const parser = new DOMParser();
-            const htmlDoc = parser.parseFromString(html, "text/html");
-            const note = htmlDoc.getElementById(id);
-            if (note !== null) {
-              const html = processXRef(id, note);
-              instance.setContent(html);
-            } 
-          }).finally(() => {
-            instance.enable();
-            instance.show();
-          });
-        }
-      } else {
-        // See if we can fetch a full url (with no hash to target)
-        // This is a special case and we should probably do some content thinning / targeting
-        fetch(url)
-        .then(res => res.text())
-        .then(html => {
-          const parser = new DOMParser();
-          const htmlDoc = parser.parseFromString(html, "text/html");
-          const note = htmlDoc.querySelector('main.content');
-          if (note !== null) {
-            // This should only happen for chapter cross references
-            // (since there is no id in the URL)
-            // remove the first header
-            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
-              note.children[0].remove();
-            }
-            const html = processXRef(null, note);
-            instance.setContent(html);
-          } 
-        }).finally(() => {
-          instance.enable();
-          instance.show();
-        });
-      }
-    }, function(instance) {
     });
   }
       let selectedAnnoteEl;
@@ -2411,7 +2219,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
-            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -2437,32 +2244,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
-        // Handle positioning of the toggle
-    window.addEventListener(
-      "resize",
-      throttle(() => {
-        elRect = undefined;
-        if (selectedAnnoteEl) {
-          selectCodeLines(selectedAnnoteEl);
-        }
-      }, 10)
-    );
-    function throttle(fn, ms) {
-    let throttle = false;
-    let timer;
-      return (...args) => {
-        if(!throttle) { // first call gets through
-            fn.apply(this, args);
-            throttle = true;
-        } else { // all the others get throttled
-            if(timer) clearTimeout(timer); // cancel #2
-            timer = setTimeout(() => {
-              fn.apply(this, args);
-              timer = throttle = false;
-            }, ms);
-        }
-      };
-    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -2524,18 +2305,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./06-limites.html" class="pagination-link" aria-label="Límites de funciones">
+      <a href="./06-limites.html" class="pagination-link">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Límites de funciones</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./08-integrales.html" class="pagination-link" aria-label="Integrales de funciones">
+      <a href="./08-integrales.html" class="pagination-link">
         <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Integrales de funciones</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
 </div> <!-- /content -->
-
 
 
 
