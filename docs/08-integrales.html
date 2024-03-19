@@ -595,7 +595,7 @@ Solución
 </div>
 <div id="callout-9" class="callout-9-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Si <span class="math inline">\(f\)</span> es una función integrable en <span class="math inline">\(I=[a,b]\)</span>, por el <a href="https://aprendeconalf.es/analisis-manual/09-integrales.html#thm-criterio-integrabilidad-riemann">criterio de integrabilidad de Riemann</a>, dado <span class="math inline">\(\varepsilon&gt;0\)</span> existe una partición <span class="math inline">\(P=\{x_0,x_1,\ldots,x_n\}\)</span> tal que <span class="math inline">\(S(f,P)-s(f,P)&lt;\varepsilon\)</span>, es decir, existe una sucesión de particiones <span class="math inline">\((P_n)_{n=1}^\infty\)</span> tal que <span class="math inline">\(\lim_{n\to\infty} S(f,P_n)-s(f,P_n)=0\)</span>.</p>
+<p>Si <span class="math inline">\(f\)</span> es una función integrable en <span class="math inline">\(I=[a,b]\)</span>, por el <a href="https://aprendeconalf.es/analisis-manual/08-integrales.html#thm-criterio-integrabilidad-riemann">criterio de integrabilidad de Riemann</a>, dado <span class="math inline">\(\varepsilon&gt;0\)</span> existe una partición <span class="math inline">\(P=\{x_0,x_1,\ldots,x_n\}\)</span> tal que <span class="math inline">\(S(f,P)-s(f,P)&lt;\varepsilon\)</span>, es decir, existe una sucesión de particiones <span class="math inline">\((P_n)_{n=1}^\infty\)</span> tal que <span class="math inline">\(\lim_{n\to\infty} S(f,P_n)-s(f,P_n)=0\)</span>.</p>
 <p>Sea <span class="math inline">\(x_i^*\)</span> cualquier valor del intervalo <span class="math inline">\([x_{i-1},x_i]\)</span>. Como <span class="math inline">\(s(f,P_n) = \sum_{i=1}^n m_i (x_i-x_{i-1})\)</span> con <span class="math inline">\(m_i=\inf\{f(x):x\in [x_{i-1},x_i]\}\)</span> y <span class="math inline">\(S(f,P_n) = \sum_{i=1}^n M_i (x_i-x_{i-1})\)</span> con <span class="math inline">\(M_i=\sup\{f(x):x\in [x_{i-1},x_i]\}\)</span>, se cumple que</p>
 <p><span class="math display">\[
 s(f,P_n) = \sum_{i=1}^n m_i (x_i-x_{i-1}) \leq \sum_{i=1}^n f(x_i^*) (x_i-x_{i-1}) \leq \sum_{i=1}^n M_i (x_i-x_{i-1}) = S(f,P_n)
@@ -622,7 +622,7 @@ Solución
 </div>
 <div id="callout-10" class="callout-10-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Por las propiedades de la integral (ver <a href="https://aprendeconalf.es/analisis-manual/09-integrales.html#cor-integral-funcion-acotada">corolario</a>), sabemos que</p>
+<p>Por las propiedades de la integral (ver <a href="https://aprendeconalf.es/analisis-manual/08-integrales.html#cor-integral-funcion-acotada">corolario</a>), sabemos que</p>
 <p><span class="math display">\[
 m(b-a)\leq \int_a^b f(x)\,dx \leq M(b-a),
 \]</span></p>
@@ -1068,7 +1068,13 @@ Solución
 </div>
 </div>
 <div id="exr-area-entre-polares" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 7.21 </strong></span>Calcular el área encerrada entre las curvas polares <span class="math inline">\(r=2\operatorname{sen}(\theta)\)</span> y <span class="math inline">\(r=1+\operatorname{sen}(\theta)\)</span>.</p>
+<p><span class="theorem-title"><strong>Ejercicio 7.21 </strong></span>Calcular el área sombreada entre las curvas polares <span class="math inline">\(r=3\operatorname{sen}(\theta)\)</span> y <span class="math inline">\(r=1+\operatorname{sen}(\theta)\)</span>.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/integrales/area-entre-curvas-polares.svg" class="img-fluid figure-img" width="500"></p>
+<figcaption class="figure-caption">Área entre curvas polares</figcaption>
+</figure>
+</div>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-24-contents" aria-controls="callout-24" aria-expanded="false" aria-label="Toggle callout">
@@ -1082,7 +1088,24 @@ Solución
 </div>
 <div id="callout-24" class="callout-24-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-
+<p>Sea <span class="math inline">\(f(\theta) = 3\operatorname{sen}(\theta)\)</span> la función que define el círculo y <span class="math inline">\(g(\theta) = 1+\operatorname{sen}(\theta)\)</span> la función que define el cardioide. Para determinar el área de la región sombreada entre las dos curvas polares, calcularemos el área del círculo <span class="math inline">\(f(\theta)\)</span> y le restaremos el área que queda fuera de la región sombreada. Para calcular el área de esta última región con forma de media luna, primero determinamos los puntos de corte entre las dos curvas, que son</p>
+<p><span class="math display">\[
+f(\theta) = g(\theta) \Leftrightarrow 3\operatorname{sen}(\theta) = 1+\operatorname{sen}(\theta) \Leftrightarrow \operatorname{sen}(\theta) = \frac{1}{2} \Leftrightarrow \theta = \frac{\pi}{6}, \frac{5\pi}{6}.
+\]</span></p>
+<p>Así pues, el área de la región con forma de media luna viene dada por la integral</p>
+<p><span class="math display">\[\begin{align*}
+\int_{\pi/6}^{5\pi/6} \frac{f(\theta)^2}{2}\,d\theta - \int_{\pi/6}^{5\pi/6} \frac{g(\theta)^2}{2}\,d\theta &amp;=
+\int_{\pi/6}^{5\pi/6} \frac{(3\operatorname{sen}(\theta))^2}{2}\,d\theta - \int_{\pi/6}^{5\pi/6} \frac{(1+\operatorname{sen}(\theta))^2}{2}\,d\theta \\
+&amp;= \frac{1}{2}\int_{\pi/6}^{5\pi/6} 8\operatorname{sen}(\theta)^2 -2\operatorname{sen}(\theta) -1 \,d\theta\\
+&amp;= \frac{1}{2}\left[8\left(\frac{\theta}{2}-\frac{\operatorname{sen}(2\theta)}{4}\right)+2\cos(\theta)-\theta\right]_{\pi/6}^{5\pi/6}\\
+&amp;= \frac{1}{2}\left[3\theta - 2\operatorname{sen}(2\theta) +2\cos(\theta)\right]_{\pi/6}^{5\pi/6}\\
+&amp;= \frac{1}{2}\left[3\frac{5\pi}{6} - 2\operatorname{sen}\left(2\frac{5\pi}{6}\right) +2\cos\left(\frac{5\pi}{6}\right) - 3\frac{\pi}{6} + 2\operatorname{sen}\left(2\frac{\pi}{6}\right) -2\cos\left(\frac{\pi}{6}\right)\right]\\
+&amp;= \pi.
+\end{align*}\]</span></p>
+<p>Finalmente, el área de la región sombreada es el área del círculo menos el área de la región con forma de media luna, y como el círculo tiene radio <span class="math inline">\(3/2\)</span>, se tiene</p>
+<p><span class="math display">\[
+\left(\frac{3}{2}\right)^2\pi-\pi = \frac{9\pi}{4}-\pi = \frac{5\pi}{4}.
+\]</span></p>
 </div>
 </div>
 </div>
@@ -1114,7 +1137,7 @@ Solución
 = \frac{\pi}{2}+\frac{\pi}{2} = \pi.
 \]</span></p></li>
 <li><p><span class="math display">\[
-\int_{-\infty}^\infty \frac{\ln(x)}{x^2}\, dx
+\int_{1}^\infty \frac{\ln(x)}{x^2}\, dx
 = \lim_{t\to\infty} \left[-\frac{1}{x}-\frac{\ln(x)}{x}\right]_1^t
 = \lim_{t\to\infty} -\frac{1}{t}-\frac{\ln(t)}{t} + \frac{1}{1}+\frac{\ln(1)}{1} = 1.
 \]</span></p></li>
@@ -1323,7 +1346,7 @@ Solución
 <p><span class="math display">\[
 x = x^2 \Leftrightarrow x^2-x = 0 \Leftrightarrow x(x-1)= 0 \Leftrightarrow x=0 \mbox{ o } x=1.
 \]</span></p>
-<p>Para calcular el volumen del sólido de revolución que se obtiene al rotar alrededor del eje <span class="math inline">\(y\)</span> la región comprendida entre las gráficas de <span class="math inline">\(f\)</span> y <span class="math inline">\(g\)</span> en el intervalo <span class="math inline">\([0,1]\)</span>, utilizaremos sumas de Riemann de <a href="https://aprendeconalf.es/analisis-manual/09-integrales.html#c%C3%A1lculo-de-vol%C3%BAmenes-con-envoltorios-cil%C3%ADndricos">envoltorios cilíndricos</a>. Para ello hay que calcular la siguiente integral</p>
+<p>Para calcular el volumen del sólido de revolución que se obtiene al rotar alrededor del eje <span class="math inline">\(y\)</span> la región comprendida entre las gráficas de <span class="math inline">\(f\)</span> y <span class="math inline">\(g\)</span> en el intervalo <span class="math inline">\([0,1]\)</span>, utilizaremos sumas de Riemann de <a href="https://aprendeconalf.es/analisis-manual/08-integrales.html#c%C3%A1lculo-de-vol%C3%BAmenes-con-envoltorios-cil%C3%ADndricos">envoltorios cilíndricos</a>. Para ello hay que calcular la siguiente integral</p>
 <p><span class="math display">\[\begin{align*}
 \int_0^1 2\pi x (f(x)-g(x))\,dx
 &amp;= \int_0^1 2\pi x (x-x^2)\,dx
@@ -1367,7 +1390,7 @@ Solución
 <p><span class="math display">\[
 x+1 = (x-1)^2 \Leftrightarrow x+1 = x^2-2x+1 \Leftrightarrow x^2-3x= 0 \Leftrightarrow x(x-3) \Leftrightarrow x=0 \mbox{ o } x=3.
 \]</span></p>
-<p>Para calcular el volumen del sólido de revolución que se obtiene al rotar alrededor del eje <span class="math inline">\(y\)</span> la región comprendida entre las gráficas de <span class="math inline">\(f\)</span> y <span class="math inline">\(g\)</span> en el intervalo <span class="math inline">\([0,3]\)</span>, utilizaremos sumas de Riemann de <a href="https://aprendeconalf.es/analisis-manual/09-integrales.html#c%C3%A1lculo-de-vol%C3%BAmenes-con-envoltorios-cil%C3%ADndricos">envoltorios cilíndricos</a>. Para ello hay que calcular la siguiente integral</p>
+<p>Para calcular el volumen del sólido de revolución que se obtiene al rotar alrededor del eje <span class="math inline">\(y\)</span> la región comprendida entre las gráficas de <span class="math inline">\(f\)</span> y <span class="math inline">\(g\)</span> en el intervalo <span class="math inline">\([0,3]\)</span>, utilizaremos sumas de Riemann de <a href="https://aprendeconalf.es/analisis-manual/08-integrales.html#c%C3%A1lculo-de-vol%C3%BAmenes-con-envoltorios-cil%C3%ADndricos">envoltorios cilíndricos</a>. Para ello hay que calcular la siguiente integral</p>
 <p><span class="math display">\[\begin{align*}
 \int_0^3 2\pi x (f(x)-g(x))\,dx
 &amp;= \int_0^3 2\pi x (x+1-(x-1)^2)\,dx
@@ -1399,7 +1422,7 @@ Solución
 \cos(x)=\operatorname{sen}(x) \Leftrightarrow x = \frac{\pi}{4}+k\pi\ k\in\mathbb{Z}.
 \]</span></p>
 <p>En el intervalo de integración el único valor donde se cortan las gráficas de las dos funciones es en <span class="math inline">\(x=\pi/4\)</span>. Es fácil comprobar que <span class="math inline">\(f(x)&gt;g(x)\)</span> <span class="math inline">\(\forall x\in [0,\pi/4)\)</span> y <span class="math inline">\(f(x)&lt;g(x)\)</span> <span class="math inline">\(\forall x\in (\pi/4,\pi/2]\)</span>, por lo que tenemos que descomponer el intervalo de integración en estos dos subintervalos.</p>
-<p>Para calcular el volumen del sólido de revolución generado por la rotación alrededor del eje <span class="math inline">\(x\)</span> de la región comprendida entre <span class="math inline">\(f(x)=\cos(x)\)</span> y <span class="math inline">\(g(x)=\operatorname{sen}(x)\)</span> en el intervalo <span class="math inline">\([0,\pi/2]\)</span> podemos utilizar sumas de Riemann de <a href="https://aprendeconalf.es/analisis-manual/09-integrales.html#c%C3%A1lculo-de-vol%C3%BAmenes-de-s%C3%B3lidos-de-revoluci%C3%B3n">discos cilíndricos</a> transversales al eje <span class="math inline">\(x\)</span>. Para ello hay que calcular las siguientes integrales</p>
+<p>Para calcular el volumen del sólido de revolución generado por la rotación alrededor del eje <span class="math inline">\(x\)</span> de la región comprendida entre <span class="math inline">\(f(x)=\cos(x)\)</span> y <span class="math inline">\(g(x)=\operatorname{sen}(x)\)</span> en el intervalo <span class="math inline">\([0,\pi/2]\)</span> podemos utilizar sumas de Riemann de <a href="https://aprendeconalf.es/analisis-manual/08-integrales.html#c%C3%A1lculo-de-vol%C3%BAmenes-de-s%C3%B3lidos-de-revoluci%C3%B3n">discos cilíndricos</a> transversales al eje <span class="math inline">\(x\)</span>. Para ello hay que calcular las siguientes integrales</p>
 <p><span class="math display">\[
 \begin{gathered}
 \int_0^{\pi/4} \pi (f(x)^2-g(x)^2)\,dx + \int_{\pi/4}^{\pi/2} \pi (g(x)^2 - f(x)^2)\,dx \\
@@ -1411,11 +1434,29 @@ Solución
 = \pi.
 \end{gathered}
 \]</span></p>
+<p>Para calcular el volumen del sólido de revolución que se obtiene al rotar esta región alrededor del eje <span class="math inline">\(y\)</span> es más sencillo utilizar las sumas de Riemann de <a href="https://aprendeconalf.es/analisis-manual/08-integrales.html#c%C3%A1lculo-de-vol%C3%BAmenes-con-envoltorios-cil%C3%ADndricos">envoltorios cilíndricos</a>. Para ello hay que calcular la siguiente integral</p>
+<p><span class="math display">\[
+\begin{gathered}
+\int_0^{\pi/4} 2\pi x (f(x)-g(x))\,dx + \int_{\pi/4}^{\pi/2} 2\pi x(g(x) - f(x))\,dx \\
+= \int_0^{\pi/4} 2\pi x(\cos(x)-\operatorname{sen}(x))\,dx + \int_{\pi/4}^{\pi/2} 2\pi x(\operatorname{sen}(x) - \cos(x))\,dx \\
+= 2\pi  \int_0^{\pi/4} x\cos(x) - x\operatorname{sen}(x)\,dx + 2\pi \int_{\pi/4}^{\pi/2} x\operatorname{sen}(x)-x\cos(x)\,dx \\
+= 2\pi \left[x\operatorname{sen}(x)+\cos(x)+x\cos(x)-\operatorname{sen}(x)\right]_0^{\pi/4} + 2\pi \left[-x\cos(x)+\operatorname{sen}(x)-x\operatorname{sen}(x)-\cos(x)\right]_{\pi/4}^{\pi/2} \\
+= 2\pi \left(\frac{\pi}{4}\frac{\sqrt{2}}{2}+\frac{\sqrt{2}}{2}+\frac{\pi}{4}\frac{\sqrt{2}}{2}-\frac{\sqrt{2}}{2} - 1\right) + 2\pi \left(1-\frac{\pi}{2}+ \frac{\pi}{4}\frac{\sqrt{2}}{2}-\frac{\sqrt{2}}{2}+\frac{\pi}{4}\frac{\sqrt{2}}{2}+\frac{\sqrt{2}}{2}\right) \\
+= 2\pi \left(\frac{\sqrt{2}\pi}{4} + 1-\frac{\pi}{2} +\frac{\sqrt{2}\pi}{4}\right)
+= \sqrt{2}\pi^2-\pi^2 \approx 4.0881.
+\end{gathered}
+\]</span></p>
 </div>
 </div>
 </div>
-<div id="exr-volumen-helado" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 7.31 </strong></span>Un helado tiene forma parabólica dada por la función <span class="math inline">\(y=9-x^2\)</span> (en cm) y sus secciones transversales con respecto al eje <span class="math inline">\(y\)</span> son cuadrados. ¿Cuál es el volumen del helado?</p>
+<div id="exr-volumen-tienda-campaña" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 7.31 </strong></span>Una tienda de campaña de base cuadrada como la de la figura tiene sección vertical parabólica dada por la función <span class="math inline">\(y=1-x^2\)</span> (en m). ¿Cuál es su volumen?</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/integrales/tienda-iglu.svg" class="img-fluid figure-img" width="300"></p>
+<figcaption class="figure-caption">Tienda de campaña tipo iglú.</figcaption>
+</figure>
+</div>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-34-contents" aria-controls="callout-34" aria-expanded="false" aria-label="Toggle callout">
@@ -1429,20 +1470,20 @@ Solución
 </div>
 <div id="callout-34" class="callout-34-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Como las secciones transversales con respecto al eje <span class="math inline">\(y\)</span> son figuras regulares, en este caso cuadrados, calcularemos el volumen del helado integrando a lo largo del eje <span class="math inline">\(y\)</span> las áreas de esos cuadrados. Para cualquier sección transversal en <span class="math inline">\(y=a\)</span>, el semi-lado del cuadrado resultante es</p>
+<p>Como las secciones transversales con respecto al eje <span class="math inline">\(y\)</span> son figuras regulares, en este caso cuadrados, calcularemos el volumen de la tienda integrando a lo largo del eje <span class="math inline">\(y\)</span> las áreas de esos cuadrados. Para cualquier sección transversal en <span class="math inline">\(y=a\)</span>, el semi-lado del cuadrado resultante es</p>
 <p><span class="math display">\[
-a=9-x^2 \Leftrightarrow x^2 = 9-a \Leftrightarrow x = \sqrt{9-a},
+a=1-x^2 \Leftrightarrow x^2 = 1-a \Leftrightarrow x = \sqrt{1-a},
 \]</span></p>
 <p>por lo que el área de la sección transversal es</p>
 <p><span class="math display">\[
-f(x) = 2\sqrt{9-x}^2 = 4(9-x)=36-4x.
+f(y) = (2\sqrt{1-y})^2 = 4(1-y)=4-4y.
 \]</span></p>
-<p>Por otro lado, es fácil ver que el máximo de la curva <span class="math inline">\(y=9-x^2\)</span> es <span class="math inline">\(y=9\)</span> por lo que el intervalo de integración es <span class="math inline">\([0,9]\)</span>. Así pues, el volumen del helado viene dado por la siguiente integral</p>
+<p>Por otro lado, es fácil ver que el máximo de la curva <span class="math inline">\(y=1-x^2\)</span> es <span class="math inline">\(y=1\)</span> por lo que el intervalo de integración es <span class="math inline">\([0,1]\)</span>. Así pues, el volumen de la tienda de campaña viene dado por la siguiente integral</p>
 <p><span class="math display">\[
-\int_0^9 36-4x\,dx
-= [36x-2x^2]_0^9
-= 36\cdot 9 -2\cdot 9^2
-= 162 \mbox{ cm}^3
+\int_0^1 4-4y\,dy
+= [4y-2y^2]_0^1
+= 4-2  
+= 2 \mbox{ m}^3
 \]</span></p>
 </div>
 </div>
@@ -1462,7 +1503,7 @@ Solución
 </div>
 <div id="callout-35" class="callout-35-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Al rotar la gráfica de <span class="math inline">\(f\)</span> alrededor del eje <span class="math inline">\(y\)</span>, las secciones transversales con respecto al eje <span class="math inline">\(y\)</span> del sólido de revolución generado serán círculos cuyo radio vendrá dado por la función inversa de <span class="math inline">\(y\)</span>, <span class="math inline">\(x = f^{-1}(y) = y^{1/3}\)</span>. Por tanto, para calcular el volumen del sólido de revolución podemos tomar <a href="https://aprendeconalf.es/analisis-manual/09-integraleshtml#c%C3%A1lculo-de-vol%C3%BAmenes-de-s%C3%B3lidos-de-revoluci%C3%B3n">discos cilíndricos</a>, de manera que el volumen del pluviómetro de altura <span class="math inline">\(h\)</span> viene dado por la integral</p>
+<p>Al rotar la gráfica de <span class="math inline">\(f\)</span> alrededor del eje <span class="math inline">\(y\)</span>, las secciones transversales con respecto al eje <span class="math inline">\(y\)</span> del sólido de revolución generado serán círculos cuyo radio vendrá dado por la función inversa de <span class="math inline">\(y\)</span>, <span class="math inline">\(x = f^{-1}(y) = y^{1/3}\)</span>. Por tanto, para calcular el volumen del sólido de revolución podemos tomar <a href="https://aprendeconalf.es/analisis-manual/08-integraleshtml#c%C3%A1lculo-de-vol%C3%BAmenes-de-s%C3%B3lidos-de-revoluci%C3%B3n">discos cilíndricos</a>, de manera que el volumen del pluviómetro de altura <span class="math inline">\(h\)</span> viene dado por la integral</p>
 <p><span class="math display">\[
 \int_0^h \pi f^{-1}(y)^2\,dy
 = \pi \int_0^h y^{2/3}\,dy
@@ -1493,7 +1534,7 @@ Solución
 </div>
 <div id="callout-36" class="callout-36-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>La ecuación de la circunferencia de radio <span class="math inline">\(r\)</span> centrada en el origen es <span class="math inline">\(x^2+y^2=r^2\)</span>, de donde se deduce que <span class="math inline">\(y=\pm\sqrt{r^2-x^2}\)</span>. Si tomamos la función correspondiente a la semicircunferencia positiva <span class="math inline">\(f(x)=\sqrt{r^2-x^2}\)</span>, podemos calcular la <a href="https://aprendeconalf.es/analisis-manual/09-integrales.html#c%C3%A1lculo-de-la-longitud-de-una-curva">longitud de la curva</a> de la semicircunferencia con la siguiente integral</p>
+<p>La ecuación de la circunferencia de radio <span class="math inline">\(r\)</span> centrada en el origen es <span class="math inline">\(x^2+y^2=r^2\)</span>, de donde se deduce que <span class="math inline">\(y=\pm\sqrt{r^2-x^2}\)</span>. Si tomamos la función correspondiente a la semicircunferencia positiva <span class="math inline">\(f(x)=\sqrt{r^2-x^2}\)</span>, podemos calcular la <a href="https://aprendeconalf.es/analisis-manual/08-integrales.html#c%C3%A1lculo-de-la-longitud-de-una-curva">longitud de la curva</a> de la semicircunferencia con la siguiente integral</p>
 <p><span class="math display">\[\begin{align*}
 \int_{-r}^r \sqrt{1+f'(x)^2}\,dx
 &amp;= \int_{-r}^r \sqrt{1+\left({\sqrt{r^2-x^2}}\right)^2}\,dx \\
@@ -1593,7 +1634,7 @@ Solución
 </div>
 <div id="callout-38" class="callout-38-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>La longitud del rail es la longitud de la curva correspondiente a la gráfica de la función <span class="math inline">\(f(x)=\frac{1}{3}(x-3)\sqrt{x}\)</span>. Resulta sencillo ver que las dos raíces de esta función son <span class="math inline">\(x=0\)</span> (el origen) y <span class="math inline">\(x=3\)</span>, por lo que hay que el intervalo de integración es <span class="math inline">\([0,3]\)</span>. Para calcular la <a href="https://aprendeconalf.es/analisis-manual/09-integrales.html#c%C3%A1lculo-de-la-longitud-de-una-curva">longitud de la curva</a> correspondiente a la gráfica de <span class="math inline">\(f\)</span> en este intervalo hay que calcular la siguiente integral</p>
+<p>La longitud del rail es la longitud de la curva correspondiente a la gráfica de la función <span class="math inline">\(f(x)=\frac{1}{3}(x-3)\sqrt{x}\)</span>. Resulta sencillo ver que las dos raíces de esta función son <span class="math inline">\(x=0\)</span> (el origen) y <span class="math inline">\(x=3\)</span>, por lo que hay que el intervalo de integración es <span class="math inline">\([0,3]\)</span>. Para calcular la <a href="https://aprendeconalf.es/analisis-manual/08-integrales.html#c%C3%A1lculo-de-la-longitud-de-una-curva">longitud de la curva</a> correspondiente a la gráfica de <span class="math inline">\(f\)</span> en este intervalo hay que calcular la siguiente integral</p>
 <p><span class="math display">\[\begin{align*}
 \int_0^3 \sqrt{1+f'(x)^2}\,dx
 &amp;= \int_0^3 \sqrt{1+\left(\frac{1}{3}\left(\sqrt{x}+\frac{x-3}{2\sqrt{x}}\right)\right)^2}\,dx \\
@@ -1627,7 +1668,7 @@ Solución
 </div>
 <div id="callout-39" class="callout-39-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>La longitud del cable eléctrico es la <a href="https://aprendeconalf.es/analisis-manual/09-integrales.html#c%C3%A1lculo-de-la-longitud-de-una-curva">longitud de la curva</a> correspondiente a la gráfica de la función <span class="math inline">\(f(x)=5\cosh(x/5)\)</span> en el intervalo <span class="math inline">\([-5,5]\)</span>, que viene dado por la integral</p>
+<p>La longitud del cable eléctrico es la <a href="https://aprendeconalf.es/analisis-manual/08-integrales.html#c%C3%A1lculo-de-la-longitud-de-una-curva">longitud de la curva</a> correspondiente a la gráfica de la función <span class="math inline">\(f(x)=5\cosh(x/5)\)</span> en el intervalo <span class="math inline">\([-5,5]\)</span>, que viene dado por la integral</p>
 <p><span class="math display">\[\begin{align*}
 \int_{-5}^5 \sqrt{1+f'(x)^2}\,dx
 &amp;= \int_{-5}^5 \sqrt{1+\operatorname{senh}(x/5)^2}\,dx\\
@@ -1664,7 +1705,7 @@ Solución
 <div id="callout-40" class="callout-40-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ol type="a">
-<li><p>La <a href="https://aprendeconalf.es/analisis-manual/09-integrales.html#c%C3%A1lculo-de-superficies-de-s%C3%B3lidos-de-revoluci%C3%B3n">superficie del sólido de revolución</a> que se obtiene al rotar la gráfica de la función <span class="math inline">\(f(x)\)</span> alrededor del eje <span class="math inline">\(x\)</span> en el interavlo <span class="math inline">\([-1,1]\)</span>, viene dada por la siguiente integral</p>
+<li><p>La <a href="https://aprendeconalf.es/analisis-manual/08-integrales.html#c%C3%A1lculo-de-superficies-de-s%C3%B3lidos-de-revoluci%C3%B3n">superficie del sólido de revolución</a> que se obtiene al rotar la gráfica de la función <span class="math inline">\(f(x)\)</span> alrededor del eje <span class="math inline">\(x\)</span> en el interavlo <span class="math inline">\([-1,1]\)</span>, viene dada por la siguiente integral</p>
 <p><span class="math display">\[\begin{align*}
 \int_{-1}^1 2\pi f(x)\sqrt{1+f'(x)^2}\,dx
 &amp;= 2\pi\int_{-1}^1 2\sqrt{1-x}\sqrt{1+\left(\frac{-1}{\sqrt{1-x}}\right)^2}\,dx \\
@@ -1715,7 +1756,7 @@ Solución
 \frac{x^2}{4}+y^2=1 \Leftrightarrow y^2 = 1-\frac{x^2}{4} \Leftrightarrow y = \pm \sqrt{1-\frac{x^2}{4}},
 \]</span></p>
 <p>de manera que el depósito se genera al rotar alrededor del eje <span class="math inline">\(x\)</span> la gráfica de la función <span class="math inline">\(f(x) = \sqrt{1-\frac{x^2}{4}}\)</span> en el intervalo <span class="math inline">\([-2,2]\)</span>.</p>
-<p>El <a href="https://aprendeconalf.es/analisis-manual/09-integrales.html#c%C3%A1lculo-de-superficies-de-s%C3%B3lidos-de-revoluci%C3%B3n">área de la superficie del sólido de revolución</a> que se obtiene al rotar la gráfica de <span class="math inline">\(f\)</span> alrededor del eje <span class="math inline">\(x\)</span> en el intervalo <span class="math inline">\([a,b]\)</span> viene dado por la integral</p>
+<p>El <a href="https://aprendeconalf.es/analisis-manual/08-integrales.html#c%C3%A1lculo-de-superficies-de-s%C3%B3lidos-de-revoluci%C3%B3n">área de la superficie del sólido de revolución</a> que se obtiene al rotar la gráfica de <span class="math inline">\(f\)</span> alrededor del eje <span class="math inline">\(x\)</span> en el intervalo <span class="math inline">\([a,b]\)</span> viene dado por la integral</p>
 <p><span class="math display">\[
 \int_a^b 2\pi f(x) \sqrt{1+f'(x)^2}\,dx
 \]</span></p>
@@ -1769,7 +1810,7 @@ Solución
 <p><span class="math display">\[
 (x-R)^2+y^2=r^2 \Leftrightarrow y^2 = r^2-(x-R)^2 \Leftrightarrow y=\pm \sqrt{r^2-(x-R)^2},
 \]</span></p>
-<p>donde la rama positiva corresponde al semi-toro positivo y la negativa al semi-toro negativo. Por simetría, para calcular el área de la superficie del toro basta con calcular el área de las superficie del semi-toro positivo y multiplicarla por 2. El <a href="https://aprendeconalf.es/analisis-manual/09-integrales.html#c%C3%A1lculo-de-superficies-de-s%C3%B3lidos-de-revoluci%C3%B3n">área de la superficie del sólido de revolución</a> que se obtiene al rotar la gráfica de una función <span class="math inline">\(f\)</span> alrededor del eje <span class="math inline">\(y\)</span> en un intervalo <span class="math inline">\([a,b]\)</span> viene dado por la integral</p>
+<p>donde la rama positiva corresponde al semi-toro positivo y la negativa al semi-toro negativo. Por simetría, para calcular el área de la superficie del toro basta con calcular el área de las superficie del semi-toro positivo y multiplicarla por 2. El <a href="https://aprendeconalf.es/analisis-manual/08-integrales.html#c%C3%A1lculo-de-superficies-de-s%C3%B3lidos-de-revoluci%C3%B3n">área de la superficie del sólido de revolución</a> que se obtiene al rotar la gráfica de una función <span class="math inline">\(f\)</span> alrededor del eje <span class="math inline">\(y\)</span> en un intervalo <span class="math inline">\([a,b]\)</span> viene dado por la integral</p>
 <p><span class="math display">\[
 \int_a^b 2\pi x \sqrt{1+f'(x)^2}\,dx
 \]</span></p>
@@ -2025,7 +2066,7 @@ Solución
 <div id="callout-48" class="callout-48-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>El problema es similar al anterior, pero ahora, el radio de los sectores circulares viene dado por la función <span class="math inline">\(y=\frac{x^2}{2}\)</span>, de manera que <span class="math inline">\(x=\sqrt{2y}\)</span>.</p>
-<p>Tal y como vimos en el <a href="https://aprendeconalf.es/analisis-manual/09-integrales.html#c%C3%A1lculo-de-vol%C3%BAmenes-de-s%C3%B3lidos-de-revoluci%C3%B3n">cálculo de volúmenes de sólidos de revolución</a>, el volumen almacenado en el depósito hasta una altura <span class="math inline">\(h\)</span> es</p>
+<p>Tal y como vimos en el <a href="https://aprendeconalf.es/analisis-manual/08-integrales.html#c%C3%A1lculo-de-vol%C3%BAmenes-de-s%C3%B3lidos-de-revoluci%C3%B3n">cálculo de volúmenes de sólidos de revolución</a>, el volumen almacenado en el depósito hasta una altura <span class="math inline">\(h\)</span> es</p>
 <p><span class="math display">\[
 V(h) = \int_0^h \pi \sqrt{2y}^2\,dy = \pi \int_0^h 2y\,dy = \pi [y^2]_0^h = \pi h^2 \mbox{ m}^3.
 \]</span></p>
@@ -2061,7 +2102,7 @@ Solución
 </div>
 <div id="callout-49" class="callout-49-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Para calcular el <a href="https://aprendeconalf.es/analisis-manual/09-integrales.html#centro-de-masas-de-una-varilla-con-densidad-variable">centro de masas de una varilla con densidad variable</a> <span class="math inline">\(f(x)\)</span> tenemos que dividir su momento y su masa, es decir, calcular el cociente de integrales</p>
+<p>Para calcular el <a href="https://aprendeconalf.es/analisis-manual/08-integrales.html#centro-de-masas-de-una-varilla-con-densidad-variable">centro de masas de una varilla con densidad variable</a> <span class="math inline">\(f(x)\)</span> tenemos que dividir su momento y su masa, es decir, calcular el cociente de integrales</p>
 <p><span class="math display">\[
 \bar x = \frac{\int_0^{20} x f(x)\,dx}{\int_0^{20}f(x)\,dx},
 \]</span></p>
@@ -2108,7 +2149,7 @@ Solución
 <div id="callout-50" class="callout-50-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>En primer lugar expresamos <span class="math inline">\(y\)</span> en función de <span class="math inline">\(x\)</span>, de manera que se obtiene <span class="math inline">\(y = \pm\sqrt{1-x^2}\)</span>. Como estamos interesados en la región del primer cuadrante, tomamos la raíz positiva, es decir, la función que delimita la región es <span class="math inline">\(f(x)=\sqrt{1-x^2}\)</span>.</p>
-<p>Para calcular el <a href="https://aprendeconalf.es/analisis-manual/09-integrales.html#centro-de-masas-de-una-regi%C3%B3n-plana-con-densidad-fija">centro de masas una región plana con densidad constante</a> <span class="math inline">\(f(x)\)</span> tenemos que calcular las coordenadas del centroide por separado. Para calcular la primera coordenada del centroide tenemos que calcular el cociente de integrales</p>
+<p>Para calcular el <a href="https://aprendeconalf.es/analisis-manual/08-integrales.html#centro-de-masas-de-una-regi%C3%B3n-plana-con-densidad-fija">centro de masas una región plana con densidad constante</a> <span class="math inline">\(f(x)\)</span> tenemos que calcular las coordenadas del centroide por separado. Para calcular la primera coordenada del centroide tenemos que calcular el cociente de integrales</p>
 <p><span class="math display">\[
 \bar x = \frac{\int_0^1 x f(x)\,dx}{\int_0^1f(x)\,dx},
 \]</span></p>
@@ -2184,7 +2225,7 @@ Solución
 x = x^2 \Leftarrow x^2-x = 0 \Leftarrow x(x-1) = 0 \Leftarrow x=0 \mbox{ o } x=1.
 \]</span></p>
 <p>Así pues se trata de calcular el centroide de la región comprendida entre las gráficas de <span class="math inline">\(f(x)=x\)</span> y <span class="math inline">\(g(x)=x^2\)</span> en el intervalo <span class="math inline">\([0,1]\)</span>.</p>
-<p>Para calcular el <a href="https://aprendeconalf.es/analisis-manual/09-integrales.html#centro-de-masas-de-una-regi%C3%B3n-plana-con-densidad-fija">centro de masas una región plana con densidad constante</a> <span class="math inline">\(f(x)\)</span> tenemos que calcular las coordenadas del centroide por separado. Para calcular la primera coordenada del centroide tenemos que calcular el cociente de integrales</p>
+<p>Para calcular el <a href="https://aprendeconalf.es/analisis-manual/08-integrales.html#centro-de-masas-de-una-regi%C3%B3n-plana-con-densidad-fija">centro de masas una región plana con densidad constante</a> <span class="math inline">\(f(x)\)</span> tenemos que calcular las coordenadas del centroide por separado. Para calcular la primera coordenada del centroide tenemos que calcular el cociente de integrales</p>
 <p><span class="math display">\[
 \bar x = \frac{\int_0^1 x (f(x)-g(x))\,dx}{\int_0^1f(x)-g(x)\,dx},
 \]</span></p>
@@ -2283,7 +2324,7 @@ Solución
 </div>
 <div id="callout-53" class="callout-53-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Para calcular el <a href="https://aprendeconalf.es/analisis-manual/09-integrales.html#c%C3%A1lculo-de-la-media-de-una-funci%C3%B3n">valor medio de una función</a> en el intervalo <span class="math inline">\([-1,1]\)</span> tenemos que calcular la siguiente integral</p>
+<p>Para calcular el <a href="https://aprendeconalf.es/analisis-manual/08-integrales.html#c%C3%A1lculo-de-la-media-de-una-funci%C3%B3n">valor medio de una función</a> en el intervalo <span class="math inline">\([-1,1]\)</span> tenemos que calcular la siguiente integral</p>
 <p><span class="math display">\[\begin{align*}
 \bar f[-1,1]
 &amp;= \frac{1}{1-(-1)}\int_{-1}^1 f(x)\,dx
@@ -2312,7 +2353,7 @@ Solución
 </div>
 <div id="callout-54" class="callout-54-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>La única fuerza que actúa sobre la pelota es la fuerza de la gravedad, que podemos suponer con una aceleración constante <span class="math inline">\(g=-9.81\)</span> m/s<span class="math inline">\(^2\)</span>. Según las fórmulas de <a href="https://aprendeconalf.es/analisis-manual/09-integrales.html#cinem%C3%A1tica">cinemática</a>, la posición que ocupa la pelota en cada instante <span class="math inline">\(t\)</span> viene dada por la expresión</p>
+<p>La única fuerza que actúa sobre la pelota es la fuerza de la gravedad, que podemos suponer con una aceleración constante <span class="math inline">\(g=-9.81\)</span> m/s<span class="math inline">\(^2\)</span>. Según las fórmulas de <a href="https://aprendeconalf.es/analisis-manual/08-integrales.html#cinem%C3%A1tica">cinemática</a>, la posición que ocupa la pelota en cada instante <span class="math inline">\(t\)</span> viene dada por la expresión</p>
 <p><span class="math display">\[
 s(t) = s(0) + \int_0^t v(x)\,dx,
 \]</span></p>
@@ -2338,7 +2379,7 @@ s(t) = 0
 \Leftrightarrow t^2 = \frac{25}{4.905} = 5.0968
 \Leftrightarrow t = \sqrt{5.0968} = 2.2576 \mbox{ s}.
 \]</span></p>
-<p>Así pues, tenemos que calcular la velocidad media en el intervalo <span class="math inline">\([0, 2.2576]\)</span>. El <a href="https://aprendeconalf.es/analisis-manual/09-integrales.html#c%C3%A1lculo-de-la-media-de-una-funci%C3%B3n">valor medio de la función</a> velocidad en ese intervalo viene dado por la siguiente expresión</p>
+<p>Así pues, tenemos que calcular la velocidad media en el intervalo <span class="math inline">\([0, 2.2576]\)</span>. El <a href="https://aprendeconalf.es/analisis-manual/08-integrales.html#c%C3%A1lculo-de-la-media-de-una-funci%C3%B3n">valor medio de la función</a> velocidad en ese intervalo viene dado por la siguiente expresión</p>
 <p><span class="math display">\[\begin{align*}
 \bar v[0,2.2576]
 &amp;= \frac{1}{2.2576} \int_0^{2.2576} v(x)\, dx

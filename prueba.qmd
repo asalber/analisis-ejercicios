@@ -19,7 +19,7 @@ $$
 
 de manera que el depósito se genera al rotar alrededor del eje $x$ la gráfica de la función $f(x) = \sqrt{1-\frac{x^2}{4}}$ en el intervalo $[-2,2]$.
 
-El [área de la superficie del sólido de revolución](https://aprendeconalf.es/analisis-manual/09-integrales.html#c%C3%A1lculo-de-superficies-de-s%C3%B3lidos-de-revoluci%C3%B3n) que se obtiene al rotar la gráfica de $f$ alrededor del eje $x$ en el intervalo $[a,b]$ viene dado por la integral
+El [área de la superficie del sólido de revolución](https://aprendeconalf.es/analisis-manual/08-integrales.html#c%C3%A1lculo-de-superficies-de-s%C3%B3lidos-de-revoluci%C3%B3n) que se obtiene al rotar la gráfica de $f$ alrededor del eje $x$ en el intervalo $[a,b]$ viene dado por la integral
 
 $$
 \int_a^b 2\pi f(x) \sqrt{1+f'(x)^2}\,dx
@@ -69,7 +69,7 @@ $$
 (x-R)^2+y^2=r^2 \Leftrightarrow y^2 = r^2-(x-R)^2 \Leftrightarrow y=\pm \sqrt{r^2-(x-R)^2},
 $$
 
-donde la rama positiva corresponde al semi-toro positivo y la negativa al semi-toro negativo. Por simetría, para calcular el área de la superficie del toro basta con calcular el área de las superficie del semi-toro positivo y multiplicarla por 2. El [área de la superficie del sólido de revolución](https://aprendeconalf.es/analisis-manual/09-integrales.html#c%C3%A1lculo-de-superficies-de-s%C3%B3lidos-de-revoluci%C3%B3n) que se obtiene al rotar la gráfica de una función $f$ alrededor del eje $y$ en un intervalo $[a,b]$ viene dado por la integral
+donde la rama positiva corresponde al semi-toro positivo y la negativa al semi-toro negativo. Por simetría, para calcular el área de la superficie del toro basta con calcular el área de las superficie del semi-toro positivo y multiplicarla por 2. El [área de la superficie del sólido de revolución](https://aprendeconalf.es/analisis-manual/08-integrales.html#c%C3%A1lculo-de-superficies-de-s%C3%B3lidos-de-revoluci%C3%B3n) que se obtiene al rotar la gráfica de una función $f$ alrededor del eje $y$ en un intervalo $[a,b]$ viene dado por la integral
 
 $$
 \int_a^b 2\pi x \sqrt{1+f'(x)^2}\,dx

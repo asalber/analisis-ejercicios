@@ -6,6 +6,8 @@
 \usepackage{tkz-fct}
 \usetikzlibrary{angles, quotes}
 \usetikzlibrary{arrows.meta, arrows}
+\usepgfplotslibrary{polar}
+\usepgfplotslibrary{fillbetween}
 \usetikzlibrary{external}
 \tikzexternalize[prefix={external/}]
 
@@ -34,16 +36,27 @@
 
 \tikzset{export as png}
 
-\tikzsetnextfilename{integral-2}
-\begin{tikzpicture}[scale=1]
-    \tkzInit[xmax=1, ymin=-1, ymax=0, xstep=0.1, ystep=0.1]
-    \tkzAxeXY
-    \tkzGrid[color=myblack!20]
-    \tkzFct[samples=300, domain=0:1, line width=1pt, color = myblue]{\x**3-2*\x**2}
-    \tkzText[color=myblack](0.5,0.1){\Large $f(x)= x^3-2x^2$}
-    \tkzDrawArea[color=myblue!40, domain=0:1]
-    \tkzText[color=myblack](0.7,-0.2){\Large $\displaystyle\int_0^1 x^3-2x^2\,dx = \frac{-5}{12}$}
-\end{tikzpicture}
+\tikzsetnextfilename{area-entre-curvas-polares}
+\begin{tikzpicture}
+    \begin{polaraxis}[
+        samples=360, % How many samples to take
+        grid=major, % Display both major and minor grids
+        major grid style={gray}, % Style for major grids
+        %legend pos=north west, % Position of legend
+        legend style={at={(1,1)},anchor=west},
+    ]
+    % First plot
+    \addplot+[no marks, domain=180:360, myblue] {3*sin(\x)};
+    \addlegendentry{$r = 3\operatorname{sen}(\theta)$}
+    
+    % Second plot
+    \addplot+[no marks, domain=0:360, myred] {1 + sin(\x)};
+    \addlegendentry{$r = 1 + \operatorname{sen}(\theta)$}
+    
+    % Fill between
+    \addplot+[no marks, domain=0:180, fill=myblue, draw = none, opacity=0.5]{min(3*sin(\x), 1+sin(\x))}; 
+    \end{polaraxis}
+    \end{tikzpicture}
 \end{document}
 
 
