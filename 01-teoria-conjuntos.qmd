@@ -1,5 +1,5 @@
 ---
-title: Teoría de conjuntos 
+title: Teoría de conjuntos
 lang: es
 ---
 
@@ -37,25 +37,13 @@ Serían disjuntos con $A$ todos los conjuntos que solo tuviesen alguno de los n�
 
 :::{#exr-expresion-conjuntos}
 Expresar con operaciones entre los conjuntos $A$, $B$ y $C$, los conjuntos que se corresponden con las regiones sombreadas en los siguientes diagramas.
-:::
 
-::: {.content-visible when-format="html"}
 :::{layout-ncol="3"}
-![b.](./img/teoria-conjuntos/conjunto2.png)
+![b.](./img/teoria-conjuntos/conjunto2){width=300}
 
-![a.](./img/teoria-conjuntos/conjunto1.png)
+![a.](./img/teoria-conjuntos/conjunto1){width=300}
 
-![b.](./img/teoria-conjuntos/conjunto3.png)
-:::
-:::
-
-::: {.content-visible unless-format="html"}
-:::{layout-ncol="3"}
-![a.](./img/teoria-conjuntos/conjunto2.tex)
-
-![b.](./img/teoria-conjuntos/conjunto1.tex)
-
-![b.](./img/teoria-conjuntos/conjunto3.tex)
+![b.](./img/teoria-conjuntos/conjunto3){width=300}
 :::
 :::
 

@@ -662,7 +662,7 @@ Por tanto, si $0<b<1$ se tiene que $C/E$ es decreciente y eso quiere decir que l
 La siguiente figura muestra la gráfica de la derivada de una función $f$. Estudiar el comportamiento de la función (crecimiento, decrecimiento, extremos, concavidad y puntos de inflexión).
 
 :::{style="text-align:center;"}
-![](./img/derivadas/grafica-ext-1.png)
+![](./img/derivadas/grafica-ext-1){width=400}
 :::
 :::
 

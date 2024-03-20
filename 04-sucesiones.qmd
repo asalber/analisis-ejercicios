@@ -380,15 +380,9 @@ e. Veamos que la sucesión es creciente por inducción. $x_1=1<2=x_2$. Supongamo
 $\star$
 Dado un segmento como el de la figura de más abajo,
 
-<!-- ::: {.content-visible when-format="html"} -->
 ::: {style="text-align:center;"}
-![](./img/sucesiones/numero-aureo.png)
+![](./img/sucesiones/numero-aureo)
 :::
-<!-- ::: -->
-<!-- 
-::: {.content-visible unless-format="html"}
-![](./img/sucesiones/numero-aureo.tex)
-::: -->
 
 tal que $\frac{a+b}{a}=\frac{a}{b}=\varphi$. A este número se le conoce como [número áureo](https://es.wikipedia.org/wiki/N%C3%BAmero_%C3%A1ureo) y es el número irracional $\varphi=\frac{1+\sqrt{5}}{2}=1.618033988749\ldots$
 

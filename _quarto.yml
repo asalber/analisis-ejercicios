@@ -54,9 +54,11 @@ format:
       dark: darkly
       light: flatly
     html-math-method: mathjax
+    default-image-extension: svg
   pdf:
     documentclass: scrreport
     papersize: a4
+    default-image-extension: pdf
     template-partials:
       - before-body.tex
     titlegraphic: img/logos/sticker.png

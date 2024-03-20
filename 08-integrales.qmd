@@ -1,10 +1,5 @@
 ---
 title: Integrales de funciones
-format:
-    html:
-        default-image-extension: svg
-    pdf:
-        default-image-extension: pdf
 lang: es
 ---
 
@@ -99,13 +94,7 @@ Para calcular las integrales inferior y superior, basta con calcular el límite 
 
 Como $\underline{\int_0^1} x^2 = \overline{\int_0^1} x^2=\frac{1}{3}$, la función $f(x)=x^2$ es integrable Riemann en $[0,1]$ y $\int_0^1 x^2\, dx = \frac{1}{3}$.
 
-:::{.content-visible when-format="html"}
-![Integral de Riemann de $f(x)=x^2$ en $[0,1]$.](img/integrales/integral-cuadrado.png)
-:::
-
-:::{.content-visible unless-format="html"}
-![Integral de Riemann de $f(x)=x^2$ en $[0,1]$.](img/integrales/integral-cuadrado.pdf)
-:::
+![Integral de Riemann de $f(x)=x^2$ en $[0,1]$.](img/integrales/integral-cuadrado)
 :::
 
 :::{#exr-integral-riemann-2}
@@ -161,13 +150,7 @@ $$
 \int_0^1 x^3-2x^2\,dx = \int_0^1 x^3\, dx -2\int_0^1 x^2\, dx = \frac{1}{4} - 2\frac{1}{3} = \frac{-5}{12}  
 $$
 
-:::{.content-visible when-format="html"}
-![Integral de Riemann de $f(x)=x^3-2x^2$ en $[0,1]$.](img/integrales/integral-2.png)
-:::
-
-:::{.content-visible unless-format="html"}
-![Integral de Riemann de $f(x)=x^3-2x^2$ en $[0,1]$.](img/integrales/integral-2.pdf)
-:::
+![Integral de Riemann de $f(x)=x^3-2x^2$ en $[0,1]$.](img/integrales/integral-2)
 :::
 
 :::{#exr-integral-inversa}

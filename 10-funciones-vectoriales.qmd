@@ -1,22 +1,12 @@
 ---
 title: Funciones vectoriales
 lang: es
-execute: 
-  cache: true
-  freeze: auto
-  daemon: 3600
 ---
 
 :::{#exr-trayectorias-funciones-vectoriales}
 Emparejar las siguientes funciones vectoriales con las trayectorias de más abajo.
 
-:::{.content-visible when-format="html"}
-![](img/funciones-vectoriales/trayectorias-espacio.svg)
-:::
-
-:::{.content-visible unless-format="html"}
-![](img/funciones-vectoriales/trayectorias-espacio.pdf)
-:::
+![](img/funciones-vectoriales/trayectorias-espacio)
 
 a. $\mathbf{f}(t) = (\operatorname{sen}(t), \cos(t), t/4)$
 

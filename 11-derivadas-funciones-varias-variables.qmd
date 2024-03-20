@@ -1,23 +1,13 @@
 ---
 title: Derivadas de funciones de varias variables
 lang: es
-execute:
-  echo: false
-  cache: true
-  freeze: auto
-  daemon: 3600
 ---
 
 :::{#exr-curvas-nivel}
 Emparejar las siguientes funciones de dos variables con sus curvas de nivel.
 
-:::{.content-visible when-format="html"}
-![](img/derivadas-funciones-varias-variables/curvas-nivel.svg)
-:::
+![](img/derivadas-funciones-varias-variables/curvas-nivel)
 
-:::{.content-visible unless-format="html"}
-![](img/derivadas-funciones-varias-variables/curvas-nivel.pdf)
-:::
 
 a. $f(x,y) = \cos(x)\operatorname{sen}(y)$
 
@@ -117,13 +107,7 @@ a. ¿Cómo varía la producción cuando disminuye el capital?
 ## Solución
 a.  Para $a=1$ y $\alpha=0.5$ se tiene la función $p(t,k)=1 \cdot t^{0.5}k^{0.5} = \sqrt{tk}$. Los puntos de la curva de nivel $c$ cumplirán que $\sqrt{tk} = c$, de donde se deduce que $t=\frac{c^2}{k}$ y, por tanto, se trata de una función inversa. En la siguiente gráfica aparecen algunas curvas de nivel de esta función de producción.
 
-    :::{.content-visible when-format="html"}
-    ![](img/derivadas-funciones-varias-variables/produccion-economica.svg)
-    :::
-
-    :::{.content-visible unless-format="html"}
-    ![](img/derivadas-funciones-varias-variables/produccion-economica.pdf)
-    :::
+    ![](img/derivadas-funciones-varias-variables/produccion-economica)
 
 a.  La variación de la producción con respecto a al trabajo, manteniendo constante el capital, lo da la derivada parcial con respecto al trabajo, que vale
 
@@ -221,13 +205,8 @@ $$
 :::{#exr-interpretacion-derivadas-parciales-superficie}
 La gráfica de una función $f(x,y)$ se muestra a continuación.
 
-:::{.content-visible when-format="html"}
-![](img/derivadas-funciones-varias-variables/interpretacion-derivadas-parciales-superficie.svg)
-:::
+![](img/derivadas-funciones-varias-variables/interpretacion-derivadas-parciales-superficie)
 
-:::{.content-visible unless-format="html"}
-![](img/derivadas-funciones-varias-variables/interpretacion-derivadas-parciales-superficie.pdf)
-:::
 
 ¿Qué signo tienen las derivadas parciales en el punto $(1,-1)$. ¿Y en el punto (0,0)?
 :::
@@ -445,13 +424,8 @@ Como en el numerador tenemos un polinomio en $x$ y en el denominador una funció
 :::{#exr-polea}
 Tenemos dos objetos de masas $m_1$ y $m_2$ unidas por una cuerda que pasa a través de una polea como la de la siguiente figura.
 
-:::{.content-visible when-format="html"}
-![Polea](img/derivadas-funciones-varias-variables/polea.png)
-:::
+![Polea](img/derivadas-funciones-varias-variables/polea)
 
-:::{.content-visible unless-format="html"}
-![Polea](img/derivadas-funciones-varias-variables/polea.pdf)
-:::
 
 Si $m_1\geq m_2$, la aceleración del objeto de masa $m_1$ viene dada por la ecuación
 
@@ -661,13 +635,7 @@ $$
 
 Como la derivada es nula, en el instante $t=\pi$ los planetas ni se están acercando ni alejando. De hecho, en ese instante la distancia entre los planetas es máxima, tal y como puede apreciarse en la siguiente gráfica.
 
-:::{.content-visible when-format="html"}
-![Orbitas de los planetas.](img/derivadas-funciones-varias-variables/planetas.svg)
-:::
-
-:::{.content-visible unless-format="html"}
-![Orbitas de los planetas.](img/derivadas-funciones-varias-variables/planetas.pdf)
-:::
+![Orbitas de los planetas.](img/derivadas-funciones-varias-variables/planetas)
 :::
 
 :::{#exr-transmision-errores-caudal-fuente}

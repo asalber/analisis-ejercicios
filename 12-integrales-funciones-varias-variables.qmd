@@ -1,11 +1,6 @@
 ---
 title: Integrales de funciones de varias variables
 lang: es
-execute:
-  echo: false
-  cache: true
-  freeze: auto
-  daemon: 3600
 ---
 
 :::{#exr-sumas-riemann-n-dimensional}
@@ -16,13 +11,7 @@ Calcular la suma inferior y superior de Riemann de la función $f(x,y)=12-x^2-2y
 ## Solución
 Para dividir el intervalo $I=[0,2]\times[0,2]$ en 4 subintervalos de igual tamaño basta tomar la partición $P=\{0,1,2\}\times\{0,1,2\}$ que define los subintervalos $I_1=[0,1]\times [0,1]$, $I_2=[0,1]\times [1,2]$, $I_3=[1,2]\times [0,1]$ y $I_4=[1,2]\times [1,2]$.
 
-:::{.content-visible when-format="html"}
-![Partición del intervalo $[0,2]\times [0,2]$ en 4 subintervalos de igual tamaño.](img/integrales-funciones-varias-variables/partici%C3%B3n-4-subintervalos.svg){width=250}
-:::
-
-:::{.content-visible unless-format="html"}
-![Partición del intervalo $[0,2]\times [0,2]$ en 4 subintervalos de igual tamaño.](img/integrales-funciones-varias-variables/partici%C3%B3n-4-subintervalos.pdf)
-:::
+![Partición del intervalo $[0,2]\times [0,2]$ en 4 subintervalos de igual tamaño.](img/integrales-funciones-varias-variables/partici%C3%B3n-4-subintervalos){width=250}
 
 Como se observa todos los subintervalos tienen area 1. Además, como $f$ es decreciente tanto en $x$ como en $y$ en el intervalo $I$, alcanzará el mínimo en el extremo superior derecho de cada uno de estos subintervalos, y el máximo en el extremo inferior izquierdo. Así pues, la suma inferior de Riemann de esta partición es
 
