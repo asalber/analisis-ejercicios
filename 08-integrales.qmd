@@ -1805,3 +1805,70 @@ Así pues, tenemos que calcular la velocidad media en el intervalo $[0, 2.2576]$
 \end{align*}
 :::
 
+:::{#exr-funcion-densidad}
+La función de densidad de probabilidad de una variable aleatoria $X$ es $f(x)=\frac{k}{(1+x)^4}$ para $x\geq 0$. 
+
+a.  ¿Cuándo debe valer $k$ para que se cumpla que $f$ es una función de densidad?
+
+a.  Calcular la probabilidad de que la variable aleatoria tome un valor en el intervalo $[0,1]$.
+
+a.  Calcular la mediana.
+
+a.  Calcular la media.
+
+a.  Calcular la varianza.
+
+:::
+
+:::{.callout-tip collapse="true"}
+## Solución
+
+a.  Para que $f$ sea una función de densidad, la integral de $f$ en todo su dominio debe ser igual a $1$. Por tanto, se tiene
+
+    $$
+    \int_0^{\infty} \frac{k}{(1+x)^4}\,dx = \lim_{t\to\infty} \int_0^{t} \frac{k}{(1+x)^4}\,dx = \lim_{t\to\infty}\left[-\frac{k}{3(1+x)^3}\right]_0^{t} = \frac{k}{3} = 1 \Rightarrow k = 3.
+    $$
+
+    Por tanto, la función de densidad de $X$ es $f(x) = \frac{3}{(1+x)^4}$.
+
+a.  La probabilidad de que la variable aleatoria tome un valor en el intervalo $[0,1]$ es
+
+    $$
+    P(0\leq X\leq 1) = \int_0^1 \frac{3}{(1+x)^4}\,dx = \left[-\frac{3}{3(1+x)^3}\right]_0^1 = 1 - \frac{1}{2^3} = \frac{7}{8}.
+    $$
+
+a.  La mediana es el valor $Me$ que deja acumulada la mitad de la probabilidad, es decir, 
+
+    \begin{align*}
+    \int_0^{Me} \frac{3}{(1+x)^4}\,dx = \frac{1}{2} 
+    &\Rightarrow \left[-\frac{3}{3(1+x)^3}\right]_0^{Me} = \frac{1}{2} 
+    \Rightarrow 1 - \frac{1}{(1+Me)^3} = \frac{1}{2}\\ 
+    &\Rightarrow \frac{1}{(1+Me)^3} = \frac{1}{2} \Rightarrow (1+Me)^3 = 2 \Rightarrow Me = \sqrt[3]{2} - 1.
+    \end{align*}
+
+a.  La media es
+
+    \begin{align*}
+    E(X) 
+    &= \int_0^{\infty} x\frac{3}{(1+x)^4}\,dx 
+    = 3\int_0^{\infty} \frac{1+x-1}{(1+x)^4}\,dx \\
+    &= 3\int_0^{\infty} \left(\frac{1}{(1+x)^3} - \frac{1}{(1+x)^4}\right)\,dx \\
+    &= 3\left[-\frac{1}{2(1+x)^2} + \frac{1}{3(1+x)^3}\right]_0^{\infty}
+    = 3\left(\frac{1}{2} - \frac{1}{3}\right)
+    = \frac{1}{2}.
+    \end{align*}
+
+a.  La varianza es
+
+    \begin{align*}
+    Var(X)
+    &= E(X^2) - E(X)^2
+    = \int_0^{\infty} x^2\frac{3}{(1+x)^4}\,dx - \left(\frac{1}{2}\right)^2 \\
+    &= 3\int_0^{\infty} \frac{x^2}{(1+x)^4}\,dx - \frac{1}{4}
+    = 3\int_0^{\infty} \frac{x^2+2x+1-2x-1}{(1+x)^4}\,dx - \frac{1}{4} \\
+    &= 3\int_0^{\infty} \left(\frac{1}{(1+x)^2} - \frac{2}{(1+x)^3} + \frac{1}{(1+x)^4}\right)\,dx - \frac{1}{4} \\
+    &= 3\left[-\frac{1}{1+x} + \frac{1}{(1+x)^2} - \frac{1}{3(1+x)^3}\right]_0^{\infty} - \frac{1}{4} \\
+    &= 3\left(1 - 1 + \frac{1}{3}\right) - \frac{1}{4}
+    = \frac{3}{4}.
+    \end{align*}
+:::
