@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.450">
+<meta name="generator" content="quarto-1.4.553">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -50,7 +50,13 @@ ul.task-list li input[type="checkbox"] {
   "collapse-after": 3,
   "panel-placement": "start",
   "type": "textbox",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "Sin resultados",
     "search-matching-documents-text": "documentos encontrados",
@@ -59,6 +65,7 @@ ul.task-list li input[type="checkbox"] {
     "search-more-match-text": "resultado adicional en este documento",
     "search-more-matches-text": "resultados adicionales en este documento",
     "search-clear-button-title": "Borrar",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancelar",
     "search-submit-button-title": "Enviar",
     "search-label": "Buscar"
@@ -68,11 +75,38 @@ ul.task-list li input[type="checkbox"] {
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
 <meta property="og:title" content="Problemas de Análisis Matemático - 7&nbsp; Integrales de funciones">
-<meta property="og:image" content="img/integrales/integral-cuadrado.svg">
-<meta property="og:site-name" content="Problemas de Análisis Matemático">
+<meta property="og:image" content="img/logos/sticker.png">
+<meta property="og:site_name" content="Problemas de Análisis Matemático">
 <meta name="twitter:title" content="Problemas de Análisis Matemático - 7&nbsp; Integrales de funciones">
-<meta name="twitter:image" content="img/integrales/integral-cuadrado.svg">
+<meta name="twitter:image" content="img/logos/sticker.png">
 <meta name="twitter:site" content="@aprendeconalf">
 <meta name="twitter:card" content="summary_large_image">
 </head>
@@ -83,12 +117,12 @@ ul.task-list li input[type="checkbox"] {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./08-integrales.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Integrales de funciones</span></a></li></ol></nav>
-      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-      </a>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./08-integrales.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Integrales de funciones</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
@@ -98,7 +132,7 @@ ul.task-list li input[type="checkbox"] {
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
       <a href="./index.html" class="sidebar-logo-link">
       <img src="./img/logos/aprendeconalf.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
@@ -106,7 +140,7 @@ ul.task-list li input[type="checkbox"] {
     <div class="sidebar-title mb-0 py-0">
       <a href="./">Problemas de Análisis Matemático</a> 
         <div class="sidebar-tools-main tools-wide">
-    <a href="https://aprendeconalf.es" rel="" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-house-fill"></i></a>
+    <a href="https://aprendeconalf.es" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-house-fill"></i></a>
     <div class="dropdown">
       <a href="" title="Download" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download"><i class="bi bi-download"></i></a>
       <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-0">
@@ -227,7 +261,7 @@ ul.task-list li input[type="checkbox"] {
     </ul>
     </div>
 </nav>
-<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         
@@ -250,10 +284,12 @@ ul.task-list li input[type="checkbox"] {
   </div>
   
 
+
 </header>
 
+
 <div id="exr-sumas-inferiores-superiores-riemann" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 7.1 </strong></span>Calcular las sumas inferior y superior de Riemann de las siguientes funciones en el intervalo <span class="math inline">\([0,1]\)</span>, tomando particiones de igual tamaño con <span class="math inline">\(n\)</span> puntos, desde <span class="math inline">\(n=2\)</span> hasta <span class="math inline">\(n=5\)</span>.</p>
+<p><span class="theorem-title"><strong>Ejercicio 7.1</strong></span> Calcular las sumas inferior y superior de Riemann de las siguientes funciones en el intervalo <span class="math inline">\([0,1]\)</span>, tomando particiones de igual tamaño con <span class="math inline">\(n\)</span> puntos, desde <span class="math inline">\(n=2\)</span> hasta <span class="math inline">\(n=5\)</span>.</p>
 <ol type="a">
 <li><p><span class="math inline">\(f(x) = 1-x\)</span></p></li>
 <li><p><span class="math inline">\(g(x) = x^2\)</span></p></li>
@@ -372,7 +408,7 @@ Solución
 </div>
 </div>
 <div id="exr-sumas-inferiores-superiores-seno-coseno" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 7.2 </strong></span>Usar las sumas inferiores y superiores de Riemann para dar una aproximación del área contenida entre la gráfica de la función <span class="math inline">\(\operatorname{sen}(x)\)</span> y el eje <span class="math inline">\(x\)</span> en el intervalo <span class="math inline">\([0,\pi/2]\)</span>, usando 4 rectángulos de igual base.</p>
+<p><span class="theorem-title"><strong>Ejercicio 7.2</strong></span> Usar las sumas inferiores y superiores de Riemann para dar una aproximación del área contenida entre la gráfica de la función <span class="math inline">\(\operatorname{sen}(x)\)</span> y el eje <span class="math inline">\(x\)</span> en el intervalo <span class="math inline">\([0,\pi/2]\)</span>, usando 4 rectángulos de igual base.</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
@@ -395,7 +431,7 @@ S(f,P) &amp;= \operatorname{sen}\left(\frac{\pi}{8}\right) \frac{\pi}{8} + \oper
 </div>
 </div>
 <div id="exr-integral-riemann-cuadrado" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 7.3 </strong></span>Calcular la integral inferior y superior de Riemann de la función <span class="math inline">\(f(x)=x^2\)</span> en el intervalo <span class="math inline">\([0,1]\)</span>. ¿Es una función integrable Riemann?</p>
+<p><span class="theorem-title"><strong>Ejercicio 7.3</strong></span> Calcular la integral inferior y superior de Riemann de la función <span class="math inline">\(f(x)=x^2\)</span> en el intervalo <span class="math inline">\([0,1]\)</span>. ¿Es una función integrable Riemann?</p>
 </div>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
@@ -447,14 +483,14 @@ S(f,P_n)
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="img/integrales/integral-cuadrado.svg" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Integral de Riemann de <span class="math inline">\(f(x)=x^2\)</span> en <span class="math inline">\([0,1]\)</span>.</figcaption>
+<figcaption>Integral de Riemann de <span class="math inline">\(f(x)=x^2\)</span> en <span class="math inline">\([0,1]\)</span>.</figcaption>
 </figure>
 </div>
 </div>
 </div>
 </div>
 <div id="exr-integral-riemann-2" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 7.4 </strong></span>Calcular la integral de Riemann de la función <span class="math inline">\(f(x)=x^3-2x^2\)</span> en el intervalo <span class="math inline">\([0,1]\)</span>.</p>
+<p><span class="theorem-title"><strong>Ejercicio 7.4</strong></span> Calcular la integral de Riemann de la función <span class="math inline">\(f(x)=x^3-2x^2\)</span> en el intervalo <span class="math inline">\([0,1]\)</span>.</p>
 </div>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
@@ -519,14 +555,14 @@ S(f,P_n)
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="img/integrales/integral-2.svg" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Integral de Riemann de <span class="math inline">\(f(x)=x^3-2x^2\)</span> en <span class="math inline">\([0,1]\)</span>.</figcaption>
+<figcaption>Integral de Riemann de <span class="math inline">\(f(x)=x^3-2x^2\)</span> en <span class="math inline">\([0,1]\)</span>.</figcaption>
 </figure>
 </div>
 </div>
 </div>
 </div>
 <div id="exr-integral-inversa" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 7.5 </strong></span>Calcular la integral de Riemann de la función <span class="math inline">\(f(x)=\frac{1}{x}\)</span> en el intervalo <span class="math inline">\([a,b]\)</span>.</p>
+<p><span class="theorem-title"><strong>Ejercicio 7.5</strong></span> Calcular la integral de Riemann de la función <span class="math inline">\(f(x)=\frac{1}{x}\)</span> en el intervalo <span class="math inline">\([a,b]\)</span>.</p>
 </div>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
@@ -581,7 +617,7 @@ S(f,P_n)
 </div>
 </div>
 <div id="exr-sumas-riemann-punto-intermedio" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 7.6 </strong></span>Demostrar que si <span class="math inline">\(f\)</span> es una función integrable Riemann en un intervalo <span class="math inline">\(I=[a,b]\)</span>, se puede calcular <span class="math inline">\(\int_a^b f(x)\,dx\)</span> mediante sumas de Riemann tomando como altura de los rectángulos el valor de la función en cualquier punto de los subintervalos de la partición.</p>
+<p><span class="theorem-title"><strong>Ejercicio 7.6</strong></span> Demostrar que si <span class="math inline">\(f\)</span> es una función integrable Riemann en un intervalo <span class="math inline">\(I=[a,b]\)</span>, se puede calcular <span class="math inline">\(\int_a^b f(x)\,dx\)</span> mediante sumas de Riemann tomando como altura de los rectángulos el valor de la función en cualquier punto de los subintervalos de la partición.</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
@@ -608,7 +644,7 @@ s(f,P_n) = \sum_{i=1}^n m_i (x_i-x_{i-1}) \leq \sum_{i=1}^n f(x_i^*) (x_i-x_{i-1
 </div>
 </div>
 <div id="exr-cota-integral" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 7.7 </strong></span>Demostrar que <span class="math inline">\(1\leq \displaystyle \int_{-1}^1 \frac{1}{1+x^2}\,dx \leq 2\)</span>.</p>
+<p><span class="theorem-title"><strong>Ejercicio 7.7</strong></span> Demostrar que <span class="math inline">\(1\leq \displaystyle \int_{-1}^1 \frac{1}{1+x^2}\,dx \leq 2\)</span>.</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="false" aria-label="Toggle callout">
@@ -635,10 +671,10 @@ m(b-a)\leq \int_a^b f(x)\,dx \leq M(b-a),
 </div>
 </div>
 <div id="exr-funcion-discontinua-integrable" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 7.8 </strong></span>Demostrar que si <span class="math inline">\(f\)</span> es una función acotada en el intervalo <span class="math inline">\([a,b]\)</span> que es continua en <span class="math inline">\([a,b]\setminus\{c\}\)</span>, con <span class="math inline">\(c\in[a,b]\)</span>, entonces <span class="math inline">\(f\)</span> es integrable Riemann en <span class="math inline">\([a,b]\)</span></p>
+<p><span class="theorem-title"><strong>Ejercicio 7.8</strong></span> Demostrar que si <span class="math inline">\(f\)</span> es una función acotada en el intervalo <span class="math inline">\([a,b]\)</span> que es continua en <span class="math inline">\([a,b]\setminus\{c\}\)</span>, con <span class="math inline">\(c\in[a,b]\)</span>, entonces <span class="math inline">\(f\)</span> es integrable Riemann en <span class="math inline">\([a,b]\)</span></p>
 </div>
 <div id="exr-integrales-definidas" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 7.9 </strong></span>Calcular las siguientes integrales definidas</p>
+<p><span class="theorem-title"><strong>Ejercicio 7.9</strong></span> Calcular las siguientes integrales definidas</p>
 <div class="columns">
 <div class="column">
 <ol type="a">
@@ -687,7 +723,7 @@ Solución
 </div>
 </div>
 <div id="exr-areas-1" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 7.10 </strong></span>Calcular el área encerrada entre la gráfica de las siguientes funciones y el eje <span class="math inline">\(x\)</span> en los intervalos dados.</p>
+<p><span class="theorem-title"><strong>Ejercicio 7.10</strong></span> Calcular el área encerrada entre la gráfica de las siguientes funciones y el eje <span class="math inline">\(x\)</span> en los intervalos dados.</p>
 <ol type="a">
 <li><p><span class="math inline">\(f(x) = \ln\left(\frac{x}{2}\right)\)</span> en <span class="math inline">\([1,2]\)</span>.</p></li>
 <li><p><span class="math inline">\(g(x) = \cos(x)\)</span> en <span class="math inline">\([0,2\pi]\)</span>.</p></li>
@@ -731,7 +767,7 @@ Solución
 </div>
 </div>
 <div id="exr-area-entre-funciones" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 7.11 </strong></span>Calcular el área comprendida entre las funciones <span class="math inline">\(f\)</span> y <span class="math inline">\(g\)</span> en los intervalos dados en los siguientes apartados:</p>
+<p><span class="theorem-title"><strong>Ejercicio 7.11</strong></span> Calcular el área comprendida entre las funciones <span class="math inline">\(f\)</span> y <span class="math inline">\(g\)</span> en los intervalos dados en los siguientes apartados:</p>
 <ol type="a">
 <li><p><span class="math inline">\(f(x)=\cos(x)\)</span> y <span class="math inline">\(g(x)=-\cos(x)\)</span> en <span class="math inline">\([0,2\pi]\)</span>.</p></li>
 <li><p><span class="math inline">\(f(x)=x^2\)</span> y <span class="math inline">\(g(x)=\sqrt{x}\)</span> en <span class="math inline">\([0,2]\)</span>.</p></li>
@@ -781,7 +817,7 @@ Solución
 </div>
 </div>
 <div id="exr-area-entre-funciones-2" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 7.12 </strong></span>Calcular el área encerrada entre la parábola <span class="math inline">\(y=2x-x^2\)</span> y la recta <span class="math inline">\(y=2x-1\)</span>.</p>
+<p><span class="theorem-title"><strong>Ejercicio 7.12</strong></span> Calcular el área encerrada entre la parábola <span class="math inline">\(y=2x-x^2\)</span> y la recta <span class="math inline">\(y=2x-1\)</span>.</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-14-contents" aria-controls="callout-14" aria-expanded="false" aria-label="Toggle callout">
@@ -809,7 +845,7 @@ Solución
 </div>
 </div>
 <div id="exr-curva-roc" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 7.13 </strong></span>Para evaluar un test diagnóstico se suele utilizar la curva ROC (Receiver Operating Characteristics) que resulta de representar la razón de verdaderos positivos (sensibilidad) frente a la razón de falsos positivos (1-especificidad) para los diferentes umbrales de positivo del test. Esta curva se representa en el cuadrante <span class="math inline">\([0,1]\times [0,1]\)</span> y está siempre por encima de la recta <span class="math inline">\(y=x\)</span> que representa un diagnóstico aleatorio. El área por debajo de la curva ROC se conoce como AUC (area under the curve), y cuanto mayor sea, mejor es el test diagnóstico.</p>
+<p><span class="theorem-title"><strong>Ejercicio 7.13</strong></span> Para evaluar un test diagnóstico se suele utilizar la curva ROC (Receiver Operating Characteristics) que resulta de representar la razón de verdaderos positivos (sensibilidad) frente a la razón de falsos positivos (1-especificidad) para los diferentes umbrales de positivo del test. Esta curva se representa en el cuadrante <span class="math inline">\([0,1]\times [0,1]\)</span> y está siempre por encima de la recta <span class="math inline">\(y=x\)</span> que representa un diagnóstico aleatorio. El área por debajo de la curva ROC se conoce como AUC (area under the curve), y cuanto mayor sea, mejor es el test diagnóstico.</p>
 <p>Se dispone de dos test diagnósticos para detectar el virus SARS-CoV, el primero con una curva ROC <span class="math inline">\(f(x)=\sqrt{x}\)</span> y el segundo con una curva <span class="math inline">\(g(x)=-x^2+2x\)</span>. ¿Qué test diagnóstico es mejor?</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
@@ -837,7 +873,7 @@ Solución
 </div>
 </div>
 <div id="exr-gini" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 7.14 </strong></span>La <a href="https://es.wikipedia.org/wiki/Curva_de_Lorenz">curva de Lorenz</a> se utiliza en Economía para representar la distribución relativa de los ingresos o la riqueza de una población. Esta curva se representa siempre en el cuadrante <span class="math inline">\([0,1]\times [0,1]\)</span> del plano y cada punto <span class="math inline">\((x,y)\)</span> de la curva representa qué proporción de la riqueza total <span class="math inline">\(y\)</span> acumula la proporción de la población <span class="math inline">\(x\)</span>. De este modo, la bisectriz del (recta <span class="math inline">\(y=x\)</span>) representa una distribución equitativa de la riqueza, y cuanto más se desvíe la curva de esta recta, mayor desigualdad habrá en el reparto de la riqueza.</p>
+<p><span class="theorem-title"><strong>Ejercicio 7.14</strong></span> La <a href="https://es.wikipedia.org/wiki/Curva_de_Lorenz">curva de Lorenz</a> se utiliza en Economía para representar la distribución relativa de los ingresos o la riqueza de una población. Esta curva se representa siempre en el cuadrante <span class="math inline">\([0,1]\times [0,1]\)</span> del plano y cada punto <span class="math inline">\((x,y)\)</span> de la curva representa qué proporción de la riqueza total <span class="math inline">\(y\)</span> acumula la proporción de la población <span class="math inline">\(x\)</span>. De este modo, la bisectriz del (recta <span class="math inline">\(y=x\)</span>) representa una distribución equitativa de la riqueza, y cuanto más se desvíe la curva de esta recta, mayor desigualdad habrá en el reparto de la riqueza.</p>
 <p>Para medir la desigualdad en el reparto de la riqueza se suele utilizar el <a href="https://es.wikipedia.org/wiki/Coeficiente_de_Gini">coeficiente Gini</a>, que se define como el doble del área encerrada entre la recta <span class="math inline">\(y=x\)</span> y la curva de Lorenz. En una población con una distribución equitativa de la riqueza, el coeficiente de Gini vale 0, mientras que en una población con la mayor desigualdad posible en el reparto de la riqueza, este coeficiente vale 1.</p>
 <p>Si las curvas de Lorenz de dos poblaciones vienen dadas por las funciones <span class="math inline">\(f(x)=x^2\)</span> y <span class="math inline">\(g(x)=1-\cos\left(x\frac{\pi}{2}\right)\)</span>, ¿qué población es más desigual?</p>
 </div>
@@ -868,7 +904,7 @@ Solución
 </div>
 </div>
 <div id="exr-área-2" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 7.15 </strong></span>Encontrar el valor <span class="math inline">\(c\)</span> tal que la recta <span class="math inline">\(y=c\)</span> divide la región limitada por la parábola <span class="math inline">\(y=x^2\)</span> y la recta <span class="math inline">\(y=4\)</span> en dos regiones con la misma área.</p>
+<p><span class="theorem-title"><strong>Ejercicio 7.15</strong></span> Encontrar el valor <span class="math inline">\(c\)</span> tal que la recta <span class="math inline">\(y=c\)</span> divide la región limitada por la parábola <span class="math inline">\(y=x^2\)</span> y la recta <span class="math inline">\(y=4\)</span> en dos regiones con la misma área.</p>
 </div>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-17-contents" aria-controls="callout-17" aria-expanded="false" aria-label="Toggle callout">
@@ -917,7 +953,7 @@ Solución
 </div>
 </div>
 <div id="exr-tschirnhausen" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 7.16 </strong></span>En geometría, la ecuación <span class="math inline">\(y^2=x^2(x+3)\)</span> define una curva implícita conocida como la <a href="https://es.wikipedia.org/wiki/C%C3%BAbica_de_Tschirnhausen">cúbica de Tschirnhausen</a>. Calcular el área encerrada por esta curva.</p>
+<p><span class="theorem-title"><strong>Ejercicio 7.16</strong></span> En geometría, la ecuación <span class="math inline">\(y^2=x^2(x+3)\)</span> define una curva implícita conocida como la <a href="https://es.wikipedia.org/wiki/C%C3%BAbica_de_Tschirnhausen">cúbica de Tschirnhausen</a>. Calcular el área encerrada por esta curva.</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-19-contents" aria-controls="callout-19" aria-expanded="false" aria-label="Toggle callout">
@@ -947,7 +983,7 @@ Solución
 </div>
 </div>
 <div id="exr-crecimiento-población" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 7.17 </strong></span>La tasa de nacimientos de una población viene dada por la función <span class="math inline">\(n(t)=5000e^{0.03t}\)</span> personas por año, mientras que la tasa de defunciones viene dada por la función <span class="math inline">\(m(t)=3500 e^{0.02t}\)</span> personas por año. Calcular el área comprendida entre <span class="math inline">\(n\)</span> y <span class="math inline">\(m\)</span> entre <span class="math inline">\(0\)</span> y <span class="math inline">\(5\)</span> años. ¿Qué representa esta área?</p>
+<p><span class="theorem-title"><strong>Ejercicio 7.17</strong></span> La tasa de nacimientos de una población viene dada por la función <span class="math inline">\(n(t)=5000e^{0.03t}\)</span> personas por año, mientras que la tasa de defunciones viene dada por la función <span class="math inline">\(m(t)=3500 e^{0.02t}\)</span> personas por año. Calcular el área comprendida entre <span class="math inline">\(n\)</span> y <span class="math inline">\(m\)</span> entre <span class="math inline">\(0\)</span> y <span class="math inline">\(5\)</span> años. ¿Qué representa esta área?</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-20-contents" aria-controls="callout-20" aria-expanded="false" aria-label="Toggle callout">
@@ -975,7 +1011,7 @@ Solución
 </div>
 </div>
 <div id="exr-area-circulo-polares" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 7.18 </strong></span>Calcular el área de un círculo de radio <span class="math inline">\(r\)</span> en coordenadas polares.</p>
+<p><span class="theorem-title"><strong>Ejercicio 7.18</strong></span> Calcular el área de un círculo de radio <span class="math inline">\(r\)</span> en coordenadas polares.</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-21-contents" aria-controls="callout-21" aria-expanded="false" aria-label="Toggle callout">
@@ -997,7 +1033,7 @@ Solución
 </div>
 </div>
 <div id="exr-area-polar" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 7.19 </strong></span>Calcular el área encerrada por la curva polar <span class="math inline">\(r=\cos(2\theta)\)</span>.</p>
+<p><span class="theorem-title"><strong>Ejercicio 7.19</strong></span> Calcular el área encerrada por la curva polar <span class="math inline">\(r=\cos(2\theta)\)</span>.</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-22-contents" aria-controls="callout-22" aria-expanded="false" aria-label="Toggle callout">
@@ -1023,7 +1059,7 @@ Solución
 </div>
 </div>
 <div id="exr-area-polares" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 7.20 </strong></span>Calcular el área encerrada por las siguientes curvas polares <span class="math inline">\(r=f(\theta)\)</span> en los intervalo dados.</p>
+<p><span class="theorem-title"><strong>Ejercicio 7.20</strong></span> Calcular el área encerrada por las siguientes curvas polares <span class="math inline">\(r=f(\theta)\)</span> en los intervalo dados.</p>
 <ol type="a">
 <li><p><span class="math inline">\(f(\theta) = \theta^2\)</span> para <span class="math inline">\(\theta\in[-\pi,\pi]\)</span>.</p></li>
 <li><p><span class="math inline">\(f(\theta) = e^{\theta/2}\)</span> para <span class="math inline">\(\theta\in[0,2\pi]\)</span>.</p></li>
@@ -1068,11 +1104,11 @@ Solución
 </div>
 </div>
 <div id="exr-area-entre-polares" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 7.21 </strong></span>Calcular el área sombreada entre las curvas polares <span class="math inline">\(r=3\operatorname{sen}(\theta)\)</span> y <span class="math inline">\(r=1+\operatorname{sen}(\theta)\)</span>.</p>
+<p><span class="theorem-title"><strong>Ejercicio 7.21</strong></span> Calcular el área sombreada entre las curvas polares <span class="math inline">\(r=3\operatorname{sen}(\theta)\)</span> y <span class="math inline">\(r=1+\operatorname{sen}(\theta)\)</span>.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="img/integrales/area-entre-curvas-polares.svg" class="img-fluid figure-img" width="500"></p>
-<figcaption class="figure-caption">Área entre curvas polares</figcaption>
+<figcaption>Área entre curvas polares</figcaption>
 </figure>
 </div>
 </div>
@@ -1110,7 +1146,7 @@ f(\theta) = g(\theta) \Leftrightarrow 3\operatorname{sen}(\theta) = 1+\operatorn
 </div>
 </div>
 <div id="exr-integrales-impropias" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 7.22 </strong></span>Calcular el área encerrada entre las siguientes curvas y el eje <span class="math inline">\(x\)</span> en los intervalos dados.</p>
+<p><span class="theorem-title"><strong>Ejercicio 7.22</strong></span> Calcular el área encerrada entre las siguientes curvas y el eje <span class="math inline">\(x\)</span> en los intervalos dados.</p>
 <ol type="a">
 <li><p><span class="math inline">\(y=\frac{1}{1+x^2}\)</span> en <span class="math inline">\((-\infty,\infty)\)</span>.</p></li>
 <li><p><span class="math inline">\(y = \frac{\ln(x)}{x^2}\)</span> en <span class="math inline">\([1,\infty)\)</span>.</p></li>
@@ -1151,7 +1187,7 @@ Solución
 </div>
 </div>
 <div id="exr-criterio-integral-convergencia-series" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 7.23 </strong></span>Un criterio para estudiar la convergencia de una serie <span class="math inline">\(\sum a_n\)</span> es estudiar la integral impropia <span class="math inline">\(\int_1^\infty a_n\,dn\)</span>. La serie converge si y solo si la integral es finita.</p>
+<p><span class="theorem-title"><strong>Ejercicio 7.23</strong></span> Un criterio para estudiar la convergencia de una serie <span class="math inline">\(\sum a_n\)</span> es estudiar la integral impropia <span class="math inline">\(\int_1^\infty a_n\,dn\)</span>. La serie converge si y solo si la integral es finita.</p>
 <p>Usar este criterio para demostrar que la serie armónica <span class="math inline">\(\sum \frac{1}{n}\)</span> diverge y que las serie <span class="math inline">\(\sum \frac{1}{n^2}\)</span> converge.</p>
 <p>¿Para qué valores de <span class="math inline">\(p\)</span> la integral <span class="math inline">\(\int_1^\infty \frac{1}{n^p}\,dn\)</span> converge?</p>
 </div>
@@ -1190,7 +1226,7 @@ Solución
 </div>
 </div>
 <div id="exr-distribucion-exponencial" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 7.24 </strong></span>En Estadística, la <a href="https://es.wikipedia.org/wiki/Distribuci%C3%B3n_exponencial">distribución exponencial</a> se utiliza para modelar el tiempo que tarda en ocurrir un evento en un proceso de Poisson, es decir, un proceso en el que ocurren fenómenos puntuales de marea continua e independiente a un ritmo constante <span class="math inline">\(\lambda\)</span>. La función de densidad de probabilidad la distribución exponencial de parámetro <span class="math inline">\(\lambda\)</span> es</p>
+<p><span class="theorem-title"><strong>Ejercicio 7.24</strong></span> En Estadística, la <a href="https://es.wikipedia.org/wiki/Distribuci%C3%B3n_exponencial">distribución exponencial</a> se utiliza para modelar el tiempo que tarda en ocurrir un evento en un proceso de Poisson, es decir, un proceso en el que ocurren fenómenos puntuales de marea continua e independiente a un ritmo constante <span class="math inline">\(\lambda\)</span>. La función de densidad de probabilidad la distribución exponencial de parámetro <span class="math inline">\(\lambda\)</span> es</p>
 <p><span class="math display">\[
 f(x) =
 \begin{cases}
@@ -1262,7 +1298,7 @@ Solución
 </div>
 </div>
 <div id="exr-tomografía" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 7.25 </strong></span>Una tomografía ofrece secciones transversales del cerebro de un paciente cada 1.5 cm. Las areas de cada una de las secciones transversales tomadas fueron</p>
+<p><span class="theorem-title"><strong>Ejercicio 7.25</strong></span> Una tomografía ofrece secciones transversales del cerebro de un paciente cada 1.5 cm. Las areas de cada una de las secciones transversales tomadas fueron</p>
 <p>0, 32, 65, 115, 132, 147, 155, 141, 123, 93, 58, 0</p>
 <p>Calcular de forma aproximada el volumen del cerebro.</p>
 </div>
@@ -1286,7 +1322,7 @@ Solución
 </div>
 </div>
 <div id="exr-volumen-piramide" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 7.26 </strong></span>Calcular el volumen de la esta <a href="https://www.geogebra.org/m/g2wu3tqw">pirámide</a> con base cuadrada de lado 2 y altura 2. Calcular a continuación el volumen de una pirámide de base cuadrada de lado <span class="math inline">\(l\)</span> y altura <span class="math inline">\(h\)</span>.</p>
+<p><span class="theorem-title"><strong>Ejercicio 7.26</strong></span> Calcular el volumen de la esta <a href="https://www.geogebra.org/m/g2wu3tqw">pirámide</a> con base cuadrada de lado 2 y altura 2. Calcular a continuación el volumen de una pirámide de base cuadrada de lado <span class="math inline">\(l\)</span> y altura <span class="math inline">\(h\)</span>.</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-30-contents" aria-controls="callout-30" aria-expanded="false" aria-label="Toggle callout">
@@ -1328,7 +1364,7 @@ f(x)=\left(2\left(-\frac{lx}{2h}+\frac{l}{2}\right)\right)^2
 </div>
 </div>
 <div id="exr-volumen-revolucion" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 7.27 </strong></span>Calcular el volumen del sólido de revolución generado por la rotación al rededor del eje <span class="math inline">\(y\)</span> del area comprendida entre las gráficas de las funciones <span class="math inline">\(f(x)=x\)</span> y <span class="math inline">\(g(x)=x^2\)</span>. Calcular también el volumen del sólido de revolución generado al rotar esa misma área alrededor de la recta <span class="math inline">\(x=1\)</span>.</p>
+<p><span class="theorem-title"><strong>Ejercicio 7.27</strong></span> Calcular el volumen del sólido de revolución generado por la rotación al rededor del eje <span class="math inline">\(y\)</span> del area comprendida entre las gráficas de las funciones <span class="math inline">\(f(x)=x\)</span> y <span class="math inline">\(g(x)=x^2\)</span>. Calcular también el volumen del sólido de revolución generado al rotar esa misma área alrededor de la recta <span class="math inline">\(x=1\)</span>.</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-31-contents" aria-controls="callout-31" aria-expanded="false" aria-label="Toggle callout">
@@ -1369,10 +1405,10 @@ x = x^2 \Leftrightarrow x^2-x = 0 \Leftrightarrow x(x-1)= 0 \Leftrightarrow x=0 
 </div>
 </div>
 <div id="exr-volumen-toro" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 7.28 </strong></span>Calcular el volumen de este <a href="https://www.geogebra.org/m/wy2uquqc">toro</a> obtenido al rotar la circunferencia de ecuación <span class="math inline">\((x-2)^2+y^2=1\)</span> alrededor del eje <span class="math inline">\(y\)</span>. Calcular a continuación el volumen de un toro de radio mayor <span class="math inline">\(R\)</span> y radio menor <span class="math inline">\(r\)</span>.</p>
+<p><span class="theorem-title"><strong>Ejercicio 7.28</strong></span> Calcular el volumen de este <a href="https://www.geogebra.org/m/wy2uquqc">toro</a> obtenido al rotar la circunferencia de ecuación <span class="math inline">\((x-2)^2+y^2=1\)</span> alrededor del eje <span class="math inline">\(y\)</span>. Calcular a continuación el volumen de un toro de radio mayor <span class="math inline">\(R\)</span> y radio menor <span class="math inline">\(r\)</span>.</p>
 </div>
 <div id="exr-volumen-revolucion-2" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 7.29 </strong></span>Calcular el volumen del sólido de revolución generado por la rotación al rededor del eje <span class="math inline">\(y\)</span> del area comprendida entre las funciones <span class="math inline">\(f(x)=x+1\)</span> y <span class="math inline">\(g(x)=(x-1)^2\)</span>.</p>
+<p><span class="theorem-title"><strong>Ejercicio 7.29</strong></span> Calcular el volumen del sólido de revolución generado por la rotación al rededor del eje <span class="math inline">\(y\)</span> del area comprendida entre las funciones <span class="math inline">\(f(x)=x+1\)</span> y <span class="math inline">\(g(x)=(x-1)^2\)</span>.</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-32-contents" aria-controls="callout-32" aria-expanded="false" aria-label="Toggle callout">
@@ -1403,7 +1439,7 @@ x+1 = (x-1)^2 \Leftrightarrow x+1 = x^2-2x+1 \Leftrightarrow x^2-3x= 0 \Leftrigh
 </div>
 </div>
 <div id="exr-volumen-revolucion-3" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 7.30 </strong></span>Calcular el volumen del sólido de revolución generado por la rotación al rededor del eje <span class="math inline">\(x\)</span> de la región comprendida entre las funciones <span class="math inline">\(f(x)=\cos(x)\)</span> y <span class="math inline">\(g(x)=\operatorname{sen}(x)\)</span> en el intervalo <span class="math inline">\([0,\pi/2]\)</span>. Calcular también el volumen del sólido de revolución generado al rotar la mima área alrededor del eje <span class="math inline">\(y\)</span>.</p>
+<p><span class="theorem-title"><strong>Ejercicio 7.30</strong></span> Calcular el volumen del sólido de revolución generado por la rotación al rededor del eje <span class="math inline">\(x\)</span> de la región comprendida entre las funciones <span class="math inline">\(f(x)=\cos(x)\)</span> y <span class="math inline">\(g(x)=\operatorname{sen}(x)\)</span> en el intervalo <span class="math inline">\([0,\pi/2]\)</span>. Calcular también el volumen del sólido de revolución generado al rotar la mima área alrededor del eje <span class="math inline">\(y\)</span>.</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-33-contents" aria-controls="callout-33" aria-expanded="false" aria-label="Toggle callout">
@@ -1450,11 +1486,11 @@ Solución
 </div>
 </div>
 <div id="exr-volumen-tienda-campaña" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 7.31 </strong></span>Una tienda de campaña de base cuadrada como la de la figura tiene sección vertical parabólica dada por la función <span class="math inline">\(y=1-x^2\)</span> (en m). ¿Cuál es su volumen?</p>
+<p><span class="theorem-title"><strong>Ejercicio 7.31</strong></span> Una tienda de campaña de base cuadrada como la de la figura tiene sección vertical parabólica dada por la función <span class="math inline">\(y=1-x^2\)</span> (en m). ¿Cuál es su volumen?</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="img/integrales/tienda-iglu.svg" class="img-fluid figure-img" width="300"></p>
-<figcaption class="figure-caption">Tienda de campaña tipo iglú.</figcaption>
+<figcaption>Tienda de campaña tipo iglú.</figcaption>
 </figure>
 </div>
 </div>
@@ -1489,7 +1525,7 @@ f(y) = (2\sqrt{1-y})^2 = 4(1-y)=4-4y.
 </div>
 </div>
 <div id="exr-pluviometro" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 7.32 </strong></span>Un pluviómetro tiene la forma de un sólido de revolución obtenido al rotar la gráfica de la función <span class="math inline">\(f(x)=x^3\)</span> <span class="math inline">\((x\geq 0)\)</span> alrededor del eje <span class="math inline">\(y\)</span>. ¿Cuál debe ser su altura para que sea capaz de almacenar 1 litro de agua?</p>
+<p><span class="theorem-title"><strong>Ejercicio 7.32</strong></span> Un pluviómetro tiene la forma de un sólido de revolución obtenido al rotar la gráfica de la función <span class="math inline">\(f(x)=x^3\)</span> <span class="math inline">\((x\geq 0)\)</span> alrededor del eje <span class="math inline">\(y\)</span>. ¿Cuál debe ser su altura para que sea capaz de almacenar 1 litro de agua?</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-35-contents" aria-controls="callout-35" aria-expanded="false" aria-label="Toggle callout">
@@ -1520,7 +1556,7 @@ Solución
 </div>
 </div>
 <div id="exr-longitud-circunferencia" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 7.33 </strong></span>Calcular la longitud de una circunferencia de radio <span class="math inline">\(r\)</span> centrada en el origen.</p>
+<p><span class="theorem-title"><strong>Ejercicio 7.33</strong></span> Calcular la longitud de una circunferencia de radio <span class="math inline">\(r\)</span> centrada en el origen.</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-36-contents" aria-controls="callout-36" aria-expanded="false" aria-label="Toggle callout">
@@ -1553,7 +1589,7 @@ Solución
 </div>
 </div>
 <div id="exr-longitud-curvas" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 7.34 </strong></span>Calcular la longitud de las siguientes curvas en los intervalos dados</p>
+<p><span class="theorem-title"><strong>Ejercicio 7.34</strong></span> Calcular la longitud de las siguientes curvas en los intervalos dados</p>
 <ol type="a">
 <li><p><span class="math inline">\(y=x^2\)</span> en <span class="math inline">\([0,1]\)</span>.</p></li>
 <li><p><span class="math inline">\(y^2=4x^3\)</span> en <span class="math inline">\([0,2]\)</span>.</p></li>
@@ -1620,7 +1656,7 @@ Solución
 </div>
 </div>
 <div id="exr-longitud-montaña-rusa" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 7.35 </strong></span>Un tramo de una montaña rusa tiene la forma de la curva <span class="math inline">\(y=\frac{1}{3}(x-3)\sqrt{x}\)</span>, donde <span class="math inline">\(x\)</span> viene dado en decámetros. ¿Qué longitud tiene el rail del tramo desde el origen hasta el punto que alcanza la misma altura?</p>
+<p><span class="theorem-title"><strong>Ejercicio 7.35</strong></span> Un tramo de una montaña rusa tiene la forma de la curva <span class="math inline">\(y=\frac{1}{3}(x-3)\sqrt{x}\)</span>, donde <span class="math inline">\(x\)</span> viene dado en decámetros. ¿Qué longitud tiene el rail del tramo desde el origen hasta el punto que alcanza la misma altura?</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-38-contents" aria-controls="callout-38" aria-expanded="false" aria-label="Toggle callout">
@@ -1653,7 +1689,7 @@ Solución
 </div>
 </div>
 <div id="exr-longitud-catenaria" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 7.36 </strong></span>Calcular la longitud de un cable eléctrico con forma de catenaria que cuelga entre dos postes separados 10 metros de distancia con una altura mínima sobre el suelo de 5 metros.</p>
+<p><span class="theorem-title"><strong>Ejercicio 7.36</strong></span> Calcular la longitud de un cable eléctrico con forma de catenaria que cuelga entre dos postes separados 10 metros de distancia con una altura mínima sobre el suelo de 5 metros.</p>
 <p>Nota: La ecuación que define una curva con forma de catenaria centrada en el eje <span class="math inline">\(y\)</span> es <span class="math inline">\(y=a\cosh\left(\frac{x}{a}\right)\)</span>, donde <span class="math inline">\(a\)</span> es la altura mínima de la catenaria.</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
@@ -1683,7 +1719,7 @@ Solución
 </div>
 </div>
 <div id="exr-superficie-solido-revolucion" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 7.37 </strong></span>Calcular la superficie de los sólidos de revolución obtenidos al girar las siguientes funciones alrededor del eje <span class="math inline">\(x\)</span> en los intervalos dados.</p>
+<p><span class="theorem-title"><strong>Ejercicio 7.37</strong></span> Calcular la superficie de los sólidos de revolución obtenidos al girar las siguientes funciones alrededor del eje <span class="math inline">\(x\)</span> en los intervalos dados.</p>
 <ol type="a">
 <li><span class="math inline">\(f(x)=2\sqrt{1-x}\)</span> en <span class="math inline">\([-1,1]\)</span>.</li>
 </ol>
@@ -1736,7 +1772,7 @@ Solución
 </div>
 </div>
 <div id="exr-superficie-deposito" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 7.38 </strong></span>Un depósito metálico tiene la forma del elipsoide que se obtiene al rotar la elipse <span class="math inline">\(\frac{x^2}{4}+y^2=1\)</span> alrededor del eje <span class="math inline">\(x\)</span>, con <span class="math inline">\(x\)</span> en metros. Calcular la cantidad de chapa metálica necesaria para construir el depósito. ¿Y si el depósito se construye rotando la elipse alrededor del eje <span class="math inline">\(y\)</span>?</p>
+<p><span class="theorem-title"><strong>Ejercicio 7.38</strong></span> Un depósito metálico tiene la forma del elipsoide que se obtiene al rotar la elipse <span class="math inline">\(\frac{x^2}{4}+y^2=1\)</span> alrededor del eje <span class="math inline">\(x\)</span>, con <span class="math inline">\(x\)</span> en metros. Calcular la cantidad de chapa metálica necesaria para construir el depósito. ¿Y si el depósito se construye rotando la elipse alrededor del eje <span class="math inline">\(y\)</span>?</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-41-contents" aria-controls="callout-41" aria-expanded="false" aria-label="Toggle callout">
@@ -1792,7 +1828,7 @@ f'(x) = \frac{-x}{4\sqrt{1-\frac{x^2}{4}}},
 </div>
 </div>
 <div id="exr-superficie-toro" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 7.39 </strong></span>Calcular el área de la superficie de este <a href="https://www.geogebra.org/m/wy2uquqc">toro</a> obtenido al rotar la circunferencia de ecuación <span class="math inline">\((x-2)^2+y^2=1\)</span> alrededor del eje <span class="math inline">\(y\)</span>. Calcular a continuación la superficie de un toro de radio mayor <span class="math inline">\(R\)</span> y radio menor <span class="math inline">\(r\)</span>.</p>
+<p><span class="theorem-title"><strong>Ejercicio 7.39</strong></span> Calcular el área de la superficie de este <a href="https://www.geogebra.org/m/wy2uquqc">toro</a> obtenido al rotar la circunferencia de ecuación <span class="math inline">\((x-2)^2+y^2=1\)</span> alrededor del eje <span class="math inline">\(y\)</span>. Calcular a continuación la superficie de un toro de radio mayor <span class="math inline">\(R\)</span> y radio menor <span class="math inline">\(r\)</span>.</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-42-contents" aria-controls="callout-42" aria-expanded="false" aria-label="Toggle callout">
@@ -1844,7 +1880,7 @@ f'(x) = \frac{R-x}{\sqrt{r^2-(x-R)^2}} = \frac{R-x}{f(x)}
 </div>
 </div>
 <div id="exr-cinematica-1" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 7.40 </strong></span>Se lanza una pelota verticalmente desde la ventana de un edificio situada a 20 m sobre el suelo con una velocidad inicial de 10 m/s. ¿A qué distancia del suelo estará la pelota transcurridos 3 segundos? ¿Qué distancia habrá recorrido hasta ese instante?</p>
+<p><span class="theorem-title"><strong>Ejercicio 7.40</strong></span> Se lanza una pelota verticalmente desde la ventana de un edificio situada a 20 m sobre el suelo con una velocidad inicial de 10 m/s. ¿A qué distancia del suelo estará la pelota transcurridos 3 segundos? ¿Qué distancia habrá recorrido hasta ese instante?</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-43-contents" aria-controls="callout-43" aria-expanded="false" aria-label="Toggle callout">
@@ -1890,7 +1926,7 @@ v(t) = v(0) + gt = 10 - 9.81 t = 0 \Leftrightarrow t = \frac{10}{9.81} = 1.0194 
 </div>
 </div>
 <div id="exr-cinematica-2" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 7.41 </strong></span>Un vehículo se mueve con una aceleración dada por la función <span class="math inline">\(a(t)=10\cos(2t)\)</span>. Suponiendo que el vehículo parte de un estado de reposo en la posición <span class="math inline">\(0\)</span>, ¿cuál será la distancia neta recorrida por el vehículo en el intervalo de <span class="math inline">\([0,\pi]\)</span>? ¿Y la distancia total?</p>
+<p><span class="theorem-title"><strong>Ejercicio 7.41</strong></span> Un vehículo se mueve con una aceleración dada por la función <span class="math inline">\(a(t)=10\cos(2t)\)</span>. Suponiendo que el vehículo parte de un estado de reposo en la posición <span class="math inline">\(0\)</span>, ¿cuál será la distancia neta recorrida por el vehículo en el intervalo de <span class="math inline">\([0,\pi]\)</span>? ¿Y la distancia total?</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-44-contents" aria-controls="callout-44" aria-expanded="false" aria-label="Toggle callout">
@@ -1940,7 +1976,7 @@ v(t) = 5\operatorname{sen}{2t} = 0 \Leftrightarrow t = \frac{\operatorname{arcse
 </div>
 </div>
 <div id="exr-trabajo-muelle" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 7.42 </strong></span>La <a href="https://es.wikipedia.org/wiki/Ley_de_elasticidad_de_Hooke">ley de Hooke</a> establece que la fuerza necesaria para estirar un muelle es proporcional a la distancia de estiramiento, es decir, cumple la ecuación</p>
+<p><span class="theorem-title"><strong>Ejercicio 7.42</strong></span> La <a href="https://es.wikipedia.org/wiki/Ley_de_elasticidad_de_Hooke">ley de Hooke</a> establece que la fuerza necesaria para estirar un muelle es proporcional a la distancia de estiramiento, es decir, cumple la ecuación</p>
 <p><span class="math display">\[
 F = kx
 \]</span></p>
@@ -1975,7 +2011,7 @@ Solución
 </div>
 </div>
 <div id="exr-trabajo-cohete" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 7.43 </strong></span>¿Qué trabajo se realiza al lanzar un cohete de 50 toneladas desde la superficie de la tierra a una órbita situada a 100 km sobre la superficie terrestre?<br>
+<p><span class="theorem-title"><strong>Ejercicio 7.43</strong></span> ¿Qué trabajo se realiza al lanzar un cohete de 50 toneladas desde la superficie de la tierra a una órbita situada a 100 km sobre la superficie terrestre?<br>
 Nota: Debe tenerse en cuenta que la aceleración de la gravedad disminuye con la altura según la fórmula</p>
 <p><span class="math display">\[
 g_h = g_0 \left(\frac{R}{R+h}\right)^2,
@@ -1998,7 +2034,7 @@ Solución
 </div>
 </div>
 <div id="exr-trabajo-deposito" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 7.44 </strong></span>Un depósito con forma de cono invertido de radio <span class="math inline">\(2\)</span> m y altura <span class="math inline">\(5\)</span> m está lleno de agua. ¿Qué trabajo se realiza al vaciar el tanque por arriba?<br>
+<p><span class="theorem-title"><strong>Ejercicio 7.44</strong></span> Un depósito con forma de cono invertido de radio <span class="math inline">\(2\)</span> m y altura <span class="math inline">\(5\)</span> m está lleno de agua. ¿Qué trabajo se realiza al vaciar el tanque por arriba?<br>
 Nota: La densidad del agua es de <span class="math inline">\(\delta = 1000\)</span> kg/m<span class="math inline">\(^3\)</span>.</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
@@ -2051,7 +2087,7 @@ W
 </div>
 </div>
 <div id="exr-trabajo-deposito-2" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 7.45 </strong></span>Un depósito con forma de sólido de revolución generado al rotar la gráfica de la función <span class="math inline">\(f(x)=\frac{x^2}{2}\)</span> alrededor del eje <span class="math inline">\(y\)</span> en el intervalo de <span class="math inline">\(0\)</span> a <span class="math inline">\(4\)</span> m, contiene <span class="math inline">\(100000\)</span> l de aceite con una densidad de <span class="math inline">\(\delta = 900\)</span> kg/m<span class="math inline">\(^3\)</span>. ¿Qué trabajo se realiza al vaciar el depósito por arriba?</p>
+<p><span class="theorem-title"><strong>Ejercicio 7.45</strong></span> Un depósito con forma de sólido de revolución generado al rotar la gráfica de la función <span class="math inline">\(f(x)=\frac{x^2}{2}\)</span> alrededor del eje <span class="math inline">\(y\)</span> en el intervalo de <span class="math inline">\(0\)</span> a <span class="math inline">\(4\)</span> m, contiene <span class="math inline">\(100000\)</span> l de aceite con una densidad de <span class="math inline">\(\delta = 900\)</span> kg/m<span class="math inline">\(^3\)</span>. ¿Qué trabajo se realiza al vaciar el depósito por arriba?</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-48-contents" aria-controls="callout-48" aria-expanded="false" aria-label="Toggle callout">
@@ -2088,7 +2124,7 @@ W
 </div>
 </div>
 <div id="exr-centro-masas-1" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 7.46 </strong></span>Una varilla varilla metálica de 20 m de longitud, tiene una densidad <span class="math inline">\(f(x)=\operatorname{sen}(\pi x)+1\)</span> a una distancia <span class="math inline">\(x\)</span> de su extremo izquierdo. Calcular su centro de masas.</p>
+<p><span class="theorem-title"><strong>Ejercicio 7.46</strong></span> Una varilla varilla metálica de 20 m de longitud, tiene una densidad <span class="math inline">\(f(x)=\operatorname{sen}(\pi x)+1\)</span> a una distancia <span class="math inline">\(x\)</span> de su extremo izquierdo. Calcular su centro de masas.</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-49-contents" aria-controls="callout-49" aria-expanded="false" aria-label="Toggle callout">
@@ -2134,7 +2170,7 @@ Solución
 </div>
 </div>
 <div id="exr-centro-masas-3" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 7.47 </strong></span>Calcular el centroide del sector circular definido por la ecuación <span class="math inline">\(x^2+y^2=1\)</span> en el primer cuadrante.</p>
+<p><span class="theorem-title"><strong>Ejercicio 7.47</strong></span> Calcular el centroide del sector circular definido por la ecuación <span class="math inline">\(x^2+y^2=1\)</span> en el primer cuadrante.</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-50-contents" aria-controls="callout-50" aria-expanded="false" aria-label="Toggle callout">
@@ -2206,7 +2242,7 @@ Solución
 </div>
 </div>
 <div id="exr-centro-masas-3" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 7.48 </strong></span>Calcular el centroide de la región encerrada por la recta <span class="math inline">\(y=x\)</span> y la curva <span class="math inline">\(y=x^2\)</span>.</p>
+<p><span class="theorem-title"><strong>Ejercicio 7.48</strong></span> Calcular el centroide de la región encerrada por la recta <span class="math inline">\(y=x\)</span> y la curva <span class="math inline">\(y=x^2\)</span>.</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-51-contents" aria-controls="callout-51" aria-expanded="false" aria-label="Toggle callout">
@@ -2275,7 +2311,7 @@ x = x^2 \Leftarrow x^2-x = 0 \Leftarrow x(x-1) = 0 \Leftarrow x=0 \mbox{ o } x=1
 </div>
 </div>
 <div id="exr-teorema-pappus" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 7.49 </strong></span>El teorema de Pappus establece que si una región plana está a un lado de una recta <span class="math inline">\(l\)</span>, el volumen de revolución generado al rotar la región alrededor de la recta <span class="math inline">\(l\)</span> coincide con el producto del area de la región y la distancia recorrida por su centroide en la rotación. Dar una demostración del teorema para el caso particular en el que la región plana está delimitada por dos funciones <span class="math inline">\(f(x)\)</span> y <span class="math inline">\(g(x)\)</span> en un intervalo <span class="math inline">\([a,b]\)</span> y el eje de rotación es el eje <span class="math inline">\(y\)</span>.</p>
+<p><span class="theorem-title"><strong>Ejercicio 7.49</strong></span> El teorema de Pappus establece que si una región plana está a un lado de una recta <span class="math inline">\(l\)</span>, el volumen de revolución generado al rotar la región alrededor de la recta <span class="math inline">\(l\)</span> coincide con el producto del area de la región y la distancia recorrida por su centroide en la rotación. Dar una demostración del teorema para el caso particular en el que la región plana está delimitada por dos funciones <span class="math inline">\(f(x)\)</span> y <span class="math inline">\(g(x)\)</span> en un intervalo <span class="math inline">\([a,b]\)</span> y el eje de rotación es el eje <span class="math inline">\(y\)</span>.</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-52-contents" aria-controls="callout-52" aria-expanded="false" aria-label="Toggle callout">
@@ -2310,7 +2346,7 @@ V = \int_a^b 2\pi x(f(x)-g(x))\, dx = 2\pi \int_a^b x(f(x)-g(x))\, dx
 </div>
 </div>
 <div id="exr-valor-medio-1" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 7.50 </strong></span>Calcular el valor medio de la función <span class="math inline">\(f(x)=\sqrt{1-x^2}\)</span> en el intervalo <span class="math inline">\([-1,1]\)</span>.</p>
+<p><span class="theorem-title"><strong>Ejercicio 7.50</strong></span> Calcular el valor medio de la función <span class="math inline">\(f(x)=\sqrt{1-x^2}\)</span> en el intervalo <span class="math inline">\([-1,1]\)</span>.</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-53-contents" aria-controls="callout-53" aria-expanded="false" aria-label="Toggle callout">
@@ -2339,7 +2375,7 @@ Solución
 </div>
 </div>
 <div id="exr-velocidad-media" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 7.51 </strong></span>Se deja caer una pelota desde la terraza de un edificio situada a una altura de 25 m. Suponiendo que no hubiese rozamiento, ¿cuál es la velocidad media de la pelota desde su lanzamiento hasta que toca el suelo?</p>
+<p><span class="theorem-title"><strong>Ejercicio 7.51</strong></span> Se deja caer una pelota desde la terraza de un edificio situada a una altura de 25 m. Suponiendo que no hubiese rozamiento, ¿cuál es la velocidad media de la pelota desde su lanzamiento hasta que toca el suelo?</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-54-contents" aria-controls="callout-54" aria-expanded="false" aria-label="Toggle callout">
@@ -2392,7 +2428,7 @@ s(t) = 0
 </div>
 </div>
 <div id="exr-funcion-densidad" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 7.52 </strong></span>La función de densidad de probabilidad de una variable aleatoria <span class="math inline">\(X\)</span> es <span class="math inline">\(f(x)=\frac{k}{(1+x)^4}\)</span> para <span class="math inline">\(x\geq 0\)</span>.</p>
+<p><span class="theorem-title"><strong>Ejercicio 7.52</strong></span> La función de densidad de probabilidad de una variable aleatoria <span class="math inline">\(X\)</span> es <span class="math inline">\(f(x)=\frac{k}{(1+x)^4}\)</span> para <span class="math inline">\(x\geq 0\)</span>.</p>
 <ol type="a">
 <li><p>¿Cuándo debe valer <span class="math inline">\(k\)</span> para que se cumpla que <span class="math inline">\(f\)</span> es una función de densidad?</p></li>
 <li><p>Calcular la probabilidad de que la variable aleatoria tome un valor en el intervalo <span class="math inline">\([0,1]\)</span>.</p></li>
@@ -2503,6 +2539,33 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       }
     }
   }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
+    }
+  }
   const toggleColorMode = (alternate) => {
     // Switch the stylesheets
     const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
@@ -2569,13 +2632,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return localAlternateSentinel;
     }
   }
-  let localAlternateSentinel = 'alternate';
+  const darkModeDefault = true;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
   // Dark / light mode switch
   window.quartoToggleColorScheme = () => {
     // Read the current dark / light value 
     let toAlternate = !hasAlternateSentinel();
     toggleColorMode(toAlternate);
     setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
   };
   // Ensure there is a toggle, if there isn't float one in the top right
   if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
@@ -2654,10 +2719,27 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
-  function tippyHover(el, contentFn) {
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -2667,8 +2749,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -2680,7 +2771,130 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
     });
   }
       let selectedAnnoteEl;
@@ -2724,6 +2938,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
+            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -2749,6 +2964,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -2810,17 +3051,18 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./07-derivadas.html" class="pagination-link">
+      <a href="./07-derivadas.html" class="pagination-link" aria-label="Derivadas de funciones">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Derivadas de funciones</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./09-series.html" class="pagination-link">
+      <a href="./09-series.html" class="pagination-link" aria-label="Series de números reales">
         <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Series de números reales</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
 </div> <!-- /content -->
+
 
 
 

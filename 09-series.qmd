@@ -53,7 +53,7 @@ Por último, $\sum_{n=1}^\infty a_n = \lim_{n\to\infty} A_n = \lim_{n\to\infty} 
 ::: 
 
 :::{#exr-series-geometricas}
-Demostrar que una serie geométrica $\sum ar^n$ converge si y solo si $|x|<1$.
+Demostrar que una serie geométrica $\sum ar^n$ converge si y solo si $|r|<1$.
 :::
 
 :::{.callout-note collapse="true"}
@@ -96,7 +96,7 @@ A_3 &= 0.1 (200 + 0.1\cdot 200 + 0.1^2 \cdot 200) = 0.1\cdot 200 + 0.1^2 \cdot 2
 A_n &= A_{n-1} + 0.1^n \cdot 200 \mbox{ mg}
 \end{align*}
 
-Por tanto, el término general de la sucesión que subyace a la serie es $a_n = A_n-A_{n-1} = 200\cdot 0.1^n$, de manera que se trata de la serie geométrica $\sum 200\cdot 0.1^n$, y, por el ejercicio anterior, como $0.1<1$, la serie converge a $\sum_{n=1}^\infty 200\cdot 0.1^n = 200\sum_{n=1}^\infty 0.1^n = 200\frac{1}{1-0.1} = 222.2222\cdots$ mg.
+Por tanto, el término general de la sucesión que subyace a la serie es $a_n = A_n-A_{n-1} = 200\cdot 0.1^n$, de manera que se trata de la serie geométrica $\sum 200\cdot 0.1^n$, y, por el ejercicio anterior, como $0.1<1$, la serie converge a $\sum_{n=1}^\infty 200\cdot 0.1^n = \sum_{n=1}^\infty 200\cdot 0.1^n - 200 = 200\frac{1}{1-0.1} - 200 \approx 222.2222 - 200 = 22.2222 $ mg.
 :::
 
 :::{#exr-propensiones-marginales-gasto-ahorro}
