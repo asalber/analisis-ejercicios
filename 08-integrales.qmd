@@ -1213,7 +1213,7 @@ sustituyendo en la integral anterior se tiene
 \approx 21.4784  \mbox{ m}^2.
 \end{align*}
 
-(1) Cambio $x = \frac{4}{\sqrt{3}\operatorname{sen}(\theta)}$.
+(1) Cambio $x = \frac{4}{\sqrt{3}}\operatorname{sen}(\theta)$.
 :::
 
 :::{#exr-superficie-toro}
@@ -1401,7 +1401,7 @@ Nota: Debe tenerse en cuenta que la aceleración de la gravedad disminuye con la
 $$
 g_h = g_0 \left(\frac{R}{R+h}\right)^2,
 $$
-donde $g_h$ es la aceleración de la gravedad a una altura $h$ m sobre la superficie terrestre, $g_0=9.81$ m/s$^2$ es la aceleración de la gravedad en la superficie terrestre, y $R=6371$ km es el radio de la Tierra.
+donde $g_h$ es la aceleración de la gravedad a una altura $h$ sobre la superficie terrestre, $g_0=9.81$ m/s$^2$ es la aceleración de la gravedad en la superficie terrestre, y $R=6371$ km es el radio de la Tierra.
 :::
 
 :::{.callout-tip collapse="true"}
@@ -1411,7 +1411,7 @@ donde $g_h$ es la aceleración de la gravedad a una altura $h$ m sobre la superf
 
 :::{#exr-trabajo-deposito}
 Un depósito con forma de cono invertido de radio $2$ m y altura $5$ m está lleno de agua. ¿Qué trabajo se realiza al vaciar el tanque por arriba?  
-Nota: La densidad del agua es de $\delta = 1000$ kg/m$^3$.
+Nota: La densidad del agua es $\delta = 1000$ kg/m$^3$.
 :::
 
 :::{.callout-tip collapse="true"}
@@ -1468,7 +1468,7 @@ W
 :::
 
 :::{#exr-trabajo-deposito-2}
-Un depósito con forma de sólido de revolución generado al rotar la gráfica de la función $f(x)=\frac{x^2}{2}$ alrededor del eje $y$ en el intervalo de $0$ a $4$ m, contiene $100000$ l de aceite con una densidad de $\delta = 900$ kg/m$^3$. ¿Qué trabajo se realiza al vaciar el depósito por arriba?
+Un depósito con forma de sólido de revolución generado al rotar la gráfica de la función $f(x)=\frac{x^2}{2}$ alrededor del eje $y$ en el intervalo de $0$ a $4$ m, contiene $100000$ l de aceite con una densidad $\delta = 900$ kg/m$^3$. ¿Qué trabajo se realiza al vaciar el depósito por arriba?
 :::
 
 :::{.callout-tip collapse="true"}

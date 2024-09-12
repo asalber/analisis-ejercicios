@@ -40,7 +40,7 @@ por lo que las sumas parciales cada vez están más cerca de $1$ y se puede prob
 ::: 
 
 :::{#exr-sumas-parciales}
-Si $\sum_{i=1}^n a_n=\frac{n-1}{n+1}$, ¿cuál es el término general de la sucesión $a_n$? Calcular $\sum_{n=1}^\infty a_n$.
+Si $\sum_{i=1}^n a_i=\frac{n-1}{n+1}$, ¿cuál es el término general de la sucesión $a_n$? Calcular $\sum_{n=1}^\infty a_n$.
 :::
 
 :::{.callout-tip collapse="true"}
@@ -436,7 +436,7 @@ d. $\frac{n+1}{\sqrt{n^3}}>0$ $\forall n\in\mathbb{N}$ por lo que se trata de un
 
     Como $\sum \frac{1}{n^{1/2}}$ es una serie $p$ con $p<1$, diverge, y por tanto, $\sum \frac{n+1}{\sqrt{n^3}}$ también diverge.
 
-e. $\frac{e^{1/n}}{n}>0$ $\forall n\in\mathbb{N}$ por lo que se trata de una serie de términos positivos. Como $e^{1/n}>1$ $\forall n\in\mathbb{N}$ se tiene que $\frac{e^{1/n}}{n}>\frac{1}{n}$ $\forall n\in\mathbb{N}$, y como $\sum \frac{1}{n}$ es la serie armónica, que diverge, por el criterio de la comparación de series, $\sum \frac{e^{1/n})}{n}$ también diverge.
+e. $\frac{e^{1/n}}{n}>0$ $\forall n\in\mathbb{N}$ por lo que se trata de una serie de términos positivos. Como $e^{1/n}>1$ $\forall n\in\mathbb{N}$ se tiene que $\frac{e^{1/n}}{n}>\frac{1}{n}$ $\forall n\in\mathbb{N}$, y como $\sum \frac{1}{n}$ es la serie armónica, que diverge, por el criterio de la comparación de series, $\sum \frac{e^{1/n}}{n}$ también diverge.
 
 f. $\operatorname{sen}\left(\frac{1}{n}\right)>0$ $\forall n\in\mathbb{N}$ por lo que se trata de una serie de términos positivos. Haciendo el cambio de variable $x=\frac{1}{n}$, se tiene
 
@@ -449,7 +449,7 @@ f. $\operatorname{sen}\left(\frac{1}{n}\right)>0$ $\forall n\in\mathbb{N}$ por l
 g. $\frac{n+1}{n!}>0$ $\forall n\in\mathbb{N}$ por lo que se trata de una serie de términos positivos. Por otro lado, se tiene
 
     $$
-    \sum \frac{n+1}{n!} = \sum \frac{n}{n!}+\frac{1}{n!} = \sum \frac{1}{{n-1}!}+\sum \frac{1}{n!},
+    \sum \frac{n+1}{n!} = \sum \frac{n}{n!}+\frac{1}{n!} = \sum \frac{1}{(n-1)!}+\sum \frac{1}{n!},
     $$
 
     y como se ha visto en el @exr-serie-exponencial, tanto $\sum \frac{1}{(n-1)!}$ como $\sum \frac{1}{n!}$ convergen, por lo que $\sum \frac{n+1}{n!}$ también converge.

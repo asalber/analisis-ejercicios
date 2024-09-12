@@ -31,14 +31,14 @@ Determinar la función vectorial cuya trayectoria coincide de la intersección d
 
 :::{.callout-tip collapse="true"}
 ## Solución
-Como la proyección del cilindro de ecuación $x^2+y^2=2$ sobre el plano $xy$ es una circunferencia, podemos parametrizarla de la manera habitual haciendo $x=\operatorname{sen}(t)$ e $y=\cos(t)$ con $0\leq t \leq 2\pi$.
+Como la proyección del cilindro de ecuación $x^2+y^2=2$ sobre el plano $xy$ es una circunferencia, podemos parametrizarla de la manera habitual haciendo $x=\sqrt{2}\operatorname{sen}(t)$ e $y=\sqrt{2}\cos(t)$ con $0\leq t \leq 2\pi$.
 
-Por otro lado, de la ecuación del plano se deduce que $z = 1+2x$, y sustituyendo la parametrización anterior se tiene $z = 1+2\operatorname{sen}(t)$.
+Por otro lado, de la ecuación del plano se deduce que $z = 2x-1$, y sustituyendo la parametrización anterior se tiene $z = 2\sqrt{2}\operatorname{sen}(t)-1$.
 
 Así pues, la función vectorial que resulta es
 
 $$
-\mathbf{f}(t) = \operatorname{sen}(t)\mathbf{i} + \cos(t)\mathbf{j} + (1+2\operatorname{sen}(t)) \quad 0\leq t \leq 2\pi.
+\mathbf{f}(t) = \sqrt{2}\operatorname{sen}(t)\mathbf{i} + \sqrt{2}\cos(t)\mathbf{j} + (2\sqrt{2}\operatorname{sen}(t)-1)\mathbf{k} \quad 0\leq t \leq 2\pi.
 $$
 :::  
 
