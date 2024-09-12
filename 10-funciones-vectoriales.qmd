@@ -43,7 +43,7 @@ $$
 :::  
 
 :::{#exr-intersección-trayectorias}
-Dos aviones vuelan siguiendo las trayectorias dadas por las funciones vectoriales $\mathbf{f}(t)=t^2\mathbf{i}+(2t+1)\mathbf{j}+t^3\mathbf{j}$ y $\mathbf{g}(t)=t-2\mathbf{i}+\frac{t}{2}\mathbf{j}+3t+10\mathbf{j}$. ¿Se cortan sus trayectorias? ¿Llegarán a chocar en algún momento?
+Dos aviones vuelan siguiendo las trayectorias dadas por las funciones vectoriales $\mathbf{f}(t)=t^2\mathbf{i}+(2t+1)\mathbf{j}+t^3\mathbf{k}$ y $\mathbf{g}(t)=(t-2)\mathbf{i}+\frac{t}{2}\mathbf{j}+(3t+10)\mathbf{k}$. ¿Se cortan sus trayectorias? ¿Llegarán a chocar en algún momento?
 :::
 
 :::{.callout-tip collapse="true"}
