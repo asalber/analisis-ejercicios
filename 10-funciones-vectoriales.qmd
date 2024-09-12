@@ -263,7 +263,7 @@ a.  La velocidad con la que se mueve con respecto a la dirección horizontal es 
 :::
 
 :::{#exr-angulo-entre-trayectorias}
-Determinar el ángulo con el que se cortan las trayectorias de las funciones vectoriales $\mathbf{f}(t) = (2t+1, \sqrt{t}, t^2)$ y $\mathbf{g}(t):=\left(\frac{t^2+6}{2}, e^{2t}, \cos(t)\right)$ en el punto $(3,1,1)$. 
+Determinar el ángulo con el que se cortan las trayectorias de las funciones vectoriales $\mathbf{f}(t) = (2t+1, \sqrt{t}, t^2)$ y $\mathbf{g}(t)=\left(\frac{t^2+6}{2}, e^{2t}, \cos(t)\right)$ en el punto $(3,1,1)$. 
 :::
 
 :::{.callout-tip collapse="true"}
@@ -293,11 +293,11 @@ Para obtener el ángulo $\theta$ que forman estos dos vectores, de la fórmula d
 $$
 \cos(\theta) 
 = \frac{(2,1/2,2)(0,2,0)}{|(2,1/2,2)||(0,2,0)|}
-= \frac{2\cdot 0+\frac{1}{2}\cdot 2+2\cdot 0}{(2^2+\left(\frac{1}{2}\right)^2+2^2)(0^2+2^2+0^2)}
-= \frac{1}{33},
+= \frac{2\cdot 0+\frac{1}{2}\cdot 2+2\cdot 0}{\sqrt{2^2+\left(\frac{1}{2}\right)^2+2^2}\sqrt{0^2+2^2+0^2}}
+= \frac{1}{\sqrt{33}},
 $$
 
-de donde se deduce que $\theta = \operatorname{arccos}(33) = 1.5405$ rad.
+de donde se deduce que $\theta = \operatorname{arccos}(\frac{1}{\sqrt{33}}) = 1.3958$ rad.
 :::
 
 :::{#exr-plano-normal-trayectoria}
