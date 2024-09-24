@@ -771,7 +771,7 @@ Solución
 = \int_0^{\pi/4} \sec(t)\frac{\sec(t)+\operatorname{tg}(t)}{\sec(t)+\operatorname{tg}(t)}\, dt \\
 &amp;= \int_{1}^{1+\frac{2}{\sqrt{2}}} \frac{1}{u}\, du
 = [\ln|u|]_1^{1+\frac{2}{\sqrt{2}}} \tag{1}\\
-&amp;= \ln\left|\frac{2}{\sqrt{2}+1}\right|-\ln|1|
+&amp;= \ln\left|1+\frac{2}{\sqrt{2}}\right|-\ln|1|
 \approx 0.8814.
 \end{align*}\]</span></p>
 <ol type="1">
@@ -810,7 +810,8 @@ Solución
 = \left[\frac{\sqrt{h^2+4r^2}}{2}t\right]_a^b
 = \frac{\sqrt{h^2+4r^2}}{2}(b-a).
 \end{align*}\]</span></p>
-<p>Como la altura del cuaderno viene dada por la componente <span class="math inline">\(z\)</span> de la función vectorial, se tiene que</p>
+<p>Como la espiral da una vuelta completa cada <span class="math inline">\(2\pi\)</span> unidades de <span class="math inline">\(t\)</span>, se tiene que <span class="math inline">\(b-a=2\pi n\)</span>, y por tanto la longitud de la espiral es <span class="math inline">\(n\sqrt{h^2+4r^2}\pi\)</span>.</p>
+<p>Para calcular ahora la cantidad de alambre necesaria para construir la espiral del cuaderno, como la altura del cuaderno viene dada por la componente <span class="math inline">\(z\)</span> de la función vectorial, se tiene que</p>
 <p><span class="math display">\[
 \frac{1/4}{2}t = 30 \Leftrightarrow t = 30 * 8 = 240
 \]</span></p>
@@ -873,9 +874,9 @@ s(t)
 <p>Tomando la inversa de la función longitud de arco</p>
 <p><span class="math display">\[
 s = \sqrt{2}e^t-\sqrt{2}
-\Leftrightarrow \sqrt{2}e^t = x+\sqrt{2}
-\Leftrightarrow e^t = \frac{x+\sqrt{2}}{\sqrt{2}}
-\Leftrightarrow t = \ln\left(\frac{x+\sqrt{2}}{\sqrt{2}}\right)
+\Leftrightarrow \sqrt{2}e^t = s+\sqrt{2}
+\Leftrightarrow e^t = \frac{s+\sqrt{2}}{\sqrt{2}}
+\Leftrightarrow t = \ln\left(\frac{s+\sqrt{2}}{\sqrt{2}}\right)
 \]</span></p>
 <p>y haciendo el cambio de variable en <span class="math inline">\(\mathbf{g}(t)\)</span>, llegamos a la parametrización de longitud de arco</p>
 <p><span class="math display">\[\begin{align*}
@@ -894,9 +895,6 @@ s = \sqrt{2}e^t-\sqrt{2}
 <li><p><span class="math inline">\(\mathbf{g}(t) = (\operatorname{sen}(2t), 3\cos(t), e^t)\)</span> en <span class="math inline">\(t=0\)</span>.</p></li>
 </ol>
 </div>
-<div id="exr-curvatura-circulo" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 9.19</strong></span> Calcular la curvatura de un círculo de radio <span class="math inline">\(r\)</span>.</p>
-</div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-17-contents" aria-controls="callout-17" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -908,6 +906,53 @@ Solución
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
 <div id="callout-17" class="callout-17-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="a">
+<li><p>Aunque se trata de una trayectoria en el plano real <span class="math inline">\(\mathbb{R}^2\)</span>, podemos trabajar en el espacio real <span class="math inline">\(\mathbb{R}^3\)</span> añadiendo una tercera componente nula, es decir, considerando la función vectorial <span class="math inline">\(\mathbf{f}(t) = (t^2, \ln(t), 0)\)</span>.</p>
+<p>La derivada de esta función vectorial es <span class="math inline">\(\mathbf{f}'(t) = (2t, 1/t, 0)\)</span> y la derivada segunda es <span class="math inline">\(\mathbf{f}''(t) = (2, -1/t^2, 0)\)</span>. Por tanto, aplicando la <a href="https://aprendeconalf.es/analisis-manual/12-funciones-vectoriales.html#thm-curvatura-trayectoria-espacio-real">fórmula de la curvatura en el espacio</a> a <span class="math inline">\(\mathbf{f}(t)\)</span> en <span class="math inline">\(t=1\)</span> se tiene</p>
+<p><span class="math display">\[\begin{align*}
+\kappa(1) &amp;=
+\frac{|\mathbf{f}'(1)\times \mathbf{f}''(1)|}{|\mathbf{f}'(1)|^3}
+= \frac{|(2,1,0)\times (2,-1,0)|}{|(2,1,0)|^3} \\
+&amp; = \frac{|(0,0,-4)|}{(2^2+1^2)^{3/2}}
+= \frac{4}{5^{3/2}}
+\approx 0.358.
+\end{align*}\]</span></p></li>
+<li><p>La derivada de esta función es</p>
+<p><span class="math display">\[
+g'(t) = (2\cos(2t), -3\operatorname{sen}(t), e^t),
+\]</span></p>
+<p>y la derivada segunda es</p>
+<p><span class="math display">\[
+g''(t) = (-4\operatorname{sen}(2t), -3\cos(t), e^t).
+\]</span></p>
+<p>Por tanto, aplicando la <a href="https://aprendeconalf.es/analisis-manual/12-funciones-vectoriales.html#thm-curvatura-trayectoria-espacio-real">fórmula de la curvatura en el espacio</a> a <span class="math inline">\(\mathbf{g}(t)\)</span> en <span class="math inline">\(t=0\)</span> se tiene</p>
+<p><span class="math display">\[\begin{align*}
+\kappa(0)
+&amp;= \frac{|\mathbf{g}'(0)\times \mathbf{g}''(0)|}{|\mathbf{g}'(0)|^3}
+= \frac{|(2,0,1)\times (0,-3,1)|}{|(2,0,1)|^3} \\
+&amp;= \frac{|(3,-2,-6)|}{(2^2+0^2+1^2)^{3/2}}
+= \frac{\sqrt{49}}{5^{3/2}}
+\approx 0.626.
+\end{align*}\]</span></p></li>
+</ol>
+</div>
+</div>
+</div>
+<div id="exr-curvatura-circulo" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 9.19</strong></span> Calcular la curvatura de un círculo de radio <span class="math inline">\(r\)</span>.</p>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-18-contents" aria-controls="callout-18" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-18" class="callout-18-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Podemos suponer, sin pérdida de generalidad, que el círculo está centrado en el origen de coordenadas, por lo que una parametrización suya es la función vectorial <span class="math inline">\(\mathbf{f}(t) = (r\cos(t),r\operatorname{sen}(t))\)</span>.</p>
 <p>La derivada de esta función vectorial es <span class="math inline">\(\mathbf{f}'(t)= (-r\operatorname{sen}(t), r\cos(t))\)</span> y el vector tangente unitario</p>
@@ -935,7 +980,7 @@ Solución
 <p><span class="theorem-title"><strong>Ejercicio 9.20</strong></span> Usar la fórmula de la curvatura de la trayectoria de una función vectorial para obtener una fórmula para calcular la curvatura de la gráfica de una función real <span class="math inline">\(f(x)\)</span>.</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-18-contents" aria-controls="callout-18" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-19-contents" aria-controls="callout-19" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -944,7 +989,7 @@ Solución
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-18" class="callout-18-contents callout-collapse collapse">
+<div id="callout-19" class="callout-19-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Dada una función real <span class="math inline">\(y=f(x)\)</span> podemos representar la trayectoria de su gráfica mediante la función vectorial <span class="math inline">\(\mathbf{f}(t) = (t, f(t), 0)\)</span> en el espacio real. En tal caso, según la <a href="https://aprendeconalf.es/analisis-manual/12-funciones-vectoriales.html#thm-curvatura-trayectoria-espacio-real">fórmula de la curvatura de una trayectoria en el espacio real</a>, su curvatura es</p>
 <p><span class="math display">\[
@@ -964,7 +1009,7 @@ Solución
 <p>Por tanto,</p>
 <p><span class="math display">\[
 \kappa(t)= \frac{|\mathbf{f}'(t)\times \mathbf{f}''(t)|}{|\mathbf{f}'(t)|^3}
-= \frac{|f''(t)|}{(1+f''(t)^2)^{3/2}}.
+= \frac{|f''(t)|}{(1+f'(t)^2)^{3/2}}.
 \]</span></p>
 </div>
 </div>
@@ -980,7 +1025,7 @@ y=-\frac{1}{2}gt^2
 <p>donde <span class="math inline">\(t\in \mathbb{R}^{+}\)</span> es el tiempo contado a partir del instante en que el punto llega a la posición más alta, <span class="math inline">\(v_0\)</span> es la velocidad horizontal en el instante <span class="math inline">\(t=0\)</span> y <span class="math inline">\(g=9.8\)</span> m<span class="math inline">\(^2\)</span>/s es la aceleración de la gravedad. ¿En qué instante la magnitud de la velocidad horizontal será igual a la de la velocidad vertical? ¿Cuánto debería valer <span class="math inline">\(v_0\)</span> para que en dicho instante el punto haya recorrido 100 m horizontalmente? Calcular la ecuación de la recta tangente en dicho instante con el valor de <span class="math inline">\(v_0\)</span> calculado.</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-19-contents" aria-controls="callout-19" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-20-contents" aria-controls="callout-20" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -989,7 +1034,7 @@ Solución
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-19" class="callout-19-contents callout-collapse collapse">
+<div id="callout-20" class="callout-20-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>La velocidad horizontal es la derivada del espacio recorrido horizontalmente (componente <span class="math inline">\(x\)</span>) con respecto al tiempo, es decir,</p>
 <p><span class="math display">\[
@@ -1030,11 +1075,8 @@ y = -49.86-(x-100) \Leftrightarrow y=-x+50.14.
 <div id="exr-cinematica-avion" class="theorem exercise">
 <p><span class="theorem-title"><strong>Ejercicio 9.22</strong></span> Una avión parte de la posición <span class="math inline">\(\mathbf{f}(0)=(1, 1, 1)\)</span> con velocidad inicial <span class="math inline">\(\mathbf{v}(0)=(0,1,-2)\)</span> y aceleración <span class="math inline">\(\mathbf{a}(t)=t^2\mathbf{i}-\frac{1}{2}\mathbf{j}+2\mathbf{k}\)</span>. Determinar el vector velocidad y el vector posición en cada instante.</p>
 </div>
-<div id="exr-cinematica" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 9.23</strong></span> Calcular la rapidez máxima y mínima con la que se mueve una partícula cuya posición viene dada por la función vectorial <span class="math inline">\(\mathbf{f}(t) = \cos(2t)\mathbf{i} + \operatorname{sen}(t)\mathbf{j} + \cos(t))\mathbf{k}\)</span> en el intervalo <span class="math inline">\([0,\pi)\)</span>.</p>
-</div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-20-contents" aria-controls="callout-20" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-21-contents" aria-controls="callout-21" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1043,7 +1085,41 @@ Solución
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-20" class="callout-20-contents callout-collapse collapse">
+<div id="callout-21" class="callout-21-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>La velocidad en cada instante es la integral de la aceleración, es decir,</p>
+<p><span class="math display">\[\begin{align*}
+v(t)
+&amp;= v(0) + \int_0^t a(x)\,dx
+= (0,1,-2) + \int_0^t (x^2,-1/2,2)\,dx \\
+&amp;= (0,1,-2) + (\frac{t^3}{3},\frac{-t}{2},2t)
+= \left(\frac{t^3}{3},\frac{-t}{2}+1,2t-2\right).
+\end{align*}\]</span></p>
+<p>Y la posición en cada instante es la integral de la velocidad, es decir,</p>
+<p><span class="math display">\[\begin{align*}
+f(t)
+&amp;= f(0) + \int_0^t v(x)\,dx
+= (1,1,1) + \int_0^t (x^3/3,-x/2+1,2x-2)\,dx \\
+&amp;= (1,1,1) + (\frac{t^4}{12},\frac{-t^2}{4}+t, t^2-2t)
+= \left(\frac{t^4}{12}+1,\frac{-t^2}{4}+t,1+t^2-2t\right).
+\end{align*}\]</span></p>
+</div>
+</div>
+</div>
+<div id="exr-cinematica" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 9.23</strong></span> Calcular la rapidez máxima y mínima con la que se mueve una partícula cuya posición viene dada por la función vectorial <span class="math inline">\(\mathbf{f}(t) = \cos(2t)\mathbf{i} + \operatorname{sen}(t)\mathbf{j} + \cos(t))\mathbf{k}\)</span> en el intervalo <span class="math inline">\([0,\pi)\)</span>.</p>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-22-contents" aria-controls="callout-22" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-22" class="callout-22-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>El vector velocidad vale</p>
 <p><span class="math display">\[
@@ -1086,7 +1162,7 @@ Solución
 <p><span class="theorem-title"><strong>Ejercicio 9.25</strong></span> Calcular la fuerza necesaria para que la partícula de masa <span class="math inline">\(m\)</span> se mueva con posición dada por la función vectorial <span class="math inline">\(g(t) = (3t, \ln(t), t^2)\)</span>. ¿Cómo se interpreta este vector?</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-21-contents" aria-controls="callout-21" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-23-contents" aria-controls="callout-23" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1095,7 +1171,7 @@ Solución
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-21" class="callout-21-contents callout-collapse collapse">
+<div id="callout-23" class="callout-23-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>El vector velocidad es</p>
 <p><span class="math display">\[
@@ -1123,7 +1199,7 @@ Solución
 <p><span class="theorem-title"><strong>Ejercicio 9.26</strong></span> Se aplica una fuerza de <span class="math inline">\(2\)</span> N a una pelota de <span class="math inline">\(100\)</span> g en el sentido de la bisectriz del plano <span class="math inline">\(yz\)</span>. Si la pelota parte del origen de coordenadas con una velocidad inicial <span class="math inline">\(\mathbf{v}_0 = 2\mathbf{i}-\mathbf{j}\)</span> m/s, ¿qué posición y con qué rapidez se moverá la pelota en cada instante?</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-22-contents" aria-controls="callout-22" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-24-contents" aria-controls="callout-24" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1132,7 +1208,7 @@ Solución
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-22" class="callout-22-contents callout-collapse collapse">
+<div id="callout-24" class="callout-24-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Un vector con la dirección de la bisectriz del plano <span class="math inline">\(yz\)</span> es <span class="math inline">\((0,1,1)\)</span>, de manera que un vector unitario en esa dirección será <span class="math inline">\(\mathbf{u}=\left(0,\frac{1}{\sqrt{2}},\frac{1}{\sqrt{2}}\right)\)</span>, y como la intensidad de la fuerza es 2 N, se tiene que el vector fuerza es</p>
 <p><span class="math display">\[
@@ -1210,7 +1286,7 @@ p(t) = \sqrt[3]{{t^2  + 2}}.
 </ol>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-23-contents" aria-controls="callout-23" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-25-contents" aria-controls="callout-25" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1219,7 +1295,7 @@ Solución
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-23" class="callout-23-contents callout-collapse collapse">
+<div id="callout-25" class="callout-25-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 
 </div>

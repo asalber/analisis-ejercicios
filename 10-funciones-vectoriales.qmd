@@ -407,7 +407,7 @@ a.  $\mathbf{h}'(t) = (\cos(t), -\operatorname{tg}(t), -\operatorname{sen}(t))$ 
     = \int_0^{\pi/4} \sec(t)\frac{\sec(t)+\operatorname{tg}(t)}{\sec(t)+\operatorname{tg}(t)}\, dt \\
     &= \int_{1}^{1+\frac{2}{\sqrt{2}}} \frac{1}{u}\, du 
     = [\ln|u|]_1^{1+\frac{2}{\sqrt{2}}} \tag{1}\\
-    &= \ln\left|\frac{2}{\sqrt{2}+1}\right|-\ln|1|
+    &= \ln\left|1+\frac{2}{\sqrt{2}}\right|-\ln|1|
     \approx 0.8814.
     \end{align*}
     (1) Cambio de variable $u=\sec(t)+\operatorname{tg}(t)$.
@@ -437,7 +437,9 @@ Una parametrización de esta espiral viene dada por la función $\mathbf{f}(t) =
 = \frac{\sqrt{h^2+4r^2}}{2}(b-a).
 \end{align*}
 
-Como la altura del cuaderno viene dada por la componente $z$ de la función vectorial, se tiene que
+Como la espiral da una vuelta completa cada $2\pi$ unidades de $t$, se tiene que $b-a=2\pi n$, y por tanto la longitud de la espiral es $n\sqrt{h^2+4r^2}\pi$.
+
+Para calcular ahora la cantidad de alambre necesaria para construir la espiral del cuaderno, como la altura del cuaderno viene dada por la componente $z$ de la función vectorial, se tiene que
 
 $$
 \frac{1/4}{2}t = 30 \Leftrightarrow t = 30 * 8 = 240
@@ -500,9 +502,9 @@ a.  $\mathbf{g}'(t)= (e^t(\operatorname{sen}(t)+\cos(t)), e^t(\cos(t)-\operatorn
 
     $$
     s = \sqrt{2}e^t-\sqrt{2}
-    \Leftrightarrow \sqrt{2}e^t = x+\sqrt{2}
-    \Leftrightarrow e^t = \frac{x+\sqrt{2}}{\sqrt{2}}
-    \Leftrightarrow t = \ln\left(\frac{x+\sqrt{2}}{\sqrt{2}}\right)
+    \Leftrightarrow \sqrt{2}e^t = s+\sqrt{2}
+    \Leftrightarrow e^t = \frac{s+\sqrt{2}}{\sqrt{2}}
+    \Leftrightarrow t = \ln\left(\frac{s+\sqrt{2}}{\sqrt{2}}\right)
     $$ 
 
     y haciendo el cambio de variable en $\mathbf{g}(t)$, llegamos a la parametrización de longitud de arco
@@ -520,6 +522,45 @@ Calcular la curvatura de las trayectorias de las siguientes funciones vectoriale
 a. $\mathbf{f}(t) = (t^2, \ln(t))$ en $t=1$
 
 b. $\mathbf{g}(t) = (\operatorname{sen}(2t), 3\cos(t), e^t)$ en $t=0$.
+:::
+
+:::{.callout-tip collapse="true"}
+## Solución
+a.  Aunque se trata de una trayectoria en el plano real $\mathbb{R}^2$, podemos trabajar en el espacio real $\mathbb{R}^3$ añadiendo una tercera componente nula, es decir, considerando la función vectorial $\mathbf{f}(t) = (t^2, \ln(t), 0)$. 
+
+    La derivada de esta función vectorial es $\mathbf{f}'(t) = (2t, 1/t, 0)$ y la derivada segunda es $\mathbf{f}''(t) = (2, -1/t^2, 0)$. Por tanto, aplicando la [fórmula de la curvatura en el espacio](https://aprendeconalf.es/analisis-manual/12-funciones-vectoriales.html#thm-curvatura-trayectoria-espacio-real) a $\mathbf{f}(t)$ en $t=1$ se tiene
+
+    \begin{align*}
+    \kappa(1) &= 
+    \frac{|\mathbf{f}'(1)\times \mathbf{f}''(1)|}{|\mathbf{f}'(1)|^3}
+    = \frac{|(2,1,0)\times (2,-1,0)|}{|(2,1,0)|^3} \\
+    & = \frac{|(0,0,-4)|}{(2^2+1^2)^{3/2}} 
+    = \frac{4}{5^{3/2}} 
+    \approx 0.358.
+    \end{align*}
+
+b.  La derivada de esta función es 
+
+    $$
+    g'(t) = (2\cos(2t), -3\operatorname{sen}(t), e^t),
+    $$
+
+    y la derivada segunda es
+
+    $$
+    g''(t) = (-4\operatorname{sen}(2t), -3\cos(t), e^t).
+    $$
+
+    Por tanto, aplicando la [fórmula de la curvatura en el espacio](https://aprendeconalf.es/analisis-manual/12-funciones-vectoriales.html#thm-curvatura-trayectoria-espacio-real) a $\mathbf{g}(t)$ en $t=0$ se tiene
+
+    \begin{align*}
+    \kappa(0) 
+    &= \frac{|\mathbf{g}'(0)\times \mathbf{g}''(0)|}{|\mathbf{g}'(0)|^3} 
+    = \frac{|(2,0,1)\times (0,-3,1)|}{|(2,0,1)|^3} \\
+    &= \frac{|(3,-2,-6)|}{(2^2+0^2+1^2)^{3/2}}
+    = \frac{\sqrt{49}}{5^{3/2}}
+    \approx 0.626.
+    \end{align*}
 :::
 
 :::{#exr-curvatura-circulo}
@@ -583,7 +624,7 @@ Por tanto,
 
 $$
 \kappa(t)= \frac{|\mathbf{f}'(t)\times \mathbf{f}''(t)|}{|\mathbf{f}'(t)|^3}
-= \frac{|f''(t)|}{(1+f''(t)^2)^{3/2}}.
+= \frac{|f''(t)|}{(1+f'(t)^2)^{3/2}}.
 $$
 :::
 
@@ -659,6 +700,29 @@ $$
 :::{#exr-cinematica-avion}
 Una avión parte de la posición $\mathbf{f}(0)=(1, 1, 1)$ con velocidad inicial $\mathbf{v}(0)=(0,1,-2)$ y aceleración $\mathbf{a}(t)=t^2\mathbf{i}-\frac{1}{2}\mathbf{j}+2\mathbf{k}$.
 Determinar el vector velocidad y el vector posición en cada instante.
+:::
+
+:::{.callout-tip collapse="true"}
+## Solución
+La velocidad en cada instante es la integral de la aceleración, es decir,
+
+\begin{align*}
+v(t) 
+&= v(0) + \int_0^t a(x)\,dx 
+= (0,1,-2) + \int_0^t (x^2,-1/2,2)\,dx \\
+&= (0,1,-2) + (\frac{t^3}{3},\frac{-t}{2},2t) 
+= \left(\frac{t^3}{3},\frac{-t}{2}+1,2t-2\right).
+\end{align*}
+
+Y la posición en cada instante es la integral de la velocidad, es decir,
+
+\begin{align*}
+f(t) 
+&= f(0) + \int_0^t v(x)\,dx 
+= (1,1,1) + \int_0^t (x^3/3,-x/2+1,2x-2)\,dx \\
+&= (1,1,1) + (\frac{t^4}{12},\frac{-t^2}{4}+t, t^2-2t)
+= \left(\frac{t^4}{12}+1,\frac{-t^2}{4}+t,1+t^2-2t\right).
+\end{align*}
 :::
 
 :::{#exr-cinematica}
