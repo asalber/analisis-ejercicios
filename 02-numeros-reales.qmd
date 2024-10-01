@@ -28,7 +28,7 @@ a. $D$ está acotado por arriba y por abajo. $\sup(D)=2$ y $\inf(D)=1$.
 
 a. $E$ no está acotado por arriba ni por abajo.
 
-a. $F$ está acotado por arriba y por abajo.$\sup(F)=2$ y $\inf(F)=1$.
+a. $F$ está acotado por arriba y por abajo. $\sup(F)=2$ y $\inf(F)=1$.
 
 a. $G$ está acotado por arriba pero no por abajo. $\sup(G)=1$.
 :::
@@ -118,14 +118,14 @@ Veamos todas las posibilidades que pueden darse:
 
 :::{#exr-propiedad-arquimediana-1}
 $\star$
-Usando la propiedad arquimediana de los números reales, demostrar que para cualquier número real $a\in\mathbb{R}$ con $a>0$ existe un número natural $n\in \mathbb{N}$ tal que $0<\frac{1}{n}<a$. Demostrar también que existe otro número natural $m\in \mathbb{N}$ tal que $m-1\leq a< m$. 
+Usando la propiedad arquimediana de los números reales, demostrar que para cualquier número real $a\in\mathbb{R}$ con $a>0$ existe un número natural $n\in \mathbb{N}$ tal que $0<\frac{1}{n}<a$.Demostrar también que existe otro número natural $m\in \mathbb{N}$ tal que $m-1\leq a< m$. 
 :::
 
 :::{.callout-tip collapse="true"}
 ## Solución
 Como $a>0$ se tiene que $\frac{1}{a}>0$, y por la propiedad arquimediana, existe un $n\in\mathbb{N}$ tal que $\frac{1}{a}<n$, de donde se deduce que $\frac{1}{1/a}>\frac{1}{n}>0$, es decir, $0<\frac{1}{n}<a$.
 
-Para demostrar la segunda parte, considérese ahora el conjunto $A=\{k\in \mathbb{N}: a<k\}$. Por la propiedad arquimedana sabemos que existe un $n\in \mathbb{N}$ tal que $a<n$, y por tanto, $n\in A$ por lo que $A$ no está vacío. Aplicando ahora el principio de buena ordenación de los números naturales, como $A\subset \mathbb{N}$, existe un primer elemento $m\in A$, tal que $m-1\not\in A$, de manera que $m-1\leq a$ y con ello se tiene que $$m-1\leq a<m$. 
+Para demostrar la segunda parte, considérese ahora el conjunto $A=\{k\in \mathbb{N}: a<k\}$. Por la propiedad arquimedana sabemos que existe un $n\in \mathbb{N}$ tal que $a<n$, y por tanto, $n\in A$ por lo que $A$ no está vacío. Aplicando ahora el principio de buena ordenación de los números naturales, como $A\subset \mathbb{N}$, existe un primer elemento $m\in A$, tal que $m-1\not\in A$, de manera que $m-1\leq a$ y con ello se tiene que $m-1\leq a<m$. 
 :::
 
 :::{#exr-densidad-racionales}

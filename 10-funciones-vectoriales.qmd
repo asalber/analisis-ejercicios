@@ -905,10 +905,60 @@ $$
 
 a.  Calcular el número de parásitos cuando el número de árboles sea 500.
 
-a.  La derivada del número de parásitos con respecto al número de árboles cuando el número de parásitos sea 3.
+a.  La derivada del número de parásitos con respecto al número de árboles cuando el número de parásitos sea 3. ¿Cómo la interpretarías?
 :::
 
 :::{.callout-tip collapse="true"}
 ## Solución
+a.  Para ver en qué instante hay 500 árboles, resolvemos la ecuación 
 
+    \begin{align*}
+    a(t) = 500 
+    &\Leftrightarrow 100\ln(t^2+1) = 500
+    \Leftrightarrow \ln(t^2+1) = 5 \\
+    &\Leftrightarrow t^2+1 = e^5
+    \Leftrightarrow t^2 = e^5-1
+    \Leftrightarrow t = \sqrt{e^5-1}
+    \approx 12.1414.
+    \end{align*}
+
+    Por tanto, el número de parásitos en ese instante es
+
+    $$
+    p(\sqrt{e^5-1})
+    = \sqrt[3]{(\sqrt{e^5-1})^2  + 2}
+    = \sqrt[3]{e^5-1  + 2}
+    = \sqrt[3]{e^5+1}
+    \approx 5.3064. 
+    $$
+
+b.  Para ver en qué instante hay 3 parásitos, resolvemos la ecuación 
+
+    $$
+    p(t) = 3 
+    \Leftrightarrow \sqrt[3]{t^2+2} = 3
+    \Leftrightarrow t^2+2 = 3^3
+    \Leftrightarrow t^2 = 27-2
+    \Leftrightarrow t = \sqrt{25}
+    = 5.
+    $$
+
+    Por otro lado, la derivada del número de parásitos con respecto al número de árboles es
+
+    $$
+    \frac{dp}{da}
+    = \frac{dp/dt}{da/dt}
+    = \frac{\frac{2t}{3(t^2+2)^{2/3}}}{\frac{200t}{t^2+1}},
+    $$
+
+    y en el instante $t=5$ se tiene
+
+    $$
+    \frac{dp}{da}(5) 
+    = \frac{\frac{2\cdot 5}{3(5^2+2)^{2/3}}}{\frac{200\cdot 5}{5^2+1}}
+    = \frac{\frac{10}{27}}{\frac{1000}{26}}
+    \approx 0.0096.
+    $$
+
+    Eso quiere decir que por cada parásito más que haya en el ecosistema, el número de árboles aumenta en $0.0096$.
 :::

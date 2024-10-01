@@ -1282,7 +1282,7 @@ p(t) = \sqrt[3]{{t^2  + 2}}.
 \]</span></p>
 <ol type="a">
 <li><p>Calcular el número de parásitos cuando el número de árboles sea 500.</p></li>
-<li><p>La derivada del número de parásitos con respecto al número de árboles cuando el número de parásitos sea 3.</p></li>
+<li><p>La derivada del número de parásitos con respecto al número de árboles cuando el número de parásitos sea 3. ¿Cómo la interpretarías?</p></li>
 </ol>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
@@ -1297,7 +1297,49 @@ Solución
 </div>
 <div id="callout-25" class="callout-25-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-
+<ol type="a">
+<li><p>Para ver en qué instante hay 500 árboles, resolvemos la ecuación</p>
+<p><span class="math display">\[\begin{align*}
+a(t) = 500
+&amp;\Leftrightarrow 100\ln(t^2+1) = 500
+\Leftrightarrow \ln(t^2+1) = 5 \\
+&amp;\Leftrightarrow t^2+1 = e^5
+\Leftrightarrow t^2 = e^5-1
+\Leftrightarrow t = \sqrt{e^5-1}
+\approx 12.1414.
+\end{align*}\]</span></p>
+<p>Por tanto, el número de parásitos en ese instante es</p>
+<p><span class="math display">\[
+p(\sqrt{e^5-1})
+= \sqrt[3]{(\sqrt{e^5-1})^2  + 2}
+= \sqrt[3]{e^5-1  + 2}
+= \sqrt[3]{e^5+1}
+\approx 5.3064.
+\]</span></p></li>
+<li><p>Para ver en qué instante hay 3 parásitos, resolvemos la ecuación</p>
+<p><span class="math display">\[
+p(t) = 3
+\Leftrightarrow \sqrt[3]{t^2+2} = 3
+\Leftrightarrow t^2+2 = 3^3
+\Leftrightarrow t^2 = 27-2
+\Leftrightarrow t = \sqrt{25}
+= 5.
+\]</span></p>
+<p>Por otro lado, la derivada del número de parásitos con respecto al número de árboles es</p>
+<p><span class="math display">\[
+\frac{dp}{da}
+= \frac{dp/dt}{da/dt}
+= \frac{\frac{2t}{3(t^2+2)^{2/3}}}{\frac{200t}{t^2+1}},
+\]</span></p>
+<p>y en el instante <span class="math inline">\(t=5\)</span> se tiene</p>
+<p><span class="math display">\[
+\frac{dp}{da}(5)
+= \frac{\frac{2\cdot 5}{3(5^2+2)^{2/3}}}{\frac{200\cdot 5}{5^2+1}}
+= \frac{\frac{10}{27}}{\frac{1000}{26}}
+\approx 0.0096.
+\]</span></p>
+<p>Eso quiere decir que por cada parásito más que haya en el ecosistema, el número de árboles aumenta en <span class="math inline">\(0.0096\)</span>.</p></li>
+</ol>
 </div>
 </div>
 </div>
