@@ -26,6 +26,8 @@ La gráfica C corresponde a $f(x,y)$.
 La gráfica D corresponde a $h(x,y)$.  
 :::
 
+<!-- TODO: Poner ejercicio de límites -->
+
 :::{#exr-derivada-parcial-gases-perfectos}
 La [ecuación de los gases perfectos](https://es.wikipedia.org/wiki/Ley_de_los_gases_ideales) relaciona la presión, el volumen y la temperatura de un gas perfecto. Esta ecuación se suele escribir de la forma
 
@@ -591,7 +593,7 @@ Y en el instante en que $r=30$ y $h=50$ y empezamos a cambiar el radio con una t
 $$
 \frac{dV}{dt}
 = 2\pi 30\cdot 50\cdot 1 + \pi 30^2 \cdot 2 
-= 2100 \pi \mbox{ cm$^3$/s}.
+= 4800 \pi \mbox{ cm$^3$/s}.
 $$ 
 :::
 
@@ -786,7 +788,9 @@ a.  Tomemos un vector unitario cualquiera $\mathbf{u}=(u_x,u_y)$. Como $\mathbf{
     \approx \pm 0.0037.
     \end{align*}
 
-Por tanto, habrá que cambiar la presión y la temperatura en la dirección del vector $\mathbf{u}=(0.0037, \sqrt{1-0.0037^2}) = (0.0037, 0.9999)$.
+    Por tanto, habrá que cambiar la presión y la temperatura en la dirección del vector $\mathbf{u}=(0.0037, \sqrt{1-0.0037^2}) = (0.0037, 0.9999)$.
+
+    Podríamos haber resuelto el problema de manera más sencillas usando la propiedad de que el vector gradiente es ortogonal a la curva de nivel, y por tanto, para obtener la dirección en la que el volumen permanece constante bastaría con tomar un vector ortogonal al vector gradiente, como por ejemplo $\mathbf{u}=(0.082, 22.4)$.
 :::
 
 :::{#exr-derivada-direccional-capsulas}
@@ -1283,7 +1287,7 @@ Dado un campo escalar $f(x,y)$, donde $(x,y)$ son las coordenadas cartesianas de
 
 :::{.callout-tip collapse="true"}
 ## Solución
-Para calcular $\frac{\partial f}{\partial t}$ suponemos $s$ constante, de manera que las funciones $f(s,t)$ y $g(s,t)$ son funciones de una variable $t$. Aplicando la [regla de la cadena](https://aprendeconalf.es/analisis-manual/13-derivadas-funciones-varias-variables.html#regla-de-la-cadena) para una función de dos variables, se tiene
+Para calcular $\frac{\partial f}{\partial t}$ suponemos $s$ constante, de manera que las funciones $g(s,t)$ y $h(s,t)$ son funciones de una variable $t$. Aplicando la [regla de la cadena](https://aprendeconalf.es/analisis-manual/13-derivadas-funciones-varias-variables.html#regla-de-la-cadena) para una función de dos variables, se tiene
 
 $$
 \frac{\partial f}{\partial t} 
@@ -1291,7 +1295,7 @@ $$
 = \frac{\partial f}{\partial x}\frac{\partial x}{\partial t} + \frac{\partial f}{\partial y}\frac{\partial y}{\partial t}
 $$
 
-Del mismo modo, para calcular $\frac{\partial f}{\partial s}$ suponemos $t$ constante, de manera que las funciones $f(s,t)$ y $g(s,t)$ son funciones de una variable $s$, y aplicando de nuevo la para una función de dos variables, se tiene
+Del mismo modo, para calcular $\frac{\partial f}{\partial s}$ suponemos $t$ constante, de manera que las funciones $g(s,t)$ y $h(s,t)$ son funciones de una variable $s$, y aplicando de nuevo la para una función de dos variables, se tiene
 
 $$
 \frac{\partial f}{\partial s} 
@@ -1914,4 +1918,63 @@ $$f(x,t)=\dfrac{e^t}{x},$$
 donde $t$ es el tiempo y $x$ el número de predadores en la región.
 
 Calcular el número aproximado de individuos en la población para $t=0.1$ y $x=0.9$ utilizando el polinomio de Taylor de segundo grado de la función en el punto $(1,0)$.
+:::
+
+:::{.callout-tip collapse="true"}
+## Solución
+La fórmula del polinomio de Taylor de grado 2 para la función $f(x,t)$ en el punto $(1,0)$ es
+
+$$
+P^2_{f,(1,0)}(x,t) = f(1,0) + \nabla f(1,0)(x-1, y) + \frac{1}{2} (x-1, y)\nabla^2 f(1,0)\binom{x-1}{y}
+$$
+
+Calculando las primeras derivadas parciales obtenemos fácilmente el gradiente
+
+$$
+\nabla f(x,t) = \left(-\frac{e^t}{x^2}, \frac{e^t}{x}\right),
+$$
+
+que en el punto $(1,0)$ vale
+
+$$
+\nabla f(1,0) = (-e^0, e^0) = (-1, 1).
+$$
+
+Calculando las segundas derivadas parciales obtenemos la matriz hessiana
+
+$$
+\nabla^2 f(x,t)
+= \begin{pmatrix}
+\frac{2e^t}{x^3} & -\frac{e^t}{x^2} \\
+-\frac{e^t}{x^2} & \frac{e^t}{x}
+\end{pmatrix}
+$$
+
+que en el punto $(1,0)$ vale
+
+$$
+\nabla^2 f(1,0) 
+= \begin{pmatrix}
+2e^0 & -e^0 \\
+-e^0 & e^0
+\end{pmatrix} 
+= \begin{pmatrix}
+2 & -1 \\
+-1 & 1
+\end{pmatrix}.
+$$
+
+Sustituyendo en la fórmula del polinomio de Taylor de segundo grado se tiene
+
+\begin{align*}
+P^2_{f,(1,0)}(x,t) 
+&= 1 - (x-1) + t + (x-1)^2 - (x-1)t + \frac{1}{2}t^2 \\
+&= x^2 -3x + 2t -xt + \frac{1}{2}t^2 + 3.
+\end{align*}
+
+Finalmente, sustituyendo $x=0.9$ y $t=0.1$ se tiene que el número aproximado de individuos para estos valores es
+
+$$
+P^2_{f,(1,0)}(0.9,0.1) = 0.9^2 -3\cdot 0.9 + 2\cdot 0.1 -0.9\cdot 0.1 + \frac{1}{2}\cdot 0.1^2 + 3 = 1.2245.
+$$
 :::

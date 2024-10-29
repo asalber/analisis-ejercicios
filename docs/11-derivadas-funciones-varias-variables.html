@@ -317,6 +317,7 @@ La gráfica D corresponde a <span class="math inline">\(h(x,y)\)</span>.</p>
 </div>
 </div>
 </div>
+<!-- TODO: Poner ejercicio de límites -->
 <div id="exr-derivada-parcial-gases-perfectos" class="theorem exercise">
 <p><span class="theorem-title"><strong>Ejercicio 10.2</strong></span> La <a href="https://es.wikipedia.org/wiki/Ley_de_los_gases_ideales">ecuación de los gases perfectos</a> relaciona la presión, el volumen y la temperatura de un gas perfecto. Esta ecuación se suele escribir de la forma</p>
 <p><span class="math display">\[
@@ -920,7 +921,7 @@ Solución
 <p><span class="math display">\[
 \frac{dV}{dt}
 = 2\pi 30\cdot 50\cdot 1 + \pi 30^2 \cdot 2
-= 2100 \pi \mbox{ cm$^3$/s}.
+= 4800 \pi \mbox{ cm$^3$/s}.
 \]</span></p>
 </div>
 </div>
@@ -1135,9 +1136,10 @@ V'_{\mathbf{u}}(1,273.1)
 &amp;\Leftrightarrow u_x^2 = \frac{1}{273.1^2+1}
 \Leftrightarrow u_x = \pm \sqrt{\frac{1}{273.1^2+1}}
 \approx \pm 0.0037.
-\end{align*}\]</span></p></li>
-</ol>
+\end{align*}\]</span></p>
 <p>Por tanto, habrá que cambiar la presión y la temperatura en la dirección del vector <span class="math inline">\(\mathbf{u}=(0.0037, \sqrt{1-0.0037^2}) = (0.0037, 0.9999)\)</span>.</p>
+<p>Podríamos haber resuelto el problema de manera más sencillas usando la propiedad de que el vector gradiente es ortogonal a la curva de nivel, y por tanto, para obtener la dirección en la que el volumen permanece constante bastaría con tomar un vector ortogonal al vector gradiente, como por ejemplo <span class="math inline">\(\mathbf{u}=(0.082, 22.4)\)</span>.</p></li>
+</ol>
 </div>
 </div>
 </div>
@@ -1646,13 +1648,13 @@ Solución
 </div>
 <div id="callout-32" class="callout-32-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Para calcular <span class="math inline">\(\frac{\partial f}{\partial t}\)</span> suponemos <span class="math inline">\(s\)</span> constante, de manera que las funciones <span class="math inline">\(f(s,t)\)</span> y <span class="math inline">\(g(s,t)\)</span> son funciones de una variable <span class="math inline">\(t\)</span>. Aplicando la <a href="https://aprendeconalf.es/analisis-manual/13-derivadas-funciones-varias-variables.html#regla-de-la-cadena">regla de la cadena</a> para una función de dos variables, se tiene</p>
+<p>Para calcular <span class="math inline">\(\frac{\partial f}{\partial t}\)</span> suponemos <span class="math inline">\(s\)</span> constante, de manera que las funciones <span class="math inline">\(g(s,t)\)</span> y <span class="math inline">\(h(s,t)\)</span> son funciones de una variable <span class="math inline">\(t\)</span>. Aplicando la <a href="https://aprendeconalf.es/analisis-manual/13-derivadas-funciones-varias-variables.html#regla-de-la-cadena">regla de la cadena</a> para una función de dos variables, se tiene</p>
 <p><span class="math display">\[
 \frac{\partial f}{\partial t}
 = \frac{\partial f}{\partial x}\frac{dx}{dt} + \frac{\partial f}{\partial y}\frac{dy}{dt}
 = \frac{\partial f}{\partial x}\frac{\partial x}{\partial t} + \frac{\partial f}{\partial y}\frac{\partial y}{\partial t}
 \]</span></p>
-<p>Del mismo modo, para calcular <span class="math inline">\(\frac{\partial f}{\partial s}\)</span> suponemos <span class="math inline">\(t\)</span> constante, de manera que las funciones <span class="math inline">\(f(s,t)\)</span> y <span class="math inline">\(g(s,t)\)</span> son funciones de una variable <span class="math inline">\(s\)</span>, y aplicando de nuevo la para una función de dos variables, se tiene</p>
+<p>Del mismo modo, para calcular <span class="math inline">\(\frac{\partial f}{\partial s}\)</span> suponemos <span class="math inline">\(t\)</span> constante, de manera que las funciones <span class="math inline">\(g(s,t)\)</span> y <span class="math inline">\(h(s,t)\)</span> son funciones de una variable <span class="math inline">\(s\)</span>, y aplicando de nuevo la para una función de dos variables, se tiene</p>
 <p><span class="math display">\[
 \frac{\partial f}{\partial s}
 = \frac{\partial f}{\partial x}\frac{dx}{ds} + \frac{\partial f}{\partial y}\frac{dy}{ds}
@@ -2265,6 +2267,63 @@ Solución
 <p><span class="math display">\[f(x,t)=\dfrac{e^t}{x},\]</span></p>
 <p>donde <span class="math inline">\(t\)</span> es el tiempo y <span class="math inline">\(x\)</span> el número de predadores en la región.</p>
 <p>Calcular el número aproximado de individuos en la población para <span class="math inline">\(t=0.1\)</span> y <span class="math inline">\(x=0.9\)</span> utilizando el polinomio de Taylor de segundo grado de la función en el punto <span class="math inline">\((1,0)\)</span>.</p>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-44-contents" aria-controls="callout-44" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-44" class="callout-44-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>La fórmula del polinomio de Taylor de grado 2 para la función <span class="math inline">\(f(x,t)\)</span> en el punto <span class="math inline">\((1,0)\)</span> es</p>
+<p><span class="math display">\[
+P^2_{f,(1,0)}(x,t) = f(1,0) + \nabla f(1,0)(x-1, y) + \frac{1}{2} (x-1, y)\nabla^2 f(1,0)\binom{x-1}{y}
+\]</span></p>
+<p>Calculando las primeras derivadas parciales obtenemos fácilmente el gradiente</p>
+<p><span class="math display">\[
+\nabla f(x,t) = \left(-\frac{e^t}{x^2}, \frac{e^t}{x}\right),
+\]</span></p>
+<p>que en el punto <span class="math inline">\((1,0)\)</span> vale</p>
+<p><span class="math display">\[
+\nabla f(1,0) = (-e^0, e^0) = (-1, 1).
+\]</span></p>
+<p>Calculando las segundas derivadas parciales obtenemos la matriz hessiana</p>
+<p><span class="math display">\[
+\nabla^2 f(x,t)
+= \begin{pmatrix}
+\frac{2e^t}{x^3} &amp; -\frac{e^t}{x^2} \\
+-\frac{e^t}{x^2} &amp; \frac{e^t}{x}
+\end{pmatrix}
+\]</span></p>
+<p>que en el punto <span class="math inline">\((1,0)\)</span> vale</p>
+<p><span class="math display">\[
+\nabla^2 f(1,0)
+= \begin{pmatrix}
+2e^0 &amp; -e^0 \\
+-e^0 &amp; e^0
+\end{pmatrix}
+= \begin{pmatrix}
+2 &amp; -1 \\
+-1 &amp; 1
+\end{pmatrix}.
+\]</span></p>
+<p>Sustituyendo en la fórmula del polinomio de Taylor de segundo grado se tiene</p>
+<p><span class="math display">\[\begin{align*}
+P^2_{f,(1,0)}(x,t)
+&amp;= 1 - (x-1) + t + (x-1)^2 - (x-1)t + \frac{1}{2}t^2 \\
+&amp;= x^2 -3x + 2t -xt + \frac{1}{2}t^2 + 3.
+\end{align*}\]</span></p>
+<p>Finalmente, sustituyendo <span class="math inline">\(x=0.9\)</span> y <span class="math inline">\(t=0.1\)</span> se tiene que el número aproximado de individuos para estos valores es</p>
+<p><span class="math display">\[
+P^2_{f,(1,0)}(0.9,0.1) = 0.9^2 -3\cdot 0.9 + 2\cdot 0.1 -0.9\cdot 0.1 + \frac{1}{2}\cdot 0.1^2 + 3 = 1.2245.
+\]</span></p>
+</div>
+</div>
 </div>
 
 
