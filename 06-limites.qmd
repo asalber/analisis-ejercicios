@@ -154,7 +154,7 @@ a. $\displaystyle \lim_{x\to a}\dfrac{x^n-a^n}{x-a}\quad n\in \mathbb{N}$
 
 a. $\displaystyle \lim_{x\to 1}\dfrac{\sqrt[n]{x}-1}{\sqrt[m]{x}-1} \quad n,m \in \mathbb{Z}$
 
-a. $\displaystyle \lim_{x\to 0}\dfrac{\operatorname{tg}(x)-\operatorname{sen}(x)}{x^3}$
+a. $\displaystyle \lim_{x\to 0}\dfrac{\operatorname{sen}(x)-x}{x^3}$
 :::
 
 ::: {.column}
@@ -182,7 +182,7 @@ a. $\displaystyle \lim_{x\to \pi/2}\sec(x)-\operatorname{tg}(x)$
 
 :::{.callout-tip collapse="true"}
 ## Solución
-a. $\displaystyle \lim_{x\to 2} \dfrac{x^2+x-6}{x-2} =  \lim_{x\to 2} \dfrac{(x+3)(x-2)}{x-2} = \lim_{x\to 2} \frac{x+3}{1}=5$.
+a.  $\displaystyle \lim_{x\to 2} \dfrac{x^2+x-6}{x-2} =  \lim_{x\to 2} \dfrac{(x+3)(x-2)}{x-2} = \lim_{x\to 2} \frac{x+3}{1}=5$.
 
 a. 
 
@@ -191,7 +191,7 @@ a.
     &= \lim_{x\to 1}\dfrac{(x+2)}{(x^2+2x+3)}= \frac{3}{6}=\frac{1}{2}.
     \end{align*}
 
-a. Aplicando la propiedad trigonométrica $\operatorname{sen}(x+a)=\operatorname{sen}(x)\cos(a)+\cos(x)\operatorname{sen}(a)$, se tiene
+a.  Aplicando la propiedad trigonométrica $\operatorname{sen}(x+a)=\operatorname{sen}(x)\cos(a)+\cos(x)\operatorname{sen}(a)$, se tiene
 
     \begin{align*}
     \lim_{x\to 0}\frac{\operatorname{sen}(x+a)-\operatorname{sen}(a)}{x} &= \lim_{x\to 0}\frac{\operatorname{sen}(x)\cos(a)+\cos(x)\operatorname{sen}(a)-\operatorname{sen}(a)}{x} \\ 
@@ -202,7 +202,7 @@ a. Aplicando la propiedad trigonométrica $\operatorname{sen}(x+a)=\operatorname
     \end{align*}
     (1)$\operatorname{sen}(x)\approx x$ y $\cos(x)\approx x^2/2$.
 
-a. Como $x<e^x$ $\forall x>0$, se tiene que 
+a.  Como $x<e^x$ $\forall x>0$, se tiene que 
 
     $$
     0<\frac{x}{2}<e^{x/2} \Rightarrow 0< x < 2e^{x/2} \Rightarrow  0< \frac{x}{e^{2x}} < \frac{2e^{x/2}}{e^{2x}} = \frac{2}{e^{3x/2}},$$
@@ -214,15 +214,15 @@ a. Como $x<e^x$ $\forall x>0$, se tiene que
     $$\lim_{x\to\infty}\dfrac{x^2-3x+2}{e^{2x}} = \lim_{x\to\infty}\dfrac{x^2}{e^{2x}}-3\lim_{x\to\infty} \frac{x}{e^{2x}} + \lim_{x\to\infty} \frac{2}{e^{2x}} = 0.
     $$
 
-a. Cuando $x\to\infty$, $\frac{\log(x^2-1)}{x+2}\to \frac{\infty}{\infty}$ que es indeterminado. Aplicando la regla de L'Hôpital se tiene,
+a.  Cuando $x\to\infty$, $\frac{\log(x^2-1)}{x+2}\to \frac{\infty}{\infty}$ que es indeterminado. Aplicando la regla de L'Hôpital se tiene,
 
     $$
     \lim_{x\to\infty}\dfrac{\log(x^2-1)}{x+2} =\lim_{x\to\infty}\frac{1/x}{1} =0.
     $$
 
-a. $\displaystyle \lim_{x\to 1}\frac{\log(1/x)}{\operatorname{tg}(x+\frac{\pi}{2})} = \frac{\lim_{x\to 1}\log(1/x)}{\lim_{x\to 1}\operatorname{tg}(x+\frac{\pi}{2})} = \frac{\log(1)}{\operatorname{tg}(1+\frac{\pi}{2})}=0$
+a.  $\displaystyle \lim_{x\to 1}\frac{\log(1/x)}{\operatorname{tg}(x+\frac{\pi}{2})} = \frac{\lim_{x\to 1}\log(1/x)}{\lim_{x\to 1}\operatorname{tg}(x+\frac{\pi}{2})} = \frac{\log(1)}{\operatorname{tg}(1+\frac{\pi}{2})}=0$
 
-a. $x^n-a^n = (x-a)(x^{n-1}+ax^{n-2}+a^2x^{n-3}+\cdots + a^{n-2}x+a^{n-1}$ $\forall n\in\mathbb{N}$, $n\geq 2$. Así pues, 
+a.  $x^n-a^n = (x-a)(x^{n-1}+ax^{n-2}+a^2x^{n-3}+\cdots + a^{n-2}x+a^{n-1})$ $\forall n\in\mathbb{N}$, $n\geq 2$. Así pues, 
 
     \begin{align*}
     \lim_{x\to a}\dfrac{x^n-a^n}{x-a} &= \lim_{x\to a}\frac{(x-a)(x^{n-1}+ax^{n-2}+\cdots + a^{n-2}x+a^{n-1})}{x-a} \\ 
@@ -230,20 +230,27 @@ a. $x^n-a^n = (x-a)(x^{n-1}+ax^{n-2}+a^2x^{n-3}+\cdots + a^{n-2}x+a^{n-1}$ $\for
     &= a^{n-1}+\stackrel{n}{\dots}+a^{n-1} = na^{n-1}
     \end{align*}
 
-a. Cuando $x\to 1$ $\frac{\sqrt[n]{x}-1}{\sqrt[m]{x}-1}\to \frac{0}{0}$ que es indeterminado. Aplicando la regla de L'Hôpital se tiene 
+a.  Cuando $x\to 1$ $\frac{\sqrt[n]{x}-1}{\sqrt[m]{x}-1}\to \frac{0}{0}$ que es indeterminado. Usando el resultado del límite anterior se tiene
 
     \begin{align*}
-    \lim_{x\to 1}\frac{\sqrt[n]{x}-1}{\sqrt[m]{x}-1} &= \lim_{x\to 1}\frac{x^{1/n}-1}{x^{1/m}-1} = \lim_{x\to 1}\frac{\frac{1}{n}x^{1/n-1}}{\frac{1}{m}x^{1/m-1}}\\  
-    &= \lim_{x\to 1}\frac{mx^{1/n-1}}{nx^{1/m-1}} = \frac{m}{n}.
+    \lim_{x\to 1}\frac{\sqrt[n]{x}-1}{\sqrt[m]{x}-1} 
+    &= \lim_{x\to 1}\frac{x^{1/n}-1}{x^{1/m}-1} 
+    = \lim_{x\to 1}\frac{\frac{x^{1/n}-1}{x-1}}{\frac{x^{1/m}-1}{x-1}} \\
+    &= \frac{1/m}{1/n}   
+    = \frac{m}{n}.
     \end{align*}
 
-a. Como $\operatorname{sen}(x)\approx\operatorname{tg}(x)\approx x$ cuando $x\to 0$, se tiene
+a.  Cuando $x\to 0$ $\frac{\operatorname{sen}(x)-x}{x^3}\to \frac{0}{0}$ que es indeterminado. Aplicando la regla de L'Hôpital varias veces se tien
 
-    $$
-    \lim_{x\to 0}\frac{\operatorname{tg}(x)-\operatorname{sen}(x)}{x^3} = \lim_{x\to 0}\frac{x-x}{x^3} = \lim_{x\to 0}\frac{0}{x^3} = 0.
-    $$
+    \begin{align*}
+    \lim_{x\to 0}\frac{\operatorname{sen}(x)-x}{x^3} 
+    &= \lim_{x\to 0}\frac{\cos(x) -1}{3x^2} \tag{L'Hôpital} \\
+    &= \lim_{x\to 0}\frac{-\sin(x)}{6x} \tag{L'Hôpital} \\
+    &= \lim_{x\to 0}\frac{-\cos(x)}{6} \tag{L'Hôpital} \\
+    &= -\frac{1}{6}.
+    \end{align*}
 
-a. Aplicando propiedades trigonométricas se tiene
+a.  Aplicando propiedades trigonométricas se tiene
 
     \begin{align*}
     \lim_{x\to \pi/4}\frac{\operatorname{sen}(x)-\cos(x)}{1-\operatorname{tg}(x)} &= \lim_{x\to \pi/4}\frac{\operatorname{sen}(x)-\cos(x)}{1-\frac{\operatorname{sen}(x)}{\cos(x)}}\\ 
@@ -251,20 +258,25 @@ a. Aplicando propiedades trigonométricas se tiene
     & = \lim_{x\to \pi/4} -\cos(x) = \frac{-\sqrt{2}}{2}.
     \end{align*}
 
-a. Cuando $x\to 0$, $x^2e^{1/x^2}\to 0\cdot \infty$, que es indeterminado. Transformando la indeterminación en una de tipo cociente y aplicando la regla de L'Hôpital se tiene
+a.  Cuando $x\to 0$, $x^2e^{1/x^2}\to 0\cdot \infty$, que es indeterminado. Transformando la indeterminación en una de tipo cociente y aplicando la regla de L'Hôpital se tiene
 
     \begin{align*}
     \lim_{x\to 0}x^2e^{1/x^2} &= \lim_{x\to 0}\frac{e^{1/x^2}}{1/x^2} = \lim_{x\to 0}\frac{e^{1/x^2}\frac{-2}{x^3}}{-2/x^3} = \lim_{x\to 0} e^{1/x^2} =\infty.
     \end{align*}
 
-a. Cuando $x\to 0$, $\ln(1+x)\approx x$, de manera que
+a.  Cuando $x\to 0$, $\left(1+x\right)^{1/x}\to 1^\infty$, que es una indeterminación de tipo potencia. Aplicando el logaritmo y su inversa, la función exponencial, se convierte en en una indeterminación de tipo cociente.
 
     \begin{align*}
-    \lim_{x\to 0}\left(1+x\right)^{1/x} &= \lim_{x\to 0}e^{\ln(\left(1+x\right)^{1/x})} = e^{\lim_{x\to 0}\frac{\ln(1+x)}{x}}\\  
-    &= e^{\lim_{x\to 0}\frac{x}{x}} = e^{\lim_{x\to 0}1} = e^1 = e.
+    \lim_{x\to 0}\left(1+x\right)^{1/x} 
+    &= \lim_{x\to 0}e^{\ln(\left(1+x\right)^{1/x})}
+    = e^{\lim_{x\to 0}\frac{\ln(1+x)}{x}} \tag{$\ln(1+x)\approx x$}\\  
+    &= e^{\lim_{x\to 0}\frac{x}{x}} 
+    = e^{\lim_{x\to 0}1} 
+    = e^1 
+    = e.
     \end{align*}
 
-a. Cuando $x\to\infty$ $\sqrt[x]{x^2}=x^{2/x}\to \infty^0$, que es intedeterminado. Transformando la indeterminación en una de tipo cociente y aplicando la regla de L'Hôpital, se tiene
+a.  Cuando $x\to\infty$ $\sqrt[x]{x^2}=x^{2/x}\to \infty^0$, que es indeterminado. Transformando la indeterminación en una de tipo cociente y aplicando la regla de L'Hôpital, se tiene
 
     \begin{align*}
     \lim_{x\to \infty} \sqrt[x]{x^2} 
@@ -272,28 +284,22 @@ a. Cuando $x\to\infty$ $\sqrt[x]{x^2}=x^{2/x}\to \infty^0$, que es intedetermina
     & = e^{\lim_{x\to \infty} \frac{2\ln(x)}{x}} = e^{\lim_{x\to \infty} \frac{\frac{2}{x}}{1}} = 1.
     \end{align*}
 
-a.  Cuando $x\to 0$ $\operatorname{tg}(x)\approx x$, de manera que
-
-    $$
-    \lim_{x\to 0}\left(\dfrac{1}{x}\right)^{\operatorname{tg}(x)}
-    = lim_{x\to 0}\left(\dfrac{1}{x}\right)^x 
-    = \infty^0,
-    $$
-
-    que es una indeterminación de tipo potencia. Para convertirla en una de tipo cociente aplicamos el logaritmo y su inversa, la función exponencial.
+a.  Cuando $x\to 0^+$ $\left(\dfrac{1}{x}\right)^{\operatorname{tg}(x)} \to = \infty^0$, que es una indeterminación de tipo potencia. Para convertirla en una de tipo cociente aplicamos el logaritmo y su inversa, la función exponencial.
 
     \begin{align*}
-    \lim_{x\to 0}\left(\dfrac{1}{x}\right)^x 
-    &= \lim_{x\to 0}e^{\ln\left(\left(\frac{1}{x}\right)^x\right)}
-    = e^{\lim_{x\to 0} x\ln\left(\frac{1}{x}\right)} \\
-    &= e^{\lim_{x\to 0} \frac{\ln\left(\frac{1}{x}\right)}{\frac{1}{x}}}
-    = e^{\lim_{x\to 0} \frac{x\frac{-1}{x^2}}{\frac{-1}{x^2}}} \tag{L'Hôpital} \\
-    &= e^{\lim_{x\to 0} x} 
-    = e^0 
+    \lim_{x\to 0^+}\left(\dfrac{1}{x}\right)^{\operatorname{tg}(x)}
+    &= \lim_{x\to 0^+}e^{\ln\left(\left(\frac{1}{x}\right)^{\operatorname{tg}(x)}\right)}
+    = e^{\lim_{x\to 0^+} \operatorname{tg}(x) \ln\left(\frac{1}{x}\right)} \\
+    &= e^{\lim_{x\to 0^+} \frac{\ln\left(\frac{1}{x}\right)}{\frac{1}{\operatorname{tg}(x)}}}
+    = e^{\lim_{x\to 0^+} \frac{x\frac{-1}{x^2}}{\frac{-1}{\operatorname{sen}(x)^2}}} \tag{L'Hôpital} \\
+    &= e^{\lim_{x\to 0^+} \frac{\operatorname{sen}(x)^2}{x}} 
+    = e^{\lim_{x\to 0^+} \operatorname{sen}(x)\frac{\operatorname{sen}(x)}{x}} \tag{$\operatorname{sen}(x)\approx x$} \\
+    &= e^{\lim_{x\to 0^+} \operatorname{sen}(x)} 
+    = e^0
     = 1.
     \end{align*}
 
-a.  $\lim_{x\to 0}\cos(x)^{1/\operatorname{sen}(x)} = 1^\infty$, que es una indeterminación de tipo potencia. Para convertirla en una de tipo cociente aplicamos el logaritmo y su inversa, la función exponencial.
+a.  Cuando $x\to 0$, $\cos(x)^{1/\operatorname{sen}(x)} \to 1^\infty$, que es una indeterminación de tipo potencia. Para convertirla en una de tipo cociente aplicamos el logaritmo y su inversa, la función exponencial.
 
     \begin{align*}
     \lim_{x\to 0}\cos (x)^{1/\operatorname{sen}(x)} 
@@ -322,7 +328,7 @@ a.  Como el signo del exponente de la función exponencial $1/x$ depende de si $
 
     Como los límites laterales son distintos, no existe el límite global.
 
-a.  $\lim_{x\to \infty} \sqrt{x^2+x+1}-\sqrt{x^2-2x-1} = \infty-\infty$, que es una indeterminación de tipo diferencia. Para transformarla en una indeterminación de tipo cociente multiplicamos y dividimos por el conjugado.
+a.  Cuando $x\to \infty$, $\sqrt{x^2+x+1}-\sqrt{x^2-2x-1} \to \infty-\infty$, que es una indeterminación de tipo diferencia. Para transformarla en una indeterminación de tipo cociente multiplicamos y dividimos por el conjugado.
 
     \begin{align*}
     \lim_{x\to \infty} \sqrt{x^2+x+1}-\sqrt{x^2-2x-1}
@@ -334,14 +340,14 @@ a.  $\lim_{x\to \infty} \sqrt{x^2+x+1}-\sqrt{x^2-2x-1} = \infty-\infty$, que es 
     = \frac{3}{2}.
     \end{align*}
 
-a. $\lim_{x\to \pi/2}\sec(x)-\operatorname{tg}(x) = \infty-\infty$, que es una indeterminación del tipo diferencia. Ahora bien, en este caso si escribimos la secante en función del coseno y la tangente en función de seno y el coseno, la indeterminación se transforma en otra de tipo cociente.
+a.  Cuando $x\to \pi/2$, $\sec(x)-\operatorname{tg}(x) \to \infty-\infty$, que es una indeterminación del tipo diferencia. Ahora bien, en este caso si escribimos la secante en función del coseno y la tangente en función de seno y el coseno, la indeterminación se transforma en otra de tipo cociente.
 
     \begin{align*}
     \lim_{x\to \pi/2}\sec(x)-\operatorname{tg}(x)
     &= \lim_{x\to \pi/2}\frac{1}{\cos(x)}-\frac{\operatorname{sen}(x)}{\cos(x)}
     = \lim_{x\to \pi/2}\frac{1-\operatorname{sen}(x)}{\cos(x)} \\
     &= \lim_{x\to \pi/2}\frac{-\cos(x)}{-\operatorname{sen}(x)}
-    = 0.
+    = 0. \tag{L'Hôpital}
     \end{align*}
 :::
 
