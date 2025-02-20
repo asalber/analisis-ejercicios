@@ -844,7 +844,7 @@ La distancia en kilómetros que recorre un coche de alquiler con 1 litro de gaso
 
 :::{.callout-tip collapse="true"}
 ## Solución
-Como la distancia recorrida a una velocidad $x$ es $d(x)=18-\frac{x}{20}$ y, como la velocidad es $x=\frac{d(x)}{t}$, el tiempo necesario para recorrer esa distancia es $\frac{d(x)}{x}$, de manera que el coste del alquiler para recorrer esa distancia es $\frac{d(x)}{x}10$. A esto hay que sumar el precio del litro de gasolina necesario para recorrer esa distancia, de manera que el coste de recorrer esa distancia es $\frac{d(x)}{x}10+2$. Por tanto, el coste por kilómetro para una velocidad $x$ viene dado por la función 
+Como la distancia recorrida a una velocidad $x$ es $d(x)=18-\frac{x}{20}$ y, como la velocidad es $x=\frac{d(x)}{t}$, el tiempo necesario para recorrer esa distancia es $\frac{d(x)}{x}$, de manera que el coste del alquiler para recorrer esa distancia es $\frac{d(x)}{x}5$. A esto hay que sumar el precio del litro de gasolina necesario para recorrer esa distancia, de manera que el coste de recorrer esa distancia es $\frac{d(x)}{x}5+2$. Por tanto, el coste por kilómetro para una velocidad $x$ viene dado por la función 
 
 $$
 c(x)=\frac{\frac{d(x)}{x}5+2}{d(x)} = \frac{-35x-1800}{x^2-360x}
@@ -1055,7 +1055,7 @@ $$
 :::
 
 :::{#exr-derivadas-parametricas-1}
-La cantidad de árboles en un ecosistema depende del tiempo según la función $a(t)=100\ln(t^2+1)$, y la cantidad de un determinado parásito de los árboles, también depende del tiempo según la función $p(t) = \sqrt[3]{t^2+ 2}$. Calcular la tasa de variación instantánea del número de parásitos en relación al número de árboles, en el instante en que el número de parásitos es $3$.
+La cantidad de árboles en un ecosistema depende del tiempo según la función $a(t)=100\ln(t^2+1)$, y la cantidad de un determinado parásito de los árboles, también depende del tiempo según la función $p(t) = \sqrt[3]{t^2+ 2}$. Calcular la tasa de variación instantánea del número de árboles en relación al número de parásitos, en el instante en que el número de parásitos es $3$.
 :::
 
 :::{.callout-tip collapse="true"}

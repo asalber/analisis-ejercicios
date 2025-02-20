@@ -31,7 +31,7 @@ Sean $a,b,c\in\mathbb{R}$ tales que $a<b<c$ y sea $A=\{a\}\cup (b,c)$. Calcular 
 
 :::{.callout-tip collapse="true"}
 ## Solución
-Como el interior de un conjunto con un solo punto es vacío y el interior de un intervalo abierto es el propio intervalo abierto (ver [proposición](https://aprendeconalf.es/analisis-manual/topologia-reales.html#prp-interior-intervalo-abierto)), se tiene que $\operatorname{Int}(A)=(a,b)$. Por otro lado, $\overline{A}=(-\infty,a)\cup (a,b]\cup [c,\infty)$, que al ser la unión de intervalos abiertos y semiabiertos se tiene que $\operatorname{Ext}(A)=\operatorname{Int}(\overline{A})=(-\infty,a)\cup (a,b)\cup (c,\infty)$.  Finalmente, $\operatorname{Fr}(A)=\{a,b,c\}$, ya que cualquier entorno de estos puntos contiene puntos de $A$ y de $\overline{A}$.
+Como el interior de un conjunto con un solo punto es vacío y el interior de un intervalo abierto es el propio intervalo abierto (ver [proposición](https://aprendeconalf.es/analisis-manual/03-topologia-reales.html#prp-interior-intervalo-abierto)), se tiene que $\operatorname{Int}(A)=(b,c)$. Por otro lado, $\overline{A}=(-\infty,a)\cup (a,b]\cup [c,\infty)$, que al ser la unión de intervalos abiertos y semiabiertos se tiene que $\operatorname{Ext}(A)=\operatorname{Int}(\overline{A})=(-\infty,a)\cup (a,b)\cup (c,\infty)$.  Finalmente, $\operatorname{Fr}(A)=\{a,b,c\}$, ya que cualquier entorno de estos puntos contiene puntos de $A$ y de $\overline{A}$.
 :::
 
 :::{#exr-frontera-enteros}

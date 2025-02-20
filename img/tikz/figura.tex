@@ -36,26 +36,25 @@
 
 \tikzset{export as png}
 
-\tikzsetnextfilename{grafca-ext-1}
-\begin{tikzpicture}[x=5cm,y=5cm]
-    \begin{axis}[
-    scale only axis,
-    axis x line=middle,
-    axis y line=left,
-    xlabel={$x$},
-    ylabel={$y$},
-    every axis x label/.style={at={(ticklabel* cs:1)}, anchor=west,},
-    every axis y label/.style={at={(ticklabel* cs:1)}, anchor=south,},
-    ymin=-3, ymax=3,
-    xtick={1.64, 2.41, 3.47, 4.46, 5.19},
-    xticklabels={$a$, $b$, $c$, $d$, $e$},
-    xticklabel style={yshift=-3ex, anchor=south},
-    height=5cm,
-    yticklabels={,,}
-    ]
-    \addplot[domain=-0.62:8.56, samples=200, smooth, myblue,thick] {1.7+3*(x-2)-4.3*(x-2)^2+(x-2)^3}
-    node[left, pos=0.36] {$f'(x)$};
-    \end{axis}
+\tikzsetnextfilename{ventana}
+\begin{tikzpicture}[scale = 1]
+    
+       % Define the length l
+       \def\l{2}
+       \useasboundingbox (-0.5,-1) rectangle (2*\l+1,1.7*\l+1.0);
+       % Draw the rectangle of base 2l and height l
+       \draw (0,0) rectangle (2*\l,\l);
+       
+       % The semicircle of diameter l on top
+       \draw (2*\l,\l) arc (0:180:\l);
+       
+       % Label the base (2l)
+       % Draw a line under the rectangle and put a label
+       \draw[<->] (0,-0.3) -- (2*\l,-0.3) node[midway, below] {$l$};
+       
+       % Label the height (l)
+       % Draw a line to the left side of the rectangle and put a label
+       \draw[<->] (4.3,0) -- (4.3,\l) node[midway, right] {$h$};
     \end{tikzpicture}
 \end{document}
 
