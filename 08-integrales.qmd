@@ -235,10 +235,6 @@ $$
 $$
 :::
 
-:::{#exr-funcion-discontinua-integrable}
-Demostrar que si $f$ es una función acotada en el intervalo $[a,b]$ que es continua en $[a,b]\setminus\{c\}$, con $c\in[a,b]$, entonces $f$ es integrable Riemann en $[a,b]$
-:::
-
 :::{#exr-integrales-definidas}
 Calcular las siguientes integrales definidas
 
@@ -290,6 +286,96 @@ h. $\int_1^2 \frac{1+\sqrt{x}}{\sqrt{x}}\,dx = \left[x+2\sqrt{x}\right]_1^2 = -2
 i. $\int_{-\pi/2}^{\pi/2} e^x\cos(x)\,dx = \left[e^x\left(\frac{\operatorname{sen}(x)+\cos(x)}{2}\right)\right]_{-\pi/2}^{\pi/2} = \frac{e^{-\pi/2}+e^{\pi/2}}{2}$.
 
 j. $\int_{0}^{\pi/4}\frac{tg(x)^3}{\cos(x)^2}\,dx = \left[\frac{\operatorname{tg}(x)^4}{4}\right]_0^{\pi/4} = \frac{1}{4}$.
+:::
+
+:::{#exr-espacio-recorrido-movil}
+Un vehículo parte del origen y se desplaza en línea recta con velocidad constante de 60 km/h. Calcular el espacio recorrido por el vehículo a las 2 horas. 
+
+Si a partir de las 2 horas el vehículo se mueve con una aceleración constante de 10 km/h$^2$, ¿cuál será la velocidad del vehículo a las 4 horas? ¿Y su posición?
+:::
+
+:::{.callout-tip collapse="true"}
+## Solución
+La velocidad del vehículo es la variación del espacio recorrido respecto al tiempo, de manera que si $s(t)$ es la función que indica el espacio recorrido en cada instante, se tiene que $s'(t)=60$ km/h. Como el vehículo se desplaza de forma continua, $s(t)$ es una función continua en el intervalo $[0,2]$, y aplicando el teorema fundamental del cálculo tenemos que el espacio recorrido es
+
+$$
+s(2) - s(0) 
+= \int_0^2 s'(t)\,dt 
+= \int_0^2 60\,dt 
+= [60t]_0^2
+= 60\cdot 2 - 60\cdot 0
+= 120\text{ km}.
+$$
+
+Del mismo modo, la aceleración del vehículo es la variación de la velocidad respeto al tiempo, de manera que si $v(t)$ es la función que indica la velocidad del vehículo en cada instante, se tiene que $v'(t)=10$ m/s$^2$. Aplicando de nuevo el  teorema fundamental del cálculo se tiene que
+
+$$
+v(4) - v(2) 
+= \int_0^2 v'(t)\,dt
+= \int_0^2 10\,dt
+= [10t]_0^2
+= 10\cdot 4 - 10\cdot 2
+= 20\text{ km/h}.
+$$
+
+de donde se deduce que $v(4) = v(2) + 20 = 60 + 20 = 80$ km/h. 
+
+De igual modo podemos obtener la velocidad en cualquier instante del intervalo $[2,4]$.
+
+$$
+v(t) - v(2)
+= \int v'(t)\,dt 
+= \int 10\,dt 
+= [10t]_2^t
+= 10t - 20\text{ km/h}.
+$$
+
+de donde se deduce que $v(t) = v(2) + 10t - 20 = 60 + 10t -20 = 10t+40$. Por tanto, el espacio recorrido por el vehículo en el intervalo $[2,4]$ es
+
+$$
+s(4) - s(2)
+= \int_2^4 v(t)\,dt
+= \int_2^4 10t + 40\,dt
+= [5t^2 + 40t]_2^4
+= 140 \text{ km}.
+$$
+
+y la posición del vehículo a las $4$ horas es $s(4) = s(2) + 140 = 120 + 140 = 260$ km.
+:::
+
+:::{#exr-desintegracion-radioactiva}
+Un cuerpo humano de peso medio tiene alrededor de $3\cdot 10^{14}$ átomos de carbono 14 en vida. Después de morir, los átomos de C14 comienzan a desintegrarse a un ritmo dado por la función $-3.63\cdot 10^{10}e^{-1.21\cdot 10^{-4}t}$ átomos por año. Si se ha encontrado unos restos humanos con solo $0.3\cdot 10^{14}$ átomos de C14, ¿cuánto tiempo ha pasado desde la muerte de la persona?
+:::
+
+:::{.callout-tip collapse="true"}
+## Solución
+Llamando $c(t)$ a la cantidad de átomos de C14 que contiene el cuerpo en cada instante $t$, se tiene que $c'(t) = -3.63\cdot 10^{10}e^{-1.21\cdot 10^{-4}t}$. Aplicando el teorema fundamental del cálculo, se tiene que la cantidad de átomos de C14 que se desintegran en un intervalo de tiempo $[0,t]$ es
+
+\begin{align*}
+c(t) - c(0) 
+&= \int_0^t c'(t)\,dt
+= \int_0^t -3.63\cdot 10^{10}e^{-1.21\cdot 10^{-4}t}\,dt \\
+&= [\frac{3.63\cdot 10^{10}}{1.21\cdot 10^{-4}}e^{-1.21\cdot 10^{-4}t}]_0^t
+= \frac{-3.63\cdot 10^{10}}{-1.21\cdot 10^{-4}}(e^{-1.21\cdot 10^{-4}t}-1) \\
+&= 3\cdot 10^{14}(e^{-1.21\cdot 10^{-4}t}-1),
+\end{align*}
+
+de donde se deduce que 
+
+\begin{align*}
+c(t) 
+&= c(0) + 3\cdot 10^{14}(e^{-1.21\cdot 10^{-4}t}-1) \\
+&= 3\cdot 10^{14} + 3\cdot 10^{14}(e^{-1.21\cdot 10^{-4}t}-1)
+= 3\cdot 10^{14}(e^{-1.21\cdot 10^{-4}t}).
+\end{align*}
+
+Para calcular el tiempo que tarda en desaparecer el 90\% de los átomos de C14, basta con resolver la ecuación
+
+$$
+3\cdot 10^{14}(e^{-1.21\cdot 10^{-4}t}) = 0.3\cdot 10^{14}
+\Leftrightarrow e^{-1.21\cdot 10^{-4}t} = 0.1
+\Leftrightarrow t = \frac{\ln(0.1)}{-1.21\cdot 10^{-4}} \approx 19030 \mbox{años.}
+$$
 :::
 
 :::{#exr-areas-1}
