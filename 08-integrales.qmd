@@ -1123,7 +1123,7 @@ a.  Tomando $f(x)=x^2$, la logitud de la curva de la gráfica de $f$ en el inter
     = \int_0^1 \sqrt{1+4x^2}\,dx \\
     &= \int_0^{\operatorname{arctg}(2)} \sec(\theta)\frac{1}{2}\sec(\theta)^2\,d\theta 
     = \frac{1}{2}\int_0^{\operatorname{arctg}(2)} \sec(\theta)^3\,d\theta \tag{1} \\ 
-    &= \left[\frac{1}{2} \frac{\sec(\theta)\operatorname{tg}(\theta)+\ln|\sec(\theta)+\operatorname(tg)(\theta)|}{2}\right]_0^{\operatorname{arctg}(2)} \tag{2}\\
+    &= \left[\frac{1}{2} \frac{\sec(\theta)\operatorname{tg}(\theta)+\ln|\sec(\theta)+\operatorname{tg}(\theta)|}{2}\right]_0^{\operatorname{arctg}(2)} \tag{2}\\
     &= \left[\frac{\sqrt{1+4x^2} 2x+\ln(\sqrt{1+4x^2}+2x)}{4}\right]_0^1 \tag{Deshacer 1}\\
     &= \frac{\sqrt{1+4\cdot 1^2} 2+\ln(\sqrt{1+4\cdot 1^2}+2)}{4} \\
     &= \frac{2\sqrt{5}+\ln(\sqrt{5}+2)}{4}
@@ -1287,15 +1287,16 @@ sustituyendo en la integral anterior se tiene
 &= 2\pi \int_{-2}^2 \sqrt{1-\frac{3x^2}{16}}\,dx \\
 &= 2\pi \int_{-2}^2 \frac{1}{4}\sqrt{16-3x^2}\,dx \\
 &= \frac{\pi}{2} \int_{-2}^2 \sqrt{4^2-(\sqrt{3}x)^2}\,dx \\
-&= \frac{\pi}{2} \int_{\operatorname{arcsen}(-\sqrt{3}/2)}^{\operatorname{arcsen}(\sqrt{3}/2)} \sqrt{4^2-4^2\operatorname{sen(\theta)^2}}\frac{4}{\sqrt{3}}\cos(\theta)\,d\theta \tag{1} \\
-&= \frac{\pi}{2} \int_{\operatorname{arcsen}(-\sqrt{3}/2)}^{\operatorname{arcsen}(\sqrt{3}/2)} 4\cos(\theta)\frac{4}{\sqrt{3}}\cos(\theta)\,d\theta \\
-&= \frac{8\pi}{\sqrt{3}} \int_{\operatorname{arcsen}(-\sqrt{3}/2)}^{\operatorname{arcsen}(\sqrt{3}/2)} \cos(\theta)^2\,d\theta \\
-&= \frac{8\pi}{\sqrt{3}} \int_{\operatorname{arcsen}(-\sqrt{3}/2)}^{\operatorname{arcsen}(\sqrt{3}/2)} \frac{1+\cos(2\theta)}{2}\,d\theta \\
-&= \frac{8\pi}{\sqrt{3}}\left[\frac{\theta}{2}+\frac{1}{4}\operatorname{sen}(2\theta)\right]_{\operatorname{arcsen}(-\sqrt{3}/2)}^{\operatorname{arcsen}(\sqrt{3}/2)} \\
-&= \frac{8\pi}{\sqrt{3}}\left[\frac{\theta}{2}+\frac{1}{2}\operatorname{sen}(\theta)\cos(\theta)\right]_{\operatorname{arcsen}(-\sqrt{3}/2)}^{\operatorname{arcsen}(\sqrt{3}/2)} \\
-&=\frac{8\pi}{\sqrt{3}}\left(\frac{1}{2}\operatorname{arcsen}(\sqrt{3}/2)+\frac{1}{2}\operatorname{sen}(\operatorname{arcsen}(\sqrt{3}/2))\cos(\operatorname{arcsen}(\sqrt{3}/2)) - \frac{1}{2}\operatorname{arcsen}(-\sqrt{3}/2) - \frac{1}{2}\operatorname{sen}(\operatorname{arcsen}(-\sqrt{3}/2))\cos(\operatorname{arcsen}(-\sqrt{3}/2))\right)\\
-&=\frac{8\pi}{\sqrt{3}}\left(\operatorname{arcsen}(\sqrt{3}/2)+\frac{\sqrt{3}}{4}\right)\\
-&= \frac{8\pi^2}{3\sqrt{3}}2\pi
+&= \frac{\pi}{2} \int_{\operatorname{arcsen}(\sqrt{3}/2)}^{\operatorname{arcsen}(-\sqrt{3}/2)} \sqrt{4^2-4^2\operatorname{sen(\theta)^2}}\frac{4}{\sqrt{3}}\cos(\theta)\,d\theta \tag{1} \\
+&= \frac{\pi}{2} \int_{-\pi/3}^{\pi/3} 4\cos(\theta)\frac{4}{\sqrt{3}}\cos(\theta)\,d\theta \\
+&= \frac{8\pi}{\sqrt{3}} \int_{-\pi/3}^{\pi/3} \cos(\theta)^2\,d\theta \\
+&= \frac{8\pi}{\sqrt{3}} \int_{-\pi/3}^{\pi/3} \frac{1+\cos(2\theta)}{2}\,d\theta \\
+&= \frac{8\pi}{\sqrt{3}}\left[\frac{\theta}{2}+\frac{1}{4}\operatorname{sen}(2\theta)\right]_{-\pi/3}^{\pi/3} \\
+&= \frac{8\pi}{\sqrt{3}}\left[\frac{\theta}{2}+\frac{1}{2}\operatorname{sen}(\theta)\cos(\theta)\right]_{-\pi/3}^{\pi/3} \\
+&= \frac{8\pi}{\sqrt{3}}\left(\frac{\pi/3}{2}+\frac{1}{2}\operatorname{sen}(\pi/3)\cos(\pi/3) - \frac{-\pi/3}{2}-\frac{1}{2}\operatorname{sen}(-\pi/3)\cos(-\pi/3)\right) \\
+&=\frac{8\pi}{\sqrt{3}}\left(\frac{\pi}{6}+\frac{1}{2}\frac{\sqrt{3}}{2}\frac{1}{2} - \frac{-\pi}{6} + \frac{1}{2}\frac{-\sqrt{3}}{2}\frac{1}{2}\right)\\
+&=\frac{8\pi}{\sqrt{3}}\left(\frac{\pi}{3}+\frac{\sqrt{3}}{4}\right)\\
+&= \frac{8\pi^2}{3\sqrt{3}} + 2\pi
 \approx 21.4784  \mbox{ m}^2.
 \end{align*}
 
