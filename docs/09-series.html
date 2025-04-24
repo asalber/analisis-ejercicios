@@ -765,6 +765,29 @@ A_n &amp;= \sum_{i=2}^n \frac{1}{i-1}-\frac{1}{i+1} \\
 </div>
 </div>
 </div>
+<div id="exr-criterio-integral" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 8.30</strong></span> Estudiar la convergencia de las siguientes series y calcular sus sumas de manera aproximada cuando converjan.</p>
+<ol type="a">
+<li><p><span class="math inline">\(\sum \frac{1}{n^2+1}\)</span></p></li>
+<li><p><span class="math inline">\(\sum \frac{1}{n\ln(n)}\)</span></p></li>
+<li><p><span class="math inline">\(\sum ne^{-n^2}\)</span></p></li>
+</ol>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-17-contents" aria-controls="callout-17" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-17" class="callout-17-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+
+</div>
+</div>
+</div>
 <div id="exr-comparacion-series" class="theorem exercise">
 <p><span class="theorem-title"><strong>Ejercicio 8.15</strong></span> Estudiar la convergencia de las siguientes series comparándolas con otras conocidas.</p>
 <div class="columns">
@@ -772,7 +795,7 @@ A_n &amp;= \sum_{i=2}^n \frac{1}{i-1}-\frac{1}{i+1} \\
 <ol type="a">
 <li><p><span class="math inline">\(\sum \frac{2n}{4n^3-n+1}\)</span></p></li>
 <li><p><span class="math inline">\(\sum \frac{\ln(n)}{n}\)</span></p></li>
-<li><p><span class="math inline">\(\sum \frac{3^n}{2^n+1}\)</span></p></li>
+<li><p><span class="math inline">\(\sum \frac{3^n}{2^n-1}\)</span></p></li>
 <li><p><span class="math inline">\(\sum \frac{n+1}{\sqrt{n^3}}\)</span></p></li>
 </ol>
 </div><div class="column">
@@ -786,7 +809,7 @@ A_n &amp;= \sum_{i=2}^n \frac{1}{i-1}-\frac{1}{i+1} \\
 </div>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-17-contents" aria-controls="callout-17" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-18-contents" aria-controls="callout-18" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -795,7 +818,7 @@ Solución
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-17" class="callout-17-contents callout-collapse collapse">
+<div id="callout-18" class="callout-18-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ol type="a">
 <li><p><span class="math inline">\(\frac{2n}{4n^3-n+1}&gt;0\)</span> <span class="math inline">\(\forall n\in\mathbb{N}\)</span>, por lo que se trata de una serie de términos positivos. Como <span class="math inline">\(4n^3-n+1&gt;4n^3-n&gt;0\)</span> <span class="math inline">\(\forall n\mathbb{N}\)</span> se tiene que</p>
@@ -804,7 +827,7 @@ Solución
 \]</span></p>
 <p>Así pues, por el criterio de comparación de series, <span class="math inline">\(\sum \frac{2n}{4n^3-n+1}\)</span> converge sí <span class="math inline">\(\sum \frac{1}{2n-1}-\frac{1}{2n+1}\)</span> converge. Pero esta última serie es una serie telescópica, y como <span class="math inline">\(\lim_{n\to\infty} \frac{1}{2n-1}=0\)</span>, converge, de manera que <span class="math inline">\(\sum \frac{2n}{4n^3-n+1}\)</span> también converge.</p></li>
 <li><p><span class="math inline">\(\frac{\ln(n)}{n}\geq 0\)</span> <span class="math inline">\(\forall n\in\mathbb{N}\)</span>, por lo que se trata de una serie de términos positivos. Como <span class="math inline">\(\ln(n)&gt;1\)</span> <span class="math inline">\(\forall n\geq 3\)</span>, se tiene que <span class="math inline">\(\frac{\ln(n)}{n}&gt;\frac{1}{n}\)</span> <span class="math inline">\(\forall n\geq 3\)</span>, y como <span class="math inline">\(\sum \frac{1}{n}\)</span> es la serie armónica, que diverge, por el criterio de la comparación de series, <span class="math inline">\(\sum \frac{\ln(n)}{n}\)</span> también diverge.</p></li>
-<li><p><span class="math inline">\(\frac{3^n}{2^n+1}&gt;0\)</span> <span class="math inline">\(\forall n\in\mathbb{N}\)</span> por lo que se trata de una serie de términos positivos. Como <span class="math inline">\(2^n+1&gt;2^n\)</span> <span class="math inline">\(\forall n\in\mathbb{N}\)</span>, se tiene que <span class="math inline">\(\frac{3^n}{2n+1}&lt;\frac{3^n}{2^n}=\left(\frac{3}{2}\right)^n\)</span> <span class="math inline">\(\forall n\in\mathbb{N}\)</span>. Y como <span class="math inline">\(\sum \left(\frac{3}{2}\right)^n\)</span> diverge al ser una serie geométrica de razón <span class="math inline">\(\frac{3}{2}&gt;1\)</span>, por el criterio de comparación de series se tiene que <span class="math inline">\(\sum \frac{3^n}{2^n+1}\)</span> también diverge.</p></li>
+<li><p><span class="math inline">\(\frac{3^n}{2^n-1}&gt;0\)</span> <span class="math inline">\(\forall n\in\mathbb{N}\)</span> por lo que se trata de una serie de términos positivos. Como <span class="math inline">\(2^n-1&lt;2^n\)</span> <span class="math inline">\(\forall n\in\mathbb{N}\)</span>, se tiene que <span class="math inline">\(\frac{3^n}{2n-1}&gt;\frac{3^n}{2^n}=\left(\frac{3}{2}\right)^n\)</span> <span class="math inline">\(\forall n\in\mathbb{N}\)</span>. Y como <span class="math inline">\(\sum \left(\frac{3}{2}\right)^n\)</span> diverge al ser una serie geométrica de razón <span class="math inline">\(\frac{3}{2}&gt;1\)</span>, por el criterio de comparación de series se tiene que <span class="math inline">\(\sum \frac{3^n}{2^n-1}\)</span> también diverge.</p></li>
 <li><p><span class="math inline">\(\frac{n+1}{\sqrt{n^3}}&gt;0\)</span> <span class="math inline">\(\forall n\in\mathbb{N}\)</span> por lo que se trata de una serie de términos positivos. Por otro lado,</p>
 <p><span class="math display">\[
 \sum \frac{n+1}{\sqrt{n^3}} = \sum \frac{n+1}{n^{3/2}} = \sum \left(\frac{n}{n^{3/2}} + \frac{1}{n^{3/2}}\right) = \sum \frac{1}{n^{1/2}} + \sum \frac{1}{n^{3/2}}.
@@ -837,7 +860,7 @@ Solución
 </ol>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-18-contents" aria-controls="callout-18" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-19-contents" aria-controls="callout-19" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -846,7 +869,7 @@ Solución
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-18" class="callout-18-contents callout-collapse collapse">
+<div id="callout-19" class="callout-19-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ol type="a">
 <li><p>Supongamos que <span class="math inline">\(\lim_{n\to\infty} \frac{a_n}{b_n}=0\)</span>. Entonces, para <span class="math inline">\(\varepsilon=1\)</span> existe <span class="math inline">\(k\in\mathbb{N}\)</span> tal que <span class="math inline">\(\left|\frac{a_n}{b_n}\right|=\frac{a_n}{b_n}&lt;1\)</span> <span class="math inline">\(\forall n\geq k\)</span>, y por tanto, <span class="math inline">\(a_n&lt;b_n\)</span> <span class="math inline">\(\forall n\geq k\)</span>. Así pues, por el criterio de comparación de series, si <span class="math inline">\(\sum_{n\geq k} b_n\)</span> converge, <span class="math inline">\(\sum_{n\geq k} a_n\)</span> también, y como un número finito de términos no influye en la convergencia de una serie, <span class="math inline">\(\sum a_n\)</span> converge.</p></li>
@@ -865,7 +888,7 @@ Solución
 </ol>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-19-contents" aria-controls="callout-19" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-20-contents" aria-controls="callout-20" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -874,7 +897,7 @@ Solución
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-19" class="callout-19-contents callout-collapse collapse">
+<div id="callout-20" class="callout-20-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ol type="a">
 <li><p>Por el criterio de divergencia, como <span class="math inline">\(\sum a_n\)</span> converge, se tiene que <span class="math inline">\(\lim_{n\to\infty} a_n = 0\)</span>. Por otro lado, <span class="math inline">\(\lim_{n\to\infty}\frac{a_n^2}{a_n} = \lim_{n\to\infty} a_n = 0\)</span>, y por lo visto en el <a href="#exr-criterio-cociente" class="quarto-xref">Ejercicio&nbsp;<span>8.16</span></a>, como <span class="math inline">\(\sum a_n\)</span> converge, <span class="math inline">\(\sum a_n^2\)</span> también.</p></li>
@@ -903,7 +926,7 @@ Solución
 </ol>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-20-contents" aria-controls="callout-20" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-21-contents" aria-controls="callout-21" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -912,7 +935,7 @@ Solución
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-20" class="callout-20-contents callout-collapse collapse">
+<div id="callout-21" class="callout-21-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ol type="a">
 <li><p><span class="math inline">\(\left(\frac{1}{2n-1}\right)_{n=1}^\infty\)</span> es una sucesión monótona decreciente, ya que <span class="math inline">\(\frac{1}{2n-1}&gt;\frac{1}{2(n+1)-1}=\frac{1}{2n+1}\)</span> <span class="math inline">\(\forall n\in\mathbb{N}\)</span>. Como además <span class="math inline">\(\lim_{n\to\infty} \frac{1}{2n-1} = 0\)</span>, por el criterio de la serie alternada se tiene que <span class="math inline">\(\sum \frac{(-1)^{n-1}}{2n-1}\)</span> converge.</p></li>
@@ -936,7 +959,7 @@ A_n &amp;= 1 + 2\sum_{i=1}^n \frac{(-1)^n}{\sqrt{n}}
 <p><span class="theorem-title"><strong>Ejercicio 8.19</strong></span> El movimiento de un <a href="https://upload.wikimedia.org/wikipedia/commons/f/fa/Spring-mass_under-damped.gif">muelle amortiguado</a> con un peso colgado de él es oscilante. Si la posición que ocupa el peso en cada periodo de oscilación <span class="math inline">\(n\)</span> viene dado por la serie <span class="math inline">\(\sum (-1)^{n-1}e^{-n/2}\)</span>, ¿llegará a estabilizarse en una posición de equilibrio a largo plazo?</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-21-contents" aria-controls="callout-21" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-22-contents" aria-controls="callout-22" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -945,7 +968,7 @@ Solución
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-21" class="callout-21-contents callout-collapse collapse">
+<div id="callout-22" class="callout-22-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p><span class="math inline">\((e^{-n/2})_{n=1}^\infty\)</span> es una sucesión monótona decreciente, ya que <span class="math inline">\(e^{-n/2}&gt;e^{-(n+1)/2}\)</span> <span class="math inline">\(\forall n\in\mathbb{N}\)</span>. Como además <span class="math inline">\(\lim_{n\to\infty} e^{-n/2} = 0\)</span>, por el criterio de la serie alternada se tiene que <span class="math inline">\(\sum (-1)^{n-1}e^{-n/2}\)</span> converge, así que el peso colgado del muelle se estabilizará a largo plazo en la posición <span class="math inline">\(\sum (-1)^{n-1}e^{-n/2}\)</span>.</p>
 </div>
@@ -970,7 +993,7 @@ Solución
 </div>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-22-contents" aria-controls="callout-22" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-23-contents" aria-controls="callout-23" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -979,7 +1002,7 @@ Solución
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-22" class="callout-22-contents callout-collapse collapse">
+<div id="callout-23" class="callout-23-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ol type="a">
 <li><p>Como</p>
@@ -1016,7 +1039,7 @@ R = \frac{1}{\lim_{n\to\infty} \sqrt[n]{|c_n|}} \quad \mbox{o}\quad R = \lim_{n\
 \]</span></p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-23-contents" aria-controls="callout-23" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-24-contents" aria-controls="callout-24" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1025,7 +1048,7 @@ Solución
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-23" class="callout-23-contents callout-collapse collapse">
+<div id="callout-24" class="callout-24-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Para probar la validez de la primera fórmula utilizaremos el criterio de la raíz para convergencia absoluta de series.</p>
 <p><span class="math display">\[
@@ -1057,7 +1080,7 @@ Solución
 </div>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-24-contents" aria-controls="callout-24" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-25-contents" aria-controls="callout-25" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1066,7 +1089,7 @@ Solución
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-24" class="callout-24-contents callout-collapse collapse">
+<div id="callout-25" class="callout-25-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ol type="a">
 <li><p>Aplicando el <a href="https://aprendeconalf.es/analisis-manual/08-series.html#thm-radio-convergencia-raiz">criterio de la razón</a> se tiene que el radio de convergencia es</p>
@@ -1114,7 +1137,7 @@ R &amp;= \lim_{n\to\infty} \left|\frac{\operatorname{sen}\left(\frac{1}{n}\right
 <p>Demostrar finalmente que <span class="math inline">\(f(x)=e^x\)</span>.</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-25-contents" aria-controls="callout-25" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-26-contents" aria-controls="callout-26" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1123,7 +1146,7 @@ Solución
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-25" class="callout-25-contents callout-collapse collapse">
+<div id="callout-26" class="callout-26-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Como</p>
 <p><span class="math display">\[\begin{align*}
@@ -1155,7 +1178,7 @@ f'(x) = \lim_{n\to\infty} A_n'(x) = \lim_{n\to\infty} A_{n-1}(x) = \lim_{n\to\in
 <p><span class="theorem-title"><strong>Ejercicio 8.24</strong></span> Usar el resultado del ejercicio anterior para calcular la suma de la serie de potencias <span class="math inline">\(\sum \frac{(x+2)^n}{(n+1)!}\)</span>.</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-26-contents" aria-controls="callout-26" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-27-contents" aria-controls="callout-27" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1164,7 +1187,7 @@ Solución
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-26" class="callout-26-contents callout-collapse collapse">
+<div id="callout-27" class="callout-27-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p><span class="math display">\[
 \sum_{n=0}^\infty \frac{(x+2)^n}{(n+1)!} = \sum_{n=0}^\infty \frac{(x+2)^{n+1}}{(x+2)(n+1)!} = \frac{1}{x+2}\sum_{n=1}^\infty \frac{(x+2)^n}{n!} = \frac{e^{x+2}-1}{x+2}.
@@ -1181,7 +1204,7 @@ P(n)= e^{-\lambda}\frac{\lambda^n}{n!}\ \forall n\in \mathbb{N},
 <p>Demostrar que esta función es una función de masa de probabilidad.</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-27-contents" aria-controls="callout-27" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-28-contents" aria-controls="callout-28" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1190,7 +1213,7 @@ Solución
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-27" class="callout-27-contents callout-collapse collapse">
+<div id="callout-28" class="callout-28-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>El conjunto de posibles valores que puede tomar la variable aleatoria <span class="math inline">\(X\)</span> es <span class="math inline">\(\mathbb{N}\cup \{0\}\)</span>. Si consideramos la suma de las probabilidades de todos los posibles valores de la variable se tiene</p>
 <p><span class="math display">\[
@@ -1213,7 +1236,7 @@ Solución
 </ol>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-28-contents" aria-controls="callout-28" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-29-contents" aria-controls="callout-29" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1222,7 +1245,7 @@ Solución
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-28" class="callout-28-contents callout-collapse collapse">
+<div id="callout-29" class="callout-29-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ol type="a">
 <li><p>Calculamos las primeras derivadas de <span class="math inline">\(f\)</span> en <span class="math inline">\(\pi\)</span> para llegar a la expresión de la derivada <span class="math inline">\(n\)</span>-ésima.</p>
@@ -1284,7 +1307,7 @@ h^{(n)}(1) = (-1)^n\frac{\prod_{i=1}^n(2i-1)}{2^n},
 <p><span class="theorem-title"><strong>Ejercicio 8.27</strong></span> Construir la serie de Maclaurin de la función <span class="math inline">\(f(x)= (1+x)^k\)</span> para cualquier <span class="math inline">\(k\in\mathbb{R}\)</span> y estudiar su dominio de convergencia. ¿Qué serie se obtiene cuando <span class="math inline">\(k\in\mathbb{N}\)</span>?</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-29-contents" aria-controls="callout-29" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-30-contents" aria-controls="callout-30" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1293,7 +1316,7 @@ Solución
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-29" class="callout-29-contents callout-collapse collapse">
+<div id="callout-30" class="callout-30-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Calculamos las primeras derivadas de <span class="math inline">\(f\)</span> en <span class="math inline">\(0\)</span> para llegar a la expresión de la derivada <span class="math inline">\(n\)</span>-ésima.</p>
 <p><span class="math display">\[\begin{align*}
@@ -1326,7 +1349,7 @@ f^{k}(x) = k(k-1)\cdots (k-k+1)(1+x)^{k-k} = k!
 <p><span class="theorem-title"><strong>Ejercicio 8.28</strong></span> Calcular la serie de Maclaurin de la función <span class="math inline">\(f(x)=\operatorname{arctg}(x)\)</span> y utilizarla para obtener una serie cuya suma sea <span class="math inline">\(\pi\)</span>.</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-30-contents" aria-controls="callout-30" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-31-contents" aria-controls="callout-31" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1335,7 +1358,7 @@ Solución
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-30" class="callout-30-contents callout-collapse collapse">
+<div id="callout-31" class="callout-31-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Calculamos las primeras derivadas de <span class="math inline">\(f\)</span> en <span class="math inline">\(0\)</span> para llegar a la expresión de la derivada <span class="math inline">\(n\)</span>-ésima.</p>
 <p><span class="math display">\[\begin{align*}
@@ -1377,7 +1400,7 @@ f^{(n)}(0) =
 </ol>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-31-contents" aria-controls="callout-31" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-32-contents" aria-controls="callout-32" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1386,7 +1409,7 @@ Solución
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-31" class="callout-31-contents callout-collapse collapse">
+<div id="callout-32" class="callout-32-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ol type="a">
 <li>El desarrollo de Maclaurin de la función <span class="math inline">\(\ln(1+x)\)</span> es <span class="math inline">\(\sum_{n=1}^\infty (-1)^{n-1}\frac{x^n}{n}\)</span> con dominio de convergencia <span class="math inline">\((-1,1]\)</span>. Así que sustituyendo en el límite se tiene</li>
@@ -1408,6 +1431,7 @@ Solución
 </div>
 
 
+</div>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

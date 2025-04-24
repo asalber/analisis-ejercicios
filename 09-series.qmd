@@ -388,6 +388,20 @@ d. $\sum_{n\geq 2} \frac{2}{n^2-1} = \sum_{n\geq 2} \frac{1}{n-1}-\frac{1}{n+1}$
     y, por tanto, la serie converge a $\frac{3}{2}$.
 :::
 
+:::{#exr-criterio-integral}
+Estudiar la convergencia de las siguientes series y calcular sus sumas de manera aproximada cuando converjan. 
+
+a.  $\sum \frac{1}{n^2+1}$
+
+b.  $\sum \frac{1}{n\ln(n)}$
+
+c.  $\sum ne^{-n^2}$
+
+:::{.callout-tip collapse="true"}
+## Solución
+
+:::
+
 :::{#exr-comparacion-series}
 Estudiar la convergencia de las siguientes series comparándolas con otras conocidas.
 
@@ -397,7 +411,7 @@ a. $\sum \frac{2n}{4n^3-n+1}$
 
 b. $\sum \frac{\ln(n)}{n}$
 
-c. $\sum \frac{3^n}{2^n+1}$
+c. $\sum \frac{3^n}{2^n-1}$
 
 d. $\sum \frac{n+1}{\sqrt{n^3}}$
 :::
@@ -426,7 +440,7 @@ a.  $\frac{2n}{4n^3-n+1}>0$ $\forall n\in\mathbb{N}$, por lo que se trata de una
 
 b. $\frac{\ln(n)}{n}\geq 0$ $\forall n\in\mathbb{N}$, por lo que se trata de una serie de términos positivos. Como $\ln(n)>1$ $\forall n\geq 3$, se tiene que $\frac{\ln(n)}{n}>\frac{1}{n}$ $\forall n\geq 3$, y como $\sum \frac{1}{n}$ es la serie armónica, que diverge, por el criterio de la comparación de series, $\sum \frac{\ln(n)}{n}$ también diverge.
 
-c. $\frac{3^n}{2^n+1}>0$ $\forall n\in\mathbb{N}$ por lo que se trata de una serie de términos positivos. Como $2^n+1>2^n$ $\forall n\in\mathbb{N}$, se tiene que $\frac{3^n}{2n+1}<\frac{3^n}{2^n}=\left(\frac{3}{2}\right)^n$ $\forall n\in\mathbb{N}$. Y como $\sum \left(\frac{3}{2}\right)^n$ diverge al ser una serie geométrica de razón $\frac{3}{2}>1$, por el criterio de comparación de series se tiene que $\sum \frac{3^n}{2^n+1}$ también diverge.
+c. $\frac{3^n}{2^n-1}>0$ $\forall n\in\mathbb{N}$ por lo que se trata de una serie de términos positivos. Como $2^n-1<2^n$ $\forall n\in\mathbb{N}$, se tiene que $\frac{3^n}{2n-1}>\frac{3^n}{2^n}=\left(\frac{3}{2}\right)^n$ $\forall n\in\mathbb{N}$. Y como $\sum \left(\frac{3}{2}\right)^n$ diverge al ser una serie geométrica de razón $\frac{3}{2}>1$, por el criterio de comparación de series se tiene que $\sum \frac{3^n}{2^n-1}$ también diverge.
 
 d. $\frac{n+1}{\sqrt{n^3}}>0$ $\forall n\in\mathbb{N}$ por lo que se trata de una serie de términos positivos. Por otro lado, 
 
