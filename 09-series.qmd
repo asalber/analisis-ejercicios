@@ -389,16 +389,71 @@ d. $\sum_{n\geq 2} \frac{2}{n^2-1} = \sum_{n\geq 2} \frac{1}{n-1}-\frac{1}{n+1}$
 :::
 
 :::{#exr-criterio-integral}
-Estudiar la convergencia de las siguientes series y calcular sus sumas de manera aproximada cuando converjan. 
+Estudiar la convergencia de las siguientes series mediante el criterio de la integral y calcular sus sumas de manera aproximada cuando converjan dando una cota del error cometido. 
 
-a.  $\sum \frac{1}{n^2+1}$
+a.  $\sum_{n=1}^\infty \frac{1}{n^2+1}$
 
-b.  $\sum \frac{1}{n\ln(n)}$
+b.  $\sum_{n=2}^\infty \frac{1}{n\ln(n)}$
 
-c.  $\sum ne^{-n^2}$
+c.  $\sum_{n=1}^\infty ne^{-n^2}$
+:::
 
 :::{.callout-tip collapse="true"}
 ## Solución
+a.  Se trata de una serie de términos positivos, ya que $\frac{1}{n^2+1}>0$ $\forall n\in\mathbb{N}$. Para ver si converge utilizando el criterio de la integral, se tiene que estudiar la convergencia de la integral impropia
+
+    $$
+    \int_1^\infty \frac{1}{x^2+1}\,dx = \lim_{b\to\infty}\left[\operatorname{arctg}(x)\right]_1^b = \lim_{b\to\infty} \operatorname{arctg}(b)-\operatorname{arctg}(1) = \frac{\pi}{2}-\frac{\pi}{4} = \frac{\pi}{4}.
+    $$
+
+    Así pues, como la integral converge, por el criterio de la integral, la serie $\sum \frac{1}{n^2+1}$ también converge.
+
+    Para aproximar la suma podemos utilizar cualquier suma parcial de la serie, por ejemplo, la suma parcial de orden $n=5$:
+
+    $$
+    \sum_{i=1}^5 \frac{1}{i^2+1} = \frac{1}{2}+\frac{1}{5}+\frac{1}{10}+\frac{1}{17}+\frac{1}{26} \approx 0.8973.
+    $$
+
+    Para dar una cota del error cometido, se puede utilizar de nuevo el teorema de la integral, que dice que el error cometido al aproximar la suma de la serie por la integral es menor que el valor de la integral en el intervalo $[n,\infty)$, es decir,
+
+    \begin{align*}
+    \sum_{n=1}^\infty \frac{1}{n^2+1} - \sum_{i=1}^5 \frac{1}{i^2+1}
+    &< \int_5^\infty \frac{1}{x^2+1}\,dx 
+    = \lim_{b\to\infty}\left[\operatorname{arctg}(x)\right]_5^b \\
+    &= \lim_{b\to\infty} \operatorname{arctg}(b)-\operatorname{arctg}(5) 
+    = \frac{\pi}{2} - 1.3734 = 0.1974.
+    \end{align*}
+
+a.  Se trata de una serie de términos positivos, ya que $\frac{1}{n\ln(n)}>0$ $\forall n\geq 2$. Para ver si converge utilizando el criterio de la integral, se tiene que estudiar la convergencia de la integral impropia
+
+    $$
+    \int_2^\infty \frac{1}{x\ln(x)}\,dx = \lim_{b\to\infty}\left[\ln(\ln(x))\right]_2^b = \lim_{b\to\infty} \ln(\ln(b))-\ln(\ln(2)) = \infty.
+    $$
+
+    Así pues, como la integral diverge, por el criterio de la integral, la serie $\sum \frac{1}{n\ln(n)}$ también diverge.
+
+a.  También se trata de una serie de términos positivos ya que $ne^{-n^2}>0$ $\forall n\in\mathbb{N}$. Para ver si converge utilizando el criterio de la integral, se tiene que estudiar la convergencia de la integral impropia
+
+    $$
+    \int_1^\infty ne^{-n^2}\,dn = \lim_{b\to\infty}\left[-\frac{1}{2}e^{-n^2}\right]_1^b = \lim_{b\to\infty} -\frac{1}{2}e^{-b^2}+\frac{1}{2}e^{-1} = \frac{1}{2e}.
+    $$
+
+    Así pues, como la integral converge, por el criterio de la integral, la serie $\sum ne^{-n^2}$ también converge.
+
+    Para aproximar la suma podemos utilizar cualquier suma parcial de la serie, por ejemplo, la suma parcial de orden $n=5$:
+
+    $$
+    \sum_{i=1}^5 ie^{-i^2} = 1e^{-1}+2e^{-4}+3e^{-9}+4e^{-16}+5e^{-25} \approx 0.4049.
+    $$
+
+    Para dar una cota del error cometido, se puede utilizar de nuevo el teorema de la integral, que dice que el error cometido al aproximar la suma de la serie por la integral es menor que el valor de la integral en el intervalo $[n,\infty)$, es decir,
+
+    \begin{align*}
+    \sum_{n=1}^\infty ne^{-n^2} - \sum_{i=1}^5 ie^{-i^2}
+    &< \int_5^\infty ne^{-n^2}\,dn 
+    = \lim_{b\to\infty}\left[-\frac{1}{2}e^{-n^2}\right]_5^b \\
+    &= \frac{1}{2}e^{-25} = 6.9 \cdot 10^{-12}.
+    \end{align*}
 
 :::
 
