@@ -9,7 +9,7 @@ Una _sucesión constante_ es una sucesión de números reales en la que cada té
 
 :::{.callout-tip collapse="true"}
 ## Solución
-Sea $(c)_{n=1}^\infty$ una sucesión constante. Veamos que converge a $c$. Para cualquier $\varepsilon>0$ basta tomar $k=1$, de manera que $\forall n\geq k$ se tiene que $|x_n-c|=|c-c| = 0 <\varepsilon$. Por tanto, $\lim_{n\to\infty}x_n =c$.
+Sea $(a_n)_{n=1}^\infty$ una sucesión con $a_n = c$ constante. Veamos que converge a $c$. Para cualquier $\varepsilon>0$ basta tomar $k=1$, de manera que $\forall n\geq k$ se tiene que $|x_n-c|=|c-c| = 0 <\varepsilon$. Por tanto, $\lim_{n\to\infty}a_n =c$.
 :::
 
 :::{#exr-sucesion-aritmética}

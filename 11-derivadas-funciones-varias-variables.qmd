@@ -1716,7 +1716,7 @@ En el punto $(8.58, 387.08)$ se tiene $|\nabla^2B(8.58, 387.08)| = -254.88 <0$, 
 
 En el punto $(291.42, 12.92)$ se tiene $|\nabla^2B(291.42, 12.92)| = -224.81 <0$, por lo que se trata de otro punto de silla.
 
-En el punto $(291.42, 387.08)$ se tiene $|\nabla^2B(291.42, 387.08)| = 7.51 >0$ y $\frac{\partial ^2 B}{\partial x^2}(291.42, 387.08)= 3.88<0$, por lo que en se trata de un máximo relativo.
+En el punto $(291.42, 387.08)$ se tiene $|\nabla^2B(291.42, 387.08)| = 7.51 >0$ y $\frac{\partial ^2 B}{\partial x^2}(291.42, 387.08)= -3.88<0$, por lo que en se trata de un máximo relativo.
 
 Así pues, para maximizar el beneficio deben fabricarse semanalmente $291.42$ ordenadores portátiles y $387$ ordenadores de sobremesa.
 :::
@@ -1780,7 +1780,7 @@ $$
 De la primera ecuación se deduce fácilmente que $x=y$, y sustituyendo en la segunda, se tiene que $x^2 = 2xz$, que tiene solución $x=0$ o $z = x/2$. Como la primera opción daría un volumen nulo, no puede ser, así que solo tendría sentido la segunda. Finalmente como el volumen debe ser $25000$ cm$^3$, sustituyendo las soluciones en la fórmula del volumen se tiene 
 
 $$
-V(x,y,z) = 25000 \Leftrightarrow xx\frac{x}{2} = 25000 \frac{x^3}= 50000 \Leftrightarrow x \approx 36.8403,
+V(x,y,z) = 25000 \Leftrightarrow xx\frac{x}{2} = 25000 \Leftrightarrow x^3= 50000 \Leftrightarrow x \approx 36.8403,
 $$
 
 por lo que las dimensiones de la caja son $x=y=36.8403$ cm y $z=36.8403/2 = 18.4201$ cm.
@@ -1877,16 +1877,16 @@ de donde se deduce que
 
 $$
 \frac{l^3}{7} = \frac{3kl^2}{6} 
-\leftrightarrow k = \frac{2l}{7}.
+\Leftrightarrow k = \frac{2l}{7}.
 $$
 
 Finalmente, sustituyendo en la restricción se tiene
 
 $$
 f\left(\frac{2l}{7}, l\right) = 290
-\leftrightarrow \frac{2l}{7}l^3 = 290
-\leftrightarrow l^4 = 1015
-\leftrightarrow l = \sqrt[4]{1015} \approx 5.6444,
+\Leftrightarrow \frac{2l}{7}l^3 = 290
+\Leftrightarrow l^4 = 1015
+\Leftrightarrow l = \sqrt[4]{1015} \approx 5.6444,
 $$
 
 y $k \approx \frac{2\cdot 5.6444}{7} = 1.6127.$

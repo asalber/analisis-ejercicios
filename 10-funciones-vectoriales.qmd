@@ -511,8 +511,8 @@ a.  $\mathbf{g}'(t)= (e^t(\operatorname{sen}(t)+\cos(t)), e^t(\cos(t)-\operatorn
 
     \begin{align*}
     \tilde{\mathbf{g}}(s) 
-    &= \left(e^{\ln\left(\frac{x+\sqrt{2}}{\sqrt{2}}\right)}\operatorname{sen}\left(\ln\left(\frac{x+\sqrt{2}}{\sqrt{2}}\right)\right) + e^{\ln\left(\frac{x+\sqrt{2}}{\sqrt{2}}\right)}\cos\left(\ln\left(\frac{x+\sqrt{2}}{\sqrt{2}}\right)\right), 1 \right) \\
-    &= \left(\frac{x+\sqrt{2}}{\sqrt{2}}\operatorname{sen}\left(\ln\left(\frac{x+\sqrt{2}}{\sqrt{2}}\right)\right) + \frac{x+\sqrt{2}}{\sqrt{2}}\cos\left(\ln\left(\frac{x+\sqrt{2}}{\sqrt{2}}\right)\right), 1 \right).
+    &= \left(e^{\ln\left(\frac{s+\sqrt{2}}{\sqrt{2}}\right)}\operatorname{sen}\left(\ln\left(\frac{s+\sqrt{2}}{\sqrt{2}}\right)\right) + e^{\ln\left(\frac{s+\sqrt{2}}{\sqrt{2}}\right)}\cos\left(\ln\left(\frac{s+\sqrt{2}}{\sqrt{2}}\right)\right), 1 \right) \\
+    &= \left(\frac{s+\sqrt{2}}{\sqrt{2}}\operatorname{sen}\left(\ln\left(\frac{s+\sqrt{2}}{\sqrt{2}}\right)\right) + \frac{s+\sqrt{2}}{\sqrt{2}}\cos\left(\ln\left(\frac{s+\sqrt{2}}{\sqrt{2}}\right)\right), 1 \right).
     \end{align*}
 :::
 
@@ -617,7 +617,7 @@ $$
 1 & f'(t) & 0\\
 0 & f''(t) & 0 
 \end{bmatrix}
-= f''(t)\mathbf{j}
+= f''(t)\mathbf{k}
 $$
 
 Por tanto, 
