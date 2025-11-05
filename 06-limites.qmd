@@ -217,7 +217,7 @@ a.  Como $x<e^x$ $\forall x>0$, se tiene que
 a.  Cuando $x\to\infty$, $\frac{\log(x^2-1)}{x+2}\to \frac{\infty}{\infty}$ que es indeterminado. Aplicando la regla de L'Hôpital se tiene,
 
     $$
-    \lim_{x\to\infty}\dfrac{\log(x^2-1)}{x+2} =\lim_{x\to\infty}\frac{1/x}{1} =0.
+    \lim_{x\to\infty}\dfrac{\log(x^2-1)}{x+2} =\lim_{x\to\infty}\frac{\frac{2x}{x^2-1}}{1} = \lim_{x\to\infty}\frac{\frac{2x}{x^2}}{\frac{x^2-1}{x^2}} = \lim_{x\to\infty}\frac{\frac{2}{x}}{1-\frac{1}{x^2}} = 0.
     $$
 
 a.  $\displaystyle \lim_{x\to 1}\frac{\log(1/x)}{\operatorname{tg}(x+\frac{\pi}{2})} = \frac{\lim_{x\to 1}\log(1/x)}{\lim_{x\to 1}\operatorname{tg}(x+\frac{\pi}{2})} = \frac{\log(1)}{\operatorname{tg}(1+\frac{\pi}{2})}=0$
@@ -236,7 +236,7 @@ a.  Cuando $x\to 1$ $\frac{\sqrt[n]{x}-1}{\sqrt[m]{x}-1}\to \frac{0}{0}$ que es 
     \lim_{x\to 1}\frac{\sqrt[n]{x}-1}{\sqrt[m]{x}-1} 
     &= \lim_{x\to 1}\frac{x^{1/n}-1}{x^{1/m}-1} 
     = \lim_{x\to 1}\frac{\frac{x^{1/n}-1}{x-1}}{\frac{x^{1/m}-1}{x-1}} \\
-    &= \frac{1/m}{1/n}   
+    &= \frac{1/n}{1/m}   
     = \frac{m}{n}.
     \end{align*}
 
