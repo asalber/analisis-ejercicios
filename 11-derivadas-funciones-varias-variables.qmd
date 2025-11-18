@@ -1295,7 +1295,7 @@ $$
 = \frac{\partial f}{\partial x}\frac{\partial x}{\partial t} + \frac{\partial f}{\partial y}\frac{\partial y}{\partial t}
 $$
 
-Del mismo modo, para calcular $\frac{\partial f}{\partial s}$ suponemos $t$ constante, de manera que las funciones $g(s,t)$ y $h(s,t)$ son funciones de una variable $s$, y aplicando de nuevo la para una función de dos variables, se tiene
+Del mismo modo, para calcular $\frac{\partial f}{\partial s}$ suponemos $t$ constante, de manera que las funciones $g(s,t)$ y $h(s,t)$ son funciones de una variable $s$, y aplicando de nuevo la regla de la cadena para una función de dos variables, se tiene
 
 $$
 \frac{\partial f}{\partial s} 
@@ -1787,7 +1787,7 @@ por lo que las dimensiones de la caja son $x=y=36.8403$ cm y $z=36.8403/2 = 18.4
 :::
 
 :::{#exr-minimización-distancia-parabola}
-Un cometa sigue la órbita dada por la función $3x^2+y^2=9$, donde el origen de coordenadas es la posición del sol. Si una nave espacial se mantiene fija en la posición $(4,1)$, ¿en qué punto de su trayectoria el cometa estará más cerca del nave?
+Un cometa sigue la órbita dada por la función $3x^2+y^2=9$, donde el origen de coordenadas es la posición del sol. Si una nave espacial se mantiene fija en la posición $(4,2)$, ¿en qué punto de su trayectoria el cometa estará más cerca del nave?
 :::
 
 :::{.callout-tip collapse="true"}

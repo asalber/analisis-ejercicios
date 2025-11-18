@@ -246,6 +246,64 @@ a.
     \end{align*}
 :::
 
+:::{#exr-integrales-triples-regiones-irregulares}
+Calcular las siguientes integrales triples sobre las regiones irregulares dadas.
+
+a.  $\int_R e^{x+y+z}\,dV$, con $R=\{(x,y,z)\in\mathbb{R}^3: 0\leq x\leq y, 0\leq y\leq 1, 0\leq z\leq x\}$.
+
+a.  $\int_R xyz\,dV$, con $R=\{(x,y,z)\in\mathbb{R}^3: 0\leq x\leq 1, 0\leq y\leq x, 0\leq z\leq 1-x-y\}$.
+
+a.  $\int R 3x^2ye^{x^3 y}\,dy\,dx\,dz$ con $R=[0,1]\times [0, 1]\times [0, 1]$.
+:::
+
+:::{.callout-tip collapse="true"}
+## Solución
+a.  Para la región dada es más sencillo integrar primero respecto a $z$, luego respecto a $x$ y finalmente respecto a $y$.
+
+\begin{align*}
+\int_R e^{x+y+z}\,dV
+&= \int_0^1 \int_0^{y} \int_0^{x} e^{x+y+z}\,dz\,dx\,dy \\  
+&= \int_0^1 \int_0^{y} \left[e^{x+y+z}\right]_0^{x}\,dx\,dy \\  
+&= \int_0^1 \int_0^{y} e^{2x+y}-e^{x+y}\,dx\,dy \\
+&= \int_0^1 \left[\frac{e^{2x+y}}{2}-e^{x+y}\right]_0^{y}\,dy \\
+&= \int_0^1 \frac{e^{3y}}{2} - e^{2y} - \frac{e^{y}}{2} + e^{y}\,dy \\
+&= \int_0^1 \frac{e^{3y}}{2} - e^{2y} + \frac{e^{y}}{2}\,dy \\
+&= \left[\frac{e^{3y}}{6} - \frac{e^{2y}}{2} + \frac{e^{y}}{2}\right]_0^1 \\
+&= \frac{e^3}{6} - \frac{e^2}{2} + \frac{e}{2} - \frac{1}{6}.
+\end{align*}
+
+a.  Para la región dada es más sencillo integrar primero respecto a $z$, luego respecto a $y$ y finalmente respecto a $x$
+
+\begin{align*}
+\int_R xyz\,dV
+&= \int_0^1 \int_0^{x} \int_0^{1-x-y} xyz\,dz\,dy\,dx \\  
+&= \int_0^1 \int_0^{x} xy\left[\frac{z^2}{2}\right]_0^{1-x-y} \,dy\,dx \\  
+&= \int_0^1 \int_0^{x} xy\frac{(1-x-y)^2}{2} \,dy\,dx \\  
+&= \int_0^1 \int_0^{x} \frac{1}{2}xy(1-2x-2y+2xy+x^2+y^2)\,dy\,dx \\
+&= \int_0^1 \int_0^{x} \frac{1}{2}(xy-2x^2y-2xy^2+2x^2y^2+x^3y+xy^3)\,dy\,dx \\
+&= \int_0^1 \left[\frac{1}{2}\left(\frac{x y^2}{2}-x^2 y^2 -\frac{2x y^3}{3} + \frac{2x^2 y^3}{3} + \frac{x^3 y^2}{2} + \frac{x y^4}{4}\right)\right]_0^{x} \,dx \\
+&= \int_0^1 \frac{1}{2}\left(\frac{x^3}{2}-x^4 -\frac{2x^4}{3} + \frac{2x^5}{3} + \frac{x^5}{2} + \frac{x^5}{4}\right)\,dx \\
+&= \int_0^1 \frac{x^3}{4} - \frac{5x^4}{6} + \frac{17x^5}{24}\,dx \\
+&= \left[\frac{x^4}{16} - \frac{5x^5}{30} + \frac{17x^6}{144}\right]_0^1 \\
+&= \frac{1}{16} - \frac{5}{30} + \frac{17}{144} 
+= \frac{1}{72}.
+\end{align*}
+
+a.  En este caso conviene integrar primero con respecto a $x$, luego con respecto a $y$ y finalmente con respecto a $z$.
+
+\begin{align*}
+\int_R 3x^2ye^{x^3 y}\,dV
+&= \int_0^1 \int_0^{1} \int_0^{1} 3x^2ye^{x^3 y}\,dx\,dy\,dz \\
+&= \int_0^1 \int_0^{1} \int_0^u e^{u}\,du\,dy\,dz \tag{Cambio $u=x^3y$}\\
+&= \int_0^1 \int_0^{1} [e^{u}]_0^{y}\,dy\,dz \\
+&= \int_0^1 \int_0^{1} (e^{y}-1)\,dy\,dz \\
+&= \int_0^1 [e^{y}-y]_0^{1}\,dz \\
+&= \int_0^1 (e-2)\,dz \\
+&= [ (e-2)z ]_0^1 \\
+&= e-2.
+\end{align*}
+:::
+
 :::{#exr-volumen-piramide}
 Calcular el volumen de una pirámide de base cuadrada con lado $l$ centrada en el origen de coordenadas y altura $h$, usando una integral doble. ¿Cuál es la altura media de la pirámide?
 :::
@@ -373,6 +431,33 @@ La región de integración es $R=\{(r,\theta)\in \mathbb{R}^+\times\mathbb{R}: 0
 Así pues, se necesitarán $\pi/2\approx 1.5708$ m$^2$ de tela.
 :::
 
+:::{#exr-potencial-gravitacional}
+El potencial gravitacional $V$ en el origen de una esfera homogénea de densidad $1$ g/cm$^3$ y radio $R$ centrada en el origen, viene dado por la integral
+
+$$
+V = -G\int_R \frac{1}{\sqrt{x^2+y^2+z^2}}\,dV,
+$$
+
+donde $G$ es la constante de gravitación universal y $R=\{(x,y,z)\in\mathbb{R}^3: x^2+y^2+z^2\leq R^2\}$. Calcular el potencial gravitacional en el origen.
+:::
+
+:::{.callout-tip collapse="true"}
+## Solución
+Para calcular la integral es más sencillo usar coordenadas esféricas. En estas coordenadas, la región de integración viene dada por $R=\{(\rho,\theta,\phi)\in\mathbb{R}^+\times\mathbb{R}\times[0,\pi]: 0\leq \rho\leq R, 0\leq \theta\leq 2\pi, 0\leq \phi\leq \pi\}$, y la integral que da el potencial gravitacional es
+
+\begin{align*}
+V
+&= -G\int_0^{2\pi} \int_0^{\pi} \int_0^{R} \frac{1}{\sqrt{\rho^2}} \rho^2 \sin(\phi)\,d\rho\,d\phi\,d\theta \\
+&= -G\int_0^{2\pi} \int_0^{\pi} \int_0^{R} \rho \sin(\phi)\,d\rho\,d\phi\,d\theta \\
+&= -G\int_0^{2\pi} \int_0^{\pi} \left[\frac{\rho^2}{2}\sin(\phi)\right]_0^{R}\,d\phi\,d\theta \\
+&= -G\int_0^{2\pi} \int_0^{\pi} \frac{R^2}{2}\sin(\phi)\,d\phi\,d\theta \\
+&= -G\int_0^{2\ pi} \left[-\frac{R^2}{2}\cos(\phi)\right]_0^{\pi}\,d\theta \\
+&= -G\int_0^{2\pi} R^2\,d\theta 
+= -G [R^2\theta]_0^{2\pi} \\
+&= -2\pi G R^2.
+\end{align*}
+:::
+
 :::{#exr-integral-doble-area-superficies}
 Calcular el area de las superficies de las siguientes funciones en las regiones indicadas.
 
@@ -430,7 +515,7 @@ a.  Calculamos primero las derivadas parciales de $f$.
     (1) Cambio $u=\operatorname{tg}(x)^2+1$.
 :::
 
-:::{#exr-area-superficie-chimenea}
+:::{#exr-area-superficie-tolva}
 Una tolva tiene forma cónica dada por la función $f(x,y)=2\sqrt{x^2+y^2}$ con altura 4 m. Calcular el volumen de la tolva y la cantidad de chapa necesaria para construirla.
 :::
 

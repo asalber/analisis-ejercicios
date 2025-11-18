@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.32">
+<meta name="generator" content="quarto-1.8.25">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -34,16 +34,17 @@ ul.task-list li input[type="checkbox"] {
 <link href="./img/logos/favicon.ico" rel="icon">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-b6e6edf6cb1293d7f667c2f39c143ab5.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-c3c2c9e745155556954bc4da23476b10.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-bb1cd4028f63a369ab283e072cb7d572.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-54c8f25464f32f8783bd446cee98020d.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-dc12146a391dffe4ab414b9223dc34b1.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-7f3f82f48c6f7129423757c1c3196a5d.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-de8af6d6517050dea70ce10de1895a41.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-8d7c51f3ec8028eac7aae1b5795d51c0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -58,7 +59,7 @@ ul.task-list li input[type="checkbox"] {
   ],
   "show-item-context": false,
   "language": {
-    "search-no-results-text": "Sin resultados",
+    "search-no-results-text": "No se han encontrado resultados",
     "search-matching-documents-text": "documentos encontrados",
     "search-copy-link-title": "Copiar el enlace en la búsqueda",
     "search-hide-matches-text": "Ocultar resultados adicionales",
@@ -86,7 +87,7 @@ const typesetMath = (el) => {
     var macros = [];
     for (var i = 0; i < mathElements.length; i++) {
       var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
         window.katex.render(texText.data, mathElements[i], {
           displayMode: mathElements[i].classList.contains('display'),
           throwOnError: false,
@@ -295,7 +296,8 @@ window.Quarto = {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
       <a href="./index.html" class="sidebar-logo-link">
-      <img src="./img/logos/aprendeconalf.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      <img src="./img/logos/aprendeconalf.png" alt="" class="sidebar-logo light-content py-0 d-lg-inline d-none">
+      <img src="./img/logos/aprendeconalf.png" alt="" class="sidebar-logo dark-content py-0 d-lg-inline d-none">
       </a>
     <div class="sidebar-title mb-0 py-0">
       <a href="./">Problemas de Análisis Matemático</a> 
@@ -453,12 +455,12 @@ window.Quarto = {
 <p><span class="theorem-title"><strong>Ejercicio 11.1</strong></span> Calcular la suma inferior y superior de Riemann de la función <span class="math inline">\(f(x,y)=12-x^2-2y\)</span> en el intervalo <span class="math inline">\(I=[0,2]\times[0,2]\)</span> tomando <span class="math inline">\(4\)</span> subintervalos de igual tamaño.</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Solución
+<span class="screen-reader-only">Tip</span>Solución
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -492,12 +494,12 @@ S(f,P)
 <p><span class="theorem-title"><strong>Ejercicio 11.2</strong></span> Calcular la integral inferior y superior de Riemann de la función <span class="math inline">\(f(x,y)=12-x^2-2y\)</span> en el intervalo <span class="math inline">\(I=[0,2]\times[0,2]\)</span>. ¿Es <span class="math inline">\(f\)</span> integrable Riemann en el intervalo <span class="math inline">\(I\)</span>? ¿Cuánto vale la integral?</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Solución
+<span class="screen-reader-only">Tip</span>Solución
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -547,12 +549,12 @@ s(f,P)
 </ol>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Solución
+<span class="screen-reader-only">Tip</span>Solución
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -599,12 +601,12 @@ Solución
 <p><span class="theorem-title"><strong>Ejercicio 11.4</strong></span> Calcular el volumen de la región encerrada por la función <span class="math inline">\(f(x,y)=x^3y\)</span> en el intervalo <span class="math inline">\([-1,1]\times[-1,1]\)</span>.</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Solución
+<span class="screen-reader-only">Tip</span>Solución
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -653,12 +655,12 @@ Solución
 </ol>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Solución
+<span class="screen-reader-only">Tip</span>Solución
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -706,20 +708,88 @@ Solución
 </div>
 </div>
 </div>
-<div id="exr-volumen-piramide" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 11.6</strong></span> Calcular el volumen de una pirámide de base cuadrada con lado <span class="math inline">\(l\)</span> centrada en el origen de coordenadas y altura <span class="math inline">\(h\)</span>, usando una integral doble. ¿Cuál es la altura media de la pirámide?</p>
+<div id="exr-integrales-triples-regiones-irregulares" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 11.6</strong></span> Calcular las siguientes integrales triples sobre las regiones irregulares dadas.</p>
+<ol type="a">
+<li><p><span class="math inline">\(\int_R e^{x+y+z}\,dV\)</span>, con <span class="math inline">\(R=\{(x,y,z)\in\mathbb{R}^3: 0\leq x\leq y, 0\leq y\leq 1, 0\leq z\leq x\}\)</span>.</p></li>
+<li><p><span class="math inline">\(\int_R xyz\,dV\)</span>, con <span class="math inline">\(R=\{(x,y,z)\in\mathbb{R}^3: 0\leq x\leq 1, 0\leq y\leq x, 0\leq z\leq 1-x-y\}\)</span>.</p></li>
+<li><p><span class="math inline">\(\int R 3x^2ye^{x^3 y}\,dy\,dx\,dz\)</span> con <span class="math inline">\(R=[0,1]\times [0, 1]\times [0, 1]\)</span>.</p></li>
+</ol>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Solución
+<span class="screen-reader-only">Tip</span>Solución
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
 <div id="callout-6" class="callout-6-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="a">
+<li>Para la región dada es más sencillo integrar primero respecto a <span class="math inline">\(z\)</span>, luego respecto a <span class="math inline">\(x\)</span> y finalmente respecto a <span class="math inline">\(y\)</span>.</li>
+</ol>
+<p><span class="math display">\[\begin{align*}
+\int_R e^{x+y+z}\,dV
+&amp;= \int_0^1 \int_0^{y} \int_0^{x} e^{x+y+z}\,dz\,dx\,dy \\  
+&amp;= \int_0^1 \int_0^{y} \left[e^{x+y+z}\right]_0^{x}\,dx\,dy \\  
+&amp;= \int_0^1 \int_0^{y} e^{2x+y}-e^{x+y}\,dx\,dy \\
+&amp;= \int_0^1 \left[\frac{e^{2x+y}}{2}-e^{x+y}\right]_0^{y}\,dy \\
+&amp;= \int_0^1 \frac{e^{3y}}{2} - e^{2y} - \frac{e^{y}}{2} + e^{y}\,dy \\
+&amp;= \int_0^1 \frac{e^{3y}}{2} - e^{2y} + \frac{e^{y}}{2}\,dy \\
+&amp;= \left[\frac{e^{3y}}{6} - \frac{e^{2y}}{2} + \frac{e^{y}}{2}\right]_0^1 \\
+&amp;= \frac{e^3}{6} - \frac{e^2}{2} + \frac{e}{2} - \frac{1}{6}.
+\end{align*}\]</span></p>
+<ol type="a">
+<li>Para la región dada es más sencillo integrar primero respecto a <span class="math inline">\(z\)</span>, luego respecto a <span class="math inline">\(y\)</span> y finalmente respecto a <span class="math inline">\(x\)</span></li>
+</ol>
+<p><span class="math display">\[\begin{align*}
+\int_R xyz\,dV
+&amp;= \int_0^1 \int_0^{x} \int_0^{1-x-y} xyz\,dz\,dy\,dx \\  
+&amp;= \int_0^1 \int_0^{x} xy\left[\frac{z^2}{2}\right]_0^{1-x-y} \,dy\,dx \\  
+&amp;= \int_0^1 \int_0^{x} xy\frac{(1-x-y)^2}{2} \,dy\,dx \\  
+&amp;= \int_0^1 \int_0^{x} \frac{1}{2}xy(1-2x-2y+2xy+x^2+y^2)\,dy\,dx \\
+&amp;= \int_0^1 \int_0^{x} \frac{1}{2}(xy-2x^2y-2xy^2+2x^2y^2+x^3y+xy^3)\,dy\,dx \\
+&amp;= \int_0^1 \left[\frac{1}{2}\left(\frac{x y^2}{2}-x^2 y^2 -\frac{2x y^3}{3} + \frac{2x^2 y^3}{3} + \frac{x^3 y^2}{2} + \frac{x y^4}{4}\right)\right]_0^{x} \,dx \\
+&amp;= \int_0^1 \frac{1}{2}\left(\frac{x^3}{2}-x^4 -\frac{2x^4}{3} + \frac{2x^5}{3} + \frac{x^5}{2} + \frac{x^5}{4}\right)\,dx \\
+&amp;= \int_0^1 \frac{x^3}{4} - \frac{5x^4}{6} + \frac{17x^5}{24}\,dx \\
+&amp;= \left[\frac{x^4}{16} - \frac{5x^5}{30} + \frac{17x^6}{144}\right]_0^1 \\
+&amp;= \frac{1}{16} - \frac{5}{30} + \frac{17}{144}
+= \frac{1}{72}.
+\end{align*}\]</span></p>
+<ol type="a">
+<li>En este caso conviene integrar primero con respecto a <span class="math inline">\(x\)</span>, luego con respecto a <span class="math inline">\(y\)</span> y finalmente con respecto a <span class="math inline">\(z\)</span>.</li>
+</ol>
+<p><span class="math display">\[\begin{align*}
+\int_R 3x^2ye^{x^3 y}\,dV
+&amp;= \int_0^1 \int_0^{1} \int_0^{1} 3x^2ye^{x^3 y}\,dx\,dy\,dz \\
+&amp;= \int_0^1 \int_0^{1} \int_0^u e^{u}\,du\,dy\,dz \tag{Cambio $u=x^3y$}\\
+&amp;= \int_0^1 \int_0^{1} [e^{u}]_0^{y}\,dy\,dz \\
+&amp;= \int_0^1 \int_0^{1} (e^{y}-1)\,dy\,dz \\
+&amp;= \int_0^1 [e^{y}-y]_0^{1}\,dz \\
+&amp;= \int_0^1 (e-2)\,dz \\
+&amp;= [ (e-2)z ]_0^1 \\
+&amp;= e-2.
+\end{align*}\]</span></p>
+</div>
+</div>
+</div>
+<div id="exr-volumen-piramide" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 11.7</strong></span> Calcular el volumen de una pirámide de base cuadrada con lado <span class="math inline">\(l\)</span> centrada en el origen de coordenadas y altura <span class="math inline">\(h\)</span>, usando una integral doble. ¿Cuál es la altura media de la pirámide?</p>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-7" class="callout-7-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Por simetría, podemos reducir el problema a calcular el volumen que queda por debajo de cada una de las caras de la pirámide.</p>
 <p>Si nos fijamos en la cara que cae el semiplano con <span class="math inline">\(x\)</span> positiva, tenemos que la ecuación del plano que contiene esa cara es <span class="math inline">\(f(x,y) = h\left(1 - \frac{2x}{a}\right)\)</span>, por lo que para obtener el volumen por debajo de esta cara hay que integrar esta función en el intervalo <span class="math inline">\(I=[0, a/2]\times[-x,x]\)</span>.</p>
@@ -738,19 +808,19 @@ Solución
 </div>
 </div>
 <div id="exr-volumen-piscina" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 11.7</strong></span> Una piscina con forma elíptica de ecuación <span class="math inline">\(x^2+2y^2 = 16\)</span> tiene una profundidad de 1 m en el extremo izquierdo y de 2 m en el extremo derecho, y su profundidad crece de izquierda a derecha de forma constante. Calcular la cantidad de agua que hay en la piscina.</p>
+<p><span class="theorem-title"><strong>Ejercicio 11.8</strong></span> Una piscina con forma elíptica de ecuación <span class="math inline">\(x^2+2y^2 = 16\)</span> tiene una profundidad de 1 m en el extremo izquierdo y de 2 m en el extremo derecho, y su profundidad crece de izquierda a derecha de forma constante. Calcular la cantidad de agua que hay en la piscina.</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Solución
+<span class="screen-reader-only">Tip</span>Solución
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-7" class="callout-7-contents callout-collapse collapse">
+<div id="callout-8" class="callout-8-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>La ecuación <span class="math inline">\(x^2+2y^2=16\)</span> define una elipse centrada en el origen de coordenadas y cuyos extremos en el eje <span class="math inline">\(x\)</span> están en <span class="math inline">\(x=-4\)</span> y <span class="math inline">\(x=4\)</span>, por lo que la región que define la elipse en el plano <span class="math inline">\(xy\)</span> es</p>
 <p><span class="math display">\[
@@ -779,19 +849,19 @@ R = \{(x,y)\in\mathbb{R}^2: -\sqrt{8}\leq y\leq \sqrt{8}, -\sqrt{16-2y^2}\leq x\
 </div>
 </div>
 <div id="exr-volumen-entre-dos-superficies" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 11.8</strong></span> Calcular el volumen encerrado por las superficies <span class="math inline">\(z=1-x^2-y^2\)</span> y <span class="math inline">\(z=1-x\)</span>.</p>
+<p><span class="theorem-title"><strong>Ejercicio 11.9</strong></span> Calcular el volumen encerrado por las superficies <span class="math inline">\(z=1-x^2-y^2\)</span> y <span class="math inline">\(z=1-x\)</span>.</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Solución
+<span class="screen-reader-only">Tip</span>Solución
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-8" class="callout-8-contents callout-collapse collapse">
+<div id="callout-9" class="callout-9-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Sea <span class="math inline">\(f(x,y)=1-x^2-y^2\)</span> y <span class="math inline">\(g(x,y)=1-x\)</span>. Veamos primero en qué región se cortan las dos superficies.</p>
 <p><span class="math display">\[
@@ -827,19 +897,19 @@ Solución
 </div>
 </div>
 <div id="exr-integral-polar-petalo" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 11.9</strong></span> Un escudo contiene una flor dada por la función <span class="math inline">\(r(\theta) = \cos(2\theta)\)</span>. Calcular la cantidad de tela necesaria (en metros) para construir la flor del escudo.</p>
+<p><span class="theorem-title"><strong>Ejercicio 11.10</strong></span> Un escudo contiene una flor dada por la función <span class="math inline">\(r(\theta) = \cos(2\theta)\)</span>. Calcular la cantidad de tela necesaria (en metros) para construir la flor del escudo.</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Solución
+<span class="screen-reader-only">Tip</span>Solución
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-9" class="callout-9-contents callout-collapse collapse">
+<div id="callout-10" class="callout-10-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>La región de integración es <span class="math inline">\(R=\{(r,\theta)\in \mathbb{R}^+\times\mathbb{R}: 0\leq \theta\leq 2\pi, 0\leq r\leq \cos(2\theta)\}\)</span>, y como queremos calcular el area de esta región, basta con integrar la función <span class="math inline">\(f(r,\theta)=1\)</span> sobre la región de integración en coordenadas polares, es decir,</p>
 <p><span class="math display">\[\begin{align*}
@@ -855,24 +925,58 @@ Solución
 </div>
 </div>
 </div>
+<div id="exr-potencial-gravitacional" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 11.11</strong></span> El potencial gravitacional <span class="math inline">\(V\)</span> en el origen de una esfera homogénea de densidad <span class="math inline">\(1\)</span> g/cm<span class="math inline">\(^3\)</span> y radio <span class="math inline">\(R\)</span> centrada en el origen, viene dado por la integral</p>
+<p><span class="math display">\[
+V = -G\int_R \frac{1}{\sqrt{x^2+y^2+z^2}}\,dV,
+\]</span></p>
+<p>donde <span class="math inline">\(G\)</span> es la constante de gravitación universal y <span class="math inline">\(R=\{(x,y,z)\in\mathbb{R}^3: x^2+y^2+z^2\leq R^2\}\)</span>. Calcular el potencial gravitacional en el origen.</p>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-11" class="callout-11-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Para calcular la integral es más sencillo usar coordenadas esféricas. En estas coordenadas, la región de integración viene dada por <span class="math inline">\(R=\{(\rho,\theta,\phi)\in\mathbb{R}^+\times\mathbb{R}\times[0,\pi]: 0\leq \rho\leq R, 0\leq \theta\leq 2\pi, 0\leq \phi\leq \pi\}\)</span>, y la integral que da el potencial gravitacional es</p>
+<p><span class="math display">\[\begin{align*}
+V
+&amp;= -G\int_0^{2\pi} \int_0^{\pi} \int_0^{R} \frac{1}{\sqrt{\rho^2}} \rho^2 \sin(\phi)\,d\rho\,d\phi\,d\theta \\
+&amp;= -G\int_0^{2\pi} \int_0^{\pi} \int_0^{R} \rho \sin(\phi)\,d\rho\,d\phi\,d\theta \\
+&amp;= -G\int_0^{2\pi} \int_0^{\pi} \left[\frac{\rho^2}{2}\sin(\phi)\right]_0^{R}\,d\phi\,d\theta \\
+&amp;= -G\int_0^{2\pi} \int_0^{\pi} \frac{R^2}{2}\sin(\phi)\,d\phi\,d\theta \\
+&amp;= -G\int_0^{2\ pi} \left[-\frac{R^2}{2}\cos(\phi)\right]_0^{\pi}\,d\theta \\
+&amp;= -G\int_0^{2\pi} R^2\,d\theta
+= -G [R^2\theta]_0^{2\pi} \\
+&amp;= -2\pi G R^2.
+\end{align*}\]</span></p>
+</div>
+</div>
+</div>
 <div id="exr-integral-doble-area-superficies" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 11.10</strong></span> Calcular el area de las superficies de las siguientes funciones en las regiones indicadas.</p>
+<p><span class="theorem-title"><strong>Ejercicio 11.12</strong></span> Calcular el area de las superficies de las siguientes funciones en las regiones indicadas.</p>
 <ol type="a">
 <li><span class="math inline">\(f(x,y)=xy\)</span>, en <span class="math inline">\(R=\{(x,y)\in \mathbb{R}^2: x^2+y^2\leq 1\}\)</span>.</li>
 <li><span class="math inline">\(g(x,y)=\ln(\sec(x))\)</span>, en <span class="math inline">\(R=\{(x,y)\in \mathbb{R}^2: 0\leq x\leq \pi/4, 0\leq y\leq \operatorname{tg}(x)\}\)</span>.</li>
 </ol>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-12-contents" aria-controls="callout-12" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Solución
+<span class="screen-reader-only">Tip</span>Solución
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-10" class="callout-10-contents callout-collapse collapse">
+<div id="callout-12" class="callout-12-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ol type="a">
 <li><p>Calculamos primero las derivadas parciales de <span class="math inline">\(f\)</span>.</p>
@@ -918,20 +1022,20 @@ f'_y(x,y) &amp;= 0.
 </div>
 </div>
 </div>
-<div id="exr-area-superficie-chimenea" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 11.11</strong></span> Una tolva tiene forma cónica dada por la función <span class="math inline">\(f(x,y)=2\sqrt{x^2+y^2}\)</span> con altura 4 m. Calcular el volumen de la tolva y la cantidad de chapa necesaria para construirla.</p>
+<div id="exr-area-superficie-tolva" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 11.13</strong></span> Una tolva tiene forma cónica dada por la función <span class="math inline">\(f(x,y)=2\sqrt{x^2+y^2}\)</span> con altura 4 m. Calcular el volumen de la tolva y la cantidad de chapa necesaria para construirla.</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-13-contents" aria-controls="callout-13" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Solución
+<span class="screen-reader-only">Tip</span>Solución
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-11" class="callout-11-contents callout-collapse collapse">
+<div id="callout-13" class="callout-13-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Para obtener el volumen de la tolva necesitamos calcular el volumen comprendido entre el plano <span class="math inline">\(z=4\)</span> a nivel de la altura de la tolva y la superficie cónica de <span class="math inline">\(f\)</span> en la región en la región de intersección del plano con superficie cónica, es decir, <span class="math inline">\(2\sqrt{x^2+y^2} = 4 \Leftrightarrow x^2+y^2 = 4\)</span>, que se trata del círculo centrado en el origen con radio <span class="math inline">\(2\)</span>. Por tanto, la región de integración es <span class="math inline">\(R=\{(x,y)\in\mathbb{R}^2: -2\leq x\leq 2, -\sqrt{4-x^2}\leq y\leq \sqrt{4-x^2}\}\)</span>.</p>
 <p>Por la forma de <span class="math inline">\(f\)</span> y de la región de integración, en este caso, resulta más sencillo trabajar en coordenadas polares, ya que la región de integración se convierte en <span class="math inline">\(R=\{(r,\theta)\in \mathbb{R}^+\times\mathbb{R}: 0\leq \theta 2\pi, 0\leq r\leq 2\}\)</span>, por lo que el volumen que buscamos es puede obtener mediante la integral</p>
@@ -968,19 +1072,19 @@ f'_x(x,y) &amp;= \frac{2x}{\sqrt{x^2+y^2}},
 </div>
 </div>
 <div id="exr-integral-doble-valor-medio" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 11.12</strong></span> Calcular el valor medio de la función <span class="math inline">\(f(x,y)=\sqrt{xy}\)</span> en la región del primer cuadrante delimitada por las funciones <span class="math inline">\(y=x\)</span> e <span class="math inline">\(y=x^2\)</span>.</p>
+<p><span class="theorem-title"><strong>Ejercicio 11.14</strong></span> Calcular el valor medio de la función <span class="math inline">\(f(x,y)=\sqrt{xy}\)</span> en la región del primer cuadrante delimitada por las funciones <span class="math inline">\(y=x\)</span> e <span class="math inline">\(y=x^2\)</span>.</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-12-contents" aria-controls="callout-12" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-14-contents" aria-controls="callout-14" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Solución
+<span class="screen-reader-only">Tip</span>Solución
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-12" class="callout-12-contents callout-collapse collapse">
+<div id="callout-14" class="callout-14-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Como las funciones <span class="math inline">\(y=x\)</span> e <span class="math inline">\(y=x^2\)</span> se cortan en los puntos <span class="math inline">\((0,0)\)</span> y <span class="math inline">\((1,1)\)</span>, la región de integración es <span class="math inline">\(R=\{(x,y)\in\mathbb{R}^2: 0\leq x\leq 1, x^2\leq y \leq x\}\)</span>. El valor medio de la función en esta región es el valor de la integral doble de <span class="math inline">\(f\)</span> sobre la región, dividida por el área de la región.</p>
 <p>Calculamos primero la integral doble de <span class="math inline">\(f\)</span> sobre <span class="math inline">\(R\)</span>.</p>
@@ -1004,19 +1108,19 @@ Solución
 </div>
 </div>
 <div id="exr-masa-lamina-chapa" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 11.13</strong></span> Una lámina de chapa metálica tiene la forma de la forma de triángulo con vértices <span class="math inline">\((0,0)\)</span>, <span class="math inline">\((1,1)\)</span> y <span class="math inline">\((2,0)\)</span>. Si la densidad de la chapa en cada punto viene dada por la función <span class="math inline">\(d(x,y)=e^{x+y}\)</span> gr/cm<span class="math inline">\(^2\)</span>, calcular la masa de la chapa y su centro de masas.</p>
+<p><span class="theorem-title"><strong>Ejercicio 11.15</strong></span> Una lámina de chapa metálica tiene la forma de la forma de triángulo con vértices <span class="math inline">\((0,0)\)</span>, <span class="math inline">\((1,1)\)</span> y <span class="math inline">\((2,0)\)</span>. Si la densidad de la chapa en cada punto viene dada por la función <span class="math inline">\(d(x,y)=e^{x+y}\)</span> gr/cm<span class="math inline">\(^2\)</span>, calcular la masa de la chapa y su centro de masas.</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-13-contents" aria-controls="callout-13" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-15-contents" aria-controls="callout-15" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Solución
+<span class="screen-reader-only">Tip</span>Solución
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-13" class="callout-13-contents callout-collapse collapse">
+<div id="callout-15" class="callout-15-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>El triángulo está delimitado por las rectas <span class="math inline">\(y=0\)</span>, <span class="math inline">\(y=x\)</span> e <span class="math inline">\(y=2-x\)</span>, por lo que la región de integración puede expresarse como <span class="math inline">\(R=\{(x,y)\in\mathbb{R}^: 0\leq y\leq 1, y\leq x\leq 2-y\}\)</span>. Para obtener la masa de la placa basta con integrar la función de densidad en esta región.</p>
 <p><span class="math display">\[\begin{align*}
@@ -1066,19 +1170,19 @@ M_y
 </div>
 </div>
 <div id="exr-presion-ala-avión" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 11.14</strong></span> El perfil de la sección transversal del ala de un avión viene dada por las curvas <span class="math inline">\(y=\frac{(-1+x^2)}{10}\)</span> e <span class="math inline">\(y=\frac{1-x^2}{10}\)</span> en metros. Calcular el área de la superficie de un ala de 10 m de longitud.</p>
+<p><span class="theorem-title"><strong>Ejercicio 11.16</strong></span> El perfil de la sección transversal del ala de un avión viene dada por las curvas <span class="math inline">\(y=\frac{(-1+x^2)}{10}\)</span> e <span class="math inline">\(y=\frac{1-x^2}{10}\)</span> en metros. Calcular el área de la superficie de un ala de 10 m de longitud.</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-14-contents" aria-controls="callout-14" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-16-contents" aria-controls="callout-16" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Solución
+<span class="screen-reader-only">Tip</span>Solución
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-14" class="callout-14-contents callout-collapse collapse">
+<div id="callout-16" class="callout-16-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Para ver dónde se cortan las dos curvas resolvemos la ecuación que resulta de igualarlas.</p>
 <p><span class="math display">\[
@@ -1105,7 +1209,7 @@ Solución
 </div>
 </div>
 <div id="exr-funcion-densidad-exponencial-exponencial" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 11.15</strong></span> La función de densidad de probabilidad de una variable aleatoria bidimensional es</p>
+<p><span class="theorem-title"><strong>Ejercicio 11.17</strong></span> La función de densidad de probabilidad de una variable aleatoria bidimensional es</p>
 <p><span class="math display">\[
 f(x,y) =
 \begin{cases}
@@ -1119,16 +1223,16 @@ ke^{-(x+y)/2} &amp; x\geq 0, y\geq 0\\
 </ol>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-15-contents" aria-controls="callout-15" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-17-contents" aria-controls="callout-17" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Solución
+<span class="screen-reader-only">Tip</span>Solución
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-15" class="callout-15-contents callout-collapse collapse">
+<div id="callout-17" class="callout-17-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ol type="a">
 <li><p>Para que <span class="math inline">\(f\)</span> sea una función de densidad de probabilidad el volumen total encerrado entre la superficie de <span class="math inline">\(f\)</span> y el plano <span class="math inline">\(z=0\)</span> debe ser <span class="math inline">\(1\)</span>. Este volumen viene dado por la integral doble impropia</p>
@@ -1224,13 +1328,14 @@ Solución
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy
