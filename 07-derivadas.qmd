@@ -604,7 +604,7 @@ Si se puede medir el radio de la arteria con una precisión del 5\%, ¿qué prec
 
 :::{.callout-tip collapse="true"}
 ## Solución
-Si se interpreta $dr$ se interpreta como el error absoluto del radio de la arteria, $\frac{dr}{r}$ es el error relativo en la medición del radio, y $\frac{dv}{v}$ es el error relativo en la medición de la velocidad de la sangre. Así pues, se tiene 
+Si se interpreta $dr$ como el error absoluto del radio de la arteria, $\frac{dr}{r}$ es el error relativo en la medición del radio, y $\frac{dv}{v}$ es el error relativo en la medición de la velocidad de la sangre. Así pues, se tiene 
 
 $$
 \frac{dv}{v} = \frac{v'(r)dr}{v} = \frac{2cr\cdot dr}{cr^2} = 2\frac{dr}{r}.

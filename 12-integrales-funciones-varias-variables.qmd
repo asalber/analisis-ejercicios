@@ -305,7 +305,7 @@ a.  En este caso conviene integrar primero con respecto a $x$, luego con respect
 :::
 
 :::{#exr-volumen-piramide}
-Calcular el volumen de una pirámide de base cuadrada con lado $l$ centrada en el origen de coordenadas y altura $h$, usando una integral doble. ¿Cuál es la altura media de la pirámide?
+Calcular el volumen de una pirámide de base cuadrada con lado $a$ centrada en el origen de coordenadas y altura $h$, usando una integral doble. ¿Cuál es la altura media de la pirámide?
 :::
 
 :::{.callout-tip collapse="true"}
@@ -430,6 +430,27 @@ La región de integración es $R=\{(r,\theta)\in \mathbb{R}^+\times\mathbb{R}: 0
 
 Así pues, se necesitarán $\pi/2\approx 1.5708$ m$^2$ de tela.
 :::
+
+:::{#exr-volumen-cilindros}
+Calcular el volumen comprendido entre los cilindros de ecuación $x^2+y^2=1$ y $y^2+z^2 = 2$.
+:::
+
+:::{.callout-tip collapse="true"}
+## Solución
+La región de Integración es 
+
+\begin{align*}
+E
+&=\{(x,y,z)\in \mathbb{R}^3:x^2+y^2\leq 1,y^2+z^2\leq 2\}\\
+&= \{(x,y,z)\in \mathbb{R}^3: -1\leq y\leq 1, -\sqrt{1-y^2}\leq x\leq \sqrt{1-y^2},-\sqrt{2-y^2} \leq z\leq \sqrt{2-y^2} \}.
+\end{align*}
+
+En este caso, resulta más sencillo expresar esta región en coordenadas cilíndricas.
+
+$$
+E = \{(\rho, \phi, \theta)\in \}
+:::
+
 
 :::{#exr-potencial-gravitacional}
 El potencial gravitacional $V$ en el origen de una esfera homogénea de densidad $1$ g/cm$^3$ y radio $R$ centrada en el origen, viene dado por la integral
@@ -560,6 +581,24 @@ Al igual que antes, resulta más sencillo trabajar en coordenadas polares, por l
 = [2\sqrt{5}\theta]_0^{2\pi}
 = 4\sqrt{5}\pi \mbox{ m}^2. 
 \end{align*}
+:::
+
+:::{#exr-densidad-cable}
+Un cable en el plano sigue la trayectoria dada por la función vectorial $\mathbf{r}(t)=(t, t^2)$ con $t\in [0,2]$. Si en cada punto $(x, y)$ la densidad del cable viene dada por la función $\rho(x,y)=y/x$ kg/m, ¿cuál es la masa total del cable?
+
+:::{.callout-tip collapse="true"}
+## Solución
+
+:::
+
+
+:::{#exr-}
+Un oleoducto recorre la trayectoria dada por la función vectorial $\mathbf{f}(t)=(\cos(t), \operatorname{sen}(t), t)$ con $t\in [0,\pi]$. Si el coste de construir el oleoducto en cada punto es proporcional a la altura sobre el nivel del mar, ¿cuál será el coste total de construir el oleoducto?
+:::
+
+:::{.callout-tip collapse="true"}
+## Solución
+
 :::
 
 :::{#exr-integral-doble-valor-medio}
