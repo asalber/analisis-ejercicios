@@ -583,22 +583,245 @@ Al igual que antes, resulta más sencillo trabajar en coordenadas polares, por l
 \end{align*}
 :::
 
-:::{#exr-densidad-cable}
-Un cable en el plano sigue la trayectoria dada por la función vectorial $\mathbf{r}(t)=(t, t^2)$ con $t\in [0,2]$. Si en cada punto $(x, y)$ la densidad del cable viene dada por la función $\rho(x,y)=y/x$ kg/m, ¿cuál es la masa total del cable?
+:::{#exr-area-ala-avión}
+El perfil de la sección transversal del ala de un avión viene dada por las curvas $y=\frac{(-1+x^2)}{10}$ e $y=\frac{1-x^2}{10}$ en metros. Calcular el área de la superficie de un ala de 10 m de longitud.  
+:::
 
 :::{.callout-tip collapse="true"}
 ## Solución
+Para ver dónde se cortan las dos curvas resolvemos la ecuación que resulta de igualarlas.
 
+$$
+\frac{(-1+x^2)}{10} = \frac{1-x^2}{10} \Leftrightarrow 2x^2 - 2 = 0 \Leftrightarrow x=-1 \mbox{ o } x=1.
+$$
+
+Así pues, la región de integración es $R=\{(x,y)\in \mathbb{R}^2: -1\leq x\leq 1, 0\leq y\leq 10\}$.
+
+Por simetría, la superficie de la parte superior del ala tiene el mismo area que la superficie de la parte inferior, por lo que basta con calcular el area de la superficie de la parte superior, que se corresponde con la función $f(x,y)=\frac{1}{10}(x^2-1)$, y su area se obtiene con la integral 
+
+\begin{align*}
+\int_R \sqrt{f'_x(x,y)^2+f'_y(x,y)^2+1}\,dA
+&= \int_{-1}^1\int_0^10 \sqrt{\left(\frac{2x}{10}\right)^2+1}\,dy\,dx \\
+&= \int_{-1}^1\int_0^10 \sqrt{\frac{x^2+25}{25}}\,dy\,dx \\
+&= \int_{-1}^1 \sqrt{\frac{x^2+25}{25}} [y]_0^10\,dx \\
+&= \int_{-1}^1 10 \sqrt{\frac{x^2+25}{25}} \,dx \\
+&= 2\int_{-1}^1 \sqrt{x^2+25} \,dx \\
+&= 2\int_{\operatorname{arctg}(-1/5)}^{\operatorname{arctg}(1/5)} \sqrt{(5\operatorname{tg}(\theta))^2+25} 5\sec(\theta)^2\,d\theta \tag{1}\\
+&= 10\int_{\operatorname{arctg}(-1/5)}^{\operatorname{arctg}(1/5)} 5\sqrt{\operatorname{tg}(\theta)^2+1}\sec(\theta)^2\,d\theta \\
+&= 50\int_{\operatorname{arctg}(-1/5)}^{\operatorname{arctg}(1/5)} \sec(\theta)^3\,d\theta \tag{2} \\
+&= 50\left[ \frac{1}{2}\sec(\theta)\operatorname{tg}(\theta) + \frac{1}{2} \ln|\sec(\theta)+\operatorname{tg}(\theta)|\right]_{\operatorname{arctg}(-1/5)}^{\operatorname{arctg}(1/5)}\,d\theta \\
+&= 20.1325 \mbox{ m}^2.
+\end{align*}
+(1) Sustitución trigonométrica $x= 5\operatorname{tg}(\theta)$.  
+(2) $\int \sec(\theta)^3\,d\theta = \frac{1}{2}\sec(\theta)\operatorname{tg}(\theta) + \frac{1}{2} \ln|\sec(\theta)+\operatorname{tg}(\theta)|$ por partes.
+
+Por tanto, el area de la superficie del ala es $40.265$ m$^2$.
+:::
+
+:::{#exr-densidad-cable}
+Un cable en el plano sigue la trayectoria dada por la función vectorial $\mathbf{r}(t)=(t, t^2)$ con $t\in [0,2]$. Si en cada punto $(x, y)$ la densidad del cable viene dada por la función $\rho(x,y)=y/x$ kg/m, ¿cuál es la masa total del cable?
+:::
+
+:::{.callout-tip collapse="true"}
+## Solución
+La derivada de la función vectorial es $\mathbf{r}'(t) = (1, 2t)$, por lo que $|\mathbf{r}'(t)|=\sqrt{1+4t^2}$, y la masa total viene dada por la integral de la función de densidad sobre la curva parametrizada por $\mathbf{r}(t)$, que es
+
+\begin{align*}
+\int_C f(\mathbf{r}(t))\, ds 
+&= \int_0^2 \rho(\mathbf{r}(t))\,|\mathbf{r}'(t)|\,dt \\
+&=\int_0^2 t\sqrt{1+4t^2}\,dt.\\
+&= \frac{1}{8}\int_{1}^{17} u^{1/2}\,du \tag {1} \\
+&=\frac{1}{8}\left[\frac{2}{3}u^{3/2}\right]_{1}^{17} \\
+&=\frac{1}{12}\left(17^{3/2}-1\right)
+\approx 5.76\ \text{kg}.
+\end{align*}
+(1) Cambio $u = 1+4t^2$
 :::
 
 
-:::{#exr-}
+:::{#exr-coste-oleoducto}
 Un oleoducto recorre la trayectoria dada por la función vectorial $\mathbf{f}(t)=(\cos(t), \operatorname{sen}(t), t)$ con $t\in [0,\pi]$. Si el coste de construir el oleoducto en cada punto es proporcional a la altura sobre el nivel del mar, ¿cuál será el coste total de construir el oleoducto?
 :::
 
 :::{.callout-tip collapse="true"}
 ## Solución
+La trayectoria es $\mathbf{r}(t)=(\cos(t),\operatorname{sen}(t),t)$ con $t\in[0,\pi]$ y derivada $\mathbf{r}'(t)=(-\operatorname{sen}(t),\cos(t),1)$, de módulo $|\mathbf{r}'(t)|=\sqrt{2}$. El coste viene dado por la función $C(x, y, z) = Kz$, donde $k>0$ la constante de proporcionalidad, así que el coste total del oleoducto viene dado por la integral de la función de coste sobre la curva parametrizada por $\mathbf{r}(t)$, que vale
 
+\begin{align*}
+\int_C f(\mathbf{r}(t))\, ds 
+&= \int_0^{\pi} \rho(\mathbf{r}(t))\,|\mathbf{r}'(t)|\,dt \\
+&= \int_0^{\pi} kt\sqrt{2}\,dt
+= \sqrt{2}k\int_0^{\pi} t\,dt \\
+&= \sqrt{2}k\left[\frac{t^2}{2}\right]_0^{\pi}
+= k\,\frac{\pi^2}{\sqrt{2}}.
+\end{align*}
+:::
+
+:::{#exr-integral-curva-interseccion-superficies}
+Calcular la integral sobre la curva que se obtiene a proyectar la intersección de las superficies $z = x^2+y^2$ y $x+z=2$ sobre el plano $xy$.
+:::
+
+:::{.callout-tip collapse="true"}
+## Solución
+Para obtener la ecuación de la curva de intersección de las dos superficies resolvemos el sistema con sus dos ecuaciones. Como $z=x^2+y^2$, sustituyendo en la segunda ecuación tenemos $x + x^2 + y^2 = 2$. Completando el cuadrado de la suma en $x$ tenemos 
+
+$$
+x^2 + x + \frac{1}{4} - \frac{1}{4} + y^2 = 2
+\Leftrightarrow \left(x + \frac{1}{2}\right)^2 + y^2 = 2 + \frac{1}{4} = \frac{9}{4},
+$$
+
+que es la ecuación de un círculo de radio $3/2$ centrado en el punto $(-1/2, 0)$. Por tanto, una parametrización de esta curva es $\mathbf{r}(t) = \left(\frac{3}{2}\cos(t)-\frac{1}{2}, \frac{3}{2}\operatorname{sen}(t)\right)$ $t\in [0,2\pi]$, de manera que $\mathbf{r}'(t) = \left(-\frac{3}{2}\operatorname{sen}(t), \frac{3}{2}\cos(t)\right)$ y 
+
+$$
+|\mathbf{r}'(t)| 
+= \sqrt{\left(-\frac{3}{2}\operatorname{sen}(t)\right)^2 + \left(\frac{3}{2}\cos(t)\right)^2} 
+= \frac{3}{2}.
+$$ 
+
+Así pues, la integral sobre la curva es
+
+\begin{align*}
+\int_C x^2 + y^2\, dS
+&= \int_0^{2\pi} \left(\frac{3}{2}\cos(t)-\frac{1}{2}\right)^2, \left(\frac{3}{2}\operatorname{sen}(t)\right)^2 |\mathbf{r}'(t)|\, dt \\
+&= \int_0^{2\pi} \left(\frac{9}{4}\cos(t)^2 - \frac{3}{2}\cos(t) + \frac{1}{4} + \frac{9}{4}\operatorname{sen}(t)^2 \right)  \frac{3}{2} \\
+&= \int_0^{2\pi} \left(\frac{9}{4} - \frac{3}{2}\cos(t) + \frac{1}{4} \right)\frac{3}{2} \, dt \\
+&= \int_0^{2\pi} \frac{30}{8} - \frac{9}{4}\cos(t) \, dt \\
+&= \frac{30}{8}[t]_0^{2\pi} - \frac{9}{4}[\operatorname{sen}(t)]_0^{2\pi}
+= \frac{60\pi}{8}.
+\end{align*}
+:::
+
+:::{#exr-helicoide}
+La superficie de la función vectorial $\mathbf{r}(u,v)=(u\cos(v), u\operatorname{sen}(v), v)$ se conoce como _helicode_. Calcular el material necesario para construir un sinfín metálico helicoidal de 1 m de radio y 5 m de altura.
+:::
+
+:::{.callout-tip collapse="true"}
+## Solución
+Para calcular el área de la superficie helicoidal, necesitamos calcular la integral doble del módulo del
+producto vectorial de las derivadas parciales de la función vectorial $\mathbf{r}(u,v)$.
+ 
+Calculamos primero las derivadas parciales de $\mathbf{r}(u,v)$.
+\begin{align*}
+\mathbf{r}'_u(u,v) &= (\cos(v), \operatorname{sen}(v), 0), \\
+\mathbf{r}'_v(u,v) &= (-u\operatorname{sen}(v), u\cos(v), 1).
+\end{align*}
+
+Calculamos ahora el producto vectorial.
+
+\begin{align*}
+\mathbf{r}'_u(u,v) \times \mathbf{r}'_v(u,v)
+&= \begin{vmatrix}
+\mathbf{i} & \mathbf{j} & \mathbf{k} \\
+\cos(v) & \operatorname{sen}(v) & 0 \\
+-u\operatorname{sen}(v) & u\cos(v) & 1
+\end{vmatrix} \\
+&= \operatorname{sen}(v) \mathbf{i} - \cos(v)\mathbf{j} + (u\cos(v)^2 + u\operatorname{sen}(v)^2) \mathbf{k}\\
+&= (\operatorname{sen}(v), -\cos(v), u).
+\end{align*}
+
+Finalmente calculamos la integral del módulo del producto vectorial sobre la región de integración dada.
+
+\begin{align*}
+\int_0^{2\pi} \int_0^5 |\mathbf{r}'_u(u,v) \times \mathbf{r}'_v(u,v)|\,du\,dv 
+&= \int_0^{2\pi} \int_0^5 \sqrt{\operatorname{sen}(v)^2 + (-\cos(v))^2 + u^2}\,du\,dv \\
+&= \int_0^{2\pi} \int_0^5 \sqrt{1 + u^2}\,du\,dv \\
+&= \int_0^{2\pi} \int_0^{\operatorname{arctg}(5)} \sqrt{1 + \operatorname{tg}(\theta)^2}\sec(\theta)^2\,d\theta\,dv \tag{1} \\
+&= \int_0^{2\pi} \int_0^{\operatorname{arctg}(5)} \sqrt{\sec(\theta)^2}\sec(\theta)^2\,d\theta\,dv \tag{2} \\
+&= \int_0^{2\pi} \int_0^{\operatorname{arctg}(5)} \sec(\theta)^3\,d\theta\,dv \\
+&= \int_0^{2\pi} \left[\frac{1}{2}\sec(\theta)\operatorname{tg}(\theta) + \frac{1}{2} \ln|\sec(\theta)+\operatorname{tg}(\theta)|\right]_0^{\operatorname{arctg}(5)}\,dv \\
+&= \int_0^{2\pi} \left(\frac{5\sqrt{26}}{2} + \frac{1}{2}\ln(\sqrt{26}+5) - 0\right)\,dv \\
+&= 2\pi \left(\frac{5\sqrt{26}}{2} + \frac{1}{2}\ln(\sqrt{26}+5)\right) \mbox{ m}^2.
+\end{align*}
+(1) Cambio trigonométrico $u=\operatorname{tg}(\theta)$.
+(2) [Integral de la secante cúbica](https://es.wikipedia.org/wiki/Integral_de_la_secante_c%C3%BAbica).       
+:::
+
+:::{#exr-energia-panel-solar}
+Un panel solar tiene forma de plano dado por la función $z = 1 + x$ con $x\in[0,2]$ e $y\in[0,3]$.  Si la intensidad de la radiación solar en cada punto del panel viene dada por la función $I(x,y) = 100 + 20z$ W/m$^2$, calcular la cantidad de energía que recibe el panel en una hora.
+:::
+
+:::{.callout-tip collapse="true"}
+## Solución
+Podemos parametrizar el plano mediante la función vectorial $\mathbf{r}(x,y) = (x, y, 1+x)$ con $x\in[0,2]$ e $y\in[0,3]$. Calculamos las derivadas parciales de $\mathbf{r}(x,y)$.
+
+\begin{align*}
+\mathbf{r}'_x(x,y) &= (1, 0, 1), \\
+\mathbf{r}'_y(x,y) &= (0, 1, 0).
+\end{align*}
+
+Calculamos ahora el producto vectorial.
+
+\begin{align*}
+\mathbf{r}'_x(x,y) \times \mathbf{r}'_y(x,y)
+&= \begin{vmatrix}
+\mathbf{i} & \mathbf{j} & \mathbf{k} \\
+1 & 0 & 1 \\
+0 & 1 & 0
+\end{vmatrix} \\
+&= -\mathbf{i} + \mathbf{k}
+= (-1, 0, 1).
+\end{align*}
+
+Finalmente, la potencia (energía por unidad de tiempo) es la integral de la intensidad de la radiación solar sobre la superficie del panel, que viene dada por la integral
+
+\begin{align*}
+\int\int_S I(x,y)\,dS
+&= \int_0^2 \int_0^3 I(x,y) |\mathbf{r}'_x(x,y) \times \mathbf{r}'_y(x,y)|\,dy\,dx \\
+&= \int_0^2 \int_0^3 (100 + 20(1+x)) \sqrt{(-1)^2 + 0^2 + 1^2}\,dy\,dx \\
+&= \int_0^2 \int_0^3 (120 + 20x) \sqrt{2}\,dy\,dx \\
+&= \int_0^2 (120 + 20x) \sqrt{2} [y]_0^3\,dx \\
+&= \int_0^2 3(120 + 20x) \sqrt{2}\,dx \\
+&= 3\sqrt{2} \left[120x + 10x^2\right]_0^2 \\
+&= 3\sqrt{2} (240 + 40) 
+= 840\sqrt{2} \mbox{ W}
+\approx 1.19 \mbox{ kW}.
+\end{align*}
+
+Por tanto, la cantidad de energía que recibe el panel en una hora es $1.19$ kWh.
+:::
+
+:::{#exr-pintura-techo}
+El techo de una sala tiene forma de semicilindro dado por la función $z=\sqrt{9-x^2}$ con $y\in[0,10]$. Calcular la cantidad de pintura necesaria para pintar el techo si el espesor de la capa de pintura en cada punto de la superficie viene dada por la función $d(x,y,z) = \frac{1}{10000}(y + z)$ m.
+:::
+
+:::{.callout-tip collapse="true"}
+## Solución
+Una parametrización del techo en coordenadas cartesianas es $\mathbf{r}(x,y) = (x, y, \sqrt{9-x^2})$ con $x\in[-3,3]$ e $y\in[0,10]$. Calculamos las derivadas parciales de $\mathbf{r}(x,y)$.
+
+\begin{align*}
+\mathbf{r}'_x(x,y) &= (1, 0, \frac{-x}{\sqrt{9-x^2}}), \\
+\mathbf{r}'_y(x,y) &= (0, 1, 0).
+\end{align*}
+
+Calculamos ahora el producto vectorial.
+\begin{align*}
+\mathbf{r}'_x(x,y) \times \mathbf{r}'_y(x,y)
+&= \begin{vmatrix}
+\mathbf{i} & \mathbf{j} & \mathbf{k} \\
+1 & 0 & \frac{-x}{\sqrt{9-x^2}} \\
+0 & 1 & 0
+\end{vmatrix} \\
+&= \frac{x}{\sqrt{9-x^2}}\mathbf{i} - \mathbf{k}
+= \left(\frac{x}{\sqrt{9-x^2}}, 0, 1\right).
+\end{align*}
+
+Finalmente, la cantidad de pintura necesaria es la integral de la función de espesor sobre la superficie del techo, que viene dada por la integral
+
+\begin{align*}
+\int\int_S d(x,y)\,dS
+&= \int_{-3}^3 \int_0^{10} d(x,y,z) |\mathbf{r}'_x(x,y) \times \mathbf{r}'_y(x,y)|\,dy\,dx \\
+&= \int_{-3}^3 \int_0^{10} \frac{1}{10000}(y + \sqrt{9-x^2}) \sqrt{\left(\frac{x}{\sqrt{9-x^2}}\right)^2 + 0^2 + (-1)^2}\,dy\,dx \\
+&= \frac{1}{10000}\int_{-3}^3 \int_0^{10} (y + \sqrt{9-x^2}) \sqrt{\frac{x^2}{9-x^2} + 1}\,dy\,dx \\
+&= \frac{1}{10000}\int_{-3}^3 \int_0^{10} (y + \sqrt{9-x^2}) \frac{3}{\sqrt{9-x^2}}\,dy\,dx \\ 
+&= \frac{3}{10000}\int_{-3}^3 \int_0^{10} \frac{y}{\sqrt{9-x^2}} + 1\,dy\,dx \\
+&= \frac{3}{10000}\int_{-3}^3 \left[\frac{y^2}{2\sqrt{9-x^2}} + y\right]_0^{10}\,dx \\
+&= \frac{3}{10000}\int_{-3}^3 \frac{100}{2\sqrt{9-x^2}} + 10\,dx \\
+&= \frac{3}{10000}\left[50\int_{-3}^3 \frac{1}{\sqrt{9-x^2}}\,dx + \int_{-3}^3 10\,dx\right] \\
+&= \frac{3}{10000}\left[50[\operatorname{arcsen}(x/3)]_{-3}^3 + 10[ x ]_{-3}^3\right] \\
+&= \frac{3}{10000}\left[50\left(\frac{\pi}{2} - \left(-\frac{\pi}{2}\right)\right) + 10(3 - (-3))\right] \\
+&= \frac{3}{10000}\left[50\pi + 60\right] \\
+&\approx 0.06512 \mbox{ m}^3.
+\end{align*}
 :::
 
 :::{#exr-integral-doble-valor-medio}
@@ -690,41 +913,6 @@ Así pues, el centro de masas de la placa tiene las siguientes coordenadas
 \end{align*}
 :::
 
-:::{#exr-presion-ala-avión}
-El perfil de la sección transversal del ala de un avión viene dada por las curvas $y=\frac{(-1+x^2)}{10}$ e $y=\frac{1-x^2}{10}$ en metros. Calcular el área de la superficie de un ala de 10 m de longitud.  
-:::
-
-:::{.callout-tip collapse="true"}
-## Solución
-Para ver dónde se cortan las dos curvas resolvemos la ecuación que resulta de igualarlas.
-
-$$
-\frac{(-1+x^2)}{10} = \frac{1-x^2}{10} \Leftrightarrow 2x^2 - 2 = 0 \Leftrightarrow x=-1 \mbox{ o } x=1.
-$$
-
-Así pues, la región de integración es $R=\{(x,y)\in \mathbb{R}^2: -1\leq x\leq 1, 0\leq y\leq 10\}$.
-
-Por simetría, la superficie de la parte superior del ala tiene el mismo area que la superficie de la parte inferior, por lo que basta con calcular el area de la superficie de la parte superior, que se corresponde con la función $f(x,y)=\frac{1}{10}(x^2-1)$, y su area se obtiene con la integral 
-
-\begin{align*}
-\int_R \sqrt{f'_x(x,y)^2+f'_y(x,y)^2+1}\,dA
-&= \int_{-1}^1\int_0^10 \sqrt{\left(\frac{2x}{10}\right)^2+1}\,dy\,dx \\
-&= \int_{-1}^1\int_0^10 \sqrt{\frac{x^2+25}{25}}\,dy\,dx \\
-&= \int_{-1}^1 \sqrt{\frac{x^2+25}{25}} [y]_0^10\,dx \\
-&= \int_{-1}^1 10 \sqrt{\frac{x^2+25}{25}} \,dx \\
-&= 2\int_{-1}^1 \sqrt{x^2+25} \,dx \\
-&= 2\int_{\operatorname{arctg}(-1/5)}^{\operatorname{arctg}(1/5)} \sqrt{(5\operatorname{tg}(\theta))^2+25} 5\sec(\theta)^2\,d\theta \tag{1}\\
-&= 10\int_{\operatorname{arctg}(-1/5)}^{\operatorname{arctg}(1/5)} 5\sqrt{\operatorname{tg}(\theta)^2+1}\sec(\theta)^2\,d\theta \\
-&= 50\int_{\operatorname{arctg}(-1/5)}^{\operatorname{arctg}(1/5)} \sec(\theta)^3\,d\theta \tag{2} \\
-&= 50\left[ \frac{1}{2}\sec(\theta)\operatorname{tg}(\theta) + \frac{1}{2} \ln|\sec(\theta)+\operatorname{tg}(\theta)|\right]_{\operatorname{arctg}(-1/5)}^{\operatorname{arctg}(1/5)}\,d\theta \\
-&= 20.1325 \mbox{ m}^2.
-\end{align*}
-(1) Sustitución trigonométrica $x= 5\operatorname{tg}(\theta)$.  
-(2) $\int \sec(\theta)^3\,d\theta = \frac{1}{2}\sec(\theta)\operatorname{tg}(\theta) + \frac{1}{2} \ln|\sec(\theta)+\operatorname{tg}(\theta)|$ por partes.
-
-Por tanto, el area de la superficie del ala es $40.265$ m$^2$.
-:::
-
 :::{#exr-funcion-densidad-exponencial-exponencial}
 La función de densidad de probabilidad de una variable aleatoria bidimensional es
 
@@ -770,4 +958,3 @@ a.  Las componentes $x$ de la media muestral de la variable viene dada por la in
 
     Y por simetría, la componente $y$ vale lo mismo por lo que la media muestral es $(2,2)$.
 :::
-

@@ -1095,8 +1095,9 @@ f'_x(x,y) &amp;= \frac{2x}{\sqrt{x^2+y^2}},
 </div>
 </div>
 </div>
-<div id="exr-densidad-cable" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 11.20</strong></span> Un cable en el plano sigue la trayectoria dada por la función vectorial <span class="math inline">\(\mathbf{r}(t)=(t, t^2)\)</span> con <span class="math inline">\(t\in [0,2]\)</span>. Si en cada punto <span class="math inline">\((x, y)\)</span> la densidad del cable viene dada por la función <span class="math inline">\(\rho(x,y)=y/x\)</span> kg/m, ¿cuál es la masa total del cable?</p>
+<div id="exr-area-ala-avión" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 11.15</strong></span> El perfil de la sección transversal del ala de un avión viene dada por las curvas <span class="math inline">\(y=\frac{(-1+x^2)}{10}\)</span> e <span class="math inline">\(y=\frac{1-x^2}{10}\)</span> en metros. Calcular el área de la superficie de un ala de 10 m de longitud.</p>
+</div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-15-contents" aria-controls="callout-15" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -1109,12 +1110,32 @@ Solución
 </div>
 <div id="callout-15" class="callout-15-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-
+<p>Para ver dónde se cortan las dos curvas resolvemos la ecuación que resulta de igualarlas.</p>
+<p><span class="math display">\[
+\frac{(-1+x^2)}{10} = \frac{1-x^2}{10} \Leftrightarrow 2x^2 - 2 = 0 \Leftrightarrow x=-1 \mbox{ o } x=1.
+\]</span></p>
+<p>Así pues, la región de integración es <span class="math inline">\(R=\{(x,y)\in \mathbb{R}^2: -1\leq x\leq 1, 0\leq y\leq 10\}\)</span>.</p>
+<p>Por simetría, la superficie de la parte superior del ala tiene el mismo area que la superficie de la parte inferior, por lo que basta con calcular el area de la superficie de la parte superior, que se corresponde con la función <span class="math inline">\(f(x,y)=\frac{1}{10}(x^2-1)\)</span>, y su area se obtiene con la integral</p>
+<p><span class="math display">\[\begin{align*}
+\int_R \sqrt{f'_x(x,y)^2+f'_y(x,y)^2+1}\,dA
+&amp;= \int_{-1}^1\int_0^10 \sqrt{\left(\frac{2x}{10}\right)^2+1}\,dy\,dx \\
+&amp;= \int_{-1}^1\int_0^10 \sqrt{\frac{x^2+25}{25}}\,dy\,dx \\
+&amp;= \int_{-1}^1 \sqrt{\frac{x^2+25}{25}} [y]_0^10\,dx \\
+&amp;= \int_{-1}^1 10 \sqrt{\frac{x^2+25}{25}} \,dx \\
+&amp;= 2\int_{-1}^1 \sqrt{x^2+25} \,dx \\
+&amp;= 2\int_{\operatorname{arctg}(-1/5)}^{\operatorname{arctg}(1/5)} \sqrt{(5\operatorname{tg}(\theta))^2+25} 5\sec(\theta)^2\,d\theta \tag{1}\\
+&amp;= 10\int_{\operatorname{arctg}(-1/5)}^{\operatorname{arctg}(1/5)} 5\sqrt{\operatorname{tg}(\theta)^2+1}\sec(\theta)^2\,d\theta \\
+&amp;= 50\int_{\operatorname{arctg}(-1/5)}^{\operatorname{arctg}(1/5)} \sec(\theta)^3\,d\theta \tag{2} \\
+&amp;= 50\left[ \frac{1}{2}\sec(\theta)\operatorname{tg}(\theta) + \frac{1}{2} \ln|\sec(\theta)+\operatorname{tg}(\theta)|\right]_{\operatorname{arctg}(-1/5)}^{\operatorname{arctg}(1/5)}\,d\theta \\
+&amp;= 20.1325 \mbox{ m}^2.
+\end{align*}\]</span> (1) Sustitución trigonométrica <span class="math inline">\(x= 5\operatorname{tg}(\theta)\)</span>.<br>
+(2) <span class="math inline">\(\int \sec(\theta)^3\,d\theta = \frac{1}{2}\sec(\theta)\operatorname{tg}(\theta) + \frac{1}{2} \ln|\sec(\theta)+\operatorname{tg}(\theta)|\)</span> por partes.</p>
+<p>Por tanto, el area de la superficie del ala es <span class="math inline">\(40.265\)</span> m<span class="math inline">\(^2\)</span>.</p>
 </div>
 </div>
 </div>
-<div id="exr-" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 11.15</strong></span> Un oleoducto recorre la trayectoria dada por la función vectorial <span class="math inline">\(\mathbf{f}(t)=(\cos(t), \operatorname{sen}(t), t)\)</span> con <span class="math inline">\(t\in [0,\pi]\)</span>. Si el coste de construir el oleoducto en cada punto es proporcional a la altura sobre el nivel del mar, ¿cuál será el coste total de construir el oleoducto?</p>
+<div id="exr-densidad-cable" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 11.16</strong></span> Un cable en el plano sigue la trayectoria dada por la función vectorial <span class="math inline">\(\mathbf{r}(t)=(t, t^2)\)</span> con <span class="math inline">\(t\in [0,2]\)</span>. Si en cada punto <span class="math inline">\((x, y)\)</span> la densidad del cable viene dada por la función <span class="math inline">\(\rho(x,y)=y/x\)</span> kg/m, ¿cuál es la masa total del cable?</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-16-contents" aria-controls="callout-16" aria-expanded="false" aria-label="Toggle callout">
@@ -1128,12 +1149,21 @@ Solución
 </div>
 <div id="callout-16" class="callout-16-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-
+<p>La derivada de la función vectorial es <span class="math inline">\(\mathbf{r}'(t) = (1, 2t)\)</span>, por lo que <span class="math inline">\(|\mathbf{r}'(t)|=\sqrt{1+4t^2}\)</span>, y la masa total viene dada por la integral de la función de densidad sobre la curva parametrizada por <span class="math inline">\(\mathbf{r}(t)\)</span>, que es</p>
+<p><span class="math display">\[\begin{align*}
+\int_C f(\mathbf{r}(t))\, ds
+&amp;= \int_0^2 \rho(\mathbf{r}(t))\,|\mathbf{r}'(t)|\,dt \\
+&amp;=\int_0^2 t\sqrt{1+4t^2}\,dt.\\
+&amp;= \frac{1}{8}\int_{1}^{17} u^{1/2}\,du \tag {1} \\
+&amp;=\frac{1}{8}\left[\frac{2}{3}u^{3/2}\right]_{1}^{17} \\
+&amp;=\frac{1}{12}\left(17^{3/2}-1\right)
+\approx 5.76\ \text{kg}.
+\end{align*}\]</span> (1) Cambio <span class="math inline">\(u = 1+4t^2\)</span></p>
 </div>
 </div>
 </div>
-<div id="exr-integral-doble-valor-medio" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 11.16</strong></span> Calcular el valor medio de la función <span class="math inline">\(f(x,y)=\sqrt{xy}\)</span> en la región del primer cuadrante delimitada por las funciones <span class="math inline">\(y=x\)</span> e <span class="math inline">\(y=x^2\)</span>.</p>
+<div id="exr-coste-oleoducto" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 11.17</strong></span> Un oleoducto recorre la trayectoria dada por la función vectorial <span class="math inline">\(\mathbf{f}(t)=(\cos(t), \operatorname{sen}(t), t)\)</span> con <span class="math inline">\(t\in [0,\pi]\)</span>. Si el coste de construir el oleoducto en cada punto es proporcional a la altura sobre el nivel del mar, ¿cuál será el coste total de construir el oleoducto?</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-17-contents" aria-controls="callout-17" aria-expanded="false" aria-label="Toggle callout">
@@ -1146,6 +1176,215 @@ Solución
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
 <div id="callout-17" class="callout-17-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>La trayectoria es <span class="math inline">\(\mathbf{r}(t)=(\cos(t),\operatorname{sen}(t),t)\)</span> con <span class="math inline">\(t\in[0,\pi]\)</span> y derivada <span class="math inline">\(\mathbf{r}'(t)=(-\operatorname{sen}(t),\cos(t),1)\)</span>, de módulo <span class="math inline">\(|\mathbf{r}'(t)|=\sqrt{2}\)</span>. El coste viene dado por la función <span class="math inline">\(C(x, y, z) = Kz\)</span>, donde <span class="math inline">\(k&gt;0\)</span> la constante de proporcionalidad, así que el coste total del oleoducto viene dado por la integral de la función de coste sobre la curva parametrizada por <span class="math inline">\(\mathbf{r}(t)\)</span>, que vale</p>
+<p><span class="math display">\[\begin{align*}
+\int_C f(\mathbf{r}(t))\, ds
+&amp;= \int_0^{\pi} \rho(\mathbf{r}(t))\,|\mathbf{r}'(t)|\,dt \\
+&amp;= \int_0^{\pi} kt\sqrt{2}\,dt
+= \sqrt{2}k\int_0^{\pi} t\,dt \\
+&amp;= \sqrt{2}k\left[\frac{t^2}{2}\right]_0^{\pi}
+= k\,\frac{\pi^2}{\sqrt{2}}.
+\end{align*}\]</span></p>
+</div>
+</div>
+</div>
+<div id="exr-integral-curva-interseccion-superficies" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 11.18</strong></span> Calcular la integral sobre la curva que se obtiene a proyectar la intersección de las superficies <span class="math inline">\(z = x^2+y^2\)</span> y <span class="math inline">\(x+z=2\)</span> sobre el plano <span class="math inline">\(xy\)</span>.</p>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-18-contents" aria-controls="callout-18" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-18" class="callout-18-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Para obtener la ecuación de la curva de intersección de las dos superficies resolvemos el sistema con sus dos ecuaciones. Como <span class="math inline">\(z=x^2+y^2\)</span>, sustituyendo en la segunda ecuación tenemos <span class="math inline">\(x + x^2 + y^2 = 2\)</span>. Completando el cuadrado de la suma en <span class="math inline">\(x\)</span> tenemos</p>
+<p><span class="math display">\[
+x^2 + x + \frac{1}{4} - \frac{1}{4} + y^2 = 2
+\Leftrightarrow \left(x + \frac{1}{2}\right)^2 + y^2 = 2 + \frac{1}{4} = \frac{9}{4},
+\]</span></p>
+<p>que es la ecuación de un círculo de radio <span class="math inline">\(3/2\)</span> centrado en el punto <span class="math inline">\((-1/2, 0)\)</span>. Por tanto, una parametrización de esta curva es <span class="math inline">\(\mathbf{r}(t) = \left(\frac{3}{2}\cos(t)-\frac{1}{2}, \frac{3}{2}\operatorname{sen}(t)\right)\)</span> <span class="math inline">\(t\in [0,2\pi]\)</span>, de manera que <span class="math inline">\(\mathbf{r}'(t) = \left(-\frac{3}{2}\operatorname{sen}(t), \frac{3}{2}\cos(t)\right)\)</span> y</p>
+<p><span class="math display">\[
+|\mathbf{r}'(t)|
+= \sqrt{\left(-\frac{3}{2}\operatorname{sen}(t)\right)^2 + \left(\frac{3}{2}\cos(t)\right)^2}
+= \frac{3}{2}.
+\]</span></p>
+<p>Así pues, la integral sobre la curva es</p>
+<p><span class="math display">\[\begin{align*}
+\int_C x^2 + y^2\, dS
+&amp;= \int_0^{2\pi} \left(\frac{3}{2}\cos(t)-\frac{1}{2}\right)^2, \left(\frac{3}{2}\operatorname{sen}(t)\right)^2 |\mathbf{r}'(t)|\, dt \\
+&amp;= \int_0^{2\pi} \left(\frac{9}{4}\cos(t)^2 - \frac{3}{2}\cos(t) + \frac{1}{4} + \frac{9}{4}\operatorname{sen}(t)^2 \right)  \frac{3}{2} \\
+&amp;= \int_0^{2\pi} \left(\frac{9}{4} - \frac{3}{2}\cos(t) + \frac{1}{4} \right)\frac{3}{2} \, dt \\
+&amp;= \int_0^{2\pi} \frac{30}{8} - \frac{9}{4}\cos(t) \, dt \\
+&amp;= \frac{30}{8}[t]_0^{2\pi} - \frac{9}{4}[\operatorname{sen}(t)]_0^{2\pi}
+= \frac{60\pi}{8}.
+\end{align*}\]</span></p>
+</div>
+</div>
+</div>
+<div id="exr-helicoide" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 11.19</strong></span> La superficie de la función vectorial <span class="math inline">\(\mathbf{r}(u,v)=(u\cos(v), u\operatorname{sen}(v), v)\)</span> se conoce como <em>helicode</em>. Calcular el material necesario para construir un sinfín metálico helicoidal de 1 m de radio y 5 m de altura.</p>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-19-contents" aria-controls="callout-19" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-19" class="callout-19-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Para calcular el área de la superficie helicoidal, necesitamos calcular la integral doble del módulo del producto vectorial de las derivadas parciales de la función vectorial <span class="math inline">\(\mathbf{r}(u,v)\)</span>.</p>
+<p>Calculamos primero las derivadas parciales de <span class="math inline">\(\mathbf{r}(u,v)\)</span>. <span class="math display">\[\begin{align*}
+\mathbf{r}'_u(u,v) &amp;= (\cos(v), \operatorname{sen}(v), 0), \\
+\mathbf{r}'_v(u,v) &amp;= (-u\operatorname{sen}(v), u\cos(v), 1).
+\end{align*}\]</span></p>
+<p>Calculamos ahora el producto vectorial.</p>
+<p><span class="math display">\[\begin{align*}
+\mathbf{r}'_u(u,v) \times \mathbf{r}'_v(u,v)
+&amp;= \begin{vmatrix}
+\mathbf{i} &amp; \mathbf{j} &amp; \mathbf{k} \\
+\cos(v) &amp; \operatorname{sen}(v) &amp; 0 \\
+-u\operatorname{sen}(v) &amp; u\cos(v) &amp; 1
+\end{vmatrix} \\
+&amp;= \operatorname{sen}(v) \mathbf{i} - \cos(v)\mathbf{j} + (u\cos(v)^2 + u\operatorname{sen}(v)^2) \mathbf{k}\\
+&amp;= (\operatorname{sen}(v), -\cos(v), u).
+\end{align*}\]</span></p>
+<p>Finalmente calculamos la integral del módulo del producto vectorial sobre la región de integración dada.</p>
+<p><span class="math display">\[\begin{align*}
+\int_0^{2\pi} \int_0^5 |\mathbf{r}'_u(u,v) \times \mathbf{r}'_v(u,v)|\,du\,dv
+&amp;= \int_0^{2\pi} \int_0^5 \sqrt{\operatorname{sen}(v)^2 + (-\cos(v))^2 + u^2}\,du\,dv \\
+&amp;= \int_0^{2\pi} \int_0^5 \sqrt{1 + u^2}\,du\,dv \\
+&amp;= \int_0^{2\pi} \int_0^{\operatorname{arctg}(5)} \sqrt{1 + \operatorname{tg}(\theta)^2}\sec(\theta)^2\,d\theta\,dv \tag{1} \\
+&amp;= \int_0^{2\pi} \int_0^{\operatorname{arctg}(5)} \sqrt{\sec(\theta)^2}\sec(\theta)^2\,d\theta\,dv \tag{2} \\
+&amp;= \int_0^{2\pi} \int_0^{\operatorname{arctg}(5)} \sec(\theta)^3\,d\theta\,dv \\
+&amp;= \int_0^{2\pi} \left[\frac{1}{2}\sec(\theta)\operatorname{tg}(\theta) + \frac{1}{2} \ln|\sec(\theta)+\operatorname{tg}(\theta)|\right]_0^{\operatorname{arctg}(5)}\,dv \\
+&amp;= \int_0^{2\pi} \left(\frac{5\sqrt{26}}{2} + \frac{1}{2}\ln(\sqrt{26}+5) - 0\right)\,dv \\
+&amp;= 2\pi \left(\frac{5\sqrt{26}}{2} + \frac{1}{2}\ln(\sqrt{26}+5)\right) \mbox{ m}^2.
+\end{align*}\]</span> (1) Cambio trigonométrico <span class="math inline">\(u=\operatorname{tg}(\theta)\)</span>. (2) <a href="https://es.wikipedia.org/wiki/Integral_de_la_secante_c%C3%BAbica">Integral de la secante cúbica</a>.</p>
+</div>
+</div>
+</div>
+<div id="exr-energia-panel-solar" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 11.20</strong></span> Un panel solar tiene forma de plano dado por la función <span class="math inline">\(z = 1 + x\)</span> con <span class="math inline">\(x\in[0,2]\)</span> e <span class="math inline">\(y\in[0,3]\)</span>. Si la intensidad de la radiación solar en cada punto del panel viene dada por la función <span class="math inline">\(I(x,y) = 100 + 20z\)</span> W/m<span class="math inline">\(^2\)</span>, calcular la cantidad de energía que recibe el panel en una hora.</p>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-20-contents" aria-controls="callout-20" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-20" class="callout-20-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Podemos parametrizar el plano mediante la función vectorial <span class="math inline">\(\mathbf{r}(x,y) = (x, y, 1+x)\)</span> con <span class="math inline">\(x\in[0,2]\)</span> e <span class="math inline">\(y\in[0,3]\)</span>. Calculamos las derivadas parciales de <span class="math inline">\(\mathbf{r}(x,y)\)</span>.</p>
+<p><span class="math display">\[\begin{align*}
+\mathbf{r}'_x(x,y) &amp;= (1, 0, 1), \\
+\mathbf{r}'_y(x,y) &amp;= (0, 1, 0).
+\end{align*}\]</span></p>
+<p>Calculamos ahora el producto vectorial.</p>
+<p><span class="math display">\[\begin{align*}
+\mathbf{r}'_x(x,y) \times \mathbf{r}'_y(x,y)
+&amp;= \begin{vmatrix}
+\mathbf{i} &amp; \mathbf{j} &amp; \mathbf{k} \\
+1 &amp; 0 &amp; 1 \\
+0 &amp; 1 &amp; 0
+\end{vmatrix} \\
+&amp;= -\mathbf{i} + \mathbf{k}
+= (-1, 0, 1).
+\end{align*}\]</span></p>
+<p>Finalmente, la potencia (energía por unidad de tiempo) es la integral de la intensidad de la radiación solar sobre la superficie del panel, que viene dada por la integral</p>
+<p><span class="math display">\[\begin{align*}
+\int\int_S I(x,y)\,dS
+&amp;= \int_0^2 \int_0^3 I(x,y) |\mathbf{r}'_x(x,y) \times \mathbf{r}'_y(x,y)|\,dy\,dx \\
+&amp;= \int_0^2 \int_0^3 (100 + 20(1+x)) \sqrt{(-1)^2 + 0^2 + 1^2}\,dy\,dx \\
+&amp;= \int_0^2 \int_0^3 (120 + 20x) \sqrt{2}\,dy\,dx \\
+&amp;= \int_0^2 (120 + 20x) \sqrt{2} [y]_0^3\,dx \\
+&amp;= \int_0^2 3(120 + 20x) \sqrt{2}\,dx \\
+&amp;= 3\sqrt{2} \left[120x + 10x^2\right]_0^2 \\
+&amp;= 3\sqrt{2} (240 + 40)
+= 840\sqrt{2} \mbox{ W}
+\approx 1.19 \mbox{ kW}.
+\end{align*}\]</span></p>
+<p>Por tanto, la cantidad de energía que recibe el panel en una hora es <span class="math inline">\(1.19\)</span> kWh.</p>
+</div>
+</div>
+</div>
+<div id="exr-pintura-techo" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 11.21</strong></span> El techo de una sala tiene forma de semicilindro dado por la función <span class="math inline">\(z=\sqrt{9-x^2}\)</span> con <span class="math inline">\(y\in[0,10]\)</span>. Calcular la cantidad de pintura necesaria para pintar el techo si el espesor de la capa de pintura en cada punto de la superficie viene dada por la función <span class="math inline">\(d(x,y,z) = \frac{1}{10000}(y + z)\)</span> m.</p>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-21-contents" aria-controls="callout-21" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-21" class="callout-21-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Una parametrización del techo en coordenadas cartesianas es <span class="math inline">\(\mathbf{r}(x,y) = (x, y, \sqrt{9-x^2})\)</span> con <span class="math inline">\(x\in[-3,3]\)</span> e <span class="math inline">\(y\in[0,10]\)</span>. Calculamos las derivadas parciales de <span class="math inline">\(\mathbf{r}(x,y)\)</span>.</p>
+<p><span class="math display">\[\begin{align*}
+\mathbf{r}'_x(x,y) &amp;= (1, 0, \frac{-x}{\sqrt{9-x^2}}), \\
+\mathbf{r}'_y(x,y) &amp;= (0, 1, 0).
+\end{align*}\]</span></p>
+<p>Calculamos ahora el producto vectorial. <span class="math display">\[\begin{align*}
+\mathbf{r}'_x(x,y) \times \mathbf{r}'_y(x,y)
+&amp;= \begin{vmatrix}
+\mathbf{i} &amp; \mathbf{j} &amp; \mathbf{k} \\
+1 &amp; 0 &amp; \frac{-x}{\sqrt{9-x^2}} \\
+0 &amp; 1 &amp; 0
+\end{vmatrix} \\
+&amp;= \frac{x}{\sqrt{9-x^2}}\mathbf{i} - \mathbf{k}
+= \left(\frac{x}{\sqrt{9-x^2}}, 0, 1\right).
+\end{align*}\]</span></p>
+<p>Finalmente, la cantidad de pintura necesaria es la integral de la función de espesor sobre la superficie del techo, que viene dada por la integral</p>
+<p><span class="math display">\[\begin{align*}
+\int\int_S d(x,y)\,dS
+&amp;= \int_{-3}^3 \int_0^{10} d(x,y,z) |\mathbf{r}'_x(x,y) \times \mathbf{r}'_y(x,y)|\,dy\,dx \\
+&amp;= \int_{-3}^3 \int_0^{10} \frac{1}{10000}(y + \sqrt{9-x^2}) \sqrt{\left(\frac{x}{\sqrt{9-x^2}}\right)^2 + 0^2 + (-1)^2}\,dy\,dx \\
+&amp;= \frac{1}{10000}\int_{-3}^3 \int_0^{10} (y + \sqrt{9-x^2}) \sqrt{\frac{x^2}{9-x^2} + 1}\,dy\,dx \\
+&amp;= \frac{1}{10000}\int_{-3}^3 \int_0^{10} (y + \sqrt{9-x^2}) \frac{3}{\sqrt{9-x^2}}\,dy\,dx \\
+&amp;= \frac{3}{10000}\int_{-3}^3 \int_0^{10} \frac{y}{\sqrt{9-x^2}} + 1\,dy\,dx \\
+&amp;= \frac{3}{10000}\int_{-3}^3 \left[\frac{y^2}{2\sqrt{9-x^2}} + y\right]_0^{10}\,dx \\
+&amp;= \frac{3}{10000}\int_{-3}^3 \frac{100}{2\sqrt{9-x^2}} + 10\,dx \\
+&amp;= \frac{3}{10000}\left[50\int_{-3}^3 \frac{1}{\sqrt{9-x^2}}\,dx + \int_{-3}^3 10\,dx\right] \\
+&amp;= \frac{3}{10000}\left[50[\operatorname{arcsen}(x/3)]_{-3}^3 + 10[ x ]_{-3}^3\right] \\
+&amp;= \frac{3}{10000}\left[50\left(\frac{\pi}{2} - \left(-\frac{\pi}{2}\right)\right) + 10(3 - (-3))\right] \\
+&amp;= \frac{3}{10000}\left[50\pi + 60\right] \\
+&amp;\approx 0.06512 \mbox{ m}^3.
+\end{align*}\]</span></p>
+</div>
+</div>
+</div>
+<div id="exr-integral-doble-valor-medio" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 11.22</strong></span> Calcular el valor medio de la función <span class="math inline">\(f(x,y)=\sqrt{xy}\)</span> en la región del primer cuadrante delimitada por las funciones <span class="math inline">\(y=x\)</span> e <span class="math inline">\(y=x^2\)</span>.</p>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-22-contents" aria-controls="callout-22" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-22" class="callout-22-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Como las funciones <span class="math inline">\(y=x\)</span> e <span class="math inline">\(y=x^2\)</span> se cortan en los puntos <span class="math inline">\((0,0)\)</span> y <span class="math inline">\((1,1)\)</span>, la región de integración es <span class="math inline">\(R=\{(x,y)\in\mathbb{R}^2: 0\leq x\leq 1, x^2\leq y \leq x\}\)</span>. El valor medio de la función en esta región es el valor de la integral doble de <span class="math inline">\(f\)</span> sobre la región, dividida por el área de la región.</p>
 <p>Calculamos primero la integral doble de <span class="math inline">\(f\)</span> sobre <span class="math inline">\(R\)</span>.</p>
@@ -1169,10 +1408,10 @@ Solución
 </div>
 </div>
 <div id="exr-masa-lamina-chapa" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 11.17</strong></span> Una lámina de chapa metálica tiene la forma de la forma de triángulo con vértices <span class="math inline">\((0,0)\)</span>, <span class="math inline">\((1,1)\)</span> y <span class="math inline">\((2,0)\)</span>. Si la densidad de la chapa en cada punto viene dada por la función <span class="math inline">\(d(x,y)=e^{x+y}\)</span> gr/cm<span class="math inline">\(^2\)</span>, calcular la masa de la chapa y su centro de masas.</p>
+<p><span class="theorem-title"><strong>Ejercicio 11.23</strong></span> Una lámina de chapa metálica tiene la forma de la forma de triángulo con vértices <span class="math inline">\((0,0)\)</span>, <span class="math inline">\((1,1)\)</span> y <span class="math inline">\((2,0)\)</span>. Si la densidad de la chapa en cada punto viene dada por la función <span class="math inline">\(d(x,y)=e^{x+y}\)</span> gr/cm<span class="math inline">\(^2\)</span>, calcular la masa de la chapa y su centro de masas.</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-18-contents" aria-controls="callout-18" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-23-contents" aria-controls="callout-23" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1181,7 +1420,7 @@ Solución
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-18" class="callout-18-contents callout-collapse collapse">
+<div id="callout-23" class="callout-23-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>El triángulo está delimitado por las rectas <span class="math inline">\(y=0\)</span>, <span class="math inline">\(y=x\)</span> e <span class="math inline">\(y=2-x\)</span>, por lo que la región de integración puede expresarse como <span class="math inline">\(R=\{(x,y)\in\mathbb{R}^: 0\leq y\leq 1, y\leq x\leq 2-y\}\)</span>. Para obtener la masa de la placa basta con integrar la función de densidad en esta región.</p>
 <p><span class="math display">\[\begin{align*}
@@ -1230,47 +1469,8 @@ M_y
 </div>
 </div>
 </div>
-<div id="exr-presion-ala-avión" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 11.18</strong></span> El perfil de la sección transversal del ala de un avión viene dada por las curvas <span class="math inline">\(y=\frac{(-1+x^2)}{10}\)</span> e <span class="math inline">\(y=\frac{1-x^2}{10}\)</span> en metros. Calcular el área de la superficie de un ala de 10 m de longitud.</p>
-</div>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-19-contents" aria-controls="callout-19" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Solución
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-19" class="callout-19-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p>Para ver dónde se cortan las dos curvas resolvemos la ecuación que resulta de igualarlas.</p>
-<p><span class="math display">\[
-\frac{(-1+x^2)}{10} = \frac{1-x^2}{10} \Leftrightarrow 2x^2 - 2 = 0 \Leftrightarrow x=-1 \mbox{ o } x=1.
-\]</span></p>
-<p>Así pues, la región de integración es <span class="math inline">\(R=\{(x,y)\in \mathbb{R}^2: -1\leq x\leq 1, 0\leq y\leq 10\}\)</span>.</p>
-<p>Por simetría, la superficie de la parte superior del ala tiene el mismo area que la superficie de la parte inferior, por lo que basta con calcular el area de la superficie de la parte superior, que se corresponde con la función <span class="math inline">\(f(x,y)=\frac{1}{10}(x^2-1)\)</span>, y su area se obtiene con la integral</p>
-<p><span class="math display">\[\begin{align*}
-\int_R \sqrt{f'_x(x,y)^2+f'_y(x,y)^2+1}\,dA
-&amp;= \int_{-1}^1\int_0^10 \sqrt{\left(\frac{2x}{10}\right)^2+1}\,dy\,dx \\
-&amp;= \int_{-1}^1\int_0^10 \sqrt{\frac{x^2+25}{25}}\,dy\,dx \\
-&amp;= \int_{-1}^1 \sqrt{\frac{x^2+25}{25}} [y]_0^10\,dx \\
-&amp;= \int_{-1}^1 10 \sqrt{\frac{x^2+25}{25}} \,dx \\
-&amp;= 2\int_{-1}^1 \sqrt{x^2+25} \,dx \\
-&amp;= 2\int_{\operatorname{arctg}(-1/5)}^{\operatorname{arctg}(1/5)} \sqrt{(5\operatorname{tg}(\theta))^2+25} 5\sec(\theta)^2\,d\theta \tag{1}\\
-&amp;= 10\int_{\operatorname{arctg}(-1/5)}^{\operatorname{arctg}(1/5)} 5\sqrt{\operatorname{tg}(\theta)^2+1}\sec(\theta)^2\,d\theta \\
-&amp;= 50\int_{\operatorname{arctg}(-1/5)}^{\operatorname{arctg}(1/5)} \sec(\theta)^3\,d\theta \tag{2} \\
-&amp;= 50\left[ \frac{1}{2}\sec(\theta)\operatorname{tg}(\theta) + \frac{1}{2} \ln|\sec(\theta)+\operatorname{tg}(\theta)|\right]_{\operatorname{arctg}(-1/5)}^{\operatorname{arctg}(1/5)}\,d\theta \\
-&amp;= 20.1325 \mbox{ m}^2.
-\end{align*}\]</span> (1) Sustitución trigonométrica <span class="math inline">\(x= 5\operatorname{tg}(\theta)\)</span>.<br>
-(2) <span class="math inline">\(\int \sec(\theta)^3\,d\theta = \frac{1}{2}\sec(\theta)\operatorname{tg}(\theta) + \frac{1}{2} \ln|\sec(\theta)+\operatorname{tg}(\theta)|\)</span> por partes.</p>
-<p>Por tanto, el area de la superficie del ala es <span class="math inline">\(40.265\)</span> m<span class="math inline">\(^2\)</span>.</p>
-</div>
-</div>
-</div>
 <div id="exr-funcion-densidad-exponencial-exponencial" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 11.19</strong></span> La función de densidad de probabilidad de una variable aleatoria bidimensional es</p>
+<p><span class="theorem-title"><strong>Ejercicio 11.24</strong></span> La función de densidad de probabilidad de una variable aleatoria bidimensional es</p>
 <p><span class="math display">\[
 f(x,y) =
 \begin{cases}
@@ -1284,7 +1484,7 @@ ke^{-(x+y)/2} &amp; x\geq 0, y\geq 0\\
 </ol>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-20-contents" aria-controls="callout-20" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-24-contents" aria-controls="callout-24" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1293,7 +1493,7 @@ Solución
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-20" class="callout-20-contents callout-collapse collapse">
+<div id="callout-24" class="callout-24-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ol type="a">
 <li><p>Para que <span class="math inline">\(f\)</span> sea una función de densidad de probabilidad el volumen total encerrado entre la superficie de <span class="math inline">\(f\)</span> y el plano <span class="math inline">\(z=0\)</span> debe ser <span class="math inline">\(1\)</span>. Este volumen viene dado por la integral doble impropia</p>
@@ -1323,7 +1523,6 @@ Solución
 </div>
 
 
-</div>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
