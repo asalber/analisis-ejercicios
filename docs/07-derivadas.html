@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.32">
+<meta name="generator" content="quarto-1.8.26">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -35,16 +35,17 @@ ul.task-list li input[type="checkbox"] {
 <link href="./img/logos/favicon.ico" rel="icon">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-b6e6edf6cb1293d7f667c2f39c143ab5.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-c3c2c9e745155556954bc4da23476b10.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-d640c705e8c17715bca3574aa719063f.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-d6a2ae2cb249da1580f0a11f71b8f854.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-dc12146a391dffe4ab414b9223dc34b1.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-7f3f82f48c6f7129423757c1c3196a5d.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-de8af6d6517050dea70ce10de1895a41.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-8d7c51f3ec8028eac7aae1b5795d51c0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -59,7 +60,7 @@ ul.task-list li input[type="checkbox"] {
   ],
   "show-item-context": false,
   "language": {
-    "search-no-results-text": "Sin resultados",
+    "search-no-results-text": "No se han encontrado resultados",
     "search-matching-documents-text": "documentos encontrados",
     "search-copy-link-title": "Copiar el enlace en la búsqueda",
     "search-hide-matches-text": "Ocultar resultados adicionales",
@@ -87,7 +88,7 @@ const typesetMath = (el) => {
     var macros = [];
     for (var i = 0; i < mathElements.length; i++) {
       var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
         window.katex.render(texText.data, mathElements[i], {
           displayMode: mathElements[i].classList.contains('display'),
           throwOnError: false,
@@ -296,7 +297,8 @@ window.Quarto = {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
       <a href="./index.html" class="sidebar-logo-link">
-      <img src="./img/logos/aprendeconalf.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      <img src="./img/logos/aprendeconalf.png" alt="" class="sidebar-logo light-content py-0 d-lg-inline d-none">
+      <img src="./img/logos/aprendeconalf.png" alt="" class="sidebar-logo dark-content py-0 d-lg-inline d-none">
       </a>
     <div class="sidebar-title mb-0 py-0">
       <a href="./">Problemas de Análisis Matemático</a> 
@@ -454,12 +456,12 @@ window.Quarto = {
 <p><span class="theorem-title"><strong>Ejercicio 6.1</strong></span> Usando la definición de derivada, demostrar que la derivada de la función <span class="math inline">\(f(x)=x^n\)</span> es <span class="math inline">\(f'(x)=nx^{n-1}\)</span> donde <span class="math inline">\(n\in\mathbb{N}\)</span>.</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Solución
+<span class="screen-reader-only">Tip</span>Solución
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -473,12 +475,12 @@ Solución
 <p><span class="theorem-title"><strong>Ejercicio 6.2</strong></span> Demostrar que la función <span class="math inline">\(f(x)=|x-1|\)</span> es continua en <span class="math inline">\(x=1\)</span> pero no es derivable en dicho punto.</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Solución
+<span class="screen-reader-only">Tip</span>Solución
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -496,12 +498,12 @@ Solución
 <p><span class="theorem-title"><strong>Ejercicio 6.3</strong></span> Estudiar si es derivable la función <span class="math inline">\(f(x)=\sqrt[3]{x-1}\)</span> en el punto <span class="math inline">\(x=1\)</span>.</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Solución
+<span class="screen-reader-only">Tip</span>Solución
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -530,12 +532,12 @@ x/2 &amp; \mbox{si $x\in (2,3)$,} \\
 \]</span></p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Solución
+<span class="screen-reader-only">Tip</span>Solución
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -576,12 +578,12 @@ e^{-x} &amp; \mbox{si $x&gt;0$.}
 </ol>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Solución
+<span class="screen-reader-only">Tip</span>Solución
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -660,12 +662,12 @@ ax^2+b &amp;  \mbox{si $0&lt;x\leq c$},  \\
 <p>con <span class="math inline">\(a,b,c\in\mathbb{R}\)</span>, ¿existe algún valor de las constantes de manera que la función sea continua y derivable en todo su dominio?</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Solución
+<span class="screen-reader-only">Tip</span>Solución
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -736,12 +738,12 @@ c &amp;= e^{1/2}.
 </ol>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Solución
+<span class="screen-reader-only">Tip</span>Solución
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -766,12 +768,12 @@ y'&amp;=\left(\ln\sqrt{\frac{1+x}{1-x}}\right)' = \left(\frac{1}{2}(\ln(1+x)-\ln
 <p><span class="theorem-title"><strong>Ejercicio 6.8</strong></span> Dadas las funciones <span class="math inline">\(f(x)=\ln\left(\frac{x^2}{2}\right)\)</span> y <span class="math inline">\(g(x)=x^3+2\)</span>, ¿existe algún valor de <span class="math inline">\(x\)</span> en el que la recta normal a <span class="math inline">\(f\)</span> y la recta tangente a <span class="math inline">\(g\)</span> en dicho punto sean paralelas?</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Solución
+<span class="screen-reader-only">Tip</span>Solución
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -794,12 +796,12 @@ g'(x) &amp;= 3x^2
 <p><span class="theorem-title"><strong>Ejercicio 6.9</strong></span> Demostrar que cualquier función polinómica <span class="math inline">\(f(x)=c_0+c_1x+c_2x^2+\cdots+c_nx^n\)</span> con <span class="math inline">\(n\in\mathbb{N}\)</span> es derivable en todo <span class="math inline">\(\mathbb{R}\)</span>.</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Solución
+<span class="screen-reader-only">Tip</span>Solución
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -819,12 +821,12 @@ f'(x) &amp;= (c_0+c_1x+c_2x^2+\cdots+c_nx^n)' \\
 <p><span class="theorem-title"><strong>Ejercicio 6.10</strong></span> Demostrar que cualquier función racional <span class="math inline">\(h(x)=\dfrac{f(x)}{g(x)}\)</span>, con <span class="math inline">\(f(x)\)</span> y <span class="math inline">\(g(x)\)</span> funciones polinómicas, es derivable en todo <span class="math inline">\(x\in\mathbb{R}\)</span> tal que <span class="math inline">\(g(x)\neq 0\)</span>.</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Solución
+<span class="screen-reader-only">Tip</span>Solución
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -847,12 +849,12 @@ h'(x) = \left(\frac{f(x)}{g(x)}\right)' = \frac{f'(x)g(x)-f(x)g'(x)}{g(x)^2}.
 </ol>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Solución
+<span class="screen-reader-only">Tip</span>Solución
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -913,12 +915,12 @@ j^{(n}(x) &amp;= \frac{(-1)^n \prod_{i=1}^{n}2i-1}{2^n}(1+x)^{-\frac{2n+1}{2}}
 <p><span class="theorem-title"><strong>Ejercicio 6.12</strong></span> Se sabe que la demanda de un producto, en decenas de miles de unidades, depende de su precio según la función <span class="math inline">\(D(x)=\ln(10/x)\)</span>. Si el precio mensual evoluciona según la función <span class="math inline">\(x(t)=2+\frac{t}{10}\)</span>, ¿cuál será la tasa de variación de la demanda en el instante <span class="math inline">\(t=5\)</span>? Según esta tasa de variación de la demanda, ¿qué demanda aproximada se espera tener un mes después?</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-12-contents" aria-controls="callout-12" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-12-contents" aria-controls="callout-12" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Solución
+<span class="screen-reader-only">Tip</span>Solución
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -945,12 +947,12 @@ y = D(5)+D'(5)(t-5) = \ln\left(\frac{10}{2+\frac{5}{10}}\right) -\frac{1}{25}(t-
 <p><span class="theorem-title"><strong>Ejercicio 6.13</strong></span> Un balón relleno de aire tiene radio 10 cm cuando se empieza a introducir más aire, de manera que el radio se incrementa con una velocidad de 2 cm/s. ¿Con qué velocidad varía el volumen en ese instante?</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-13-contents" aria-controls="callout-13" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-13-contents" aria-controls="callout-13" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Solución
+<span class="screen-reader-only">Tip</span>Solución
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -969,12 +971,12 @@ V(r(t_0))' &amp;= \frac{dV}{dr}(r(t_0))\frac{dr}{dt}(t_0) = \frac{4}{3}\pi 3 r(t
 <p><span class="theorem-title"><strong>Ejercicio 6.14</strong></span> Una pipeta cilíndrica de radio 5 mm almacena una solución. Si la pipeta empieza a vaciarse a razón de <span class="math inline">\(0.5\)</span> ml por segundo, ¿a qué velocidad disminuye el nivel de la pipeta?</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-14-contents" aria-controls="callout-14" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-14-contents" aria-controls="callout-14" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Solución
+<span class="screen-reader-only">Tip</span>Solución
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -994,12 +996,12 @@ V(h(t_0))' = \frac{dV}{dh}(h(t_0))\frac{dh}{dt}(t_0) = 25\pi \mbox{ mm}^2 h'(t_0
 <p><span class="theorem-title"><strong>Ejercicio 6.15</strong></span> Un cilindro de 4 cm de radio (<span class="math inline">\(r\)</span>) y 3 cm de altura (<span class="math inline">\(h\)</span>) se somete a un proceso de calentamiento con el que varían sus dimensiones de tal forma que <span class="math inline">\(\frac{dr}{dt}=\frac{dh}{dt}= 1\)</span> cm/s. Hallar de forma aproximada la variación de su volumen a los 5 segundos y a los 10 segundos.</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-15-contents" aria-controls="callout-15" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-15-contents" aria-controls="callout-15" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Solución
+<span class="screen-reader-only">Tip</span>Solución
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -1022,12 +1024,12 @@ V(r(t_0),h(t_0))' = \pi(2\cdot 4 \mbox{ cm }\cdot 1 \mbox{ cm/s } \cdot 3 \mbox{
 <p><span class="theorem-title"><strong>Ejercicio 6.16</strong></span> La ventas mensuales de bicicletas en una ciudad depende del precio de las bicicletas <span class="math inline">\(x\)</span>, en euros, y el precio del combustible <span class="math inline">\(y\)</span>, en céntimos de euro, según la función <span class="math inline">\(v(x,y)=200-10\sqrt{x}+(\frac{y}{10}+20)^{3/2}\)</span>. Si en un determinado instante el precio de las bicicletas es de 200 € y el precio del combustible es de 1€, y el precio de las bicicletas comienza a subir a razón de 1€ al mes, mientras que el precio del combustible empieza a subir a razón de 5 céntimos al mes. ¿Qué tasa de variación experimentarán las ventas de bicicletas en ese instante? Según esta tasa de variación, ¿qué ventas aproximadas se espera tener el próximo mes?</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-16-contents" aria-controls="callout-16" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-16-contents" aria-controls="callout-16" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Solución
+<span class="screen-reader-only">Tip</span>Solución
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -1058,12 +1060,12 @@ y &amp;= v(t_0) + v'(t_0) (t-t_0) \\
 <p><span class="theorem-title"><strong>Ejercicio 6.17</strong></span> Dada la función <span class="math inline">\(f:[-\pi/2, \pi/2]\to \mathbb{R}\)</span>, tal que <span class="math inline">\(f(x)=\operatorname{sen}(x)\)</span>, calcular la derivada de su función inversa <span class="math inline">\(f^{-1}(x) = \operatorname{arcsen}(x)\)</span> <span class="math inline">\(\forall x\in (-1,1)\)</span>.</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-17-contents" aria-controls="callout-17" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-17-contents" aria-controls="callout-17" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Solución
+<span class="screen-reader-only">Tip</span>Solución
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -1084,12 +1086,12 @@ Solución
 <p><span class="theorem-title"><strong>Ejercicio 6.18</strong></span> Se desea medir la superficie de una célula esférica y para ello se ha medido el radio de una célula de 5 <span class="math inline">\(\mu\)</span>m con un error de <span class="math inline">\(0.2\)</span> <span class="math inline">\(\mu\)</span>m. ¿Cuál será el error aproximado cometido en el cálculo de la superficie de la célula? En general, si al medir el radio se comete siempre un error relativo del 2%? ¿Cómo afecta esto al error de la medida de la superficie de la célula?</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-18-contents" aria-controls="callout-18" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-18-contents" aria-controls="callout-18" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Solución
+<span class="screen-reader-only">Tip</span>Solución
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -1115,12 +1117,12 @@ v(r) = cr^2,
 \]</span> donde <span class="math inline">\(v\)</span> es la velocidad de la sangre, <span class="math inline">\(r\)</span> es el radio de la arteria y <span class="math inline">\(c\)</span> es una constante. Si se puede medir el radio de la arteria con una precisión del 5%, ¿qué precisión tendrá el cálculo de la velocidad?</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-19-contents" aria-controls="callout-19" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-19-contents" aria-controls="callout-19" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Solución
+<span class="screen-reader-only">Tip</span>Solución
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -1144,12 +1146,12 @@ C(t) = a E(t)^b
 \]</span> donde <span class="math inline">\(a&gt;0\)</span> y <span class="math inline">\(b\)</span> son constantes y <span class="math inline">\(t\)</span> es el tiempo. Esta ecuación se conoce como <em>ecuación alométrica</em>. ¿Cómo se relaciona la tasa de crecimiento de la espina dorsal con la del cráneo? ¿Para qué valores de <span class="math inline">\(b\)</span> es la función <span class="math inline">\(C\)</span> creciente, pero de forma que la relación <span class="math inline">\(C/E\)</span> disminuye al aumentar <span class="math inline">\(E\)</span>? ¿En qué estado de desarrollo tienen los vertebrados cráneos mayores en relación con la longitud de sus cuerpos?</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-20-contents" aria-controls="callout-20" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-20-contents" aria-controls="callout-20" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Solución
+<span class="screen-reader-only">Tip</span>Solución
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -1180,12 +1182,12 @@ C'(t) = a b E(t)^{b-1}E'(t)
 </div>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-21-contents" aria-controls="callout-21" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-21-contents" aria-controls="callout-21" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Solución
+<span class="screen-reader-only">Tip</span>Solución
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -1212,12 +1214,12 @@ Solución
 <p><span class="theorem-title"><strong>Ejercicio 6.22</strong></span> Hallar <span class="math inline">\(a\)</span>, <span class="math inline">\(b\)</span> y <span class="math inline">\(c\)</span> en la función <span class="math inline">\(f(x)=x^3+bx^2+cx+d\)</span> para que tenga un punto de inflexión en <span class="math inline">\(x=3\)</span>, pase por el punto <span class="math inline">\((1,0)\)</span> y alcance un máximo en <span class="math inline">\(x=1\)</span>.</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-22-contents" aria-controls="callout-22" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-22-contents" aria-controls="callout-22" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Solución
+<span class="screen-reader-only">Tip</span>Solución
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -1242,12 +1244,12 @@ C(n) = \frac{n}{1+n^2},\quad n\geq 0.
 <p>¿Para qué nivel de nitrógeno se obtendrá la mayor cosecha de trigo?</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-23-contents" aria-controls="callout-23" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-23-contents" aria-controls="callout-23" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Solución
+<span class="screen-reader-only">Tip</span>Solución
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -1272,12 +1274,12 @@ v(x) = 4(3-x)(5-x).
 \]</span> ¿Qué valor de <span class="math inline">\(x\)</span> maximiza la velocidad de reacción?</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-24-contents" aria-controls="callout-24" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-24-contents" aria-controls="callout-24" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Solución
+<span class="screen-reader-only">Tip</span>Solución
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -1296,12 +1298,12 @@ v'(x) = 8x-32 = 0 \Leftrightarrow x = 4.
 <p><span class="theorem-title"><strong>Ejercicio 6.25</strong></span> Un naufrago se encuentra en una isla situada en un plano con coordenadas <span class="math inline">\((2,0)\)</span>. Se sabe que un ferry hace siempre la trayectoria dada por la función <span class="math inline">\(f(x)=\sqrt{x+1}\)</span>. ¿Hacia qué punto de la trayectoria del ferry debe nadar el naufrago para recorrer la menor distancia posible? ¿Qué distancia recorrerá si nada hacia ese punto?</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-25-contents" aria-controls="callout-25" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-25-contents" aria-controls="callout-25" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Solución
+<span class="screen-reader-only">Tip</span>Solución
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -1323,12 +1325,12 @@ d'(x) = \frac{2x-3}{2\sqrt{x^2-3x+5}} = 0 \Leftrightarrow 2x-3 = 0 \Leftrightarr
 <p><span class="theorem-title"><strong>Ejercicio 6.26</strong></span> Un hotel alquila habitaciones por un precio entre 40€ y 100€ diarios. Se ha observado que el número de habitaciones que alquilan depende del precio <span class="math inline">\(x\)</span> según la función <span class="math inline">\(h(x)=300-3x\)</span>. ¿Qué precio se debe cobrar por habitación para obtener los máximos ingresos?</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-26-contents" aria-controls="callout-26" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-26-contents" aria-controls="callout-26" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Solución
+<span class="screen-reader-only">Tip</span>Solución
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -1354,12 +1356,12 @@ v(x) = \frac{\ln(p(x)h(x))}{x},
 <p>donde <span class="math inline">\(p(x)\)</span> es la probabilidad de sobrevivir hasta la edad <span class="math inline">\(x\)</span> y <span class="math inline">\(h(x)\)</span> es el número de nacimientos de hembras a la edad <span class="math inline">\(x\)</span>. Calcular la edad óptima de reproducción, es decir, el valor que maximice <span class="math inline">\(v\)</span>, para <span class="math inline">\(p(x)=e^{-0.1x}\)</span> y <span class="math inline">\(h(x)=4x^{0.9}\)</span>.</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-27-contents" aria-controls="callout-27" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-27-contents" aria-controls="callout-27" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Solución
+<span class="screen-reader-only">Tip</span>Solución
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -1387,12 +1389,12 @@ v'(x) = \frac{(x)'(\ln(4)+0.9\ln(x))-x(\ln(4)+0.9\ln(x))'}{x^2}\\ = \frac{\ln(4)
 <p><span class="theorem-title"><strong>Ejercicio 6.29</strong></span> La distancia en kilómetros que recorre un coche de alquiler con 1 litro de gasolina depende de la velocidad a la que circule según la función <span class="math inline">\(d(x)=18-\frac{x}{20}\)</span> para <span class="math inline">\(x\in(50,200)\)</span>. Si el coste de la gasolina es de <span class="math inline">\(2\)</span> €/l y el coste del alquiler es de <span class="math inline">\(5\)</span> €/h, ¿a qué velocidad debe circular para que el coste del trayecto sea mínimo? ¿Cuál será el coste por kilómetro si circula a esa velocidad?</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-28-contents" aria-controls="callout-28" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-28-contents" aria-controls="callout-28" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Solución
+<span class="screen-reader-only">Tip</span>Solución
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -1416,12 +1418,12 @@ c'(x)
 <p><span class="theorem-title"><strong>Ejercicio 6.30</strong></span> En un tramo de carretera limitado a una velocidad máxima de <span class="math inline">\(70\)</span> km/h existe un semáforo de tramo. Según el registro del semáforo, un vehículo pasa por el comienzo del tramo, situado en el kilómetro 12 a las 8:00 y pasa por el final del tramo, situado en el kilómetro <span class="math inline">\(14\)</span>, un minuto y medio después. ¿Será sancionado el vehículo por exceso de velocidad?</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-29-contents" aria-controls="callout-29" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-29-contents" aria-controls="callout-29" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Solución
+<span class="screen-reader-only">Tip</span>Solución
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -1442,12 +1444,12 @@ e(t) = 4t^3 -2t +1.
 Nota: La aceleración es la tasa de variación instantánea de la velocidad.</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-30-contents" aria-controls="callout-30" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-30-contents" aria-controls="callout-30" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Solución
+<span class="screen-reader-only">Tip</span>Solución
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -1469,12 +1471,12 @@ e(t) =v_0t-\frac{1}{2}gt^2
 </ol>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-31-contents" aria-controls="callout-31" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-31-contents" aria-controls="callout-31" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Solución
+<span class="screen-reader-only">Tip</span>Solución
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -1511,12 +1513,12 @@ y = t^2-2t+3. \\
 </ol>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-32-contents" aria-controls="callout-32" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-32-contents" aria-controls="callout-32" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Solución
+<span class="screen-reader-only">Tip</span>Solución
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -1566,12 +1568,12 @@ y=-\frac{1}{2}gt^2
 <p>donde <span class="math inline">\(t\in \mathbb{R}^{+}\)</span> es el tiempo contado a partir del instante en que el punto llega a la posición más alta, <span class="math inline">\(v_0\)</span> es la velocidad horizontal en el instante <span class="math inline">\(t=0\)</span> y <span class="math inline">\(g=9.81\)</span> m<span class="math inline">\(^2\)</span>/s es la aceleración de la gravedad en la superficie terrestre. ¿En qué instante la magnitud de la velocidad horizontal será igual a la de la velocidad vertical? ¿Cuánto debería valer <span class="math inline">\(v_0\)</span> para que en dicho instante el punto haya recorrido 100 m horizontalmente? Calcular la ecuación de la recta tangente en dicho instante con el valor de <span class="math inline">\(v_0\)</span> calculado.</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-33-contents" aria-controls="callout-33" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-33-contents" aria-controls="callout-33" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Solución
+<span class="screen-reader-only">Tip</span>Solución
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -1616,12 +1618,12 @@ y = -49.91-(x-100) \Leftrightarrow y=-x+50.09.
 <p><span class="theorem-title"><strong>Ejercicio 6.35</strong></span> La cantidad de árboles en un ecosistema depende del tiempo según la función <span class="math inline">\(a(t)=100\ln(t^2+1)\)</span>, y la cantidad de un determinado parásito de los árboles, también depende del tiempo según la función <span class="math inline">\(p(t) = \sqrt[3]{t^2+ 2}\)</span>. Calcular la tasa de variación instantánea del número de árboles en relación al número de parásitos, en el instante en que el número de parásitos es <span class="math inline">\(3\)</span>.</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-34-contents" aria-controls="callout-34" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-34-contents" aria-controls="callout-34" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Solución
+<span class="screen-reader-only">Tip</span>Solución
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -1645,12 +1647,12 @@ p(t)=\sqrt[3]{t^2+2} = 3 \Leftrightarrow t^2+2 = 27 \Leftrightarrow t^2=25 \Left
 <p><span class="theorem-title"><strong>Ejercicio 6.36</strong></span> Dada la función <span class="math inline">\(xy+e^x-\log y=0\)</span>, calcular las ecuaciones de las rectas tangente y normal a ella en <span class="math inline">\(x=0\)</span>.</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-35-contents" aria-controls="callout-35" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-35-contents" aria-controls="callout-35" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Solución
+<span class="screen-reader-only">Tip</span>Solución
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -1689,12 +1691,12 @@ T^2(V^2-\pi^2)-V\cos(TV) = 0.
 </ol>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-36-contents" aria-controls="callout-36" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-36-contents" aria-controls="callout-36" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Solución
+<span class="screen-reader-only">Tip</span>Solución
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -1718,12 +1720,12 @@ Solución
 </ol>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-37-contents" aria-controls="callout-37" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-37-contents" aria-controls="callout-37" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Solución
+<span class="screen-reader-only">Tip</span>Solución
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -1763,12 +1765,12 @@ y-2=-2(x-0)\Leftrightarrow y=-2x+2.
 <p><span class="theorem-title"><strong>Ejercicio 6.39</strong></span> Hallar la ecuación de la recta tangente y normal a la curva <span class="math inline">\(x^2+y^2=3xy-1\)</span> en los puntos en que <span class="math inline">\(x=1\)</span>. Calcular también los extremos relativos y decir si son máximos o mínimos.</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-38-contents" aria-controls="callout-38" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-38-contents" aria-controls="callout-38" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Solución
+<span class="screen-reader-only">Tip</span>Solución
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -1850,12 +1852,12 @@ x^{2}+(2x/3)^{2}=3x(2x/3)-1 \Leftrightarrow x^{2}+4x^{2}/9 = 2x^{2}-1\\  \Leftri
 </ol>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-39-contents" aria-controls="callout-39" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-39-contents" aria-controls="callout-39" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Solución
+<span class="screen-reader-only">Tip</span>Solución
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -1914,12 +1916,12 @@ x^2-x\cdot 2x+(2x)^2=3 \Leftrightarrow x^2-2x^2+4x^2=3 \Leftrightarrow 3x^2=3 \L
 </ol>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-40-contents" aria-controls="callout-40" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-40-contents" aria-controls="callout-40" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Solución
+<span class="screen-reader-only">Tip</span>Solución
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -1968,12 +1970,12 @@ P^5_{f,0}(x) = x -\frac{1}{6} x^3 + \frac{1}{120}x^5.
 <p><span class="theorem-title"><strong>Ejercicio 6.42</strong></span> Calcular el polinomio de Maclaurin de tercer grado para la función <span class="math inline">\(f(x)=\operatorname{arcsen}(x)\)</span>.</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-41-contents" aria-controls="callout-41" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-41-contents" aria-controls="callout-41" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Solución
+<span class="screen-reader-only">Tip</span>Solución
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -2003,12 +2005,12 @@ P^3_{f,0}(x) = x+\frac{1}{6}x^3.
 <p><span class="theorem-title"><strong>Ejercicio 6.43</strong></span> Calcular <span class="math inline">\(\cos(1)\)</span> con un error menor que <span class="math inline">\(10^{-7}\)</span> usando aproximaciones de Taylor.</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-42-contents" aria-controls="callout-42" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-42-contents" aria-controls="callout-42" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Solución
+<span class="screen-reader-only">Tip</span>Solución
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -2044,12 +2046,12 @@ P^{10}_{f,0}(1)= 1-\frac{1^2}{2!}+\frac{1^4}{4!}-\frac{1^6}{6!}+\frac{1^8}{8!}-\
 \]</span></p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-43-contents" aria-controls="callout-43" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-43-contents" aria-controls="callout-43" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Solución
+<span class="screen-reader-only">Tip</span>Solución
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -2094,12 +2096,12 @@ C(t) = \frac{1}{{1 + e^{-2t}}}
 </ol>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-44-contents" aria-controls="callout-44" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-44-contents" aria-controls="callout-44" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Solución
+<span class="screen-reader-only">Tip</span>Solución
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -2217,13 +2219,14 @@ C(0.25)\approx P_{C,0}^3(0.25)= \frac{1}{2}+\frac{1}{2}0.25-\frac{1}{6}0.25^3= 0
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy
