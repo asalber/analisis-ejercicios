@@ -3,6 +3,21 @@ title: Integrales de funciones
 lang: es
 ---
 
+:::{#exr-particiones-intervalos}
+Calcular particiones en $n$ subintervalos de igual tamaño de los siguientes intervalos.
+
+a.  $[0,1]$.
+a.  $[\pi,2\pi]$.
+a.  $[-1, 1]$
+:::
+
+:::{.callout-tip collapse="true"}
+## Solución
+a.  $P = \left\{ \frac{i}{n}: i=0,1,\ldots,n\right\}$.
+a.  $P = \left\{ \pi + \frac{i\pi}{n}: i=0,1,\ldots,n\right\}$.
+a.  $P = \left\{ -1 + \frac{2i}{n}: i=0,1,\ldots,n\right\}$.
+:::
+
 :::{#exr-sumas-inferiores-superiores-riemann}
 Calcular las sumas inferior y superior de Riemann de las siguientes funciones en el intervalo $[0,1]$, tomando particiones de igual tamaño con $n$ puntos, desde $n=2$ hasta $n=5$.
 
@@ -138,11 +153,11 @@ Para calcular las integrales inferior y superior, basta con calcular el límite 
 \begin{align*}
 \underline{\int_0^1} x^3 
 & = \lim_{n\to\infty} s(f,P_n) = \lim_{n\to\infty} \frac{n^4-2n^3+n^2}{4n^4} = \frac{1}{4}\\
-\overline{\int_0^1} x^2 
+\overline{\int_0^1} x^3 
 & = \lim_{n\to\infty} S(f,P_n) = \lim_{n\to\infty} \frac{n^4+2n^3+n^2}{4n^4} = \frac{1}{4}
 \end{align*}
 
-Como $\underline{\int_0^1} x^2 = \overline{\int_0^1} x^2=\frac{1}{4}$, la función $f(x)=x^3$ es integrable Riemann en $[0,1]$ y $\int_0^1 x^3\, dx = \frac{1}{4}$.
+Como $\underline{\int_0^1} x^3 = \overline{\int_0^1} x^3=\frac{1}{4}$, la función $f(x)=x^3$ es integrable Riemann en $[0,1]$ y $\int_0^1 x^3\, dx = \frac{1}{4}$.
 
 Así pues, utilizando el resultado del ejercicio anterior se tiene
 

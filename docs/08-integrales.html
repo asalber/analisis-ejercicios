@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.26">
+<meta name="generator" content="quarto-1.8.27">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -40,8 +40,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-d640c705e8c17715bca3574aa719063f.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-d6a2ae2cb249da1580f0a11f71b8f854.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-b754b9fd3853d7e56faef54c29c5d52b.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-de8274a4d1ecc1e6aaeaf6e5564b5074.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap-de8af6d6517050dea70ce10de1895a41.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
@@ -452,12 +452,12 @@ window.Quarto = {
 </header>
 
 
-<div id="exr-sumas-inferiores-superiores-riemann" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 7.1</strong></span> Calcular las sumas inferior y superior de Riemann de las siguientes funciones en el intervalo <span class="math inline">\([0,1]\)</span>, tomando particiones de igual tamaño con <span class="math inline">\(n\)</span> puntos, desde <span class="math inline">\(n=2\)</span> hasta <span class="math inline">\(n=5\)</span>.</p>
+<div id="exr-particiones-intervalos" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 7.1</strong></span> Calcular particiones en <span class="math inline">\(n\)</span> subintervalos de igual tamaño de los siguientes intervalos.</p>
 <ol type="a">
-<li><p><span class="math inline">\(f(x) = 1-x\)</span></p></li>
-<li><p><span class="math inline">\(g(x) = x^2\)</span></p></li>
-<li><p><span class="math inline">\(h(x) = e^{-x}\)</span></p></li>
+<li><span class="math inline">\([0,1]\)</span>.</li>
+<li><span class="math inline">\([\pi,2\pi]\)</span>.</li>
+<li><span class="math inline">\([-1, 1]\)</span></li>
 </ol>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
@@ -471,6 +471,34 @@ window.Quarto = {
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
 <div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="a">
+<li><span class="math inline">\(P = \left\{ \frac{i}{n}: i=0,1,\ldots,n\right\}\)</span>.</li>
+<li><span class="math inline">\(P = \left\{ \pi + \frac{i\pi}{n}: i=0,1,\ldots,n\right\}\)</span>.</li>
+<li><span class="math inline">\(P = \left\{ -1 + \frac{2i}{n}: i=0,1,\ldots,n\right\}\)</span>.</li>
+</ol>
+</div>
+</div>
+</div>
+<div id="exr-sumas-inferiores-superiores-riemann" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 7.2</strong></span> Calcular las sumas inferior y superior de Riemann de las siguientes funciones en el intervalo <span class="math inline">\([0,1]\)</span>, tomando particiones de igual tamaño con <span class="math inline">\(n\)</span> puntos, desde <span class="math inline">\(n=2\)</span> hasta <span class="math inline">\(n=5\)</span>.</p>
+<ol type="a">
+<li><p><span class="math inline">\(f(x) = 1-x\)</span></p></li>
+<li><p><span class="math inline">\(g(x) = x^2\)</span></p></li>
+<li><p><span class="math inline">\(h(x) = e^{-x}\)</span></p></li>
+</ol>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Tomaremos particiones de igual tamaño <span class="math inline">\(P_n=\{x_0,x_1,\ldots,x_n\}\)</span> con <span class="math inline">\(x_i=\frac{i}{n}\)</span> para <span class="math inline">\(i=0,1,\ldots, n\)</span>.</p>
 <ol type="a">
@@ -572,10 +600,10 @@ window.Quarto = {
 </div>
 </div>
 <div id="exr-sumas-inferiores-superiores-seno-coseno" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 7.2</strong></span> Usar las sumas inferiores y superiores de Riemann para dar una aproximación del área contenida entre la gráfica de la función <span class="math inline">\(\operatorname{sen}(x)\)</span> y el eje <span class="math inline">\(x\)</span> en el intervalo <span class="math inline">\([0,\pi/2]\)</span>, usando 4 rectángulos de igual base.</p>
+<p><span class="theorem-title"><strong>Ejercicio 7.3</strong></span> Usar las sumas inferiores y superiores de Riemann para dar una aproximación del área contenida entre la gráfica de la función <span class="math inline">\(\operatorname{sen}(x)\)</span> y el eje <span class="math inline">\(x\)</span> en el intervalo <span class="math inline">\([0,\pi/2]\)</span>, usando 4 rectángulos de igual base.</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -584,7 +612,7 @@ window.Quarto = {
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Tomando la partición <span class="math inline">\(P=\{0, \pi/8, \pi/4, 3\pi/4, \pi/2\}\)</span> se tiene</p>
 <p><span class="math display">\[\begin{align*}
@@ -595,10 +623,10 @@ S(f,P) &amp;= \operatorname{sen}\left(\frac{\pi}{8}\right) \frac{\pi}{8} + \oper
 </div>
 </div>
 <div id="exr-integral-riemann-cuadrado" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 7.3</strong></span> Calcular la integral inferior y superior de Riemann de la función <span class="math inline">\(f(x)=x^2\)</span> en el intervalo <span class="math inline">\([0,1]\)</span>. ¿Es una función integrable Riemann?</p>
+<p><span class="theorem-title"><strong>Ejercicio 7.4</strong></span> Calcular la integral inferior y superior de Riemann de la función <span class="math inline">\(f(x)=x^2\)</span> en el intervalo <span class="math inline">\([0,1]\)</span>. ¿Es una función integrable Riemann?</p>
 </div>
 <div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -607,14 +635,14 @@ S(f,P) &amp;= \operatorname{sen}\left(\frac{\pi}{8}\right) \frac{\pi}{8} + \oper
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Usar las fórmulas <span class="math inline">\(\sum_{n=1}^n i = \frac{n(n+1)}{2}\)</span> y <span class="math inline">\(\sum_{i=1}^n i^2 = \frac{n(n+1)(2n+1)}{6}\)</span>.</p>
 </div>
 </div>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -623,7 +651,7 @@ S(f,P) &amp;= \operatorname{sen}\left(\frac{\pi}{8}\right) \frac{\pi}{8} + \oper
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Para calcular las sumas inferiores y superiores de Riemann utilizaremos la partición <span class="math inline">\(P_n = \{x_0, x_1,\ldots, x_n\}\)</span> con <span class="math inline">\(x_i = \frac{i}{n}\)</span> para <span class="math inline">\(i=0,1,\ldots, n\)</span>.</p>
 <p>Como <span class="math inline">\(f(x)=x^2\)</span> es una función monótona creciente en <span class="math inline">\([0,1]\)</span>, el mínimo en cada subintervalo se alcanzará en el extremo inferior y el máximo en el superior.</p>
@@ -654,10 +682,10 @@ S(f,P_n)
 </div>
 </div>
 <div id="exr-integral-riemann-2" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 7.4</strong></span> Calcular la integral de Riemann de la función <span class="math inline">\(f(x)=x^3-2x^2\)</span> en el intervalo <span class="math inline">\([0,1]\)</span>.</p>
+<p><span class="theorem-title"><strong>Ejercicio 7.5</strong></span> Calcular la integral de Riemann de la función <span class="math inline">\(f(x)=x^3-2x^2\)</span> en el intervalo <span class="math inline">\([0,1]\)</span>.</p>
 </div>
 <div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -666,14 +694,14 @@ S(f,P_n)
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div id="callout-6" class="callout-6-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Usar la fórmula <span class="math inline">\(\sum_{i=1}^n i^3 = \left(\frac{n(n+1)}{2}\right)^2\)</span></p>
 </div>
 </div>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -682,7 +710,7 @@ S(f,P_n)
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-6" class="callout-6-contents callout-collapse collapse">
+<div id="callout-7" class="callout-7-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Aplicando la linealidad de la integral, se tiene que</p>
 <p><span class="math display">\[
@@ -708,10 +736,10 @@ S(f,P_n)
 <p><span class="math display">\[\begin{align*}
 \underline{\int_0^1} x^3
 &amp; = \lim_{n\to\infty} s(f,P_n) = \lim_{n\to\infty} \frac{n^4-2n^3+n^2}{4n^4} = \frac{1}{4}\\
-\overline{\int_0^1} x^2
+\overline{\int_0^1} x^3
 &amp; = \lim_{n\to\infty} S(f,P_n) = \lim_{n\to\infty} \frac{n^4+2n^3+n^2}{4n^4} = \frac{1}{4}
 \end{align*}\]</span></p>
-<p>Como <span class="math inline">\(\underline{\int_0^1} x^2 = \overline{\int_0^1} x^2=\frac{1}{4}\)</span>, la función <span class="math inline">\(f(x)=x^3\)</span> es integrable Riemann en <span class="math inline">\([0,1]\)</span> y <span class="math inline">\(\int_0^1 x^3\, dx = \frac{1}{4}\)</span>.</p>
+<p>Como <span class="math inline">\(\underline{\int_0^1} x^3 = \overline{\int_0^1} x^3=\frac{1}{4}\)</span>, la función <span class="math inline">\(f(x)=x^3\)</span> es integrable Riemann en <span class="math inline">\([0,1]\)</span> y <span class="math inline">\(\int_0^1 x^3\, dx = \frac{1}{4}\)</span>.</p>
 <p>Así pues, utilizando el resultado del ejercicio anterior se tiene</p>
 <p><span class="math display">\[
 \int_0^1 x^3-2x^2\,dx = \int_0^1 x^3\, dx -2\int_0^1 x^2\, dx = \frac{1}{4} - 2\frac{1}{3} = \frac{-5}{12}  
@@ -726,10 +754,10 @@ S(f,P_n)
 </div>
 </div>
 <div id="exr-integral-inversa" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 7.5</strong></span> Calcular la integral de Riemann de la función <span class="math inline">\(f(x)=\frac{1}{x}\)</span> en el intervalo <span class="math inline">\([a,b]\)</span>.</p>
+<p><span class="theorem-title"><strong>Ejercicio 7.6</strong></span> Calcular la integral de Riemann de la función <span class="math inline">\(f(x)=\frac{1}{x}\)</span> en el intervalo <span class="math inline">\([a,b]\)</span>.</p>
 </div>
 <div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -738,14 +766,14 @@ S(f,P_n)
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-7" class="callout-7-contents callout-collapse collapse">
+<div id="callout-8" class="callout-8-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Usar la sucesión de particiones <span class="math inline">\((P_n)_{n=1}^\infty\)</span> con <span class="math inline">\(P_n=\{x_0,x_1,\ldots,x_n\}\)</span> con <span class="math inline">\(x_i=a(1+c)^i\)</span> para <span class="math inline">\(i=1,\ldots,n\)</span>.</p>
 </div>
 </div>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -754,7 +782,7 @@ S(f,P_n)
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-8" class="callout-8-contents callout-collapse collapse">
+<div id="callout-9" class="callout-9-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Sea <span class="math inline">\(P_n=\{x_0,x_1,\ldots,x_n\}\)</span> con <span class="math inline">\(x_i=a(1+c)^i\)</span> para <span class="math inline">\(i=1,\ldots,n\)</span> una partición del intervalo <span class="math inline">\([a,b]\)</span>. Como el último punto de la partición debe ser <span class="math inline">\(b\)</span>, se debe cumplir <span class="math inline">\(a(1+c)^n = b\)</span>, de donde se deduce que <span class="math inline">\(c=\left(\frac{b}{a}\right)^{1/n}-1\)</span>.</p>
 <p>Calcularemos la suma superior de Riemann de <span class="math inline">\(f\)</span> en el intervalo <span class="math inline">\([a,b]\)</span>. Como <span class="math inline">\(f(x)=\frac{1}{x}\)</span> es una función monótona decreciente, se alcanza el máximo en el extremo inferior de cada subintervalo. Por tanto, se tiene</p>
@@ -781,10 +809,10 @@ S(f,P_n)
 </div>
 </div>
 <div id="exr-sumas-riemann-punto-intermedio" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 7.6</strong></span> Demostrar que si <span class="math inline">\(f\)</span> es una función integrable Riemann en un intervalo <span class="math inline">\(I=[a,b]\)</span>, se puede calcular <span class="math inline">\(\int_a^b f(x)\,dx\)</span> mediante sumas de Riemann tomando como altura de los rectángulos el valor de la función en cualquier punto de los subintervalos de la partición.</p>
+<p><span class="theorem-title"><strong>Ejercicio 7.7</strong></span> Demostrar que si <span class="math inline">\(f\)</span> es una función integrable Riemann en un intervalo <span class="math inline">\(I=[a,b]\)</span>, se puede calcular <span class="math inline">\(\int_a^b f(x)\,dx\)</span> mediante sumas de Riemann tomando como altura de los rectángulos el valor de la función en cualquier punto de los subintervalos de la partición.</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -793,7 +821,7 @@ S(f,P_n)
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-9" class="callout-9-contents callout-collapse collapse">
+<div id="callout-10" class="callout-10-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Si <span class="math inline">\(f\)</span> es una función integrable en <span class="math inline">\(I=[a,b]\)</span>, por el <a href="https://aprendeconalf.es/analisis-manual/08-integrales.html#thm-criterio-integrabilidad-riemann">criterio de integrabilidad de Riemann</a>, dado <span class="math inline">\(\varepsilon&gt;0\)</span> existe una partición <span class="math inline">\(P=\{x_0,x_1,\ldots,x_n\}\)</span> tal que <span class="math inline">\(S(f,P)-s(f,P)&lt;\varepsilon\)</span>, es decir, existe una sucesión de particiones <span class="math inline">\((P_n)_{n=1}^\infty\)</span> tal que <span class="math inline">\(\lim_{n\to\infty} S(f,P_n)-s(f,P_n)=0\)</span>.</p>
 <p>Sea <span class="math inline">\(x_i^*\)</span> cualquier valor del intervalo <span class="math inline">\([x_{i-1},x_i]\)</span>. Como <span class="math inline">\(s(f,P_n) = \sum_{i=1}^n m_i (x_i-x_{i-1})\)</span> con <span class="math inline">\(m_i=\inf\{f(x):x\in [x_{i-1},x_i]\}\)</span> y <span class="math inline">\(S(f,P_n) = \sum_{i=1}^n M_i (x_i-x_{i-1})\)</span> con <span class="math inline">\(M_i=\sup\{f(x):x\in [x_{i-1},x_i]\}\)</span>, se cumple que</p>
@@ -808,10 +836,10 @@ s(f,P_n) = \sum_{i=1}^n m_i (x_i-x_{i-1}) \leq \sum_{i=1}^n f(x_i^*) (x_i-x_{i-1
 </div>
 </div>
 <div id="exr-cota-integral" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 7.7</strong></span> Demostrar que <span class="math inline">\(1\leq \displaystyle \int_{-1}^1 \frac{1}{1+x^2}\,dx \leq 2\)</span>.</p>
+<p><span class="theorem-title"><strong>Ejercicio 7.8</strong></span> Demostrar que <span class="math inline">\(1\leq \displaystyle \int_{-1}^1 \frac{1}{1+x^2}\,dx \leq 2\)</span>.</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -820,7 +848,7 @@ s(f,P_n) = \sum_{i=1}^n m_i (x_i-x_{i-1}) \leq \sum_{i=1}^n f(x_i^*) (x_i-x_{i-1
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-10" class="callout-10-contents callout-collapse collapse">
+<div id="callout-11" class="callout-11-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Por las propiedades de la integral (ver <a href="https://aprendeconalf.es/analisis-manual/08-integrales.html#cor-integral-funcion-acotada">corolario</a>), sabemos que</p>
 <p><span class="math display">\[
@@ -835,7 +863,7 @@ m(b-a)\leq \int_a^b f(x)\,dx \leq M(b-a),
 </div>
 </div>
 <div id="exr-integrales-definidas" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 7.8</strong></span> Calcular las siguientes integrales definidas</p>
+<p><span class="theorem-title"><strong>Ejercicio 7.9</strong></span> Calcular las siguientes integrales definidas</p>
 <div class="columns">
 <div class="column">
 <ol type="a">
@@ -857,7 +885,7 @@ m(b-a)\leq \int_a^b f(x)\,dx \leq M(b-a),
 </div>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-12-contents" aria-controls="callout-12" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -866,7 +894,7 @@ m(b-a)\leq \int_a^b f(x)\,dx \leq M(b-a),
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-11" class="callout-11-contents callout-collapse collapse">
+<div id="callout-12" class="callout-12-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ol type="a">
 <li><p><span class="math inline">\(\int_1^2 x^4-2x\,dx = \left[\frac{x^5}{5}-x^2\right]_1^2 = \frac{16}{5}\)</span>.</p></li>
@@ -884,11 +912,11 @@ m(b-a)\leq \int_a^b f(x)\,dx \leq M(b-a),
 </div>
 </div>
 <div id="exr-espacio-recorrido-movil" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 7.9</strong></span> Un vehículo parte del origen y se desplaza en línea recta con velocidad constante de 60 km/h. Calcular el espacio recorrido por el vehículo a las 2 horas.</p>
+<p><span class="theorem-title"><strong>Ejercicio 7.10</strong></span> Un vehículo parte del origen y se desplaza en línea recta con velocidad constante de 60 km/h. Calcular el espacio recorrido por el vehículo a las 2 horas.</p>
 <p>Si a partir de las 2 horas el vehículo se mueve con una aceleración constante de 10 km/h<span class="math inline">\(^2\)</span>, ¿cuál será la velocidad del vehículo a las 4 horas? ¿Y su posición?</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-12-contents" aria-controls="callout-12" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-13-contents" aria-controls="callout-13" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -897,7 +925,7 @@ m(b-a)\leq \int_a^b f(x)\,dx \leq M(b-a),
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-12" class="callout-12-contents callout-collapse collapse">
+<div id="callout-13" class="callout-13-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>La velocidad del vehículo es la variación del espacio recorrido respecto al tiempo, de manera que si <span class="math inline">\(s(t)\)</span> es la función que indica el espacio recorrido en cada instante, se tiene que <span class="math inline">\(s'(t)=60\)</span> km/h. Como el vehículo se desplaza de forma continua, <span class="math inline">\(s(t)\)</span> es una función continua en el intervalo <span class="math inline">\([0,2]\)</span>, y aplicando el teorema fundamental del cálculo tenemos que el espacio recorrido es</p>
 <p><span class="math display">\[
@@ -939,10 +967,10 @@ s(4) - s(2)
 </div>
 </div>
 <div id="exr-desintegracion-radioactiva" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 7.10</strong></span> Un cuerpo humano de peso medio tiene alrededor de <span class="math inline">\(3\cdot 10^{14}\)</span> átomos de carbono 14 en vida. Después de morir, los átomos de C14 comienzan a desintegrarse a un ritmo dado por la función <span class="math inline">\(-3.63\cdot 10^{10}e^{-1.21\cdot 10^{-4}t}\)</span> átomos por año. Si se ha encontrado unos restos humanos con solo <span class="math inline">\(0.3\cdot 10^{14}\)</span> átomos de C14, ¿cuánto tiempo ha pasado desde la muerte de la persona?</p>
+<p><span class="theorem-title"><strong>Ejercicio 7.11</strong></span> Un cuerpo humano de peso medio tiene alrededor de <span class="math inline">\(3\cdot 10^{14}\)</span> átomos de carbono 14 en vida. Después de morir, los átomos de C14 comienzan a desintegrarse a un ritmo dado por la función <span class="math inline">\(-3.63\cdot 10^{10}e^{-1.21\cdot 10^{-4}t}\)</span> átomos por año. Si se ha encontrado unos restos humanos con solo <span class="math inline">\(0.3\cdot 10^{14}\)</span> átomos de C14, ¿cuánto tiempo ha pasado desde la muerte de la persona?</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-13-contents" aria-controls="callout-13" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-14-contents" aria-controls="callout-14" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -951,7 +979,7 @@ s(4) - s(2)
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-13" class="callout-13-contents callout-collapse collapse">
+<div id="callout-14" class="callout-14-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Llamando <span class="math inline">\(c(t)\)</span> a la cantidad de átomos de C14 que contiene el cuerpo en cada instante <span class="math inline">\(t\)</span>, se tiene que <span class="math inline">\(c'(t) = -3.63\cdot 10^{10}e^{-1.21\cdot 10^{-4}t}\)</span>. Aplicando el teorema fundamental del cálculo, se tiene que la cantidad de átomos de C14 que se desintegran en un intervalo de tiempo <span class="math inline">\([0,t]\)</span> es</p>
 <p><span class="math display">\[\begin{align*}
@@ -979,7 +1007,7 @@ c(t)
 </div>
 </div>
 <div id="exr-areas-1" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 7.11</strong></span> Calcular el área encerrada entre la gráfica de las siguientes funciones y el eje <span class="math inline">\(x\)</span> en los intervalos dados.</p>
+<p><span class="theorem-title"><strong>Ejercicio 7.12</strong></span> Calcular el área encerrada entre la gráfica de las siguientes funciones y el eje <span class="math inline">\(x\)</span> en los intervalos dados.</p>
 <ol type="a">
 <li><p><span class="math inline">\(f(x) = \ln\left(\frac{x}{2}\right)\)</span> en <span class="math inline">\([1,2]\)</span>.</p></li>
 <li><p><span class="math inline">\(g(x) = \cos(x)\)</span> en <span class="math inline">\([0,2\pi]\)</span>.</p></li>
@@ -988,7 +1016,7 @@ c(t)
 </ol>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-14-contents" aria-controls="callout-14" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-15-contents" aria-controls="callout-15" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -997,7 +1025,7 @@ c(t)
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-14" class="callout-14-contents callout-collapse collapse">
+<div id="callout-15" class="callout-15-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ol type="a">
 <li><p><span class="math inline">\(\int_1^2 \left|\ln\left(\frac{x}{2}\right)\right|\,dx = -\left[x\ln\left(\frac{x}{2}\right)-x\right]_1^2 = 1-\ln(2)\)</span>.</p></li>
@@ -1023,7 +1051,7 @@ c(t)
 </div>
 </div>
 <div id="exr-area-entre-funciones" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 7.12</strong></span> Calcular el área comprendida entre las funciones <span class="math inline">\(f\)</span> y <span class="math inline">\(g\)</span> en los intervalos dados en los siguientes apartados:</p>
+<p><span class="theorem-title"><strong>Ejercicio 7.13</strong></span> Calcular el área comprendida entre las funciones <span class="math inline">\(f\)</span> y <span class="math inline">\(g\)</span> en los intervalos dados en los siguientes apartados:</p>
 <ol type="a">
 <li><p><span class="math inline">\(f(x)=\cos(x)\)</span> y <span class="math inline">\(g(x)=-\cos(x)\)</span> en <span class="math inline">\([0,2\pi]\)</span>.</p></li>
 <li><p><span class="math inline">\(f(x)=x^2\)</span> y <span class="math inline">\(g(x)=\sqrt{x}\)</span> en <span class="math inline">\([0,2]\)</span>.</p></li>
@@ -1032,7 +1060,7 @@ c(t)
 </ol>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-15-contents" aria-controls="callout-15" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-16-contents" aria-controls="callout-16" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1041,7 +1069,7 @@ c(t)
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-15" class="callout-15-contents callout-collapse collapse">
+<div id="callout-16" class="callout-16-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ol type="a">
 <li><p><span class="math display">\[\begin{align*}
@@ -1073,10 +1101,10 @@ c(t)
 </div>
 </div>
 <div id="exr-area-entre-funciones-2" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 7.13</strong></span> Calcular el área encerrada entre la parábola <span class="math inline">\(y=2x-x^2\)</span> y la recta <span class="math inline">\(y=2x-1\)</span>.</p>
+<p><span class="theorem-title"><strong>Ejercicio 7.14</strong></span> Calcular el área encerrada entre la parábola <span class="math inline">\(y=2x-x^2\)</span> y la recta <span class="math inline">\(y=2x-1\)</span>.</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-16-contents" aria-controls="callout-16" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-17-contents" aria-controls="callout-17" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1085,7 +1113,7 @@ c(t)
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-16" class="callout-16-contents callout-collapse collapse">
+<div id="callout-17" class="callout-17-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Igualando las dos ecuaciones obtenemos los puntos donde se cortan la parábola y la recta.</p>
 <p><span class="math display">\[
@@ -1101,11 +1129,11 @@ c(t)
 </div>
 </div>
 <div id="exr-curva-roc" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 7.14</strong></span> Para evaluar un test diagnóstico se suele utilizar la curva ROC (Receiver Operating Characteristics) que resulta de representar la razón de verdaderos positivos (sensibilidad) frente a la razón de falsos positivos (1-especificidad) para los diferentes umbrales de positivo del test. Esta curva se representa en el cuadrante <span class="math inline">\([0,1]\times [0,1]\)</span> y está siempre por encima de la recta <span class="math inline">\(y=x\)</span> que representa un diagnóstico aleatorio. El área por debajo de la curva ROC se conoce como AUC (area under the curve), y cuanto mayor sea, mejor es el test diagnóstico.</p>
+<p><span class="theorem-title"><strong>Ejercicio 7.15</strong></span> Para evaluar un test diagnóstico se suele utilizar la curva ROC (Receiver Operating Characteristics) que resulta de representar la razón de verdaderos positivos (sensibilidad) frente a la razón de falsos positivos (1-especificidad) para los diferentes umbrales de positivo del test. Esta curva se representa en el cuadrante <span class="math inline">\([0,1]\times [0,1]\)</span> y está siempre por encima de la recta <span class="math inline">\(y=x\)</span> que representa un diagnóstico aleatorio. El área por debajo de la curva ROC se conoce como AUC (area under the curve), y cuanto mayor sea, mejor es el test diagnóstico.</p>
 <p>Se dispone de dos test diagnósticos para detectar el virus SARS-CoV, el primero con una curva ROC <span class="math inline">\(f(x)=\sqrt{x}\)</span> y el segundo con una curva <span class="math inline">\(g(x)=-x^2+2x\)</span>. ¿Qué test diagnóstico es mejor?</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-17-contents" aria-controls="callout-17" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-18-contents" aria-controls="callout-18" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1114,7 +1142,7 @@ c(t)
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-17" class="callout-17-contents callout-collapse collapse">
+<div id="callout-18" class="callout-18-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>La medida AUC para el primer test diagnostico es</p>
 <p><span class="math display">\[
@@ -1129,12 +1157,12 @@ c(t)
 </div>
 </div>
 <div id="exr-gini" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 7.15</strong></span> La <a href="https://es.wikipedia.org/wiki/Curva_de_Lorenz">curva de Lorenz</a> se utiliza en Economía para representar la distribución relativa de los ingresos o la riqueza de una población. Esta curva se representa siempre en el cuadrante <span class="math inline">\([0,1]\times [0,1]\)</span> del plano y cada punto <span class="math inline">\((x,y)\)</span> de la curva representa qué proporción de la riqueza total <span class="math inline">\(y\)</span> acumula la proporción de la población <span class="math inline">\(x\)</span>. De este modo, la bisectriz del (recta <span class="math inline">\(y=x\)</span>) representa una distribución equitativa de la riqueza, y cuanto más se desvíe la curva de esta recta, mayor desigualdad habrá en el reparto de la riqueza.</p>
+<p><span class="theorem-title"><strong>Ejercicio 7.16</strong></span> La <a href="https://es.wikipedia.org/wiki/Curva_de_Lorenz">curva de Lorenz</a> se utiliza en Economía para representar la distribución relativa de los ingresos o la riqueza de una población. Esta curva se representa siempre en el cuadrante <span class="math inline">\([0,1]\times [0,1]\)</span> del plano y cada punto <span class="math inline">\((x,y)\)</span> de la curva representa qué proporción de la riqueza total <span class="math inline">\(y\)</span> acumula la proporción de la población <span class="math inline">\(x\)</span>. De este modo, la bisectriz del (recta <span class="math inline">\(y=x\)</span>) representa una distribución equitativa de la riqueza, y cuanto más se desvíe la curva de esta recta, mayor desigualdad habrá en el reparto de la riqueza.</p>
 <p>Para medir la desigualdad en el reparto de la riqueza se suele utilizar el <a href="https://es.wikipedia.org/wiki/Coeficiente_de_Gini">coeficiente Gini</a>, que se define como el doble del área encerrada entre la recta <span class="math inline">\(y=x\)</span> y la curva de Lorenz. En una población con una distribución equitativa de la riqueza, el coeficiente de Gini vale 0, mientras que en una población con la mayor desigualdad posible en el reparto de la riqueza, este coeficiente vale 1.</p>
 <p>Si las curvas de Lorenz de dos poblaciones vienen dadas por las funciones <span class="math inline">\(f(x)=x^2\)</span> y <span class="math inline">\(g(x)=1-\cos\left(x\frac{\pi}{2}\right)\)</span>, ¿qué población es más desigual?</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-18-contents" aria-controls="callout-18" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-19-contents" aria-controls="callout-19" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1143,7 +1171,7 @@ c(t)
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-18" class="callout-18-contents callout-collapse collapse">
+<div id="callout-19" class="callout-19-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Para la primera población el área entre la recta <span class="math inline">\(y=x\)</span> y su curva de Lorenz es</p>
 <p><span class="math display">\[
@@ -1160,10 +1188,10 @@ c(t)
 </div>
 </div>
 <div id="exr-área-2" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 7.16</strong></span> Encontrar el valor <span class="math inline">\(c\)</span> tal que la recta <span class="math inline">\(y=c\)</span> divide la región limitada por la parábola <span class="math inline">\(y=x^2\)</span> y la recta <span class="math inline">\(y=4\)</span> en dos regiones con la misma área.</p>
+<p><span class="theorem-title"><strong>Ejercicio 7.17</strong></span> Encontrar el valor <span class="math inline">\(c\)</span> tal que la recta <span class="math inline">\(y=c\)</span> divide la región limitada por la parábola <span class="math inline">\(y=x^2\)</span> y la recta <span class="math inline">\(y=4\)</span> en dos regiones con la misma área.</p>
 </div>
 <div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-19-contents" aria-controls="callout-19" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-20-contents" aria-controls="callout-20" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1172,14 +1200,14 @@ c(t)
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-19" class="callout-19-contents callout-collapse collapse">
+<div id="callout-20" class="callout-20-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Expresar <span class="math inline">\(x\)</span> en función de <span class="math inline">\(y\)</span>, e integrar con respecto a <span class="math inline">\(y\)</span>.</p>
 </div>
 </div>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-20-contents" aria-controls="callout-20" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-21-contents" aria-controls="callout-21" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1188,7 +1216,7 @@ c(t)
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-20" class="callout-20-contents callout-collapse collapse">
+<div id="callout-21" class="callout-21-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>El problema resulta más sencillo de resolver si se integra con respecto a <span class="math inline">\(y\)</span>. Despejando <span class="math inline">\(x\)</span> de la ecuación de la parábola se tiene que <span class="math inline">\(x=\pm\sqrt{y}\)</span>, de manera que área encerrada entre la recta <span class="math inline">\(y=4\)</span> y la parábola <span class="math inline">\(y=x^2\)</span> es la misma que el área encerrada entre las funciones <span class="math inline">\(\sqrt{y}\)</span> y <span class="math inline">\(-\sqrt{y}\)</span> en el intervalo <span class="math inline">\([0,4]\)</span>, que vale</p>
 <p><span class="math display">\[
@@ -1209,10 +1237,10 @@ c(t)
 </div>
 </div>
 <div id="exr-tschirnhausen" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 7.17</strong></span> En geometría, la ecuación <span class="math inline">\(y^2=x^2(x+3)\)</span> define una curva implícita conocida como la <a href="https://es.wikipedia.org/wiki/C%C3%BAbica_de_Tschirnhausen">cúbica de Tschirnhausen</a>. Calcular el área encerrada por esta curva.</p>
+<p><span class="theorem-title"><strong>Ejercicio 7.18</strong></span> En geometría, la ecuación <span class="math inline">\(y^2=x^2(x+3)\)</span> define una curva implícita conocida como la <a href="https://es.wikipedia.org/wiki/C%C3%BAbica_de_Tschirnhausen">cúbica de Tschirnhausen</a>. Calcular el área encerrada por esta curva.</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-21-contents" aria-controls="callout-21" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-22-contents" aria-controls="callout-22" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1221,7 +1249,7 @@ c(t)
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-21" class="callout-21-contents callout-collapse collapse">
+<div id="callout-22" class="callout-22-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>La curva se puede expresar mediante dos ramas, una positiva y otra negativa, dadas por <span class="math inline">\(y=\pm \sqrt{x^2(x+3)}\)</span>, que coinciden en <span class="math inline">\(x=-3\)</span> y <span class="math inline">\(x=0\)</span> ya que son los puntos donde se anula <span class="math inline">\(y\)</span>. Así pues, podemos calcular el área encerrada por la curva, descomponiéndola en dos mitades, la positiva y la negativa.</p>
 <p>La semiárea positiva se calcula mediante la siguiente integral</p>
@@ -1239,10 +1267,10 @@ c(t)
 </div>
 </div>
 <div id="exr-crecimiento-población" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 7.18</strong></span> La tasa de nacimientos de una población viene dada por la función <span class="math inline">\(n(t)=5000e^{0.03t}\)</span> personas por año, mientras que la tasa de defunciones viene dada por la función <span class="math inline">\(m(t)=3500 e^{0.02t}\)</span> personas por año. Calcular el área comprendida entre <span class="math inline">\(n\)</span> y <span class="math inline">\(m\)</span> entre <span class="math inline">\(0\)</span> y <span class="math inline">\(5\)</span> años. ¿Qué representa esta área?</p>
+<p><span class="theorem-title"><strong>Ejercicio 7.19</strong></span> La tasa de nacimientos de una población viene dada por la función <span class="math inline">\(n(t)=5000e^{0.03t}\)</span> personas por año, mientras que la tasa de defunciones viene dada por la función <span class="math inline">\(m(t)=3500 e^{0.02t}\)</span> personas por año. Calcular el área comprendida entre <span class="math inline">\(n\)</span> y <span class="math inline">\(m\)</span> entre <span class="math inline">\(0\)</span> y <span class="math inline">\(5\)</span> años. ¿Qué representa esta área?</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-22-contents" aria-controls="callout-22" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-23-contents" aria-controls="callout-23" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1251,7 +1279,7 @@ c(t)
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-22" class="callout-22-contents callout-collapse collapse">
+<div id="callout-23" class="callout-23-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Como <span class="math inline">\(n(t)\geq m(t)\)</span> <span class="math inline">\(\forall t\geq 0\)</span>, el área comprendida entre la dos funciones en el intervalo <span class="math inline">\([0,5]\)</span> viene dada por la integral definida</p>
 <p><span class="math display">\[\begin{align*}
@@ -1267,29 +1295,7 @@ c(t)
 </div>
 </div>
 <div id="exr-area-circulo-polares" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 7.19</strong></span> Calcular el área de un círculo de radio <span class="math inline">\(r\)</span> en coordenadas polares.</p>
-</div>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-23-contents" aria-controls="callout-23" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>Solución
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-23" class="callout-23-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p>La curva que define una circunferencia de radio <span class="math inline">\(r\)</span> en coordenadas polares es <span class="math inline">\(f(\theta)=r\)</span> con <span class="math inline">\(\theta\in[0,2\pi]\)</span>, que es una función constante. Por tanto, el área del círculo de radio <span class="math inline">\(r\)</span> puede calcularse mediante la siguiente integral definida,</p>
-<p><span class="math display">\[
-\int_0^{2\pi} \frac{r^2}{2}\,d\theta = \left[\frac{r^2}{2}\theta \right]_0^{2\pi} = \frac{r^2}{2}2\pi = \pi r^2.
-\]</span></p>
-</div>
-</div>
-</div>
-<div id="exr-area-polar" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 7.20</strong></span> Calcular el área encerrada por la curva polar <span class="math inline">\(r=\cos(2\theta)\)</span>.</p>
+<p><span class="theorem-title"><strong>Ejercicio 7.20</strong></span> Calcular el área de un círculo de radio <span class="math inline">\(r\)</span> en coordenadas polares.</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-24-contents" aria-controls="callout-24" aria-expanded="false" aria-label="Toggle callout">
@@ -1303,24 +1309,15 @@ c(t)
 </div>
 <div id="callout-24" class="callout-24-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>La curva <span class="math inline">\(r=\cos(2\theta)\)</span> tiene periodo <span class="math inline">\(2\pi\)</span>, por lo que hay que integrar la curva en el intervalo <span class="math inline">\([0,2\pi]\)</span>, de manera que el área encerrada por la curva es</p>
-<p><span class="math display">\[\begin{align*}
-\int_0^{2\pi} \frac{\cos(2\theta)^2}{2}\,d\theta
-&amp;= \frac{1}{2} \int_0^{2\pi}\frac{1+\cos(4\theta)}{2}\,d\theta
-= \frac{1}{4}\left[\theta + \frac{\operatorname{sen}(4\theta)}{4}\right]_0^{2\pi}\\
-&amp;= \frac{1}{4} 2\pi + \frac{\operatorname{sen}(8\pi)}{4}
-= \frac{\pi}{2}.
-\end{align*}\]</span></p>
+<p>La curva que define una circunferencia de radio <span class="math inline">\(r\)</span> en coordenadas polares es <span class="math inline">\(f(\theta)=r\)</span> con <span class="math inline">\(\theta\in[0,2\pi]\)</span>, que es una función constante. Por tanto, el área del círculo de radio <span class="math inline">\(r\)</span> puede calcularse mediante la siguiente integral definida,</p>
+<p><span class="math display">\[
+\int_0^{2\pi} \frac{r^2}{2}\,d\theta = \left[\frac{r^2}{2}\theta \right]_0^{2\pi} = \frac{r^2}{2}2\pi = \pi r^2.
+\]</span></p>
 </div>
 </div>
 </div>
-<div id="exr-area-polares" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 7.21</strong></span> Calcular el área encerrada por las siguientes curvas polares <span class="math inline">\(r=f(\theta)\)</span> en los intervalo dados.</p>
-<ol type="a">
-<li><p><span class="math inline">\(f(\theta) = \theta^2\)</span> para <span class="math inline">\(\theta\in[-\pi,\pi]\)</span>.</p></li>
-<li><p><span class="math inline">\(f(\theta) = e^{\theta/2}\)</span> para <span class="math inline">\(\theta\in[0,2\pi]\)</span>.</p></li>
-<li><p><span class="math inline">\(f(\theta) = \sqrt{1+\cos(4\theta)^2}\)</span> para <span class="math inline">\(\theta\in[0,2\pi]\)</span>.</p></li>
-</ol>
+<div id="exr-area-polar" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 7.21</strong></span> Calcular el área encerrada por la curva polar <span class="math inline">\(r=\cos(2\theta)\)</span>.</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-25-contents" aria-controls="callout-25" aria-expanded="false" aria-label="Toggle callout">
@@ -1333,6 +1330,37 @@ c(t)
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
 <div id="callout-25" class="callout-25-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>La curva <span class="math inline">\(r=\cos(2\theta)\)</span> tiene periodo <span class="math inline">\(2\pi\)</span>, por lo que hay que integrar la curva en el intervalo <span class="math inline">\([0,2\pi]\)</span>, de manera que el área encerrada por la curva es</p>
+<p><span class="math display">\[\begin{align*}
+\int_0^{2\pi} \frac{\cos(2\theta)^2}{2}\,d\theta
+&amp;= \frac{1}{2} \int_0^{2\pi}\frac{1+\cos(4\theta)}{2}\,d\theta
+= \frac{1}{4}\left[\theta + \frac{\operatorname{sen}(4\theta)}{4}\right]_0^{2\pi}\\
+&amp;= \frac{1}{4} 2\pi + \frac{\operatorname{sen}(8\pi)}{4}
+= \frac{\pi}{2}.
+\end{align*}\]</span></p>
+</div>
+</div>
+</div>
+<div id="exr-area-polares" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 7.22</strong></span> Calcular el área encerrada por las siguientes curvas polares <span class="math inline">\(r=f(\theta)\)</span> en los intervalo dados.</p>
+<ol type="a">
+<li><p><span class="math inline">\(f(\theta) = \theta^2\)</span> para <span class="math inline">\(\theta\in[-\pi,\pi]\)</span>.</p></li>
+<li><p><span class="math inline">\(f(\theta) = e^{\theta/2}\)</span> para <span class="math inline">\(\theta\in[0,2\pi]\)</span>.</p></li>
+<li><p><span class="math inline">\(f(\theta) = \sqrt{1+\cos(4\theta)^2}\)</span> para <span class="math inline">\(\theta\in[0,2\pi]\)</span>.</p></li>
+</ol>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-26-contents" aria-controls="callout-26" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-26" class="callout-26-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ol type="a">
 <li><p><span class="math display">\[\begin{align*}
@@ -1360,7 +1388,7 @@ c(t)
 </div>
 </div>
 <div id="exr-area-entre-polares" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 7.22</strong></span> Calcular el área sombreada entre las curvas polares <span class="math inline">\(r=3\operatorname{sen}(\theta)\)</span> y <span class="math inline">\(r=1+\operatorname{sen}(\theta)\)</span>.</p>
+<p><span class="theorem-title"><strong>Ejercicio 7.23</strong></span> Calcular el área sombreada entre las curvas polares <span class="math inline">\(r=3\operatorname{sen}(\theta)\)</span> y <span class="math inline">\(r=1+\operatorname{sen}(\theta)\)</span>.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="img/integrales/area-entre-curvas-polares.svg" class="img-fluid figure-img" width="500"></p>
@@ -1369,7 +1397,7 @@ c(t)
 </div>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-26-contents" aria-controls="callout-26" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-27-contents" aria-controls="callout-27" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1378,7 +1406,7 @@ c(t)
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-26" class="callout-26-contents callout-collapse collapse">
+<div id="callout-27" class="callout-27-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Sea <span class="math inline">\(f(\theta) = 3\operatorname{sen}(\theta)\)</span> la función que define el círculo y <span class="math inline">\(g(\theta) = 1+\operatorname{sen}(\theta)\)</span> la función que define el cardioide. Para determinar el área de la región sombreada entre las dos curvas polares, calcularemos el área del círculo <span class="math inline">\(f(\theta)\)</span> y le restaremos el área que queda fuera de la región sombreada. Para calcular el área de esta última región con forma de media luna, primero determinamos los puntos de corte entre las dos curvas, que son</p>
 <p><span class="math display">\[
@@ -1402,7 +1430,7 @@ f(\theta) = g(\theta) \Leftrightarrow 3\operatorname{sen}(\theta) = 1+\operatorn
 </div>
 </div>
 <div id="exr-integrales-impropias" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 7.23</strong></span> Calcular el área encerrada entre las siguientes curvas y el eje <span class="math inline">\(x\)</span> en los intervalos dados.</p>
+<p><span class="theorem-title"><strong>Ejercicio 7.24</strong></span> Calcular el área encerrada entre las siguientes curvas y el eje <span class="math inline">\(x\)</span> en los intervalos dados.</p>
 <ol type="a">
 <li><p><span class="math inline">\(y=\frac{1}{1+x^2}\)</span> en <span class="math inline">\((-\infty,\infty)\)</span>.</p></li>
 <li><p><span class="math inline">\(y = \frac{\ln(x)}{x^2}\)</span> en <span class="math inline">\([1,\infty)\)</span>.</p></li>
@@ -1410,7 +1438,7 @@ f(\theta) = g(\theta) \Leftrightarrow 3\operatorname{sen}(\theta) = 1+\operatorn
 </ol>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-27-contents" aria-controls="callout-27" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-28-contents" aria-controls="callout-28" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1419,7 +1447,7 @@ f(\theta) = g(\theta) \Leftrightarrow 3\operatorname{sen}(\theta) = 1+\operatorn
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-27" class="callout-27-contents callout-collapse collapse">
+<div id="callout-28" class="callout-28-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ol type="a">
 <li><p><span class="math display">\[
@@ -1443,12 +1471,12 @@ f(\theta) = g(\theta) \Leftrightarrow 3\operatorname{sen}(\theta) = 1+\operatorn
 </div>
 </div>
 <div id="exr-criterio-integral-convergencia-series" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 7.24</strong></span> Un criterio para estudiar la convergencia de una serie <span class="math inline">\(\sum a_n\)</span> es estudiar la integral impropia <span class="math inline">\(\int_1^\infty a_n\,dn\)</span>. La serie converge si y solo si la integral es finita.</p>
+<p><span class="theorem-title"><strong>Ejercicio 7.25</strong></span> Un criterio para estudiar la convergencia de una serie <span class="math inline">\(\sum a_n\)</span> es estudiar la integral impropia <span class="math inline">\(\int_1^\infty a_n\,dn\)</span>. La serie converge si y solo si la integral es finita.</p>
 <p>Usar este criterio para demostrar que la serie armónica <span class="math inline">\(\sum \frac{1}{n}\)</span> diverge y que las serie <span class="math inline">\(\sum \frac{1}{n^2}\)</span> converge.</p>
 <p>¿Para qué valores de <span class="math inline">\(p\)</span> la integral <span class="math inline">\(\int_1^\infty \frac{1}{n^p}\,dn\)</span> converge?</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-28-contents" aria-controls="callout-28" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-29-contents" aria-controls="callout-29" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1457,7 +1485,7 @@ f(\theta) = g(\theta) \Leftrightarrow 3\operatorname{sen}(\theta) = 1+\operatorn
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-28" class="callout-28-contents callout-collapse collapse">
+<div id="callout-29" class="callout-29-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Para la serie armónica <span class="math inline">\(\sum \frac{1}{n}\)</span> se tiene</p>
 <p><span class="math display">\[
@@ -1482,7 +1510,7 @@ f(\theta) = g(\theta) \Leftrightarrow 3\operatorname{sen}(\theta) = 1+\operatorn
 </div>
 </div>
 <div id="exr-distribucion-exponencial" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 7.25</strong></span> En Estadística, la <a href="https://es.wikipedia.org/wiki/Distribuci%C3%B3n_exponencial">distribución exponencial</a> se utiliza para modelar el tiempo que tarda en ocurrir un evento en un proceso de Poisson, es decir, un proceso en el que ocurren fenómenos puntuales de marea continua e independiente a un ritmo constante <span class="math inline">\(\lambda\)</span>. La función de densidad de probabilidad la distribución exponencial de parámetro <span class="math inline">\(\lambda\)</span> es</p>
+<p><span class="theorem-title"><strong>Ejercicio 7.26</strong></span> En Estadística, la <a href="https://es.wikipedia.org/wiki/Distribuci%C3%B3n_exponencial">distribución exponencial</a> se utiliza para modelar el tiempo que tarda en ocurrir un evento en un proceso de Poisson, es decir, un proceso en el que ocurren fenómenos puntuales de marea continua e independiente a un ritmo constante <span class="math inline">\(\lambda\)</span>. La función de densidad de probabilidad la distribución exponencial de parámetro <span class="math inline">\(\lambda\)</span> es</p>
 <p><span class="math display">\[
 f(x) =
 \begin{cases}
@@ -1497,7 +1525,7 @@ f(x) =
 </ol>
 </div>
 <div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-29-contents" aria-controls="callout-29" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-30-contents" aria-controls="callout-30" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1506,14 +1534,14 @@ f(x) =
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-29" class="callout-29-contents callout-collapse collapse">
+<div id="callout-30" class="callout-30-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>La media de una variable aleatoria continua con función de densidad de probabilidad <span class="math inline">\(f\)</span> es <span class="math inline">\(\mu = \int_{-\infty}^\infty xf(x)\,dx\)</span> y la varianza <span class="math inline">\(\sigma^2 = \int_{-\infty}^\infty x^2f(x)\,dx-\mu^2\)</span>.</p>
 </div>
 </div>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-30-contents" aria-controls="callout-30" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-31-contents" aria-controls="callout-31" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1522,7 +1550,7 @@ f(x) =
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-30" class="callout-30-contents callout-collapse collapse">
+<div id="callout-31" class="callout-31-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ol type="a">
 <li><p><span class="math display">\[\begin{align*}
@@ -1554,31 +1582,9 @@ f(x) =
 </div>
 </div>
 <div id="exr-tomografía" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 7.26</strong></span> Una tomografía ofrece secciones transversales del cerebro de un paciente cada 1.5 cm. Las areas de cada una de las secciones transversales tomadas fueron</p>
+<p><span class="theorem-title"><strong>Ejercicio 7.27</strong></span> Una tomografía ofrece secciones transversales del cerebro de un paciente cada 1.5 cm. Las areas de cada una de las secciones transversales tomadas fueron</p>
 <p>0, 32, 65, 115, 132, 147, 155, 141, 123, 93, 58, 0</p>
 <p>Calcular de forma aproximada el volumen del cerebro.</p>
-</div>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-31-contents" aria-controls="callout-31" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>Solución
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-31" class="callout-31-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p>Podemos calcular el volumen del cerebro de manera aproximada tomando secciones cilíndricas con base la sección transversal, cuya área es conocida, y altura la distancia entre las secciones consecutivas, en este caso 1.5 cm. Así se obtiene la siguiente suma de Riemann.</p>
-<p><span class="math display">\[
-(32 + 65 + 115 + 132 + 147 + 155 + 141 + 123 + 93 + 58) * 1.5 = 1591.5 \mbox{cm}^3.
-\]</span></p>
-</div>
-</div>
-</div>
-<div id="exr-volumen-piramide" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 7.27</strong></span> Calcular el volumen de la esta <a href="https://www.geogebra.org/m/g2wu3tqw">pirámide</a> con base cuadrada de lado 2 y altura 2. Calcular a continuación el volumen de una pirámide de base cuadrada de lado <span class="math inline">\(l\)</span> y altura <span class="math inline">\(h\)</span>.</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-32-contents" aria-controls="callout-32" aria-expanded="false" aria-label="Toggle callout">
@@ -1591,6 +1597,28 @@ f(x) =
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
 <div id="callout-32" class="callout-32-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Podemos calcular el volumen del cerebro de manera aproximada tomando secciones cilíndricas con base la sección transversal, cuya área es conocida, y altura la distancia entre las secciones consecutivas, en este caso 1.5 cm. Así se obtiene la siguiente suma de Riemann.</p>
+<p><span class="math display">\[
+(32 + 65 + 115 + 132 + 147 + 155 + 141 + 123 + 93 + 58) * 1.5 = 1591.5 \mbox{cm}^3.
+\]</span></p>
+</div>
+</div>
+</div>
+<div id="exr-volumen-piramide" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 7.28</strong></span> Calcular el volumen de la esta <a href="https://www.geogebra.org/m/g2wu3tqw">pirámide</a> con base cuadrada de lado 2 y altura 2. Calcular a continuación el volumen de una pirámide de base cuadrada de lado <span class="math inline">\(l\)</span> y altura <span class="math inline">\(h\)</span>.</p>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-33-contents" aria-controls="callout-33" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-33" class="callout-33-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Calcularemos el volumen de la pirámide tomando secciones transversales con respecto al eje <span class="math inline">\(x\)</span> en el intervalo <span class="math inline">\([0,2]\)</span>. El apotema de la pirámide está inscrito en la recta de ecuación <span class="math inline">\(y=-\frac{1}{2}x+1\)</span>, por lo que, para cualquier <span class="math inline">\(a\in[0,2]\)</span>, la intersección de la pirámide con el plano <span class="math inline">\(x=a\)</span> es un cuadrado de lado <span class="math inline">\(2(-\frac{a}{2}+1)=2-a\)</span>, y por tanto su área es <span class="math inline">\((2-a)^2\)</span>. Así pues, para calcular el volumen de la pirámide basta con integrar la función <span class="math inline">\(f(x)=(2-x)^2\)</span>, que nos da el área de la sección transversal al eje <span class="math inline">\(x\)</span> en <span class="math inline">\(x\)</span>, en el intervalo <span class="math inline">\([0,2]\)</span>.</p>
 <p><span class="math display">\[\begin{align*}
@@ -1620,10 +1648,10 @@ f(x)=\left(2\left(-\frac{lx}{2h}+\frac{l}{2}\right)\right)^2
 </div>
 </div>
 <div id="exr-volumen-revolucion" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 7.28</strong></span> Calcular el volumen del sólido de revolución generado por la rotación al rededor del eje <span class="math inline">\(y\)</span> del area comprendida entre las gráficas de las funciones <span class="math inline">\(f(x)=x\)</span> y <span class="math inline">\(g(x)=x^2\)</span>. Calcular también el volumen del sólido de revolución generado al rotar esa misma área alrededor de la recta <span class="math inline">\(x=1\)</span>.</p>
+<p><span class="theorem-title"><strong>Ejercicio 7.29</strong></span> Calcular el volumen del sólido de revolución generado por la rotación al rededor del eje <span class="math inline">\(y\)</span> del area comprendida entre las gráficas de las funciones <span class="math inline">\(f(x)=x\)</span> y <span class="math inline">\(g(x)=x^2\)</span>. Calcular también el volumen del sólido de revolución generado al rotar esa misma área alrededor de la recta <span class="math inline">\(x=1\)</span>.</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-33-contents" aria-controls="callout-33" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-34-contents" aria-controls="callout-34" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1632,7 +1660,7 @@ f(x)=\left(2\left(-\frac{lx}{2h}+\frac{l}{2}\right)\right)^2
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-33" class="callout-33-contents callout-collapse collapse">
+<div id="callout-34" class="callout-34-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Para ver los puntos donde se cortan las gráficas de las dos funciones resolvemos la ecuación que surge al igualarlas.</p>
 <p><span class="math display">\[
@@ -1661,13 +1689,13 @@ x = x^2 \Leftrightarrow x^2-x = 0 \Leftrightarrow x(x-1)= 0 \Leftrightarrow x=0 
 </div>
 </div>
 <div id="exr-volumen-toro" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 7.29</strong></span> Calcular el volumen de este <a href="https://www.geogebra.org/m/wy2uquqc">toro</a> obtenido al rotar la circunferencia de ecuación <span class="math inline">\((x-2)^2+y^2=1\)</span> alrededor del eje <span class="math inline">\(y\)</span>. Calcular a continuación el volumen de un toro de radio mayor <span class="math inline">\(R\)</span> y radio menor <span class="math inline">\(r\)</span>.</p>
+<p><span class="theorem-title"><strong>Ejercicio 7.30</strong></span> Calcular el volumen de este <a href="https://www.geogebra.org/m/wy2uquqc">toro</a> obtenido al rotar la circunferencia de ecuación <span class="math inline">\((x-2)^2+y^2=1\)</span> alrededor del eje <span class="math inline">\(y\)</span>. Calcular a continuación el volumen de un toro de radio mayor <span class="math inline">\(R\)</span> y radio menor <span class="math inline">\(r\)</span>.</p>
 </div>
 <div id="exr-volumen-revolucion-2" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 7.30</strong></span> Calcular el volumen del sólido de revolución generado por la rotación al rededor del eje <span class="math inline">\(y\)</span> del area comprendida entre las funciones <span class="math inline">\(f(x)=x+1\)</span> y <span class="math inline">\(g(x)=(x-1)^2\)</span>.</p>
+<p><span class="theorem-title"><strong>Ejercicio 7.31</strong></span> Calcular el volumen del sólido de revolución generado por la rotación al rededor del eje <span class="math inline">\(y\)</span> del area comprendida entre las funciones <span class="math inline">\(f(x)=x+1\)</span> y <span class="math inline">\(g(x)=(x-1)^2\)</span>.</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-34-contents" aria-controls="callout-34" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-35-contents" aria-controls="callout-35" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1676,7 +1704,7 @@ x = x^2 \Leftrightarrow x^2-x = 0 \Leftrightarrow x(x-1)= 0 \Leftrightarrow x=0 
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-34" class="callout-34-contents callout-collapse collapse">
+<div id="callout-35" class="callout-35-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Para ver los puntos donde se cortan las gráficas de las dos funciones resolvemos la ecuación que surge al igualarlas.</p>
 <p><span class="math display">\[
@@ -1695,10 +1723,10 @@ x+1 = (x-1)^2 \Leftrightarrow x+1 = x^2-2x+1 \Leftrightarrow x^2-3x= 0 \Leftrigh
 </div>
 </div>
 <div id="exr-volumen-revolucion-3" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 7.31</strong></span> Calcular el volumen del sólido de revolución generado por la rotación al rededor del eje <span class="math inline">\(x\)</span> de la región comprendida entre las funciones <span class="math inline">\(f(x)=\cos(x)\)</span> y <span class="math inline">\(g(x)=\operatorname{sen}(x)\)</span> en el intervalo <span class="math inline">\([0,\pi/2]\)</span>. Calcular también el volumen del sólido de revolución generado al rotar la mima área alrededor del eje <span class="math inline">\(y\)</span>.</p>
+<p><span class="theorem-title"><strong>Ejercicio 7.32</strong></span> Calcular el volumen del sólido de revolución generado por la rotación al rededor del eje <span class="math inline">\(x\)</span> de la región comprendida entre las funciones <span class="math inline">\(f(x)=\cos(x)\)</span> y <span class="math inline">\(g(x)=\operatorname{sen}(x)\)</span> en el intervalo <span class="math inline">\([0,\pi/2]\)</span>. Calcular también el volumen del sólido de revolución generado al rotar la mima área alrededor del eje <span class="math inline">\(y\)</span>.</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-35-contents" aria-controls="callout-35" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-36-contents" aria-controls="callout-36" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1707,7 +1735,7 @@ x+1 = (x-1)^2 \Leftrightarrow x+1 = x^2-2x+1 \Leftrightarrow x^2-3x= 0 \Leftrigh
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-35" class="callout-35-contents callout-collapse collapse">
+<div id="callout-36" class="callout-36-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Veamos primero en qué puntos se cortan las gráficas de las dos funciones.</p>
 <p><span class="math display">\[
@@ -1742,7 +1770,7 @@ x+1 = (x-1)^2 \Leftrightarrow x+1 = x^2-2x+1 \Leftrightarrow x^2-3x= 0 \Leftrigh
 </div>
 </div>
 <div id="exr-volumen-tienda-campaña" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 7.32</strong></span> Una tienda de campaña de base cuadrada como la de la figura tiene sección vertical parabólica dada por la función <span class="math inline">\(y=1-x^2\)</span> (en m). ¿Cuál es su volumen?</p>
+<p><span class="theorem-title"><strong>Ejercicio 7.33</strong></span> Una tienda de campaña de base cuadrada como la de la figura tiene sección vertical parabólica dada por la función <span class="math inline">\(y=1-x^2\)</span> (en m). ¿Cuál es su volumen?</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="img/integrales/tienda-iglu.svg" class="img-fluid figure-img" width="300"></p>
@@ -1751,7 +1779,7 @@ x+1 = (x-1)^2 \Leftrightarrow x+1 = x^2-2x+1 \Leftrightarrow x^2-3x= 0 \Leftrigh
 </div>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-36-contents" aria-controls="callout-36" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-37-contents" aria-controls="callout-37" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1760,7 +1788,7 @@ x+1 = (x-1)^2 \Leftrightarrow x+1 = x^2-2x+1 \Leftrightarrow x^2-3x= 0 \Leftrigh
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-36" class="callout-36-contents callout-collapse collapse">
+<div id="callout-37" class="callout-37-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Como las secciones transversales con respecto al eje <span class="math inline">\(y\)</span> son figuras regulares, en este caso cuadrados, calcularemos el volumen de la tienda integrando a lo largo del eje <span class="math inline">\(y\)</span> las áreas de esos cuadrados. Para cualquier sección transversal en <span class="math inline">\(y=a\)</span>, el semi-lado del cuadrado resultante es</p>
 <p><span class="math display">\[
@@ -1781,10 +1809,10 @@ f(y) = (2\sqrt{1-y})^2 = 4(1-y)=4-4y.
 </div>
 </div>
 <div id="exr-pluviometro" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 7.33</strong></span> Un pluviómetro tiene la forma de un sólido de revolución obtenido al rotar la gráfica de la función <span class="math inline">\(f(x)=x^3\)</span> <span class="math inline">\((x\geq 0)\)</span> alrededor del eje <span class="math inline">\(y\)</span>. ¿Cuál debe ser su altura para que sea capaz de almacenar 1 litro de agua?</p>
+<p><span class="theorem-title"><strong>Ejercicio 7.34</strong></span> Un pluviómetro tiene la forma de un sólido de revolución obtenido al rotar la gráfica de la función <span class="math inline">\(f(x)=x^3\)</span> <span class="math inline">\((x\geq 0)\)</span> alrededor del eje <span class="math inline">\(y\)</span>. ¿Cuál debe ser su altura para que sea capaz de almacenar 1 litro de agua?</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-37-contents" aria-controls="callout-37" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-38-contents" aria-controls="callout-38" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1793,7 +1821,7 @@ f(y) = (2\sqrt{1-y})^2 = 4(1-y)=4-4y.
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-37" class="callout-37-contents callout-collapse collapse">
+<div id="callout-38" class="callout-38-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Al rotar la gráfica de <span class="math inline">\(f\)</span> alrededor del eje <span class="math inline">\(y\)</span>, las secciones transversales con respecto al eje <span class="math inline">\(y\)</span> del sólido de revolución generado serán círculos cuyo radio vendrá dado por la función inversa de <span class="math inline">\(y\)</span>, <span class="math inline">\(x = f^{-1}(y) = y^{1/3}\)</span>. Por tanto, para calcular el volumen del sólido de revolución podemos tomar <a href="https://aprendeconalf.es/analisis-manual/08-integraleshtml#c%C3%A1lculo-de-vol%C3%BAmenes-de-s%C3%B3lidos-de-revoluci%C3%B3n">discos cilíndricos</a>, de manera que el volumen del pluviómetro de altura <span class="math inline">\(h\)</span> viene dado por la integral</p>
 <p><span class="math display">\[
@@ -1812,10 +1840,10 @@ f(y) = (2\sqrt{1-y})^2 = 4(1-y)=4-4y.
 </div>
 </div>
 <div id="exr-longitud-circunferencia" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 7.34</strong></span> Calcular la longitud de una circunferencia de radio <span class="math inline">\(r\)</span> centrada en el origen.</p>
+<p><span class="theorem-title"><strong>Ejercicio 7.35</strong></span> Calcular la longitud de una circunferencia de radio <span class="math inline">\(r\)</span> centrada en el origen.</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-38-contents" aria-controls="callout-38" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-39-contents" aria-controls="callout-39" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1824,7 +1852,7 @@ f(y) = (2\sqrt{1-y})^2 = 4(1-y)=4-4y.
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-38" class="callout-38-contents callout-collapse collapse">
+<div id="callout-39" class="callout-39-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>La ecuación de la circunferencia de radio <span class="math inline">\(r\)</span> centrada en el origen es <span class="math inline">\(x^2+y^2=r^2\)</span>, de donde se deduce que <span class="math inline">\(y=\pm\sqrt{r^2-x^2}\)</span>. Si tomamos la función correspondiente a la semicircunferencia positiva <span class="math inline">\(f(x)=\sqrt{r^2-x^2}\)</span>, podemos calcular la <a href="https://aprendeconalf.es/analisis-manual/08-integrales.html#c%C3%A1lculo-de-la-longitud-de-una-curva">longitud de la curva</a> de la semicircunferencia con la siguiente integral</p>
 <p><span class="math display">\[\begin{align*}
@@ -1845,7 +1873,7 @@ f(y) = (2\sqrt{1-y})^2 = 4(1-y)=4-4y.
 </div>
 </div>
 <div id="exr-longitud-curvas" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 7.35</strong></span> Calcular la longitud de las siguientes curvas en los intervalos dados</p>
+<p><span class="theorem-title"><strong>Ejercicio 7.36</strong></span> Calcular la longitud de las siguientes curvas en los intervalos dados</p>
 <ol type="a">
 <li><p><span class="math inline">\(y=x^2\)</span> en <span class="math inline">\([0,1]\)</span>.</p></li>
 <li><p><span class="math inline">\(y^2=4x^3\)</span> en <span class="math inline">\([0,2]\)</span>.</p></li>
@@ -1853,7 +1881,7 @@ f(y) = (2\sqrt{1-y})^2 = 4(1-y)=4-4y.
 </ol>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-39-contents" aria-controls="callout-39" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-40-contents" aria-controls="callout-40" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1862,7 +1890,7 @@ f(y) = (2\sqrt{1-y})^2 = 4(1-y)=4-4y.
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-39" class="callout-39-contents callout-collapse collapse">
+<div id="callout-40" class="callout-40-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ol type="a">
 <li><p>Tomando <span class="math inline">\(f(x)=x^2\)</span>, la logitud de la curva de la gráfica de <span class="math inline">\(f\)</span> en el intervalo <span class="math inline">\([0,1]\)</span> es</p>
@@ -1912,10 +1940,10 @@ f(y) = (2\sqrt{1-y})^2 = 4(1-y)=4-4y.
 </div>
 </div>
 <div id="exr-longitud-montaña-rusa" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 7.36</strong></span> Un tramo de una montaña rusa tiene la forma de la curva <span class="math inline">\(y=\frac{1}{3}(x-3)\sqrt{x}\)</span>, donde <span class="math inline">\(x\)</span> viene dado en decámetros. ¿Qué longitud tiene el rail del tramo desde el origen hasta el punto que alcanza la misma altura?</p>
+<p><span class="theorem-title"><strong>Ejercicio 7.37</strong></span> Un tramo de una montaña rusa tiene la forma de la curva <span class="math inline">\(y=\frac{1}{3}(x-3)\sqrt{x}\)</span>, donde <span class="math inline">\(x\)</span> viene dado en decámetros. ¿Qué longitud tiene el rail del tramo desde el origen hasta el punto que alcanza la misma altura?</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-40-contents" aria-controls="callout-40" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-41-contents" aria-controls="callout-41" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1924,7 +1952,7 @@ f(y) = (2\sqrt{1-y})^2 = 4(1-y)=4-4y.
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-40" class="callout-40-contents callout-collapse collapse">
+<div id="callout-41" class="callout-41-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>La longitud del rail es la longitud de la curva correspondiente a la gráfica de la función <span class="math inline">\(f(x)=\frac{1}{3}(x-3)\sqrt{x}\)</span>. Resulta sencillo ver que las dos raíces de esta función son <span class="math inline">\(x=0\)</span> (el origen) y <span class="math inline">\(x=3\)</span>, por lo que hay que el intervalo de integración es <span class="math inline">\([0,3]\)</span>. Para calcular la <a href="https://aprendeconalf.es/analisis-manual/08-integrales.html#c%C3%A1lculo-de-la-longitud-de-una-curva">longitud de la curva</a> correspondiente a la gráfica de <span class="math inline">\(f\)</span> en este intervalo hay que calcular la siguiente integral</p>
 <p><span class="math display">\[\begin{align*}
@@ -1945,11 +1973,11 @@ f(y) = (2\sqrt{1-y})^2 = 4(1-y)=4-4y.
 </div>
 </div>
 <div id="exr-longitud-catenaria" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 7.37</strong></span> Calcular la longitud de un cable eléctrico con forma de catenaria que cuelga entre dos postes separados 10 metros de distancia con una altura mínima sobre el suelo de 5 metros.</p>
+<p><span class="theorem-title"><strong>Ejercicio 7.38</strong></span> Calcular la longitud de un cable eléctrico con forma de catenaria que cuelga entre dos postes separados 10 metros de distancia con una altura mínima sobre el suelo de 5 metros.</p>
 <p>Nota: La ecuación que define una curva con forma de catenaria centrada en el eje <span class="math inline">\(y\)</span> es <span class="math inline">\(y=a\cosh\left(\frac{x}{a}\right)\)</span>, donde <span class="math inline">\(a\)</span> es la altura mínima de la catenaria.</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-41-contents" aria-controls="callout-41" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-42-contents" aria-controls="callout-42" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1958,7 +1986,7 @@ f(y) = (2\sqrt{1-y})^2 = 4(1-y)=4-4y.
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-41" class="callout-41-contents callout-collapse collapse">
+<div id="callout-42" class="callout-42-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>La longitud del cable eléctrico es la <a href="https://aprendeconalf.es/analisis-manual/08-integrales.html#c%C3%A1lculo-de-la-longitud-de-una-curva">longitud de la curva</a> correspondiente a la gráfica de la función <span class="math inline">\(f(x)=5\cosh(x/5)\)</span> en el intervalo <span class="math inline">\([-5,5]\)</span>, que viene dado por la integral</p>
 <p><span class="math display">\[\begin{align*}
@@ -1975,7 +2003,7 @@ f(y) = (2\sqrt{1-y})^2 = 4(1-y)=4-4y.
 </div>
 </div>
 <div id="exr-superficie-solido-revolucion" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 7.38</strong></span> Calcular la superficie de los sólidos de revolución obtenidos al girar las siguientes funciones alrededor del eje <span class="math inline">\(x\)</span> en los intervalos dados.</p>
+<p><span class="theorem-title"><strong>Ejercicio 7.39</strong></span> Calcular la superficie de los sólidos de revolución obtenidos al girar las siguientes funciones alrededor del eje <span class="math inline">\(x\)</span> en los intervalos dados.</p>
 <ol type="a">
 <li><span class="math inline">\(f(x)=2\sqrt{1-x}\)</span> en <span class="math inline">\([-1,1]\)</span>.</li>
 </ol>
@@ -1985,7 +2013,7 @@ f(y) = (2\sqrt{1-y})^2 = 4(1-y)=4-4y.
 </ol>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-42-contents" aria-controls="callout-42" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-43-contents" aria-controls="callout-43" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1994,7 +2022,7 @@ f(y) = (2\sqrt{1-y})^2 = 4(1-y)=4-4y.
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-42" class="callout-42-contents callout-collapse collapse">
+<div id="callout-43" class="callout-43-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ol type="a">
 <li><p>La <a href="https://aprendeconalf.es/analisis-manual/08-integrales.html#c%C3%A1lculo-de-superficies-de-s%C3%B3lidos-de-revoluci%C3%B3n">superficie del sólido de revolución</a> que se obtiene al rotar la gráfica de la función <span class="math inline">\(f(x)\)</span> alrededor del eje <span class="math inline">\(x\)</span> en el interavlo <span class="math inline">\([-1,1]\)</span>, viene dada por la siguiente integral</p>
@@ -2028,10 +2056,10 @@ f(y) = (2\sqrt{1-y})^2 = 4(1-y)=4-4y.
 </div>
 </div>
 <div id="exr-superficie-deposito" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 7.39</strong></span> Un depósito metálico tiene la forma del elipsoide que se obtiene al rotar la elipse <span class="math inline">\(\frac{x^2}{4}+y^2=1\)</span> alrededor del eje <span class="math inline">\(x\)</span>, con <span class="math inline">\(x\)</span> en metros. Calcular la cantidad de chapa metálica necesaria para construir el depósito. ¿Y si el depósito se construye rotando la elipse alrededor del eje <span class="math inline">\(y\)</span>?</p>
+<p><span class="theorem-title"><strong>Ejercicio 7.40</strong></span> Un depósito metálico tiene la forma del elipsoide que se obtiene al rotar la elipse <span class="math inline">\(\frac{x^2}{4}+y^2=1\)</span> alrededor del eje <span class="math inline">\(x\)</span>, con <span class="math inline">\(x\)</span> en metros. Calcular la cantidad de chapa metálica necesaria para construir el depósito. ¿Y si el depósito se construye rotando la elipse alrededor del eje <span class="math inline">\(y\)</span>?</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-43-contents" aria-controls="callout-43" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-44-contents" aria-controls="callout-44" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -2040,7 +2068,7 @@ f(y) = (2\sqrt{1-y})^2 = 4(1-y)=4-4y.
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-43" class="callout-43-contents callout-collapse collapse">
+<div id="callout-44" class="callout-44-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Para averiguar la cantidad de chapa necesaria para construir el depósito tenemos que calcular el área de la superficie del depósito.</p>
 <p>De la ecuación de la elipse se tiene</p>
@@ -2085,10 +2113,10 @@ f'(x) = \frac{-x}{4\sqrt{1-\frac{x^2}{4}}},
 </div>
 </div>
 <div id="exr-superficie-toro" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 7.40</strong></span> Calcular el área de la superficie de este <a href="https://www.geogebra.org/m/wy2uquqc">toro</a> obtenido al rotar la circunferencia de ecuación <span class="math inline">\((x-2)^2+y^2=1\)</span> alrededor del eje <span class="math inline">\(y\)</span>. Calcular a continuación la superficie de un toro de radio mayor <span class="math inline">\(R\)</span> y radio menor <span class="math inline">\(r\)</span>.</p>
+<p><span class="theorem-title"><strong>Ejercicio 7.41</strong></span> Calcular el área de la superficie de este <a href="https://www.geogebra.org/m/wy2uquqc">toro</a> obtenido al rotar la circunferencia de ecuación <span class="math inline">\((x-2)^2+y^2=1\)</span> alrededor del eje <span class="math inline">\(y\)</span>. Calcular a continuación la superficie de un toro de radio mayor <span class="math inline">\(R\)</span> y radio menor <span class="math inline">\(r\)</span>.</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-44-contents" aria-controls="callout-44" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-45-contents" aria-controls="callout-45" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -2097,7 +2125,7 @@ f'(x) = \frac{-x}{4\sqrt{1-\frac{x^2}{4}}},
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-44" class="callout-44-contents callout-collapse collapse">
+<div id="callout-45" class="callout-45-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Calcularemos directamente la superficie de un toro con radio mayor <span class="math inline">\(R\)</span> y radio menor <span class="math inline">\(r\)</span>, que tiene ecuación</p>
 <p><span class="math display">\[
@@ -2137,10 +2165,10 @@ f'(x) = \frac{R-x}{\sqrt{r^2-(x-R)^2}} = \frac{R-x}{f(x)}
 </div>
 </div>
 <div id="exr-cinematica-1" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 7.41</strong></span> Se lanza una pelota verticalmente desde la ventana de un edificio situada a 20 m sobre el suelo con una velocidad inicial de 10 m/s. ¿A qué distancia del suelo estará la pelota transcurridos 3 segundos? ¿Qué distancia habrá recorrido hasta ese instante?</p>
+<p><span class="theorem-title"><strong>Ejercicio 7.42</strong></span> Se lanza una pelota verticalmente desde la ventana de un edificio situada a 20 m sobre el suelo con una velocidad inicial de 10 m/s. ¿A qué distancia del suelo estará la pelota transcurridos 3 segundos? ¿Qué distancia habrá recorrido hasta ese instante?</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-45-contents" aria-controls="callout-45" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-46-contents" aria-controls="callout-46" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -2149,7 +2177,7 @@ f'(x) = \frac{R-x}{\sqrt{r^2-(x-R)^2}} = \frac{R-x}{f(x)}
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-45" class="callout-45-contents callout-collapse collapse">
+<div id="callout-46" class="callout-46-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>La posición que ocupa la pelota en cada instante <span class="math inline">\(t\)</span> viene dada por la integral de la velocidad <span class="math inline">\(v(t)\)</span>, <span class="math inline">\(\int_0^t v(t)\, dt\)</span>, pero, a su vez, la velocidad en cada instante viene dada por la integral de la aceleración. En este caso la aceleración que sufre la pelota es la de la fuerza de la gravedad, que es constante y negativa, por lo que tenemos</p>
 <p><span class="math display">\[
@@ -2183,10 +2211,10 @@ v(t) = v(0) + gt = 10 - 9.81 t = 0 \Leftrightarrow t = \frac{10}{9.81} = 1.0194 
 </div>
 </div>
 <div id="exr-cinematica-2" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 7.42</strong></span> Un vehículo se mueve con una aceleración dada por la función <span class="math inline">\(a(t)=10\cos(2t)\)</span>. Suponiendo que el vehículo parte de un estado de reposo en la posición <span class="math inline">\(0\)</span>, ¿cuál será la distancia neta recorrida por el vehículo en el intervalo de <span class="math inline">\([0,\pi]\)</span>? ¿Y la distancia total?</p>
+<p><span class="theorem-title"><strong>Ejercicio 7.43</strong></span> Un vehículo se mueve con una aceleración dada por la función <span class="math inline">\(a(t)=10\cos(2t)\)</span>. Suponiendo que el vehículo parte de un estado de reposo en la posición <span class="math inline">\(0\)</span>, ¿cuál será la distancia neta recorrida por el vehículo en el intervalo de <span class="math inline">\([0,\pi]\)</span>? ¿Y la distancia total?</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-46-contents" aria-controls="callout-46" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-47-contents" aria-controls="callout-47" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -2195,7 +2223,7 @@ v(t) = v(0) + gt = 10 - 9.81 t = 0 \Leftrightarrow t = \frac{10}{9.81} = 1.0194 
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-46" class="callout-46-contents callout-collapse collapse">
+<div id="callout-47" class="callout-47-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Calculamos primero la velocidad en cada instante <span class="math inline">\(t\)</span>.</p>
 <p><span class="math display">\[\begin{align*}
@@ -2233,7 +2261,7 @@ v(t) = 5\operatorname{sen}{2t} = 0 \Leftrightarrow t = \frac{\operatorname{arcse
 </div>
 </div>
 <div id="exr-trabajo-muelle" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 7.43</strong></span> La <a href="https://es.wikipedia.org/wiki/Ley_de_elasticidad_de_Hooke">ley de Hooke</a> establece que la fuerza necesaria para estirar un muelle es proporcional a la distancia de estiramiento, es decir, cumple la ecuación</p>
+<p><span class="theorem-title"><strong>Ejercicio 7.44</strong></span> La <a href="https://es.wikipedia.org/wiki/Ley_de_elasticidad_de_Hooke">ley de Hooke</a> establece que la fuerza necesaria para estirar un muelle es proporcional a la distancia de estiramiento, es decir, cumple la ecuación</p>
 <p><span class="math display">\[
 F = kx
 \]</span></p>
@@ -2241,7 +2269,7 @@ F = kx
 <p>Si al aplicar una fuerza de <span class="math inline">\(3\)</span> N se consigue comprimir el muelle una distancia de <span class="math inline">\(0.1\)</span> m desde su posición natural, ¿qué trabajo se realiza al estirar el muelle <span class="math inline">\(0.2\)</span> m desde su posición natural?</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-47-contents" aria-controls="callout-47" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-48-contents" aria-controls="callout-48" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -2250,7 +2278,7 @@ F = kx
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-47" class="callout-47-contents callout-collapse collapse">
+<div id="callout-48" class="callout-48-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Como al aplicar una fuerza de <span class="math inline">\(3\)</span> N el muelle se comprime <span class="math inline">\(0.1\)</span> m, aplicando la ley de Hooke se puede calcular la constante de proporcionalidad del muelle.</p>
 <p><span class="math display">\[
@@ -2268,33 +2296,13 @@ F = kx
 </div>
 </div>
 <div id="exr-trabajo-cohete" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 7.44</strong></span> ¿Qué trabajo se realiza al lanzar un cohete de 50 toneladas desde la superficie de la tierra a una órbita situada a 100 km sobre la superficie terrestre?<br>
+<p><span class="theorem-title"><strong>Ejercicio 7.45</strong></span> ¿Qué trabajo se realiza al lanzar un cohete de 50 toneladas desde la superficie de la tierra a una órbita situada a 100 km sobre la superficie terrestre?<br>
 Nota: Debe tenerse en cuenta que la aceleración de la gravedad disminuye con la altura según la fórmula</p>
 <p><span class="math display">\[
 g_h = g_0 \left(\frac{R}{R+h}\right)^2,
 \]</span> donde <span class="math inline">\(g_h\)</span> es la aceleración de la gravedad a una altura <span class="math inline">\(h\)</span> sobre la superficie terrestre, <span class="math inline">\(g_0=9.81\)</span> m/s<span class="math inline">\(^2\)</span> es la aceleración de la gravedad en la superficie terrestre, y <span class="math inline">\(R=6371\)</span> km es el radio de la Tierra.</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-empty-content callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-48-contents" aria-controls="callout-48" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>Solución
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-48" class="callout-48-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-
-</div>
-</div>
-</div>
-<div id="exr-trabajo-deposito" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 7.45</strong></span> Un depósito con forma de cono invertido de radio <span class="math inline">\(2\)</span> m y altura <span class="math inline">\(5\)</span> m está lleno de agua. ¿Qué trabajo se realiza al vaciar el tanque por arriba?<br>
-Nota: La densidad del agua es <span class="math inline">\(\delta = 1000\)</span> kg/m<span class="math inline">\(^3\)</span>.</p>
-</div>
-<div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-49-contents" aria-controls="callout-49" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
@@ -2305,6 +2313,26 @@ Nota: La densidad del agua es <span class="math inline">\(\delta = 1000\)</span>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
 <div id="callout-49" class="callout-49-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+
+</div>
+</div>
+</div>
+<div id="exr-trabajo-deposito" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 7.46</strong></span> Un depósito con forma de cono invertido de radio <span class="math inline">\(2\)</span> m y altura <span class="math inline">\(5\)</span> m está lleno de agua. ¿Qué trabajo se realiza al vaciar el tanque por arriba?<br>
+Nota: La densidad del agua es <span class="math inline">\(\delta = 1000\)</span> kg/m<span class="math inline">\(^3\)</span>.</p>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-50-contents" aria-controls="callout-50" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Solución
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-50" class="callout-50-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>En este caso, aunque la aceleración de la gravedad es constante, el volumen de agua a cada altura <span class="math inline">\(y\)</span> es distinto, por lo que su masa y la fuerza necesaria para elevarla será distinta.</p>
 <p>Siguiendo la misma estrategia de las sumas de Riemann, podemos descomponer el intervalo <span class="math inline">\([0, 5]\)</span> de la altura del depósito en subintervalos de igual amplitud de acuerdo a una partición <span class="math inline">\(P_n=\{y_0=0, y_1, \ldots, y_n=5\}\)</span>, y considerar, para cada subintervalo <span class="math inline">\([y_{i-1}, y_i]\)</span> el cilindro de radio <span class="math inline">\(x_i=f(y_i)\)</span>, donde <span class="math inline">\(f(y)\)</span> es la función de la generatriz del cono, y altura <span class="math inline">\(\Delta y=y_i-y_{i-1}\)</span>. Como la ecuación de la recta que define la generatriz del cono es <span class="math inline">\(y=\frac{5}{2}x\)</span>, expresando <span class="math inline">\(x\)</span> en función de <span class="math inline">\(y\)</span> se tiene que <span class="math inline">\(x_i=\frac{2}{5}y_i\)</span>, de manera que el volumen del cilindro correspondiente al intervalo <span class="math inline">\([x_{i-1},x_i]\)</span> es</p>
@@ -2344,10 +2372,10 @@ W
 </div>
 </div>
 <div id="exr-trabajo-deposito-2" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 7.46</strong></span> Un depósito con forma de sólido de revolución generado al rotar la gráfica de la función <span class="math inline">\(f(x)=\frac{x^2}{2}\)</span> alrededor del eje <span class="math inline">\(y\)</span> en el intervalo de <span class="math inline">\(0\)</span> a <span class="math inline">\(4\)</span> m, contiene <span class="math inline">\(100000\)</span> l de aceite con una densidad <span class="math inline">\(\delta = 900\)</span> kg/m<span class="math inline">\(^3\)</span>. ¿Qué trabajo se realiza al vaciar el depósito por arriba?</p>
+<p><span class="theorem-title"><strong>Ejercicio 7.47</strong></span> Un depósito con forma de sólido de revolución generado al rotar la gráfica de la función <span class="math inline">\(f(x)=\frac{x^2}{2}\)</span> alrededor del eje <span class="math inline">\(y\)</span> en el intervalo de <span class="math inline">\(0\)</span> a <span class="math inline">\(4\)</span> m, contiene <span class="math inline">\(100000\)</span> l de aceite con una densidad <span class="math inline">\(\delta = 900\)</span> kg/m<span class="math inline">\(^3\)</span>. ¿Qué trabajo se realiza al vaciar el depósito por arriba?</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-50-contents" aria-controls="callout-50" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-51-contents" aria-controls="callout-51" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -2356,7 +2384,7 @@ W
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-50" class="callout-50-contents callout-collapse collapse">
+<div id="callout-51" class="callout-51-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>El problema es similar al anterior, pero ahora, el radio de los sectores circulares viene dado por la función <span class="math inline">\(y=\frac{x^2}{2}\)</span>, de manera que <span class="math inline">\(x=\sqrt{2y}\)</span>.</p>
 <p>Tal y como vimos en el <a href="https://aprendeconalf.es/analisis-manual/08-integrales.html#c%C3%A1lculo-de-vol%C3%BAmenes-de-s%C3%B3lidos-de-revoluci%C3%B3n">cálculo de volúmenes de sólidos de revolución</a>, el volumen almacenado en el depósito hasta una altura <span class="math inline">\(h\)</span> es</p>
@@ -2381,10 +2409,10 @@ W
 </div>
 </div>
 <div id="exr-centro-masas-1" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 7.47</strong></span> Una varilla varilla metálica de 20 m de longitud, tiene una densidad <span class="math inline">\(f(x)=\operatorname{sen}(\pi x)+1\)</span> a una distancia <span class="math inline">\(x\)</span> de su extremo izquierdo. Calcular su centro de masas.</p>
+<p><span class="theorem-title"><strong>Ejercicio 7.48</strong></span> Una varilla varilla metálica de 20 m de longitud, tiene una densidad <span class="math inline">\(f(x)=\operatorname{sen}(\pi x)+1\)</span> a una distancia <span class="math inline">\(x\)</span> de su extremo izquierdo. Calcular su centro de masas.</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-51-contents" aria-controls="callout-51" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-52-contents" aria-controls="callout-52" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -2393,7 +2421,7 @@ W
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-51" class="callout-51-contents callout-collapse collapse">
+<div id="callout-52" class="callout-52-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Para calcular el <a href="https://aprendeconalf.es/analisis-manual/08-integrales.html#centro-de-masas-de-una-varilla-con-densidad-variable">centro de masas de una varilla con densidad variable</a> <span class="math inline">\(f(x)\)</span> tenemos que dividir su momento y su masa, es decir, calcular el cociente de integrales</p>
 <p><span class="math display">\[
@@ -2427,10 +2455,10 @@ W
 </div>
 </div>
 <div id="exr-centro-masas-3" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 7.48</strong></span> Calcular el centroide del sector circular definido por la ecuación <span class="math inline">\(x^2+y^2=1\)</span> en el primer cuadrante.</p>
+<p><span class="theorem-title"><strong>Ejercicio 7.49</strong></span> Calcular el centroide del sector circular definido por la ecuación <span class="math inline">\(x^2+y^2=1\)</span> en el primer cuadrante.</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-52-contents" aria-controls="callout-52" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-53-contents" aria-controls="callout-53" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -2439,7 +2467,7 @@ W
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-52" class="callout-52-contents callout-collapse collapse">
+<div id="callout-53" class="callout-53-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>En primer lugar expresamos <span class="math inline">\(y\)</span> en función de <span class="math inline">\(x\)</span>, de manera que se obtiene <span class="math inline">\(y = \pm\sqrt{1-x^2}\)</span>. Como estamos interesados en la región del primer cuadrante, tomamos la raíz positiva, es decir, la función que delimita la región es <span class="math inline">\(f(x)=\sqrt{1-x^2}\)</span>.</p>
 <p>Para calcular el <a href="https://aprendeconalf.es/analisis-manual/08-integrales.html#centro-de-masas-de-una-regi%C3%B3n-plana-con-densidad-fija">centro de masas una región plana con densidad constante</a> <span class="math inline">\(f(x)\)</span> tenemos que calcular las coordenadas del centroide por separado. Para calcular la primera coordenada del centroide tenemos que calcular el cociente de integrales</p>
@@ -2499,10 +2527,10 @@ W
 </div>
 </div>
 <div id="exr-centro-masas-3" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 7.49</strong></span> Calcular el centroide de la región encerrada por la recta <span class="math inline">\(y=x\)</span> y la curva <span class="math inline">\(y=x^2\)</span>.</p>
+<p><span class="theorem-title"><strong>Ejercicio 7.50</strong></span> Calcular el centroide de la región encerrada por la recta <span class="math inline">\(y=x\)</span> y la curva <span class="math inline">\(y=x^2\)</span>.</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-53-contents" aria-controls="callout-53" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-54-contents" aria-controls="callout-54" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -2511,7 +2539,7 @@ W
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-53" class="callout-53-contents callout-collapse collapse">
+<div id="callout-54" class="callout-54-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>En primer lugar calculamos los valores de <span class="math inline">\(x\)</span> en los que las gráficas de ambas funciones se cortan, resolviendo la ecuación que resulta de igualar sus ecuaciones.</p>
 <p><span class="math display">\[
@@ -2568,10 +2596,10 @@ x = x^2 \Leftarrow x^2-x = 0 \Leftarrow x(x-1) = 0 \Leftarrow x=0 \mbox{ o } x=1
 </div>
 </div>
 <div id="exr-teorema-pappus" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 7.50</strong></span> El teorema de Pappus establece que si una región plana está a un lado de una recta <span class="math inline">\(l\)</span>, el volumen de revolución generado al rotar la región alrededor de la recta <span class="math inline">\(l\)</span> coincide con el producto del area de la región y la distancia recorrida por su centroide en la rotación. Dar una demostración del teorema para el caso particular en el que la región plana está delimitada por dos funciones <span class="math inline">\(f(x)\)</span> y <span class="math inline">\(g(x)\)</span> en un intervalo <span class="math inline">\([a,b]\)</span> y el eje de rotación es el eje <span class="math inline">\(y\)</span>.</p>
+<p><span class="theorem-title"><strong>Ejercicio 7.51</strong></span> El teorema de Pappus establece que si una región plana está a un lado de una recta <span class="math inline">\(l\)</span>, el volumen de revolución generado al rotar la región alrededor de la recta <span class="math inline">\(l\)</span> coincide con el producto del area de la región y la distancia recorrida por su centroide en la rotación. Dar una demostración del teorema para el caso particular en el que la región plana está delimitada por dos funciones <span class="math inline">\(f(x)\)</span> y <span class="math inline">\(g(x)\)</span> en un intervalo <span class="math inline">\([a,b]\)</span> y el eje de rotación es el eje <span class="math inline">\(y\)</span>.</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-54-contents" aria-controls="callout-54" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-55-contents" aria-controls="callout-55" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -2580,7 +2608,7 @@ x = x^2 \Leftarrow x^2-x = 0 \Leftarrow x(x-1) = 0 \Leftarrow x=0 \mbox{ o } x=1
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-54" class="callout-54-contents callout-collapse collapse">
+<div id="callout-55" class="callout-55-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Aplicando el método de los envoltorios cilíndricos para calcular el volumen del sólido de revolución que se obtiene al rotar la región comprendida entre las gráficas de <span class="math inline">\(f\)</span> y <span class="math inline">\(g\)</span> en el intervalo <span class="math inline">\([a,b]\)</span> alrededor del eje <span class="math inline">\(y\)</span> se tiene</p>
 <p><span class="math display">\[
@@ -2603,10 +2631,10 @@ V = \int_a^b 2\pi x(f(x)-g(x))\, dx = 2\pi \int_a^b x(f(x)-g(x))\, dx
 </div>
 </div>
 <div id="exr-valor-medio-1" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 7.51</strong></span> Calcular el valor medio de la función <span class="math inline">\(f(x)=\sqrt{1-x^2}\)</span> en el intervalo <span class="math inline">\([-1,1]\)</span>.</p>
+<p><span class="theorem-title"><strong>Ejercicio 7.52</strong></span> Calcular el valor medio de la función <span class="math inline">\(f(x)=\sqrt{1-x^2}\)</span> en el intervalo <span class="math inline">\([-1,1]\)</span>.</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-55-contents" aria-controls="callout-55" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-56-contents" aria-controls="callout-56" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -2615,7 +2643,7 @@ V = \int_a^b 2\pi x(f(x)-g(x))\, dx = 2\pi \int_a^b x(f(x)-g(x))\, dx
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-55" class="callout-55-contents callout-collapse collapse">
+<div id="callout-56" class="callout-56-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Para calcular el <a href="https://aprendeconalf.es/analisis-manual/08-integrales.html#c%C3%A1lculo-de-la-media-de-una-funci%C3%B3n">valor medio de una función</a> en el intervalo <span class="math inline">\([-1,1]\)</span> tenemos que calcular la siguiente integral</p>
 <p><span class="math display">\[\begin{align*}
@@ -2632,10 +2660,10 @@ V = \int_a^b 2\pi x(f(x)-g(x))\, dx = 2\pi \int_a^b x(f(x)-g(x))\, dx
 </div>
 </div>
 <div id="exr-velocidad-media" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 7.52</strong></span> Se deja caer una pelota desde la terraza de un edificio situada a una altura de 25 m. Suponiendo que no hubiese rozamiento, ¿cuál es la velocidad media de la pelota desde su lanzamiento hasta que toca el suelo?</p>
+<p><span class="theorem-title"><strong>Ejercicio 7.53</strong></span> Se deja caer una pelota desde la terraza de un edificio situada a una altura de 25 m. Suponiendo que no hubiese rozamiento, ¿cuál es la velocidad media de la pelota desde su lanzamiento hasta que toca el suelo?</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-56-contents" aria-controls="callout-56" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-57-contents" aria-controls="callout-57" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -2644,7 +2672,7 @@ V = \int_a^b 2\pi x(f(x)-g(x))\, dx = 2\pi \int_a^b x(f(x)-g(x))\, dx
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-56" class="callout-56-contents callout-collapse collapse">
+<div id="callout-57" class="callout-57-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>La única fuerza que actúa sobre la pelota es la fuerza de la gravedad, que podemos suponer con una aceleración constante <span class="math inline">\(g=-9.81\)</span> m/s<span class="math inline">\(^2\)</span>. Según las fórmulas de <a href="https://aprendeconalf.es/analisis-manual/08-integrales.html#cinem%C3%A1tica">cinemática</a>, la posición que ocupa la pelota en cada instante <span class="math inline">\(t\)</span> viene dada por la expresión</p>
 <p><span class="math display">\[
@@ -2685,7 +2713,7 @@ s(t) = 0
 </div>
 </div>
 <div id="exr-funcion-densidad" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 7.53</strong></span> La función de densidad de probabilidad de una variable aleatoria <span class="math inline">\(X\)</span> es <span class="math inline">\(f(x)=\frac{k}{(1+x)^4}\)</span> para <span class="math inline">\(x\geq 0\)</span>.</p>
+<p><span class="theorem-title"><strong>Ejercicio 7.54</strong></span> La función de densidad de probabilidad de una variable aleatoria <span class="math inline">\(X\)</span> es <span class="math inline">\(f(x)=\frac{k}{(1+x)^4}\)</span> para <span class="math inline">\(x\geq 0\)</span>.</p>
 <ol type="a">
 <li><p>¿Cuándo debe valer <span class="math inline">\(k\)</span> para que se cumpla que <span class="math inline">\(f\)</span> es una función de densidad?</p></li>
 <li><p>Calcular la probabilidad de que la variable aleatoria tome un valor en el intervalo <span class="math inline">\([0,1]\)</span>.</p></li>
@@ -2695,7 +2723,7 @@ s(t) = 0
 </ol>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-57-contents" aria-controls="callout-57" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-58-contents" aria-controls="callout-58" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -2704,7 +2732,7 @@ s(t) = 0
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-57" class="callout-57-contents callout-collapse collapse">
+<div id="callout-58" class="callout-58-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ol type="a">
 <li><p>Para que <span class="math inline">\(f\)</span> sea una función de densidad, la integral de <span class="math inline">\(f\)</span> en todo su dominio debe ser igual a <span class="math inline">\(1\)</span>. Por tanto, se tiene</p>
