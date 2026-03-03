@@ -1434,7 +1434,7 @@ f(\theta) = g(\theta) \Leftrightarrow 3\operatorname{sen}(\theta) = 1+\operatorn
 <ol type="a">
 <li><p><span class="math inline">\(y=\frac{1}{1+x^2}\)</span> en <span class="math inline">\((-\infty,\infty)\)</span>.</p></li>
 <li><p><span class="math inline">\(y = \frac{\ln(x)}{x^2}\)</span> en <span class="math inline">\([1,\infty)\)</span>.</p></li>
-<li><p><span class="math inline">\(y=\frac{e^{1/x}}{x^3}\)</span> en <span class="math inline">\((-\infty,0]\)</span>.</p></li>
+<li><p><span class="math inline">\(y=\frac{e^{1/x}}{x^3}\)</span> en <span class="math inline">\((-\infty,0)\)</span>.</p></li>
 </ol>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
@@ -1463,8 +1463,8 @@ f(\theta) = g(\theta) \Leftrightarrow 3\operatorname{sen}(\theta) = 1+\operatorn
 \]</span></p></li>
 <li><p><span class="math display">\[
 \int_{-\infty}^0 \left|\frac{e^{1/x}}{x^3}\right| \, dx
-= -\lim_{t\to-\infty} \left[e^{1/x}-\frac{e^{1/x}}{x}\right]_{t}^{0^-}
-= -\left(\lim_{t\to 0^-} e^{1/t}-\frac{e^{1/t}}{t}- \lim_{n\to -\infty}e^{1/t}+\frac{e^{1/t}}{t}\right) = 1.
+= -\lim_{t\to-\infty, u\to 0^-} \left[e^{1/x}-\frac{e^{1/x}}{x}\right]_{t}^{u}
+= -\left(\lim_{u\to 0^-} e^{1/u}-\frac{e^{1/u}}{u}- \lim_{t\to -\infty}e^{1/t}+\frac{e^{1/t}}{t}\right) = 1.
 \]</span></p></li>
 </ol>
 </div>

@@ -742,7 +742,7 @@ a. $y=\frac{1}{1+x^2}$ en $(-\infty,\infty)$.
 
 b. $y = \frac{\ln(x)}{x^2}$ en $[1,\infty)$.
 
-c. $y=\frac{e^{1/x}}{x^3}$ en $(-\infty,0]$.
+c. $y=\frac{e^{1/x}}{x^3}$ en $(-\infty,0)$.
 :::
 
 :::{.callout-tip collapse="true"}
@@ -768,8 +768,8 @@ c.
 
     $$
     \int_{-\infty}^0 \left|\frac{e^{1/x}}{x^3}\right| \, dx 
-    = -\lim_{t\to-\infty} \left[e^{1/x}-\frac{e^{1/x}}{x}\right]_{t}^{0^-} 
-    = -\left(\lim_{t\to 0^-} e^{1/t}-\frac{e^{1/t}}{t}- \lim_{n\to -\infty}e^{1/t}+\frac{e^{1/t}}{t}\right) = 1.
+    = -\lim_{t\to-\infty, u\to 0^-} \left[e^{1/x}-\frac{e^{1/x}}{x}\right]_{t}^{u} 
+    = -\left(\lim_{u\to 0^-} e^{1/u}-\frac{e^{1/u}}{u}- \lim_{t\to -\infty}e^{1/t}+\frac{e^{1/t}}{t}\right) = 1.
     $$
 :::
 
