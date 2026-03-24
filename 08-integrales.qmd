@@ -1570,7 +1570,7 @@ W
 :::
 
 :::{#exr-trabajo-deposito-2}
-Un depósito con forma de sólido de revolución generado al rotar la gráfica de la función $f(x)=\frac{x^2}{2}$ alrededor del eje $y$ en el intervalo de $0$ a $4$ m, contiene $100000$ l de aceite con una densidad $\delta = 900$ kg/m$^3$. ¿Qué trabajo se realiza al vaciar el depósito por arriba?
+Un depósito con forma de sólido de revolución generado al rotar la gráfica de la función $f(x)=\frac{x^2}{2}$ alrededor del eje $y$ en el intervalo de $0$ a $8$ m, contiene $100000$ l de aceite con una densidad $\delta = 900$ kg/m$^3$. ¿Qué trabajo se realiza al vaciar el depósito por arriba?
 :::
 
 :::{.callout-tip collapse="true"}
@@ -1608,7 +1608,7 @@ Una varilla varilla metálica de 20 m de longitud, tiene una densidad $f(x)=\ope
 
 :::{.callout-tip collapse="true"}
 ## Solución
-Para calcular el [centro de masas de una varilla con densidad variable](https://aprendeconalf.es/analisis-manual/08-integrales.html#centro-de-masas-de-una-varilla-con-densidad-variable) $f(x)$ tenemos que dividir su momento y su masa, es decir, calcular el cociente de integrales 
+Para calcular el [centro de masas de una varilla con densidad variable](https://aprendeconalf.es/analisis-manual/08-integrales.html#centro-de-masas-de-una-varilla-con-densidad-variable) $f(x)$ tenemos que dividir su momento entre su masa, es decir, calcular el cociente de integrales 
 
 $$
 \bar x = \frac{\int_0^{20} x f(x)\,dx}{\int_0^{20}f(x)\,dx}, 
