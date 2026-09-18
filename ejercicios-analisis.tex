@@ -687,15 +687,17 @@ De lo anterior se deduce que si \(f\) es biyectiva, entonces
 
 Dados dos conjuntos finitos \(A\) y \(B\) con \(|A|=n\) y \(|B|=m\).
 ¿Cuántas funciones distintas se pueden construir de \(A\) a \(B\)?
-¿Cuántas funciones sobreyectivas se pueden construir suponiendo que
-\(n\geq m\)? ¿Y cuántas funciones inyectivas suponiendo que \(n\leq m\)?
+¿Cuántas funciones inyectivas se pueden construir suponiendo que
+\(n\leq m\)? ¿Y cuántas funciones sobreyectivas suponiendo que
+\(n\geq m\)?
 
 \end{exercise}
 
 \begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-tip-color!10!white, colframe=quarto-callout-tip-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
 
-Se pueden construir \(m^n\) funciones distintas, \(m^{m-n}\) funciones
-sobreyectivas y \(\frac{m!}{(m-n)!}\) funciones inyectivas.
+Se pueden construir \(m^n\) funciones distintas, \(\frac{m!}{(m-n)!}\)
+funciones inyectivas y \(\sum_{k=0}^m (-1)^k \binom{m}{k} (m-k)^n\)
+funciones sobreyectivas.
 
 \end{tcolorbox}
 

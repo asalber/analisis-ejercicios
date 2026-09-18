@@ -207,12 +207,12 @@ De lo anterior se deduce que si $f$ es biyectiva, entonces $|A|=|B|$.
 :::
 
 :::{#exr-numero-funciones-inyectivas}
-Dados dos conjuntos finitos $A$ y $B$ con $|A|=n$ y $|B|=m$. ¿Cuántas funciones distintas se pueden construir de $A$ a $B$? ¿Cuántas funciones sobreyectivas se pueden construir suponiendo que $n\geq m$? ¿Y cuántas funciones inyectivas suponiendo que $n\leq m$?
+Dados dos conjuntos finitos $A$ y $B$ con $|A|=n$ y $|B|=m$. ¿Cuántas funciones distintas se pueden construir de $A$ a $B$? ¿Cuántas funciones inyectivas se pueden construir suponiendo que $n\leq m$? ¿Y cuántas funciones sobreyectivas suponiendo que $n\geq m$?
 :::
 
 :::{.callout-tip collapse="true"}
 ## Solución
-Se pueden construir $m^n$ funciones distintas, $m^{m-n}$ funciones sobreyectivas y $\frac{m!}{(m-n)!}$ funciones inyectivas.
+Se pueden construir $m^n$ funciones distintas, $\frac{m!}{(m-n)!}$ funciones inyectivas y $\sum_{k=0}^m (-1)^k \binom{m}{k} (m-k)^n$ funciones sobreyectivas.
 :::
 
 :::{#exr-ejemplo-conjunto-infinito-complemento}
