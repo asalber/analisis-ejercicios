@@ -587,7 +587,7 @@ c&lt;a \Rightarrow (-1)c\geq (-1)a \Rightarrow -c\geq -a,
 </div>
 </div>
 <div id="exr-propiedad-valor-absoluto" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 2.6</strong></span> Demostrar que <span class="math inline">\(|a|-|b|\leq |a-b|\)</span> <span class="math inline">\(\forall a,b\in\mathbb{R}\)</span>.</p>
+<p><span class="theorem-title"><strong>Ejercicio 2.6</strong></span> Demostrar que <span class="math inline">\(|a|-|b|\leq |a-b|\)</span> <span class="math inline">\(\forall a,b\in\mathbb{R}\)</span>. Demostrar también que <span class="math inline">\(||a|-|b||\leq |a-b|\)</span> (<em>desigualdad triangular inversa</em>).</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
@@ -601,17 +601,15 @@ c&lt;a \Rightarrow (-1)c\geq (-1)a \Rightarrow -c\geq -a,
 </div>
 <div id="callout-6" class="callout-6-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Veamos todas las posibilidades que pueden darse:</p>
-<ul>
-<li>Si <span class="math inline">\(a=0\)</span>, entonces <span class="math inline">\(|a|-|b|= -|b|\leq |-b| = |a-b|\)</span>.</li>
-<li>Si <span class="math inline">\(b=0\)</span>, entonces <span class="math inline">\(|a|-|b|=|a|= |a-b|\)</span>.</li>
-<li>Si <span class="math inline">\(a\geq b&gt;0\)</span>, entonces <span class="math inline">\(|a|-|b|=a-b=|a-b|\)</span>.</li>
-<li>Si <span class="math inline">\(b\geq a&gt;0\)</span>, entonces <span class="math inline">\(|a|-|b|=a-b\leq 0\leq |a-b|\)</span>.</li>
-<li>Si <span class="math inline">\(a&gt;0&gt;b\)</span>, entonces <span class="math inline">\(|a|-|b| = a-(-b) =a+b &lt; a-b =|a-b|\)</span>.</li>
-<li>Si <span class="math inline">\(b&gt;0&gt;a\)</span>, entonces <span class="math inline">\(|a|-|b| = -a-b &lt; -a+b = -(a-b) = |a-b|\)</span>.</li>
-<li>Si <span class="math inline">\(a\leq b&lt;0\)</span>, entonces <span class="math inline">\(|a|-|b| = -a-(-b) = -a+b = -(a-b) = |a-b|\)</span>.</li>
-<li>Si <span class="math inline">\(b\leq a&lt;0\)</span>, entonces <span class="math inline">\(|a|-|b| = -a-(-b) = -a+b \leq 0 \leq |a-b|\)</span>.</li>
-</ul>
+<p>Aplicando la desigualdad triangular, se tiene que</p>
+<p><span class="math display">\[|a|=|a-b+b|\leq |a-b|+|b|,\]</span></p>
+<p>de donde se deduce que <span class="math inline">\(|a|-|b|\leq |a-b|\)</span>.</p>
+<p>De manera similar, se tiene que</p>
+<p><span class="math display">\[|b|=|b-a+a|\leq |b-a|+|a|=|b-a|+|a| = |a-b|+|a|,\]</span></p>
+<p>de donde se deduce que <span class="math inline">\(|b|-|a|\leq |a-b|\)</span>, por lo que <span class="math inline">\(-|a-b|\leq |a|-|b|\)</span>.</p>
+<p>Combinando ambas desigualdades, se obtiene que</p>
+<p><span class="math display">\[-|a-b|\leq |a|-|b|\leq |a-b|,\]</span></p>
+<p>y por lo tanto, <span class="math inline">\(||a|-|b||\leq |a-b|\)</span>.</p>
 </div>
 </div>
 </div>

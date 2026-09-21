@@ -99,21 +99,28 @@ Veamos ahora que $s$ es el ínfimo de $A$. Como $-s$ es el supremo de $A'$, es u
 
 
 :::{#exr-propiedad-valor-absoluto}
-Demostrar que $|a|-|b|\leq |a-b|$ $\forall a,b\in\mathbb{R}$.
+Demostrar que $|a|-|b|\leq |a-b|$ $\forall a,b\in\mathbb{R}$. Demostrar también que $||a|-|b||\leq |a-b|$ (_desigualdad triangular inversa_).
 :::
 
 :::{.callout-tip collapse="true"}
 ## Solución
-Veamos todas las posibilidades que pueden darse:
+Aplicando la desigualdad triangular, se tiene que 
 
-- Si $a=0$, entonces $|a|-|b|= -|b|\leq |-b| = |a-b|$.
-- Si $b=0$, entonces $|a|-|b|=|a|= |a-b|$.
-- Si $a\geq b>0$, entonces $|a|-|b|=a-b=|a-b|$.
-- Si $b\geq a>0$, entonces $|a|-|b|=a-b\leq 0\leq |a-b|$.
-- Si $a>0>b$, entonces $|a|-|b| = a-(-b) =a+b < a-b =|a-b|$.
-- Si $b>0>a$, entonces $|a|-|b| = -a-b < -a+b = -(a-b) = |a-b|$.
-- Si $a\leq b<0$, entonces $|a|-|b| = -a-(-b) = -a+b = -(a-b) = |a-b|$.
-- Si $b\leq a<0$, entonces $|a|-|b| = -a-(-b) = -a+b \leq 0 \leq |a-b|$.
+$$|a|=|a-b+b|\leq |a-b|+|b|,$$
+
+de donde se deduce que $|a|-|b|\leq |a-b|$.
+
+De manera similar, se tiene que 
+
+$$|b|=|b-a+a|\leq |b-a|+|a|=|b-a|+|a| = |a-b|+|a|,$$ 
+
+de donde se deduce que $|b|-|a|\leq |a-b|$, por lo que $-|a-b|\leq |a|-|b|$. 
+
+Combinando ambas desigualdades, se obtiene que 
+
+$$-|a-b|\leq |a|-|b|\leq |a-b|,$$ 
+
+y por lo tanto, $||a|-|b||\leq |a-b|$.
 :::
 
 :::{#exr-propiedad-arquimediana-1}

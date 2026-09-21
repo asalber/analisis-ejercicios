@@ -1221,34 +1221,31 @@ menor que \(-s\). Luego \(s\) es el ínfimo de \(A\).
 \begin{exercise}[]\protect\hypertarget{exr-propiedad-valor-absoluto}{}\label{exr-propiedad-valor-absoluto}
 
 Demostrar que \(|a|-|b|\leq |a-b|\) \(\forall a,b\in\mathbb{R}\).
+Demostrar también que \(||a|-|b||\leq |a-b|\) (\emph{desigualdad
+triangular inversa}).
 
 \end{exercise}
 
 \begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-tip-color!10!white, colframe=quarto-callout-tip-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
 
-Veamos todas las posibilidades que pueden darse:
+Aplicando la desigualdad triangular, se tiene que
 
-\begin{itemize}
-\tightlist
-\item
-  Si \(a=0\), entonces \(|a|-|b|= -|b|\leq |-b| = |a-b|\).
-\item
-  Si \(b=0\), entonces \(|a|-|b|=|a|= |a-b|\).
-\item
-  Si \(a\geq b>0\), entonces \(|a|-|b|=a-b=|a-b|\).
-\item
-  Si \(b\geq a>0\), entonces \(|a|-|b|=a-b\leq 0\leq |a-b|\).
-\item
-  Si \(a>0>b\), entonces \(|a|-|b| = a-(-b) =a+b < a-b =|a-b|\).
-\item
-  Si \(b>0>a\), entonces \(|a|-|b| = -a-b < -a+b = -(a-b) = |a-b|\).
-\item
-  Si \(a\leq b<0\), entonces
-  \(|a|-|b| = -a-(-b) = -a+b = -(a-b) = |a-b|\).
-\item
-  Si \(b\leq a<0\), entonces
-  \(|a|-|b| = -a-(-b) = -a+b \leq 0 \leq |a-b|\).
-\end{itemize}
+\[|a|=|a-b+b|\leq |a-b|+|b|,\]
+
+de donde se deduce que \(|a|-|b|\leq |a-b|\).
+
+De manera similar, se tiene que
+
+\[|b|=|b-a+a|\leq |b-a|+|a|=|b-a|+|a| = |a-b|+|a|,\]
+
+de donde se deduce que \(|b|-|a|\leq |a-b|\), por lo que
+\(-|a-b|\leq |a|-|b|\).
+
+Combinando ambas desigualdades, se obtiene que
+
+\[-|a-b|\leq |a|-|b|\leq |a-b|,\]
+
+y por lo tanto, \(||a|-|b||\leq |a-b|\).
 
 \end{tcolorbox}
 
