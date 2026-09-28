@@ -753,8 +753,20 @@ window.Quarto = {
 </div>
 </div>
 </div>
+<div id="exr-control-calidad" class="theorem exercise">
+<p><span class="theorem-title"><strong>Ejercicio 3.15</strong></span> Una fábrica produce ejes cuyo diámetro nominal es de 20 mm, con una tolerancia de <span class="math inline">\(\pm 0.05\)</span> mm. Para verificarlos se usa un calibre digital cuyo error de medida es siempre menor que <span class="math inline">\(0.01\)</span> mm. El calibre muestra las lecturas con dos decimales.</p>
+<p>Sea <span class="math inline">\(A\)</span> el conjunto de diámetros aceptables.</p>
+<ol type="a">
+<li><p>Expresa <span class="math inline">\(A\)</span> como un intervalo. ¿Es <span class="math inline">\(A\)</span> un entorno de <span class="math inline">\(20\)</span>? ¿Qué relación hay entre <span class="math inline">\(A\)</span> y el entorno de centro <span class="math inline">\(20\)</span> y radio <span class="math inline">\(0.05\)</span>?</p></li>
+<li><p>Calcula <span class="math inline">\(\operatorname{Int}(A)\)</span>, <span class="math inline">\(\operatorname{Ext}(A)\)</span> y <span class="math inline">\(\operatorname{Fr}(A)\)</span>, y comprueba que forman una partición de <span class="math inline">\(\mathbb{R}\)</span>.</p></li>
+<li><p>Se miden cuatro ejes y el calibre marca estos diámetros: <span class="math inline">\(20.04\)</span> mm, <span class="math inline">\(19.94\)</span> mm, <span class="math inline">\(20.05\)</span> mm y <span class="math inline">\(20.00\)</span> mm. Para cada uno, determina si es punto interior, exterior o frontera de <span class="math inline">\(A\)</span>. Después, decide si el eje se puede aceptar o rechazar con seguridad teniendo en cuenta el error de medida del calibre. Justifica tu respuesta con entornos de radio <span class="math inline">\(\varepsilon = 0.01\)</span>.</p></li>
+<li><p>Determina el conjunto <span class="math inline">\(B\)</span> de lecturas que garantizan la aceptación, es decir, los <span class="math inline">\(x\)</span> tales que <span class="math inline">\((x - 0.01,\ x + 0.01) \subseteq A\)</span>. ¿Es <span class="math inline">\(B\)</span> abierto, cerrado o ninguna de las dos cosas? ¿Tiene máximo y mínimo?</p></li>
+<li><p>El cliente cambia la especificación: ahora el diámetro debe ser estrictamente menor que <span class="math inline">\(20.05\)</span> mm, manteniendo el límite inferior. Escribe el nuevo conjunto <span class="math inline">\(A'\)</span>. ¿Es abierto, cerrado o ninguna de las dos cosas? ¿Tiene <span class="math inline">\(A'\)</span> máximo? ¿Qué teorema del capítulo explica lo que ocurre? Interpreta el resultado: ¿puede la fábrica dar un “diámetro máximo admisible”?</p></li>
+<li><p>Considera el conjunto <span class="math inline">\(R\)</span> de lecturas que el calibre puede mostrar dentro de <span class="math inline">\(A\)</span>: <span class="math inline">\(R = \{19.95,\ 19.96,\ \dots,\ 20.05\}\)</span>. Calcula <span class="math inline">\(\operatorname{Adh}(R)\)</span> y <span class="math inline">\(\operatorname{Ac}(R)\)</span>. ¿Qué tipo de puntos son todos los de <span class="math inline">\(R\)</span>? ¿Es <span class="math inline">\(R\)</span> cerrado? Compara con <span class="math inline">\(\operatorname{Ac}(A)\)</span> y explica qué diferencia práctica hay entre el conjunto “real” de diámetros y el conjunto de lecturas del calibre.</p></li>
+</ol>
+</div>
 <div id="exr-adherencia-cerrada" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 3.15</strong></span> Demostrar que la adherencia de cualquier conjunto es siempre cerrada.</p>
+<p><span class="theorem-title"><strong>Ejercicio 3.16</strong></span> Demostrar que la adherencia de cualquier conjunto es siempre cerrada.</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-15-contents" aria-controls="callout-15" aria-expanded="false" aria-label="Toggle callout">
@@ -773,7 +785,7 @@ window.Quarto = {
 </div>
 </div>
 <div id="exr-adherencia-cerrada" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 3.16</strong></span> Demostrar que cualquier conjunto es cerrado si y solo si coincide con su adherencia.</p>
+<p><span class="theorem-title"><strong>Ejercicio 3.17</strong></span> Demostrar que cualquier conjunto es cerrado si y solo si coincide con su adherencia.</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-16-contents" aria-controls="callout-16" aria-expanded="false" aria-label="Toggle callout">

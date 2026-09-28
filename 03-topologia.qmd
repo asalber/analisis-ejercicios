@@ -111,6 +111,7 @@ Veamos ahora que $\operatorname{Int}(A)\cup\operatorname{Ext}(A)\cup\operatornam
 - Finalmente, si para cualquier $\varepsilon>0$ $(x-\varepsilon, x+\varepsilon)\not\subseteq A$ y $(x-\varepsilon, x+\varepsilon)\not\subseteq \overline{A}$, se tiene que $(x-\varepsilon, x+\varepsilon)$ contiene tanto puntos de $A$ como de $\overline{A}$, por lo que $x$ es un punto frontera de $A$.
 :::
 
+
 :::{#exr-particion-interior-exterior-frontera}
 $\star$
 Calcular los puntos de adherencia y de acumulación del conjunto $A=\{\frac{n+1}{n}:n\in\mathbb{N}\}$. 
@@ -175,6 +176,24 @@ b. Vamos a probarlo por inducción. Sean $A_1$ y $A_2$ dos conjuntos abiertos. S
 c. Sea $A_n$, $n\in\mathbb{N}$, una colección arbitraria de conjuntos cerrados. Entonces, aplicando la ley de Morgan, se tiene que $\overline{\cap_{n=1}^\infty A_n}= \cup_{n=1}^\infty \overline{A_n}$. Como $A_n$ es cerrado, $\overline{A_n}$ es abierto $\forall n\in\mathbb{N}$, y por el apartado (a), se tiene que $\cup_{n=1}^\infty \overline{A_n}$ es un conjunto abierto, por lo que $\overline{\cap_{n=1}^\infty A_n}$ es abierto y $\cap_{n=1}^\infty A_n$ es cerrado.
 
 d. Sea ahora una colección $A_1,\ldots,A_n$ una colección de conjuntos cerrados. De nuevo, aplicando la ley de Morgan, se tiene que $\overline{\cup_{n=1}^\infty A_n}= \cap_{n=1}^\infty \overline{A_n}$. Como $A_i$ es cerrado, $\overline{A_i}$ es abierto $\forall i=1, \ldots, n$, y por el apartado (b), se tiene que $\cap_{n=1}^\infty \overline{A_n}$ es un conjunto abierto, por lo que $\overline{\cup_{n=1}^\infty A_n}$ es abierto y $\cup_{n=1}^\infty A_n$ es cerrado.
+:::
+
+:::{#exr-control-calidad}
+Una fábrica produce ejes cuyo diámetro nominal es de 20 mm, con una tolerancia de $\pm 0.05$ mm. Para verificarlos se usa un calibre digital cuyo error de medida es siempre menor que $0.01$ mm. El calibre muestra las lecturas con dos decimales.
+
+Sea $A$ el conjunto de diámetros aceptables.
+
+a.  Expresa $A$ como un intervalo. ¿Es $A$ un entorno de $20$? ¿Qué relación hay entre $A$ y el entorno de centro $20$ y radio $0.05$?
+
+a.  Calcula $\operatorname{Int}(A)$, $\operatorname{Ext}(A)$ y $\operatorname{Fr}(A)$, y comprueba que forman una partición de $\mathbb{R}$.
+
+a.  Se miden cuatro ejes y el calibre marca estos diámetros: $20.04$ mm, $19.94$ mm, $20.05$ mm y $20.00$ mm. Para cada uno, determina si es punto interior, exterior o frontera de $A$. Después, decide si el eje se puede aceptar o rechazar con seguridad teniendo en cuenta el error de medida del calibre. Justifica tu respuesta con entornos de radio $\varepsilon = 0.01$.
+
+a.  Determina el conjunto $B$ de lecturas que garantizan la aceptación, es decir, los $x$ tales que $(x - 0.01,\ x + 0.01) \subseteq A$. ¿Es $B$ abierto, cerrado o ninguna de las dos cosas? ¿Tiene máximo y mínimo?
+
+a.  El cliente cambia la especificación: ahora el diámetro debe ser estrictamente menor que $20.05$ mm, manteniendo el límite inferior. Escribe el nuevo conjunto $A'$. ¿Es abierto, cerrado o ninguna de las dos cosas? ¿Tiene $A'$ máximo? ¿Qué teorema del capítulo explica lo que ocurre? Interpreta el resultado: ¿puede la fábrica dar un "diámetro máximo admisible"?
+
+a.  Considera el conjunto $R$ de lecturas que el calibre puede mostrar dentro de $A$: $R = \{19.95,\ 19.96,\ \dots,\ 20.05\}$. Calcula $\operatorname{Adh}(R)$ y $\operatorname{Ac}(R)$. ¿Qué tipo de puntos son todos los de $R$? ¿Es $R$ cerrado? Compara con $\operatorname{Ac}(A)$ y explica qué diferencia práctica hay entre el conjunto "real" de diámetros y el conjunto de lecturas del calibre.
 :::
 
 :::{#exr-adherencia-cerrada}

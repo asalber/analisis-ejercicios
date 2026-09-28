@@ -1727,6 +1727,56 @@ Probar las siguientes propiedades:
 
 \end{tcolorbox}
 
+\begin{exercise}[]\protect\hypertarget{exr-control-calidad}{}\label{exr-control-calidad}
+
+Una fábrica produce ejes cuyo diámetro nominal es de 20 mm, con una
+tolerancia de \(\pm 0.05\) mm. Para verificarlos se usa un calibre
+digital cuyo error de medida es siempre menor que \(0.01\) mm. El
+calibre muestra las lecturas con dos decimales.
+
+Sea \(A\) el conjunto de diámetros aceptables.
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  Expresa \(A\) como un intervalo. ¿Es \(A\) un entorno de \(20\)? ¿Qué
+  relación hay entre \(A\) y el entorno de centro \(20\) y radio
+  \(0.05\)?
+\item
+  Calcula \(\operatorname{Int}(A)\), \(\operatorname{Ext}(A)\) y
+  \(\operatorname{Fr}(A)\), y comprueba que forman una partición de
+  \(\mathbb{R}\).
+\item
+  Se miden cuatro ejes y el calibre marca estos diámetros: \(20.04\) mm,
+  \(19.94\) mm, \(20.05\) mm y \(20.00\) mm. Para cada uno, determina si
+  es punto interior, exterior o frontera de \(A\). Después, decide si el
+  eje se puede aceptar o rechazar con seguridad teniendo en cuenta el
+  error de medida del calibre. Justifica tu respuesta con entornos de
+  radio \(\varepsilon = 0.01\).
+\item
+  Determina el conjunto \(B\) de lecturas que garantizan la aceptación,
+  es decir, los \(x\) tales que \((x - 0.01,\ x + 0.01) \subseteq A\).
+  ¿Es \(B\) abierto, cerrado o ninguna de las dos cosas? ¿Tiene máximo y
+  mínimo?
+\item
+  El cliente cambia la especificación: ahora el diámetro debe ser
+  estrictamente menor que \(20.05\) mm, manteniendo el límite inferior.
+  Escribe el nuevo conjunto \(A'\). ¿Es abierto, cerrado o ninguna de
+  las dos cosas? ¿Tiene \(A'\) máximo? ¿Qué teorema del capítulo explica
+  lo que ocurre? Interpreta el resultado: ¿puede la fábrica dar un
+  ``diámetro máximo admisible''?
+\item
+  Considera el conjunto \(R\) de lecturas que el calibre puede mostrar
+  dentro de \(A\): \(R = \{19.95,\ 19.96,\ \dots,\ 20.05\}\). Calcula
+  \(\operatorname{Adh}(R)\) y \(\operatorname{Ac}(R)\). ¿Qué tipo de
+  puntos son todos los de \(R\)? ¿Es \(R\) cerrado? Compara con
+  \(\operatorname{Ac}(A)\) y explica qué diferencia práctica hay entre
+  el conjunto ``real'' de diámetros y el conjunto de lecturas del
+  calibre.
+\end{enumerate}
+
+\end{exercise}
+
 \begin{exercise}[]\protect\hypertarget{exr-adherencia-cerrada}{}\label{exr-adherencia-cerrada}
 
 Demostrar que la adherencia de cualquier conjunto es siempre cerrada.
