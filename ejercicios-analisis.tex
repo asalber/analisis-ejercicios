@@ -1909,43 +1909,42 @@ geométricas.
 Si \(c=0\) o \(c=1\) entonces la sucesión es constante y por el
 Ejercicio~\ref{exr-sucesion-constante}, la sucesión converge.
 
-Supongamos que \(c>1\) y veamos que la sucesión geométrica
-\((c^n)_{n=1}^\infty\) no converge a ningún número \(x\in\mathbb{R}\).
-Para ello, basta probar que la sucesión es creciente y no acotada.
-Probaremos que por inducción que la sucesión es creciente.
-\(x_1=c<cc=c^2=x_2\) por ser \(c>1\). Supongamos ahora que
-\(x_{n-1}<x_n\), entonces \(x_n=c^n<cc^n=c^{n+1}=x_{n+1}\). Por tanto,
-la sucesión es creciente.
+Supongamos que \(0<c<1\). Al ir multiplicando por un numero positivo
+menor que 1, los términos de la sucesión se van haciendo cada vez
+menores, por lo que, intuitivamente, parece que la sucesión converge a
+\(0\). Para probarlo, podemos usar la desigualdad de Bernouilli, que
+dice que para cualquier \(c>0\) y \(n\in\mathbb{N}\) se cumple que
+\((1+h)^n \geq 1+nh\).
 
-Veamos ahora que no está acotada por reducción al absurdo. Supongamos
-que existe \(x\in\mathbb{R}\) tal que \(x>x_n\)
-\(\forall n\in\mathbb{N}\). Como \(c>1\), podemos escribir
-\(x_n=c^n = (1+a)^n\) con \(a>0\). Aplicando ahora el teorema del
-binomio, se tiene
-
-\begin{align*}
-(1+a)^n &= \binom{n}{0}1^na^0 + \binom{n}{1}1^{n-1}a^1 + \binom{n}{2}1^{n-2}a^2 + \cdots + \binom{n}{n}1^0a^n \\ 
-& = 1 + na + \frac{n(n-1)}{2}a^2 + \cdots + a^n \\ 
-& \geq 1 + na.
-\end{align*}
-
-Aplicando ahora la propiedad arquimediana, se tiene que existe
-\(n\in\mathbb{N}\) tal que \(\frac{x-1}{a}<n\), de modo que
+Como \(0<c<1\) podemos escribir \(\frac{1}{c}=1+h\) con \(h>0\).
+Entonces, para cualquier \(n\in\mathbb{N}\), por la deisugualdad de
+Bernouilli, se tiene que
 
 \[
-\frac{x-1}{a}<n \Rightarrow x-1 < na \Rightarrow x < 1+na < (1+a)^n = x_n,
+\frac{1}{c^n} = (1+h)^n \geq 1+nh > nh 
+\Leftrightarrow c^n < \frac{1}{nh}.
 \]
 
-por lo que \(x\) no puede ser cota de la sucesión. Por consiguiente, la
-sucesión es monótona y no acotada, y por el
-\href{https://aprendeconalf.es/analisis-manual/sucesiones.html\#thm-convergencia-monotona}{teorema
-de la convergencia de sucesiones monónotas} la sucesión diverge.
+Para cualquier \(\varepsilon>0\), tomamos \(n\) suficientemente grande
+tal que \(\frac{1}{nh}<\varepsilon\), entonces \(c^n<\varepsilon\), lo
+que prueba que \(\lim_{n\to\infty}c^n=0\).
+
+Supongamos ahora que \(c>1\). Ahora al ir multiplicando por un número
+mayor que 1, los términos de la sucesión crecen de manera indefinida,
+por lo que parece que la sucesión diverge. Para probarlo, podemos usar
+de nuevo la desigualdad de Bernouilli.
+
+\[
+c^n = (1+h)^n \geq 1+nh > nh
+\]
+
+Sea ahora \(M>0\). Por la propiedad arquimediana existe
+\(k\in\mathbb{N}\) tal que \(k>\frac{M}{h}\), de manera que para
+cualquier \(n\geq k\) se tiene que \(c^n>nh>M\), por lo que la sucesión
+no está acotada y diverge.
 
 De forma similar se puede prueba que si \(c<0\) la sucesión también
 diverge.
-
-Veamos finalmente que si \(0<c<1\) entonces la sucesión converge a
-\(0\).
 
 \end{tcolorbox}
 
@@ -1960,15 +1959,8 @@ divergente. ¿Puede una sucesión alternada ser convergente?
 
 \begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-tip-color!10!white, colframe=quarto-callout-tip-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
 
-Veamos que no existe \(x\in\mathbb{R}\) tal que
-\(\lim_{n\to\infty}(-1)^n=x\). Para \(x\in\mathbb{R}\setminus\{-1,1\}\)
-es sencillo, ya que tomando \(\varepsilon=|1-|x||\) para cualquier
-\(k\in\mathbb{N}\), si \(n\geq k\) se tiene que
-\(|x_n-x| = |(-1)^n-x| \geq ||(-1)^n|-|x|| = |1 - |x|| =\varepsilon\),
-por tanto, la sucesión no converge a \(x\).
-
-Veamos ahora que la sucesión no converge a \(1\). Para ello basta tomar
-\(\varepsilon=1\), de manera que para cualquier \(k\in\mathbb{N}\)
+Veamos primero que la sucesión no converge a \(1\). Para ello basta
+tomar \(\varepsilon=1\), de manera que para cualquier \(k\in\mathbb{N}\)
 existe \(n=2k+1\geq k\) tal que
 \(|x_n-1|=|(-1)^{2k+1}-1| = |-1-1| = |-2|=2>1=\varepsilon\).
 
@@ -1976,6 +1968,13 @@ Del mismo modo se puede probar que tampoco converge a \(-1\). Para ello
 basta tomar de nuevo \(\varepsilon=1\), de manera que para cualquier
 \(k\in\mathbb{N}\) existe \(n=2k\geq k\) tal que
 \(|x_n-(-1)|=|(-1)^{2k}-(-1)| = |1-(-1)| = |2|=2>1=\varepsilon\).
+
+Finalmente, veamos que no existe \(x\in\mathbb{R}\) tal que
+\(\lim_{n\to\infty}(-1)^n=x\). Para \(x\in\mathbb{R}\setminus\{-1,1\}\)
+es sencillo, ya que tomando \(\varepsilon=|1-|x||\) para cualquier
+\(k\in\mathbb{N}\), si \(n\geq k\) se tiene que
+\(|x_n-x| = |(-1)^n-x| \geq ||(-1)^n|-|x|| = |1 - |x|| =\varepsilon\),
+por tanto, la sucesión no converge a \(x\).
 
 Otra forma de demostrar la no convergencia de la sucesión es tomar las
 subsucesiones suyas \(\left((-1)^{2n}\right)_{n=1}^\infty\) y
@@ -2076,7 +2075,8 @@ condiciones, o, en caso de no existir ninguna, explicar porqué.
 
 \(\star\) Demostrar, aplicando la definición de límite de una sucesión,
 que las siguientes sucesiones de números reales convergen a los valores
-dados.
+dados. Calcular también los límites mediante álgebra de límites de
+sucesiones.
 
 \begin{enumerate}
 \def\labelenumi{\alph{enumi}.}
@@ -2095,32 +2095,84 @@ dados.
 \begin{enumerate}
 \def\labelenumi{\alph{enumi}.}
 \item
+  Veamos que \(\lim_{n\to\infty}\frac{2n}{n^2}=0\). Para ello, dado
+  \(\varepsilon>0\) se tiene
+
+  \[
+  \left|\frac{2n}{n^2}-0\right| 
+  = \left|\frac{2}{n}\right| < \varepsilon 
+  \Leftrightarrow n > \frac{2}{\varepsilon}.
+  \]
+
+  Por la propiedad arquimediana, existe \(k\in \mathbb{N}\) tal que
+  \(k\geq \frac{2}{\varepsilon}\), de manera que para cualquier
+  \(n\geq k+1\) se tiene que \(|x_n-0|<\varepsilon\), por lo que
+  \(\lim_{n\to\infty}\frac{2n}{n^2}=0\).
+
+  Podemos llegar al mismo resultado aplicando álgebra de límites de
+  sucesiones:
+
   \[
   \lim_{n\to\infty}\frac{2n}{n^2} = \lim_{n\to\infty}\frac{2}{n}= 0.
   \]
 \item
-\end{enumerate}
+  Veamos que \(\lim_{n\to\infty}\frac{n^2-1}{3n^2+n-2}=\frac{1}{3}\).
+  Para ello, dado \(\varepsilon>0\) se tiene
 
-\begin{align*}
-\lim_{n\to\infty}\frac{n^2-1}{3n^2+n-2} &= \lim_{n\to\infty}\frac{1-\frac{1}{n^2}}{3+\frac{1}{n}-\frac{2}{n^2}} \\ 
-&= \frac{\lim_{n\to\infty}1-\frac{1}{n^2}}{\lim_{n\to\infty}3+\frac{1}{n}-\frac{2}{n^2}}\\ 
-&= \frac{\lim_{n\to\infty}1-\lim_{n\to\infty}\frac{1}{n^2}}{\lim_{n\to\infty}3+\lim_{n\to\infty}\frac{1}{n}-\lim_{n\to\infty}\frac{2}{n^2}}\\ 
-&= \frac{1-0}{3+0-0} = \frac{1}{3}.
-\end{align*}
+  \begin{gather}
+  \left|\frac{n^2-1}{3n^2+n-2}-\frac{1}{3}\right| 
+  = \left|\frac{(n-1)(n+1)}{(3n-2)(n+1)}-\frac{1}{3}\right| 
+  = \left|\frac{n-1}{3n-2}-\frac{1}{3}\right| \\ 
+  = \left|\frac{3(n-1)-(3n-2)}{3(3n-2)}\right| 
+  = \frac{1}{3(3n-2)} \leq \frac{1}{3n} < \varepsilon 
+  \Leftrightarrow n > \frac{1}{3\varepsilon}.
+  \end{gather}
 
-\begin{enumerate}
-\def\labelenumi{\alph{enumi}.}
-\setcounter{enumi}{2}
-\tightlist
+  Por la propiedad arquimediana, existe \(k\in \mathbb{N}\) tal que
+  \(k\geq \frac{1}{3\varepsilon}\), de manera que para cualquier
+  \(n\geq k+1\) se tiene que
+  \(\left|x_n-\frac{1}{3}\right|<\varepsilon\), por lo que
+  \(\lim_{n\to\infty}\frac{n^2-1}{3n^2+n-2}=\frac{1}{3}\).
+
+  Calculamos ahora el límite aplicando álgebra de límites de sucesiones:
+
+  \begin{align*}
+  \lim_{n\to\infty}\frac{n^2-1}{3n^2+n-2} 
+  &= \lim_{n\to\infty}\frac{1-\frac{1}{n^2}}{3+\frac{1}{n}-\frac{2}{n^2}} \\ 
+  &= \frac{\lim_{n\to\infty}1-\frac{1}{n^2}}{\lim_{n\to\infty}3+\frac{1}{n}-\frac{2}{n^2}}\\ 
+  &= \frac{\lim_{n\to\infty}1-\lim_{n\to\infty}\frac{1}{n^2}}{\lim_{n\to\infty}3+\lim_{n\to\infty}\frac{1}{n}-\lim_{n\to\infty}\frac{2}{n^2}}\\ 
+  &= \frac{1-0}{3+0-0} = \frac{1}{3}.
+  \end{align*}
 \item
-\end{enumerate}
+  Veamos que \(\lim_{n\to\infty}\frac{3n^2+2}{n^2-n}=3\). Para ello,
+  dado \(\varepsilon>0\), se tiene
 
-\begin{align*}
-\lim_{n\to\infty}\frac{3n^2+2}{n^2-n} &= \lim_{n\to\infty}\frac{3+\frac{2}{n^2}}{1-\frac{1}{n}} \\ 
-&= \frac{\lim_{n\to\infty}3+\frac{2}{n^2}}{\lim_{n\to\infty}1-\frac{1}{n}}\\ 
-&= \frac{\lim_{n\to\infty}3+\lim_{n\to\infty}\frac{2}{n^2}}{\lim_{n\to\infty}1-\lim_{n\to\infty}\frac{1}{n}} \\ 
-&= \frac{3+0}{1-0} = 3
-\end{align*}
+  \begin{gather}
+  \left|\frac{3n^2+2}{n^2-n}-3\right| 
+  = \left|\frac{3n^2+2-3(n^2-n)}{n^2-n}\right| 
+  = \left|\frac{3n+2}{n(n-1)}\right| \\
+  = \frac{3n+2}{n(n-1)} < \frac{4n}{n(n-1)} 
+  = \frac{4}{n-1} < \varepsilon 
+  \Leftrightarrow n > \frac{4}{\varepsilon}+1,
+  \end{gather}
+
+  siempre que \(n\geq 2\). Por la propiedad arquimediana, existe
+  \(k\in \mathbb{N}\) tal que \(k\geq \frac{4}{\varepsilon}+1\), de
+  manera que para cualquier \(n\geq k+1\) se tiene que
+  \(\left|x_n-3\right|<\varepsilon\), por lo que
+  \(\lim_{n\to\infty}\frac{3n^2+2}{n^2-n}=3\).
+
+  Podemos llegar al mismo resultado mediante álgebra de límites de
+  sucesiones:
+
+  \begin{align*}
+  \lim_{n\to\infty}\frac{3n^2+2}{n^2-n} 
+  &= \lim_{n\to\infty}\frac{3+\frac{2}{n^2}}{1-\frac{1}{n}} \\ 
+  &= \frac{\lim_{n\to\infty}3+\frac{2}{n^2}}{\lim_{n\to\infty}1-\frac{1}{n}}\\ 
+  &= \frac{\lim_{n\to\infty}3+\lim_{n\to\infty}\frac{2}{n^2}}{\lim_{n\to\infty}1-\lim_{n\to\infty}\frac{1}{n}} \\ 
+  &= \frac{3+0}{1-0} = 3
+  \end{align*}
+\end{enumerate}
 
 \end{tcolorbox}
 

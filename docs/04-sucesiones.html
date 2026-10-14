@@ -516,20 +516,19 @@ window.Quarto = {
 <div id="callout-3" class="callout-3-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Si <span class="math inline">\(c=0\)</span> o <span class="math inline">\(c=1\)</span> entonces la sucesión es constante y por el <a href="#exr-sucesion-constante" class="quarto-xref">Ejercicio&nbsp;<span>4.1</span></a>, la sucesión converge.</p>
-<p>Supongamos que <span class="math inline">\(c&gt;1\)</span> y veamos que la sucesión geométrica <span class="math inline">\((c^n)_{n=1}^\infty\)</span> no converge a ningún número <span class="math inline">\(x\in\mathbb{R}\)</span>. Para ello, basta probar que la sucesión es creciente y no acotada. Probaremos que por inducción que la sucesión es creciente. <span class="math inline">\(x_1=c&lt;cc=c^2=x_2\)</span> por ser <span class="math inline">\(c&gt;1\)</span>. Supongamos ahora que <span class="math inline">\(x_{n-1}&lt;x_n\)</span>, entonces <span class="math inline">\(x_n=c^n&lt;cc^n=c^{n+1}=x_{n+1}\)</span>. Por tanto, la sucesión es creciente.</p>
-<p>Veamos ahora que no está acotada por reducción al absurdo. Supongamos que existe <span class="math inline">\(x\in\mathbb{R}\)</span> tal que <span class="math inline">\(x&gt;x_n\)</span> <span class="math inline">\(\forall n\in\mathbb{N}\)</span>. Como <span class="math inline">\(c&gt;1\)</span>, podemos escribir <span class="math inline">\(x_n=c^n = (1+a)^n\)</span> con <span class="math inline">\(a&gt;0\)</span>. Aplicando ahora el teorema del binomio, se tiene</p>
-<p><span class="math display">\[\begin{align*}
-(1+a)^n &amp;= \binom{n}{0}1^na^0 + \binom{n}{1}1^{n-1}a^1 + \binom{n}{2}1^{n-2}a^2 + \cdots + \binom{n}{n}1^0a^n \\
-&amp; = 1 + na + \frac{n(n-1)}{2}a^2 + \cdots + a^n \\
-&amp; \geq 1 + na.
-\end{align*}\]</span></p>
-<p>Aplicando ahora la propiedad arquimediana, se tiene que existe <span class="math inline">\(n\in\mathbb{N}\)</span> tal que <span class="math inline">\(\frac{x-1}{a}&lt;n\)</span>, de modo que</p>
+<p>Supongamos que <span class="math inline">\(0&lt;c&lt;1\)</span>. Al ir multiplicando por un numero positivo menor que 1, los términos de la sucesión se van haciendo cada vez menores, por lo que, intuitivamente, parece que la sucesión converge a <span class="math inline">\(0\)</span>. Para probarlo, podemos usar la desigualdad de Bernouilli, que dice que para cualquier <span class="math inline">\(c&gt;0\)</span> y <span class="math inline">\(n\in\mathbb{N}\)</span> se cumple que <span class="math inline">\((1+h)^n \geq 1+nh\)</span>.</p>
+<p>Como <span class="math inline">\(0&lt;c&lt;1\)</span> podemos escribir <span class="math inline">\(\frac{1}{c}=1+h\)</span> con <span class="math inline">\(h&gt;0\)</span>. Entonces, para cualquier <span class="math inline">\(n\in\mathbb{N}\)</span>, por la deisugualdad de Bernouilli, se tiene que</p>
 <p><span class="math display">\[
-\frac{x-1}{a}&lt;n \Rightarrow x-1 &lt; na \Rightarrow x &lt; 1+na &lt; (1+a)^n = x_n,
+\frac{1}{c^n} = (1+h)^n \geq 1+nh &gt; nh
+\Leftrightarrow c^n &lt; \frac{1}{nh}.
 \]</span></p>
-<p>por lo que <span class="math inline">\(x\)</span> no puede ser cota de la sucesión. Por consiguiente, la sucesión es monótona y no acotada, y por el <a href="https://aprendeconalf.es/analisis-manual/sucesiones.html#thm-convergencia-monotona">teorema de la convergencia de sucesiones monónotas</a> la sucesión diverge.</p>
+<p>Para cualquier <span class="math inline">\(\varepsilon&gt;0\)</span>, tomamos <span class="math inline">\(n\)</span> suficientemente grande tal que <span class="math inline">\(\frac{1}{nh}&lt;\varepsilon\)</span>, entonces <span class="math inline">\(c^n&lt;\varepsilon\)</span>, lo que prueba que <span class="math inline">\(\lim_{n\to\infty}c^n=0\)</span>.</p>
+<p>Supongamos ahora que <span class="math inline">\(c&gt;1\)</span>. Ahora al ir multiplicando por un número mayor que 1, los términos de la sucesión crecen de manera indefinida, por lo que parece que la sucesión diverge. Para probarlo, podemos usar de nuevo la desigualdad de Bernouilli.</p>
+<p><span class="math display">\[
+c^n = (1+h)^n \geq 1+nh &gt; nh
+\]</span></p>
+<p>Sea ahora <span class="math inline">\(M&gt;0\)</span>. Por la propiedad arquimediana existe <span class="math inline">\(k\in\mathbb{N}\)</span> tal que <span class="math inline">\(k&gt;\frac{M}{h}\)</span>, de manera que para cualquier <span class="math inline">\(n\geq k\)</span> se tiene que <span class="math inline">\(c^n&gt;nh&gt;M\)</span>, por lo que la sucesión no está acotada y diverge.</p>
 <p>De forma similar se puede prueba que si <span class="math inline">\(c&lt;0\)</span> la sucesión también diverge.</p>
-<p>Veamos finalmente que si <span class="math inline">\(0&lt;c&lt;1\)</span> entonces la sucesión converge a <span class="math inline">\(0\)</span>.</p>
 </div>
 </div>
 </div>
@@ -548,9 +547,9 @@ window.Quarto = {
 </div>
 <div id="callout-4" class="callout-4-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Veamos que no existe <span class="math inline">\(x\in\mathbb{R}\)</span> tal que <span class="math inline">\(\lim_{n\to\infty}(-1)^n=x\)</span>. Para <span class="math inline">\(x\in\mathbb{R}\setminus\{-1,1\}\)</span> es sencillo, ya que tomando <span class="math inline">\(\varepsilon=|1-|x||\)</span> para cualquier <span class="math inline">\(k\in\mathbb{N}\)</span>, si <span class="math inline">\(n\geq k\)</span> se tiene que <span class="math inline">\(|x_n-x| = |(-1)^n-x| \geq ||(-1)^n|-|x|| = |1 - |x|| =\varepsilon\)</span>, por tanto, la sucesión no converge a <span class="math inline">\(x\)</span>.</p>
-<p>Veamos ahora que la sucesión no converge a <span class="math inline">\(1\)</span>. Para ello basta tomar <span class="math inline">\(\varepsilon=1\)</span>, de manera que para cualquier <span class="math inline">\(k\in\mathbb{N}\)</span> existe <span class="math inline">\(n=2k+1\geq k\)</span> tal que <span class="math inline">\(|x_n-1|=|(-1)^{2k+1}-1| = |-1-1| = |-2|=2&gt;1=\varepsilon\)</span>.</p>
+<p>Veamos primero que la sucesión no converge a <span class="math inline">\(1\)</span>. Para ello basta tomar <span class="math inline">\(\varepsilon=1\)</span>, de manera que para cualquier <span class="math inline">\(k\in\mathbb{N}\)</span> existe <span class="math inline">\(n=2k+1\geq k\)</span> tal que <span class="math inline">\(|x_n-1|=|(-1)^{2k+1}-1| = |-1-1| = |-2|=2&gt;1=\varepsilon\)</span>.</p>
 <p>Del mismo modo se puede probar que tampoco converge a <span class="math inline">\(-1\)</span>. Para ello basta tomar de nuevo <span class="math inline">\(\varepsilon=1\)</span>, de manera que para cualquier <span class="math inline">\(k\in\mathbb{N}\)</span> existe <span class="math inline">\(n=2k\geq k\)</span> tal que <span class="math inline">\(|x_n-(-1)|=|(-1)^{2k}-(-1)| = |1-(-1)| = |2|=2&gt;1=\varepsilon\)</span>.</p>
+<p>Finalmente, veamos que no existe <span class="math inline">\(x\in\mathbb{R}\)</span> tal que <span class="math inline">\(\lim_{n\to\infty}(-1)^n=x\)</span>. Para <span class="math inline">\(x\in\mathbb{R}\setminus\{-1,1\}\)</span> es sencillo, ya que tomando <span class="math inline">\(\varepsilon=|1-|x||\)</span> para cualquier <span class="math inline">\(k\in\mathbb{N}\)</span>, si <span class="math inline">\(n\geq k\)</span> se tiene que <span class="math inline">\(|x_n-x| = |(-1)^n-x| \geq ||(-1)^n|-|x|| = |1 - |x|| =\varepsilon\)</span>, por tanto, la sucesión no converge a <span class="math inline">\(x\)</span>.</p>
 <p>Otra forma de demostrar la no convergencia de la sucesión es tomar las subsucesiones suyas <span class="math inline">\(\left((-1)^{2n}\right)_{n=1}^\infty\)</span> y <span class="math inline">\(\left((-1)^{2n+1}\right)_{n=1}^\infty\)</span> que convergen a <span class="math inline">\(1\)</span> y <span class="math inline">\(-1\)</span> respectivamente, al ser constantes, de manera que aplicando el <a href="https://aprendeconalf.es/analisis-manual/sucesiones.html#thm-convergencia-subsucesiones">teorema de la convergencia de las subsucesiones</a>, se tiene que las sucesión original no converge.</p>
 <p>Por otro lado, no toda sucesión alternada es divergente. Por ejemplo, las sucesiones <span class="math inline">\(\left(\frac{(-1)^n}{n}\right)_{n=1}^\infty\)</span> y <span class="math inline">\(\left(\frac{(-1)^n}{n^2}\right)_{n=1}^\infty\)</span> son alternadas y convergen a <span class="math inline">\(0\)</span>.</p>
 </div>
@@ -618,7 +617,7 @@ window.Quarto = {
 </div>
 </div>
 <div id="exr-limites-sucesiones" class="theorem exercise">
-<p><span class="theorem-title"><strong>Ejercicio 4.7</strong></span> <span class="math inline">\(\star\)</span> Demostrar, aplicando la definición de límite de una sucesión, que las siguientes sucesiones de números reales convergen a los valores dados.</p>
+<p><span class="theorem-title"><strong>Ejercicio 4.7</strong></span> <span class="math inline">\(\star\)</span> Demostrar, aplicando la definición de límite de una sucesión, que las siguientes sucesiones de números reales convergen a los valores dados. Calcular también los límites mediante álgebra de límites de sucesiones.</p>
 <ol type="a">
 <li><p><span class="math inline">\(\lim_{n\to\infty}\frac{2n}{n^2}=0\)</span></p></li>
 <li><p><span class="math inline">\(\lim_{n\to\infty}\frac{n^2-1}{3n^2+n-2}=\frac{1}{3}\)</span></p></li>
@@ -638,26 +637,58 @@ window.Quarto = {
 <div id="callout-7" class="callout-7-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ol type="a">
-<li><p><span class="math display">\[
+<li><p>Veamos que <span class="math inline">\(\lim_{n\to\infty}\frac{2n}{n^2}=0\)</span>. Para ello, dado <span class="math inline">\(\varepsilon&gt;0\)</span> se tiene</p>
+<p><span class="math display">\[
+\left|\frac{2n}{n^2}-0\right|
+= \left|\frac{2}{n}\right| &lt; \varepsilon
+\Leftrightarrow n &gt; \frac{2}{\varepsilon}.
+\]</span></p>
+<p>Por la propiedad arquimediana, existe <span class="math inline">\(k\in \mathbb{N}\)</span> tal que <span class="math inline">\(k\geq \frac{2}{\varepsilon}\)</span>, de manera que para cualquier <span class="math inline">\(n\geq k+1\)</span> se tiene que <span class="math inline">\(|x_n-0|&lt;\varepsilon\)</span>, por lo que <span class="math inline">\(\lim_{n\to\infty}\frac{2n}{n^2}=0\)</span>.</p>
+<p>Podemos llegar al mismo resultado aplicando álgebra de límites de sucesiones:</p>
+<p><span class="math display">\[
 \lim_{n\to\infty}\frac{2n}{n^2} = \lim_{n\to\infty}\frac{2}{n}= 0.
 \]</span></p></li>
-<li></li>
-</ol>
+<li><p>Veamos que <span class="math inline">\(\lim_{n\to\infty}\frac{n^2-1}{3n^2+n-2}=\frac{1}{3}\)</span>. Para ello, dado <span class="math inline">\(\varepsilon&gt;0\)</span> se tiene</p>
+<p><span class="math display">\[
+\begin{gather}
+\left|\frac{n^2-1}{3n^2+n-2}-\frac{1}{3}\right|
+= \left|\frac{(n-1)(n+1)}{(3n-2)(n+1)}-\frac{1}{3}\right|
+= \left|\frac{n-1}{3n-2}-\frac{1}{3}\right| \\
+= \left|\frac{3(n-1)-(3n-2)}{3(3n-2)}\right|
+= \frac{1}{3(3n-2)} \leq \frac{1}{3n} &lt; \varepsilon
+\Leftrightarrow n &gt; \frac{1}{3\varepsilon}.
+\end{gather}
+\]</span></p>
+<p>Por la propiedad arquimediana, existe <span class="math inline">\(k\in \mathbb{N}\)</span> tal que <span class="math inline">\(k\geq \frac{1}{3\varepsilon}\)</span>, de manera que para cualquier <span class="math inline">\(n\geq k+1\)</span> se tiene que <span class="math inline">\(\left|x_n-\frac{1}{3}\right|&lt;\varepsilon\)</span>, por lo que <span class="math inline">\(\lim_{n\to\infty}\frac{n^2-1}{3n^2+n-2}=\frac{1}{3}\)</span>.</p>
+<p>Calculamos ahora el límite aplicando álgebra de límites de sucesiones:</p>
 <p><span class="math display">\[\begin{align*}
-\lim_{n\to\infty}\frac{n^2-1}{3n^2+n-2} &amp;= \lim_{n\to\infty}\frac{1-\frac{1}{n^2}}{3+\frac{1}{n}-\frac{2}{n^2}} \\
+\lim_{n\to\infty}\frac{n^2-1}{3n^2+n-2}
+&amp;= \lim_{n\to\infty}\frac{1-\frac{1}{n^2}}{3+\frac{1}{n}-\frac{2}{n^2}} \\
 &amp;= \frac{\lim_{n\to\infty}1-\frac{1}{n^2}}{\lim_{n\to\infty}3+\frac{1}{n}-\frac{2}{n^2}}\\
 &amp;= \frac{\lim_{n\to\infty}1-\lim_{n\to\infty}\frac{1}{n^2}}{\lim_{n\to\infty}3+\lim_{n\to\infty}\frac{1}{n}-\lim_{n\to\infty}\frac{2}{n^2}}\\
 &amp;= \frac{1-0}{3+0-0} = \frac{1}{3}.
-\end{align*}\]</span></p>
-<ol start="3" type="a">
-<li></li>
-</ol>
+\end{align*}\]</span></p></li>
+<li><p>Veamos que <span class="math inline">\(\lim_{n\to\infty}\frac{3n^2+2}{n^2-n}=3\)</span>. Para ello, dado <span class="math inline">\(\varepsilon&gt;0\)</span>, se tiene</p>
+<p><span class="math display">\[
+\begin{gather}
+\left|\frac{3n^2+2}{n^2-n}-3\right|
+= \left|\frac{3n^2+2-3(n^2-n)}{n^2-n}\right|
+= \left|\frac{3n+2}{n(n-1)}\right| \\
+= \frac{3n+2}{n(n-1)} &lt; \frac{4n}{n(n-1)}
+= \frac{4}{n-1} &lt; \varepsilon
+\Leftrightarrow n &gt; \frac{4}{\varepsilon}+1,
+\end{gather}
+\]</span></p>
+<p>siempre que <span class="math inline">\(n\geq 2\)</span>. Por la propiedad arquimediana, existe <span class="math inline">\(k\in \mathbb{N}\)</span> tal que <span class="math inline">\(k\geq \frac{4}{\varepsilon}+1\)</span>, de manera que para cualquier <span class="math inline">\(n\geq k+1\)</span> se tiene que <span class="math inline">\(\left|x_n-3\right|&lt;\varepsilon\)</span>, por lo que <span class="math inline">\(\lim_{n\to\infty}\frac{3n^2+2}{n^2-n}=3\)</span>.</p>
+<p>Podemos llegar al mismo resultado mediante álgebra de límites de sucesiones:</p>
 <p><span class="math display">\[\begin{align*}
-\lim_{n\to\infty}\frac{3n^2+2}{n^2-n} &amp;= \lim_{n\to\infty}\frac{3+\frac{2}{n^2}}{1-\frac{1}{n}} \\
+\lim_{n\to\infty}\frac{3n^2+2}{n^2-n}
+&amp;= \lim_{n\to\infty}\frac{3+\frac{2}{n^2}}{1-\frac{1}{n}} \\
 &amp;= \frac{\lim_{n\to\infty}3+\frac{2}{n^2}}{\lim_{n\to\infty}1-\frac{1}{n}}\\
 &amp;= \frac{\lim_{n\to\infty}3+\lim_{n\to\infty}\frac{2}{n^2}}{\lim_{n\to\infty}1-\lim_{n\to\infty}\frac{1}{n}} \\
 &amp;= \frac{3+0}{1-0} = 3
-\end{align*}\]</span></p>
+\end{align*}\]</span></p></li>
+</ol>
 </div>
 </div>
 </div>
