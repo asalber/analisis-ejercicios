@@ -193,6 +193,10 @@
 \usepackage{bookmark}
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
 \urlstyle{same}
+% fallback for those not using the hyperref driver hyperxmp:
+\makeatletter
+\@ifundefined{xmpquote}{\newcommand{\xmpquote}[1]{#1}}{}
+\makeatother
 \hypersetup{
   pdftitle={Problemas de Análisis Matemático},
   pdfauthor={Alfredo Sánchez Alberca},
@@ -14248,9 +14252,71 @@ Hallar los extremos relativos y los puntos de silla de la función
 
 \begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-tip-color!10!white, colframe=quarto-callout-tip-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
 
-No tiene máximos relativos.\\
-Mínimos relativos en \((-a,0)\) y \((a,0)\).\\
-Punto de silla en \((0,0)\).
+En primer lugar calculamos las derivadas parciales de primer orden.
+
+\[
+\begin{aligned}
+\frac{\partial f}{\partial x} &= 4x(x^2+y^2)-4a^2x = 4x(x^2+y^2-a^2),\\
+\frac{\partial f}{\partial y} &= 4y(x^2+y^2)+4a^2y = 4y(x^2+y^2+a^2).
+\end{aligned}
+\]
+
+Igualando a cero las derivadas parciales y resolviendo el sistema
+obtenemos los puntos críticos que anulan el gradiente.
+
+\[
+\begin{cases}
+4x(x^2+y^2-a^2)=0\\
+4y(x^2+y^2+a^2)=0
+\end{cases}
+\]
+
+Como \(a\neq 0\), el factor \(x^2+y^2+a^2\) es siempre positivo, así que
+la segunda ecuación implica \(y=0\). Sustituyendo en la primera,
+\(4x(x^2-a^2)=0\), de donde \(x=0\) o \(x=\pm a\).
+
+Por tanto, los puntos críticos son \((0,0)\), \((a,0)\) y \((-a,0)\).
+
+Calculamos ahora las derivadas parciales de segundo orden.
+
+\[
+\begin{aligned}
+\frac{\partial^2 f}{\partial x^2} &= 12x^2+4y^2-4a^2,\\
+\frac{\partial^2 f}{\partial x\partial y} &= \frac{\partial^2 f}{\partial y\partial x} = 8xy,\\
+\frac{\partial^2 f}{\partial y^2} &= 4x^2+12y^2+4a^2.
+\end{aligned}
+\]
+
+Por tanto, la matriz Hessiana es
+
+\[
+Hf(x,y)=\begin{pmatrix}
+12x^2+4y^2-4a^2 & 8xy\\
+8xy & 4x^2+12y^2+4a^2
+\end{pmatrix}.
+\]
+
+Finalmente evaluamos el hessiano en cada uno de los puntos críticos.
+
+\begin{itemize}
+\item
+  En \((0,0)\): \[
+  Hf(0,0)=\begin{pmatrix}-4a^2 & 0\\ 0 & 4a^2\end{pmatrix},\qquad
+  |Hf(0,0)|=-16a^4<0.
+  \] El hessiano es negativo, luego \((0,0)\) es un punto de silla.
+\item
+  En \((a,0)\): \[
+  Hf(a,0)=\begin{pmatrix}8a^2 & 0\\ 0 & 8a^2\end{pmatrix},\qquad
+  |Hf(a,0)|=64a^4>0,\quad \frac{\partial^2 f}{\partial x^2}(a,0)=8a^2>0.
+  \] El hessiano es positivo y \(f_{xx}>0\), luego \((a,0)\) es un
+  mínimo relativo.
+\item
+  En \((-a,0)\): \[
+  Hf(-a,0)=\begin{pmatrix}8a^2 & 0\\ 0 & 8a^2\end{pmatrix},\qquad
+  |Hf(-a,0)|=64a^4>0,\quad \frac{\partial^2 f}{\partial x^2}(-a,0)=8a^2>0.
+  \] El hessiano es positivo y \(f_{xx}>0\), luego \((-a,0)\) es un
+  mínimo relativo.
+\end{itemize}
 
 \end{tcolorbox}
 
@@ -14263,9 +14329,81 @@ escalar \(h(x,y) = xy+\dfrac{xy^2}{2}-2x^2\).
 
 \begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-tip-color!10!white, colframe=quarto-callout-tip-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Solución}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
 
-Máximo relativo en \((-1/8,-1)\).\\
-No tiene mínimos relativos.\\
-Puntos de silla en \((0,0)\) y \((0,-2)\).
+Calculamos primero las derivadas parciales de primer orden.
+
+\[
+\begin{aligned}
+\frac{\partial h}{\partial x} &= y+\frac{y^2}{2}-4x,\\
+\frac{\partial h}{\partial y} &= x+xy = x(1+y).
+\end{aligned}
+\]
+
+Igualando a cero las derivadas parciales y resolviendo el sistema
+obtenemos los puntos críticos que anulan el gradiente.
+
+\[
+\begin{cases}
+y+\dfrac{y^2}{2}-4x=0\\[1ex]
+x(1+y)=0
+\end{cases}
+\]
+
+La segunda ecuación implica \(x=0\) o \(y=-1\).
+
+\begin{itemize}
+\tightlist
+\item
+  Si \(x=0\), la primera ecuación queda
+  \(y+\dfrac{y^2}{2}=y\left(1+\dfrac{y}{2}\right)=0\), de donde \(y=0\)
+  o \(y=-2\).
+\item
+  Si \(y=-1\), la primera ecuación queda \(-1+\dfrac{1}{2}-4x=0\), de
+  donde \(x=-\dfrac{1}{8}\).
+\end{itemize}
+
+Por tanto, los puntos críticos son \((0,0)\), \((0,-2)\) y
+\((-1/8,-1)\).
+
+A continuación calculamos las derivadas de segundo orden.
+
+\[
+\begin{aligned}
+\frac{\partial^2 h}{\partial x^2} &= -4,\\
+\frac{\partial^2 h}{\partial x\partial y} &= \frac{\partial^2 h}{\partial y\partial x} = 1+y,\\
+\frac{\partial^2 h}{\partial y^2} &= x.
+\end{aligned}
+\]
+
+Y por tanto, la matriz hessiana es
+
+\[
+Hh(x,y)=\begin{pmatrix}
+-4 & 1+y\\
+1+y & x
+\end{pmatrix},\qquad
+|Hh(x,y)|=-4x-(1+y)^2.
+\]
+
+Finalmente evaluamos el hessiano en cada uno de los puntos críticos.
+
+\begin{itemize}
+\item
+  En \((0,0)\): \[
+  Hh(0,0)=\begin{pmatrix}-4 & 1\\ 1 & 0\end{pmatrix},\qquad
+  |Hh(0,0)|=-1<0.
+  \] El hessiano es negativo, luego \((0,0)\) es un punto de silla.
+\item
+  En \((0,-2)\): \[
+  Hh(0,-2)=\begin{pmatrix}-4 & -1\\ -1 & 0\end{pmatrix},\qquad
+  |Hh(0,-2)|=-1<0.
+  \] El hessiano es negativo, luego \((0,-2)\) es un punto de silla.
+\item
+  En \((-1/8,-1)\): \[
+  Hh(-1/8,-1)=\begin{pmatrix}-4 & 0\\ 0 & -1/8\end{pmatrix},\qquad
+  |Hh(-1/8,-1)|=\frac{1}{2}>0,\quad \frac{\partial^2 h}{\partial x^2}=-4<0.
+  \] El hessiano es positivo y \(h_{xx}<0\), luego \((-1/8,-1)\) es un
+  máximo relativo.
+\end{itemize}
 
 \end{tcolorbox}
 
@@ -14378,23 +14516,26 @@ A continuación calculamos el hessiano en cada uno de ellos.
 = \frac{(-4x^2+10000)(-2y^2+10000)}{x^2y^2}
 \]
 
-En el punto \((8.58, 12.92)\) se tiene
-\(|\nabla^2B(8.58, 12.92)| = 7634.37 >0\) y
-\(\frac{\partial ^2 B}{\partial x^2}(8.58, 12.92)= 131.8393>0\), por lo
-que en se trata de un mínimo relativo.
-
-En el punto \((8.58, 387.08)\) se tiene
-\(|\nabla^2B(8.58, 387.08)| = -254.88 <0\), por lo que se trata de un
-punto de silla.
-
-En el punto \((291.42, 12.92)\) se tiene
-\(|\nabla^2B(291.42, 12.92)| = -224.81 <0\), por lo que se trata de otro
-punto de silla.
-
-En el punto \((291.42, 387.08)\) se tiene
-\(|\nabla^2B(291.42, 387.08)| = 7.51 >0\) y
-\(\frac{\partial ^2 B}{\partial x^2}(291.42, 387.08)= -3.88<0\), por lo
-que en se trata de un máximo relativo.
+\begin{itemize}
+\item
+  En el punto \((8.58, 12.92)\) se tiene
+  \(|\nabla^2B(8.58, 12.92)| = 7634.37 >0\) y
+  \(\frac{\partial ^2 B}{\partial x^2}(8.58, 12.92)= 131.8393>0\), por
+  lo que en se trata de un mínimo relativo.
+\item
+  En el punto \((8.58, 387.08)\) se tiene
+  \(|\nabla^2B(8.58, 387.08)| = -254.88 <0\), por lo que se trata de un
+  punto de silla.
+\item
+  En el punto \((291.42, 12.92)\) se tiene
+  \(|\nabla^2B(291.42, 12.92)| = -224.81 <0\), por lo que se trata de
+  otro punto de silla.
+\item
+  En el punto \((291.42, 387.08)\) se tiene
+  \(|\nabla^2B(291.42, 387.08)| = 7.51 >0\) y
+  \(\frac{\partial ^2 B}{\partial x^2}(291.42, 387.08)= -3.88<0\), por
+  lo que en se trata de un máximo relativo.
+\end{itemize}
 
 Así pues, para maximizar el beneficio deben fabricarse semanalmente
 \(291.42\) ordenadores portátiles y \(387\) ordenadores de sobremesa.
