@@ -27,17 +27,17 @@ $$
 :::
 
 :::{#exr-definicion-limite-cuadratica}
-Dada la función $f(x)=x^2$, demostrar usando la definición de límite que $\lim_{x\to 2}f(x)=4$.
+Dada la función $f(x)=x^2-2x$, demostrar usando la definición de límite que $\lim_{x\to 2}f(x)=0$.
 :::
 
 :::{.callout-tip collapse="true"}
 ## Solución
-Se tiene que $|f(x)-4| = |x^2-4| = |x-2||x+2|$. Para acotar el factor $|x+2|$, si se toma $\delta\leq 1$, entonces $|x-2|<1$ implica $1<x<3$, y por tanto $|x+2|<5$.
+Se tiene que $|f(x)-0| = |x^2-2x-0| = |x(x-2)| = |x||x-2|$. Para acotar el factor $|x|$, si se toma $\delta\leq 1$, entonces $|x-2|<1$ implica $1<x<3$, y por tanto $|x|<3$.
 
-Así, para cualquier $\varepsilon>0$ se puede tomar $\delta = \min\left\{1,\frac{\varepsilon}{5}\right\}$ tal que si $|x-2|<\delta$, entonces
+Así, para cualquier $\varepsilon>0$ se puede tomar $\delta = \min\left\{1,\frac{\varepsilon}{3}\right\}$ tal que si $|x-2|<\delta$, entonces
 
 $$
-|f(x)-4| = |x-2||x+2| < 5|x-2| < 5\frac{\varepsilon}{5} = \varepsilon.
+|f(x)-0| = |x-2||x| < 3|x-2| < 3\frac{\varepsilon}{3} = \varepsilon.
 $$
 :::
 
